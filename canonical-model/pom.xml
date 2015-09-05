@@ -10,7 +10,6 @@
 	<groupId>com.cocha.hotels</groupId>
 	<artifactId>canonical-model</artifactId>
 	<packaging>jar</packaging>
-	<version>${project.parent.version}</version>
 	<name>canonical-model</name>
 
 	<properties>

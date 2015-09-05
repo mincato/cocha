@@ -10,7 +10,6 @@
 	<groupId>com.cocha.hotels</groupId>
 	<artifactId>util</artifactId>
 	<packaging>jar</packaging>
-	<version>${project.parent.version}</version>
 	<name>util</name>
 
 	<properties>
