@@ -33,7 +33,8 @@ public class TravelodgeFlagstaffHotelMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelAddressRule();
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
-        verify(ruleMatch).isSuccessful();
+        // directamente no es la misma dirección, no son los mismos hoteles
+        verify(ruleMatch).isNotSuccessful();
     }
 
     @Test

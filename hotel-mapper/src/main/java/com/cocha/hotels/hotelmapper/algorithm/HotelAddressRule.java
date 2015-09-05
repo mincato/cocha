@@ -16,12 +16,14 @@ public class HotelAddressRule implements HotelRule {
     }
 
     private RuleMatch compare(String attrReference, String attrToCompare) {
-        if (attrReference.compareTo(attrToCompare) == 0) {
+        String noSpacesRef = attrReference.replaceAll("[\\s\\.]", "");
+        String noSpacesCom = attrToCompare.replaceAll("[\\s\\.]", "");
+        if (noSpacesRef.compareTo(noSpacesCom) == 0) {
             return new HotelRuleMatch(35);
         }
 
         List<String> refWords = Arrays.asList(attrReference.split("\\s+"));
-        List<String> compWords = Arrays.asList(attrReference.split("\\s+"));
+        List<String> compWords = Arrays.asList(attrToCompare.split("\\s+"));
 
         boolean comparison = compare(refWords, compWords);
         Integer confidence = comparison ? 35 : 0;
@@ -38,8 +40,7 @@ public class HotelAddressRule implements HotelRule {
         // primer paso, todo el mayusculas, remuevo los espacios
         // TODO refactor: parametrizar esto!
         return name.toUpperCase().replace("SOUTH", "S").replace("WEST", "W").replace("STREET", "ST")
-                .replace("AVENUE", "AVE").replace("ROAD", "RD").replace("DRIVE", "DR").replace("HIGHWAY", "HWY")
-                .replaceAll("[\\s\\.]", "");
+                .replace("AVENUE", "AVE").replace("ROAD", "RD").replace("DRIVE", "DR").replace("HIGHWAY", "HWY");
     }
 
 }

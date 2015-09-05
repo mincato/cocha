@@ -33,4 +33,14 @@ public class NegativeMappingTest extends BaseHotelMappingTest {
         verify(ruleMatch).isNotSuccessful();
     }
 
+    @Test
+    public void testArmadaAgainstBlackstoneAddress() {
+        HotelMock builder = new BlackstoneHotelMock();
+        Hotel bookingHotel = builder.buildWithBooking();
+
+        HotelRule rule = new HotelAddressRule();
+        RuleMatch ruleMatch = rule.apply(reference, bookingHotel);
+        verify(ruleMatch).isNotSuccessful();
+    }
+
 }

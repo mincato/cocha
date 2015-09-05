@@ -2,6 +2,18 @@ package com.cocha.hotels.hotelmapper.mocks;
 
 import com.cocha.hotels.model.content.hotel.Hotel;
 
+/**
+ * Los datos de cada supplier corresponden a DISTINTOS HOTELES!
+ * https://www.google
+ * .com.ar/maps/place/Hotel+Aspen+Flagstaff/@35.1948647,-111.63602
+ * ,683m/data=!3m1
+ * !1e3!4m2!3m1!1s0x0000000000000000:0x708a0555adb1168e!6m1!1e1?hl=en
+ * https://www
+ * .google.com.ar/maps/place/Travelodge+Flagstaff/@35.1948647,-111.63602
+ * ,683m/data
+ * =!3m1!1e3!4m2!3m1!1s0x0000000000000000:0x72bbc04c5c0014f2!6m1!1e1?hl=en
+ *
+ */
 public class TravelodgeFlagstaffHotelMock implements HotelMock {
 
     /*
