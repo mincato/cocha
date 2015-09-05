@@ -13,21 +13,21 @@ public class QualitySuitesUSHotelMappingTest extends BaseHotelMappingTest {
     private Hotel eanHotel;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         HotelMock hotelMock = new QualitySuitesUSHotelMock();
         bookingHotel = hotelMock.buildWithBooking();
         eanHotel = hotelMock.buildWithEan();
     }
-    
+
     @Test
     public void testMatchName() {
 
         HotelRule rule = new HotelNameRule();
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
-        //los strings no tienen un pattern genérico que puedo usar
+        // los strings no tienen un pattern genérico que puedo usar
         verify(ruleMatch).isNotSuccessful();
     }
-    
+
     @Test
     public void testMatchAddress() {
 
@@ -35,7 +35,7 @@ public class QualitySuitesUSHotelMappingTest extends BaseHotelMappingTest {
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
         verify(ruleMatch).isSuccessful();
     }
-    
+
     @Test
     public void testMatchZipCode() {
 
@@ -43,7 +43,7 @@ public class QualitySuitesUSHotelMappingTest extends BaseHotelMappingTest {
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
         verify(ruleMatch).isSuccessful();
     }
-    
+
     @Test
     public void testMatchCurrencyCode() {
 
@@ -51,7 +51,7 @@ public class QualitySuitesUSHotelMappingTest extends BaseHotelMappingTest {
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
         verify(ruleMatch).isSuccessful();
     }
-    
+
     @Test
     public void testStarRating() {
 

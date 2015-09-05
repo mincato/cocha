@@ -24,17 +24,12 @@ public class ComfortInnHotelMock implements HotelMock {
     }
 
     /*
-         <address>3200 West Broad Street</address> 
-         <countrycode>us</countrycode>
-         <currencycode>USD</currencycode> 
-         <exact_class>2.0</exact_class>
-         <hotel_id>24732</hotel_id> 
-         <location>
-             <latitude>37.56674241664355</latitude>
-             <longitude>-77.47532844543457</longitude> 
-         </location> 
-         <name>Comfort Inn Conference Center Midtown</name> 
-         <zip>23230</zip>
+     * <address>3200 West Broad Street</address> <countrycode>us</countrycode>
+     * <currencycode>USD</currencycode> <exact_class>2.0</exact_class>
+     * <hotel_id>24732</hotel_id> <location>
+     * <latitude>37.56674241664355</latitude>
+     * <longitude>-77.47532844543457</longitude> </location> <name>Comfort Inn
+     * Conference Center Midtown</name> <zip>23230</zip>
      */
     public Hotel buildWithBooking() {
         Hotel hotel = new Hotel();

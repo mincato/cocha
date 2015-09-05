@@ -13,21 +13,22 @@ public class StaybridgeSuitesHotelMappingTest extends BaseHotelMappingTest {
     private Hotel eanHotel;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         HotelMock hotelMock = new StaybridgeSuitesHotelMock();
         bookingHotel = hotelMock.buildWithBooking();
         eanHotel = hotelMock.buildWithEan();
     }
-    
+
     @Test
     public void testMatchName() {
 
         HotelRule rule = new HotelNameRule();
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
-        //los strings no siguen un pattern genérico para compararlos (city name?)
+        // los strings no siguen un pattern genérico para compararlos (city
+        // name?)
         verify(ruleMatch).isNotSuccessful();
     }
-    
+
     @Test
     public void testMatchAddress() {
 
@@ -35,7 +36,7 @@ public class StaybridgeSuitesHotelMappingTest extends BaseHotelMappingTest {
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
         verify(ruleMatch).isSuccessful();
     }
-    
+
     @Test
     public void testMatchZipCode() {
 
@@ -43,7 +44,7 @@ public class StaybridgeSuitesHotelMappingTest extends BaseHotelMappingTest {
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
         verify(ruleMatch).isSuccessful();
     }
-    
+
     @Test
     public void testMatchCurrencyCode() {
 
@@ -51,7 +52,7 @@ public class StaybridgeSuitesHotelMappingTest extends BaseHotelMappingTest {
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
         verify(ruleMatch).isSuccessful();
     }
-    
+
     @Test
     public void testStarRating() {
 

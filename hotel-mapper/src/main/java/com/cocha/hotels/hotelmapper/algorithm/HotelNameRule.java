@@ -18,7 +18,7 @@ public class HotelNameRule implements HotelRule {
     private RuleMatch compare(String attrReference, String attrToCompare) {
         List<String> refWords = Arrays.asList(attrReference.split("\\s+"));
         List<String> compWords = Arrays.asList(attrToCompare.split("\\s+"));
-        
+
         boolean comparison = compare(refWords, compWords);
         Integer confidence = comparison ? 35 : 0;
         return new HotelRuleMatch(confidence);
@@ -30,13 +30,8 @@ public class HotelNameRule implements HotelRule {
     }
 
     private String flatten(String name) {
-        return name.toUpperCase()
-                .replace("HOTEL", "")
-                .replace("THE", "")
-                .replace("&AMP;", "")
-                .replace("&", "")
-                .replace("AND", "")
-                .trim();
+        return name.toUpperCase().replace("HOTEL", "").replace("THE", "").replace("&AMP;", "").replace("&", "")
+                .replace("AND", "").trim();
     }
 
 }

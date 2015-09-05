@@ -9,14 +9,14 @@ import com.cocha.hotels.hotelmapper.mocks.HotelMock;
 import com.cocha.hotels.model.content.hotel.Hotel;
 
 /**
- * En los siguientes tests se busca comparar hoteles distintos
- * para validar que las reglas usadas no los matchean.
+ * En los siguientes tests se busca comparar hoteles distintos para validar que
+ * las reglas usadas no los matchean.
  *
  */
 public class NegativeMappingTest extends BaseHotelMappingTest {
 
     private Hotel reference;
-    
+
     @Before
     public void setUp() throws Exception {
         HotelMock builder = new ArmadaHotelMock();
@@ -27,7 +27,7 @@ public class NegativeMappingTest extends BaseHotelMappingTest {
     public void testArmadaAgainstBlackstoneName() {
         HotelMock builder = new BlackstoneHotelMock();
         Hotel bookingHotel = builder.buildWithBooking();
-        
+
         HotelRule rule = new HotelNameRule();
         RuleMatch ruleMatch = rule.apply(reference, bookingHotel);
         verify(ruleMatch).isNotSuccessful();

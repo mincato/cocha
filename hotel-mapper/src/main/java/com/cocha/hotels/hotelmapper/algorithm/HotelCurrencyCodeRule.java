@@ -2,7 +2,6 @@ package com.cocha.hotels.hotelmapper.algorithm;
 
 import com.cocha.hotels.model.content.hotel.Hotel;
 
-
 public class HotelCurrencyCodeRule implements HotelRule {
 
     @Override

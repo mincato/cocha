@@ -13,21 +13,21 @@ public class TravelodgeFlagstaffHotelMappingTest extends BaseHotelMappingTest {
     private Hotel eanHotel;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         HotelMock hotelMock = new TravelodgeFlagstaffHotelMock();
         bookingHotel = hotelMock.buildWithBooking();
         eanHotel = hotelMock.buildWithEan();
     }
-    
+
     @Test
     public void testMatchName() {
 
         HotelRule rule = new HotelNameRule();
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
-        //los strings son muy diferentes para que matcheen
+        // los strings son muy diferentes para que matcheen
         verify(ruleMatch).isNotSuccessful();
     }
-    
+
     @Test
     public void testMatchAddress() {
 
@@ -35,7 +35,7 @@ public class TravelodgeFlagstaffHotelMappingTest extends BaseHotelMappingTest {
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
         verify(ruleMatch).isSuccessful();
     }
-    
+
     @Test
     public void testMatchZipCode() {
 
@@ -43,7 +43,7 @@ public class TravelodgeFlagstaffHotelMappingTest extends BaseHotelMappingTest {
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
         verify(ruleMatch).isSuccessful();
     }
-    
+
     @Test
     public void testMatchCurrencyCode() {
 
@@ -51,13 +51,13 @@ public class TravelodgeFlagstaffHotelMappingTest extends BaseHotelMappingTest {
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
         verify(ruleMatch).isSuccessful();
     }
-    
+
     @Test
     public void testStarRating() {
 
         HotelRule rule = new HotelStarRatingRule();
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
-        //son distintos, tiene que fallar
+        // son distintos, tiene que fallar
         verify(ruleMatch).isNotSuccessful();
     }
 }

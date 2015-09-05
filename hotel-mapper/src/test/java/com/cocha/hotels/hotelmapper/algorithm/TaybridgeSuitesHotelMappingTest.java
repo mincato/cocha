@@ -13,12 +13,12 @@ public class TaybridgeSuitesHotelMappingTest extends BaseHotelMappingTest {
     private Hotel eanHotel;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         HotelMock hotelMock = new TaybridgeSuitesHotelMock();
         bookingHotel = hotelMock.buildWithBooking();
         eanHotel = hotelMock.buildWithEan();
     }
-    
+
     @Test
     public void testArmadaHotelMatchName() {
 
@@ -26,7 +26,7 @@ public class TaybridgeSuitesHotelMappingTest extends BaseHotelMappingTest {
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
         verify(ruleMatch).isSuccessful();
     }
-    
+
     @Test
     public void testArmadaHotelMatchAddress() {
 
@@ -34,7 +34,7 @@ public class TaybridgeSuitesHotelMappingTest extends BaseHotelMappingTest {
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
         verify(ruleMatch).isSuccessful();
     }
-    
+
     @Test
     public void testArmadaHotelMatchZipCode() {
 
@@ -42,7 +42,7 @@ public class TaybridgeSuitesHotelMappingTest extends BaseHotelMappingTest {
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
         verify(ruleMatch).isSuccessful();
     }
-    
+
     @Test
     public void testArmadaHotelMatchCurrencyCode() {
 
@@ -50,7 +50,7 @@ public class TaybridgeSuitesHotelMappingTest extends BaseHotelMappingTest {
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
         verify(ruleMatch).isSuccessful();
     }
-    
+
     @Test
     public void testArmadaHotelStarRating() {
 

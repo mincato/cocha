@@ -24,17 +24,12 @@ public class BlackstoneHotelMock implements HotelMock {
     }
 
     /*
-         <address>636 South Michigan Avenue</address>
-         <countrycode>us</countrycode>
-         <currencycode>USD</currencycode>
-         <exact_class>4.0</exact_class>
-         <hotel_id>24730</hotel_id>
-         <location>
-             <latitude>41.873409605523726</latitude>
-             <longitude>-87.6244130730629</longitude>
-         </location>
-         <name>Renaissance Blackstone Chicago Hotel</name>
-         <zip>60605</zip>
+     * <address>636 South Michigan Avenue</address>
+     * <countrycode>us</countrycode> <currencycode>USD</currencycode>
+     * <exact_class>4.0</exact_class> <hotel_id>24730</hotel_id> <location>
+     * <latitude>41.873409605523726</latitude>
+     * <longitude>-87.6244130730629</longitude> </location> <name>Renaissance
+     * Blackstone Chicago Hotel</name> <zip>60605</zip>
      */
     public Hotel buildWithBooking() {
         Hotel hotel = new Hotel();

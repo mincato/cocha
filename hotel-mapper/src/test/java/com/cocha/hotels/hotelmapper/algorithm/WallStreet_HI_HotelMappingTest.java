@@ -13,21 +13,21 @@ public class WallStreet_HI_HotelMappingTest extends BaseHotelMappingTest {
     private Hotel eanHotel;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         HotelMock hotelMock = new WallStreet_HI_HotelMock();
         bookingHotel = hotelMock.buildWithBooking();
         eanHotel = hotelMock.buildWithEan();
     }
-    
+
     @Test
     public void testArmadaHotelMatchName() {
 
         HotelRule rule = new HotelNameRule();
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
-        //los strings son muy distintos para que matcheen
+        // los strings son muy distintos para que matcheen
         verify(ruleMatch).isNotSuccessful();
     }
-    
+
     @Test
     public void testArmadaHotelMatchAddress() {
 
@@ -35,7 +35,7 @@ public class WallStreet_HI_HotelMappingTest extends BaseHotelMappingTest {
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
         verify(ruleMatch).isSuccessful();
     }
-    
+
     @Test
     public void testArmadaHotelMatchZipCode() {
 
@@ -43,7 +43,7 @@ public class WallStreet_HI_HotelMappingTest extends BaseHotelMappingTest {
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
         verify(ruleMatch).isSuccessful();
     }
-    
+
     @Test
     public void testArmadaHotelMatchCurrencyCode() {
 
@@ -51,7 +51,7 @@ public class WallStreet_HI_HotelMappingTest extends BaseHotelMappingTest {
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
         verify(ruleMatch).isSuccessful();
     }
-    
+
     @Test
     public void testArmadaHotelStarRating() {
 
