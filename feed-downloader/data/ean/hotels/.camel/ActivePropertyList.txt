@@ -1,0 +1,3 @@
+﻿EANHotelID|SequenceNumber|Name|Address1|Address2|City|StateProvince|PostalCode|Country|Latitude|Longitude|AirportCode|PropertyCategory|PropertyCurrency|StarRating|Confidence|SupplierType|Location|ChainCodeID|RegionID|HighRate|LowRate|CheckInTime|CheckOutTime
+351656|1|Iberostar Praia do Forte All Inclusive|Rodovia BA 099, Km 56|Praia do Forte|Mata de Sao Joao||48.280-000|BR|-12.55001|-37.98906|SSA|8|USD|4.0|52|ESR|Near Project Tamar Turtle Sanctuary|2227|601935|315.66|314.66|3 PM|Noon
+364638|2|Radisson Blu Hotel Maputo|Avenida Marginal 141||Maputo|||MZ|-25.97040|32.59883|MPM|1|MZN|5.0|52|ESR|Near Museum of Natural History|2431|6281736|455|260||
