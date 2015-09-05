@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.cocha.hotels</groupId>
+	<artifactId>meta-search</artifactId>
+	<version>0.1</version>
+	<packaging>pom</packaging>
+	<name>Cocha Hotels: Meta-Seach Multi-Project</name>
+
+    <modules>
+        <module>mate-search</module>
+        <module>canonical-model</module>
+        <module>util</module>
+        <module>feed-downloader</module>
+        <module>destination-mapper</module>
+        <module>hotel-mapper</module>
+    </modules>
+    
+    <properties>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>        
+        <version.formatter.maven.plugin>0.5.2</version.formatter.maven.plugin>
+    </properties>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>${maven.compiler.source}</source>
+                        <target>${maven.compiler.target}</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>        
+    </build>
+
+    <dependencies>
+    </dependencies>
+</project>

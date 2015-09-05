@@ -1,0 +1,100 @@
+﻿EANHotelID|SequenceNumber|Name|Address1|Address2|City|StateProvince|PostalCode|Country|Latitude|Longitude|AirportCode|PropertyCategory|PropertyCurrency|StarRating|Confidence|SupplierType|Location|ChainCodeID|RegionID|HighRate|LowRate|CheckInTime|CheckOutTime
+351656|1|Iberostar Praia do Forte All Inclusive|Rodovia BA 099, Km 56|Praia do Forte|Mata de Sao Joao||48.280-000|BR|-12.55001|-37.98906|SSA|8|USD|4.0|52|ESR|Near Project Tamar Turtle Sanctuary|2227|601935|315.66|314.66|3 PM|Noon
+364638|2|Radisson Blu Hotel Maputo|Avenida Marginal 141||Maputo|||MZ|-25.97040|32.59883|MPM|1|MZN|5.0|52|ESR|Near Museum of Natural History|2431|6281736|455|260||
+360360|3|Kefalonia Bay Palace|Agia Efimia||Kefalonia||28081|GR|38.30492|20.60354|EFL|1|EUR|4.0|52|ESR|In Kefalonia (Agia Efimia)||6123438|376.5266|168.4478||
+134083|4|Americas Best Value Inn|610 Western Avenue||Fergus Falls|MN|56537|US|46.28891|-96.11692|FAR|2|USD|2.0|95|ESR|Near Westridge Mall|2088|1206|83.5749|72.9987|3 PM|11 AM
+323327|5|Stadia Suites|Juan Salvador Agraz # 60|Colonia Lomas de Santa Fe|Mexico City||05300|MX|19.35878|-99.27767|MEX|22|USD|3.5|52|ESR|Near Ciudad de los Ninos||2265|270.65|121.79|3 PM|1 PM
+225368|6|Campanile Lille Roncq|Ctre Int. de Transport|Avenue de l'Europe|Roncq||59223|FR|50.75382|3.13692|LIL|1|EUR|3.0|13|ESR|In Roncq|2180|6046310|85.31|70.33||
+370966|7|Alimounda Mare|Pigadia||Karpathos||85700|GR|35.50898|27.20525|AOK|1|EUR|5.0|52|ESR|Near Pigadia Archaeological Museum||396|546.1446|293.9738||
+211778|8|Vintage Inn|6541 Washington St||Yountville|CA|94599|US|38.40220|-122.36174|SFO|1|USD|4.0|52|ESR|Near V Marketplace||10527|446|445||
+230296|9|db San Antonio Hotel & Spa|Triq it-Turisti|Qawra|St Pauls Bay||SPB1024|MT|35.95280|14.41847|MLA|8|EUR|4.0|52|ESR|In St. Paul's Bay (Qawra)|2053|4805|402.96|196.09||
+401455|10|The Green Leaf Niseko Village|Higashiyama Onsen, Niseko-cho,Abuta-gun||Niseko||048-1592|JP|42.84566|140.67642|CTS|3|JPY|4.0|52|ESR|Near Niseko Higashiyama Ski Area||500669|402.6806|212.596||
+263408|11|Girassol Indy Congress Hotel And Spa|Rua Macombe Nongue-Nongue, R.1.373||Maputo||1750|MZ|-25.95482|32.60081|MPM|1|MZN|3.5|54|ESR|Near Eduardo Mondlane University||6281736|245.19|191.5||
+366260|12|The Macdonald Dona Lola Club|Carretera de Cadiz-Malaga, Km 197|Calahonda|Mijas||29649|ES|36.48868|-4.71229|AGP|16|EUR|3.0|52|ESR|In Mijas (Calahonda)||10604|79.1679|78.1679||
+227792|13|Campanile La Ferte Bernard|rue Robert Schumann||La Ferte-Bernard||72400|FR|48.17689|.65143|TUF|1|EUR|3.0|85|ESR|Near a train station|2180|500416|81.18|58.16||
+420422|14|Residence Pierre & Vacances Mojacar Playa|Paseo del Mediterraneo, 409||Mojacar||04638|ES|37.14252|-1.82752|LEI|16|EUR|3.5|100|ESR|Near Mojacar Beach|2362|182349|143.1297|93.2994||
+231110|15|Messapia Hotel & Resort|C.da Masseria Li Turchi|Marina Di Leuca|Castrignano del Capo||73040|IT|39.80479|18.36406|BDS|1|EUR|4.0|52|ESR|In Castrignano del Capo (Leuca)||6134264|150.92|99.56||
+112677|16|Kahler Grand Hotel|20 2nd Ave Sw||Rochester|MN|55902|US|44.02343|-92.46563|RST|1|USD|3.0|52|ESR|Near Shops University Square||6059956|215.47|150.47|4 PM|11 AM
+213884|17|The Duke Of Richmond Hotel|Cambridge Park||St Peter Port||GY1 1UY|GB|49.45976|-2.54227|GCI|1|GBP|4.0|5|ESR|Near Candie Gardens|2914|4305|594.88|232.3|2 PM|11 AM
+144225|18|Palladium Hotel|Plati Yialos||Mykonos||84600|GR|37.41457|25.34448|JMK|1|EUR|5.0|52|ESR|In Mykonos (Platis Gialos)||1707|604.8|603.8|2 PM|noon
+360346|19|Coconut Grove Regency Hotel|Mozambique Link, North Ridge|Cantonments|Accra||CT 3998|GH|5.57142|-.19238|ACC|1|GHS|3.0|52|ESR|Near Ghana State House|3264|6297295|307.5795|207.3124||
+357094|20|Fleur de Chine Hotel|23 Zhongzheng Road|Sun Moon Lake|Yuchi||55546|TW|23.87114|120.92390|TPE|1|TWD|4.5|52|ESR|Near Sun Moon Lake Peacock Park||6141174|385.6179|337.0358||
+240380|21|Ikos Oceania|Eleonas Beach Street|Nea Moudania|Nea Propontida||63200|GR|40.24597|23.26889|SKG|8|EUR|5.0|52|ESR|In Nea Propontida (Halkidiki)||6048552|525.79|304.4||
+437531|22|Hotel Olympia|Divadelní nám. 43/5||Karlovy Vary||360 01|CZ|50.22154|12.88285|KLV|1|CZK|4.5|52|ESR|Near Karlovy Vary Municiple Theater||8307|171.43|170.43||
+215216|23|Nissaki Boutique Hotel|Platis Gialos Beach||Mykonos||84600|GR|37.41475|25.34106|JMK|1|EUR|5.0|5|ESR|Near Platis Gialos Beach||1707|1089.498|567.9227|1 PM|noon
+254615|24|Verandah Resort & Spa Antigua All Inclusive|Indian Town Road|Parish of St. Philip|Willikies|||AG|17.09714|-61.68928|ANU|8|USD|3.5|52|ESR|Near Long Bay|2537|11729|1200|683.75||
+326784|25|Raina Beach Apartments|Titikaveka, South East||Rarotonga||682|CK|-21.27004|-159.74176|RAR|1|NZD|3.0|52|ESR|In Rarotonga (Titikaveka)||6055262|113.0025|79.1018||
+274400|26|Hotel Garbí|Avenida de Baldomer Gili i Roig, 20||Palafrugell||17210|ES|41.88766|3.17973|GRO|1|EUR|3.0|52|ESR|Near Platja de Castell||182297|224.39|152.18|2 PM|noon
+240106|27|Hotel Boemia|Via Antonio Gramsci 87||Riccione||47838|IT|43.99833|12.66656|RMI|1|EUR|4.0|52|ESR|Near Perle d'Acqua Park||4880|154.24|81.78|12:30 PM|10 AM
+239437|28|Pizzomunno Vieste Palace Hotel|Lungomare Enrico Mattei, Km 1||Vieste||71019|IT|41.87219|16.17539|BRI|1|EUR|5.0|52|ESR|Near Pizzomuou||6023654|419.23|213.8||
+404656|29|Thalasso Hotel El Palasiet|Calle Pontazgo, 11||Benicasim||12560|ES|40.05714|.08773|VLC|1|EUR|4.0|52|ESR|Near Voramar Beach||181362|360.54|194.94||
+227963|30|Globales Cortijo Blanco|Avda. Jose Luis Carrillo Benitez, s/n|San Pedro de Alcantara|Marbella||29760|ES|36.48503|-4.97796|AGP|1|EUR|3.0|52|ESR|Near Centro Plaza|2755|5776|124.72|67.26||
+400552|31|Le Vasa Resort|Cape Fatuosofia Road||Cape Fatuosofia|||WS|-13.86799|-172.07071|APW|3|WST|3.5|52|ESR|By the ocean||6158455|380|362||
+252901|32|Hotel Britannia Excelsior|Via Regina 41 - Cadenabbia||Griante||22011|IT|45.99239|9.23823|MXP|1|EUR|3.0|52|ESR|Near Villa Carlotta||6035393|294.7411|115.6594|3 PM|10 AM
+191491|33|Polana Serena Hotel|Avenida Julius Nyerere 1380||Maputo||00100|MZ|-25.96900|32.59688|MPM|1|MZN|5.0|52|ESR|Near Museum of Natural History||6281736|650|325|2 PM|11 AM
+339858|34|Arte & Mare Elia Mykonos Suites|Elia Beach|Mykonos Town|Mykonos||84600|GR|37.42318|25.39003|JMK|1|EUR|5.0|52|ESR|In Mykonos (Elia)||1707|1121.0979|292.1966||
+173697|35|Comfort Suites|864 Ben-Ali Drive||Danville|KY|40422|US|37.65260|-84.80381|SDF|1|USD|2.5|67|ESR|Near Great American Dollhouse Museum|715|6743|100|99|3 PM|11 AM
+341612|36|Golden Tulip Parkstad Zuid-Limburg|Roda Jc Ring 59||Kerkrade||6466 NH|NL|50.85630|6.00642|MST|1|EUR|4.0|52|ESR|Near Parkstad Limburg Stadium|213|6047527|195.99|97.99||
+435886|37|Four Points By Sheraton Miraflores|Calle Alcanfores 290|Miraflores|Lima||15074|PE|-12.12229|-77.02778|LIM|1|PEN|3.5|52|ESR|In Lima (Miraflores)|309|2077|195|185||
+396873|38|Salinas de Maceió Beach Resort|AL-101 Km, 20|Ipioca|Maceio||57039-700|BR|-9.52974|-35.60783|MCZ|3|BRL|3.5|100|ESR|Near Ipioca Beach||2244|186.09|131.33||
+324164|39|Atahotel Varese|Via Albani 73||Varese||21100|IT|45.83341|8.82989|MXP|1|EUR|4.0|52|ESR|Near Villa Menafoglio Litta Panza and Collection||4884|206.63|91.09||
+242412|40|Saint John Hotel Villas & Spa|Aghios Ioannis Beach|Aghios Ioannis|Mykonos||84600|GR|37.41951|25.31315|JMK|1|EUR|5.0|52|ESR|Near Agios Ioannis Beach||1707|1927.6709|456.5519|2 PM|noon
+242649|41|Villa Zina Park Hotel|Via Viterbo 20||Custonaci||91015|IT|38.07612|12.70162|TPS|1|EUR|4.0|52|ESR|Near Sanctuary of Maria Santissima of Custonaci||6049288|139.7582|133.0046|4 PM|10 AM
+194241|42|Novotel Lille Centre Gares|49 Rue de Tournai||Lille||59000|FR|50.63440|3.07325|LIL|1|EUR|4.0|74|ESR|Near Henri Matisse Park|300|2076|364.14|222.66|2 PM|noon
+268252|43|The Savoy Jersey|Rouge Bouillon||St Helier||JE2 3ZA|GB|49.19165|-2.10968|JER|1|GBP|4.0|52|ESR|Near Jersey Museum||4306|117.0616|109.7452||
+308525|43|West Bay Club|Lower Bight Road Bldg A|Grace Bay|Providenciales||BWI|TC|21.78252|-72.20879|PLS|1|USD|4.5|52|ESR|Near Salt Mills Plaza||2822|2450|480||
+363230|44|Nonsuch Bay Resort|Hughes Point||Freetown|||AG|17.07263|-61.69968|ANU|1|USD|4.0|52|ESR|Near Brown's Bay Beach||11729|823|330||
+125284|45|Grand Hotel Eden|Riva Paradiso 1||Paradiso||6900|CH|45.99148|8.94820|LUG|1|CHF|5.0|88|ESR|In Paradiso (Lake Lugano)||6143567|563.99|358.9|2 PM|noon
+263189|47|Hotel Contessina|Tsilivi||Zakynthos||29100|GR|37.81688|20.86480|ZTH|1|EUR|3.0|52|ESR|Near Tsilivi Beach||601109|180.8016|110.989|2 PM|noon
+275875|48|Atahotel Expo Fiera|Via Giovanni Keplero, 12||Pero||20016|IT|45.50255|9.08822|MXP|1|EUR|4.0|52|ESR|Near Gaap Family-Club||180307|374.9574|244.3807||
+139149|49|NH Best|De Maas 2||Best||5684 PL|NL|51.48987|5.39384|EIN|1|EUR|3.0|38|ESR|In Best|2022|178024|87.41|69.17|3 PM|noon
+392863|51|Anantara Xishuangbanna Resort and Spa|Menglun Town, Mengla, Xishuangbanna||Mengla||666303|CN|21.93442|101.24397|JHG|3|CNY|5.0|52|ESR|On a river|2689|6149800|3133.4199|537.99||
+322696|52|Ramada Wainwright|1510 - 27th Street||Wainwright|AB|T9W0A4|CA|52.84337|-110.83482|YEG|1|CAD|2.5|90|ESR|Near Wainwright Golf Club|113|181752|124.341|123.341|3 PM|11 AM
+269995|53|Dales Country House|Lodge Hill||Sheringham||NR26 8TJ|GB|52.93105|1.18501|NWI|1|GBP|4.0|52|ESR|Near Sheringham Park||602492|278.0213|248.7559|2 PM|11 AM
+195828|54|Super 8 Oxford Ms|2201 Jackson Ave W||Oxford|MS|38655|US|34.36252|-89.56212|MEM|1|USD|2.0|95|ESR|Near C.M. Tad Smith Coliseum|733|6140|249.01|199|2 PM|11 AM
+232865|55|Palau Royal Resort|P.O. Box 10108|Malakal Island|Koror||96940|PW|7.33531|134.45824|ROR|3|USD|4.0|87|ESR|Near National Stadium|94|3025|268.61|227|2 PM|noon
+397396|56|Hampton Inn Tunkhannock|209 E Tioga St||Tunkhannock|PA|18657|US|41.53785|-75.93722|AVP|1|USD|2.5|55|ESR|In the city center|358|7183|154|124||
+249926|57|Antinea Suites and Spa Hotel|Kamari Beach||Santorini||84700|GR|36.37093|25.47756|JTR|1|EUR|4.0|52|ESR|In Santorini (Kamari)||177970|1077.4399|969.7||
+261513|58|Reef Residences|End of Stubbs Road|Grace Bay|Providenciales|||TC|21.78507|-72.20299|PLS|7|USD|3.0|52|ESR|Near Salt Mills Plaza||2822|532|332||
+235452|59|Hotel Yountville|6462 Washington Street||Yountville|CA|94599|US|38.39843|-122.35822|OAK|1|USD|4.5|52|ESR|Near Gordon Gallery||10527|425|375||
+185718|60|Hotel Marine Plaza|29 Marine Drive||Mumbai||400 020|IN|18.93148|72.82288|BOM|1|INR|4.5|52|ESR|Near Veer Nariman Road|2461|657|272.33|136.16|noon|noon
+213170|61|The Star Inn|29 Perry St||Cape May|NJ|08204|US|38.93066|-74.92333|ACY|1|USD|3.5|80|ESR|Near Cape May Stage||10465|239|149||
+211347|62|Royal Plaza Montreux & SPA|Avenue Claude Nobs 7||Montreux||1820|CH|46.44009|6.90352|GVA|1|CHF|5.0|52|ESR|Near Freddie Mercury Statue||4480|1153.61|226.11||Noon
+441482|63|Hyatt Regency Changbaishan|Changbaishan International Resort|Southern Region, Fusong County|Baishan||134504|CN|42.10234|127.50749|CGQ|3|CNY|4.0|52|ESR|Near Changbaishan Ski Resort|65|6140778|296.28|218.31||
+439038|65|Manoulas Mykonos Beach Resort|Agios Ioannis||Mykonos||84600|GR|37.42214|25.31203|JMK|1|EUR|4.0|52|ESR|Near Agios Ioannis Beach||1707|190.935|180.8841||
+226706|66|The Grand Lodge Crested Butte|6 Emmons Rd||Crested Butte|CO|81225|US|38.90028|-106.96646|GUC|15|USD|3.0|3|ESR|Near Crested Butte Mountain Resort||5919|238.67|145.33|4 PM|11 AM
+198867|67|Fort Marcy Hotel Suites|321 Kearney Ave||Santa Fe|NM|87501|US|35.69083|-105.93233|SAF|7|USD|3.0|52|ESR|Near Palace of the Governors||3068|299|269|4 PM|11 AM
+257666|68|Iberostar Bahia Hotel All Inclusive|Rodvia. BA 099 Km 57|Praia do Forte|Mata de Sao Joao||48280000|BR|-12.54999|-37.98914|SSA|8|USD|3.5|52|ESR|Near Project Tamar Turtle Sanctuary|2227|601935|400|293.34||
+424283|69|One Niseko Resort Towers|455-3 Niseko||Niseko||048-1511|JP|42.84664|140.62543|CTS|1|JPY|4.0|52|ESR|Near Niseko Higashiyama Ski Area||500669|388.8186|259.2175||
+441756|70|Ereza Apartamentos Los Hibiscos|Doramas 16|Puerto del Carmen|Tias||35510|ES|28.92191|-13.65969|ACE|22|EUR|3.0|52|ESR|In Tias (Puerto del Carmen)||182406|135.7082|90.6594||
+357896|71|Princessa Riviera Resort|Pythagorion||Samos||83103|GR|37.69610|26.96327|SMI|1|EUR|3.0|100|ESR|In Samos (Pythagorio)||3216|124.58|87.42||
+346138|72|Sheraton Lagos Hotel|30 Mobolaji Bank Anthony Way|Airport Road, Ikeja|Lagos|||NG|6.58305|3.35873|LOS|1|NGN|4.0|52|ESR|Near Computer Village|130|179353|333.75|283.53|3 PM|1 PM
+436579|73|Beach Park Suites Resort|Via Local 27 lado impar-Porto das Dunas||Aquiraz||61700-000|BR|-3.88965|-38.35836|FOR|3|BRL|3.5|52|ESR|Near Park Engenhoca||6034455|267.39|136.79||
+183807|74|Le Royal Hotels & Resorts - Amman|Zahran Street 3rd Circle|Jabal Amman|Amman||11118|JO|31.95391|35.90899|AMM|1|JOD|5.0|54|ESR|Near Coptic Church||6269089|232.9189|162.1394||
+374089|75|Best Western Hotel Belfort|9 Avenue Wilson||Belfort||90000|FR|47.63353|6.85425|MLH|1|EUR|3.0|100|ESR|Near Belfort Cathedral|17|6395|114.13|61.23||
+114120|76|Taj Boston|15 Arlington St||Boston|MA|02116|US|42.35293|-71.07122|BOS|1|USD|4.5|95|ESR|Near Boston Public Garden|734|660|645|245|3 PM|noon
+236948|77|Sol Palmanova - Mirlos Tordos All Inclusive|Pinzones s/n|Palma Nova|Calvia||07181|ES|39.51591|2.53464|PMI|1|EUR|4.0|52|ESR|Near Golf Fantasia|2432|182299|159.32|127.33|2 PM|Noon
+140610|78|Belle Maison Apartments|129 Surf Parade||Broadbeach|QL|4218|AU|-28.02538|153.43131|OOL|16|AUD|4.5|52|ESR|Near Jupiters Casino||177549|150.7346|149.7346|2 PM|10 AM
+348926|79|Aparthotel Parque Tropical|Paseo de los Limoneros|Vera Playa|Vera||04620|ES|37.20993|-1.81788|AGP|22|EUR|3.0|52|ESR|In Vera (Vera Playa)||6024012|243.8506|45.1124||
+313199|80|Grand Riviera Princess All Suites Resort & Spa All Inclusive|Prolongacion 5ta Avenida|Mza 20 Lote 006|Playa del Carmen||77710|MX|20.67261|-87.03429|CUN|8|USD|4.0|52|ESR|Near Coco Beach||601751|509.688|467.7171|3 PM|noon
+132528|80|Olympic Lagoon Resort Paphos|Poseidon Avenue||Paphos||8090|CY|34.74759|32.42592|PFO|8|EUR|5.0|80|ESR|Near Paphos Aphrodite Waterpark||2775|404.04|323.65|2 PM|noon
+343162|81|Hotel Artiem Carlos III|Carrer Carles III, 2-4||Es Castell||07720|ES|39.88234|4.28940|MAH|1|EUR|4.0|52|ESR|Near Mahon Arsenal|3342|6034684|180.0147|105.1102||
+442028|82|Crowne Plaza Chengdu West|No. 1, Xixin Avenue|High-Technology West Zone|Chengdu||610041|CN|30.73060|103.97200|CTU|1|CNY|4.5|52|ESR|In the city center|256|930|192.52|85.65||
+138656|82|Le Meridien Fisherman's Cove|Bel Ombre Rd||Mahe Island|||SC|-4.61666|55.42188|SEZ|1|EUR|5.0|52|ESR|Near Beau Vallon Beach|87|3127|770.0134|361.9839|3 PM|noon
+259608|83|Waikiki Shore by Outrigger|2161 Kalia Road||Honolulu|HI|96815|US|21.27904|-157.83253|HNL|7|USD|3.0|52|ESR|Near Royal Hawaiian Center|102|1488|338.96|238.96||
+326459|84|Mabely Grand Hotel|Kambi Exo Chora||Zakynthos||291 00|GR|37.77897|20.67931|ZTH|1|EUR|5.0|52|ESR|In Zakynthos (Kambi)||601109|370.65|120.89||
+424946|85|Nuovo Natural Village|Contrada Terranova, SS 16 km, 331,48||Potenza Picena||62018|IT|43.39570|13.67942|AOI|16|EUR|.0|52|ESR|In Potenza Picena (Porto Potenza Picena)||6123519|100.2438|37.5848||
+487313|86|Best Western Premier Accra Airport Hotel|17 White Avenue||Accra||00000|GH|5.60439|-.17206|ACC|1|GHS|4.0||ESR|Near Accra Mall|17|6297295|500|204||
+107765|87|Quality Inn & Suites|1225 N Dixie Hwy||Monroe|MI|48162|US|41.92565|-83.36438|DTW|1|USD|2.5|52|ESR|Near Raisin River Golf Course|111|8679|119.99|89.99|3 PM|noon
+119492|88|Fairfield Inn Ponca City|3405 N 14th St||Ponca City|OK|74601|US|36.74432|-97.06726|PNC|1|USD|2.5|95|ESR|Near Ponca Plaza|44|2836|119|109|3 PM|noon
+221228|89|Royal Decameron Baobab|Village De La Somone Bp 81||La Somone||0|SN|14.49083|-17.08501|DKR|8|XOF|2.0|52|ESR|On the beach||6034881|206.42|160.04||
+410334|90|Chateau Royal Beach Resort and Spa|140 Promenade Roger Laroque|BP 18716|Noumea||98807|NC|-22.30924|166.45017|NOU|1|XPF|4.0|52|ESR|Near Aquarium des Lagons||2590|577.2017|218.916||
+410355|91|Cumulus Rautatienkatu|Rautatienkatu 21||Tampere||33100|FI|61.49981|23.77143|TMP|1|EUR|3.5|5|ESR|Near Tampere Hall|3256|3484|192.84|143.59||
+426694|92|Hotel Royal-St.Georges Interlaken - MGallery Collection|Hoeheweg 139||Interlaken||3800|CH|46.68869|7.86313|ZRH|1|CHF|4.5|52|ESR|Near Interlaken Casino|2435|6052439|226.14|225.14||
+203526|93|Royal West Indies Resort|Grace Bay Rd||Providenciales|||TC|21.79906|-72.16894|PLS|1|USD|4.0|52|ESR|Near The Regent Village Shopping Mall||2822|650|365||
+271832|94|Don Gaspar Inn|623 Don Gaspar||Santa Fe|NM|87505|US|35.67959|-105.94140|ABQ|5|USD|3.5|52|ESR|Near Santa Fe Railyard|2136|3068|239|175||
+241676|95|Cocos Hotel Antigua - All Inclusive - Adults Only|Valley Church Road||Valley Church|||AG|17.05345|-61.89206|ANU|8|USD|3.5|52|ESR|Near Valley Church Beach||11729|887|740|3 PM|
+253738|96|Aitutaki Lagoon Resort & Spa|Aitutaki Lagoon|Motu Akitua|Aitutaki|||CK|-18.84971|-159.75724|AIT|3|NZD|4.5|52|ESR|In Aitutaki (Akitua Island)||331|2113.5852|1624.7668||
+313433|97|Pelagos Suites Hotel|Lambi Beach||Kos||85300|GR|36.90995|27.26935|KGS|22|EUR|4.0|52|ESR|In Kos (Lambi)||1804|1507.4209|210.7399||
+112830|98|Residence Inn Ann Arbor by Marriott|800 Victors Way||Ann Arbor|MI|48108|US|42.23982|-83.73680|DTW|22|USD|3.0|95|ESR|Near Cobblestone Farm|114|6155|229|159|3 PM|noon
+354792|99|Jupiter International Hotel Cazanchis|Marshal Tito Road Cazanchise||Addis Ababa|||ET|9.01650|38.76826|ADD|1|USD|4.0|52|ESR|Near ECA Conference Center||6271020|185.2503|140.3322||

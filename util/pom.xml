@@ -1,0 +1,74 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.cocha.hotels</groupId>
+		<artifactId>meta-search</artifactId>
+		<version>0.1</version>
+	</parent>
+	<groupId>com.cocha.hotels</groupId>
+	<artifactId>util</artifactId>
+	<packaging>jar</packaging>
+	<version>${project.parent.version}</version>
+	<name>util</name>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<version.surefire.plugin>2.10</version.surefire.plugin>
+
+		<!-- Dependencies Versions -->
+		<log4j-version>1.2.17</log4j-version>
+		<slf4j-version>1.7.5</slf4j-version>
+		<junit-version>4.12</junit-version>
+	</properties>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit-version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Log -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${slf4j-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j-version}</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>${project.artifactId}-${project.version}</finalName>
+		<plugins>
+			<plugin>
+				<groupId>net.revelc.code</groupId>
+				<artifactId>formatter-maven-plugin</artifactId>
+				<version>${version.formatter.maven.plugin}</version>
+				<configuration>
+					<configFile>../Centaurico-Code-Style.xml</configFile>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>format</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
