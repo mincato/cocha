@@ -35,6 +35,8 @@
 
 		<!-- Dependencies Versions -->
 		<camel-version>2.15.3</camel-version>
+		<servlet-version>3.0.1</servlet-version>
+		<spring-version>4.1.6.RELEASE</spring-version>
 		<log4j-version>1.2.17</log4j-version>
 		<slf4j-version>1.7.5</slf4j-version>
 	</properties>
@@ -104,6 +106,39 @@
 			<version>${camel-version}</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-cxf</artifactId>
+			<version>${camel-version}</version>
+		</dependency>
+
+		<!-- Spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring-version}</version>		  	
+		</dependency>	
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring-version}</version>
+		</dependency>
+		
+		<!-- Servlet 3.1 Specification for Tomcat 8 -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${servlet-version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-servlet_3.0_spec</artifactId>
+			<version>1.0</version>
+			<scope>provided</scope>
+		</dependency>
+		
 
 		<!-- Log -->
 		<dependency>

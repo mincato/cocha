@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:camel="http://camel.apache.org/schema/spring"
+	xmlns:cxf="http://cxf.apache.org/core"
+	xmlns:jaxrs="http://cxf.apache.org/jaxrs"		
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+		
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://camel.apache.org/schema/spring
+	http://camel.apache.org/schema/spring/camel-spring.xsd
+	http://camel.apache.org/schema/cxf 
+    http://camel.apache.org/schema/cxf/camel-cxf.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://cxf.apache.org/core 
+    http://cxf.apache.org/schemas/core.xsd
+    http://cxf.apache.org/jaxrs
+	http://cxf.apache.org/schemas/jaxrs.xsd
+	http://cxf.apache.org/jaxws 
+	http://cxf.apache.org/schemas/jaxws.xsd">
+
+	<import resource="classpath:META-INF/cxf/cxf.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+   
+	<context:component-scan base-package="com.cocha.hotels.matesearch"
+		annotation-config="true" />
+	<context:annotation-config />	
+
+	<!-- Tell CXF/JAX-RS where the REST service is defined -->
+	<!-- 
+		Specifying the address as '/' or '/something' makes sure it uses the containing app server.
+		In certain configurations, not including address causes Camel to start a Jetty instance
+		which hosts the REST service. This can cause conflicts in dependencies.
+	 -->
+	<jaxrs:server id="jaxRsServer" address="/monitoring" serviceClass="com.cocha.hotels.matesearch.providers.services.EanService"/>
+		
+	<camel:camelContext trace="true">
+		<camel:routeBuilder ref="eanRoutes" />
+		<camel:routeBuilder ref="basicBeanRoute" />		
+	</camel:camelContext>
+	
+</beans>

@@ -1,14 +1,14 @@
-package com.cocha.hotels.matesearch.example;
+package com.cocha.hotels.matesearch.util;
 
 import org.apache.camel.builder.RouteBuilder;
 import org.springframework.stereotype.Component;
 
 @Component
-public class HelloBeanRoute extends RouteBuilder {
+public class BasicBeanRoute extends RouteBuilder {
 
     @Override
     public void configure() throws Exception {
 
-        from("direct:hello").beanRef("helloBean");
+        from("direct:test").beanRef("basicBean");
     }
 }
