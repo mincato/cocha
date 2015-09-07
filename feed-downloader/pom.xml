@@ -121,7 +121,7 @@
 			<version>${camel-version}</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<!-- Database -->
 		<dependency>
 			<groupId>mysql</groupId>
@@ -202,6 +202,15 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.cocha.hotels.feeddownloader.main.ETLMain</mainClass>
+					<includePluginDependencies>false</includePluginDependencies>
+				</configuration>
 			</plugin>
 
 		</plugins>
