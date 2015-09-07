@@ -10,7 +10,6 @@
 	</parent>
 	<groupId>com.cocha.hotels</groupId>
 	<artifactId>mate-search</artifactId>
-	<version>${project.parent.version}</version>
 	<packaging>war</packaging>
 	<name>mate-search</name>
 	<description>Cocha Hotels: Meta-Seach</description>

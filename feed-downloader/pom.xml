@@ -10,7 +10,6 @@
 	</parent>
 	<groupId>com.cocha.hotels</groupId>
 	<artifactId>feed-downloader</artifactId>
-	<version>0.1</version>
 	<packaging>war</packaging>
 	<name>feed-downloader</name>
 	<description>Cocha Hotels: Feed-Downloader</description>
