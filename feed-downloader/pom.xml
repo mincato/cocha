@@ -38,7 +38,6 @@
 		<slf4j-version>1.7.5</slf4j-version>
 		<mysql-version>5.1.36</mysql-version>
 		<h2-version>1.4.188</h2-version>
-		<hibernate-version>5.0.0.Final</hibernate-version>
 	</properties>
 
 
@@ -139,13 +138,11 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>${hibernate-version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<version>${hibernate-version}</version>
 		</dependency>
 
 		<!-- Log -->
