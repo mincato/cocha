@@ -2,14 +2,16 @@ package com.cocha.hotels.hotelmapper.algorithm;
 
 import com.cocha.hotels.model.content.hotel.Hotel;
 
-public class HotelStarRatingRule implements HotelRule {
+public class HotelStarRatingRule extends HotelRule {
 
     @Override
     public RuleMatch apply(Hotel reference, Hotel toCompare) {
         // obtener atributos, uniformizarlos, compararlos
         String attrReference = flatten(reference.getStarRating());
         String attrToCompare = flatten(toCompare.getStarRating());
-        return compare(attrReference, attrToCompare);
+        RuleMatch match = compare(attrReference, attrToCompare);
+        log("HotelStarRatingRule", reference,toCompare,attrReference,attrToCompare,match);
+        return match;
     }
 
     private RuleMatch compare(String attrReference, String attrToCompare) {

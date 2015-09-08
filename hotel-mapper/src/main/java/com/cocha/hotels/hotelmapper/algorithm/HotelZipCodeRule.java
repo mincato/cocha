@@ -2,14 +2,16 @@ package com.cocha.hotels.hotelmapper.algorithm;
 
 import com.cocha.hotels.model.content.hotel.Hotel;
 
-public class HotelZipCodeRule implements HotelRule {
+public class HotelZipCodeRule extends HotelRule {
 
     @Override
     public RuleMatch apply(Hotel reference, Hotel toCompare) {
-        // TODO obtener atributos, uniformizarlos, compararlos
-        String nameReference = flatten(reference.getZipCode());
-        String nameToCompare = flatten(toCompare.getZipCode());
-        return compare(nameReference, nameToCompare);
+        // obtener atributos, uniformizarlos, compararlos
+        String attrReference = flatten(reference.getZipCode());
+        String attrToCompare = flatten(toCompare.getZipCode());
+        RuleMatch match = compare(attrReference, attrToCompare);
+        log("HotelZipCodeRule", reference,toCompare,attrReference,attrToCompare,match);
+        return match;
     }
 
     private RuleMatch compare(String attrReference, String attrToCompare) {

@@ -12,12 +12,10 @@ class MatchVerifier {
 
     public void hasLessConfidenceThan(Integer confidence) {
         Assert.assertFalse(this.match.getConfidence() >= confidence);
-        System.out.println("Confidence: " + this.match.getConfidence());
     }
 
     public void hasGreatOrEqualConfidenceThan(Integer confidence) {
         Assert.assertTrue(this.match.getConfidence() >= confidence);
-        System.out.println("Confidence: " + this.match.getConfidence());
     }
 
 }

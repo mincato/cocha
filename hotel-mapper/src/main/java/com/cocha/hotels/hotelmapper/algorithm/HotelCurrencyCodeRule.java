@@ -2,14 +2,16 @@ package com.cocha.hotels.hotelmapper.algorithm;
 
 import com.cocha.hotels.model.content.hotel.Hotel;
 
-public class HotelCurrencyCodeRule implements HotelRule {
+public class HotelCurrencyCodeRule extends HotelRule {
 
     @Override
     public RuleMatch apply(Hotel reference, Hotel toCompare) {
-        // TODO obtener atributos, uniformizarlos, compararlos
-        String nameReference = flatten(reference.getCurrencyCode());
-        String nameToCompare = flatten(toCompare.getCurrencyCode());
-        return compare(nameReference, nameToCompare);
+        // obtener atributos, uniformizarlos, compararlos
+        String attrReference = flatten(reference.getCurrencyCode());
+        String attrToCompare = flatten(toCompare.getCurrencyCode());
+        RuleMatch match = compare(attrReference, attrToCompare);
+        log("HotelCurrencyCodeRule", reference,toCompare,attrReference,attrToCompare,match);
+        return match;
     }
 
     private RuleMatch compare(String attrReference, String attrToCompare) {

@@ -5,14 +5,16 @@ import java.util.List;
 
 import com.cocha.hotels.model.content.hotel.Hotel;
 
-public class HotelAddressRule implements HotelRule {
+public class HotelAddressRule extends HotelRule {
 
     @Override
     public RuleMatch apply(Hotel reference, Hotel toCompare) {
         // obtener atributos, uniformizarlos, compararlos
-        String nameReference = flatten(reference.getAddress());
-        String nameToCompare = flatten(toCompare.getAddress());
-        return compare(nameReference, nameToCompare);
+        String attrReference = flatten(reference.getAddress());
+        String attrToCompare = flatten(toCompare.getAddress());
+        RuleMatch match = compare(attrReference, attrToCompare);
+        log("HotelAddressRule", reference,toCompare,attrReference,attrToCompare,match);
+        return match;
     }
 
     private RuleMatch compare(String attrReference, String attrToCompare) {

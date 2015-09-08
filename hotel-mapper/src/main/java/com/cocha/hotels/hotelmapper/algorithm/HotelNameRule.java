@@ -5,14 +5,16 @@ import java.util.List;
 
 import com.cocha.hotels.model.content.hotel.Hotel;
 
-public class HotelNameRule implements HotelRule {
+public class HotelNameRule extends HotelRule {
 
     @Override
     public RuleMatch apply(Hotel reference, Hotel toCompare) {
         // obtener atributos, uniformizarlos, compararlos
         String attrReference = flatten(reference.getName());
         String attrToCompare = flatten(toCompare.getName());
-        return compare(attrReference, attrToCompare);
+        RuleMatch match = compare(attrReference, attrToCompare);
+        log("HotelNameRule", reference,toCompare,attrReference,attrToCompare,match);
+        return match;
     }
 
     private RuleMatch compare(String attrReference, String attrToCompare) {
@@ -33,5 +35,4 @@ public class HotelNameRule implements HotelRule {
         return name.toUpperCase().replace("HOTEL", "").replace("THE", "").replace("&AMP;", "").replace("&", "")
                 .replace("AND", "").trim();
     }
-
 }
