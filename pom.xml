@@ -25,6 +25,7 @@
         
         <version.formatter.maven.plugin>0.5.2</version.formatter.maven.plugin>
         <version.surefire.plugin>2.10</version.surefire.plugin>
+		<version.findbugs.plugin>3.0.2</version.findbugs.plugin>
         
 		<!-- Explicitly declaring the source encoding eliminates the following 
 			message: -->

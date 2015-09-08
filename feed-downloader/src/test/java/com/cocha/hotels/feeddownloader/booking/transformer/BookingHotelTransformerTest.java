@@ -29,12 +29,14 @@ public class BookingHotelTransformerTest {
         assertNull(BookingHotelTransformer.toCanonicalHotels(null));
     }
 
+    @SuppressWarnings("unchecked")
     @Test
     public void testTransformNullSupplierHotelList() {
         List<Hotel> canonicalHotels = BookingHotelTransformer.toCanonicalHotels(new GetHotelsResponse());
         assertTrue(canonicalHotels.isEmpty());
     }
 
+    @SuppressWarnings("unchecked")
     @Test
     public void testTransformNotNullSupplierHotelList() {
         List<Hotel> canonicalHotels = BookingHotelTransformer.toCanonicalHotels(createSupplierHotel());

@@ -12,6 +12,7 @@ import com.cocha.hotels.model.content.hotel.Hotel;
 @Converter
 public class BookingHotelTransformer {
 
+    @SuppressWarnings("rawtypes")
     @Converter
     public static ArrayList toCanonicalHotels(GetHotelsResponse hotelsResponse) {
         ArrayList<Hotel> hotels = null;
