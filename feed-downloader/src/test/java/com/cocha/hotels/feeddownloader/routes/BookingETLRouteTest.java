@@ -6,9 +6,13 @@ import java.util.concurrent.TimeUnit;
 import javax.persistence.EntityManager;
 
 import org.apache.camel.Exchange;
+import org.apache.camel.Processor;
 import org.apache.camel.builder.NotifyBuilder;
+import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.jpa.JpaEndpoint;
+import org.apache.camel.model.RouteDefinition;
 import org.apache.camel.test.spring.CamelSpringTestSupport;
+import org.hibernate.JDBCException;
 import org.junit.Test;
 import org.springframework.context.support.AbstractXmlApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -39,6 +43,30 @@ public class BookingETLRouteTest extends CamelSpringTestSupport {
                 "Booking Hotel.xml");
         notify.matches(1, TimeUnit.SECONDS);
         assertEntityInDB();
+    }
+
+    @Test
+    public void testBookingETLRouteErrorException() throws Exception {
+        getMockEndpoint("mock:error").expectedMessageCount(1);
+        RouteDefinition route = context.getRouteDefinition(BookingETLRoute.BOOKING_ETL_ROUTE);
+        route.adviceWith(context, new RouteBuilder() {
+
+            @Override
+            public void configure() throws Exception {
+                interceptSendToEndpoint("jpa://*").skipSendToOriginalEndpoint().process(new Processor() {
+
+                    @Override
+                    public void process(Exchange arg0) throws Exception {
+                        throw new JDBCException("Simulated error exception", null);
+                    }
+                });
+                onException(JDBCException.class).to("mock:error");
+            }
+        });
+        template.requestBodyAndHeader("file:{{feeds.input.booking}}", createInput(), Exchange.FILE_NAME,
+                "Booking Hotel.csv");
+        assertMockEndpointsSatisfied();
+
     }
 
     private String createInput() {
