@@ -14,7 +14,7 @@ public class HotelZipCodeRule implements HotelRule {
 
     private RuleMatch compare(String attrReference, String attrToCompare) {
         int comparison = attrReference.compareTo(attrToCompare);
-        Integer confidence = comparison == 0 ? 30 : 0;
+        Integer confidence = comparison == 0 ? 10 : 0;
         return new HotelRuleMatch(confidence);
     }
 
