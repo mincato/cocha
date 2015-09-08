@@ -10,7 +10,6 @@
 	</parent>
 	<groupId>com.cocha.hotels</groupId>
 	<artifactId>destination-mapper</artifactId>
-	<version>0.1</version>
 	<packaging>war</packaging>
 	<name>destination-mapper</name>
 	<description>Cocha Hotels: Destination-Mapper</description>

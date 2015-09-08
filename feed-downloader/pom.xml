@@ -10,7 +10,6 @@
 	</parent>
 	<groupId>com.cocha.hotels</groupId>
 	<artifactId>feed-downloader</artifactId>
-	<version>0.1</version>
 	<packaging>war</packaging>
 	<name>feed-downloader</name>
 	<description>Cocha Hotels: Feed-Downloader</description>
@@ -37,6 +36,9 @@
 		<camel-version>2.15.3</camel-version>
 		<log4j-version>1.2.17</log4j-version>
 		<slf4j-version>1.7.5</slf4j-version>
+		<mysql-version>5.1.36</mysql-version>
+		<h2-version>1.4.188</h2-version>
+		<hibernate-version>5.0.0.Final</hibernate-version>
 	</properties>
 
 
@@ -100,9 +102,50 @@
 		</dependency>
 		<dependency>
 			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jaxb</artifactId>
+			<version>${camel-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-beanio</artifactId>
+			<version>${camel-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jpa</artifactId>
+			<version>${camel-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-test-spring</artifactId>
 			<version>${camel-version}</version>
 			<scope>test</scope>
+		</dependency>
+
+		<!-- Database -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql-version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>${h2-version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate-version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${hibernate-version}</version>
 		</dependency>
 
 		<!-- Log -->
@@ -159,6 +202,15 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.cocha.hotels.feeddownloader.main.ETLMain</mainClass>
+					<includePluginDependencies>false</includePluginDependencies>
+				</configuration>
 			</plugin>
 
 		</plugins>

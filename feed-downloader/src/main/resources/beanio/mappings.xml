@@ -1,0 +1,38 @@
+<beanio xmlns="http://www.beanio.org/2012/03" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.beanio.org/2012/03 http://www.beanio.org/2012/03/mapping.xsd">
+
+	<stream name="eanSupplierHotels" format="csv">
+		<parser>
+			<property name="delimiter" value="|" />
+		</parser>
+		<record name="header" order="1" minOccurs="1" maxOccurs="1" />
+		<record name="hotel" order="2"
+			class="com.cocha.hotels.feeddownloader.ean.model.EanSupplierHotel"
+			minOccurs="1" maxOccurs="unbounded">
+			<field name="hotelId" />
+			<field name="sequenceNumber" ignore="true"/>
+			<field name="name"/>
+			<field name="address"/>
+			<field name="address2" ignore="true"/>
+			<field name="city" ignore="true" />
+			<field name="stateProvince" ignore="true"/>
+			<field name="postalCode"/>
+			<field name="country"/>
+			<field name="latitude" type="java.lang.Double"/>
+			<field name="longitude" type="java.lang.Double"/>
+			<field name="airportCode" ignore="true"/>
+			<field name="propertyCategory" ignore="true"/>
+			<field name="propertyCurrency"/>
+			<field name="starRating"/>
+			<field name="confidence" ignore="true"/>
+			<field name="supplierType" ignore="true"/>
+			<field name="location" ignore="true"/>
+			<field name="chainCodeID" ignore="true"/>
+			<field name="regionID" ignore="true"/>
+			<field name="highRate" ignore="true"/>
+			<field name="lowRate" ignore="true"/>
+			<field name="checkInTime" ignore="true"/>
+			<field name="checkOutTime" ignore="true"/>
+		</record>
+	</stream>
+</beanio>	
