@@ -10,7 +10,7 @@ public class HotelStarRatingRule extends HotelRule {
         String attrReference = flatten(reference.getStarRating());
         String attrToCompare = flatten(toCompare.getStarRating());
         RuleMatch match = compare(attrReference, attrToCompare);
-        log("HotelStarRatingRule", reference,toCompare,attrReference,attrToCompare,match);
+        log("HotelStarRatingRule", reference, toCompare, attrReference, attrToCompare, match);
         return match;
     }
 

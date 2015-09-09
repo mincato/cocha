@@ -2,6 +2,7 @@ package com.cocha.hotels.hotelmapper.algorithm;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 
 import com.cocha.hotels.model.content.hotel.Hotel;
 
@@ -13,7 +14,7 @@ public class HotelNameRule extends HotelRule {
         String attrReference = flatten(reference.getName());
         String attrToCompare = flatten(toCompare.getName());
         RuleMatch match = compare(attrReference, attrToCompare);
-        log("HotelNameRule", reference,toCompare,attrReference,attrToCompare,match);
+        log("HotelNameRule", reference, toCompare, attrReference, attrToCompare, match);
         return match;
     }
 
@@ -32,7 +33,7 @@ public class HotelNameRule extends HotelRule {
     }
 
     private String flatten(String name) {
-        return name.toUpperCase().replace("HOTEL", "").replace("THE", "").replace("&AMP;", "").replace("&", "")
-                .replace("AND", "").trim();
+        return name.toUpperCase(Locale.ENGLISH).replace("HOTEL", "").replace("THE", "").replace("&AMP;", "")
+                .replace("&", "").replace("AND", "").trim();
     }
 }

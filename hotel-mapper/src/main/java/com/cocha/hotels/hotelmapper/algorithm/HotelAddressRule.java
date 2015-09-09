@@ -2,6 +2,7 @@ package com.cocha.hotels.hotelmapper.algorithm;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 
 import com.cocha.hotels.model.content.hotel.Hotel;
 
@@ -13,7 +14,7 @@ public class HotelAddressRule extends HotelRule {
         String attrReference = flatten(reference.getAddress());
         String attrToCompare = flatten(toCompare.getAddress());
         RuleMatch match = compare(attrReference, attrToCompare);
-        log("HotelAddressRule", reference,toCompare,attrReference,attrToCompare,match);
+        log("HotelAddressRule", reference, toCompare, attrReference, attrToCompare, match);
         return match;
     }
 
@@ -41,7 +42,7 @@ public class HotelAddressRule extends HotelRule {
     private String flatten(String name) {
         // primer paso, todo el mayusculas, remuevo los espacios
         // TODO refactor: parametrizar esto!
-        return name.toUpperCase().replace("SOUTH", "S").replace("WEST", "W").replace("STREET", "ST")
+        return name.toUpperCase(Locale.ENGLISH).replace("SOUTH", "S").replace("WEST", "W").replace("STREET", "ST")
                 .replace("AVENUE", "AVE").replace("ROAD", "RD").replace("DRIVE", "DR").replace("HIGHWAY", "HWY");
     }
 

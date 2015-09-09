@@ -1,5 +1,7 @@
 package com.cocha.hotels.hotelmapper.algorithm;
 
+import java.util.Locale;
+
 import com.cocha.hotels.model.content.hotel.Hotel;
 
 public class HotelZipCodeRule extends HotelRule {
@@ -10,7 +12,7 @@ public class HotelZipCodeRule extends HotelRule {
         String attrReference = flatten(reference.getZipCode());
         String attrToCompare = flatten(toCompare.getZipCode());
         RuleMatch match = compare(attrReference, attrToCompare);
-        log("HotelZipCodeRule", reference,toCompare,attrReference,attrToCompare,match);
+        log("HotelZipCodeRule", reference, toCompare, attrReference, attrToCompare, match);
         return match;
     }
 
@@ -22,7 +24,7 @@ public class HotelZipCodeRule extends HotelRule {
 
     private String flatten(String name) {
         // primer paso, todo el mayusculas, remuevo los espacios
-        return name.toUpperCase().replaceAll("\\s", "");
+        return name.toUpperCase(Locale.ENGLISH).replaceAll("\\s", "");
     }
 
 }
