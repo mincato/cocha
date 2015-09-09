@@ -3,38 +3,38 @@ package com.cocha.hotels.model.mateSearch.supplier.ean;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ChargeableNightlyRatElement {
-	
-	@JsonProperty("@rate")
-	private java.lang.String rate;
 
- 	@JsonProperty("@baseRate")
-	private java.lang.String baserate;
+    @JsonProperty("@rate")
+    private java.lang.String rate;
 
-	@JsonProperty("@promo")
-	private java.lang.String promo;
+    @JsonProperty("@baseRate")
+    private java.lang.String baserate;
 
-	public void setRate(java.lang.String rate) {
-		this.rate = rate;
-	}
+    @JsonProperty("@promo")
+    private java.lang.String promo;
 
-	public java.lang.String getRate() {
-		return rate;
-	}
+    public void setRate(java.lang.String rate) {
+        this.rate = rate;
+    }
 
-	public void setBaserate(java.lang.String baserate) {
-		this.baserate = baserate;
-	}
+    public java.lang.String getRate() {
+        return rate;
+    }
 
-	public java.lang.String getBaserate() {
-		return baserate;
-	}
+    public void setBaserate(java.lang.String baserate) {
+        this.baserate = baserate;
+    }
 
-	public void setPromo(java.lang.String promo) {
-		this.promo = promo;
-	}
+    public java.lang.String getBaserate() {
+        return baserate;
+    }
 
-	public java.lang.String getPromo() {
-		return promo;
-	}
+    public void setPromo(java.lang.String promo) {
+        this.promo = promo;
+    }
+
+    public java.lang.String getPromo() {
+        return promo;
+    }
 
 }

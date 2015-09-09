@@ -3,27 +3,27 @@ package com.cocha.hotels.model.mateSearch.supplier.ean;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Surcharge {
-	
-	@JsonProperty("@type")
-	private java.lang.String type;
 
- 	@JsonProperty("@amount")
-	private java.lang.String amount;
+    @JsonProperty("@type")
+    private java.lang.String type;
 
-	public void setType(java.lang.String type) {
-		this.type = type;
-	}
+    @JsonProperty("@amount")
+    private java.lang.String amount;
 
-	public java.lang.String getType() {
-		return type;
-	}
+    public void setType(java.lang.String type) {
+        this.type = type;
+    }
 
-	public void setAmount(java.lang.String amount) {
-		this.amount = amount;
-	}
+    public java.lang.String getType() {
+        return type;
+    }
 
-	public java.lang.String getAmount() {
-		return amount;
-	}
+    public void setAmount(java.lang.String amount) {
+        this.amount = amount;
+    }
+
+    public java.lang.String getAmount() {
+        return amount;
+    }
 
 }

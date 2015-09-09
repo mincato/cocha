@@ -3,135 +3,135 @@ package com.cocha.hotels.model.mateSearch.supplier.ean;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-@JsonIgnoreProperties(ignoreUnknown=true)
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class HotelRoomResponseElement {
-	
-	@JsonProperty("RateInfos")
-	private RateInfos rateinfos;
 
- 	@JsonProperty("BedTypes")
-	private BedTypes bedtypes;
+    @JsonProperty("RateInfos")
+    private RateInfos rateinfos;
 
-	@JsonProperty("minGuestAge")
-	private java.lang.Integer minguestage;
+    @JsonProperty("BedTypes")
+    private BedTypes bedtypes;
 
-	@JsonProperty("rateCode")
-	private java.lang.Integer ratecode;
+    @JsonProperty("minGuestAge")
+    private java.lang.Integer minguestage;
 
-	@JsonProperty("roomTypeCode")
-	private java.lang.Integer roomtypecode;
+    @JsonProperty("rateCode")
+    private java.lang.Integer ratecode;
 
-	@JsonProperty("rateOccupancyPerRoom")
-	private java.lang.Integer rateoccupancyperroom;
+    @JsonProperty("roomTypeCode")
+    private java.lang.Integer roomtypecode;
 
-	@JsonProperty("roomTypeDescription")
-	private java.lang.String roomtypedescription;
+    @JsonProperty("rateOccupancyPerRoom")
+    private java.lang.Integer rateoccupancyperroom;
 
-	@JsonProperty("quotedOccupancy")
-	private java.lang.Integer quotedoccupancy;
+    @JsonProperty("roomTypeDescription")
+    private java.lang.String roomtypedescription;
 
-	@JsonProperty("supplierType")
-	private java.lang.String suppliertype;
+    @JsonProperty("quotedOccupancy")
+    private java.lang.Integer quotedoccupancy;
 
-	@JsonProperty("smokingPreferences")
-	private java.lang.String smokingpreferences;
+    @JsonProperty("supplierType")
+    private java.lang.String suppliertype;
 
-	@JsonProperty("propertyId")
-	private java.lang.Integer propertyid;
+    @JsonProperty("smokingPreferences")
+    private java.lang.String smokingpreferences;
 
-	@JsonProperty("rateDescription")
-	private java.lang.String ratedescription;
+    @JsonProperty("propertyId")
+    private java.lang.Integer propertyid;
 
-	public void setRateinfos(RateInfos rateinfos) {
-		this.rateinfos = rateinfos;
-	}
+    @JsonProperty("rateDescription")
+    private java.lang.String ratedescription;
 
-	public RateInfos getRateinfos() {
-		return rateinfos;
-	}
+    public void setRateinfos(RateInfos rateinfos) {
+        this.rateinfos = rateinfos;
+    }
 
-	public void setBedtypes(BedTypes bedtypes) {
-		this.bedtypes = bedtypes;
-	}
+    public RateInfos getRateinfos() {
+        return rateinfos;
+    }
 
-	public BedTypes getBedtypes() {
-		return bedtypes;
-	}
+    public void setBedtypes(BedTypes bedtypes) {
+        this.bedtypes = bedtypes;
+    }
 
-	public void setMinguestage(java.lang.Integer minguestage) {
-		this.minguestage = minguestage;
-	}
+    public BedTypes getBedtypes() {
+        return bedtypes;
+    }
 
-	public java.lang.Integer getMinguestage() {
-		return minguestage;
-	}
+    public void setMinguestage(java.lang.Integer minguestage) {
+        this.minguestage = minguestage;
+    }
 
-	public void setRatecode(java.lang.Integer ratecode) {
-		this.ratecode = ratecode;
-	}
+    public java.lang.Integer getMinguestage() {
+        return minguestage;
+    }
 
-	public java.lang.Integer getRatecode() {
-		return ratecode;
-	}
+    public void setRatecode(java.lang.Integer ratecode) {
+        this.ratecode = ratecode;
+    }
 
-	public void setRoomtypecode(java.lang.Integer roomtypecode) {
-		this.roomtypecode = roomtypecode;
-	}
+    public java.lang.Integer getRatecode() {
+        return ratecode;
+    }
 
-	public java.lang.Integer getRoomtypecode() {
-		return roomtypecode;
-	}
+    public void setRoomtypecode(java.lang.Integer roomtypecode) {
+        this.roomtypecode = roomtypecode;
+    }
 
-	public void setRateoccupancyperroom(java.lang.Integer rateoccupancyperroom) {
-		this.rateoccupancyperroom = rateoccupancyperroom;
-	}
+    public java.lang.Integer getRoomtypecode() {
+        return roomtypecode;
+    }
 
-	public java.lang.Integer getRateoccupancyperroom() {
-		return rateoccupancyperroom;
-	}
+    public void setRateoccupancyperroom(java.lang.Integer rateoccupancyperroom) {
+        this.rateoccupancyperroom = rateoccupancyperroom;
+    }
 
-	public java.lang.String getRoomtypedescription() {
-		return roomtypedescription;
-	}
+    public java.lang.Integer getRateoccupancyperroom() {
+        return rateoccupancyperroom;
+    }
 
-	public void setQuotedoccupancy(java.lang.Integer quotedoccupancy) {
-		this.quotedoccupancy = quotedoccupancy;
-	}
+    public java.lang.String getRoomtypedescription() {
+        return roomtypedescription;
+    }
 
-	public java.lang.Integer getQuotedoccupancy() {
-		return quotedoccupancy;
-	}
+    public void setQuotedoccupancy(java.lang.Integer quotedoccupancy) {
+        this.quotedoccupancy = quotedoccupancy;
+    }
 
-	public void setSuppliertype(java.lang.String suppliertype) {
-		this.suppliertype = suppliertype;
-	}
+    public java.lang.Integer getQuotedoccupancy() {
+        return quotedoccupancy;
+    }
 
-	public java.lang.String getSuppliertype() {
-		return suppliertype;
-	}
+    public void setSuppliertype(java.lang.String suppliertype) {
+        this.suppliertype = suppliertype;
+    }
 
-	public void setSmokingpreferences(java.lang.String smokingpreferences) {
-		this.smokingpreferences = smokingpreferences;
-	}
+    public java.lang.String getSuppliertype() {
+        return suppliertype;
+    }
 
-	public java.lang.String getSmokingpreferences() {
-		return smokingpreferences;
-	}
+    public void setSmokingpreferences(java.lang.String smokingpreferences) {
+        this.smokingpreferences = smokingpreferences;
+    }
 
-	public void setPropertyid(java.lang.Integer propertyid) {
-		this.propertyid = propertyid;
-	}
+    public java.lang.String getSmokingpreferences() {
+        return smokingpreferences;
+    }
 
-	public java.lang.Integer getPropertyid() {
-		return propertyid;
-	}
+    public void setPropertyid(java.lang.Integer propertyid) {
+        this.propertyid = propertyid;
+    }
 
-	public void setRatedescription(java.lang.String ratedescription) {
-		this.ratedescription = ratedescription;
-	}
+    public java.lang.Integer getPropertyid() {
+        return propertyid;
+    }
 
-	public java.lang.String getRatedescription() {
-		return ratedescription;
-	}
+    public void setRatedescription(java.lang.String ratedescription) {
+        this.ratedescription = ratedescription;
+    }
+
+    public java.lang.String getRatedescription() {
+        return ratedescription;
+    }
 
 }

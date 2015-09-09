@@ -28,22 +28,22 @@ public class Hotel {
     }
 
     public String getArrivalDate() {
-		return arrivalDate;
-	}
+        return arrivalDate;
+    }
 
-	public void setArrivalDate(String arrivalDate) {
-		this.arrivalDate = arrivalDate;
-	}
+    public void setArrivalDate(String arrivalDate) {
+        this.arrivalDate = arrivalDate;
+    }
 
-	public String getDepartureDate() {
-		return departureDate;
-	}
+    public String getDepartureDate() {
+        return departureDate;
+    }
 
-	public void setDepartureDate(String departureDate) {
-		this.departureDate = departureDate;
-	}
+    public void setDepartureDate(String departureDate) {
+        this.departureDate = departureDate;
+    }
 
-	public List<Room> getRooms() {
+    public List<Room> getRooms() {
         return rooms;
     }
 
@@ -51,12 +51,12 @@ public class Hotel {
         this.rooms = rooms;
     }
 
-	public Long getIdEAN() {
-		return idEAN;
-	}
+    public Long getIdEAN() {
+        return idEAN;
+    }
 
-	public void setIdEAN(Long idEAN) {
-		this.idEAN = idEAN;
-	}
+    public void setIdEAN(Long idEAN) {
+        this.idEAN = idEAN;
+    }
 
 }

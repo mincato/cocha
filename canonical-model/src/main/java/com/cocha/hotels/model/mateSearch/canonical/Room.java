@@ -7,7 +7,6 @@ public class Room {
     private Long roomTypeCode;
     private RateInfo rateInfo;
 
-    
     public Long getIdHotelMapper() {
         return idHotelMapper;
     }

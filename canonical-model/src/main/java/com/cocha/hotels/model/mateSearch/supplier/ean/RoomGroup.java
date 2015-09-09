@@ -2,18 +2,17 @@ package com.cocha.hotels.model.mateSearch.supplier.ean;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-
 public class RoomGroup {
-	
-	@JsonProperty("Room")
-	private Room room;
 
- 	public void setRoom(Room room) {
-		this.room = room;
-	}
+    @JsonProperty("Room")
+    private Room room;
 
-	public Room getRoom() {
-		return room;
-	}
+    public void setRoom(Room room) {
+        this.room = room;
+    }
+
+    public Room getRoom() {
+        return room;
+    }
 
 }
