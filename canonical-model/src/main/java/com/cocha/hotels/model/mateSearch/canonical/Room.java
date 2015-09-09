@@ -1,19 +1,13 @@
-package com.cocha.hotels.model.mateSearch;
+package com.cocha.hotels.model.mateSearch.canonical;
 
 public class Room {
 
-    private Long idRoom;
     private Long idHotelMapper;
+    private Long rateCode;
+    private Long roomTypeCode;
     private RateInfo rateInfo;
 
-    public Long getIdRoom() {
-        return idRoom;
-    }
-
-    public void setIdRoom(Long idRoom) {
-        this.idRoom = idRoom;
-    }
-
+    
     public Long getIdHotelMapper() {
         return idHotelMapper;
     }
