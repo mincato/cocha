@@ -3,115 +3,115 @@ package com.cocha.hotels.model.mateSearch.supplier.ean;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ChargeableRateInfo {
-	
-	@JsonProperty("NightlyRatesPerRoom")
-	private NightlyRatesPerRoom nightlyratesperroom;
 
- 	@JsonProperty("Surcharges")
-	private Surcharges surcharges;
+    @JsonProperty("NightlyRatesPerRoom")
+    private NightlyRatesPerRoom nightlyratesperroom;
 
-	@JsonProperty("@commissionableUsdTotal")
-	private java.lang.String commissionableusdtotal;
+    @JsonProperty("Surcharges")
+    private Surcharges surcharges;
 
-	@JsonProperty("@surchargeTotal")
-	private java.lang.String surchargetotal;
+    @JsonProperty("@commissionableUsdTotal")
+    private java.lang.String commissionableusdtotal;
 
-	@JsonProperty("@nightlyRateTotal")
-	private java.lang.String nightlyratetotal;
+    @JsonProperty("@surchargeTotal")
+    private java.lang.String surchargetotal;
 
-	@JsonProperty("@total")
-	private java.lang.String total;
+    @JsonProperty("@nightlyRateTotal")
+    private java.lang.String nightlyratetotal;
 
-	@JsonProperty("@currencyCode")
-	private java.lang.String currencycode;
+    @JsonProperty("@total")
+    private java.lang.String total;
 
-	@JsonProperty("@averageRate")
-	private java.lang.String averagerate;
+    @JsonProperty("@currencyCode")
+    private java.lang.String currencycode;
 
-	@JsonProperty("@averageBaseRate")
-	private java.lang.String averagebaserate;
+    @JsonProperty("@averageRate")
+    private java.lang.String averagerate;
 
-	@JsonProperty("@maxNightlyRate")
-	private java.lang.String maxnightlyrate;
+    @JsonProperty("@averageBaseRate")
+    private java.lang.String averagebaserate;
 
-	public void setNightlyratesperroom(NightlyRatesPerRoom nightlyratesperroom) {
-		this.nightlyratesperroom = nightlyratesperroom;
-	}
+    @JsonProperty("@maxNightlyRate")
+    private java.lang.String maxnightlyrate;
 
-	public NightlyRatesPerRoom getNightlyratesperroom() {
-		return nightlyratesperroom;
-	}
+    public void setNightlyratesperroom(NightlyRatesPerRoom nightlyratesperroom) {
+        this.nightlyratesperroom = nightlyratesperroom;
+    }
 
-	public void setSurcharges(Surcharges surcharges) {
-		this.surcharges = surcharges;
-	}
+    public NightlyRatesPerRoom getNightlyratesperroom() {
+        return nightlyratesperroom;
+    }
 
-	public Surcharges getSurcharges() {
-		return surcharges;
-	}
+    public void setSurcharges(Surcharges surcharges) {
+        this.surcharges = surcharges;
+    }
 
-	public void setCommissionableusdtotal(java.lang.String commissionableusdtotal) {
-		this.commissionableusdtotal = commissionableusdtotal;
-	}
+    public Surcharges getSurcharges() {
+        return surcharges;
+    }
 
-	public java.lang.String getCommissionableusdtotal() {
-		return commissionableusdtotal;
-	}
+    public void setCommissionableusdtotal(java.lang.String commissionableusdtotal) {
+        this.commissionableusdtotal = commissionableusdtotal;
+    }
 
-	public void setSurchargetotal(java.lang.String surchargetotal) {
-		this.surchargetotal = surchargetotal;
-	}
+    public java.lang.String getCommissionableusdtotal() {
+        return commissionableusdtotal;
+    }
 
-	public java.lang.String getSurchargetotal() {
-		return surchargetotal;
-	}
+    public void setSurchargetotal(java.lang.String surchargetotal) {
+        this.surchargetotal = surchargetotal;
+    }
 
-	public void setNightlyratetotal(java.lang.String nightlyratetotal) {
-		this.nightlyratetotal = nightlyratetotal;
-	}
+    public java.lang.String getSurchargetotal() {
+        return surchargetotal;
+    }
 
-	public java.lang.String getNightlyratetotal() {
-		return nightlyratetotal;
-	}
+    public void setNightlyratetotal(java.lang.String nightlyratetotal) {
+        this.nightlyratetotal = nightlyratetotal;
+    }
 
-	public void setTotal(java.lang.String total) {
-		this.total = total;
-	}
+    public java.lang.String getNightlyratetotal() {
+        return nightlyratetotal;
+    }
 
-	public java.lang.String getTotal() {
-		return total;
-	}
+    public void setTotal(java.lang.String total) {
+        this.total = total;
+    }
 
-	public void setCurrencycode(java.lang.String currencycode) {
-		this.currencycode = currencycode;
-	}
+    public java.lang.String getTotal() {
+        return total;
+    }
 
-	public java.lang.String getCurrencycode() {
-		return currencycode;
-	}
+    public void setCurrencycode(java.lang.String currencycode) {
+        this.currencycode = currencycode;
+    }
 
-	public void setAveragerate(java.lang.String averagerate) {
-		this.averagerate = averagerate;
-	}
+    public java.lang.String getCurrencycode() {
+        return currencycode;
+    }
 
-	public java.lang.String getAveragerate() {
-		return averagerate;
-	}
+    public void setAveragerate(java.lang.String averagerate) {
+        this.averagerate = averagerate;
+    }
 
-	public void setAveragebaserate(java.lang.String averagebaserate) {
-		this.averagebaserate = averagebaserate;
-	}
+    public java.lang.String getAveragerate() {
+        return averagerate;
+    }
 
-	public java.lang.String getAveragebaserate() {
-		return averagebaserate;
-	}
+    public void setAveragebaserate(java.lang.String averagebaserate) {
+        this.averagebaserate = averagebaserate;
+    }
 
-	public void setMaxnightlyrate(java.lang.String maxnightlyrate) {
-		this.maxnightlyrate = maxnightlyrate;
-	}
+    public java.lang.String getAveragebaserate() {
+        return averagebaserate;
+    }
 
-	public java.lang.String getMaxnightlyrate() {
-		return maxnightlyrate;
-	}
+    public void setMaxnightlyrate(java.lang.String maxnightlyrate) {
+        this.maxnightlyrate = maxnightlyrate;
+    }
+
+    public java.lang.String getMaxnightlyrate() {
+        return maxnightlyrate;
+    }
 
 }

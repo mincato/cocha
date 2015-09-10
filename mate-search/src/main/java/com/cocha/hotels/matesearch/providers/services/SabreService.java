@@ -12,22 +12,22 @@ import javax.ws.rs.core.MediaType;
  * Needs to be a class so that Spring can call a default constructor (which it
  * can't do with an interface).
  */
-@Path("/ean")
-public class EanService {
+@Path("/")
+public class SabreService {
 
     /**
      * Camel intercepts this. Receives a request with one URL-based argument and
-     * responds with JSON.
+     * responds with XML.
      * 
      * @param text
      *            text
      * @return A response in String format with MIME of application/json
      */
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_XML)
     @Path("/send")
-    public String send(@QueryParam("idHotel") String idHotel, @QueryParam("signature") String signature) {
-        // this does nothing -- just a shell for CXF and Camel
+    public Object send(@QueryParam("code") String code, @QueryParam("idHotel") String idHotel,
+            @QueryParam("session") String session) {
         return null;
     }
 }

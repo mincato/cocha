@@ -3,172 +3,172 @@ package com.cocha.hotels.model.mateSearch.supplier.ean;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-@JsonIgnoreProperties(ignoreUnknown=true)
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class RateInfo {
-	
-	@JsonProperty("CancelPolicyInfoList")
-	private CancelPolicyInfoList cancelpolicyinfolist;
 
- 	@JsonProperty("ChargeableRateInfo")
-	private ChargeableRateInfo chargeablerateinfo;
+    @JsonProperty("CancelPolicyInfoList")
+    private CancelPolicyInfoList cancelpolicyinfolist;
 
-	@JsonProperty("RoomGroup")
-	private RoomGroup roomgroup;
+    @JsonProperty("ChargeableRateInfo")
+    private ChargeableRateInfo chargeablerateinfo;
 
-	@JsonProperty("rateType")
-	private java.lang.String ratetype;
+    @JsonProperty("RoomGroup")
+    private RoomGroup roomgroup;
 
-	@JsonProperty("promoId")
-	private java.lang.Integer promoid;
+    @JsonProperty("rateType")
+    private java.lang.String ratetype;
 
-	@JsonProperty("guaranteeRequired")
-	private java.lang.Boolean guaranteerequired;
+    @JsonProperty("promoId")
+    private java.lang.Integer promoid;
 
-	@JsonProperty("currentAllotment")
-	private java.lang.Integer currentallotment;
+    @JsonProperty("guaranteeRequired")
+    private java.lang.Boolean guaranteerequired;
 
-	@JsonProperty("@promo")
-	private java.lang.String promo;
+    @JsonProperty("currentAllotment")
+    private java.lang.Integer currentallotment;
 
-	@JsonProperty("taxRate")
-	private java.lang.Double taxrate;
+    @JsonProperty("@promo")
+    private java.lang.String promo;
 
-	@JsonProperty("promoType")
-	private java.lang.String promotype;
+    @JsonProperty("taxRate")
+    private java.lang.Double taxrate;
 
-	@JsonProperty("@priceBreakdown")
-	private java.lang.String pricebreakdown;
+    @JsonProperty("promoType")
+    private java.lang.String promotype;
 
-	@JsonProperty("nonRefundable")
-	private java.lang.Boolean nonrefundable;
+    @JsonProperty("@priceBreakdown")
+    private java.lang.String pricebreakdown;
 
-	@JsonProperty("promoDescription")
-	private java.lang.String promodescription;
+    @JsonProperty("nonRefundable")
+    private java.lang.Boolean nonrefundable;
 
-	@JsonProperty("depositRequired")
-	private java.lang.Boolean depositrequired;
+    @JsonProperty("promoDescription")
+    private java.lang.String promodescription;
 
-	@JsonProperty("@rateChange")
-	private java.lang.String ratechange;
+    @JsonProperty("depositRequired")
+    private java.lang.Boolean depositrequired;
 
-	public void setCancelpolicyinfolist(CancelPolicyInfoList cancelpolicyinfolist) {
-		this.cancelpolicyinfolist = cancelpolicyinfolist;
-	}
+    @JsonProperty("@rateChange")
+    private java.lang.String ratechange;
 
-	public CancelPolicyInfoList getCancelpolicyinfolist() {
-		return cancelpolicyinfolist;
-	}
+    public void setCancelpolicyinfolist(CancelPolicyInfoList cancelpolicyinfolist) {
+        this.cancelpolicyinfolist = cancelpolicyinfolist;
+    }
 
-	public void setChargeablerateinfo(ChargeableRateInfo chargeablerateinfo) {
-		this.chargeablerateinfo = chargeablerateinfo;
-	}
+    public CancelPolicyInfoList getCancelpolicyinfolist() {
+        return cancelpolicyinfolist;
+    }
 
-	public ChargeableRateInfo getChargeablerateinfo() {
-		return chargeablerateinfo;
-	}
+    public void setChargeablerateinfo(ChargeableRateInfo chargeablerateinfo) {
+        this.chargeablerateinfo = chargeablerateinfo;
+    }
 
-	public void setRoomgroup(RoomGroup roomgroup) {
-		this.roomgroup = roomgroup;
-	}
+    public ChargeableRateInfo getChargeablerateinfo() {
+        return chargeablerateinfo;
+    }
 
-	public RoomGroup getRoomgroup() {
-		return roomgroup;
-	}
-	
-	public void setRatetype(java.lang.String ratetype) {
-		this.ratetype = ratetype;
-	}
+    public void setRoomgroup(RoomGroup roomgroup) {
+        this.roomgroup = roomgroup;
+    }
 
-	public java.lang.String getRatetype() {
-		return ratetype;
-	}
+    public RoomGroup getRoomgroup() {
+        return roomgroup;
+    }
 
-	public void setPromoid(java.lang.Integer promoid) {
-		this.promoid = promoid;
-	}
+    public void setRatetype(java.lang.String ratetype) {
+        this.ratetype = ratetype;
+    }
 
-	public java.lang.Integer getPromoid() {
-		return promoid;
-	}
+    public java.lang.String getRatetype() {
+        return ratetype;
+    }
 
-	public void setGuaranteerequired(java.lang.Boolean guaranteerequired) {
-		this.guaranteerequired = guaranteerequired;
-	}
+    public void setPromoid(java.lang.Integer promoid) {
+        this.promoid = promoid;
+    }
 
-	public java.lang.Boolean getGuaranteerequired() {
-		return guaranteerequired;
-	}
+    public java.lang.Integer getPromoid() {
+        return promoid;
+    }
 
-	public void setCurrentallotment(java.lang.Integer currentallotment) {
-		this.currentallotment = currentallotment;
-	}
+    public void setGuaranteerequired(java.lang.Boolean guaranteerequired) {
+        this.guaranteerequired = guaranteerequired;
+    }
 
-	public java.lang.Integer getCurrentallotment() {
-		return currentallotment;
-	}
+    public java.lang.Boolean getGuaranteerequired() {
+        return guaranteerequired;
+    }
 
-	public void setPromo(java.lang.String promo) {
-		this.promo = promo;
-	}
+    public void setCurrentallotment(java.lang.Integer currentallotment) {
+        this.currentallotment = currentallotment;
+    }
 
-	public java.lang.String getPromo() {
-		return promo;
-	}
+    public java.lang.Integer getCurrentallotment() {
+        return currentallotment;
+    }
 
-	public void setTaxrate(java.lang.Double taxrate) {
-		this.taxrate = taxrate;
-	}
+    public void setPromo(java.lang.String promo) {
+        this.promo = promo;
+    }
 
-	public java.lang.Double getTaxrate() {
-		return taxrate;
-	}
+    public java.lang.String getPromo() {
+        return promo;
+    }
 
-	public void setPromotype(java.lang.String promotype) {
-		this.promotype = promotype;
-	}
+    public void setTaxrate(java.lang.Double taxrate) {
+        this.taxrate = taxrate;
+    }
 
-	public java.lang.String getPromotype() {
-		return promotype;
-	}
+    public java.lang.Double getTaxrate() {
+        return taxrate;
+    }
 
-	public void setPricebreakdown(java.lang.String pricebreakdown) {
-		this.pricebreakdown = pricebreakdown;
-	}
+    public void setPromotype(java.lang.String promotype) {
+        this.promotype = promotype;
+    }
 
-	public java.lang.String getPricebreakdown() {
-		return pricebreakdown;
-	}
+    public java.lang.String getPromotype() {
+        return promotype;
+    }
 
-	public void setNonrefundable(java.lang.Boolean nonrefundable) {
-		this.nonrefundable = nonrefundable;
-	}
+    public void setPricebreakdown(java.lang.String pricebreakdown) {
+        this.pricebreakdown = pricebreakdown;
+    }
 
-	public java.lang.Boolean getNonrefundable() {
-		return nonrefundable;
-	}
+    public java.lang.String getPricebreakdown() {
+        return pricebreakdown;
+    }
 
-	public void setPromodescription(java.lang.String promodescription) {
-		this.promodescription = promodescription;
-	}
+    public void setNonrefundable(java.lang.Boolean nonrefundable) {
+        this.nonrefundable = nonrefundable;
+    }
 
-	public java.lang.String getPromodescription() {
-		return promodescription;
-	}
+    public java.lang.Boolean getNonrefundable() {
+        return nonrefundable;
+    }
 
-	public void setDepositrequired(java.lang.Boolean depositrequired) {
-		this.depositrequired = depositrequired;
-	}
+    public void setPromodescription(java.lang.String promodescription) {
+        this.promodescription = promodescription;
+    }
 
-	public java.lang.Boolean getDepositrequired() {
-		return depositrequired;
-	}
+    public java.lang.String getPromodescription() {
+        return promodescription;
+    }
 
-	public void setRatechange(java.lang.String ratechange) {
-		this.ratechange = ratechange;
-	}
+    public void setDepositrequired(java.lang.Boolean depositrequired) {
+        this.depositrequired = depositrequired;
+    }
 
-	public java.lang.String getRatechange() {
-		return ratechange;
-	}
+    public java.lang.Boolean getDepositrequired() {
+        return depositrequired;
+    }
+
+    public void setRatechange(java.lang.String ratechange) {
+        this.ratechange = ratechange;
+    }
+
+    public java.lang.String getRatechange() {
+        return ratechange;
+    }
 
 }

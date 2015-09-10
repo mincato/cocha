@@ -3,71 +3,71 @@ package com.cocha.hotels.model.mateSearch.supplier.ean;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CancelPolicyInfoElement {
-	
-	@JsonProperty("versionId")
-	private java.lang.Integer versionid;
 
- 	public void setVersionid(java.lang.Integer versionid) {
-		this.versionid = versionid;
-	}
+    @JsonProperty("versionId")
+    private java.lang.Integer versionid;
 
-	public java.lang.Integer getVersionid() {
-		return versionid;
-	}
+    public void setVersionid(java.lang.Integer versionid) {
+        this.versionid = versionid;
+    }
 
-	@JsonProperty("nightCount")
-	private java.lang.Integer nightcount;
+    public java.lang.Integer getVersionid() {
+        return versionid;
+    }
 
- 	public void setNightcount(java.lang.Integer nightcount) {
-		this.nightcount = nightcount;
-	}
+    @JsonProperty("nightCount")
+    private java.lang.Integer nightcount;
 
-	public java.lang.Integer getNightcount() {
-		return nightcount;
-	}
+    public void setNightcount(java.lang.Integer nightcount) {
+        this.nightcount = nightcount;
+    }
 
-	@JsonProperty("currencyCode")
-	private java.lang.String currencycode;
+    public java.lang.Integer getNightcount() {
+        return nightcount;
+    }
 
- 	public void setCurrencycode(java.lang.String currencycode) {
-		this.currencycode = currencycode;
-	}
+    @JsonProperty("currencyCode")
+    private java.lang.String currencycode;
 
-	public java.lang.String getCurrencycode() {
-		return currencycode;
-	}
+    public void setCurrencycode(java.lang.String currencycode) {
+        this.currencycode = currencycode;
+    }
 
-	@JsonProperty("startWindowHours")
-	private java.lang.Integer startwindowhours;
+    public java.lang.String getCurrencycode() {
+        return currencycode;
+    }
 
- 	public void setStartwindowhours(java.lang.Integer startwindowhours) {
-		this.startwindowhours = startwindowhours;
-	}
+    @JsonProperty("startWindowHours")
+    private java.lang.Integer startwindowhours;
 
-	public java.lang.Integer getStartwindowhours() {
-		return startwindowhours;
-	}
+    public void setStartwindowhours(java.lang.Integer startwindowhours) {
+        this.startwindowhours = startwindowhours;
+    }
 
-	@JsonProperty("cancelTime")
-	private java.lang.String canceltime;
+    public java.lang.Integer getStartwindowhours() {
+        return startwindowhours;
+    }
 
- 	public void setCanceltime(java.lang.String canceltime) {
-		this.canceltime = canceltime;
-	}
+    @JsonProperty("cancelTime")
+    private java.lang.String canceltime;
 
-	public java.lang.String getCanceltime() {
-		return canceltime;
-	}
+    public void setCanceltime(java.lang.String canceltime) {
+        this.canceltime = canceltime;
+    }
 
-	@JsonProperty("timeZoneDescription")
-	private java.lang.String timezonedescription;
+    public java.lang.String getCanceltime() {
+        return canceltime;
+    }
 
- 	public void setTimezonedescription(java.lang.String timezonedescription) {
-		this.timezonedescription = timezonedescription;
-	}
+    @JsonProperty("timeZoneDescription")
+    private java.lang.String timezonedescription;
 
-	public java.lang.String getTimezonedescription() {
-		return timezonedescription;
-	}
+    public void setTimezonedescription(java.lang.String timezonedescription) {
+        this.timezonedescription = timezonedescription;
+    }
+
+    public java.lang.String getTimezonedescription() {
+        return timezonedescription;
+    }
 
 }

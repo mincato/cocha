@@ -4,6 +4,7 @@
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:camel="http://camel.apache.org/schema/spring"
 	xmlns:cxf="http://cxf.apache.org/core"
+	xmlns:cxfCamel="http://camel.apache.org/schema/cxf"
 	xmlns:jaxrs="http://cxf.apache.org/jaxrs"		
 	xmlns:jaxws="http://cxf.apache.org/jaxws"
 		
@@ -29,17 +30,44 @@
 		annotation-config="true" />
 	<context:annotation-config />	
 
-	<!-- Tell CXF/JAX-RS where the REST service is defined -->
-	<!-- 
-		Specifying the address as '/' or '/something' makes sure it uses the containing app server.
-		In certain configurations, not including address causes Camel to start a Jetty instance
-		which hosts the REST service. This can cause conflicts in dependencies.
-	 -->
-	<jaxrs:server id="jaxRsServer" address="/monitoring" serviceClass="com.cocha.hotels.matesearch.providers.services.EanService"/>
+	<!-- Tell CXF/JAX-RS where the REST service is defined -->			
+	<cxfCamel:rsServer id="jaxRsServer" address="/ean" loggingFeatureEnabled="true">
+       <cxfCamel:serviceBeans>
+           <bean class="com.cocha.hotels.matesearch.providers.services.EanService" />
+       </cxfCamel:serviceBeans>
+   </cxfCamel:rsServer>
+	
+	<!-- Defined the client endpoint to create the cxf-rs consumer for EAN-->
+  <cxfCamel:rsClient id="eanClient" address="https://book.api.ean.com/ean-services/rs/hotel/v3"
+    serviceClass="com.cocha.hotels.matesearch.providers.services.EanClientService"
+    loggingFeatureEnabled="true"/>
+    
+    <cxfCamel:rsServer id="jaxBookingServer" address="/booking" loggingFeatureEnabled="true">
+       <cxfCamel:serviceBeans>
+           <bean class="com.cocha.hotels.matesearch.providers.services.BookingService" />
+       </cxfCamel:serviceBeans>
+   </cxfCamel:rsServer>
+   
+   <!-- Defined the client endpoint to create the cxf-rs consumer for Booking-->
+  <cxfCamel:rsClient id="bookingClient" address="https://distribution-xml.booking.com/xml"
+    serviceClass="com.cocha.hotels.matesearch.providers.services.BookingClientService"
+    loggingFeatureEnabled="true"/>
+        
+    <cxfCamel:rsServer id="sabreServer" address="/sabre" loggingFeatureEnabled="true">
+       <cxfCamel:serviceBeans>
+           <bean class="com.cocha.hotels.matesearch.providers.services.SabreService" />
+       </cxfCamel:serviceBeans>
+   </cxfCamel:rsServer>
 		
 	<camel:camelContext trace="true">
-		<camel:routeBuilder ref="eanRoutes" />
-		<camel:routeBuilder ref="basicBeanRoute" />		
+		<camel:routeBuilder ref="eanRoute" />
+		<camel:routeBuilder ref="eanClientRoute" />
+		<camel:routeBuilder ref="bookingRoute" />
+		<camel:routeBuilder ref="bookingClientRoute" />
+		<camel:routeBuilder ref="sabreRoute" />
+		<camel:routeBuilder ref="sabreClientRoute" />
+		<camel:routeBuilder ref="basicBeanRoute" />
+		<camel:routeBuilder ref="fileLogRoute" />
 	</camel:camelContext>
 	
 </beans>
