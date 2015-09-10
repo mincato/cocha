@@ -1,0 +1,8 @@
+<FindBugsFilter>
+  <Match>
+<!--     <Package name="com.cocha.hotels.model.matesearch.supplier.ean" /> -->
+<!--     <Package name="com.cocha.hotels.model.content.hotel" /> -->
+<!--     <Package name="com.cocha.hotels.model.matesearch.canonical" /> -->
+   <Package name="~com.*" />
+  </Match>
+</FindBugsFilter>
