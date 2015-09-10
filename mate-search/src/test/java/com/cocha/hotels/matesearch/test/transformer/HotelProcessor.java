@@ -2,7 +2,7 @@ package com.cocha.hotels.matesearch.test.transformer;
 
 import org.apache.log4j.Logger;
 
-import com.cocha.hotels.model.mateSearch.canonical.Hotel;
+import com.cocha.hotels.model.matesearch.canonical.Hotel;
 
 public class HotelProcessor {
 

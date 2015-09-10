@@ -8,7 +8,7 @@ import org.junit.Test;
 import org.springframework.context.support.AbstractXmlApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.cocha.hotels.model.mateSearch.supplier.ean.HotelSupplierEAN;
+import com.cocha.hotels.model.matesearch.supplier.ean.HotelSupplierEAN;
 
 public class TransformerResposeEANAndHotelSupplierEAN extends CamelSpringTestSupport {
 

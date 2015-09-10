@@ -92,7 +92,11 @@
 					<xmlOutput>true</xmlOutput>
 					<!-- Configures the directory in which the XML report is created -->
 					<findbugsXmlOutputDirectory>${project.build.directory}/findbugs</findbugsXmlOutputDirectory>
+<<<<<<< HEAD
 					<failOnError>false</failOnError>
+=======
+					<excludeFilterFile>../findbugs-exclude.xml</excludeFilterFile>
+>>>>>>> development
 				</configuration>
 				<executions>
 					<!-- Ensures that FindBugs inspects source code when project is compiled. -->
