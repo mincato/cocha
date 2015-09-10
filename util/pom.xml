@@ -5,9 +5,8 @@
 	<parent>
 		<groupId>com.cocha.hotels</groupId>
 		<artifactId>meta-search</artifactId>
-		<version>0.1</version>
+		<version>0.2</version>
 	</parent>
-	<groupId>com.cocha.hotels</groupId>
 	<artifactId>util</artifactId>
 	<packaging>jar</packaging>
 	<name>util</name>

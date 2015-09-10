@@ -6,7 +6,7 @@
 
 	<groupId>com.cocha.hotels</groupId>
 	<artifactId>meta-search</artifactId>
-	<version>0.1</version>
+	<version>0.2</version>
 	<packaging>pom</packaging>
 	<name>Cocha Hotels: Meta-Seach Multi-Project</name>
 
