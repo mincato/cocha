@@ -1,4 +1,4 @@
-package com.cocha.hotels.model.mateSearch.canonical;
+package com.cocha.hotels.model.matesearch.canonical;
 
 public class RateInfo {
 

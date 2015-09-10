@@ -1,4 +1,4 @@
-package com.cocha.hotels.model.mateSearch.canonical;
+package com.cocha.hotels.model.matesearch.canonical;
 
 public class Room {
 
@@ -7,7 +7,6 @@ public class Room {
     private Long roomTypeCode;
     private RateInfo rateInfo;
 
-    
     public Long getIdHotelMapper() {
         return idHotelMapper;
     }
