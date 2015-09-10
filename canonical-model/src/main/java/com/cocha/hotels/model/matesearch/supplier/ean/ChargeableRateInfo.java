@@ -82,11 +82,11 @@ public class ChargeableRateInfo {
         return total;
     }
 
-    public void setCurrencycode(java.lang.String currencycode) {
+    public void setCurrencyCode(java.lang.String currencycode) {
         this.currencycode = currencycode;
     }
 
-    public java.lang.String getCurrencycode() {
+    public java.lang.String getCurrencyCode() {
         return currencycode;
     }
 

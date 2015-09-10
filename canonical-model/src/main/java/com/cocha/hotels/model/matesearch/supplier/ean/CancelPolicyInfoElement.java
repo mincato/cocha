@@ -29,11 +29,11 @@ public class CancelPolicyInfoElement {
     @JsonProperty("currencyCode")
     private java.lang.String currencycode;
 
-    public void setCurrencycode(java.lang.String currencycode) {
+    public void setCurrencyCode(java.lang.String currencycode) {
         this.currencycode = currencycode;
     }
 
-    public java.lang.String getCurrencycode() {
+    public java.lang.String getCurrencyCode() {
         return currencycode;
     }
 
