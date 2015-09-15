@@ -3,7 +3,6 @@ package com.cocha.hotels.matesearch.test.transformer;
 import java.io.InputStream;
 
 import org.apache.camel.test.spring.CamelSpringTestSupport;
-import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.springframework.context.support.AbstractXmlApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -33,8 +32,11 @@ public class TransformerResposeEANAndHotelSupplierEAN extends CamelSpringTestSup
         log.info("Ciudad Hotel: " + hotelRespose.getHotelroomavailabilityresponse().getHotelcity());
         log.info("Provincia Hotel: " + hotelRespose.getHotelroomavailabilityresponse().getHotelstateprovince());
         log.info("Pais Hotel: " + hotelRespose.getHotelroomavailabilityresponse().getHotelstateprovince());
+        log.info("Date Arrival: " + hotelRespose.getHotelroomavailabilityresponse().getArrivaldate());
+        log.info("Date Departure: " + hotelRespose.getHotelroomavailabilityresponse().getDeparturedate());
+        log.info(hotelRespose.getHotelroomavailabilityresponse().getHotelroomresponse().toString());
         log.info("************************************");
-
+        
     }
 
 }

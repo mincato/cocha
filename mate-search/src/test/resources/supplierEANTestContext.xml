@@ -8,7 +8,7 @@
 
 	 <camelContext xmlns="http://camel.apache.org/schema/spring">
 	    <dataFormats>
-	      <json id="hotelSupplierEAN" library="Jackson" unmarshalTypeName="com.cocha.hotels.model.mateSearch.supplier.ean.HotelSupplierEAN"/>
+	      <json id="hotelSupplierEAN" library="Jackson" unmarshalTypeName="com.cocha.hotels.model.matesearch.supplier.ean.HotelSupplierEAN"/>
 	    </dataFormats>
 		
 		 <route>

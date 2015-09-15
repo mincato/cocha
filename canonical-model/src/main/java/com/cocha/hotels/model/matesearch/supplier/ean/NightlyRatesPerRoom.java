@@ -1,5 +1,7 @@
 package com.cocha.hotels.model.matesearch.supplier.ean;
 
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -7,14 +9,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NightlyRatesPerRoom {
 
     @JsonProperty("NightlyRate")
-    private NightlyRateElement[] nightlyrate;
+    private List<NightlyRateElement> nightlyrate;
 
-    public void setNightlyrate(NightlyRateElement[] nightlyrate) {
-        this.nightlyrate = nightlyrate;
-    }
+	public List<NightlyRateElement> getNightlyrate() {
+		return nightlyrate;
+	}
 
-    public NightlyRateElement[] getNightlyrate() {
-        return nightlyrate;
-    }
+	public void setNightlyrate(List<NightlyRateElement> nightlyrate) {
+		this.nightlyrate = nightlyrate;
+	}
 
 }

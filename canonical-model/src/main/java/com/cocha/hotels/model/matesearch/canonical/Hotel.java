@@ -1,17 +1,19 @@
 package com.cocha.hotels.model.matesearch.canonical;
 
+import java.util.Date;
 import java.util.List;
 
 public class Hotel {
 
     private Long idMapper;
-    private Long idEAN;
+    private Long idSupplier;
     private String hotelName;
-    private String arrivalDate;
-    private String departureDate;
+    private Date arrivalDate;
+    private Date departureDate;
     private List<Room> rooms;
+	
 
-    public Long getIdMapper() {
+	public Long getIdMapper() {
         return idMapper;
     }
 
@@ -27,36 +29,35 @@ public class Hotel {
         this.hotelName = hotelName;
     }
 
-    public String getArrivalDate() {
+    public void setRooms(List<Room> rooms) {
+        this.rooms = rooms;
+    }
+
+    public Long getIdSupplier() {
+        return idSupplier;
+    }
+
+    public void setIdSupplier(Long idSupplier) {
+        this.idSupplier = idSupplier;
+    }
+
+    public Date getArrivalDate() {
         return arrivalDate;
     }
 
-    public void setArrivalDate(String arrivalDate) {
+    public void setArrivalDate(Date arrivalDate) {
         this.arrivalDate = arrivalDate;
     }
 
-    public String getDepartureDate() {
+    public Date getDepartureDate() {
         return departureDate;
     }
 
-    public void setDepartureDate(String departureDate) {
+    public void setDepartureDate(Date departureDate) {
         this.departureDate = departureDate;
     }
 
     public List<Room> getRooms() {
         return rooms;
     }
-
-    public void setRooms(List<Room> rooms) {
-        this.rooms = rooms;
-    }
-
-    public Long getIdEAN() {
-        return idEAN;
-    }
-
-    public void setIdEAN(Long idEAN) {
-        this.idEAN = idEAN;
-    }
-
 }

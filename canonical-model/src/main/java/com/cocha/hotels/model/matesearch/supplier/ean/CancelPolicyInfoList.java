@@ -1,18 +1,19 @@
 package com.cocha.hotels.model.matesearch.supplier.ean;
 
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CancelPolicyInfoList {
 
     @JsonProperty("CancelPolicyInfo")
-    private CancelPolicyInfoElement[] cancelpolicyinfo;
+    private List<CancelPolicyInfoElement> cancelpolicyinfo;
 
-    public void setCancelpolicyinfo(CancelPolicyInfoElement[] cancelpolicyinfo) {
-        this.cancelpolicyinfo = cancelpolicyinfo;
-    }
+	public List<CancelPolicyInfoElement> getCancelpolicyinfo() {
+		return cancelpolicyinfo;
+	}
 
-    public CancelPolicyInfoElement[] getCancelpolicyinfo() {
-        return cancelpolicyinfo;
-    }
-
+	public void setCancelpolicyinfo(List<CancelPolicyInfoElement> cancelpolicyinfo) {
+		this.cancelpolicyinfo = cancelpolicyinfo;
+	}
 }

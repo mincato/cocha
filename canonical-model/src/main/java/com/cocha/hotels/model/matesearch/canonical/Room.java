@@ -23,4 +23,20 @@ public class Room {
         this.rateInfo = rateInfo;
     }
 
+	public Long getRateCode() {
+		return rateCode;
+	}
+
+	public void setRateCode(Long rateCode) {
+		this.rateCode = rateCode;
+	}
+
+	public Long getRoomTypeCode() {
+		return roomTypeCode;
+	}
+
+	public void setRoomTypeCode(Long roomTypeCode) {
+		this.roomTypeCode = roomTypeCode;
+	}
+
 }

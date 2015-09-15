@@ -1,12 +1,14 @@
 package com.cocha.hotels.model.matesearch.supplier.ean;
 
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class HotelRoomAvailabilityResponse {
 
-    @JsonProperty("hotelId")
+	@JsonProperty("hotelId")
     private java.lang.Integer hotelid;
 
     @JsonProperty("tripAdvisorReviewCount")
@@ -16,7 +18,7 @@ public class HotelRoomAvailabilityResponse {
     private java.lang.String hotelcity;
 
     @JsonProperty("HotelRoomResponse")
-    private HotelRoomResponseElement[] hotelroomresponse;
+    private List<HotelRoomResponseElement> hotelroomresponse;
 
     @JsonProperty("departureDate")
     private java.lang.String departuredate;
@@ -55,10 +57,6 @@ public class HotelRoomAvailabilityResponse {
 
     public java.lang.String getHotelcity() {
         return hotelcity;
-    }
-
-    public HotelRoomResponseElement[] getHotelroomresponse() {
-        return hotelroomresponse;
     }
 
     public java.lang.String getDeparturedate() {
@@ -109,10 +107,6 @@ public class HotelRoomAvailabilityResponse {
         this.hotelcity = hotelcity;
     }
 
-    public void setHotelroomresponse(HotelRoomResponseElement[] hotelroomresponse) {
-        this.hotelroomresponse = hotelroomresponse;
-    }
-
     public void setDeparturedate(java.lang.String departuredate) {
         this.departuredate = departuredate;
     }
@@ -148,5 +142,13 @@ public class HotelRoomAvailabilityResponse {
     public void setHotelcountry(java.lang.String hotelcountry) {
         this.hotelcountry = hotelcountry;
     }
+
+	public List<HotelRoomResponseElement> getHotelroomresponse() {
+		return hotelroomresponse;
+	}
+
+	public void setHotelroomresponse(List<HotelRoomResponseElement> hotelroomresponse) {
+		this.hotelroomresponse = hotelroomresponse;
+	}
 
 }
