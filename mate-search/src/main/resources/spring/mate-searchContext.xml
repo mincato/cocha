@@ -7,7 +7,9 @@
 	xmlns:cxfCamel="http://camel.apache.org/schema/cxf"
 	xmlns:jaxrs="http://cxf.apache.org/jaxrs"		
 	xmlns:jaxws="http://cxf.apache.org/jaxws"
-		
+	xmlns:sec="http://cxf.apache.org/configuration/security"
+	xmlns:http-conf="http://cxf.apache.org/transports/http/configuration"
+  	  		
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 	http://www.springframework.org/schema/beans/spring-beans.xsd
 	http://camel.apache.org/schema/spring
@@ -21,15 +23,18 @@
     http://cxf.apache.org/jaxrs
 	http://cxf.apache.org/schemas/jaxrs.xsd
 	http://cxf.apache.org/jaxws 
-	http://cxf.apache.org/schemas/jaxws.xsd">
+	http://cxf.apache.org/schemas/jaxws.xsd
+	http://cxf.apache.org/transports/http/configuration
+    http://cxf.apache.org/schemas/configuration/http-conf.xsd">
 
 	<import resource="classpath:META-INF/cxf/cxf.xml" />
 	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
-   
-	<context:component-scan base-package="com.cocha.hotels.matesearch"
-		annotation-config="true" />
-	<context:annotation-config />	
-
+          
+	<context:component-scan base-package="com.cocha.hotels.matesearch" annotation-config="true" />	
+	<context:annotation-config />	  			
+	
+	<context:property-placeholder location="classpath:properties/application.properties"/>
+	
 	<!-- Tell CXF/JAX-RS where the REST service is defined -->			
 	<cxfCamel:rsServer id="jaxRsServer" address="/ean" loggingFeatureEnabled="true">
        <cxfCamel:serviceBeans>
@@ -49,9 +54,22 @@
    </cxfCamel:rsServer>
    
    <!-- Defined the client endpoint to create the cxf-rs consumer for Booking-->
-  <cxfCamel:rsClient id="bookingClient" address="https://distribution-xml.booking.com/xml"
-    serviceClass="com.cocha.hotels.matesearch.providers.services.BookingClientService"
-    loggingFeatureEnabled="true"/>
+  <cxfCamel:rsClient id="bookingClient"	
+	address="${mate.provider.booking.address.xml}"	
+	serviceClass="com.cocha.hotels.matesearch.providers.services.BookingClientService"
+	loggingFeatureEnabled="true" />
+	
+	
+	<http-conf:conduit 	name="*distribution-xml.booking*.*"	
+	  xmlns:sec="http://cxf.apache.org/configuration/security"
+	  xmlns="http://cxf.apache.org/transports/http/configuration">
+	  <authorization>
+	     <sec:UserName>${mate.provider.booking.user}</sec:UserName>
+	     <sec:Password>${mate.provider.booking.pass}</sec:Password>
+	     <sec:AuthorizationType>Basic</sec:AuthorizationType>
+	  </authorization>
+	</http-conf:conduit>
+	
         
     <cxfCamel:rsServer id="sabreServer" address="/sabre" loggingFeatureEnabled="true">
        <cxfCamel:serviceBeans>
@@ -59,7 +77,7 @@
        </cxfCamel:serviceBeans>
    </cxfCamel:rsServer>
 		
-	<camel:camelContext trace="true">
+	<camel:camelContext trace="true">		
 		<camel:routeBuilder ref="eanRoute" />
 		<camel:routeBuilder ref="eanClientRoute" />
 		<camel:routeBuilder ref="bookingRoute" />
@@ -68,6 +86,5 @@
 		<camel:routeBuilder ref="sabreClientRoute" />
 		<camel:routeBuilder ref="basicBeanRoute" />
 		<camel:routeBuilder ref="fileLogRoute" />
-	</camel:camelContext>
-	
+	</camel:camelContext>	
 </beans>
