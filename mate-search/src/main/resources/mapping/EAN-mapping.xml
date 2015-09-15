@@ -41,13 +41,97 @@
 		</class-a>
 		<class-b>com.cocha.hotels.model.matesearch.canonical.Room</class-b>
 		<field>
-			<a>ratecode</a>
-			<b>rateCode</b>
+			<a>ratedescription</a>
+			<b>rateDescription</b>
 		</field>
 		<field>
-			<a>roomtypecode</a>
-			<b>roomTypeCode</b>
+			<a>roomtypedescription</a>
+			<b>roomTypeDescription</b>
 		</field>
+		<field>
+			<a>suppliertype</a>
+			<b>supplierType</b>
+		</field>
+		<field>
+			<a>bedtypes.bedtype.description</a>
+			<b>bedTypesDescription</b>
+		</field>
+		<field>
+			<a>smokingpreferences</a>
+			<b>smokingPreferences</b>
+		</field>
+		<field>
+			<a>rateinfos.rateinfo.pricebreakdown</a>
+			<b>rateInfo.priceBreakDown</b>
+		</field>
+		<field>
+			<a>rateinfos.rateinfo.promo</a>
+			<b>rateInfo.promo</b>
+		</field>
+		<field>
+			<a>rateinfos.rateinfo.ratechange</a>
+			<b>rateInfo.rateChange</b>
+		</field>
+		<field>
+			<a>rateinfos.rateinfo.chargeablerateinfo.averagebaserate</a>
+			<b>rateInfo.averageBaseRate</b>
+		</field>
+		<field>
+			<a>rateinfos.rateinfo.chargeablerateinfo.averagerate</a>
+			<b>rateInfo.averageRate</b>
+		</field>
+		<field>
+			<a>rateinfos.rateinfo.chargeablerateinfo.commissionableusdtotal</a>
+			<b>rateInfo.commissionableUsdTotal</b>
+		</field>
+		<field>
+			<a>rateinfos.rateinfo.chargeablerateinfo.currencycode</a>
+			<b>rateInfo.currencyCode</b>
+		</field>
+		<field>
+			<a>rateinfos.rateinfo.chargeablerateinfo.maxNightlyRate</a>
+			<b>rateInfo.maxNightlyRate</b>
+		</field>
+		<field>
+			<a>rateinfos.rateinfo.chargeablerateinfo.nightlyratetotal</a>
+			<b>rateInfo.nightlyRateTotal</b>
+		</field>
+		<field>
+			<a>rateinfos.rateinfo.chargeablerateinfo.surchargetotal</a>
+			<b>rateInfo.surchargeTotal</b>
+		</field>
+		<field>
+			<a>rateinfos.rateinfo.chargeablerateinfo.total</a>
+			<b>rateInfo.total</b>
+		</field>
+		<field>
+			<a>rateinfos.rateinfo.nonrefundable</a>
+			<b>rateInfo.nonRefundable</b>
+		</field>
+		<field>
+			<a>rateinfos.rateinfo.ratetype</a>
+			<b>rateInfo.rateType</b>
+		</field>
+		<field>
+			<a>rateinfos.rateinfo.promodescription</a>
+			<b>rateInfo.promoDescription</b>
+		</field>
+		<field>
+			<a>rateinfos.rateinfo.promotype</a>
+			<b>rateInfo.promoType</b>
+		</field>
+		<field>
+			<a>rateinfos.rateinfo.guaranteerequired</a>
+			<b>rateInfo.guaranteeRequired</b>
+		</field>
+		<field>
+			<a>rateinfos.rateinfo.depositrequired</a>
+			<b>rateInfo.depositRequired</b>
+		</field>
+		<field>
+			<a>rateinfos.rateinfo.taxrate</a>
+			<b>rateInfo.taxRate</b>
+		</field>																								
 	</mapping>
 
 

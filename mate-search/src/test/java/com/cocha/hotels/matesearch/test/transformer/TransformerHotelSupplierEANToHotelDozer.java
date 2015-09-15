@@ -34,8 +34,8 @@ public class TransformerHotelSupplierEANToHotelDozer extends CamelSpringTestSupp
         hotelroomavailabilityresponse.setDeparturedate("10/02/2015");
         List<HotelRoomResponseElement> HotelRoomResponseElement = new ArrayList<HotelRoomResponseElement>();
         HotelRoomResponseElement roomHotelUno = new HotelRoomResponseElement();
-        roomHotelUno.setRatecode(202878943);
-        roomHotelUno.setRoomtypecode(200561965);
+        roomHotelUno.setRatedescription("Classic Single Room, 1 Queen Bed");
+        roomHotelUno.setRoomtypedescription("Classic Single Room, 1 Queen Bed");
         HotelRoomResponseElement.add(roomHotelUno);
         hotelroomavailabilityresponse.setHotelroomresponse(HotelRoomResponseElement);
         hotelSupplierEAN.setHotelroomavailabilityresponse(hotelroomavailabilityresponse);

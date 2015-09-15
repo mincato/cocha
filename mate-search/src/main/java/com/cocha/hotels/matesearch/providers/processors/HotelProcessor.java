@@ -17,8 +17,8 @@ public class HotelProcessor {
         logger.info("Date Arrival: " + hotel.getArrivalDate());
         logger.info("Date Departure: " + hotel.getDepartureDate());
         for (Room room : hotel.getRooms()) {
-            logger.info(room.getRateCode());
-            logger.info(room.getRoomTypeCode());
+            logger.info(room.getRateDescription());
+            logger.info(room.getRoomTypeDescription());
         }
         logger.info("************************************");
         return hotel;
