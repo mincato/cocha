@@ -32,7 +32,7 @@ public class TransformerHotelSupplierEANToHotelDozer extends CamelSpringTestSupp
         hotelroomavailabilityresponse.setHotelname("Motif Seattle");
         hotelroomavailabilityresponse.setArrivaldate("01/01/2015");
         hotelroomavailabilityresponse.setDeparturedate("10/02/2015");
-        List<HotelRoomResponseElement> HotelRoomResponseElement  = new ArrayList<HotelRoomResponseElement>();
+        List<HotelRoomResponseElement> HotelRoomResponseElement = new ArrayList<HotelRoomResponseElement>();
         HotelRoomResponseElement roomHotelUno = new HotelRoomResponseElement();
         roomHotelUno.setRatecode(202878943);
         roomHotelUno.setRoomtypecode(200561965);

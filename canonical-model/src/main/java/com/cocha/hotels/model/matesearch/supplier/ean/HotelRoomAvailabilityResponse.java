@@ -8,7 +8,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class HotelRoomAvailabilityResponse {
 
-	@JsonProperty("hotelId")
+    @JsonProperty("hotelId")
     private java.lang.Integer hotelid;
 
     @JsonProperty("tripAdvisorReviewCount")
@@ -143,12 +143,12 @@ public class HotelRoomAvailabilityResponse {
         this.hotelcountry = hotelcountry;
     }
 
-	public List<HotelRoomResponseElement> getHotelroomresponse() {
-		return hotelroomresponse;
-	}
+    public List<HotelRoomResponseElement> getHotelroomresponse() {
+        return hotelroomresponse;
+    }
 
-	public void setHotelroomresponse(List<HotelRoomResponseElement> hotelroomresponse) {
-		this.hotelroomresponse = hotelroomresponse;
-	}
+    public void setHotelroomresponse(List<HotelRoomResponseElement> hotelroomresponse) {
+        this.hotelroomresponse = hotelroomresponse;
+    }
 
 }

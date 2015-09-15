@@ -13,7 +13,7 @@
 		</route>
 	</camelContext>
 
-	<bean id="hotel-processor" class="com.cocha.hotels.matesearch.test.transformer.HotelProcessor" />
+	<bean id="hotel-processor" class="com.cocha.hotels.matesearch.providers.processors.HotelProcessor" />
 
 	<bean id="dozerConverterLoader" class="org.apache.camel.converter.dozer.DozerTypeConverterLoader">
 		<constructor-arg index="0" ref="camel" />
@@ -24,7 +24,7 @@
 	<bean id="mapper" class="org.dozer.DozerBeanMapper">
 		<property name="mappingFiles">
 			<list>
-				<value>EAN-mapping.xml</value>
+				<value>mapping/EAN-mapping.xml</value>
 			</list>
 		</property>
 	</bean>

@@ -9,11 +9,11 @@ public class CancelPolicyInfoList {
     @JsonProperty("CancelPolicyInfo")
     private List<CancelPolicyInfoElement> cancelpolicyinfo;
 
-	public List<CancelPolicyInfoElement> getCancelpolicyinfo() {
-		return cancelpolicyinfo;
-	}
+    public List<CancelPolicyInfoElement> getCancelpolicyinfo() {
+        return cancelpolicyinfo;
+    }
 
-	public void setCancelpolicyinfo(List<CancelPolicyInfoElement> cancelpolicyinfo) {
-		this.cancelpolicyinfo = cancelpolicyinfo;
-	}
+    public void setCancelpolicyinfo(List<CancelPolicyInfoElement> cancelpolicyinfo) {
+        this.cancelpolicyinfo = cancelpolicyinfo;
+    }
 }

@@ -19,7 +19,7 @@ public class TransformerResposeEANAndHotelSupplierEAN extends CamelSpringTestSup
     @Test
     public void transformerEAN() throws Exception {
 
-        final InputStream resource = getClass().getClassLoader().getResourceAsStream("responseEAN.json");
+        final InputStream resource = getClass().getClassLoader().getResourceAsStream("respuestamocks/responseEAN.json");
         final String json = context().getTypeConverter().convertTo(String.class, resource);
 
         HotelSupplierEAN hotelRespose = template.requestBody("direct:unmarshal", json, HotelSupplierEAN.class);
@@ -36,7 +36,7 @@ public class TransformerResposeEANAndHotelSupplierEAN extends CamelSpringTestSup
         log.info("Date Departure: " + hotelRespose.getHotelroomavailabilityresponse().getDeparturedate());
         log.info(hotelRespose.getHotelroomavailabilityresponse().getHotelroomresponse().toString());
         log.info("************************************");
-        
+
     }
 
 }

@@ -33,12 +33,11 @@ public class Room {
         return numberofchildren;
     }
 
-	public List<ChargeableNightlyRatElement> getChargeablenightlyrates() {
-		return chargeablenightlyrates;
-	}
+    public List<ChargeableNightlyRatElement> getChargeablenightlyrates() {
+        return chargeablenightlyrates;
+    }
 
-	public void setChargeablenightlyrates(
-			List<ChargeableNightlyRatElement> chargeablenightlyrates) {
-		this.chargeablenightlyrates = chargeablenightlyrates;
-	}
+    public void setChargeablenightlyrates(List<ChargeableNightlyRatElement> chargeablenightlyrates) {
+        this.chargeablenightlyrates = chargeablenightlyrates;
+    }
 }
