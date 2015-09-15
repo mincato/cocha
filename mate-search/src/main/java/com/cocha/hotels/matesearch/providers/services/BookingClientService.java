@@ -12,7 +12,7 @@ public interface BookingClientService {
     @GET
     @Path(value = "/bookings.getHotelAvailability")
     @Produces({ MediaType.APPLICATION_XML })
-    public Object availabilityB(@QueryParam("arrival_date") String arrival_date,
+    public Object availabilityBooking(@QueryParam("arrival_date") String arrival_date,
             @QueryParam("hotel_ids") String hotel_ids, @QueryParam("departure_date") String departure_date);
 
 }
