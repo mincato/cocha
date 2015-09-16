@@ -9,8 +9,12 @@ import org.apache.camel.Message;
 import org.apache.camel.Processor;
 import org.apache.camel.component.cxf.common.message.CxfConstants;
 import org.apache.cxf.message.MessageContentsList;
+import org.springframework.stereotype.Component;
 
+@Component
 public class BookingClientProcessor implements Processor {
+
+    protected static final String AVAILABILITY_BOOKING_SERVICE = "availabilityBooking";
 
     @Override
     public void process(Exchange exchange) throws Exception {
@@ -28,16 +32,14 @@ public class BookingClientProcessor implements Processor {
 
         exchange.setPattern(ExchangePattern.InOut);
 
-        // set the operation name
-        inMessage.setHeader(CxfConstants.OPERATION_NAME, "availabilityB");
+        // seteo nombre de servicio para el binding con la llamada al servicio
+        // rest.
+        inMessage.setHeader(CxfConstants.OPERATION_NAME, AVAILABILITY_BOOKING_SERVICE);
         inMessage.setHeader(CxfConstants.CAMEL_CXF_RS_USING_HTTP_API, Boolean.FALSE);
-
-        // inMessage.setHeader("Accept-Encoding", "gzip, deflate");
-        inMessage.setHeader("Authorization", "Basic Q29jaGE6Q29jaGEuMTIz");
         MessageContentsList req = new MessageContentsList();
-        req.add("2016-03-06");
+        req.add(parameters.get("arrival_date"));
         req.add(parameters.get("idHotel"));
-        req.add("2016-03-27");
+        req.add(parameters.get("departure_date"));
         inMessage.setBody(req);
     }
 }
