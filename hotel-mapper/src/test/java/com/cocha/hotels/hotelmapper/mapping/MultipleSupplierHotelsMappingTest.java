@@ -29,8 +29,7 @@ public class MultipleSupplierHotelsMappingTest {
 
     @Before
     public void setUp() throws Exception {
-        matchingService = new HotelMatchingService();
-        matchingService.setRulesProcessor(new HotelRulesProcessor());
+        matchingService = new HotelMatchingService(new HotelRulesProcessor());
     }
 
     @Test
@@ -68,7 +67,7 @@ public class MultipleSupplierHotelsMappingTest {
 
         validate(matches).validMatchIdsFor(reference, hotelBuilder.buildWithBooking());
     }
-    
+
     @Test
     public void matchBlackstoneHotelAgainstOthers() {
         HotelMock hotelBuilder = new BlackstoneHotelMock();
@@ -92,7 +91,7 @@ public class MultipleSupplierHotelsMappingTest {
 
         validate(matches).validMatchIdsFor(reference, hotelBuilder.buildWithBooking());
     }
-    
+
     @Test
     public void matchComfortInnHotelAgainstOthers() {
         HotelMock hotelBuilder = new ComfortInnHotelMock();
@@ -140,7 +139,7 @@ public class MultipleSupplierHotelsMappingTest {
 
         validate(matches).validMatchIdsFor(reference, hotelBuilder.buildWithBooking());
     }
-    
+
     @Test
     public void matchQualitySuitesHotelAgainstOthers() {
         HotelMock hotelBuilder = new QualitySuitesHotelMock();
@@ -164,7 +163,7 @@ public class MultipleSupplierHotelsMappingTest {
 
         validate(matches).validMatchIdsFor(reference, hotelBuilder.buildWithBooking());
     }
-    
+
     @Test
     public void matchQualitySuitesUSHotelAgainstOthers() {
         HotelMock hotelBuilder = new QualitySuitesUSHotelMock();
@@ -188,7 +187,7 @@ public class MultipleSupplierHotelsMappingTest {
 
         validate(matches).validMatchIdsFor(reference, hotelBuilder.buildWithBooking());
     }
-    
+
     @Test
     public void matchSaintEugeneHotelAgainstOthers() {
         HotelMock hotelBuilder = new SaintEugeneHotelMock();
@@ -212,7 +211,7 @@ public class MultipleSupplierHotelsMappingTest {
 
         validate(matches).validMatchIdsFor(reference, hotelBuilder.buildWithBooking());
     }
-    
+
     @Test
     public void matchStaybridgeSuitesHotelAgainstOthers() {
         HotelMock hotelBuilder = new StaybridgeSuitesHotelMock();
@@ -236,7 +235,7 @@ public class MultipleSupplierHotelsMappingTest {
 
         validate(matches).validMatchIdsFor(reference, hotelBuilder.buildWithBooking());
     }
-    
+
     @Test
     public void matchTaybridgeSuitesHotelAgainstOthers() {
         HotelMock hotelBuilder = new TaybridgeSuitesHotelMock();
@@ -260,7 +259,7 @@ public class MultipleSupplierHotelsMappingTest {
 
         validate(matches).validMatchIdsFor(reference, hotelBuilder.buildWithBooking());
     }
-    
+
     @Test
     public void matchWallStreetHotelAgainstOthers() {
         HotelMock hotelBuilder = new WallStreet_HI_HotelMock();
@@ -284,7 +283,7 @@ public class MultipleSupplierHotelsMappingTest {
 
         validate(matches).validMatchIdsFor(reference, hotelBuilder.buildWithBooking());
     }
-    
+
     @Test
     public void matchTravelodgeHotelAgainstOthers() {
         HotelMock hotelBuilder = new TravelodgeFlagstaffHotelMock();
@@ -329,25 +328,20 @@ public class MultipleSupplierHotelsMappingTest {
 
         public void hasNoValidMatchFor(Hotel reference) {
             List<HotelMatch> hotelMatches = multipleHotelMatch.getHotelMatches();
-            Long validMatches = hotelMatches.stream()
-                    .filter((match) -> match.getConfidence() >= 60)
-                    .count();
+            Long validMatches = hotelMatches.stream().filter((match) -> match.getConfidence() >= 60).count();
             Assert.assertTrue(validMatches == 0);
         }
 
         public void validMatchIdsFor(Hotel reference, Hotel toCompare) {
             HotelMatch validMatch = multipleHotelMatch.getHotelMatches().stream()
-                    .filter((match) -> match.getConfidence() >= 60)
-                    .findFirst().get();
+                    .filter((match) -> match.getConfidence() >= 60).findFirst().get();
             Assert.assertEquals(reference.getId(), validMatch.getHotelReference().getId());
             Assert.assertEquals(toCompare.getId(), validMatch.getHotelToCompare().getId());
         }
 
         public void hasOneValidMatchFor(Hotel reference) {
             List<HotelMatch> hotelMatches = multipleHotelMatch.getHotelMatches();
-            Long validMatches = hotelMatches.stream()
-                    .filter((match) -> match.getConfidence() >= 60)
-                    .count();
+            Long validMatches = hotelMatches.stream().filter((match) -> match.getConfidence() >= 60).count();
             Assert.assertTrue(validMatches == 1l);
         }
 

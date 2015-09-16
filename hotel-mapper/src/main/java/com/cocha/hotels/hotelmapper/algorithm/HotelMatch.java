@@ -18,30 +18,26 @@ public class HotelMatch {
         this.confidence = confidence;
     }
 
-    
     public Hotel getHotelReference() {
         return hotelReference;
     }
 
-    
     public void setHotelReference(Hotel hotelReference) {
         this.hotelReference = hotelReference;
     }
 
-    
     public Hotel getHotelToCompare() {
         return hotelToCompare;
     }
 
-    
     public void setHotelToCompare(Hotel hotelToCompare) {
         this.hotelToCompare = hotelToCompare;
     }
-    
+
     public Integer getConfidence() {
         return this.confidence;
     }
-    
+
     public void setConfidence(Integer confidence) {
         this.confidence = confidence;
     }
