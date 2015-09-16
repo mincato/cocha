@@ -29,7 +29,7 @@ public class HotelRulesProcessor {
 
         log.info(String.format("Applied rules between ref[%s] and [%s]. Confidence level: %d", hotelReference.getId(),
                 hotelToCompare.getId(), confidence));
-        return new HotelMatch(confidence);
+        return new HotelMatch(hotelReference, hotelToCompare, confidence);
     }
 
 }
