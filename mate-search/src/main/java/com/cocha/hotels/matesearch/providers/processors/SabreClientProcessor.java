@@ -8,7 +8,9 @@ import org.apache.camel.ExchangePattern;
 import org.apache.camel.Message;
 import org.apache.camel.Processor;
 import org.apache.camel.component.spring.ws.SpringWebserviceConstants;
+import org.springframework.stereotype.Component;
 
+@Component
 public class SabreClientProcessor implements Processor {
 
     @Override
@@ -16,13 +18,7 @@ public class SabreClientProcessor implements Processor {
         Message inMessage = exchange.getIn();
 
         String queryStrings = inMessage.getBody(String.class);
-        Map<String, String> parameters = new HashMap<String, String>();
-        String[] pairs = queryStrings.split("\\&");
-        for (int i = 0; i < pairs.length; i++) {
-            String pair = pairs[i];
-            String[] keyValue = pair.split("\\=");
-            parameters.put(keyValue[0], (keyValue[1]));
-        }
+        Map<String, String> parameters = parseQueryParam(queryStrings);
         exchange.setPattern(ExchangePattern.InOut);
 
         // String soapHeader = "<sec:Security><sec:BinarySecurityToken>"
@@ -57,5 +53,16 @@ public class SabreClientProcessor implements Processor {
         String body = "<AvailRequestSegment><HotelSearchCriteria><Criterion><HotelRef HotelCityCode=\"SCL\"/></Criterion></HotelSearchCriteria><TimeSpan End=\"09-24\" Start=\"09-22\"/></AvailRequestSegment>";
 
         inMessage.setBody(body);
+    }
+
+    private Map<String, String> parseQueryParam(String queryStrings) {
+        Map<String, String> parameters = new HashMap<String, String>();
+        String[] pairs = queryStrings.split("\\&");
+        for (int i = 0; i < pairs.length; i++) {
+            String pair = pairs[i];
+            String[] keyValue = pair.split("\\=");
+            parameters.put(keyValue[0], (keyValue[1]));
+        }
+        return parameters;
     }
 }

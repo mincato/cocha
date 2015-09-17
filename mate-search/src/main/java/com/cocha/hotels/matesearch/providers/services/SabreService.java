@@ -30,4 +30,11 @@ public class SabreService {
             @QueryParam("session") String session) {
         return null;
     }
+
+    @GET
+    @Produces(MediaType.APPLICATION_XML)
+    @Path("/createsession")
+    public Object createsession(@QueryParam("code") String code) {
+        return null;
+    }
 }
