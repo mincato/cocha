@@ -4,9 +4,9 @@ import org.apache.log4j.Logger;
 
 import com.cocha.hotels.model.matesearch.canonical.Hotel;
 
-public class SupplierEANHotelProcessor {
+public class SupplierHotelProcessor {
 
-    public final static Logger logger = Logger.getLogger(SupplierEANHotelProcessor.class);
+    public final static Logger logger = Logger.getLogger(SupplierHotelProcessor.class);
 
     public Hotel processCustomer(Hotel hotel) {
 

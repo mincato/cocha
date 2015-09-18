@@ -8,12 +8,12 @@
 	<camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
 		<route>
 			<from uri="direct:service-in" />
-				<to uri="bean:hotel-processor" />
+			<to uri="bean:hotel-processor" />
 			<to uri="mock:verify-model" />
 		</route>
 	</camelContext>
 
-	<bean id="hotel-processor" class="com.cocha.hotels.matesearch.providers.processors.SupplierEANHotelProcessor" />
+	<bean id="hotel-processor" class="com.cocha.hotels.matesearch.providers.processors.SupplierHotelProcessor" />
 
 	<bean id="dozerConverterLoader" class="org.apache.camel.converter.dozer.DozerTypeConverterLoader">
 		<constructor-arg index="0" ref="camel" />

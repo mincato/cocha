@@ -26,7 +26,7 @@ public class TramsformerObjectBooking extends CamelSpringTestSupport {
         GetHotelAvailabilityBooking getHotelAvailabilityBooking = new GetHotelAvailabilityBooking();
         Result result = new Result();
         RackRate rackRate = new RackRate();
-        
+
         result.setAvailableRooms(new Long(170));
         result.setCurrencyCode("GBP");
         result.setHotelId(new Long(36913));
@@ -36,7 +36,7 @@ public class TramsformerObjectBooking extends CamelSpringTestSupport {
         result.setMinRotalPrice(new Float(526.00));
         rackRate.setCurrency("526.00");
         rackRate.setPrice("0.00");
-        
+
         result.setRackRate(rackRate);
         getHotelAvailabilityBooking.setResult(result);
 

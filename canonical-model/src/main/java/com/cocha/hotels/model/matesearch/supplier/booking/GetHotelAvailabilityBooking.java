@@ -9,26 +9,26 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class GetHotelAvailabilityBooking {
 
-     @XmlElement
-     private Integer chunks;
-    
-     @XmlElement
-     private Result result;
-    
-     public Integer getChunks() {
-     return chunks;
-     }
-    
-     public void setChunks(Integer chunks) {
-     this.chunks = chunks;
-     }
-    
-     public Result getResult() {
-     return result;
-     }
-    
-     public void setResult(Result result) {
-     this.result = result;
-     }
+    @XmlElement
+    private Integer chunks;
+
+    @XmlElement
+    private Result result;
+
+    public Integer getChunks() {
+        return chunks;
+    }
+
+    public void setChunks(Integer chunks) {
+        this.chunks = chunks;
+    }
+
+    public Result getResult() {
+        return result;
+    }
+
+    public void setResult(Result result) {
+        this.result = result;
+    }
 
 }
