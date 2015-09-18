@@ -4,6 +4,7 @@
 	<stream name="eanSupplierHotels" format="csv">
 		<parser>
 			<property name="delimiter" value="|" />
+			<property name="unquotedQuotesAllowed" value="true"/>
 		</parser>
 		<record name="header" order="1" minOccurs="1" maxOccurs="1" />
 		<record name="hotel" order="2"
@@ -38,6 +39,7 @@
 	<stream name="eanHotelDescription" format="csv">
 		<parser>
 			<property name="delimiter" value="|" />
+			<property name="unquotedQuotesAllowed" value="true"/>
 		</parser>
 		<record name="header" order="1" minOccurs="1" maxOccurs="1" />
 		<record name="hotel" order="2"

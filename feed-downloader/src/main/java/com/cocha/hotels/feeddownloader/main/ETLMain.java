@@ -8,6 +8,6 @@ public class ETLMain extends Main {
         ETLMain main = new ETLMain();
         main.setApplicationContextUri("classpath:/spring/camel-context.xml");
         main.enableHangupSupport();
-        main.start();
+        main.run();
     }
 }

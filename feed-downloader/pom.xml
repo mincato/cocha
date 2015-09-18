@@ -171,6 +171,7 @@
 				<configuration>
 					<mainClass>com.cocha.hotels.feeddownloader.main.ETLMain</mainClass>
 					<includePluginDependencies>false</includePluginDependencies>
+					<cleanupDaemonThreads>false</cleanupDaemonThreads>
 				</configuration>
 			</plugin>
 			
