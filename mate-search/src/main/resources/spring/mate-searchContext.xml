@@ -43,7 +43,7 @@
    </cxfCamel:rsServer>
 	
 	<!-- Defined the client endpoint to create the cxf-rs consumer for EAN-->
-  <cxfCamel:rsClient id="eanClient" address="https://book.api.ean.com/ean-services/rs/hotel/v3"
+  <cxfCamel:rsClient id="eanClient" address="${mate.provider.ean.address.xml}"
     serviceClass="com.cocha.hotels.matesearch.providers.services.EanClientService"
     loggingFeatureEnabled="true"/>
     
