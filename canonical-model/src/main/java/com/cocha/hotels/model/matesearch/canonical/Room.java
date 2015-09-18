@@ -2,17 +2,15 @@ package com.cocha.hotels.model.matesearch.canonical;
 
 public class Room {
 
-    private Long idHotelMapper;
-    private Long rateCode;
-    private Long roomTypeCode;
+    private String roomDescription;
     private RateInfo rateInfo;
 
-    public Long getIdHotelMapper() {
-        return idHotelMapper;
+    public String getRoomDescription() {
+        return roomDescription;
     }
 
-    public void setIdHotelMapper(Long idHotelMapper) {
-        this.idHotelMapper = idHotelMapper;
+    public void setRoomDescription(String roomDescription) {
+        this.roomDescription = roomDescription;
     }
 
     public RateInfo getRateInfo() {
@@ -22,5 +20,4 @@ public class Room {
     public void setRateInfo(RateInfo rateInfo) {
         this.rateInfo = rateInfo;
     }
-
 }
