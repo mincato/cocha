@@ -3,6 +3,7 @@ package com.cocha.hotels.hotelmapper.mapping;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Predicate;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -22,12 +23,11 @@ import com.cocha.hotels.hotelmapper.mocks.TravelodgeFlagstaffHotelMock;
 import com.cocha.hotels.hotelmapper.mocks.WallStreet_HI_HotelMock;
 import com.cocha.hotels.model.content.hotel.Hotel;
 
-
-public class SupplierMappingServiceTest {
+public class HotelMappingServiceTest {
 
     private List<HotelMock> builders;
     private HotelMappingService mappingService;
-    
+
     @Before
     public void setUp() throws Exception {
         HotelMock armada = new ArmadaHotelMock();
@@ -41,11 +41,10 @@ public class SupplierMappingServiceTest {
         HotelMock taybridge = new TaybridgeSuitesHotelMock();
         HotelMock travelodge = new TravelodgeFlagstaffHotelMock();
         HotelMock wallstreet = new WallStreet_HI_HotelMock();
-        
-        builders = Arrays.asList(armada, blackstone, comfort, 
-                leamington, quality, qualityUS, saintEugene, 
-                staybridge, taybridge, travelodge, wallstreet);
-        
+
+        builders = Arrays.asList(armada, blackstone, comfort, leamington, quality, qualityUS, saintEugene, staybridge,
+                taybridge, travelodge, wallstreet);
+
         mappingService = new HotelMappingService();
     }
 
@@ -54,25 +53,17 @@ public class SupplierMappingServiceTest {
         List<Hotel> eanHotels = buildHotelsFromEAN();
         List<Hotel> bookingHotels = buildHotelsFromBooking();
         
-        MappingResult mappingResult = mappingService.map(eanHotels, bookingHotels);
-        
+        List<Hotel> hotels = new ArrayList<Hotel>(eanHotels);
+        hotels.addAll(bookingHotels);
+
+        MappingResult mappingResult = mappingService.map(hotels);
+
         List<MappingEntry> mapping = mappingResult.getMappingEntries();
 
+        verify(mapping).hasAllHotelsMapped(eanHotels);
         verify(mapping).hasAllHotelsMapped(bookingHotels);
     }
-    
-    @Test
-    public void metricsEANtoBookingHotels() {
-        List<Hotel> eanHotels = buildHotelsFromEAN();
-        List<Hotel> bookingHotels = buildHotelsFromBooking();
-        
-        MappingResult mappingResult = mappingService.map(eanHotels, bookingHotels);
-        
-        List<MappingEntry> metrics = mappingResult.getMappingMetrics();
 
-        verify(metrics).hasAllHotelsMapped(bookingHotels);
-    }
-    
     private MappingResultVerifier verify(List<MappingEntry> mapping) {
         return new MappingResultVerifier(mapping);
     }
@@ -80,33 +71,38 @@ public class SupplierMappingServiceTest {
     class MappingResultVerifier {
 
         private List<MappingEntry> mapping;
-        
+
         public MappingResultVerifier(List<MappingEntry> mapping) {
             this.mapping = mapping;
         }
 
-        public void hasAllHotelsMapped(List<Hotel> hotels) {
-            Assert.assertEquals(hotels.size(), mapping.size());
-            
+        /*
+         * If all hotels are mapped, there are N entries in the mapping per hotel
+         * where N is the number of suppliers
+         * It is assumed that all hotels in the list have the same supplier code.
+         */
+        public void hasAllHotelsMapped(final List<Hotel> hotels) {
             hotels.forEach((hotel) -> {
-                Long count = mapping.stream()
-                    .filter((entry) -> entry.getBookingHotel().getId().equals(hotel.getId())).count();
+                Predicate<MappingEntry> byHotelSupplierId = (entry) -> entry.getSupplierId().equals(hotel.getId());
+                Predicate<MappingEntry> byHotelSupplierCode = (entry) -> entry.getSupplierCode().equals(hotel.getSupplierCode());
+
+                Long count = mapping.stream().filter(byHotelSupplierId.and(byHotelSupplierCode)).count();
+                
                 Assert.assertTrue(count.equals(1l));
-                }
-            );
+            });
         }
     }
-    
+
     private List<Hotel> buildHotelsFromEAN() {
         List<Hotel> hotels = new ArrayList<Hotel>();
-        
+
         builders.forEach((builder) -> hotels.add(builder.buildWithEan()));
         return hotels;
     }
 
     private List<Hotel> buildHotelsFromBooking() {
         List<Hotel> hotels = new ArrayList<Hotel>();
-        
+
         builders.forEach((builder) -> hotels.add(builder.buildWithBooking()));
         return hotels;
     }

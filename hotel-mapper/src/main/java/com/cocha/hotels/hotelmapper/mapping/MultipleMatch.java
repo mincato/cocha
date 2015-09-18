@@ -16,4 +16,8 @@ public class MultipleMatch {
         return this.matches;
     }
 
+    public HotelMatch findBestMatch() {
+        return this.matches.stream().max((h1, h2) -> h1.getConfidence().compareTo(h2.getConfidence())).get();
+    }
+
 }
