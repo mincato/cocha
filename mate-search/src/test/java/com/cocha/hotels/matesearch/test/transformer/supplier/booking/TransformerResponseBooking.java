@@ -19,8 +19,8 @@ public class TransformerResponseBooking extends CamelSpringTestSupport {
     @Test
     public void transformerBooking() throws Exception {
 
-         final InputStream resource =  getClass().getClassLoader().getResourceAsStream("respuestamocks/ResponseHotelSupplierBooking.xml");
-         final String xml = context().getTypeConverter().convertTo(String.class, resource);
+    	final InputStream resource =  getClass().getClassLoader().getResourceAsStream("respuestamocks/ResponseHotelSupplierBooking.xml");
+    	final String xml = context().getTypeConverter().convertTo(String.class, resource);
 
     	GetHotelAvailabilityBooking hotelRespose = template.requestBody("direct:unmarshal", xml, GetHotelAvailabilityBooking.class);
 

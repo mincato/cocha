@@ -22,7 +22,7 @@ public class TramsformerObjectEAN extends CamelSpringTestSupport {
 
     @Override
     protected AbstractXmlApplicationContext createApplicationContext() {
-        return new ClassPathXmlApplicationContext("supploerEANDozerTestContext.xml");
+        return new ClassPathXmlApplicationContext("supplierEANDozerTestContext.xml");
     }
 
     @Test
