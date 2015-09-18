@@ -19,6 +19,7 @@ public class EanHotelTransformerTest {
     private static final String TEST_CURRENCY_CODE = "testCurrencyCode";
     private static final String TEST_COUNTRY_CODE = "testCountryCode";
     private static final String TEST_ADDRESS = "testAddress";
+    private static final String TEST_DESCRIPTION = "testDescription";
 
     @Test
     public void testTransformNullSupplierHotels() {
@@ -38,6 +39,7 @@ public class EanHotelTransformerTest {
         assertEquals(TEST_NAME, canonicalHotels.getName());
         assertEquals(TEST_STARS, canonicalHotels.getStarRating());
         assertEquals(TEST_ZIP, canonicalHotels.getZipCode());
+        assertEquals(TEST_DESCRIPTION, canonicalHotels.getDescription());
         assertEquals(Hotel.EAN_SUPPLIER_CODE, canonicalHotels.getSupplierCode());
     }
 
@@ -52,6 +54,7 @@ public class EanHotelTransformerTest {
         supplierHotel.setName(TEST_NAME);
         supplierHotel.setStarRating(TEST_STARS);
         supplierHotel.setPostalCode(TEST_ZIP);
+        supplierHotel.setDescription(TEST_DESCRIPTION);
         return supplierHotel;
     }
 

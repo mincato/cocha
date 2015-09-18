@@ -20,6 +20,8 @@ public class EanSupplierHotel {
 
     private String starRating;
 
+    private String description;
+
     public String getHotelId() {
         return hotelId;
     }
@@ -90,6 +92,14 @@ public class EanSupplierHotel {
 
     public void setStarRating(String starRating) {
         this.starRating = starRating;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
 }

@@ -23,6 +23,7 @@ public class BookingHotelTransformerTest {
     private static final String TEST_CURRENCY_CODE = "testCurrencyCode";
     private static final String TEST_COUNTRY_CODE = "testCountryCode";
     private static final String TEST_ADDRESS = "testAddress";
+    private static final String TEST_DESCRIPTION = "testDescription";
 
     @Test
     public void testTransformNullHotelsResponse() {
@@ -50,7 +51,9 @@ public class BookingHotelTransformerTest {
         assertEquals(TEST_NAME, canonicalHotels.get(0).getName());
         assertEquals(TEST_STARS, canonicalHotels.get(0).getStarRating());
         assertEquals(TEST_ZIP, canonicalHotels.get(0).getZipCode());
+        assertEquals(TEST_DESCRIPTION, canonicalHotels.get(0).getDescription());
         assertEquals(Hotel.BOOKING_SUPPLIER_CODE, canonicalHotels.get(0).getSupplierCode());
+
     }
 
     private GetHotelsResponse createSupplierHotel() {
@@ -68,6 +71,7 @@ public class BookingHotelTransformerTest {
         supplierHotel.setName(TEST_NAME);
         supplierHotel.setStars(TEST_STARS);
         supplierHotel.setZip(TEST_ZIP);
+        supplierHotel.setDescription(TEST_DESCRIPTION);
         supplierHotelList.add(supplierHotel);
         hotelsResponse.setHotels(supplierHotelList);
         return hotelsResponse;
