@@ -22,6 +22,7 @@ public class EanHotelTransformer {
             canonicalHotel.setName(supplierHotel.getName());
             canonicalHotel.setStarRating(supplierHotel.getStarRating());
             canonicalHotel.setZipCode(supplierHotel.getPostalCode());
+            canonicalHotel.setDescription(supplierHotel.getDescription());
             canonicalHotel.setSupplierCode(Hotel.EAN_SUPPLIER_CODE);
         }
         return canonicalHotel;

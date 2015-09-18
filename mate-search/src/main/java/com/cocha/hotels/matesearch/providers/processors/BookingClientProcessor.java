@@ -1,6 +1,5 @@
 package com.cocha.hotels.matesearch.providers.processors;
 
-import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.camel.Exchange;
@@ -10,6 +9,8 @@ import org.apache.camel.Processor;
 import org.apache.camel.component.cxf.common.message.CxfConstants;
 import org.apache.cxf.message.MessageContentsList;
 import org.springframework.stereotype.Component;
+
+import com.cocha.hotels.matesearch.util.MessageUtils;
 
 @Component
 public class BookingClientProcessor implements Processor {
@@ -21,14 +22,7 @@ public class BookingClientProcessor implements Processor {
         Message inMessage = exchange.getIn();
 
         String queryStrings = inMessage.getBody(String.class);
-
-        Map<String, String> parameters = new HashMap<String, String>();
-        String[] pairs = queryStrings.split("\\&");
-        for (int i = 0; i < pairs.length; i++) {
-            String pair = pairs[i];
-            String[] keyValue = pair.split("\\=");
-            parameters.put(keyValue[0], (keyValue[1]));
-        }
+        Map<String, String> parameters = MessageUtils.parseQueryParams(queryStrings);
 
         exchange.setPattern(ExchangePattern.InOut);
 

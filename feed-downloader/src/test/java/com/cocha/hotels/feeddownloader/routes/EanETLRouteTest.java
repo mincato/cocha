@@ -40,13 +40,15 @@ public class EanETLRouteTest extends CamelSpringTestSupport {
                 .from("jpa:com.cocha.hotels.model.content.hotel.Hotel?entityType=java.util.ArrayList").whenCompleted(1)
                 .create();
         template.requestBodyAndHeader("file:{{feeds.input.ean}}", createInput(), Exchange.FILE_NAME, "Ean Hotel.csv");
+        template.requestBodyAndHeader("file:{{feeds.input.ean.description}}", createInputDescription(),
+                Exchange.FILE_NAME, "Ean Hotel Description.csv");
         notify.matches(2, TimeUnit.SECONDS);
         assertEntityInDB();
     }
 
     @Test
     public void testEanETLRouteErrorException() throws Exception {
-        getMockEndpoint("mock:error").expectedMessageCount(1);
+        getMockEndpoint("mock:error").expectedMessageCount(2);
         RouteDefinition route = context.getRouteDefinition(EanETLRoute.EAN_ETL_ROUTE);
         route.adviceWith(context, new RouteBuilder() {
 
@@ -63,6 +65,8 @@ public class EanETLRouteTest extends CamelSpringTestSupport {
             }
         });
         template.requestBodyAndHeader("file:{{feeds.input.ean}}", createInput(), Exchange.FILE_NAME, "Ean Hotel.csv");
+        template.requestBodyAndHeader("file:{{feeds.input.ean.description}}", createInputDescription(),
+                Exchange.FILE_NAME, "Ean Hotel Description.csv");
         assertMockEndpointsSatisfied();
 
     }
@@ -78,6 +82,16 @@ public class EanETLRouteTest extends CamelSpringTestSupport {
         return sb.toString();
     }
 
+    private String createInputDescription() {
+
+        StringBuilder sb = new StringBuilder("EANHotelID|LanguageCode|PropertyDescription");
+        sb.append(System.lineSeparator());
+        sb.append("351656|es_ES|<p><b>Ubicacion del establecimiento</b> <br />Si te alojas en Iberostar Praia do Forte All Inclusive");
+        sb.append(System.lineSeparator());
+        sb.append("364638|es_ES|<p><b>Ubicacion del establecimiento</b> <br />Desde Radisson Blu Hotel Maputo");
+        return sb.toString();
+    }
+
     @SuppressWarnings("unchecked")
     private void assertEntityInDB() throws Exception {
         JpaEndpoint endpoint = (JpaEndpoint) context
@@ -88,7 +102,12 @@ public class EanETLRouteTest extends CamelSpringTestSupport {
                 .getResultList();
         assertEquals(2, list.size());
         assertEquals("351656", list.get(0).getId());
+        assertEquals(
+                "<p><b>Ubicacion del establecimiento</b> <br />Si te alojas en Iberostar Praia do Forte All Inclusive",
+                list.get(0).getDescription());
         assertEquals("364638", list.get(1).getId());
+        assertEquals("<p><b>Ubicacion del establecimiento</b> <br />Desde Radisson Blu Hotel Maputo", list.get(1)
+                .getDescription());
 
         em.close();
     }
