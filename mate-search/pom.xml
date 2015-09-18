@@ -154,49 +154,73 @@
 				<version>${version.jboss.maven.plugin}</version>
 			</plugin>
 
-			<plugin>
-				<groupId>net.revelc.code</groupId>
-				<artifactId>formatter-maven-plugin</artifactId>
-				<version>${version.formatter.maven.plugin}</version>
-				<configuration>
-					<configFile>../Centaurico-Code-Style.xml</configFile>
-				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>format</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
+<!-- 			<plugin> -->
+<!-- 				<groupId>net.revelc.code</groupId> -->
+<!-- 				<artifactId>formatter-maven-plugin</artifactId> -->
+<!-- 				<version>${version.formatter.maven.plugin}</version> -->
+<!-- 				<configuration> -->
+<!-- 					<configFile>../Centaurico-Code-Style.xml</configFile> -->
+<!-- 				</configuration> -->
+<!-- 				<executions> -->
+<!-- 					<execution> -->
+<!-- 						<goals> -->
+<!-- 							<goal>format</goal> -->
+<!-- 						</goals> -->
+<!-- 					</execution> -->
+<!-- 				</executions> -->
+<!-- 			</plugin> -->
 
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>findbugs-maven-plugin</artifactId>
-				<version>${version.findbugs.plugin}</version>
-				<configuration>
-					<!-- Enables analysis which takes more memory but finds more bugs. If 
-						you run out of memory, changes the value of the effort element to 'Low'. -->
-					<effort>Max</effort>
-					<!-- Reports all bugs (other values are medium and max) -->
-					<threshold>Low</threshold>
-					<!-- Produces XML report -->
-					<xmlOutput>true</xmlOutput>
-					<!-- Configures the directory in which the XML report is created -->
-					<findbugsXmlOutputDirectory>${project.build.directory}/findbugs</findbugsXmlOutputDirectory>
-					<failOnError>false</failOnError>
-				</configuration>
-				<executions>
-					<!-- Ensures that FindBugs inspects source code when project is compiled. -->
-					<execution>
-						<id>analyze-compile</id>
-						<phase>compile</phase>
-						<goals>
-							<goal>check</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
+<!-- 			<plugin> -->
+<!-- 				<groupId>org.codehaus.mojo</groupId> -->
+<!-- 				<artifactId>findbugs-maven-plugin</artifactId> -->
+<!-- 				<version>${version.findbugs.plugin}</version> -->
+<!-- 				<configuration> -->
+<!-- 					<effort>Max</effort> -->
+<!-- 					Reports all bugs (other values are medium and max) -->
+<!-- 					<threshold>Low</threshold> -->
+<!-- 					Produces XML report -->
+<!-- 					<xmlOutput>true</xmlOutput> -->
+<!-- 					Configures the directory in which the XML report is created -->
+<!-- 					<findbugsXmlOutputDirectory>${project.build.directory}/findbugs</findbugsXmlOutputDirectory> -->
+<!-- 					<failOnError>false</failOnError> -->
+<!-- 				</configuration> -->
+<!-- 				<executions> -->
+<!-- 					Ensures that FindBugs inspects source code when project is compiled. -->
+<!-- 					<execution> -->
+<!-- 						<id>analyze-compile</id> -->
+<!-- 						<phase>compile</phase> -->
+<!-- 						<goals> -->
+<!-- 							<goal>check</goal> -->
+<!-- 						</goals> -->
+<!-- 					</execution> -->
+<!-- 				</executions> -->
+<!-- 			</plugin> -->
+
+<!-- <plugin> -->
+<!--           <groupId>org.apache.cxf</groupId> -->
+<!--           <artifactId>cxf-codegen-plugin</artifactId> -->
+<!--            <executions> -->
+<!--                   <execution> -->
+<!--                      <id>generate-sources</id> -->
+<!--                      <phase>generate-sources</phase> -->
+<!--                      <configuration> -->
+<!--                      <sourceRoot> -->
+<!--                          ${basedir}/src/main/java -->
+<!--                      </sourceRoot> -->
+<!--                      <wsdlOptions> -->
+<!--                         <wsdlOption> -->
+<!--                              <wsdl> -->
+<!--                                    ${basedir}/src/main/resources/wsdl/SessionCreateRQ.wsdl -->
+<!--                              </wsdl> -->
+<!--                         </wsdlOption> -->
+<!--                       </wsdlOptions> -->
+<!--                      </configuration> -->
+<!--                      <goals> -->
+<!--                          <goal>wsdl2java</goal> -->
+<!--                      </goals> -->
+<!--                 </execution> -->
+<!--             </executions> -->
+<!-- </plugin> -->
 
 		</plugins>
 	</build>
