@@ -13,126 +13,71 @@
 		  xsi:schemaLocation="http://dozer.sourceforge.net  http://dozer.sourceforge.net/schema/beanmapping.xsd">
 	
 	<mapping>
-		<class-a>com.cocha.hotels.model.matesearch.supplier.ean.HotelSupplierEAN
-		</class-a>
+		<class-a>com.cocha.hotels.model.matesearch.supplier.ean.hotel.SupplierEANHotelResponse</class-a>
 		<class-b>com.cocha.hotels.model.matesearch.canonical.Hotel</class-b>
 		<field>
-			<a>hotelroomavailabilityresponse.hotelid</a>
+			<a>hotellistresponse.hotellist.hotelsummary.hotelid</a>
 			<b>idSupplier</b>
 		</field>
 		<field>
-			<a date-format="MM/dd/yyyy">hotelroomavailabilityresponse.arrivalDate</a>
-			<b>arrivalDate</b>
+			<a>hotellistresponse.hotellist.hotelsummary.roomratedetailslist.roomratedetails.roomdescription</a>
+			<b>roomDetail.roomDescription</b>
 		</field>
 		<field>
-			<a date-format="MM/dd/yyyy">hotelroomavailabilityresponse.departureDate</a>
-			<b>departureDate</b>
+			<a>hotellistresponse.hotellist.hotelsummary.roomratedetailslist.roomratedetails.rateinfos.rateinfo.pricebreakdown</a>
+			<b>roomDetail.rateInfo.priceBreakDown</b>
 		</field>
-		<field map-id="Room">
-			<a>hotelroomavailabilityresponse.hotelroomresponse</a>
-			<b>rooms</b>
-			<a-hint>com.cocha.hotels.model.matesearch.supplier.ean.HotelRoomResponseElement</a-hint>
-			<b-hint>com.cocha.hotels.model.matesearch.canonical.Room</b-hint>
+		<field>
+			<a>hotellistresponse.hotellist.hotelsummary.roomratedetailslist.roomratedetails.rateinfos.rateinfo.promo</a>
+			<b>roomDetail.rateInfo.promo</b>
 		</field>
+		<field>
+			<a>hotellistresponse.hotellist.hotelsummary.roomratedetailslist.roomratedetails.rateinfos.rateinfo.ratechange</a>
+			<b>roomDetail.rateInfo.rateChange</b>
+		</field>
+		<field>
+			<a>hotellistresponse.hotellist.hotelsummary.roomratedetailslist.roomratedetails.rateinfos.rateinfo.chargeablerateinfo.averagebaserate</a>
+			<b>roomDetail.rateInfo.averageBaseRate</b>
+		</field>
+		<field>
+			<a>hotellistresponse.hotellist.hotelsummary.roomratedetailslist.roomratedetails.rateinfos.rateinfo.chargeablerateinfo.averagerate</a>
+			<b>roomDetail.rateInfo.averageRate</b>
+		</field>
+		<field>
+			<a>hotellistresponse.hotellist.hotelsummary.roomratedetailslist.roomratedetails.rateinfos.rateinfo.chargeablerateinfo.commissionableusdtotal</a>
+			<b>roomDetail.rateInfo.commissionableUsdTotal</b>
+		</field>
+		<field>
+			<a>hotellistresponse.hotellist.hotelsummary.roomratedetailslist.roomratedetails.rateinfos.rateinfo.chargeablerateinfo.currencycode</a>
+			<b>roomDetail.rateInfo.currencyCode</b>
+		</field>		
+		<field>
+			<a>hotellistresponse.hotellist.hotelsummary.roomratedetailslist.roomratedetails.rateinfos.rateinfo.chargeablerateinfo.maxnightlyrate</a>
+			<b>roomDetail.rateInfo.maxNightlyRate</b>
+		</field>
+		<field>
+			<a>hotellistresponse.hotellist.hotelsummary.roomratedetailslist.roomratedetails.rateinfos.rateinfo.chargeablerateinfo.nightlyratetotal</a>
+			<b>roomDetail.rateInfo.nightlyRateTotal</b>
+		</field>
+		<field>
+			<a>hotellistresponse.hotellist.hotelsummary.roomratedetailslist.roomratedetails.rateinfos.rateinfo.chargeablerateinfo.surchargeTotal</a>
+			<b>roomDetail.rateInfo.surchargetotal</b>
+		</field>
+		<field>
+			<a>hotellistresponse.hotellist.hotelsummary.roomratedetailslist.roomratedetails.rateinfos.rateinfo.chargeablerateinfo.total</a>
+			<b>roomDetail.rateInfo.total</b>
+		</field>
+		<field>
+			<a>hotellistresponse.hotellist.hotelsummary.roomratedetailslist.roomratedetails.rateinfos.rateinfo.chargeablerateinfo.surcharges.surcharge.type</a>
+			<b>roomDetail.rateInfo.surchargeType</b>
+		</field>
+		<field>
+			<a>hotellistresponse.hotellist.hotelsummary.roomratedetailslist.roomratedetails.rateinfos.rateinfo.nonrefundable</a>
+			<b>roomDetail.rateInfo.nonRefundable</b>
+		</field>
+		<field>
+			<a>hotellistresponse.hotellist.hotelsummary.roomratedetailslist.roomratedetails.rateinfos.rateinfo.ratetype</a>
+			<b>roomDetail.rateInfo.rateType</b>
+		</field>										
 	</mapping>
-
-	<mapping map-id="Room">
-		<class-a>com.cocha.hotels.model.matesearch.supplier.ean.HotelRoomResponseElement
-		</class-a>
-		<class-b>com.cocha.hotels.model.matesearch.canonical.Room</class-b>
-		<field>
-			<a>ratedescription</a>
-			<b>rateDescription</b>
-		</field>
-		<field>
-			<a>roomtypedescription</a>
-			<b>roomTypeDescription</b>
-		</field>
-		<field>
-			<a>suppliertype</a>
-			<b>supplierType</b>
-		</field>
-		<field>
-			<a>bedtypes.bedtype.description</a>
-			<b>bedTypesDescription</b>
-		</field>
-		<field>
-			<a>smokingpreferences</a>
-			<b>smokingPreferences</b>
-		</field>
-		<field>
-			<a>rateinfos.rateinfo.pricebreakdown</a>
-			<b>rateInfo.priceBreakDown</b>
-		</field>
-		<field>
-			<a>rateinfos.rateinfo.promo</a>
-			<b>rateInfo.promo</b>
-		</field>
-		<field>
-			<a>rateinfos.rateinfo.ratechange</a>
-			<b>rateInfo.rateChange</b>
-		</field>
-		<field>
-			<a>rateinfos.rateinfo.chargeablerateinfo.averagebaserate</a>
-			<b>rateInfo.averageBaseRate</b>
-		</field>
-		<field>
-			<a>rateinfos.rateinfo.chargeablerateinfo.averagerate</a>
-			<b>rateInfo.averageRate</b>
-		</field>
-		<field>
-			<a>rateinfos.rateinfo.chargeablerateinfo.commissionableusdtotal</a>
-			<b>rateInfo.commissionableUsdTotal</b>
-		</field>
-		<field>
-			<a>rateinfos.rateinfo.chargeablerateinfo.currencycode</a>
-			<b>rateInfo.currencyCode</b>
-		</field>
-		<field>
-			<a>rateinfos.rateinfo.chargeablerateinfo.maxNightlyRate</a>
-			<b>rateInfo.maxNightlyRate</b>
-		</field>
-		<field>
-			<a>rateinfos.rateinfo.chargeablerateinfo.nightlyratetotal</a>
-			<b>rateInfo.nightlyRateTotal</b>
-		</field>
-		<field>
-			<a>rateinfos.rateinfo.chargeablerateinfo.surchargetotal</a>
-			<b>rateInfo.surchargeTotal</b>
-		</field>
-		<field>
-			<a>rateinfos.rateinfo.chargeablerateinfo.total</a>
-			<b>rateInfo.total</b>
-		</field>
-		<field>
-			<a>rateinfos.rateinfo.nonrefundable</a>
-			<b>rateInfo.nonRefundable</b>
-		</field>
-		<field>
-			<a>rateinfos.rateinfo.ratetype</a>
-			<b>rateInfo.rateType</b>
-		</field>
-		<field>
-			<a>rateinfos.rateinfo.promodescription</a>
-			<b>rateInfo.promoDescription</b>
-		</field>
-		<field>
-			<a>rateinfos.rateinfo.promotype</a>
-			<b>rateInfo.promoType</b>
-		</field>
-		<field>
-			<a>rateinfos.rateinfo.guaranteerequired</a>
-			<b>rateInfo.guaranteeRequired</b>
-		</field>
-		<field>
-			<a>rateinfos.rateinfo.depositrequired</a>
-			<b>rateInfo.depositRequired</b>
-		</field>
-		<field>
-			<a>rateinfos.rateinfo.taxrate</a>
-			<b>rateInfo.taxRate</b>
-		</field>																								
-	</mapping>
-
-
 </mappings>

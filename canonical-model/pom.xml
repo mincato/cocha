@@ -39,7 +39,6 @@
 			<version>${jackson-version}</version>
 		</dependency>
 
-
 		<!-- Log -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
