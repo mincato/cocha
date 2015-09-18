@@ -10,7 +10,7 @@ import javax.ws.rs.core.MediaType;
 public interface EanClientService {
 
     @GET
-    @Path(value = "/avail")
+    @Path(value = "/list")
     @Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
     public String availability(@QueryParam("cid") String cid, @QueryParam("minorRev") String minorRev,
             @QueryParam("apiKey") String apiKey, @QueryParam("locale") String locale,
