@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 public class EanHotelConstructorImpl implements EanHotelConstructor {
 
     private Logger logger = Logger.getLogger(EanHotelConstructorImpl.class);
-    
+
     @Override
     public ArrayList addDescription(ArrayList hotels, ArrayList descriptions) {
         hotels.parallelStream().forEach(hotel -> {
@@ -23,7 +23,7 @@ public class EanHotelConstructorImpl implements EanHotelConstructor {
             if (optional.isPresent()) {
                 EanHotelDescription eanHotelDescription = optional.get();
                 eanSupplierHotel.setDescription(eanHotelDescription.getPropertyDescription());
-            }            
+            }
         });
         return hotels;
     }
