@@ -43,7 +43,7 @@ public class BookingETLRouteTest extends CamelSpringTestSupport {
                 "Booking Hotel.xml");
         template.requestBodyAndHeader("file:{{feeds.input.booking.description}}", createInputDescription(),
                 Exchange.FILE_NAME, "Booking Hotel Description.xml");
-        notify.matches(2, TimeUnit.SECONDS);
+        notify.matches(3, TimeUnit.SECONDS);
         assertEntityInDB();
     }
 

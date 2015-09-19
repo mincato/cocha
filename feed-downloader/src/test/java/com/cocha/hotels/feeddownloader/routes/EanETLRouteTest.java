@@ -42,7 +42,7 @@ public class EanETLRouteTest extends CamelSpringTestSupport {
         template.requestBodyAndHeader("file:{{feeds.input.ean}}", createInput(), Exchange.FILE_NAME, "Ean Hotel.csv");
         template.requestBodyAndHeader("file:{{feeds.input.ean.description}}", createInputDescription(),
                 Exchange.FILE_NAME, "Ean Hotel Description.csv");
-        notify.matches(2, TimeUnit.SECONDS);
+        notify.matches(3, TimeUnit.SECONDS);
         assertEntityInDB();
     }
 
