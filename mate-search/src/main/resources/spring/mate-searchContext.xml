@@ -80,7 +80,7 @@
    <cxfCamel:cxfEndpoint id="sabreSessionCreate" address="https://sws-crt.cert.sabre.com/"    		
     		wsdlURL="wsdl/SessionCreateRQ.wsdl" endpointName="s:SessionCreatePortType"
                  serviceName="s:SessionCreateRQService" serviceClass="https.webservices_sabre_com.websvc.SessionCreatePortType"
-                 xmlns:s="https://webservices.sabre.com/websvc">
+                 xmlns:s="https://webservices.sabre.com/websvc">             
     		<cxfCamel:properties>
             	<entry key="dataFormat" value="POJO"/>
         </cxfCamel:properties>
