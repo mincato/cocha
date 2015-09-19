@@ -17,6 +17,7 @@
 	<context:annotation-config />
 
 	<camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
+		<propertyPlaceholder id="properties" location="classpath:properties/camel.properties"/>
 		<contextScan />
 	</camelContext>
 
@@ -35,6 +36,10 @@
 	<bean id="jpa" class="org.apache.camel.component.jpa.JpaComponent">
 		<property name="entityManagerFactory" ref="entityManagerFactory" />
 		<property name="transactionManager" ref="transactionManager" />
+	</bean>
+	
+	<bean id="quartz2" class="org.apache.camel.component.quartz2.QuartzComponent">
+    	<property name="startDelayedSeconds" value="5"/>
 	</bean>
 
 	<bean id="entityManagerFactory"
