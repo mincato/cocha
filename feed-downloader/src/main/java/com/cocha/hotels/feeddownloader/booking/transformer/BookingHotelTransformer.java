@@ -44,6 +44,7 @@ public class BookingHotelTransformer {
             canonicalHotel.setStarRating(supplierHotel.getStars());
             canonicalHotel.setZipCode(supplierHotel.getZip());
             canonicalHotel.setSupplierCode(Hotel.BOOKING_SUPPLIER_CODE);
+            canonicalHotel.setDescription(supplierHotel.getDescription());
         }
         return canonicalHotel;
     }

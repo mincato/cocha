@@ -41,7 +41,9 @@ public class BookingETLRouteTest extends CamelSpringTestSupport {
                 .create();
         template.requestBodyAndHeader("file:{{feeds.input.booking}}", createInput(), Exchange.FILE_NAME,
                 "Booking Hotel.xml");
-        notify.matches(2, TimeUnit.SECONDS);
+        template.requestBodyAndHeader("file:{{feeds.input.booking.description}}", createInputDescription(),
+                Exchange.FILE_NAME, "Booking Hotel Description.xml");
+        notify.matches(3, TimeUnit.SECONDS);
         assertEntityInDB();
     }
 
@@ -64,7 +66,9 @@ public class BookingETLRouteTest extends CamelSpringTestSupport {
             }
         });
         template.requestBodyAndHeader("file:{{feeds.input.booking}}", createInput(), Exchange.FILE_NAME,
-                "Booking Hotel.csv");
+                "Booking Hotel.xml");
+        template.requestBodyAndHeader("file:{{feeds.input.booking.description}}", createInputDescription(),
+                Exchange.FILE_NAME, "Booking Hotel Description.xml");
         assertMockEndpointsSatisfied();
 
     }
@@ -145,6 +149,24 @@ public class BookingETLRouteTest extends CamelSpringTestSupport {
         return sb.toString();
     }
 
+    private Object createInputDescription() {
+        StringBuilder sb = new StringBuilder("<getHotelDescriptionTranslations>");
+        sb.append("<result>");
+        sb.append("<description>El Asterisk Hotel ocupa un edificio reformado del siglo XIX y ofrece alojamientos en �msterdam.</description>");
+        sb.append("<descriptiontype_id>6</descriptiontype_id>");
+        sb.append("<hotel_id>24446</hotel_id>");
+        sb.append("<languagecode>es</languagecode>");
+        sb.append("</result>");
+        sb.append("<result>");
+        sb.append("<description>El The Toren ofrece un alojamiento distinguido junto al famoso canal de Keizersgracht</description>");
+        sb.append("<descriptiontype_id>6</descriptiontype_id>");
+        sb.append("<hotel_id>10003</hotel_id>");
+        sb.append("<languagecode>es</languagecode>");
+        sb.append("</result>");
+        sb.append("</getHotelDescriptionTranslations>");
+        return sb.toString();
+    }
+
     @SuppressWarnings("unchecked")
     private void assertEntityInDB() throws Exception {
         JpaEndpoint endpoint = (JpaEndpoint) context
@@ -155,7 +177,11 @@ public class BookingETLRouteTest extends CamelSpringTestSupport {
                 .getResultList();
         assertEquals(2, list.size());
         assertEquals("10003", list.get(0).getId());
+        assertEquals("El The Toren ofrece un alojamiento distinguido junto al famoso canal de Keizersgracht",
+                list.get(0).getDescription());
         assertEquals("24446", list.get(1).getId());
+        assertEquals("El Asterisk Hotel ocupa un edificio reformado del siglo XIX y ofrece alojamientos en �msterdam.",
+                list.get(1).getDescription());
 
         em.close();
     }
