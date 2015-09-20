@@ -9,6 +9,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.cocha.hotels.hotelmapper.algorithm.HotelRulesProcessor;
 import com.cocha.hotels.hotelmapper.mocks.ArmadaHotelMock;
 import com.cocha.hotels.hotelmapper.mocks.BlackstoneHotelMock;
 import com.cocha.hotels.hotelmapper.mocks.ComfortInnHotelMock;
@@ -46,13 +47,15 @@ public class HotelMappingServiceTest {
                 taybridge, travelodge, wallstreet);
 
         mappingService = new HotelMappingService();
+        mappingService.setCanonicalIdGenerator(new CanonicalIdGenerator());
+        mappingService.setMatchingService(new HotelMatchingService(new HotelRulesProcessor()));
     }
 
     @Test
     public void mappingEANtoBookingHotels() {
         List<Hotel> eanHotels = buildHotelsFromEAN();
         List<Hotel> bookingHotels = buildHotelsFromBooking();
-        
+
         List<Hotel> hotels = new ArrayList<Hotel>(eanHotels);
         hotels.addAll(bookingHotels);
 
@@ -77,17 +80,18 @@ public class HotelMappingServiceTest {
         }
 
         /*
-         * If all hotels are mapped, there are N entries in the mapping per hotel
-         * where N is the number of suppliers
-         * It is assumed that all hotels in the list have the same supplier code.
+         * If all hotels are mapped, there are N entries in the mapping per
+         * hotel where N is the number of suppliers It is assumed that all
+         * hotels in the list have the same supplier code.
          */
         public void hasAllHotelsMapped(final List<Hotel> hotels) {
             hotels.forEach((hotel) -> {
                 Predicate<MappingEntry> byHotelSupplierId = (entry) -> entry.getSupplierId().equals(hotel.getId());
-                Predicate<MappingEntry> byHotelSupplierCode = (entry) -> entry.getSupplierCode().equals(hotel.getSupplierCode());
+                Predicate<MappingEntry> byHotelSupplierCode = (entry) -> entry.getSupplierCode().equals(
+                        hotel.getSupplierCode());
 
                 Long count = mapping.stream().filter(byHotelSupplierId.and(byHotelSupplierCode)).count();
-                
+
                 Assert.assertTrue(count.equals(1l));
             });
         }

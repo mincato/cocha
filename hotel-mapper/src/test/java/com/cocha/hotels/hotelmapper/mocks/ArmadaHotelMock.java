@@ -12,6 +12,7 @@ public class ArmadaHotelMock implements HotelMock {
     public Hotel buildWithEan() {
         Hotel hotel = new Hotel();
         hotel.setId("EAN-341264");
+        hotel.setSupplierCode("EAN");
         hotel.setName("Armada Hotel");
         hotel.setAddress("Keizersgracht 713-715");
         hotel.setZipCode("1017 DX");
@@ -35,6 +36,7 @@ public class ArmadaHotelMock implements HotelMock {
     public Hotel buildWithBooking() {
         Hotel hotel = new Hotel();
         hotel.setId("BKG-10007");
+        hotel.setSupplierCode("BKG");
         hotel.setName("Armada Hotel");
         hotel.setAddress("Keizersgracht 713 - 715");
         hotel.setZipCode("1017 DX");

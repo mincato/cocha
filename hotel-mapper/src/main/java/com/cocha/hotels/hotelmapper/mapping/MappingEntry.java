@@ -1,6 +1,5 @@
 package com.cocha.hotels.hotelmapper.mapping;
 
-
 public interface MappingEntry {
 
     String getCanonicalId();
@@ -8,7 +7,7 @@ public interface MappingEntry {
     String getSupplierId();
 
     String getSupplierCode();
-    
+
     Integer getConfidence();
 
 }

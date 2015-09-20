@@ -2,13 +2,17 @@ package com.cocha.hotels.hotelmapper.mapping;
 
 import java.util.List;
 
-
 public class HotelMappingResult implements MappingResult {
+
+    private List<MappingEntry> mappingEntries;
+
+    public HotelMappingResult(List<MappingEntry> mappingEntries) {
+        this.mappingEntries = mappingEntries;
+    }
 
     @Override
     public List<MappingEntry> getMappingEntries() {
-        // TODO Auto-generated method stub
-        return null;
+        return this.mappingEntries;
     }
 
 }

@@ -9,8 +9,11 @@ public class HotelMappingEntry implements MappingEntry {
     private String supplierCode;
     private Integer confidence;
 
-    public HotelMappingEntry(HotelMatch bestMatch) {
-        // TODO Auto-generated constructor stub
+    public HotelMappingEntry(String canonicalId, HotelMatch match) {
+        this.confidence = match.getConfidence();
+        this.supplierId = match.getHotelToCompare().getId();
+        this.supplierCode = match.getHotelToCompare().getSupplierCode();
+        this.canonicalId = canonicalId;
     }
 
     @Override

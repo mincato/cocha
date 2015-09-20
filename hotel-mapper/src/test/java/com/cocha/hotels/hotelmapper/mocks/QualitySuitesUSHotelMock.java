@@ -12,6 +12,7 @@ public class QualitySuitesUSHotelMock implements HotelMock {
     public Hotel buildWithEan() {
         Hotel hotel = new Hotel();
         hotel.setId("EAN-241051");
+        hotel.setSupplierCode("EAN");
         hotel.setName("Quality Inn & Suites");
         hotel.setAddress("5200 Lincoln Hwy");
         hotel.setZipCode("60443");
@@ -38,6 +39,7 @@ public class QualitySuitesUSHotelMock implements HotelMock {
         hotel.setCurrencyCode("USD");
         hotel.setStarRating("2.0");
         hotel.setId("BKG-24737");
+        hotel.setSupplierCode("BKG");
         hotel.setLatitude(41.507329951219745);
         hotel.setLongitude(-87.73694783449173);
         hotel.setName("Quality Inn and Suites Matteson");
