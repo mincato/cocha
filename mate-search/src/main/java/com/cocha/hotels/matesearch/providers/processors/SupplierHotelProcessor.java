@@ -1,19 +1,21 @@
 package com.cocha.hotels.matesearch.providers.processors;
 
 import org.apache.log4j.Logger;
+import org.springframework.stereotype.Component;
 
 import com.cocha.hotels.model.matesearch.canonical.Hotel;
 
+@Component
 public class SupplierHotelProcessor {
 
-    public final static Logger logger = Logger.getLogger(SupplierHotelProcessor.class);
+    private static final Logger log = Logger.getLogger(SupplierHotelProcessor.class);
 
     public Hotel processCustomer(Hotel hotel) {
 
-        logger.info("************************************");
-        logger.info("Hotel Processor");
-        logger.info("ID Hotel: " + hotel.getIdSupplier());
-        logger.info("************************************");
+        log.info("************************************");
+        log.info("Hotel Processor");
+        log.info("ID Hotel: " + hotel.getIdSupplier());
+        log.info("************************************");
         return hotel;
     }
 }

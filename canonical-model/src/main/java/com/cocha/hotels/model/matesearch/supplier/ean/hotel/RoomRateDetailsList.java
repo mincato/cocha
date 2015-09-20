@@ -6,7 +6,6 @@ package com.cocha.hotels.model.matesearch.supplier.ean.hotel;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class RoomRateDetailsList {
 
     @JsonProperty("RoomRateDetails")

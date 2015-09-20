@@ -22,6 +22,6 @@ public class EanClientRoute extends RouteBuilder {
         onException(Exception.class).handled(true).process(new FailureResponseProcessor());
         errorHandler(new NoErrorHandlerBuilder());
         from("direct:sendEanAvailability").errorHandler(loggingErrorHandler(log)).process(eanClientProcessor)
-                .wireTap("direct:logInfo").to("cxfrs:bean:eanClient");
+                .wireTap("direct:logInfo").to("cxfrs:bean:eanClient").to("direct:transfomerResposeEAN");
     }
 }
