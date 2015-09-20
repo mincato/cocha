@@ -1,11 +1,11 @@
-package com.cocha.hotels.feeddownloader.main;
+package com.cocha.hotels.hotelmapper.main;
 
 import org.apache.camel.spring.Main;
 
-public class ETLMain extends Main {
+public class MapperMain extends Main {
 
     public static void main(String[] args) throws Exception {
-        ETLMain main = new ETLMain();
+        MapperMain main = new MapperMain();
         main.setApplicationContextUri("classpath:/spring/camel-context.xml");
         main.enableHangupSupport();
         main.run();

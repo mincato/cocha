@@ -3,6 +3,9 @@ package com.cocha.hotels.feeddownloader.booking.model;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlTransient;
+
+import com.google.common.base.Objects;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 public class BookingSupplierHotel {
@@ -30,6 +33,9 @@ public class BookingSupplierHotel {
 
     @XmlElement(name = "zip")
     private String zip;
+
+    @XmlTransient
+    private String description;
 
     public String getName() {
         return name;
@@ -93,6 +99,29 @@ public class BookingSupplierHotel {
 
     public void setZip(String zip) {
         this.zip = zip;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(hotelId);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof BookingSupplierHotel) {
+            final BookingSupplierHotel other = (BookingSupplierHotel) obj;
+            return Objects.equal(hotelId, other.hotelId);
+        } else {
+            return false;
+        }
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
 }
