@@ -46,7 +46,7 @@
 			class="com.cocha.hotels.feeddownloader.ean.model.EanHotelDescription"
 			minOccurs="1" maxOccurs="unbounded">
 			<field name="hotelId" />
-			<field name="languageCode" ignore="true"/>
+			<field name="languageCode"/>
 			<field name="propertyDescription"/>
 		</record>
 	</stream>

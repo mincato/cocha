@@ -6,6 +6,8 @@ public class EanHotelDescription {
 
     private String propertyDescription;
 
+    private String languageCode;
+
     public String getHotelId() {
         return hotelId;
     }
@@ -20,5 +22,13 @@ public class EanHotelDescription {
 
     public void setPropertyDescription(String propertyDescription) {
         this.propertyDescription = propertyDescription;
+    }
+
+    public String getLanguageCode() {
+        return languageCode;
+    }
+
+    public void setLanguageCode(String languageCode) {
+        this.languageCode = languageCode;
     }
 }

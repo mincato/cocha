@@ -18,6 +18,7 @@ import org.springframework.context.support.AbstractXmlApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.cocha.hotels.model.content.hotel.Hotel;
+import com.cocha.hotels.model.content.hotel.HotelDescription;
 
 public class BookingETLRouteTest extends CamelSpringTestSupport {
 
@@ -35,22 +36,20 @@ public class BookingETLRouteTest extends CamelSpringTestSupport {
     }
 
     @Test
-    public void testBookingETLRoute() throws Exception {
+    public void testBookingETLRouteForHotels() throws Exception {
         NotifyBuilder notify = new NotifyBuilder(context)
                 .from("jpa:com.cocha.hotels.model.content.hotel.Hotel?entityType=java.util.ArrayList").whenCompleted(1)
                 .create();
-        template.requestBodyAndHeader("file:{{feeds.input.booking}}", createInput(), Exchange.FILE_NAME,
-                "Booking Hotel.xml");
-        template.requestBodyAndHeader("file:{{feeds.input.booking.description}}", createInputDescription(),
-                Exchange.FILE_NAME, "Booking Hotel Description.xml");
-        notify.matches(2, TimeUnit.SECONDS);
+        template.requestBodyAndHeader("file:{{feeds.input.booking}}", createInputHotels(), Exchange.FILE_NAME,
+                "hotels0.xml");
+        notify.matches(3, TimeUnit.SECONDS);
         assertEntityInDB();
     }
 
     @Test
-    public void testBookingETLRouteErrorException() throws Exception {
+    public void testBookingETLRouteForHotelsErrorException() throws Exception {
         getMockEndpoint("mock:error").expectedMessageCount(1);
-        RouteDefinition route = context.getRouteDefinition(BookingETLRoute.BOOKING_ETL_ROUTE);
+        RouteDefinition route = context.getRouteDefinition(BookingETLRoute.BOOKING_HOTEL_FEED_ROUTE);
         route.adviceWith(context, new RouteBuilder() {
 
             @Override
@@ -65,15 +64,48 @@ public class BookingETLRouteTest extends CamelSpringTestSupport {
                 onException(JDBCException.class).to("mock:error");
             }
         });
-        template.requestBodyAndHeader("file:{{feeds.input.booking}}", createInput(), Exchange.FILE_NAME,
-                "Booking Hotel.xml");
-        template.requestBodyAndHeader("file:{{feeds.input.booking.description}}", createInputDescription(),
-                Exchange.FILE_NAME, "Booking Hotel Description.xml");
+        template.requestBodyAndHeader("file:{{feeds.input.booking}}", createInputHotels(), Exchange.FILE_NAME,
+                "hotels0.xml");
         assertMockEndpointsSatisfied();
 
     }
 
-    private String createInput() {
+    @Test
+    public void testBookingETLRouteForDescriptions() throws Exception {
+        NotifyBuilder notify = new NotifyBuilder(context)
+                .from("jpa:com.cocha.hotels.model.content.hotel.HotelDescription?entityType=java.util.ArrayList")
+                .whenCompleted(1).create();
+        template.requestBodyAndHeader("file:{{feeds.input.booking}}", createInputDescription(), Exchange.FILE_NAME,
+                "descriptions0.xml");
+        notify.matches(3, TimeUnit.SECONDS);
+        assertDescriptionEntityInDB();
+    }
+
+    @Test
+    public void testBookingETLRouteForDescriptionsErrorException() throws Exception {
+        getMockEndpoint("mock:error").expectedMessageCount(1);
+        RouteDefinition route = context.getRouteDefinition(BookingETLRoute.BOOKING_DESCRIPTION_FEED_ROUTE);
+        route.adviceWith(context, new RouteBuilder() {
+
+            @Override
+            public void configure() throws Exception {
+                interceptSendToEndpoint("jpa://*").skipSendToOriginalEndpoint().process(new Processor() {
+
+                    @Override
+                    public void process(Exchange arg0) throws Exception {
+                        throw new JDBCException("Simulated error exception", null);
+                    }
+                });
+                onException(JDBCException.class).to("mock:error");
+            }
+        });
+        template.requestBodyAndHeader("file:{{feeds.input.booking}}", createInputDescription(), Exchange.FILE_NAME,
+                "descriptions0.xml");
+        assertMockEndpointsSatisfied();
+
+    }
+
+    private String createInputHotels() {
 
         StringBuilder sb = new StringBuilder("<getHotels>");
         sb.append("<result>");
@@ -152,7 +184,7 @@ public class BookingETLRouteTest extends CamelSpringTestSupport {
     private Object createInputDescription() {
         StringBuilder sb = new StringBuilder("<getHotelDescriptionTranslations>");
         sb.append("<result>");
-        sb.append("<description>El Asterisk Hotel ocupa un edificio reformado del siglo XIX y ofrece alojamientos en �msterdam.</description>");
+        sb.append("<description>El Asterisk Hotel ocupa un edificio reformado del siglo XIX</description>");
         sb.append("<descriptiontype_id>6</descriptiontype_id>");
         sb.append("<hotel_id>24446</hotel_id>");
         sb.append("<languagecode>es</languagecode>");
@@ -177,12 +209,29 @@ public class BookingETLRouteTest extends CamelSpringTestSupport {
                 .getResultList();
         assertEquals(2, list.size());
         assertEquals("10003", list.get(0).getId());
-        assertEquals("El The Toren ofrece un alojamiento distinguido junto al famoso canal de Keizersgracht",
-                list.get(0).getDescription());
         assertEquals("24446", list.get(1).getId());
-        assertEquals("El Asterisk Hotel ocupa un edificio reformado del siglo XIX y ofrece alojamientos en �msterdam.",
-                list.get(1).getDescription());
 
         em.close();
+    }
+
+    @SuppressWarnings("unchecked")
+    private void assertDescriptionEntityInDB() {
+        JpaEndpoint endpoint = (JpaEndpoint) context
+                .getEndpoint("jpa:com.cocha.hotels.model.content.hotel.HotelDescription?entityType=java.util.ArrayList");
+        EntityManager em = endpoint.getEntityManagerFactory().createEntityManager();
+
+        List<HotelDescription> list = em.createQuery(
+                "select x from com.cocha.hotels.model.content.hotel.HotelDescription x order by x.id").getResultList();
+        assertEquals(2, list.size());
+        assertEquals("10003", list.get(0).getHotelId());
+        assertEquals("El The Toren ofrece un alojamiento distinguido junto al famoso canal de Keizersgracht",
+                list.get(0).getDescription());
+        assertEquals("es", list.get(0).getLanguageCode());
+        assertEquals("24446", list.get(1).getHotelId());
+        assertEquals("El Asterisk Hotel ocupa un edificio reformado del siglo XIX", list.get(1).getDescription());
+        assertEquals("es", list.get(1).getLanguageCode());
+
+        em.close();
+
     }
 }
