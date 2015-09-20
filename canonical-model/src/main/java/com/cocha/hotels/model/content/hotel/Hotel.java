@@ -4,9 +4,14 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.Lob;
+import javax.persistence.IdClass;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
+import javax.persistence.OneToOne;
 
+@IdClass(HotelKey.class)
 @Entity(name = "Hotel")
 public class Hotel implements Serializable {
 
@@ -17,6 +22,10 @@ public class Hotel implements Serializable {
 
     @Id
     private String id;
+
+    @Id
+    @Column(length = 3)
+    private String supplierCode;
 
     private String name;
     private String address;
@@ -31,12 +40,10 @@ public class Hotel implements Serializable {
 
     private String currencyCode;
 
-    @Column(length = 3)
-    private String supplierCode;
-
-    @Lob
-    @Column
-    private String description;
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumns({ @JoinColumn(name = "id", referencedColumnName = "hotelId"),
+            @JoinColumn(name = "supplierCode", referencedColumnName = "supplierCode") })
+    private HotelDescription description;
 
     public String getId() {
         return id;
@@ -118,11 +125,11 @@ public class Hotel implements Serializable {
         return supplierCode;
     }
 
-    public String getDescription() {
+    public HotelDescription getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
+    public void setDescription(HotelDescription description) {
         this.description = description;
     }
 

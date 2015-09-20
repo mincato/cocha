@@ -1,3 +1,16 @@
-﻿EANHotelID|SequenceNumber|Name|Address1|Address2|City|StateProvince|PostalCode|Country|Latitude|Longitude|AirportCode|PropertyCategory|PropertyCurrency|StarRating|Confidence|SupplierType|Location|ChainCodeID|RegionID|HighRate|LowRate|CheckInTime|CheckOutTime
-351656|1|Iberostar Praia do Forte All Inclusive|Rodovia BA 099, Km 56|Praia do Forte|Mata de Sao Joao||48.280-000|BR|-12.55001|-37.98906|SSA|8|USD|4.0|52|ESR|Near Project Tamar Turtle Sanctuary|2227|601935|315.66|314.66|3 PM|Noon
-364638|2|Radisson Blu Hotel Maputo|Avenida Marginal 141||Maputo|||MZ|-25.97040|32.59883|MPM|1|MZN|5.0|52|ESR|Near Museum of Natural History|2431|6281736|455|260||
+EANHotelID|SequenceNumber|Name|Address1|Address2|City|StateProvince|PostalCode|Country|Latitude|Longitude|AirportCode|PropertyCategory|PropertyCurrency|StarRating|Confidence|SupplierType|Location|ChainCodeID|RegionID|HighRate|LowRate|CheckInTime|CheckOutTime
+212057|4646|Holiday Inn Express Hotel & Suites Manchester Airport|1298 S Porter St||Manchester|NH|03103|US|42.95886|-71.43591|MHT|1|USD|2.5|52|ESR|Near Mall of New Hampshire|288|2295|189|161|3 PM|noon
+241467|2657|Hilton Garden Inn Manchester Downtown|101 S Commercial St||Manchester|NH|03101|US|42.98436|-71.46683|BOS|1|USD|3.0|85|ESR|Near Palace Theater|2059|2295|229|199|2 PM|11 AM
+107480|5058|Radisson Hotel Manchester Downtown|700 Elm St||Manchester|NH|03101|US|42.98811|-71.46305|MHT|1|USD|3.5|65|ESR|Near Palace Theater|115|2295|209|175|3 PM|11 AM
+142906|7959|Super 8 Manchester Airport|2301 Brown Avenue|I-293 Ex 2  Brown Ave  Arpt Ex|Manchester|NH|03103-6813|US|42.94455|-71.45249|MHT|2|USD|2.0|52|ESR|Near Mall of New Hampshire|733|2295|129|89|2 PM|11 AM
+138089|8811|Courtyard by Marriott Manchester - Boston Regional Airport|700 Huse Rd||Manchester|NH|03103|US|42.94989|-71.43241|MHT|1|USD|3.0|70|ESR|Near Mall of New Hampshire|28|2295|349|189|3 PM|noon
+185955|9713|Best Western Plus Executive Court Inn & Conference Center|13500 S Willow St||Manchester|NH|03103|US|42.93498|-71.41335|MHT|1|USD|3.0|95|ESR|Near Mall of New Hampshire|17|2295|215.38|135.38|15:00:00|11:00:00
+212926|9811|Holiday Inn Manchester Airport|2280 Brown Ave||Manchester|NH|03103|US|42.94462|-71.45254|MHT|1|USD|3.0|52|ESR|Near Mall of New Hampshire|56|2295|229|152|3 PM|Noon
+124291|9830|Fairfield Inn By Marriott Manchester|860 S Porter St||Manchester|NH|03103|US|42.96159|-71.43391|MHT|1|USD|2.5|52|ESR|Near Mall of New Hampshire|44|2295|130|129|3 PM|noon
+126019|20193|Comfort Inn Airport|298 Queen City Ave||Manchester|NH|03102|US|42.97502|-71.47423|MHT|1|USD|2.5|57|ESR|Near Mall of New Hampshire|21|2295|152.1|107.1|3 PM|11 AM
+133410|24078|Econo Lodge|75 W Hancock Street||Manchester|NH|03102|US|42.97684|-71.47380|MHT|1|USD|2.0|100|ESR|Near Mall of New Hampshire|36|2295|80|65|3 PM|11 AM
+216378|24677|Homewood Suites by Hilton Manchester/Airport|1000 Perimeter Rd||Manchester|NH|03103|US|42.93454|-71.44658|MHT|1|USD|3.0|95|ESR|Near Mall of New Hampshire|54|2295|289|189|3 PM|noon
+203294|22780|SpringHill Suites Manchester-Boston Regional Airport|975 Perimeter Rd||Manchester|NH|03103|US|42.93533|-71.44676|MHT|1|USD|2.5|100|ESR|Near Mall of New Hampshire|702|2295|259|149|3 PM|noon
+130177|30152|La Quinta Inn & Suites Manchester|21 Front Street||Manchester|NH|03102|US|43.00393|-71.47357|MHT|1|USD|3.0|90|ESR|Near Verizon Wireless Arena|80|2295|129.01|118.99|3 PM|noon
+171918|39617|TownePlace Suites by Marriott Manchester|686 Huse Rd||Manchester|NH|03103|US|42.95035|-71.43174|MHT|1|USD|2.0|52|ESR|Near Mall of New Hampshire|653|2295|314|129|3 PM|noon
+138881|41803|Quality Inn Manchester Airport|55 John E. Devine Drive||Manchester|NH|03103|US|42.95799|-71.44486|MHT|1|USD|3.0|95|ESR|Near Mall of New Hampshire|111|2295|269|159|3 PM|11 AM
