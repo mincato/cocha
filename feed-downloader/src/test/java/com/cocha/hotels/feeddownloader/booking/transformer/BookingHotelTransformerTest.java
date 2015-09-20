@@ -5,12 +5,16 @@ import static org.junit.Assert.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 
 import com.cocha.hotels.feeddownloader.booking.model.BookingSupplierHotel;
+import com.cocha.hotels.feeddownloader.booking.model.GetHotelDescriptionTranslations;
 import com.cocha.hotels.feeddownloader.booking.model.GetHotelsResponse;
+import com.cocha.hotels.feeddownloader.booking.model.HotelDescriptionTranslation;
 import com.cocha.hotels.feeddownloader.booking.model.Location;
 import com.cocha.hotels.model.content.hotel.Hotel;
+import com.cocha.hotels.model.content.hotel.HotelDescription;
 
 public class BookingHotelTransformerTest {
 
@@ -24,6 +28,7 @@ public class BookingHotelTransformerTest {
     private static final String TEST_COUNTRY_CODE = "testCountryCode";
     private static final String TEST_ADDRESS = "testAddress";
     private static final String TEST_DESCRIPTION = "testDescription";
+    private static final String TEST_LANGUAGE_CODE = "es";
 
     @Test
     public void testTransformNullHotelsResponse() {
@@ -43,7 +48,7 @@ public class BookingHotelTransformerTest {
         List<Hotel> canonicalHotels = BookingHotelTransformer.toCanonicalHotels(createSupplierHotel());
 
         assertEquals(TEST_ADDRESS, canonicalHotels.get(0).getAddress());
-        assertEquals(TEST_COUNTRY_CODE, canonicalHotels.get(0).getCountryCode());
+        assertEquals(StringUtils.upperCase(TEST_COUNTRY_CODE), canonicalHotels.get(0).getCountryCode());
         assertEquals(TEST_CURRENCY_CODE, canonicalHotels.get(0).getCurrencyCode());
         assertEquals(TEST_HOTEL_ID, canonicalHotels.get(0).getId());
         assertEquals(TEST_LATITUDE, canonicalHotels.get(0).getLatitude());
@@ -51,7 +56,6 @@ public class BookingHotelTransformerTest {
         assertEquals(TEST_NAME, canonicalHotels.get(0).getName());
         assertEquals(TEST_STARS, canonicalHotels.get(0).getStarRating());
         assertEquals(TEST_ZIP, canonicalHotels.get(0).getZipCode());
-        assertEquals(TEST_DESCRIPTION, canonicalHotels.get(0).getDescription());
         assertEquals(Hotel.BOOKING_SUPPLIER_CODE, canonicalHotels.get(0).getSupplierCode());
 
     }
@@ -71,10 +75,47 @@ public class BookingHotelTransformerTest {
         supplierHotel.setName(TEST_NAME);
         supplierHotel.setStars(TEST_STARS);
         supplierHotel.setZip(TEST_ZIP);
-        supplierHotel.setDescription(TEST_DESCRIPTION);
         supplierHotelList.add(supplierHotel);
         hotelsResponse.setHotels(supplierHotelList);
         return hotelsResponse;
+    }
+
+    @Test
+    public void testTransformNullDescriptionsResponse() {
+        assertNull(BookingHotelTransformer.toCanonicalDescriptions(null));
+    }
+
+    @SuppressWarnings("unchecked")
+    @Test
+    public void testTransformNullSupplierDescriptionList() {
+        List<Hotel> canonicalHotels = BookingHotelTransformer
+                .toCanonicalDescriptions(new GetHotelDescriptionTranslations());
+        assertTrue(canonicalHotels.isEmpty());
+    }
+
+    @SuppressWarnings("unchecked")
+    @Test
+    public void testTransformNotNullSupplierDescriptionList() {
+        List<HotelDescription> canonicalDescriptions = BookingHotelTransformer
+                .toCanonicalDescriptions(createSupplierDescription());
+
+        assertEquals(TEST_HOTEL_ID, canonicalDescriptions.get(0).getHotelId());
+        assertEquals(TEST_DESCRIPTION, canonicalDescriptions.get(0).getDescription());
+        assertEquals(TEST_LANGUAGE_CODE, canonicalDescriptions.get(0).getLanguageCode());
+        assertEquals(Hotel.BOOKING_SUPPLIER_CODE, canonicalDescriptions.get(0).getSupplierCode());
+
+    }
+
+    private GetHotelDescriptionTranslations createSupplierDescription() {
+        GetHotelDescriptionTranslations hotelDescriptions = new GetHotelDescriptionTranslations();
+        List<HotelDescriptionTranslation> supplierDescriptionList = new ArrayList<HotelDescriptionTranslation>();
+        HotelDescriptionTranslation supplierDescription = new HotelDescriptionTranslation();
+        supplierDescription.setHotelId(TEST_HOTEL_ID);
+        supplierDescription.setDescription(TEST_DESCRIPTION);
+        supplierDescription.setLanguageCode(TEST_LANGUAGE_CODE);
+        supplierDescriptionList.add(supplierDescription);
+        hotelDescriptions.setDescriptionTranslations(supplierDescriptionList);
+        return hotelDescriptions;
     }
 
 }
