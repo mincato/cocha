@@ -15,6 +15,7 @@ public class SupplierHotelProcessor {
         log.info("************************************");
         log.info("Hotel Processor");
         log.info("ID Hotel: " + hotel.getIdSupplier());
+        log.info("Room Price: " + hotel.getRoomDetail().getRateInfo().getAverageRate());
         log.info("************************************");
         return hotel;
     }

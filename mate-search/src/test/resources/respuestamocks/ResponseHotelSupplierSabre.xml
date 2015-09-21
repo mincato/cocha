@@ -1,0 +1,86 @@
+<AvailabilityOptions>
+	<AvailabilityOption RPH="001">
+		<BasicPropertyInfo AreaID="000S" ChainCode="HI" Distance="M" GEO_ConfidenceLevel="7" HotelCityCode="SCL" HotelCode="0080052" HotelName="HOLIDAY INN SANTIAGO AIRPORT">
+			<Address>
+				<AddressLine>ARMANDO CORTINEZ NORTE 2150</AddressLine>
+				<AddressLine>SANTIAGO CL 0000</AddressLine>
+			</Address>
+			<ContactNumbers>
+				<ContactNumber Fax="56-2-7999930" Phone="56-2-7999900" />
+			</ContactNumbers>
+			<DirectConnect>
+				<Alt_Avail Ind="false" />
+				<DC_AvailParticipant Ind="true" />
+				<DC_SellParticipant Ind="true" />
+				<RatesExceedMax Ind="false" />
+				<UnAvail Ind="false" />
+			</DirectConnect>
+			<LocationDescription Code="A">
+				<Text>SANTIAGO CL</Text>
+			</LocationDescription>
+			<PropertyOptionInfo>
+				<ADA_Accessible Ind="false" />
+				<AdultsOnly Ind="false" />
+				<BeachFront Ind="false" />
+				<Breakfast Ind="false" />
+				<BusinessCenter Ind="true" />
+				<BusinessReady Ind="false" />
+				<Conventions Ind="false" />
+				<Dataport Ind="true" />
+				<Dining Ind="true" />
+				<DryClean Ind="false" />
+				<EcoCertified Ind="false" />
+				<ExecutiveFloors Ind="false" />
+				<FitnessCenter Ind="true" />
+				<FreeLocalCalls Ind="false" />
+				<FreeParking Ind="false" />
+				<FreeShuttle Ind="false" />
+				<FreeWifiInMeetingRooms Ind="false" />
+				<FreeWifiInPublicSpaces Ind="false" />
+				<FreeWifiInRooms Ind="false" />
+				<FullServiceSpa Ind="false" />
+				<GameFacilities Ind="false" />
+				<Golf Ind="true" />
+				<HighSpeedInternet Ind="true" />
+				<HypoallergenicRooms Ind="false" />
+				<IndoorPool Ind="true" />
+				<InRoomCoffeeTea Ind="false" />
+				<InRoomMiniBar Ind="false" />
+				<InRoomRefrigerator Ind="false" />
+				<InRoomSafe Ind="false" />
+				<InteriorDoorways Ind="false" />
+				<Jacuzzi Ind="false" />
+				<KidsFacilities Ind="false" />
+				<KitchenFacilities Ind="false" />
+				<MealService Ind="false" />
+				<MeetingFacilities Ind="true" />
+				<NoAdultTV Ind="false" />
+				<NonSmoking Ind="true" />
+				<OutdoorPool Ind="false" />
+				<Pets Ind="false" />
+				<Pool Ind="true" />
+				<PublicTransportationAdjacent Ind="false" />
+				<RateAssured Ind="false" />
+				<Recreation Ind="false" />
+				<RestrictedRoomAccess Ind="false" />
+				<RoomService Ind="true" />
+				<RoomService24Hours Ind="false" />
+				<RoomsWithBalcony Ind="false" />
+				<SkiInOutProperty Ind="false" />
+				<SmokeFree Ind="false" />
+				<SmokingRoomsAvail Ind="false" />
+				<Tennis Ind="true" />
+				<WaterPurificationSystem Ind="false" />
+				<Wheelchair Ind="true" />
+			</PropertyOptionInfo>
+			<RateRange CurrencyCode="CLP" Max="164076" Min="129498" />
+			<RoomRate RateLevelCode="RAC">
+				<AdditionalInfo>
+					<CancelPolicy Numeric="00" />
+				</AdditionalInfo>
+				<HotelRateCode>RAC</HotelRateCode>
+			</RoomRate>
+			<SpecialOffers Ind="false" />
+		</BasicPropertyInfo>
+	</AvailabilityOption>
+</AvailabilityOptions>
