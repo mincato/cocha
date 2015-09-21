@@ -1,8 +1,6 @@
-package com.cocha.hotels.hotelmapper.mapping;
+package com.cocha.hotels.model.content.mapping;
 
 import java.util.List;
-
-import com.cocha.hotels.hotelmapper.algorithm.HotelMatch;
 
 public class MultipleMatch {
 

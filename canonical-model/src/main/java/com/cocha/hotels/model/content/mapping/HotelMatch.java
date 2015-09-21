@@ -1,4 +1,4 @@
-package com.cocha.hotels.hotelmapper.algorithm;
+package com.cocha.hotels.model.content.mapping;
 
 import com.cocha.hotels.model.content.hotel.Hotel;
 

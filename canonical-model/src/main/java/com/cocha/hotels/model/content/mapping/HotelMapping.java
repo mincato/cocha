@@ -25,6 +25,16 @@ public class HotelMapping {
 
     private Integer confidence;
 
+    public HotelMapping(String canonicalId, HotelMatch match) {
+        this.confidence = match.getConfidence();
+        this.supplierHotelId = match.getHotelToCompare().getId();
+        this.supplierCode = match.getHotelToCompare().getSupplierCode();
+        this.hotelId = canonicalId;
+    }
+
+    public HotelMapping() {
+    }
+
     public String getHotelId() {
         return hotelId;
     }

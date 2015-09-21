@@ -23,6 +23,8 @@ import com.cocha.hotels.hotelmapper.mocks.TaybridgeSuitesHotelMock;
 import com.cocha.hotels.hotelmapper.mocks.TravelodgeFlagstaffHotelMock;
 import com.cocha.hotels.hotelmapper.mocks.WallStreet_HI_HotelMock;
 import com.cocha.hotels.model.content.hotel.Hotel;
+import com.cocha.hotels.model.content.mapping.HotelMapping;
+import com.cocha.hotels.model.content.mapping.MappingResult;
 
 public class HotelMappingServiceTest {
 
@@ -61,21 +63,21 @@ public class HotelMappingServiceTest {
 
         MappingResult mappingResult = mappingService.map(hotels);
 
-        List<MappingEntry> mapping = mappingResult.getMappingEntries();
+        List<HotelMapping> mapping = mappingResult.getMappingEntries();
 
         verify(mapping).hasAllHotelsMapped(eanHotels);
         verify(mapping).hasAllHotelsMapped(bookingHotels);
     }
 
-    private MappingResultVerifier verify(List<MappingEntry> mapping) {
+    private MappingResultVerifier verify(List<HotelMapping> mapping) {
         return new MappingResultVerifier(mapping);
     }
 
     class MappingResultVerifier {
 
-        private List<MappingEntry> mapping;
+        private List<HotelMapping> mapping;
 
-        public MappingResultVerifier(List<MappingEntry> mapping) {
+        public MappingResultVerifier(List<HotelMapping> mapping) {
             this.mapping = mapping;
         }
 
@@ -86,8 +88,8 @@ public class HotelMappingServiceTest {
          */
         public void hasAllHotelsMapped(final List<Hotel> hotels) {
             hotels.forEach((hotel) -> {
-                Predicate<MappingEntry> byHotelSupplierId = (entry) -> entry.getSupplierId().equals(hotel.getId());
-                Predicate<MappingEntry> byHotelSupplierCode = (entry) -> entry.getSupplierCode().equals(
+                Predicate<HotelMapping> byHotelSupplierId = (entry) -> entry.getSupplierHotelId().equals(hotel.getId());
+                Predicate<HotelMapping> byHotelSupplierCode = (entry) -> entry.getSupplierCode().equals(
                         hotel.getSupplierCode());
 
                 Long count = mapping.stream().filter(byHotelSupplierId.and(byHotelSupplierCode)).count();

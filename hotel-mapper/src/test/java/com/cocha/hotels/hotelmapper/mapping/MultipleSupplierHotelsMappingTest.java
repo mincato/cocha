@@ -7,7 +7,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.cocha.hotels.hotelmapper.algorithm.HotelMatch;
 import com.cocha.hotels.hotelmapper.algorithm.HotelRulesProcessor;
 import com.cocha.hotels.hotelmapper.mocks.ArmadaHotelMock;
 import com.cocha.hotels.hotelmapper.mocks.BlackstoneHotelMock;
@@ -22,6 +21,8 @@ import com.cocha.hotels.hotelmapper.mocks.TaybridgeSuitesHotelMock;
 import com.cocha.hotels.hotelmapper.mocks.TravelodgeFlagstaffHotelMock;
 import com.cocha.hotels.hotelmapper.mocks.WallStreet_HI_HotelMock;
 import com.cocha.hotels.model.content.hotel.Hotel;
+import com.cocha.hotels.model.content.mapping.HotelMatch;
+import com.cocha.hotels.model.content.mapping.MultipleMatch;
 
 public class MultipleSupplierHotelsMappingTest {
 

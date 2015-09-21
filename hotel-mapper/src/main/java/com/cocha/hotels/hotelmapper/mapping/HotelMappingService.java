@@ -7,8 +7,12 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import com.cocha.hotels.hotelmapper.algorithm.HotelMatch;
 import com.cocha.hotels.model.content.hotel.Hotel;
+import com.cocha.hotels.model.content.mapping.HotelMapping;
+import com.cocha.hotels.model.content.mapping.HotelMappingResult;
+import com.cocha.hotels.model.content.mapping.HotelMatch;
+import com.cocha.hotels.model.content.mapping.MappingResult;
+import com.cocha.hotels.model.content.mapping.MultipleMatch;
 
 public class HotelMappingService {
 
@@ -27,21 +31,21 @@ public class HotelMappingService {
         Stream<Hotel> eanHotels = hotels.stream().filter(byEANCode);
         List<Hotel> bookingHotels = hotels.stream().filter(byBookingCode).collect(Collectors.toList());
 
-        List<MappingEntry> mappingEntries = new ArrayList<MappingEntry>();
+        List<HotelMapping> mappingEntries = new ArrayList<HotelMapping>();
 
         eanHotels.forEach((hotel) -> {
             // inicializo el mapping para la referencia
-                MappingEntry referenceEntry = newEntryFor(hotel);
+                HotelMapping referenceEntry = newEntryFor(hotel);
                 mappingEntries.add(referenceEntry);
 
-                String canonicalId = referenceEntry.getCanonicalId();
+                String canonicalId = referenceEntry.getHotelId();
 
                 // mapeo el hotel contra los del otro supplier
                 MultipleMatch matches = matchingService.match(hotel, bookingHotels);
                 HotelMatch bestMatch = matches.findBestMatch();
                 // si el mejor mapeo es al menos una sospecha, lo agrego
                 if (bestMatch.getConfidence() >= MINIMUM_CONFIDENCE) {
-                    MappingEntry mappingEntry = new HotelMappingEntry(canonicalId, bestMatch);
+                    HotelMapping mappingEntry = new HotelMapping(canonicalId, bestMatch);
                     mappingEntries.add(mappingEntry);
                 }
             });
@@ -52,7 +56,7 @@ public class HotelMappingService {
 
                 if (!canonicalIdFound.isPresent()) {
                     // inicializo el mapping para el hotel
-                    MappingEntry newEntry = newEntryFor(hotel);
+                    HotelMapping newEntry = newEntryFor(hotel);
                     mappingEntries.add(newEntry);
                 }
             });
@@ -60,23 +64,19 @@ public class HotelMappingService {
         return new HotelMappingResult(mappingEntries);
     }
 
-    private Optional<String> findCanonicalId(Hotel hotel, List<MappingEntry> mappingEntries) {
-        Predicate<MappingEntry> bySupplierId = (entry) -> entry.getSupplierId().equals(hotel.getId());
-        Predicate<MappingEntry> bySupplierCode = (entry) -> entry.getSupplierCode().equals(hotel.getSupplierCode());
-        return mappingEntries.stream().filter(bySupplierId.and(bySupplierCode)).map(entry -> entry.getCanonicalId())
+    private Optional<String> findCanonicalId(Hotel hotel, List<HotelMapping> mappingEntries) {
+        Predicate<HotelMapping> bySupplierId = (entry) -> entry.getSupplierHotelId().equals(hotel.getId());
+        Predicate<HotelMapping> bySupplierCode = (entry) -> entry.getSupplierCode().equals(hotel.getSupplierCode());
+        return mappingEntries.stream().filter(bySupplierId.and(bySupplierCode)).map(entry -> entry.getHotelId())
                 .findFirst();
     }
 
-    private MappingEntry newEntryFor(Hotel hotel) {
+    private HotelMapping newEntryFor(Hotel hotel) {
         String canonicalId = canonicalIdGenerator.newId(hotel);
         HotelMatch match = new HotelMatch(hotel, hotel, INIT_CONFIDENCE);
-        MappingEntry mappingEntry = new HotelMappingEntry(canonicalId, match);
+        HotelMapping mappingEntry = new HotelMapping(canonicalId, match);
         return mappingEntry;
     }
-
-    // private List<Hotel> toList(Stream<Hotel> bookingHotels) {
-    // return bookingHotels.collect(Collectors.toList());
-    // }
 
     public HotelMatchingService getMatchingService() {
         return matchingService;

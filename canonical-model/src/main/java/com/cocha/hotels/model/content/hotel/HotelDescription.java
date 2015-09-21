@@ -12,6 +12,8 @@ import javax.persistence.Lob;
 @Entity(name = "HotelDescription")
 public class HotelDescription implements Serializable {
 
+    private static final long serialVersionUID = -8317182803808304109L;
+
     @Id
     private String id;
 
