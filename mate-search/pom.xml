@@ -86,6 +86,11 @@
 			<artifactId>camel-spring-ws</artifactId>
 			<version>${camel-version}</version>
 		</dependency>
+		<dependency>
+		  <groupId>org.apache.camel</groupId>
+		  <artifactId>camel-jaxb</artifactId>
+		  <version>${camel-version}</version>
+		</dependency>		
 		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -163,7 +168,6 @@
 				<activeByDefault>true</activeByDefault>
 			</activation>
 		</profile>
-
 		<profile>
 			<id>find-bugs</id>
 			<build>
@@ -198,7 +202,6 @@
 				</plugins>
 			</build>
 		</profile>
-
 		<profile>
 			<id>format</id>
 			<build>
