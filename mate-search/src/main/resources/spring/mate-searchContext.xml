@@ -89,6 +89,7 @@
 		<camel:routeBuilder ref="fileLogRoute" />
 		<camel:routeBuilder ref="bookingTransformerRoute" />
 		<camel:routeBuilder ref="eanTransformaerRoute" />
+		<camel:routeBuilder ref="sabreTransformerRoute" />
 	</camel:camelContext>	
 	
 	<!-- Dozer Mapping -->
@@ -97,6 +98,7 @@
 			<list>
 				<value>mapping/Booking-mapping.xml</value>
 				<value>mapping/EAN-mapping.xml</value>
+				<value>mapping/Sabre-mapping.xml</value>
 			</list>
 		</property>
 	</bean>

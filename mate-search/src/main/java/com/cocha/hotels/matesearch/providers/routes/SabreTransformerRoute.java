@@ -5,15 +5,15 @@ import org.apache.camel.model.dataformat.JsonLibrary;
 import org.springframework.stereotype.Component;
 
 import com.cocha.hotels.matesearch.providers.processors.SupplierHotelProcessor;
-import com.cocha.hotels.model.matesearch.supplier.booking.GetHotelAvailabilityBooking;
+import com.cocha.hotels.model.matesearch.supplier.sabre.AvailabilityOptions;
 
 @Component
-public class BookingTransformerRoute extends RouteBuilder {
+public class SabreTransformerRoute extends RouteBuilder {
 
     @Override
     public void configure() throws Exception {
 
-        from("direct:transformerResposeBooking").convertBodyTo(GetHotelAvailabilityBooking.class)
+        from("direct:transformerResposeSabre").convertBodyTo(AvailabilityOptions.class)
                 .bean(new SupplierHotelProcessor()).marshal().json(JsonLibrary.Jackson);
 
     }

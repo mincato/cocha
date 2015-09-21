@@ -22,7 +22,7 @@ public class BookingClientRoute extends RouteBuilder {
         onException(Exception.class).handled(true).process(new FailureResponseProcessor());
         errorHandler(new NoErrorHandlerBuilder());
         from("direct:sendBookingAvailability").errorHandler(loggingErrorHandler(log)).process(bookingProcessor)
-                .wireTap("direct:logInfo").to("cxfrs:bean:bookingClient").to("direct:transformerRespose");
+                .wireTap("direct:logInfo").to("cxfrs:bean:bookingClient").to("direct:transformerResposeBooking");
 
     }
 }
