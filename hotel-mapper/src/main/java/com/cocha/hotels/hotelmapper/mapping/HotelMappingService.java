@@ -27,6 +27,9 @@ public class HotelMappingService {
     private HotelMatchingService matchingService;
     
     @Autowired
+    private ProximityFilterService proximityFilterService;
+    
+    @Autowired
     private CanonicalIdGenerator canonicalIdGenerator;
 
     public List<HotelMapping> map(List<Hotel> hotels) {
@@ -45,8 +48,10 @@ public class HotelMappingService {
 
                 String canonicalId = referenceEntry.getHotelId();
 
+                List<Hotel> hotelsToProcess = proximityFilterService.filter(hotel, bookingHotels);
+                
                 // mapeo el hotel contra los del otro supplier
-                MultipleMatch matches = matchingService.match(hotel, bookingHotels);
+                MultipleMatch matches = matchingService.match(hotel, hotelsToProcess);
                 HotelMatch bestMatch = matches.findBestMatch();
                 // si el mejor mapeo es al menos una sospecha, lo agrego
                 if (bestMatch.getConfidence() >= MINIMUM_CONFIDENCE) {
@@ -97,5 +102,13 @@ public class HotelMappingService {
 
     public void setCanonicalIdGenerator(CanonicalIdGenerator canonicalIdGenerator) {
         this.canonicalIdGenerator = canonicalIdGenerator;
+    }
+    
+    public ProximityFilterService getProximityFilterService() {
+        return proximityFilterService;
+    }
+    
+    public void setProximityFilterService(ProximityFilterService proximityFilterService) {
+        this.proximityFilterService = proximityFilterService;
     }
 }

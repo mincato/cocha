@@ -50,6 +50,7 @@ public class HotelMappingServiceTest {
         mappingService = new HotelMappingService();
         mappingService.setCanonicalIdGenerator(new CanonicalIdGenerator());
         mappingService.setMatchingService(new HotelMatchingService(new HotelRulesProcessor()));
+        mappingService.setProximityFilterService(new ProximityFilterService());
     }
 
     @Test
