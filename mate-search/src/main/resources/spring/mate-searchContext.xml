@@ -58,6 +58,7 @@
 	address="${mate.provider.booking.address.xml}"	
 	serviceClass="com.cocha.hotels.matesearch.providers.services.BookingClientService"
 	loggingFeatureEnabled="true" />
+
 	
 	
 	<http-conf:conduit 	name="*distribution-xml.booking*.*"	
@@ -77,7 +78,7 @@
        </cxfCamel:serviceBeans>
    </cxfCamel:rsServer>
 		
-	<camel:camelContext trace="true">		
+	<camel:camelContext id="camel" xmlns="http://camel.apache.org/schema/spring" trace="true">		
 		<camel:routeBuilder ref="eanRoute" />
 		<camel:routeBuilder ref="eanClientRoute" />
 		<camel:routeBuilder ref="bookingRoute" />
@@ -86,5 +87,27 @@
 		<camel:routeBuilder ref="sabreClientRoute" />
 		<camel:routeBuilder ref="basicBeanRoute" />
 		<camel:routeBuilder ref="fileLogRoute" />
+		<camel:routeBuilder ref="bookingTransformerRoute" />
+		<camel:routeBuilder ref="eanTransformaerRoute" />
+		<camel:routeBuilder ref="sabreTransformerRoute" />
 	</camel:camelContext>	
+	
+	<!-- Dozer Mapping -->
+	<bean id="mapper" class="org.dozer.DozerBeanMapper">
+		<property name="mappingFiles">
+			<list>
+				<value>mapping/Booking-mapping.xml</value>
+				<value>mapping/EAN-mapping.xml</value>
+				<value>mapping/Sabre-mapping.xml</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- Dozer Configuration -->
+	<bean id="dozerConverterLoader" class="org.apache.camel.converter.dozer.DozerTypeConverterLoader">
+		<constructor-arg index="0" ref="camel" />
+		<constructor-arg index="1" ref="mapper" />
+	</bean>
+	
+	
 </beans>
