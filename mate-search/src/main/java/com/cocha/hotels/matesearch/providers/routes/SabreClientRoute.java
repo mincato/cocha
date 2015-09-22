@@ -15,6 +15,6 @@ public class SabreClientRoute extends RouteBuilder {
     public void configure() throws Exception {
         from("direct:sendSabreAvailability").process(new SabreClientProcessor()).wireTap("direct:logInfo")
                 .to("spring-ws:https://sws-crt.cert.sabre.com/OTA_HotelAvailRQ?soapAction=OTA_HotelAvailLLSRQ")
-                .log("Testing message");
+                .log("Testing message").to("direct:transformerResposeSabre");
     }
 }

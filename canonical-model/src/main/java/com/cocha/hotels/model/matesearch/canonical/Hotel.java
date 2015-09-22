@@ -1,62 +1,78 @@
 package com.cocha.hotels.model.matesearch.canonical;
 
-import java.util.List;
-
 public class Hotel {
 
-    private Long idMapper;
-    private Long idEAN;
-    private String hotelName;
-    private String arrivalDate;
-    private String departureDate;
-    private List<Room> rooms;
+    private Long id;
+    private Long idSupplier;
+    private String name;
+    private String addres;
+    private String city;
+    private String stateProvince;
+    private String country;
+    private Room roomDetail;
 
-    public Long getIdMapper() {
-        return idMapper;
+    public Room getRoomDetail() {
+        return roomDetail;
     }
 
-    public void setIdMapper(Long idMapper) {
-        this.idMapper = idMapper;
+    public void setRoomDetail(Room roomDetail) {
+        this.roomDetail = roomDetail;
     }
 
-    public String getHotelName() {
-        return hotelName;
+    public Long getId() {
+        return id;
     }
 
-    public void setHotelName(String hotelName) {
-        this.hotelName = hotelName;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public String getArrivalDate() {
-        return arrivalDate;
+    public Long getIdSupplier() {
+        return idSupplier;
     }
 
-    public void setArrivalDate(String arrivalDate) {
-        this.arrivalDate = arrivalDate;
+    public void setIdSupplier(Long idSupplier) {
+        this.idSupplier = idSupplier;
     }
 
-    public String getDepartureDate() {
-        return departureDate;
+    public String getName() {
+        return name;
     }
 
-    public void setDepartureDate(String departureDate) {
-        this.departureDate = departureDate;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public List<Room> getRooms() {
-        return rooms;
+    public String getAddres() {
+        return addres;
     }
 
-    public void setRooms(List<Room> rooms) {
-        this.rooms = rooms;
+    public void setAddres(String addres) {
+        this.addres = addres;
     }
 
-    public Long getIdEAN() {
-        return idEAN;
+    public String getCity() {
+        return city;
     }
 
-    public void setIdEAN(Long idEAN) {
-        this.idEAN = idEAN;
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getStateProvince() {
+        return stateProvince;
+    }
+
+    public void setStateProvince(String stateProvince) {
+        this.stateProvince = stateProvince;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
     }
 
 }
