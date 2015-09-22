@@ -1,8 +1,6 @@
-package com.cocha.hotels.hotelmapper.mapping;
+package com.cocha.hotels.model.content.mapping;
 
 import java.util.List;
-
-import com.cocha.hotels.hotelmapper.algorithm.HotelMatch;
 
 public class MultipleMatch {
 
@@ -14,6 +12,10 @@ public class MultipleMatch {
 
     public List<HotelMatch> getHotelMatches() {
         return this.matches;
+    }
+
+    public HotelMatch findBestMatch() {
+        return this.matches.stream().max((h1, h2) -> h1.getConfidence().compareTo(h2.getConfidence())).get();
     }
 
 }

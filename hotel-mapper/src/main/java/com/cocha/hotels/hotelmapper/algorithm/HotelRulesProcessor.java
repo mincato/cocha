@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import com.cocha.hotels.model.content.hotel.Hotel;
+import com.cocha.hotels.model.content.mapping.HotelMatch;
 
 public class HotelRulesProcessor {
 

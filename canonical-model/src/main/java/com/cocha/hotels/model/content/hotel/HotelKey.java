@@ -6,6 +6,8 @@ import com.google.common.base.Objects;
 
 public class HotelKey implements Serializable {
 
+    private static final long serialVersionUID = 1583125273900651441L;
+
     private String id;
 
     private String supplierCode;

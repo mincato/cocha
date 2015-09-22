@@ -12,6 +12,7 @@ public class LeamingtonHotelMock implements HotelMock {
     public Hotel buildWithEan() {
         Hotel hotel = new Hotel();
         hotel.setId("EAN-138289");
+        hotel.setSupplierCode("EAN");
         hotel.setName("Best Western Plus Leamington Hotel & Conference Centre");
         hotel.setAddress("566 Bevel Line Rd");
         hotel.setZipCode("N8H3V4");
@@ -34,6 +35,7 @@ public class LeamingtonHotelMock implements HotelMock {
     public Hotel buildWithBooking() {
         Hotel hotel = new Hotel();
         hotel.setId("BKG-24731");
+        hotel.setSupplierCode("BKG");
         hotel.setName("Best Western Plus Leamington Hotel &amp; Conference Centre");
         hotel.setAddress("566 Bevel Line Road ");
         hotel.setZipCode("N8H 3V4");

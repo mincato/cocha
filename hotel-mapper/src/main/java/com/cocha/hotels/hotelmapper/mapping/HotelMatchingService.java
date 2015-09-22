@@ -3,9 +3,10 @@ package com.cocha.hotels.hotelmapper.mapping;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.cocha.hotels.hotelmapper.algorithm.HotelMatch;
 import com.cocha.hotels.hotelmapper.algorithm.HotelRulesProcessor;
 import com.cocha.hotels.model.content.hotel.Hotel;
+import com.cocha.hotels.model.content.mapping.HotelMatch;
+import com.cocha.hotels.model.content.mapping.MultipleMatch;
 
 public class HotelMatchingService {
 

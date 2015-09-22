@@ -12,6 +12,7 @@ public class ComfortInnHotelMock implements HotelMock {
     public Hotel buildWithEan() {
         Hotel hotel = new Hotel();
         hotel.setId("EAN-164305");
+        hotel.setSupplierCode("EAN");
         hotel.setName("Comfort Inn Conference Center Midtown");
         hotel.setAddress("3200 W Broad St");
         hotel.setZipCode("23230");
@@ -34,6 +35,7 @@ public class ComfortInnHotelMock implements HotelMock {
     public Hotel buildWithBooking() {
         Hotel hotel = new Hotel();
         hotel.setId("BKG-24732");
+        hotel.setSupplierCode("BKG");
         hotel.setName("Comfort Inn Conference Center Midtown");
         hotel.setAddress("3200 West Broad Street");
         hotel.setZipCode("23230");
