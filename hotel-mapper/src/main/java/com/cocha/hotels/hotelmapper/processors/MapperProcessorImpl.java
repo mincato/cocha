@@ -19,14 +19,12 @@ public class MapperProcessorImpl implements MapperProcessor {
     private HotelMappingService mappingService;
     
     public List<HotelMapping> process(List<Hotel> hotels) {
-        logger.info("size:" + hotels.size());
-        for (Hotel hotel : hotels) {
-            logger.info(hotel.getId());
-
-        }
+        
+        logger.info("Started mapping hotels. Hotels size: " + hotels.size());
         
         List<HotelMapping> mapping = mappingService.map(hotels);
-        logger.info("MAPPING SIZE:" + mapping.size());
+        
+        logger.info("Finished mapping hotels. Mapping size: " + mapping.size());
         
         return mapping;
     }
