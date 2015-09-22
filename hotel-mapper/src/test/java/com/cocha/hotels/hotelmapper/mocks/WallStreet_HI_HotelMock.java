@@ -12,6 +12,7 @@ public class WallStreet_HI_HotelMock implements HotelMock {
     public Hotel buildWithEan() {
         Hotel hotel = new Hotel();
         hotel.setId("EAN-272124");
+        hotel.setSupplierCode("EAN");
         hotel.setName("Holiday Inn New York City - Wall Street");
         hotel.setAddress("51 Nassau St.");
         hotel.setZipCode("10038");
@@ -34,6 +35,7 @@ public class WallStreet_HI_HotelMock implements HotelMock {
     public Hotel buildWithBooking() {
         Hotel hotel = new Hotel();
         hotel.setId("BKG-24727");
+        hotel.setSupplierCode("BKG");
         hotel.setName("Holiday Inn Wall Street");
         hotel.setAddress("51 Nassau Street");
         hotel.setZipCode("10038");
