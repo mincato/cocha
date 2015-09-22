@@ -17,7 +17,11 @@ public class HotelContentRoute extends SpringRouteBuilder {
     @Override
     public void configure() throws Exception {
 
-        from("jpaContent:" + HotelMapping.class.getName() + "?consumer.namedQuery=getMappingByConfidence&consumeDelete=false&transactionManager=#contentTransactionManager").routeId("HotelContentRoute").errorHandler(loggingErrorHandler(log))
+        from(
+                "jpaContent:"
+                        + HotelMapping.class.getName()
+                        + "?consumer.namedQuery=getMappingByConfidence&consumeDelete=false&transactionManager=#contentTransactionManager")
+                .routeId("HotelContentRoute").errorHandler(loggingErrorHandler(log))
                 .bean(hotelContentProcessor, "process")
                 .to("jpaContent:" + Hotel.class.getName() + "?transactionManager=#contentTransactionManager");
 

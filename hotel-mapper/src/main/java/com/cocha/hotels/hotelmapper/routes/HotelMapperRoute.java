@@ -20,10 +20,17 @@ public class HotelMapperRoute extends SpringRouteBuilder {
     @Override
     public void configure() throws Exception {
 
-        from("timer://{{mapper.quartz.trigger}}").errorHandler(loggingErrorHandler(log))
-                .to("sql:select distinct(countryCode) from Hotel?dataSource=#feedDataSource").split(body()).transform()
-                .simple("${body[countryCode]}").bean(hotelFeedRepository, "findByCountryCode").bean(mapperProcessor)
-                .to("jpaContent:" + HotelMapping.class.getName() + "?entityType=java.util.ArrayList&transactionManager=#contentTransactionManager&usePersist=true");
+        from("timer://{{mapper.quartz.trigger}}")
+                .errorHandler(loggingErrorHandler(log))
+                .to("sql:select distinct(countryCode) from Hotel?dataSource=#feedDataSource")
+                .split(body())
+                .transform()
+                .simple("${body[countryCode]}")
+                .bean(hotelFeedRepository, "findByCountryCode")
+                .bean(mapperProcessor)
+                .to("jpaContent:"
+                        + HotelMapping.class.getName()
+                        + "?entityType=java.util.ArrayList&transactionManager=#contentTransactionManager&usePersist=true");
 
     }
 

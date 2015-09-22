@@ -9,22 +9,22 @@ public class HotelKey implements Serializable {
     private String id;
 
     private String supplierCode;
-    
+
     public String getId() {
-		return id;
-	}
-    
+        return id;
+    }
+
     public String getSupplierCode() {
-		return supplierCode;
-	}
-    
+        return supplierCode;
+    }
+
     public void setSupplierCode(String supplierCode) {
-		this.supplierCode = supplierCode;
-	}
-    
+        this.supplierCode = supplierCode;
+    }
+
     public void setId(String id) {
-		this.id = id;
-	}
+        this.id = id;
+    }
 
     @Override
     public int hashCode() {

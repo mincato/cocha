@@ -5,6 +5,6 @@ import com.cocha.hotels.model.content.mapping.HotelMapping;
 
 public interface HotelContentProcessor {
 
-	public Hotel process(HotelMapping hotelMapping);
-	
+    public Hotel process(HotelMapping hotelMapping);
+
 }
