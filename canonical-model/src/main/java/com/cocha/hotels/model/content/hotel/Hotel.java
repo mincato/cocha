@@ -2,6 +2,7 @@ package com.cocha.hotels.model.content.hotel;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -40,7 +41,7 @@ public class Hotel implements Serializable {
 
     private String currencyCode;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumns({ @JoinColumn(name = "id", referencedColumnName = "hotelId"),
             @JoinColumn(name = "supplierCode", referencedColumnName = "supplierCode") })
     private HotelDescription description;

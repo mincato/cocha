@@ -24,21 +24,21 @@ public class MapperProcessorImpl implements MapperProcessor {
         HotelMapping hotelMapping = new HotelMapping();
         hotelMapping.setHotelId("hotelId1");
         hotelMapping.setSupplierCode("EAN");
-        hotelMapping.setSupplierHotelId("eanHotelId1");
+        hotelMapping.setSupplierHotelId("107480");
         hotelMapping.setConfidence(100);
         hotelMappings.add(hotelMapping);
 
         hotelMapping = new HotelMapping();
         hotelMapping.setHotelId("hotelId1");
         hotelMapping.setSupplierCode("BKG");
-        hotelMapping.setSupplierHotelId("bkgHotelId1");
+        hotelMapping.setSupplierHotelId("184976");
         hotelMapping.setConfidence(70);
         hotelMappings.add(hotelMapping);
 
         hotelMapping = new HotelMapping();
         hotelMapping.setHotelId("hotelId2");
         hotelMapping.setSupplierCode("BKG");
-        hotelMapping.setSupplierHotelId("bkgHotelId2");
+        hotelMapping.setSupplierHotelId("333404");
         hotelMapping.setConfidence(100);
         hotelMappings.add(hotelMapping);
 
