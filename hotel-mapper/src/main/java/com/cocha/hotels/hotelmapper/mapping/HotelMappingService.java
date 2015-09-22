@@ -7,13 +7,15 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.cocha.hotels.model.content.hotel.Hotel;
 import com.cocha.hotels.model.content.mapping.HotelMapping;
-import com.cocha.hotels.model.content.mapping.HotelMappingResult;
 import com.cocha.hotels.model.content.mapping.HotelMatch;
-import com.cocha.hotels.model.content.mapping.MappingResult;
 import com.cocha.hotels.model.content.mapping.MultipleMatch;
 
+@Service
 public class HotelMappingService {
 
     private static final Integer INIT_CONFIDENCE = 100;
@@ -21,10 +23,13 @@ public class HotelMappingService {
     private String eanCode = "EAN";
     private String bookingCode = "BKG";
 
+    @Autowired
     private HotelMatchingService matchingService;
+    
+    @Autowired
     private CanonicalIdGenerator canonicalIdGenerator;
 
-    public MappingResult map(List<Hotel> hotels) {
+    public List<HotelMapping> map(List<Hotel> hotels) {
         // separo los hoteles de cada supplier
         Predicate<Hotel> byEANCode = (hotel) -> hotel.getSupplierCode().equals(eanCode);
         Predicate<Hotel> byBookingCode = (hotel) -> hotel.getSupplierCode().equals(bookingCode);
@@ -61,7 +66,7 @@ public class HotelMappingService {
                 }
             });
 
-        return new HotelMappingResult(mappingEntries);
+        return mappingEntries;
     }
 
     private Optional<String> findCanonicalId(Hotel hotel, List<HotelMapping> mappingEntries) {

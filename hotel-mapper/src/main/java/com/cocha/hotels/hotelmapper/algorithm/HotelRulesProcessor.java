@@ -4,9 +4,12 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Logger;
 
+import org.springframework.stereotype.Service;
+
 import com.cocha.hotels.model.content.hotel.Hotel;
 import com.cocha.hotels.model.content.mapping.HotelMatch;
 
+@Service
 public class HotelRulesProcessor {
 
     private static Logger log = Logger.getLogger(HotelRulesProcessor.class.getName());

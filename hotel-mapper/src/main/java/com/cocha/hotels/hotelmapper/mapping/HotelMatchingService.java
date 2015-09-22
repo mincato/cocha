@@ -3,13 +3,18 @@ package com.cocha.hotels.hotelmapper.mapping;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.cocha.hotels.hotelmapper.algorithm.HotelRulesProcessor;
 import com.cocha.hotels.model.content.hotel.Hotel;
 import com.cocha.hotels.model.content.mapping.HotelMatch;
 import com.cocha.hotels.model.content.mapping.MultipleMatch;
 
+@Service
 public class HotelMatchingService {
 
+    @Autowired
     private HotelRulesProcessor rulesProcessor;
 
     public HotelMatchingService() {

@@ -24,7 +24,6 @@ import com.cocha.hotels.hotelmapper.mocks.TravelodgeFlagstaffHotelMock;
 import com.cocha.hotels.hotelmapper.mocks.WallStreet_HI_HotelMock;
 import com.cocha.hotels.model.content.hotel.Hotel;
 import com.cocha.hotels.model.content.mapping.HotelMapping;
-import com.cocha.hotels.model.content.mapping.MappingResult;
 
 public class HotelMappingServiceTest {
 
@@ -54,21 +53,34 @@ public class HotelMappingServiceTest {
     }
 
     @Test
-    public void mappingEANtoBookingHotels() {
+    public void mappingEANandBookingHotels() {
         List<Hotel> eanHotels = buildHotelsFromEAN();
         List<Hotel> bookingHotels = buildHotelsFromBooking();
 
         List<Hotel> hotels = new ArrayList<Hotel>(eanHotels);
         hotels.addAll(bookingHotels);
 
-        MappingResult mappingResult = mappingService.map(hotels);
-
-        List<HotelMapping> mapping = mappingResult.getMappingEntries();
+        List<HotelMapping> mapping = mappingService.map(hotels);
 
         verify(mapping).hasAllHotelsMapped(eanHotels);
         verify(mapping).hasAllHotelsMapped(bookingHotels);
     }
 
+    @Test
+    public void mappingDifferentHotels(){
+        HotelMock builder = new TravelodgeFlagstaffHotelMock();
+        List<Hotel> eanHotels = Arrays.asList(builder.buildWithEan());
+        List<Hotel> bookingHotels = Arrays.asList(builder.buildWithBooking());
+
+        List<Hotel> hotels = new ArrayList<Hotel>(eanHotels);
+        hotels.addAll(bookingHotels);
+
+        List<HotelMapping> mapping = mappingService.map(hotels);
+
+        verify(mapping).hasNoHotelsMapped(eanHotels);
+        verify(mapping).hasNoHotelsMapped(bookingHotels);
+    }
+    
     private MappingResultVerifier verify(List<HotelMapping> mapping) {
         return new MappingResultVerifier(mapping);
     }
@@ -82,9 +94,27 @@ public class HotelMappingServiceTest {
         }
 
         /*
+         * If no hotels are mapped, there is one and only one entry per
+         * hotel, and there is no duplicate hotelId (canonical), since
+         * no hotel share the canonical id it was given.
+         */
+        public void hasNoHotelsMapped(List<Hotel> hotels) {
+            hotels.forEach((hotel) -> {
+                Predicate<HotelMapping> byHotelSupplierId = (entry) -> entry.getSupplierHotelId().equals(hotel.getId());
+                Predicate<HotelMapping> byHotelSupplierCode = (entry) -> entry.getSupplierCode().equals(
+                        hotel.getSupplierCode());
+                Long count = mapping.stream()
+                        .filter(byHotelSupplierId.and(byHotelSupplierCode))
+                        .map(filteredHotel -> filteredHotel.getHotelId())
+                        .count();
+                Assert.assertTrue(count.equals(1l));
+            });
+        }
+
+        /*
          * If all hotels are mapped, there are N entries in the mapping per
-         * hotel where N is the number of suppliers It is assumed that all
-         * hotels in the list have the same supplier code.
+         * hotel where N is the number of suppliers.
+         * It is assumed that all hotels in the list have the same supplier code.
          */
         public void hasAllHotelsMapped(final List<Hotel> hotels) {
             hotels.forEach((hotel) -> {
