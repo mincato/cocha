@@ -12,6 +12,7 @@ public class QualitySuitesHotelMock implements HotelMock {
     public Hotel buildWithEan() {
         Hotel hotel = new Hotel();
         hotel.setId("EAN-125347");
+        hotel.setSupplierCode("EAN");
         hotel.setName("Quality Suites");
         hotel.setAddress("1120 Dearness Dr");
         hotel.setZipCode("N6E1N9");
@@ -38,6 +39,7 @@ public class QualitySuitesHotelMock implements HotelMock {
         hotel.setCurrencyCode("CAD");
         hotel.setStarRating("2.0");
         hotel.setId("BKG-24734");
+        hotel.setSupplierCode("BKG");
         hotel.setLatitude(42.93149870957457);
         hotel.setLongitude(-81.21950715780252);
         hotel.setName("Quality Suites London");

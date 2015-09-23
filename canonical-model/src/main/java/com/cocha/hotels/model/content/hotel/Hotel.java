@@ -2,6 +2,7 @@ package com.cocha.hotels.model.content.hotel;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -40,7 +41,7 @@ public class Hotel implements Serializable {
 
     private String currencyCode;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumns({ @JoinColumn(name = "id", referencedColumnName = "hotelId"),
             @JoinColumn(name = "supplierCode", referencedColumnName = "supplierCode") })
     private HotelDescription description;
@@ -131,6 +132,37 @@ public class Hotel implements Serializable {
 
     public void setDescription(HotelDescription description) {
         this.description = description;
+    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((id == null) ? 0 : id.hashCode());
+        result = prime * result + ((supplierCode == null) ? 0 : supplierCode.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Hotel other = (Hotel) obj;
+        if (id == null) {
+            if (other.id != null)
+                return false;
+        } else if (!id.equals(other.id))
+            return false;
+        if (supplierCode == null) {
+            if (other.supplierCode != null)
+                return false;
+        } else if (!supplierCode.equals(other.supplierCode))
+            return false;
+        return true;
     }
 
 }

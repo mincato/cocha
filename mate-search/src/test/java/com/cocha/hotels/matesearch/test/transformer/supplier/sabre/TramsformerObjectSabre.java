@@ -28,11 +28,11 @@ public class TramsformerObjectSabre extends CamelSpringTestSupport {
         AvailabilityOption availabilityOption = new AvailabilityOption();
         BasicPropertyInfo basicPropertyInfo = new BasicPropertyInfo();
         RateRange rateRange = new RateRange();
-        
+
         rateRange.setCurrencyCode("CLP");
         rateRange.setMax("164076");
         rateRange.setMin("129498");
-        
+
         basicPropertyInfo.setAreaID("000S");
         basicPropertyInfo.setChainCode("HI");
         basicPropertyInfo.setDistance("M");
@@ -40,12 +40,12 @@ public class TramsformerObjectSabre extends CamelSpringTestSupport {
         basicPropertyInfo.setHotelCityCode("SCL");
         basicPropertyInfo.setHotelCode("0080052");
         basicPropertyInfo.setHotelName("HOLIDAY INN SANTIAGO AIRPORT");
-        
+
         basicPropertyInfo.setRateRange(rateRange);
-        
+
         availabilityOption.setBasicPropertyInfo(basicPropertyInfo);
         availabilityOptions.setAvailabilityOption(availabilityOption);
-        
+
         template.sendBody("direct:service-in", availabilityOptions);
 
         assertMockEndpointsSatisfied();

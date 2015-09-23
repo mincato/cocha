@@ -8,6 +8,9 @@ import com.cocha.hotels.model.content.hotel.Hotel;
 
 public class HotelAddressRule extends HotelRule {
 
+    private static final Integer FULL_CONFIDENCE = 34;
+    private static final Integer NO_CONFIDENCE = 0;
+
     @Override
     public RuleMatch apply(Hotel reference, Hotel toCompare) {
         // obtener atributos, uniformizarlos, compararlos
@@ -22,14 +25,14 @@ public class HotelAddressRule extends HotelRule {
         String noSpacesRef = attrReference.replaceAll("[\\s\\.]", "");
         String noSpacesCom = attrToCompare.replaceAll("[\\s\\.]", "");
         if (noSpacesRef.compareTo(noSpacesCom) == 0) {
-            return new HotelRuleMatch(35);
+            return new HotelRuleMatch(FULL_CONFIDENCE);
         }
 
         List<String> refWords = Arrays.asList(attrReference.split("\\s+"));
         List<String> compWords = Arrays.asList(attrToCompare.split("\\s+"));
 
         boolean comparison = compare(refWords, compWords);
-        Integer confidence = comparison ? 35 : 0;
+        Integer confidence = comparison ? FULL_CONFIDENCE : NO_CONFIDENCE;
         return new HotelRuleMatch(confidence);
     }
 
