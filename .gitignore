@@ -4,3 +4,4 @@
 .fbExcludeFilterFile
 /.idea
 *.iml
+/target
