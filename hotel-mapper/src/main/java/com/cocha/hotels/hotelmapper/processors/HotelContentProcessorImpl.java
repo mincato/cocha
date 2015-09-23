@@ -1,6 +1,8 @@
 package com.cocha.hotels.hotelmapper.processors;
 
-import org.apache.log4j.Logger;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -13,13 +15,29 @@ import com.cocha.hotels.model.content.mapping.HotelMapping;
 @Component
 public class HotelContentProcessorImpl implements HotelContentProcessor {
 
+    private static final Integer PERFECT_CONFIDENCE = 100;
+
     @Autowired
     private HotelFeedRepository hotelFeedRepository;
 
     @Override
-    public Hotel process(HotelMapping hotelMapping) {
+    public List<Hotel> process(List<HotelMapping> hotelMappings) {
+        List<Hotel> hotels = new ArrayList<Hotel>();
+        if (hotelMappings != null) {
+            for (HotelMapping hotelMapping : hotelMappings) {
+                Hotel hotel = process(hotelMapping);
+                if (hotel != null) {
+                    hotels.add(hotel);
+                }
+            }
+        }
+        return hotels;
+    }
+
+    private Hotel process(HotelMapping hotelMapping) {
         Hotel contentHotel = null;
-        if (hotelMapping != null && hotelMapping.getSupplierHotelId() != null && hotelMapping.getSupplierCode() != null
+        if (hotelMapping != null && PERFECT_CONFIDENCE.equals(hotelMapping.getConfidence())
+                && hotelMapping.getSupplierHotelId() != null && hotelMapping.getSupplierCode() != null
                 && hotelMapping.getHotelId() != null) {
 
             HotelKey hotelKey = new HotelKey();
@@ -29,7 +47,6 @@ public class HotelContentProcessorImpl implements HotelContentProcessor {
             contentHotel = createHotelContent(feedHotel, hotelMapping.getHotelId());
 
         }
-        Logger.getLogger(HotelContentProcessorImpl.class).info("Hotel description: " + contentHotel.getDescription());
         return contentHotel;
     }
 

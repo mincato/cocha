@@ -17,11 +17,11 @@ public class MapperProcessorImpl implements MapperProcessor {
 
     @Autowired
     private HotelMappingService mappingService;
-    
+
     public List<HotelMapping> process(List<Hotel> hotels) {
         List<HotelMapping> mapping = mappingService.map(hotels);
         logger.info("MAPPING SIZE:" + mapping.size());
-        
+
         return mapping;
     }
 }

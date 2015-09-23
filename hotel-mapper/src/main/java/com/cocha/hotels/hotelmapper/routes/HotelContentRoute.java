@@ -1,12 +1,12 @@
 package com.cocha.hotels.hotelmapper.routes;
 
+import org.apache.camel.LoggingLevel;
 import org.apache.camel.spring.SpringRouteBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.cocha.hotels.hotelmapper.processors.HotelContentProcessor;
 import com.cocha.hotels.model.content.hotel.Hotel;
-import com.cocha.hotels.model.content.mapping.HotelMapping;
 
 @Component
 public class HotelContentRoute extends SpringRouteBuilder {
@@ -17,14 +17,14 @@ public class HotelContentRoute extends SpringRouteBuilder {
     @Override
     public void configure() throws Exception {
 
-        from(
-                "jpaContent:"
-                        + HotelMapping.class.getName()
-                        + "?consumer.namedQuery=getMappingByConfidence&consumeDelete=false&transactionManager=#contentTransactionManager")
-                .routeId("HotelContentRoute").errorHandler(loggingErrorHandler(log))
+        from("seda:content")
+                .routeId("HotelContentRoute")
+                .errorHandler(loggingErrorHandler(log))
                 .bean(hotelContentProcessor, "process")
-                .to("jpaContent:" + Hotel.class.getName() + "?transactionManager=#contentTransactionManager");
+                .to("jpaContent:" + Hotel.class.getName()
+                        + "?entityType=java.util.ArrayList&transactionManager=#contentTransactionManager")
+                .log(LoggingLevel.INFO, "Hotels content store on database successfully");
+        ;
 
     }
-
 }

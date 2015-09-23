@@ -28,9 +28,11 @@ public class HotelMapperRoute extends SpringRouteBuilder {
                 .simple("${body[countryCode]}")
                 .bean(hotelFeedRepository, "findByCountryCode")
                 .bean(mapperProcessor)
+                .multicast()
                 .to("jpaContent:"
                         + HotelMapping.class.getName()
-                        + "?entityType=java.util.ArrayList&transactionManager=#contentTransactionManager&usePersist=true");
+                        + "?entityType=java.util.ArrayList&transactionManager=#contentTransactionManager&usePersist=true",
+                        "seda:content");
 
     }
 
