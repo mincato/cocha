@@ -13,13 +13,23 @@
 	
 	</form>
 	
-	<div class="md-list-item-text">
-	
-	Result:<br/>
-		
-		{{hotel.roomDetail.roomDescription}} </br>
-		
-		{{hotel.roomDetail.rateInfo.averageRate}} </br>
+	<div class="md-list-item-text">		
+		Result:<br/>
+		{{hotel.name}} <br/>
+		{{hotel.city}} <br/>
+		{{hotel.roomDetail.roomDescription}} <br/>
+		{{hotel.roomDetail.rateInfo.currencyCode}} <br/>
+		{{hotel.roomDetail.rateInfo.averageRate}} <br/>
 	</div>
-	
+	<div class="md-list-item-text">	
+		<md-list-item class="md-3-line" ng-repeat="app in hotels">
+			<div class="md-list-item-text">
+				{{app.name}}<br/>
+				{{app.city}} <br/>
+				{{app.roomDetail.roomDescription}}<br/>
+				{{app.roomDetail.rateInfo.currencyCode}}<br/>
+				{{app.roomDetail.rateInfo.averageRate}}<br/>
+			</div>
+		</md-list-item>
+	</div>
 </div>
