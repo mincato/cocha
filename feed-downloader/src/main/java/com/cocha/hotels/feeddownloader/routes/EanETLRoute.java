@@ -1,5 +1,7 @@
 package com.cocha.hotels.feeddownloader.routes;
 
+import java.nio.charset.Charset;
+
 import org.apache.camel.LoggingLevel;
 import org.apache.camel.dataformat.beanio.BeanIODataFormat;
 import org.apache.camel.spi.DataFormat;
@@ -18,8 +20,11 @@ public class EanETLRoute extends SpringRouteBuilder {
     @Override
     public void configure() throws Exception {
 
-        DataFormat hotelDataFormat = new BeanIODataFormat("classpath:beanio/mappings.xml", "eanSupplierHotels");
-        DataFormat descriptionDataFormat = new BeanIODataFormat("classpath:beanio/mappings.xml", "eanHotelDescription");
+        BeanIODataFormat hotelDataFormat = new BeanIODataFormat("classpath:beanio/mappings.xml", "eanSupplierHotels");
+        hotelDataFormat.setEncoding(Charset.forName("UTF-8"));
+        BeanIODataFormat descriptionDataFormat = new BeanIODataFormat("classpath:beanio/mappings.xml",
+                "eanHotelDescription");
+        descriptionDataFormat.setEncoding(Charset.forName("UTF-8"));
 
         from("file:{{feeds.input.ean}}").errorHandler(loggingErrorHandler(log)).choice()
                 .when(simple("${file:onlyname} contains 'ActivePropertyList'")).to("direct:processEanHotels")
