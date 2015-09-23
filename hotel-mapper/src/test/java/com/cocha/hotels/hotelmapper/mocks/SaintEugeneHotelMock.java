@@ -12,6 +12,7 @@ public class SaintEugeneHotelMock implements HotelMock {
     public Hotel buildWithEan() {
         Hotel hotel = new Hotel();
         hotel.setId("EAN-265100");
+        hotel.setSupplierCode("EAN");
         hotel.setName("St. Eugene Golf Resort & Casino");
         hotel.setAddress("7777 Mission Road");
         hotel.setZipCode("V1C7E5");
@@ -38,6 +39,7 @@ public class SaintEugeneHotelMock implements HotelMock {
         hotel.setCurrencyCode("CAD");
         hotel.setStarRating("3.0");
         hotel.setId("BKG-24738");
+        hotel.setSupplierCode("BKG");
         hotel.setLatitude(49.5865525509768);
         hotel.setLongitude(-115.7563304901123);
         hotel.setName("St. Eugene Golf Resort Casino");

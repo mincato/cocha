@@ -12,6 +12,7 @@ public class BlackstoneHotelMock implements HotelMock {
     public Hotel buildWithEan() {
         Hotel hotel = new Hotel();
         hotel.setId("EAN-144665");
+        hotel.setSupplierCode("EAN");
         hotel.setName("The Blackstone Renaissance Chicago Hotel");
         hotel.setAddress("636 S Michigan Ave");
         hotel.setZipCode("60605");
@@ -34,6 +35,7 @@ public class BlackstoneHotelMock implements HotelMock {
     public Hotel buildWithBooking() {
         Hotel hotel = new Hotel();
         hotel.setId("BKG-24730");
+        hotel.setSupplierCode("BKG");
         hotel.setName("Renaissance Blackstone Chicago Hotel");
         hotel.setAddress("636 South Michigan Avenue");
         hotel.setZipCode("60605");

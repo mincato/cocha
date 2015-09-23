@@ -24,6 +24,7 @@ public class TravelodgeFlagstaffHotelMock implements HotelMock {
     public Hotel buildWithEan() {
         Hotel hotel = new Hotel();
         hotel.setId("EAN-208813");
+        hotel.setSupplierCode("EAN");
         hotel.setName("Travelodge Flagstaff");
         hotel.setAddress("1560 E Route 66");
         hotel.setZipCode("86001");
@@ -50,6 +51,7 @@ public class TravelodgeFlagstaffHotelMock implements HotelMock {
         hotel.setCurrencyCode("USD");
         hotel.setStarRating("3.0");
         hotel.setId("BKG-24736");
+        hotel.setSupplierCode("BKG");
         hotel.setLatitude(35.1943519422632529751);
         hotel.setLongitude(-111.63761883974075);
         hotel.setName("Hotel Aspen Flagstaff/ Grand Canyon InnSuites");

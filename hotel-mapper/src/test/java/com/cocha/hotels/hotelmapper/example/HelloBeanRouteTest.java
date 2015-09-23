@@ -9,7 +9,7 @@ public class HelloBeanRouteTest extends CamelSpringTestSupport {
 
     @Override
     protected AbstractXmlApplicationContext createApplicationContext() {
-        return new ClassPathXmlApplicationContext("spring/example.xml");
+        return new ClassPathXmlApplicationContext("spring/camel-context.xml");
     }
 
     @Test

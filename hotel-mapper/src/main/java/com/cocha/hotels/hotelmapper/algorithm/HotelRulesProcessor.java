@@ -4,8 +4,12 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Logger;
 
-import com.cocha.hotels.model.content.hotel.Hotel;
+import org.springframework.stereotype.Service;
 
+import com.cocha.hotels.model.content.hotel.Hotel;
+import com.cocha.hotels.model.content.mapping.HotelMatch;
+
+@Service
 public class HotelRulesProcessor {
 
     private static Logger log = Logger.getLogger(HotelRulesProcessor.class.getName());
@@ -29,7 +33,7 @@ public class HotelRulesProcessor {
 
         log.info(String.format("Applied rules between ref[%s] and [%s]. Confidence level: %d", hotelReference.getId(),
                 hotelToCompare.getId(), confidence));
-        return new HotelMatch(confidence);
+        return new HotelMatch(hotelReference, hotelToCompare, confidence);
     }
 
 }
