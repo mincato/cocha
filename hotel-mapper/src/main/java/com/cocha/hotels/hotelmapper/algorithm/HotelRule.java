@@ -1,12 +1,12 @@
 package com.cocha.hotels.hotelmapper.algorithm;
 
-import java.util.logging.Logger;
+import org.apache.log4j.Logger;
 
 import com.cocha.hotels.model.content.hotel.Hotel;
 
 public abstract class HotelRule {
 
-    private static Logger log = Logger.getLogger(HotelRule.class.getName());
+    private static Logger log = Logger.getLogger(HotelRule.class);
 
     public abstract RuleMatch apply(Hotel eanHotel, Hotel bookingHotel);
 

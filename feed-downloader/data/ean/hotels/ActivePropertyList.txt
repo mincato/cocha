@@ -14,3 +14,164 @@ EANHotelID|SequenceNumber|Name|Address1|Address2|City|StateProvince|PostalCode|C
 130177|30152|La Quinta Inn & Suites Manchester|21 Front Street||Manchester|NH|03102|US|43.00393|-71.47357|MHT|1|USD|3.0|90|ESR|Near Verizon Wireless Arena|80|2295|129.01|118.99|3 PM|noon
 171918|39617|TownePlace Suites by Marriott Manchester|686 Huse Rd||Manchester|NH|03103|US|42.95035|-71.43174|MHT|1|USD|2.0|52|ESR|Near Mall of New Hampshire|653|2295|314|129|3 PM|noon
 138881|41803|Quality Inn Manchester Airport|55 John E. Devine Drive||Manchester|NH|03103|US|42.95799|-71.44486|MHT|1|USD|3.0|95|ESR|Near Mall of New Hampshire|111|2295|269|159|3 PM|11 AM
+262757|19222|Best Western Plus Olive Branch Hotel & Suites|10915 Business Center Dr||Olive Branch|MS|38654|US|34.92944|-89.79486|MEM|1|USD|2.5|5|ESR|Near Methodist Olive Branch Hospital|17|9212|120|85|3 PM|11 AM
+116973|14308|Comfort Inn Olive Branch|7049 Enterprise Dr||Olive Branch|MS|38654|US|34.96330|-89.85649|MEM|1|USD|2.0|52|ESR|Near Cherokee Valley Golf Club|21|9212|109|89|3 PM|11 AM
+213812|15898|Super 8 Olive Branch|11064 Business Center||Olive Branch|MS|38654|US|34.92942|-89.79300|MEM|2|USD|2.0|95|ESR|Near Methodist Olive Branch Hospital|733|9212|69.99|64.99||11 AM
+199719|16232|Holiday Inn Express & Suites Olive Branch|8900 Expressway Dr||Olive Branch|MS|38654|US|34.94834|-89.83344|MEM|1|USD|2.5|52|ESR|Near Olive Branch City Park|288|9212|114|99|2 PM|11 AM
+268168|26560|Fairfield Inn & Suites by Marriott Memphis Olive Branch|7044 Hacks Cross Road||Olive Branch|MS|38654|US|34.96315|-89.79556|MEM|1|USD|2.5|5|ESR|In Olive Branch|44|9212|164|134|3 PM|noon
+139543|29145|Hampton Inn Memphis Olive Branch|6830 Crumpler Blvd||Olive Branch|MS|38654|US|34.96100|-89.85960|MEM|1|USD|2.5|95|ESR|Near Cherokee Valley Golf Club|358|9212|179|149||
+108208|31463|Comfort Suites Olive Branch|6921 Parkwood Dr|Southeast Quadarant|Olive Branch|MS|38654|US|34.96087|-89.84682|MEM|1|USD|2.0|93|ESR|Near Olive Branch City Park|715|9212|160|114|3 PM|11 AM
+139410|32851|Whispering Woods Hotel & Conference Center|7300 Hacks Cross Rd||Olive Branch|MS|38654|US|34.96238|-89.79078|MEM|1|USD|3.0|52|ESR|In the historical district|217|9212|110.33|109.33|3 PM|11 AM
+465213|34076|Magnolia Inn And Suites|6935 W Hamilton Cir||Olive Branch|MS|38654|US|34.96122|-89.87347|MEM|1|USD|2.0||ESR|Near Cherokee Valley Golf Club||9212|95|75|3 PM|11 AM
+121250|70302|Best Western Galleria Inn & Suites|8635 Us Highway 64||Memphis|TN|38133-4122|US|35.20431|-89.77577|MEM|1|USD|2.5|97|ESR|In Memphis (East Memphis)|17|2262|129.99|84.99||
+119863|73594|Sleep Inn Horn Lake|708 Desoto Cv||Horn Lake|MS|38637|US|34.96691|-90.00231|MEM|1|USD|2.0|73|ESR|Near Southaven Towne Center|141|7985|80|76|3 PM|11 AM
+264945|75587|Candlewood Suites Olive Branch|7440 Craft Goodman Frontage Rd||Olive Branch|MS|38654|US|34.97247|-89.86045|MEM|1|USD|2.0|52|ESR|Near Cherokee Valley Golf Club|433|9212|139|74|3 PM|Noon
+150510|85892|Staybridge Suites Memphis - Poplar Ave East|1070 Ridge Lake Blvd||Memphis|TN|38120|US|35.10548|-89.86771|MEM|22|USD|3.0|52|ESR|Near Dixon Gallery and Gardens|731|2262|159|120|3 PM|noon
+129686|85921|Hampton Inn Memphis Walnut Grove Baptist East|33 Humphreys Center Dr||Memphis|TN|38120|US|35.12976|-89.85730|LIT|1|USD|2.5|52|ESR|Near Golf and Games Family Park|358|2262|125|124|3 PM|noon
+269969|87055|Ramada West Memphis|2003 East Service Road|Junction I55 an I40, Exit 279A|West Memphis|AR|72301|US|35.15892|-90.16086|MEM|1|USD|2.5|95|ESR|Near Southland Park Gaming and Racing|113|6197|73|72|3 PM|11 AM
+187629|84866|La Quinta Inn & Suites Memphis East-Sycamore View|6069 Macon Cove||Memphis|TN|38134|US|35.16285|-89.86091|MEM|1|USD|2.5|95|ESR|Near Golf and Games Family Park|80|2262|96.99|92|3 PM|noon
+274450|85832|Holiday Inn Express Hotel & Suites Memphis/Germantown|7784 Wolf Trail Cove||Germantown|TN|38138|US|35.11535|-89.80231|MEM|1|USD|2.5|52|ESR|Near Agricenter International|288|55116|149|109|3 PM|11 AM
+170356|86736|Hampton Inn & Suites at Beale Street|175 Peabody Pl||Memphis|TN|38103|US|35.14025|-90.05129|MEM|1|USD|2.5|90|ESR|Near Handy Park|358|2262|275|209|4 PM|11 AM
+152411|84433|Hampton Inn & Suites Memphis-Shady Grove|962 S Shady Grove Rd||Memphis|TN|38120|US|35.10520|-89.85938|MEM|1|USD|2.5|95|ESR|In Memphis (East Memphis)|358|2262|140.4587|135.2223|4 PM|noon
+323005|84623|La Quinta Inn & Suites Horn Lake / Southaven Area|721 Southwest Drive||Horn Lake|MS|38637|US|34.96178|-90.00310|MEI|1|USD|2.5|52|ESR|Near Southaven Towne Center|80|7985|109.01|98.99|3 PM|noon
+141016|85446|La Quinta Inn and Suites Memphis Primacy Parkway|1236 Primacy Pkwy||Memphis|TN|38119|US|35.09854|-89.86263|MEM|1|USD|2.5|52|ESR|In Memphis (East Memphis)|80|2262|120|95.01|3 PM|noon
+134108|86548|Days Inn West Memphis|1100 Ingram Blvd/I-40|I-40 Exit 279A & I-55|West Memphis|AR|72301|US|35.16022|-90.15817|MEM|1|USD|2.0|52|ESR|Near Southland Park Gaming and Racing|31|6197|79|58.65|3 PM|11 AM
+111681|85179|Hampton Inn Poplar|5320 Poplar Ave||Memphis|TN|38119|US|35.10771|-89.88494|MEM|1|USD|2.5|55|ESR|Near Dixon Gallery and Gardens|358|2262|129|121.1195|3 PM|noon
+139503|87911|Hampton Inn & Suites Memphis Wolfchase Galleria|2935 N Germantown Rd||Bartlett|TN|38133|US|35.20571|-89.79214|MEM|1|USD|2.5|70|ESR|Near Pump It Up|358|77060|154|105.4|4 PM|11 AM
+186517|87917|Fairfield Inn & Suites by Marriott Memphis East/Galleria|8489 Us Highway 64||Memphis|TN|38133|US|35.20427|-89.77951|MEM|1|USD|2.5|52|ESR|In Memphis (East Memphis)|44|2262|149.99|129.99|3 PM|noon
+133745|88943|Ramada Limited Horn Lake|6851 Interstate Blvd, I-55 Exit 289||Horn Lake|MS|38637|US|34.95746|-90.00181|MEM|1|USD|2.0|95|ESR|Near Southaven Towne Center|113|7985|70.95|69.95|2 PM|11 AM
+160823|89920|Hampton Inn Memphis Southwind|3579 Hacks Cross Rd||Memphis|TN|38125|US|35.05148|-89.79513|MEM|1|USD|2.5|52|ESR|In the business district|358|2262|159|130.5131|3 PM|11 AM
+111495|90729|Holiday Inn Express Memphis East I-240|2700 Perkins Road South||Memphis|TN|38118|US|35.07502|-89.90612|MEM|1|USD|2.5|52|ESR|Near Dixon Gallery and Gardens|288|2262|109|79.48|3 PM|11 AM
+208358|90886|Holiday Inn Express Hotel & Suites Memphis Southwind|4068 Stansell Ct||Memphis|TN|38125|US|35.03565|-89.79881|MEM|1|USD|2.5|52|ESR|In Memphis (Southwind)|288|2262|124|109|3 PM|11 AM
+151477|91805|Red Roof Inn West Memphis, AR|1401 North Ingram Boulevard||West Memphis|AR|72301|US|35.16046|-90.15815|MEM|1|USD|2.0|71|ESR|Near Southland Park Gaming and Racing|117|6197|58.99|57.99|2 PM|11 AM
+117722|92880|Holiday Inn Express Memphis Medical Center Midtown|1180 Union Ave||Memphis|TN|38104|US|35.13742|-90.02228|MEM|1|USD|2.5|52|ESR|Near Memphis Zoo|288|2262|139.896|124.8727|3 PM|11 AM
+111567|89641|Comfort Inn Downtown|100 N Front St||Memphis|TN|38103|US|35.14812|-90.05307|MEM|1|USD|2.5|85|ESR|Near Fire Museum of Memphis|21|2262|175|174|3 PM|noon
+123559|89692|Hyatt Place Memphis Primacy Park|1220 Primacy Pkwy||Memphis|TN|38119|US|35.09944|-89.86263|MEM|1|USD|3.0|60|ESR|In Memphis (East Memphis)|2209|2262|125|124|3 PM|noon
+233494|90603|Fairfield Inn & Suites By Marriott Memphis|6010 Macon Cove Rd||Memphis|TN|38134|US|35.16296|-89.86377|MEM|1|USD|2.5|52|ESR|Near Golf and Games Family Park|44|2262|104.95|84.95|3 PM|Noon
+145287|90694|Wingate by Wyndham Cordova / Memphis|2270 N Germantown Pkwy||Cordova|TN|38016|US|35.18718|-89.79245|MEM|1|USD|2.5|52|ESR|Near Pump It Up|270|55652|110.99|109.99|3 PM|11 AM
+138163|91657|Courtyard Memphis East / Park Avenue|6015 Park Ave||Memphis|TN|38119|US|35.10000|-89.86151|MEM|1|USD|3.0|95|ESR|In Memphis (East Memphis)|28|2262|164|114|3 PM|noon
+138101|93436|Courtyard by Marriott Memphis East/Bill Morris Parkway|3076 Kirby Pkwy||Memphis|TN|38115|US|35.06405|-89.84382|MEM|1|USD|2.5|52|ESR|In the business district|28|2262|119|99|3 PM|noon
+126438|94573|Homewood Suites by Hilton Memphis - Germantown|7855 Wolf River Blvd||Germantown|TN|38138|US|35.11314|-89.80294|MEM|22|USD|3.0|52|ESR|Near Agricenter International|54|55116|144|139|4 PM|noon
+110518|94615|Residence Inn by Marriott Memphis East|6141 Poplar Pike||Memphis|TN|38119|US|35.10125|-89.85912|MEM|22|USD|3.0|52|ESR|In Memphis (East Memphis)|114|2262|199|129|3 PM|noon
+352522|87386|La Quinta Inn & Suites Memphis Wolfchase|2839 New Brunswick Rd||Memphis|TN|38133|US|35.20076|-89.78133|MEM|1|USD|2.5|52|ESR|In Memphis (East Memphis)|80|2262|129.01|109.01|3 PM|noon
+116135|89288|La Quinta Inn & Suites Memphis Airport/Graceland Area|2979 Millbranch Road||Memphis|TN|38116|US|35.06776|-90.00693|MEM|1|USD|2.5|95|ESR|Near Graceland|80|2262|95.99|94.99|3 PM|noon
+125838|89473|Four Points by Sheraton Memphis East|5877 Poplar Ave||Memphis|TN|38119|US|35.10354|-89.86744|MEM|1|USD|3.0|58|ESR|Near Dixon Gallery and Gardens|309|2262|129|124|3 PM|noon
+138243|90241|Comfort Inn|801 Desoto Cv||Horn Lake|MS|38637|US|34.96711|-90.00150|MEM|1|USD|2.0|95|ESR|Near Southaven Towne Center|21|7985|99|95|2:00 PM|11:00 AM
+108717|90345|Memphis Marriott East|5795 Poplar Ave||Memphis|TN|38119|US|35.10400|-89.87322|MEM|1|USD|3.5|52|ESR|In Memphis (East Memphis)|86|2262|229|209|3 PM|Noon
+125899|90404|DoubleTree by Hilton Hotel Memphis|5069 Sanderlin Ave||Memphis|TN|38117|US|35.11716|-89.89299|MEM|1|USD|3.0|5|ESR|Near Dixon Gallery and Gardens|33|2262|189|149|3 PM|noon
+203886|91220|Comfort Inn & Suites Airport-American Way|4225 American Way||Memphis|TN|38118|US|35.07603|-89.92238|MEM|1|USD|2.5|52|ESR|Near Dixon Gallery and Gardens|21|2262|81.1|80.1|3 PM|noon
+124170|88152|Homewood Suites Memphis East|5811 Poplar Ave||Memphis|TN|38119|US|35.10371|-89.86813|MEM|22|USD|2.0|95|ESR|In Memphis (East Memphis)|54|2262|174|134|4 PM|noon
+122004|90040|Embassy Suites Memphis|1022 S Shady Grove Rd||Memphis|TN|38120|US|35.10429|-89.85936|MEM|1|USD|3.5|84|ESR|In Memphis (East Memphis)|38|2262|179|159|3 PM|noon
+106022|91923|Hilton Memphis|939 Ridge Lake Boulevard||Memphis|TN|38120|US|35.10720|-89.86792|MEM|1|USD|3.5|65|ESR|Near Dixon Gallery and Gardens|55|2262|149|119|3 PM|11 AM
+232934|93057|Econo Lodge And Suites|6868 Interstate Dr||Horn Lake|MS|38637|US|34.95994|-90.00389|MEM|1|USD|2.0|93|ESR|Near Southaven Towne Center|36|7985|80|70|3 PM|11 AM
+169633|93109|Fairfield Inn By Marriott Germantown|9320 Poplar Pike||Germantown|TN|38138|US|35.06226|-89.75145|MEM|1|USD|2.5|80|ESR|Near Tennessee Shakespeare Company|44|55116|149|125|3 PM|noon
+138844|95007|Fairfield Inn & Suites Memphis I-240 & Perkins|4760 Showcase Blvd||Memphis|TN|38118|US|35.07553|-89.90421|MEM|1|USD|2.5|95|ESR|Near Dixon Gallery and Gardens|44|2262|109|89.11|3 PM|Noon
+203926|95724|Holiday Inn University Of Memphis|3700 Central Ave||Memphis|TN|38111|US|35.12302|-89.93883|MEM|1|USD|3.0|52|ESR|Near Art Museum of the University of Memphis|56|2262|170|169|3 PM|noon
+183620|97579|Quality Suites|8166 Varnavas Dr||Cordova|TN|38016|US|35.18805|-89.79113|MEM|1|USD|2.5|85|ESR|Near Pump It Up|111|55652|98|89|3 PM|noon
+277204|100494|Holiday Inn Hotel & Suites Memphis - Wolfchase Galleria|2751 New Brunswick Road||Memphis|TN|38133|US|35.20147|-89.78077|MEM|1|USD|3.0|52|ESR|Near Wolfchase Galleria|56|2262|179|116|3 PM|11 AM
+445060|100595|Econo Lodge Inn & Suites|6045 Macon Cove||Memphis|TN|38134|US|35.16292|-89.86219|MEM|1|USD|2.5|52|ESR|In Memphis (East Memphis)|36|2262|79.95|64.95|3 PM|11 AM
+176980|101553|Quality Suites I-240 East-Airport|2575 Thousand Oaks Cove||Memphis|TN|38118|US|35.07876|-89.90279|MEM|1|USD|2.0|52|ESR|Near Dixon Gallery and Gardens|111|2262|92.65|72.25|3 PM|noon
+205981|101569|Homewood Suites Southwind - Hacks Cross|3583 Hacks Cross Rd||Memphis|TN|38125|US|35.05112|-89.79518|MEM|1|USD|3.0|95|ESR|In Memphis|54|2262|239|119|3 PM|Noon
+219487|101571|Residence Inn by Marriott Memphis Downtown|110 Monroe Ave||Memphis|TN|38103|US|35.14413|-90.05284|MEM|22|USD|3.0|95|ESR|Near Tennessee State Welcome Center|114|2262|220|219|3 PM|noon
+132763|102355|Days Inn Memphis at Graceland|3839 Elvis Presley Blvd||Memphis|TN|38116|US|35.04373|-90.02510|MEM|1|USD|2.0|95|ESR|Near Graceland|31|2262|85|75|2 PM|11 AM
+129892|102456|Hyatt Place Memphis/Wolfchase Galleria|7905 Giacosa Pl||Memphis|TN|38133|US|35.19610|-89.79700|MEM|1|USD|3.0|5|ESR|Near Pump It Up|2209|2262|139|129|3 PM|noon
+171313|102485|extend a suites West Memphis|210 West Service Road||West Memphis|AR|72301|US|35.16920|-90.18838|MEM|2|USD|2.0|60|ESR|Near Southland Park Gaming and Racing||6197|61.8669|60.8669|3:00 PM|11:00 AM
+321357|97452|New Hampshire Inn|898 Ingram Blvd||West Memphis|AR|72301|US|35.15450|-90.15829|MEM|2|USD|2.0|5|ESR|Near Southland Park Gaming and Racing||6197|75|65|1 PM|11 AM
+117379|100214|Crowne Plaza Memphis East|2625 Thousand Oaks Blvd||Memphis|TN|38118|US|35.07696|-89.90201|MEM|1|USD|3.5|95|ESR|Near Dixon Gallery and Gardens|256|2262|139|120|3 PM|noon
+134376|100338|Days Inn Memphis - I 40 and Sycamore View|6055 Macon Cv||Memphis|TN|38134|US|35.16286|-89.86116|MEM|1|USD|2.0|52|ESR|In Memphis (East Memphis)|31|2262|55.24|50.99|2 PM|11 AM
+127386|95132|Econo Lodge West Memphis|2315 S Service Rd||West Memphis|AR|72301|US|35.15689|-90.15568|MEM|1|USD|1.5|52|ESR|Near Southland Park Gaming and Racing|36|6197|49|48|3 PM|11 AM
+130420|96264|Quality Inn & Suites|1556 Sycamore View Road||Memphis|TN|38134|US|35.16790|-89.86401|MEM|1|USD|2.5|52|ESR|In Memphis (East Memphis)|111|2262|114|94|15:00:00|11:00:00
+134966|99146|Baymont Inn Memphis East|6020 Shelby Oaks Dr||Memphis|TN|38134|US|35.16805|-89.86273|MEM|1|USD|2.0|95|ESR|Near Golf and Games Family Park|421|2262|89.95|67.95|3 PM|11 AM
+131842|100068|Comfort Inn|1335 McRee St||Memphis|TN|38134|US|35.16203|-89.86193|MEM|1|USD|2.0|52|ESR|Near Golf and Games Family Park|21|2262|95|75|3 PM|11 AM
+194086|100116|Quality Inn West Memphis|1009 E Service Rd||West Memphis|AR|72301|US|35.16366|-90.17309|MEM|1|USD|2.0|52|ESR|Near Southland Park Gaming and Racing|111|6197|87|77|1 PM|11 AM
+273365|96945|Comfort Inn Marion|2700 I-55 Service Rd||Marion|AR|72364|US|35.20269|-90.20313|MEM|1|USD|2.5|89|ESR|In Marion|21|10119|95|90|3 PM|11 AM
+142201|98818|Super 8 West Memphis|901 Martin Luther King Dr||West Memphis|AR|72301|US|35.15485|-90.13689|MEM|2|USD|2.0|95|ESR|Near Southland Park Gaming and Racing|733|6197|66.99|45.89|3 PM|11 AM
+455894|99775|Motel 6 West Memphis|2501 S Service Rd||West Memphis|AR|72301|US|35.15677|-90.15496|MEM|2|USD|2.0|52|ESR|Near Southland Park Gaming and Racing|2021|6197|42.99|41.99|3 PM|Noon
+324808|101623|Hyatt Place Memphis/Germantown|9161 Winchester Rd||Germantown|TN|38138|US|35.04762|-89.75785|TUP|1|USD|3.0|52|ESR|Near Carriage Crossing|2209|55116|169|159|3 PM|noon
+193592|102735|Comfort Suites Cordova|2427 N Germantown Pkwy||Cordova|TN|38018|US|35.19250|-89.79259|MEM|1|USD|2.5|95|ESR|Near Wolfchase Galleria|715|55652|99.99|89.99|3 PM|11 AM
+127427|103486|Red Roof Inn Memphis East|6055 Shelby Oaks Dr||Memphis|TN|38134|US|35.16787|-89.86213|MEM|1|USD|2.0|97|ESR|Near Golf and Games Family Park|117|2262|617.28|62.99|3 PM|noon
+244489|103538|Best Western Plus Gen X Inn|1177 Madison Avenue||Memphis|TN|38104|US|35.13946|-90.02206|MEM|1|USD|2.0|52|ESR|In Memphis (Midtown)|17|2262|129.99|101.3994|3 PM|11 AM
+164897|104286|Extended Stay America - Memphis - Germantown|6500 Poplar Ave||Memphis|TN|38119|US|35.09949|-89.84629|MEM|1|USD|2.0|52|ESR|In Memphis (East Memphis)|2074|2262|89.99|75.99|3 PM|11 AM
+198618|105454|Madison Hotel|79 Madison Avenue||Memphis|TN|38103|US|35.14536|-90.05324|MEM|1|USD|4.0|88|ESR|Near Tennessee State Welcome Center||2262|368.95|298.95|3 PM|noon
+165331|106271|Motel 6 Marion AR|3635 I 55 & Us Highway 64||Marion|AR|72364|US|35.21726|-90.20887|MEM|2|USD|2.5|66|ESR|In Marion|2021|10119|56.99|55.99||11 AM
+149305|109628|Clarion Hotel|2007 S. Service Road||West Memphis|AR|72301|US|35.15830|-90.15894|MEM|1|USD|3.0|52|ESR|Near Southland Park Gaming and Racing|18|6197|70|69|3 PM|11 AM
+226303|104009|Rodeway Inn Memphis|1199 Linden Ave||Memphis|TN|38104|US|35.13468|-90.02134|MEM|2|USD|2.0|48|ESR|Near Memphis Zoo|119|2262|90.99|89.99|2 PM|11 AM
+126884|104099|Sleep Inn At Court Square|40 N Front St||Memphis|TN|38103|US|35.14667|-90.05364|MEM|1|USD|2.0|89|ESR|Near Fire Museum of Memphis|141|2262|175|174|3 PM|noon
+208719|104204|Travelers Inn and Suites|5024 Lamar Ave||Memphis|TN|38118|US|35.01834|-89.89619|MEM|1|USD|2.0|5|ESR|Near Sky Zone||2262|76|75|3 PM|11 AM
+187621|104243|Extended Stay America - Memphis - Germantown West|6325 N Quail Hollow Rd||Memphis|TN|38120|US|35.10449|-89.85294|MEM|1|USD|2.0|5|ESR|In Memphis (East Memphis)|2074|2262|99.99|75.99|3 PM|11 AM
+340065|105094|Courtyard by Marriott Downtown Memphis|75 Jefferson Ave||Memphis|TN|38103|US|35.14729|-90.05227|MEM|1|USD|3.0|78|ESR|Near Fire Museum of Memphis|28|2262|254|199|3 PM|noon
+117711|105197|Days Inn And Suites|3685 American Way||Memphis|TN|38118|US|35.07669|-89.94123|MEM|1|USD|2.0|85|ESR|Near Dixon Gallery and Gardens|31|2262|59.99|51.73|3 PM|11 AM
+138162|106066|Courtyard Memphis Airport|1780 Nonconnah Blvd||Memphis|TN|38132|US|35.07163|-90.00374|MEM|1|USD|3.0|95|ESR|In the business district|28|2262|179|149|3 PM|noon
+106836|106103|Holiday Inn Downtown Memphis|160 Union Ave||Memphis|TN|38103|US|35.14267|-90.05139|MEM|1|USD|3.0|52|ESR|Near Tennessee State Welcome Center|56|2262|264|234|4 PM|11 AM
+270819|110305|Candlewood Suites Memphis|7950 Centennial Drive||Memphis|TN|38125|US|35.04378|-89.79735|MEM|1|USD|2.0|52|ESR|In Memphis (Southwind)|433|2262|130|80.11|3 PM|noon
+254448|110340|The Westin Memphis Beale Street|170 Lt Geo W Lee Ave||Memphis|TN|38103|US|35.13879|-90.05270|MEM|1|USD|4.0|45|ESR|Near Handy Park|152|2262|388.5|368.5|3 PM|11 AM
+220735|103778|Springhill Suites By Marriott Memphis Downtown|85 West Court Avenue||Memphis|TN|38103|US|35.14632|-90.05295|MEM|1|USD|3.0|78|ESR|Near Tennessee State Welcome Center|702|2262|229|179|3 PM|noon
+183612|104923|Comfort Inn & Suites|7787 Wolf River Blvd||Germantown|TN|38138|US|35.11332|-89.80369|MEM|1|USD|2.0|52|ESR|Near Agricenter International|715|55116|92|89|3 PM|11 AM
+149457|105931|Extended Stay America - Memphis - Wolfchase Galleria|2520 Horizon Lake Dr||Memphis|TN|38133|US|35.19346|-89.79881|MEM|1|USD|2.5|45|ESR|In Memphis (East Memphis)|2074|2262|84.99|71.24|3 PM|11 AM
+128782|105940|Extended Stay America - Memphis - Cordova|8110 Cordova Center Dr||Cordova|TN|38016|US|35.17079|-89.79293|MEM|1|USD|2.0|52|ESR|Near Bellevue Baptist Church|2074|55652|94|61.74|3 PM|11 AM
+145474|103542|Springhill Suites Memphis East / Galleria|2800 New Brunswick Rd||Memphis|TN|38133|US|35.20045|-89.78388|MEM|1|USD|3.0|95|ESR|Near Wolfchase Galleria|702|2262|129.99|119.99||
+135426|103577|Courtyard by Marriott Germantown|7750 Wolf River Raceway||Germantown|TN|38138|US|35.11354|-89.80488|MEM|1|USD|3.0|95|ESR|Near Agricenter International|28|55116|179|143|3 PM|noon
+263439|104597|Motel 6 Memphis - Horn Lake|701 Southwest Dr||Horn Lake|MS|38637|US|34.96180|-90.00171|MEM|2|USD|2.0|52|ESR|Near Southaven Towne Center|2021|7985|57.31|56.31|1 PM|11 AM
+117264|105673|Americas Best Value Inn West Memphis|2411 East Service Road||West Memphis|AR|72301|US|35.15611|-90.15328|MEM|2|USD|2.0|52|ESR|Near Southland Park Gaming and Racing|2088|6197|85.99|44.99|2 PM|11 AM
+263600|106663|River Inn of Harbor Town|50 Harbor Town Sq||Memphis|TN|38103|US|35.16114|-90.05474|MEM|1|USD|4.0|1|ESR|Near Tennessee State Welcome Center||2262|310.7122|247.8439|3 PM|11 AM
+262986|107629|Four Points by Sheraton Memphis Southwind|4090 Stansell Court||Memphis|TN|38125|US|35.03692|-89.79890|MEM|1|USD|3.0|52|ESR|In Memphis (Southwind)|309|2262|114|83.2|3 PM|noon
+112190|110785|The Peabody Memphis|149 Union Ave||Memphis|TN|38103|US|35.14275|-90.05186|MEM|1|USD|4.5|85|ESR|Near Tennessee State Welcome Center|106|2262|425|249|4 PM|11 AM
+143128|111888|Rodeway Inn|5119 American Way||Memphis|TN|38115|US|35.07696|-89.89181|MEM|1|USD|2.0|3|ESR|Near Lichterman Nature Center|119|2262|56.99|49.99|2 PM|11 AM
+492846|119644|Comfort Suites West Memphis|850 Stephens Blvd||West Memphis|AR|72301|US|35.16214|-90.17300|MEM|1|USD|2.5||ESR|Near Southland Park Gaming and Racing|715|6197|120|115|3 PM|11 AM
+495593|119846|Best Western West Memphis Inn|3401 Service Loop Rd||West Memphis|AR|72301|US|35.15529|-90.14438|MEM|1|USD|2.5||ESR|Near Southland Park Gaming and Racing|17|6197|100.4|81.4||
+152413|112663|Crowne Plaza Memphis Downtown Hotel|300 N 2nd Street||Memphis|TN|38105|US|35.15252|-90.04843|MEM|1|USD|3.5|90|ESR|Near Tennessee State Welcome Center|256|2262|210|162|4 PM|11 AM
+324767|118222|Vista Inn & Suites -Downtown- Memphis|265 Union Avenue||Memphis|TN|38103|US|35.14177|-90.04835|MEM|2|USD|2.0|52|ESR|Near Orpheum Theatre||2262|106|94.5504||11 AM
+115668|111298|DoubleTree by Hilton Memphis Downtown|185 Union Ave||Memphis|TN|38103|US|35.14249|-90.05082|MEM|1|USD|3.5|85|ESR|Near Tennessee State Welcome Center|33|2262|239|199|3 PM|11 AM
+147899|118022|Extended Stay America Memphis - Mt Moriah|6520 Mount Moriah Road Ext||Memphis|TN|38115|US|35.06473|-89.84655|MEM|1|USD|2.0|52|ESR|In Memphis|2074|2262|69|52.24|3 PM|11 AM
+267497|118096|Econo Lodge Downtown|22 North Third Street||Memphis|TN|38103|US|35.14515|-90.05004|MEM|1|USD|2.0|67|ESR|Near Fire Museum of Memphis|36|2262|96|95|3 PM|11 AM
+141231|119275|Sheraton Memphis Downtown Hotel|250 N Main St||Memphis|TN|38103|US|35.15193|-90.05016|MEM|1|USD|3.5|71|ESR|Near Tennessee State Welcome Center|130|2262|242.4927|218.1214|4 PM|Noon
+499139|112090|Best Western Plus Goodman Inn & Suites|6910 Wind Chase Drive||Horn Lake|MS|38637|US|34.96040|-90.00850|MEM|1|USD|2.5||ESR|Near Southaven Towne Center|17|7985|129.99|107.99|3 PM|11 AM
+171391|113284|Residence Inn By Marriott Memphis Germantown|9314 Poplar Pike||Germantown|TN|38138|US|35.06232|-89.75180|MEM|22|USD|3.0|95|ESR|Near Tennessee Shakespeare Company|114|55116|150|149|3 PM|Noon
+105621|115339|Extended Stay America Memphis - Apple Tree|6085 Apple Tree Dr||Memphis|TN|38115|US|35.06892|-89.86157|MEM|1|USD|2.0|52|ESR|Near Lichterman Nature Center|2074|2262|60.99|59.99|3 PM|11 AM
+431995|116494|Econo Lodge Inn & Suites|3524 Elvis Presley Blvd||Memphis|TN|38116|US|35.05251|-90.02507|MEM|2|USD|2.0|52|ESR|Near Graceland|36|2262|99.99|80|3 PM|noon
+506163|129346|Best Western Executive Inn|3105 Millbranch Road||Memphis|TN|38116|US|35.06398|-90.00697|MEM|2|USD|2.5||ESR|Near Graceland|17|2262|89.99|76.49|2 PM|11 AM
+134965|125574|Country Hearth Memphis Airport|3005 Millbranch Road||Memphis|TN|38116|US|35.06721|-90.00733|MEM|1|USD|2.0|5|ESR|Near Graceland|2010|2262|128.57|78.57|3 PM|11 AM
+127210|126616|Extended Stay America Memphis - Sycamore View|5885 Shelby Oaks Dr||Memphis|TN|38134|US|35.16463|-89.86678|MEM|1|USD|2.0|52|ESR|In Memphis (East Memphis)|2074|2262|64.99|52.24|3 PM|11 AM
+127429|129250|Americas Best Value Inn|3875 American Way||Memphis|TN|38118|US|35.07645|-89.93347|MEM|2|USD|2.0|52|ESR|Near Dixon Gallery and Gardens|2088|2262|84.99|64.99|2 PM|11 AM
+109870|123918|Motel 6 Memphis - Graceland|1581 E Brooks Rd||Memphis|TN|38116|US|35.06115|-90.01093|MEM|1|USD|2.0|52|ESR|Near Graceland|2021|2262|49.99|48.99|2 PM|11 AM
+200434|120122|Super 8 Memphis East/Macon Cove|6015 Macon Cv||Memphis|TN|38134|US|35.16290|-89.86351|MEM|2|USD|1.5|52|ESR|In Memphis (East Memphis)|733|2262|109.99|65.99|2 PM|11 AM
+198043|120142|Microtel Inn & Suites by Wyndham Cordova/Memphis/By Wolfchas|2423 N. Germantown Parkway||Cordova|TN|38018|US|35.19133|-89.79735|MEM|1|USD|2.0|52|ESR|Near Wolfchase Galleria|560|55652|119|69.99|3 PM|11 AM
+376741|126008|Econo Lodge|3419 American Way||Memphis|TN|38118|US|35.07669|-89.95055|MEM|1|USD|2.0|52|ESR|In Memphis|36|2262|61.75|52.25||
+169994|130706|Holiday Inn Memphis Airport - Conf Ctr|2240 Democrat Rd||Memphis|TN|38132|US|35.06875|-89.98926|MEM|1|USD|3.0|52|ESR|Near Graceland|56|2262|179|115|3 PM|11 AM
+106728|130237|Kings Signature Hotel Airport Graceland|1471 E. Brooks Rd||Memphis|TN|38116|US|35.06113|-90.01479|MEM|1|USD|2.5|52|ESR|Near Graceland||2262|79|69|3 PM|11 AM
+488378|131312|Inland Suites Elvis|1218 Winchester Rd||Memphis|TN|38116|US|35.05422|-90.02306|MEM|16|USD|2.5||ESR|Near Graceland||2262|67|60|3 PM|11 AM
+451955|133975|Rodeway Inn Memphis|1321 Sycamore View Rd||Memphis|TN|38134|US|35.16075|-89.85964|MEM|2|USD|2.0|52|ESR|In Memphis (East Memphis)|119|2262|47.99|42.99|3 PM|11 AM
+127428|137336|Motel 6 Memphis Downtown|210 S Pauline St||Memphis|TN|38104|US|35.13659|-90.02825|MEM|2|USD|2.0|52|ESR|Near Sun Studio|2021|2262|56.99|55.99|3 PM|Noon
+112717|141829|Motel 6 Memphis Northeast|1585 Sycamore View Rd||Memphis|TN|38134|US|35.16887|-89.86525|MEM|2|USD|2.0|95|ESR|In Memphis (East Memphis)|2021|2262|56.99|55.99|2 PM|11 AM
+340099|144307|Meadow View Farm|3501 Hwy 305 South||Hernando|MS|38632|US|34.80900|-89.81245|MEM|5|USD|3.0|52|ESR|Near the airport|2136|7629|129|119|3 PM|11 AM
+124495|148284|Hampton Inn Collierville|1280 W Poplar Ave||Collierville|TN|38017|US|35.04652|-89.70396|MEM|1|USD|2.5|95|ESR|Near Carriage Crossing|358|55089|139|119|3 PM|noon
+201485|142827|Super 8 Hernando Ms|2425 Sloans Way||Hernando|MS|38632|US|34.82531|-89.97874|MEM|1|USD|2.0|52|ESR|In Hernando|733|7629|65|59|1 PM|11 AM
+478438|145183|Hampton Inn Marion|310 Angelo's Grove Blvd||Marion|AR|72364|US|35.20906|-90.20864|MEM|1|USD|2.5||ESR|In the city center|358|10119|134|129||
+161347|147804|Suburban Extended Stay Of Memphis Bartlett|7380 Stage Road Hwy 64||Bartlett|TN|38133|US|35.20486|-89.80860|MEM|1|USD|2.0|60|ESR|Near Pump It Up|2266|77060|59.99|54.99|3 PM|11 AM
+310838|150039|Hampton Inn & Suites Millington|8838 Highway 51 N||Millington|TN|38053|US|35.36670|-89.88715|MEM|1|USD|2.5|52|ESR|Near Harvell Civic Center|358|8640|150|149|2 PM|11 AM
+487193|153732|Inland Suites Lamar Street|3913 Lamar Ave||Memphis|TN|38118|US|35.05752|-89.93301|MEM|1|USD|2.0||ESR|In Memphis (Oakville)||2262|67|60|3 PM|11:00 AM
+164870|157692|Extended Stay America - Memphis - Airport|2541 Corporate Ave E||Memphis|TN|38132|US|35.07507|-89.99023|MEM|1|USD|2.0|5|ESR|Near the airport|2074|2262|84.99|71.24|3 PM|11 AM
+138473|153542|Super 8 Memphis/Dntn/Graceland Area|340 W Illinois Avenue||Memphis|TN|38106|US|35.12379|-90.07323|MEM|2|USD|1.5|52|ESR|Near Martyrs Park|733|2262|65|48.5|2 PM|11 AM
+270695|154941|Holiday Inn Express & Suites Millington|5090 Cooper Creek Blvd||Millington|TN|38053|US|35.36100|-89.89319|MEM|1|USD|2.5|52|ESR|Near Harvell Civic Center|288|8640|124|104|3 PM|Noon
+126303|160061|Motel 6 Memphis, TN|2889 Austin Peay Hwy||Memphis|TN|38128|US|35.20410|-89.92170|MEM|2|USD|2.0|52|ESR|In Memphis (Raleigh)|2021|2262|49.99|48.99|1 PM|11 AM
+135942|160185|Americas Best Value Inn and Suites Memphis/Graceland|1360 Springbrook Ave||Memphis|TN|38116|US|35.06176|-90.01851|MEM|2|USD|2.0|95|ESR|Near Graceland|2088|2262|69.99|65|2 PM|11 AM
+202774|156841|Knights Inn Memphis|2949 Airways Blvd||Memphis|TN|38116|US|35.06467|-89.99018|MEM|2|USD|1.0|52|ESR|Near Graceland|343|2262|64.99|42.49|3 PM|11 AM
+493658|157965|Hilton Garden Inn Memphis/Wolfchase Galleria|7955 Market Plaza Drive||Cordova|TN|38016|US|35.18857|-89.79840|MEM|1|USD|3.0||ESR|Near Bellevue Baptist Church|2059|55652|140|139||11:00:00
+202103|164826|Colonial Inn & Suites /Airport/Graceland|1952 E Shelby Dr||Memphis|TN|38116|US|35.02104|-89.99848|MEM|2|USD|1.5|52|ESR|Near the airport||2262|110|50|1 PM|11 AM
+491598|166163|The Exchange Suites|9 N. Second St||Memphis|TN|38103|US|35.14505|-90.05150|MEM|16|USD|3.0||ESR|Near Fire Museum of Memphis||2262|168.993|150.1169|3 PM|11 AM
+261603|167529|Courtyard by Marriott Collierville|4640 Merchants Park Cir||Collierville|TN|38017|US|35.02230|-89.71631|MEM|1|USD|3.0|52|ESR|Near Carriage Crossing|28|55089|189|169|3 PM|noon
+141643|170539|Americas Best Value Inn & Suites - Memphis East|1541 Sycamore View Rd||Memphis|TN|38134|US|35.16678|-89.86320|MEM|1|USD|1.5|52|ESR|In Memphis (East Memphis)|2088|2262|125|49.99|3 PM|11 AM
+193160|162670|Sleep Inn Memphis|2855 Old Austin Peay Hwy||Memphis|TN|38128|US|35.20366|-89.92186|MEM|1|USD|2.0|95|ESR|In Memphis (Raleigh)|141|2262|80|79|2 PM|11 AM
+314728|163851|Comfort Inn And Suites Atoka|10772 Hwy 51 S.||Atoka|TN|38004|US|35.44969|-89.78185|MEM|1|USD|2.5|52|ESR|In the city center|715|6123981|80|79|3 PM|11 AM
+108297|171284|Gardentree Hotels|6101 Shelby Oaks Dr.||Memphis|TN|38134|US|35.16780|-89.85956|MEM|1|USD|2.5|52|ESR|Near Golf and Games Family Park||2262|89|79|3 PM|11:00 AM
+225669|163654|Real Value Inn|3896 Lamar Ave||Memphis|TN|38118|US|35.05730|-89.93256|MEM|1|USD|1.5|91|ESR|In Memphis (Oakville)||2262|43.5116|42.5116|3 PM|11 AM
+142451|163656|Super 8 Motel Lakeland|9779 Huff And Puff Rd||Lakeland|TN|38002|US|35.22681|-89.73194|MEM|2|USD|2.0|5|ESR|Near Davies Manor Plantation|733|56087|59.99|49.99|2 PM|11 AM
+209338|169397|Quality Inn Millington|7726 Highway 51 North||Millington|TN|38053|US|35.33700|-89.91429|MEM|2|USD|2.0|91|ESR|Near Harvell Civic Center|111|8640|79|72|2 PM|11 AM
+121221|170779|Days Inn Collierville TN|1230 W Poplar Ave||Collierville|TN|38017|US|35.04650|-89.70282|MEM|1|USD|2.0|52|ESR|Near Carriage Crossing|31|55089|75.61|67.96|3 PM|11 AM
+462518|172221|Rodeway Inn|3265 Elvis Presley Blvd||Memphis|TN|38116|US|35.05977|-90.02398|MEM|1|USD|2.0||ESR|Near Graceland||2262|54|49|3 PM|11 AM
+169228|177504|Oakland Inn|6805 Highway 64||Oakland|TN|38063|US|35.22901|-89.52228|MEM|1|USD|2.0|52|ESR|In Oakland|2885|602144|59.99|54.99|2 PM|11 AM
+115305|179196|Budgetel Inn & Suites|6068 Macon Cove||Memphis|TN|38134|US|35.16289|-89.86073|MEM|1|USD|2.0|52|ESR|In Memphis (East Memphis)|2694|2262|49.99|40.49|2 PM|11 AM
+531739|180745|Hampton Inn Hernando|2675 Mcingvale Rd||Hernando|MS|38632|US|34.82090|-89.97206|MEM|1|USD|2.5||ESR|In the city center|358|7629|114|104|3 PM|11 AM
+114932|182917|Days Inn Hernando|943 E Commerce St||Hernando|MS|38632|US|34.82383|-89.98700|MEM|1|USD|.0|95|ESR|In Hernando|31|7629|60|59|14:00:00|11:00:00
+112612|182383|Quality Inn|42 S Camilla St||Memphis|TN|38104|US|35.13872|-90.02683|MEM|2|USD|2.0|70|ESR|Near Sun Studio|111|2262|80|70|2 PM|11 AM
+125890|183868|Motel 6 Lakeland|9822 Huff N Puff Rd||Lakeland|TN|38002|US|35.22562|-89.73525|MEM|2|USD|2.0|52|ESR|Near Davies Manor Plantation|2021|56087|50.99|45.99|1 PM|Noon
