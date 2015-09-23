@@ -22,7 +22,7 @@ serviceMateSearch.controller('serviceController', ['$scope','$http','$location',
 				$scope.hotel.arrivalDate = hotel.arrivalDate;
 				$scope.hotel.departureDate = hotel.departureDate;
 				$scope.hotel.service = hotel.service;
-			});		
+			});
 		}
 		if(hotel.service == 'ean') {
 			$http.get('http://'+$location.host()+':'+$location.port()+'/mate-search/ean/send?idHotel='+hotel.idSupplier+'&arrival_date='+hotel.arrivalDate+'&departure_date='+hotel.departureDate)

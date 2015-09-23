@@ -1,20 +1,25 @@
 <div ng-controller="serviceController">
-	<form novalidate id="fromAvailability">
-		ID Hotel: <input type="text" ng-model="hotel.idSupplier" /><br>
-		Arrival Date: <input type="text" ng-model="hotel.arrivalDate" /><br>
-		Departure Date: <input type="text" ng-model="hotel.departureDate" /><br>
-		<input type="radio" ng-model="hotel.service" value="all" />All<br/>
-		<input type="radio" ng-model="hotel.service" value="booking" />Booking<br/>
-		<input type="radio" ng-model="hotel.service" value="ean" />EAN<br/>
-		<input type="radio" ng-model="hotel.service" value="sabre" />Sabre<br/>
-		<input type="button" ng-click="search(hotel)" value="Search" />
+	<form novalidate id="fromAvailability" name="formRegistro">
+		 <div>
+			<label style="margin-right: 79px;">ID Hotel: </label><input type="text" ng-model="hotel.idSupplier" /><br>
+			<label style="margin-right: 52px;">Arrival Date: </label><input type="text" ng-model="hotel.arrivalDate" /><br>
+			<label style="margin-right: 27px;">Departure Date: </label><input type="text" ng-model="hotel.departureDate" /><br>
+		 </div>
+			<input type="radio" ng-model="hotel.service" value="all" /><label>All</label><br/>
+			<input type="radio" ng-model="hotel.service" value="booking" /><label>Booking</label><br/>
+			<input type="radio" ng-model="hotel.service" value="ean" /><label>EAN</label><br/>
+			<input type="radio" ng-model="hotel.service" value="sabre" /><label>Sabre</label><br/>
+			<button class="btn btn-primary btn-lg" ng-click="search(hotel)">Search</button>
+	
 	</form>
 	
 	<div class="md-list-item-text">
 	
 	Result:<br/>
 		
-		{{hotel.roomDetail.roomDescription}}
+		{{hotel.roomDetail.roomDescription}} </br>
+		
+		{{hotel.roomDetail.rateInfo.averageRate}} </br>
 	</div>
 	
 </div>
