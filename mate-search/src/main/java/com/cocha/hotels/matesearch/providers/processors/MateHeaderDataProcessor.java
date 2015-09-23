@@ -23,7 +23,8 @@ public class MateHeaderDataProcessor implements Processor {
         //String idHotel =  parameters.get("idHotel");
         
         String idHotelEan = "125727";
-        String idHotelBooking = "36912";        
+        String idHotelBooking = "36912";
+        exchange.getOut().setHeader("idHotel", "EAN107480");
         
         parameters.put("idHotelEan",idHotelEan);
         parameters.put("idHotelBooking",idHotelBooking);

@@ -14,11 +14,12 @@ import com.cocha.hotels.matesearch.providers.processors.MateHeaderDataProcessor;
 public class MateRoute extends RouteBuilder {
     
 	@Autowired
-    private MateHeaderDataProcessor  mateHeaderDataProcessor;   
-
+    private MateHeaderDataProcessor  mateHeaderDataProcessor; 
+	
     @Override
     public void configure() throws Exception {
-		from("cxfrs:bean:mateServer").process(mateHeaderDataProcessor).multicast()
+		from("cxfrs:bean:mateServer").process(mateHeaderDataProcessor)
+				.multicast()
 				.aggregationStrategy(new AggregationAvailabilityStrategy()).parallelProcessing()
 				.to("direct:sendEanAvailability", "direct:sendBookingAvailability");
     }
