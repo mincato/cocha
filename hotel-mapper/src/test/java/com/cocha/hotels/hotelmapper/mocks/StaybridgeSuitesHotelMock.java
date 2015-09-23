@@ -12,6 +12,7 @@ public class StaybridgeSuitesHotelMock implements HotelMock {
     public Hotel buildWithEan() {
         Hotel hotel = new Hotel();
         hotel.setId("EAN-264992");
+        hotel.setSupplierCode("EAN");
         hotel.setName("Staybridge Suites Oakville");
         hotel.setAddress("2511 Wyecroft Rd");
         hotel.setZipCode("L6L6P8");
@@ -34,6 +35,7 @@ public class StaybridgeSuitesHotelMock implements HotelMock {
     public Hotel buildWithBooking() {
         Hotel hotel = new Hotel();
         hotel.setId("BKG-24733");
+        hotel.setSupplierCode("BKG");
         hotel.setName("Staybridge Suites Oakville Burlington");
         hotel.setAddress("2511 Wyecroft Road");
         hotel.setZipCode("L6L 6P8");

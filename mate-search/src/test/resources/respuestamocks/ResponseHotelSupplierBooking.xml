@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<getHotelAvailability>
+	<chunks>1</chunks>
+	<result>
+		<available_rooms>170</available_rooms>
+		<currency_code>GBP</currency_code>
+		<hotel_id>36913</hotel_id>
+		<max_price>2500.00</max_price>
+		<max_total_price>5000.00</max_total_price>
+		<min_price>263.00</min_price>
+		<min_total_price>526.00</min_total_price>
+		<rack_rate>
+			<currency>GBP</currency>
+			<price>0.00</price>
+		</rack_rate>
+		<ranking>1</ranking>
+	</result>
+</getHotelAvailability>

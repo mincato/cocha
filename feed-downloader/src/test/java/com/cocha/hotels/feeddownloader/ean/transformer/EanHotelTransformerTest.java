@@ -3,10 +3,16 @@ package com.cocha.hotels.feeddownloader.ean.transformer;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 
+import com.cocha.hotels.feeddownloader.ean.model.EanHotelDescription;
 import com.cocha.hotels.feeddownloader.ean.model.EanSupplierHotel;
 import com.cocha.hotels.model.content.hotel.Hotel;
+import com.cocha.hotels.model.content.hotel.HotelDescription;
 
 public class EanHotelTransformerTest {
 
@@ -19,29 +25,34 @@ public class EanHotelTransformerTest {
     private static final String TEST_CURRENCY_CODE = "testCurrencyCode";
     private static final String TEST_COUNTRY_CODE = "testCountryCode";
     private static final String TEST_ADDRESS = "testAddress";
+    private static final String TEST_DESCRIPTION = "testDescription";
+    private static final String TEST_LANGUAGE_CODE = "es";
+
+    private EanHotelTransformer eanHotelTransformer = new EanHotelTransformer();
 
     @Test
     public void testTransformNullSupplierHotels() {
-        assertNull(EanHotelTransformer.toCanonicalHotel(null));
+        assertNull(eanHotelTransformer.toCanonicalHotels(null));
     }
 
     @Test
     public void testTransformNotNullSupplierHotelData() {
-        Hotel canonicalHotels = EanHotelTransformer.toCanonicalHotel(createSupplierHotel());
+        List<Hotel> canonicalHotels = eanHotelTransformer.toCanonicalHotels(createSupplierHotel());
 
-        assertEquals(TEST_ADDRESS, canonicalHotels.getAddress());
-        assertEquals(TEST_COUNTRY_CODE, canonicalHotels.getCountryCode());
-        assertEquals(TEST_CURRENCY_CODE, canonicalHotels.getCurrencyCode());
-        assertEquals(TEST_HOTEL_ID, canonicalHotels.getId());
-        assertEquals(TEST_LATITUDE, canonicalHotels.getLatitude());
-        assertEquals(TEST_LONGITUDE, canonicalHotels.getLongitude());
-        assertEquals(TEST_NAME, canonicalHotels.getName());
-        assertEquals(TEST_STARS, canonicalHotels.getStarRating());
-        assertEquals(TEST_ZIP, canonicalHotels.getZipCode());
-        assertEquals(Hotel.EAN_SUPPLIER_CODE, canonicalHotels.getSupplierCode());
+        assertEquals(TEST_ADDRESS, canonicalHotels.get(0).getAddress());
+        assertEquals(StringUtils.upperCase(TEST_COUNTRY_CODE), canonicalHotels.get(0).getCountryCode());
+        assertEquals(TEST_CURRENCY_CODE, canonicalHotels.get(0).getCurrencyCode());
+        assertEquals(TEST_HOTEL_ID, canonicalHotels.get(0).getId());
+        assertEquals(TEST_LATITUDE, canonicalHotels.get(0).getLatitude());
+        assertEquals(TEST_LONGITUDE, canonicalHotels.get(0).getLongitude());
+        assertEquals(TEST_NAME, canonicalHotels.get(0).getName());
+        assertEquals(TEST_STARS, canonicalHotels.get(0).getStarRating());
+        assertEquals(TEST_ZIP, canonicalHotels.get(0).getZipCode());
+        assertEquals(Hotel.EAN_SUPPLIER_CODE, canonicalHotels.get(0).getSupplierCode());
     }
 
-    private EanSupplierHotel createSupplierHotel() {
+    private List<EanSupplierHotel> createSupplierHotel() {
+        List<EanSupplierHotel> supplierHotels = new ArrayList<EanSupplierHotel>();
         EanSupplierHotel supplierHotel = new EanSupplierHotel();
         supplierHotel.setAddress(TEST_ADDRESS);
         supplierHotel.setCountry(TEST_COUNTRY_CODE);
@@ -52,7 +63,35 @@ public class EanHotelTransformerTest {
         supplierHotel.setName(TEST_NAME);
         supplierHotel.setStarRating(TEST_STARS);
         supplierHotel.setPostalCode(TEST_ZIP);
-        return supplierHotel;
+        supplierHotels.add(supplierHotel);
+        return supplierHotels;
+    }
+
+    @Test
+    public void testTransformNullSupplierDescriptions() {
+        assertNull(eanHotelTransformer.toCanonicalHotelDescriptions(null));
+    }
+
+    @Test
+    public void testTransformNotNullSupplierDescriptionsData() {
+        List<HotelDescription> canonicalDescriptions = eanHotelTransformer
+                .toCanonicalHotelDescriptions(createSupplierDescription());
+
+        assertEquals(TEST_HOTEL_ID, canonicalDescriptions.get(0).getHotelId());
+        assertEquals(TEST_DESCRIPTION, canonicalDescriptions.get(0).getDescription());
+        assertEquals(TEST_LANGUAGE_CODE, canonicalDescriptions.get(0).getLanguageCode());
+        assertEquals(Hotel.EAN_SUPPLIER_CODE, canonicalDescriptions.get(0).getSupplierCode());
+
+    }
+
+    private List<EanHotelDescription> createSupplierDescription() {
+        List<EanHotelDescription> supplierDescriptions = new ArrayList<EanHotelDescription>();
+        EanHotelDescription supplierDescription = new EanHotelDescription();
+        supplierDescription.setHotelId(TEST_HOTEL_ID);
+        supplierDescription.setPropertyDescription(TEST_DESCRIPTION);
+        supplierDescription.setLanguageCode(TEST_LANGUAGE_CODE);
+        supplierDescriptions.add(supplierDescription);
+        return supplierDescriptions;
     }
 
 }
