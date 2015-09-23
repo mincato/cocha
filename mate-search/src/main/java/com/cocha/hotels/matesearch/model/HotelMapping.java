@@ -10,55 +10,55 @@ import javax.persistence.UniqueConstraint;
 
 @Table(uniqueConstraints = @UniqueConstraint(columnNames = { "supplierHotelId", "supplierCode" }))
 @Entity
-public class HotelMapping implements Serializable{
-	
-	private static final long serialVersionUID = -2381658793446981558L;
+public class HotelMapping implements Serializable {
 
-	 public static final String BOOKING_SUPPLIER_CODE = "BKG";
-	 
-	 public static final String EAN_SUPPLIER_CODE = "EAN";
-	
-	@Id
-	private String id;
+    private static final long serialVersionUID = -2381658793446981558L;
 
-	@Id
-	@Column(length = 3)
-	private String hotelId;
+    public static final String BOOKING_SUPPLIER_CODE = "BKG";
 
-	private String supplierCode;
+    public static final String EAN_SUPPLIER_CODE = "EAN";
 
-	private String supplierHotelId;
+    @Id
+    private String id;
 
-	public String getId() {
-		return id;
-	}
+    @Id
+    @Column(length = 3)
+    private String hotelId;
 
-	public void setId(String id) {
-		this.id = id;
-	}
+    private String supplierCode;
 
-	public String getHotelId() {
-		return hotelId;
-	}
+    private String supplierHotelId;
 
-	public void setHotelId(String hotelId) {
-		this.hotelId = hotelId;
-	}
+    public String getId() {
+        return id;
+    }
 
-	public String getSupplierCode() {
-		return supplierCode;
-	}
+    public void setId(String id) {
+        this.id = id;
+    }
 
-	public void setSupplierCode(String supplierCode) {
-		this.supplierCode = supplierCode;
-	}
+    public String getHotelId() {
+        return hotelId;
+    }
 
-	public String getSupplierHotelId() {
-		return supplierHotelId;
-	}
+    public void setHotelId(String hotelId) {
+        this.hotelId = hotelId;
+    }
 
-	public void setSupplierHotelId(String supplierHotelId) {
-		this.supplierHotelId = supplierHotelId;
-	}
+    public String getSupplierCode() {
+        return supplierCode;
+    }
+
+    public void setSupplierCode(String supplierCode) {
+        this.supplierCode = supplierCode;
+    }
+
+    public String getSupplierHotelId() {
+        return supplierHotelId;
+    }
+
+    public void setSupplierHotelId(String supplierHotelId) {
+        this.supplierHotelId = supplierHotelId;
+    }
 
 }
