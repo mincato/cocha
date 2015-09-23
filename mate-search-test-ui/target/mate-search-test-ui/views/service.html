@@ -1,0 +1,20 @@
+<div ng-controller="serviceController">
+	<form novalidate id="fromAvailability">
+		ID Hotel: <input type="text" ng-model="hotel.idSupplier" /><br>
+		Arrival Date: <input type="text" ng-model="hotel.arrivalDate" /><br>
+		Departure Date: <input type="text" ng-model="hotel.departureDate" /><br>
+		<input type="radio" ng-model="hotel.service" value="all" />All<br/>
+		<input type="radio" ng-model="hotel.service" value="booking" />Booking<br/>
+		<input type="radio" ng-model="hotel.service" value="ean" />EAN<br/>
+		<input type="radio" ng-model="hotel.service" value="sabre" />Sabre<br/>
+		<input type="button" ng-click="search(hotel)" value="Search" />
+	</form>
+	
+	<div class="md-list-item-text">
+	
+	Result:<br/>
+		
+		{{hotel.roomDetail.roomDescription}}
+	</div>
+	
+</div>

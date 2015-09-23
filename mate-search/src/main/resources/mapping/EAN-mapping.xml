@@ -20,6 +20,14 @@
 			<b>idSupplier</b>
 		</field>
 		<field>
+			<a>hotellistresponse.hotellist.hotelsummary.name</a>
+			<b>name</b>
+		</field>
+		<field>
+			<a>hotellistresponse.hotellist.hotelsummary.city</a>
+			<b>city</b>
+		</field>				
+		<field>
 			<a>hotellistresponse.hotellist.hotelsummary.roomratedetailslist.roomratedetails.roomdescription</a>
 			<b>roomDetail.roomDescription</b>
 		</field>
