@@ -5,11 +5,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
 @Table(uniqueConstraints = @UniqueConstraint(columnNames = { "supplierHotelId", "supplierCode" }))
 @Entity
+@NamedQuery(name = "getMappingByConfidence", query = "select x from HotelMapping x where x.confidence = 100")
 public class HotelMapping {
 
     @Id
