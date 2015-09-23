@@ -3,6 +3,7 @@ package com.cocha.hotels.matesearch.providers.processors;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.util.Map;
+
 import org.apache.camel.Exchange;
 import org.apache.camel.ExchangePattern;
 import org.apache.camel.Message;
@@ -11,8 +12,6 @@ import org.apache.camel.component.cxf.common.message.CxfConstants;
 import org.apache.cxf.message.MessageContentsList;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-
-import com.cocha.hotels.matesearch.util.MessageUtils;
 
 @Component
 public class EanClientProcessor implements Processor {
@@ -46,21 +45,28 @@ public class EanClientProcessor implements Processor {
      * 
      * @see org.apache.camel.Processor#process(org.apache.camel.Exchange)
      */
-    @Override
+    @SuppressWarnings("unchecked")
+	@Override
     public void process(Exchange exchange) throws Exception {
         Message inMessage = exchange.getIn();
 
-        String queryStrings = inMessage.getBody(String.class);
-
-        Map<String, String> parameters = MessageUtils.parseQueryParams(queryStrings);
+        //String queryStrings = inMessage.getBody(String.class);
+        Map<String, String> parameters = (Map<String, String>)inMessage.getBody(Map.class);
+        //Map<String, String> parameters = MessageUtils.parseQueryParams(queryStrings);
         exchange.setPattern(ExchangePattern.InOut);
 
         // set the operation name
         inMessage.setHeader(CxfConstants.OPERATION_NAME, AVAILABILITY_EAN_SERVICE);
         inMessage.setHeader(CxfConstants.CAMEL_CXF_RS_USING_HTTP_API, Boolean.FALSE);
-
-        String message = "<HotelListRequest><hotelIdList>" + parameters.get("idHotel") + "</hotelIdList><arrivalDate>"
-                + parameters.get("arrival_date") + "</arrivalDate><departureDate>" + parameters.get("departure_date")
+        
+        String arrival=parameters.get("arrival_date");
+        arrival = arrival.replace("-", "/");        
+        String departure=parameters.get("departure_date");
+        departure = departure.replace("-", "/");
+        
+        
+        String message = "<HotelListRequest><hotelIdList>" + parameters.get("idHotelEan") + "</hotelIdList><arrivalDate>"
+                + arrival + "</arrivalDate><departureDate>" + departure
                 + "</departureDate></HotelListRequest>";
 
         MessageContentsList req = new MessageContentsList();

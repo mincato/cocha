@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 import com.cocha.hotels.matesearch.util.MessageUtils;
 
 @Component
-public class HeaderDataProcessor implements Processor {
+public class MateHeaderDataProcessor implements Processor {
 
     @Override
     public void process(Exchange exchange) throws Exception {
@@ -18,17 +18,15 @@ public class HeaderDataProcessor implements Processor {
                 
         String queryStrings =(String) inMessage.getHeader("CamelHttpQuery");
         Map<String, String> parameters = MessageUtils.parseQueryParams(queryStrings);        
-        
-        
-        // se debe obtener equivalencias de la base de datos
-        String idHotel =  parameters.get("idHotel");
-        
-        String idHotelEan = idHotel;
-        String idHotelBooking = idHotel;
                 
+        // se debe obtener equivalencias de la base de datos
+        //String idHotel =  parameters.get("idHotel");
+        
+        String idHotelEan = "125727";
+        String idHotelBooking = "36912";        
+        
         parameters.put("idHotelEan",idHotelEan);
         parameters.put("idHotelBooking",idHotelBooking);
-        
         exchange.getOut().setBody(parameters);
     }
 }
