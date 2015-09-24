@@ -8,7 +8,7 @@ import com.cocha.hotels.model.content.hotel.Hotel;
 
 public class HotelAddressRule extends HotelRule {
 
-    private static final Integer FULL_CONFIDENCE = 60;
+    private static final Integer FULL_CONFIDENCE = 59;
     private static final Integer NO_CONFIDENCE = 0;
 
     @Override
