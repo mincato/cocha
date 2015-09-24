@@ -8,7 +8,7 @@ import com.cocha.hotels.model.content.hotel.Hotel;
 
 public class HotelAddressRule extends HotelRule {
 
-    private static final Integer FULL_CONFIDENCE = 34;
+    private static final Integer FULL_CONFIDENCE = 60;
     private static final Integer NO_CONFIDENCE = 0;
 
     @Override
@@ -45,8 +45,18 @@ public class HotelAddressRule extends HotelRule {
     private String flatten(String name) {
         // primer paso, todo el mayusculas, remuevo los espacios
         // TODO refactor: parametrizar esto!
-        return name.toUpperCase(Locale.ENGLISH).replace("SOUTH", "S").replace("WEST", "W").replace("STREET", "ST")
-                .replace("AVENUE", "AVE").replace("ROAD", "RD").replace("DRIVE", "DR").replace("HIGHWAY", "HWY");
+        return name.toUpperCase(Locale.ENGLISH)
+                .replace("SOUTH", "S")
+                .replace("WEST", "W")
+                .replace("EAST", "E")
+                .replace("NORTH", "N")
+                .replace("STREET", "ST")
+                .replace("AVENUE", "AVE")
+                .replace("ROAD", "RD")
+                .replace("DRIVE", "DR")
+                .replace("BOULEVARD", "BLVD")
+                .replace("SQUARE", "SQ")
+                .replace("HIGHWAY", "HWY");
     }
 
 }

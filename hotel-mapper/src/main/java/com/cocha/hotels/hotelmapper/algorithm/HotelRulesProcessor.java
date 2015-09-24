@@ -16,8 +16,7 @@ public class HotelRulesProcessor {
     private List<HotelRule> ruleList;
 
     public HotelRulesProcessor() {
-        ruleList = Arrays.asList(new HotelNameRule(), new HotelAddressRule(), new HotelZipCodeRule(),
-                new HotelStarRatingRule(), new HotelCurrencyCodeRule());
+        ruleList = Arrays.asList(new HotelNameRule(), new HotelAddressRule());
     }
 
     public HotelMatch applyRules(final Hotel hotelReference, final Hotel hotelToCompare) {
