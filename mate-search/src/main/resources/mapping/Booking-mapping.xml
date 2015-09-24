@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mappings xmlns="http://dozer.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		  xsi:schemaLocation="http://dozer.sourceforge.net  http://dozer.sourceforge.net/schema/beanmapping.xsd">
+	
+	<mapping>
+		<class-a>com.cocha.hotels.model.matesearch.supplier.booking.GetHotelAvailabilityBooking</class-a>
+		<class-b>com.cocha.hotels.model.matesearch.canonical.Hotel</class-b>
+		<field>
+			<a>result.hotelId</a>
+			<b>idSupplier</b>
+		</field>
+		<field>
+			<a>result.minPrice</a>
+			<b>roomDetail.rateInfo.averageRate</b>
+		</field>														
+	</mapping>
+</mappings>

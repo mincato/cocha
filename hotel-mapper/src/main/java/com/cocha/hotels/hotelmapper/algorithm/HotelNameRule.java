@@ -8,6 +8,9 @@ import com.cocha.hotels.model.content.hotel.Hotel;
 
 public class HotelNameRule extends HotelRule {
 
+    private static final Integer FULL_CONFIDENCE = 34;
+    private static final Integer NO_CONFIDENCE = 0;
+
     @Override
     public RuleMatch apply(Hotel reference, Hotel toCompare) {
         // obtener atributos, uniformizarlos, compararlos
@@ -23,7 +26,7 @@ public class HotelNameRule extends HotelRule {
         List<String> compWords = Arrays.asList(attrToCompare.split("\\s+"));
 
         boolean comparison = compare(refWords, compWords);
-        Integer confidence = comparison ? 35 : 0;
+        Integer confidence = comparison ? FULL_CONFIDENCE : NO_CONFIDENCE;
         return new HotelRuleMatch(confidence);
     }
 

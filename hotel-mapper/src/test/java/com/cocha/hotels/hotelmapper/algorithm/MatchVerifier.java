@@ -2,7 +2,9 @@ package com.cocha.hotels.hotelmapper.algorithm;
 
 import org.junit.Assert;
 
-class MatchVerifier {
+import com.cocha.hotels.model.content.mapping.HotelMatch;
+
+public class MatchVerifier {
 
     private HotelMatch match;
 

@@ -26,7 +26,8 @@ public class BookingService {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/send")
-    public String send(@QueryParam("idHotel") String idHotel) {
+    public String send(@QueryParam("idHotel") String idHotel, @QueryParam("arrival_date") String arrival_date,
+            @QueryParam("departure_date") String departure_date) {
         return null;
     }
 }

@@ -12,6 +12,7 @@ public class TaybridgeSuitesHotelMock implements HotelMock {
     public Hotel buildWithEan() {
         Hotel hotel = new Hotel();
         hotel.setId("EAN-264991");
+        hotel.setSupplierCode("EAN");
         hotel.setName("Staybridge Suites Guelph");
         hotel.setAddress("11 Corporate Court");
         hotel.setZipCode("N1G5G5");
@@ -38,6 +39,7 @@ public class TaybridgeSuitesHotelMock implements HotelMock {
         hotel.setCurrencyCode("CAD");
         hotel.setStarRating("3.0");
         hotel.setId("BKG-24735");
+        hotel.setSupplierCode("BKG");
         hotel.setLatitude(43.49156859296362);
         hotel.setLongitude(-80.21018654108053);
         hotel.setName("Staybridge Suites Guelph");
