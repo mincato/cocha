@@ -65,9 +65,6 @@
 						<fileset>
 							<directory>mate-search-ui/app/components</directory>
 						</fileset>
-						<fileset>
-							<directory>mate-search-ui/node_modules</directory>
-						</fileset>
 					</filesets>
 				</configuration>
 			</plugin>
