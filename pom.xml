@@ -15,7 +15,7 @@
         <module>feed-downloader</module>
         <module>destination-mapper</module>
         <module>hotel-mapper</module>
-    <module>mate-search-test-ui</module>
+    <!-- module>mate-search-test-ui</module -->
   </modules>
     
     <properties>
