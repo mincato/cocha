@@ -1,91 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Licensed to the Apache Software Foundation (ASF) under one or more contributor 
-	license agreements. See the NOTICE file distributed with this work for additional 
-	information regarding copyright ownership. The ASF licenses this file to 
-	You under the Apache License, Version 2.0 (the "License"); you may not use 
-	this file except in compliance with the License. You may obtain a copy of 
-	the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required 
-	by applicable law or agreed to in writing, software distributed under the 
-	License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS 
-	OF ANY KIND, either express or implied. See the License for the specific 
-	language governing permissions and limitations under the License. -->
+
 <mappings xmlns="http://dozer.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		  xsi:schemaLocation="http://dozer.sourceforge.net  http://dozer.sourceforge.net/schema/beanmapping.xsd">
 	
 	<mapping>
 		<class-a>com.cocha.hotels.model.matesearch.supplier.ean.hotel.SupplierEANHotelResponse</class-a>
-		<class-b>com.cocha.hotels.model.matesearch.canonical.Hotel</class-b>
+		<class-b>com.cocha.hotels.model.matesearch.canonical.RateInfoForSupplier</class-b>
 		<field>
 			<a>hotellistresponse.hotellist.hotelsummary.hotelid</a>
 			<b>idSupplier</b>
 		</field>
 		<field>
-			<a>hotellistresponse.hotellist.hotelsummary.name</a>
-			<b>name</b>
+			<a>hotellistresponse.hotellist.hotelsummary.rateCurrencyCode</a>
+			<b>rateCurrencyCode</b>
 		</field>
 		<field>
-			<a>hotellistresponse.hotellist.hotelsummary.city</a>
-			<b>city</b>
+			<a>hotellistresponse.hotellist.hotelsummary.highRate</a>
+			<b>higtRate</b>
 		</field>				
 		<field>
-			<a>hotellistresponse.hotellist.hotelsummary.roomratedetailslist.roomratedetails.roomdescription</a>
-			<b>roomDetail.roomDescription</b>
-		</field>
-		<field>
-			<a>hotellistresponse.hotellist.hotelsummary.roomratedetailslist.roomratedetails.rateinfos.rateinfo.pricebreakdown</a>
-			<b>roomDetail.rateInfo.priceBreakDown</b>
-		</field>
-		<field>
-			<a>hotellistresponse.hotellist.hotelsummary.roomratedetailslist.roomratedetails.rateinfos.rateinfo.promo</a>
-			<b>roomDetail.rateInfo.promo</b>
-		</field>
-		<field>
-			<a>hotellistresponse.hotellist.hotelsummary.roomratedetailslist.roomratedetails.rateinfos.rateinfo.ratechange</a>
-			<b>roomDetail.rateInfo.rateChange</b>
-		</field>
-		<field>
-			<a>hotellistresponse.hotellist.hotelsummary.roomratedetailslist.roomratedetails.rateinfos.rateinfo.chargeablerateinfo.averagebaserate</a>
-			<b>roomDetail.rateInfo.averageBaseRate</b>
-		</field>
-		<field>
-			<a>hotellistresponse.hotellist.hotelsummary.roomratedetailslist.roomratedetails.rateinfos.rateinfo.chargeablerateinfo.averagerate</a>
-			<b>roomDetail.rateInfo.averageRate</b>
-		</field>
-		<field>
-			<a>hotellistresponse.hotellist.hotelsummary.roomratedetailslist.roomratedetails.rateinfos.rateinfo.chargeablerateinfo.commissionableusdtotal</a>
-			<b>roomDetail.rateInfo.commissionableUsdTotal</b>
-		</field>
-		<field>
-			<a>hotellistresponse.hotellist.hotelsummary.roomratedetailslist.roomratedetails.rateinfos.rateinfo.chargeablerateinfo.currencycode</a>
-			<b>roomDetail.rateInfo.currencyCode</b>
-		</field>		
-		<field>
-			<a>hotellistresponse.hotellist.hotelsummary.roomratedetailslist.roomratedetails.rateinfos.rateinfo.chargeablerateinfo.maxnightlyrate</a>
-			<b>roomDetail.rateInfo.maxNightlyRate</b>
-		</field>
-		<field>
-			<a>hotellistresponse.hotellist.hotelsummary.roomratedetailslist.roomratedetails.rateinfos.rateinfo.chargeablerateinfo.nightlyratetotal</a>
-			<b>roomDetail.rateInfo.nightlyRateTotal</b>
-		</field>
-		<field>
-			<a>hotellistresponse.hotellist.hotelsummary.roomratedetailslist.roomratedetails.rateinfos.rateinfo.chargeablerateinfo.surchargeTotal</a>
-			<b>roomDetail.rateInfo.surchargetotal</b>
-		</field>
-		<field>
-			<a>hotellistresponse.hotellist.hotelsummary.roomratedetailslist.roomratedetails.rateinfos.rateinfo.chargeablerateinfo.total</a>
-			<b>roomDetail.rateInfo.total</b>
-		</field>
-		<field>
-			<a>hotellistresponse.hotellist.hotelsummary.roomratedetailslist.roomratedetails.rateinfos.rateinfo.chargeablerateinfo.surcharges.surcharge.type</a>
-			<b>roomDetail.rateInfo.surchargeType</b>
-		</field>
-		<field>
-			<a>hotellistresponse.hotellist.hotelsummary.roomratedetailslist.roomratedetails.rateinfos.rateinfo.nonrefundable</a>
-			<b>roomDetail.rateInfo.nonRefundable</b>
-		</field>
-		<field>
-			<a>hotellistresponse.hotellist.hotelsummary.roomratedetailslist.roomratedetails.rateinfos.rateinfo.ratetype</a>
-			<b>roomDetail.rateInfo.rateType</b>
-		</field>										
+			<a>hotellistresponse.hotellist.hotelsummary.lowRate</a>
+			<b>lowRate</b>
+		</field>									
 	</mapping>
 </mappings>

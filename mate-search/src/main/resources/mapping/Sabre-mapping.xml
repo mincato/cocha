@@ -5,14 +5,22 @@
 	
 	<mapping>
 		<class-a>com.cocha.hotels.model.matesearch.supplier.sabre.AvailabilityOptions</class-a>
-		<class-b>com.cocha.hotels.model.matesearch.canonical.Hotel</class-b>
+		<class-b>com.cocha.hotels.model.matesearch.canonical.RateInfoForSupplier</class-b>
 		<field>
 			<a>availabilityOption.basicPropertyInfo.hotelCode</a>
 			<b>idSupplier</b>
 		</field>
 		<field>
+			<a>availabilityOption.basicPropertyInfo.rateRange.currencyCode</a>
+			<b>rateCurrencyCode</b>
+		</field>					
+		<field>
 			<a>availabilityOption.basicPropertyInfo.rateRange.min</a>
-			<b>roomDetail.rateInfo.averageRate</b>
-		</field>										
+			<b>lowRate</b>
+		</field>	
+		<field>
+			<a>availabilityOption.basicPropertyInfo.rateRange.max</a>
+			<b>higtRate</b>
+		</field>												
 	</mapping>
 </mappings>
