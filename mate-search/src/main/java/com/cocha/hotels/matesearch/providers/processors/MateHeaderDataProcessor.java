@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 
 import com.cocha.hotels.matesearch.model.HotelMapping;
 import com.cocha.hotels.matesearch.repositories.HotelMappingRepository;
+import com.cocha.hotels.matesearch.util.Constant.CodeSupplier;
 import com.cocha.hotels.matesearch.util.MessageUtils;
 
 @Component
@@ -31,25 +32,31 @@ public class MateHeaderDataProcessor implements Processor {
         String queryStrings = (String) inMessage.getHeader("CamelHttpQuery");
         Map<String, String> parameters = MessageUtils.parseQueryParams(queryStrings);
 
-        List<HotelMapping> providers = hotelMappingRepository.findById(parameters.get("idHotel"));
+        List<HotelMapping> providers = hotelMappingRepository.findByHotelId(parameters.get("idHotel"));
 
-//        String idHotelEan = "125727";
-//        String idHotelBooking = "36912";
-
-        /*
-         * for (HotelMapping hotelMapping : providers) { String code =
-         * hotelMapping.getSupplierCode(); switch (code) { case
-         * HotelMapping.BOOKING_SUPPLIER_CODE: idHotelBooking =
-         * hotelMapping.getSupplierHotelId(); break; case
-         * HotelMapping.EAN_SUPPLIER_CODE: idHotelEan =
-         * hotelMapping.getSupplierHotelId(); break; default: break; } }
-         */
-
-        // se debe obtener equivalencias de la base de datos
-        // String idHotel = parameters.get("idHotel");
-
-//        parameters.put("idHotelEan", idHotelEan);
-//        parameters.put("idHotelBooking", idHotelBooking);
+        parameters = this.putIdSuppliers(parameters,providers);
+        
         exchange.getOut().setBody(parameters);
     }
+
+	private Map<String, String> putIdSuppliers(Map<String, String> parameters,	List<HotelMapping> providers) {
+
+		for(HotelMapping hotelMapping : providers) {
+			
+			switch (hotelMapping.getSupplierCode()) {
+			
+			case CodeSupplier.BOOKING_SUPPLIER_CODE:
+				parameters.put(CodeSupplier.BOOKING_SUPPLIER_ID_HOTEL, hotelMapping.getSupplierHotelId());
+				break;
+				
+			case CodeSupplier.EAN_SUPPLIER_CODE:
+				parameters.put(CodeSupplier.EAN_SUPPLIER_ID_HOTEL, hotelMapping.getSupplierHotelId());
+				break;
+				
+			}
+		}
+		
+		return parameters;
+	}
+    
 }

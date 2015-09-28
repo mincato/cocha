@@ -2,7 +2,6 @@ package com.cocha.hotels.matesearch.model;
 
 import java.io.Serializable;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -14,15 +13,10 @@ public class HotelMapping implements Serializable {
 
     private static final long serialVersionUID = -2381658793446981558L;
 
-    public static final String BOOKING_SUPPLIER_CODE = "BKG";
-
-    public static final String EAN_SUPPLIER_CODE = "EAN";
-
     @Id
     private String id;
 
     @Id
-    @Column(length = 3)
     private String hotelId;
 
     private String supplierCode;

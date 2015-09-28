@@ -8,6 +8,6 @@ import com.cocha.hotels.matesearch.model.HotelMapping;
 
 public interface HotelMappingRepository extends JpaRepository<HotelMapping, String> {
 
-    List<HotelMapping> findById(String hotelId);
+    List<HotelMapping> findByHotelId(String hotelId);
 
 }
