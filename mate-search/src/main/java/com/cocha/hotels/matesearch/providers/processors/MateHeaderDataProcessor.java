@@ -9,10 +9,10 @@ import org.apache.camel.Processor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.cocha.hotels.matesearch.model.HotelMapping;
 import com.cocha.hotels.matesearch.repositories.HotelMappingRepository;
 import com.cocha.hotels.matesearch.util.Constant.CodeSupplier;
 import com.cocha.hotels.matesearch.util.MessageUtils;
+import com.cocha.hotels.model.content.mapping.HotelMapping;
 
 @Component
 public class MateHeaderDataProcessor implements Processor {

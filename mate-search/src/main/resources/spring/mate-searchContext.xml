@@ -48,32 +48,32 @@
 	<!-- Tell CXF/JAX-RS where the Mate - REST service is defined -->			
 	<cxfCamel:rsServer id="mateServer" address="/mate" loggingFeatureEnabled="true">
        <cxfCamel:serviceBeans>
-           <bean class="com.cocha.hotels.matesearch.providers.services.MateService" />           
+           <bean class="com.cocha.hotels.matesearch.providers.services.rest.MateService" />           
        </cxfCamel:serviceBeans>
    </cxfCamel:rsServer>	
 	
 	<!-- Tell CXF/JAX-RS where the REST service is defined -->			
 	<cxfCamel:rsServer id="jaxRsServer" address="/ean" loggingFeatureEnabled="true">
        <cxfCamel:serviceBeans>
-           <bean class="com.cocha.hotels.matesearch.providers.services.EanService" />
+           <bean class="com.cocha.hotels.matesearch.providers.services.rest.EanService" />
        </cxfCamel:serviceBeans>
    </cxfCamel:rsServer>
 	
 	<!-- Defined the client endpoint to create the cxf-rs consumer for EAN-->
   <cxfCamel:rsClient id="eanClient" address="${mate.provider.ean.address.xml}"
-    serviceClass="com.cocha.hotels.matesearch.providers.services.EanClientService"
+    serviceClass="com.cocha.hotels.matesearch.providers.services.rest.EanClientService"
     loggingFeatureEnabled="true"/>
     
     <cxfCamel:rsServer id="jaxBookingServer" address="/booking" loggingFeatureEnabled="true">
        <cxfCamel:serviceBeans>
-           <bean class="com.cocha.hotels.matesearch.providers.services.BookingService" />
+           <bean class="com.cocha.hotels.matesearch.providers.services.rest.BookingService" />
        </cxfCamel:serviceBeans>
    </cxfCamel:rsServer>
    
    <!-- Defined the client endpoint to create the cxf-rs consumer for Booking-->
   <cxfCamel:rsClient id="bookingClient"	
 	address="${mate.provider.booking.address.xml}"	
-	serviceClass="com.cocha.hotels.matesearch.providers.services.BookingClientService"
+	serviceClass="com.cocha.hotels.matesearch.providers.services.rest.BookingClientService"
 	loggingFeatureEnabled="true" />
 
 	
@@ -91,7 +91,7 @@
         
     <cxfCamel:rsServer id="sabreServer" address="/sabre" loggingFeatureEnabled="true">
        <cxfCamel:serviceBeans>
-           <bean class="com.cocha.hotels.matesearch.providers.services.SabreService" />
+           <bean class="com.cocha.hotels.matesearch.providers.services.rest.SabreService" />
        </cxfCamel:serviceBeans>
    </cxfCamel:rsServer>
 		
@@ -108,6 +108,7 @@
 		<camel:routeBuilder ref="bookingTransformerRoute" />
 		<camel:routeBuilder ref="eanTransformaerRoute" />
 		<camel:routeBuilder ref="sabreTransformerRoute" />
+		<camel:routeBuilder ref="hotelInformationRoute" />
 	</camel:camelContext>	
 	
 	<!-- Dozer Mapping -->

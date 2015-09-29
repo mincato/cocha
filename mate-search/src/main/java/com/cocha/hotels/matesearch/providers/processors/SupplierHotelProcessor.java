@@ -10,7 +10,7 @@ public class SupplierHotelProcessor {
 
     private static final Logger log = Logger.getLogger(SupplierHotelProcessor.class);
 
-    public RateInfoForSupplier processCustomer(RateInfoForSupplier rateInfoSupplier) {
+    public RateInfoForSupplier trasformer(RateInfoForSupplier rateInfoSupplier) {
     	log.debug("Trasformer Supplier Hotel Processor");
         return rateInfoSupplier;
     }

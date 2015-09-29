@@ -1,4 +1,4 @@
-package com.cocha.hotels.matesearch.providers.services;
+package com.cocha.hotels.matesearch.providers.services.rest;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

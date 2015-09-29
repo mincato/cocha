@@ -1,4 +1,4 @@
-package com.cocha.hotels.matesearch.providers.services;
+package com.cocha.hotels.matesearch.providers.services.rest;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -13,7 +13,7 @@ import javax.ws.rs.core.MediaType;
  * can't do with an interface).
  */
 @Path("/")
-public class BookingService {
+public class MateService {
 
     /**
      * Camel intercepts this. Receives a request with one URL-based argument and
@@ -25,8 +25,8 @@ public class BookingService {
      */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    @Path("/send")
-    public String send(@QueryParam("idHotel") String idHotel, @QueryParam("arrival_date") String arrival_date,
+    @Path("/availability")
+    public String availability(@QueryParam("idHotel") String idHotel, @QueryParam("arrival_date") String arrival_date,
             @QueryParam("departure_date") String departure_date) {
         return null;
     }

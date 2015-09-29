@@ -1,4 +1,4 @@
-package com.cocha.hotels.matesearch.providers.services;
+package com.cocha.hotels.matesearch.providers.services.rest;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -13,7 +13,7 @@ import javax.ws.rs.core.MediaType;
  * can't do with an interface).
  */
 @Path("/")
-public class EanService {
+public class BookingService {
 
     /**
      * Camel intercepts this. Receives a request with one URL-based argument and
