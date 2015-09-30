@@ -1,3 +1,4 @@
+
 package com.sabre.services.stl_header.v120;
 
 import java.math.BigInteger;
@@ -7,16 +8,14 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 
+
 /**
- * Tracking Identifier is an identifier intended for use to a set of related
- * items and provide an optional sequence number for the items.
+ * Tracking Identifier is an identifier intended for use to a set of related items and provide an 
+ * 			optional sequence number for the items.
  * 
- * <p>
- * Clase Java para TrackingID complex type.
+ * <p>Java class for TrackingID complex type.
  * 
- * <p>
- * El siguiente fragmento de esquema especifica el contenido que se espera que
- * haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="TrackingID"&gt;
@@ -31,7 +30,9 @@ import javax.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TrackingID", propOrder = { "value" })
+@XmlType(name = "TrackingID", propOrder = {
+    "value"
+})
 public class TrackingID {
 
     @XmlValue
@@ -40,42 +41,48 @@ public class TrackingID {
     protected BigInteger seq;
 
     /**
-     * Obtiene el valor de la propiedad value.
+     * Gets the value of the value property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getValue() {
         return value;
     }
 
     /**
-     * Define el valor de la propiedad value.
+     * Sets the value of the value property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setValue(String value) {
         this.value = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad seq.
+     * Gets the value of the seq property.
      * 
-     * @return possible object is {@link BigInteger }
-     * 
+     * @return
+     *     possible object is
+     *     {@link BigInteger }
+     *     
      */
     public BigInteger getSeq() {
         return seq;
     }
 
     /**
-     * Define el valor de la propiedad seq.
+     * Sets the value of the seq property.
      * 
      * @param value
-     *            allowed object is {@link BigInteger }
-     * 
+     *     allowed object is
+     *     {@link BigInteger }
+     *     
      */
     public void setSeq(BigInteger value) {
         this.seq = value;

@@ -1,3 +1,4 @@
+
 package com.sabre.services.stl_header.v120;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -7,13 +8,11 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
+
 /**
- * <p>
- * Clase Java para ProblemBase complex type.
+ * <p>Java class for ProblemBase complex type.
  * 
- * <p>
- * El siguiente fragmento de esquema especifica el contenido que se espera que
- * haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="ProblemBase"&gt;
@@ -44,63 +43,72 @@ public class ProblemBase {
     protected XMLGregorianCalendar timeStamp;
 
     /**
-     * Obtiene el valor de la propiedad type.
+     * Gets the value of the type property.
      * 
-     * @return possible object is {@link ErrorType }
-     * 
+     * @return
+     *     possible object is
+     *     {@link ErrorType }
+     *     
      */
     public ErrorType getType() {
         return type;
     }
 
     /**
-     * Define el valor de la propiedad type.
+     * Sets the value of the type property.
      * 
      * @param value
-     *            allowed object is {@link ErrorType }
-     * 
+     *     allowed object is
+     *     {@link ErrorType }
+     *     
      */
     public void setType(ErrorType value) {
         this.type = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad status.
+     * Gets the value of the status property.
      * 
-     * @return possible object is {@link CompletionCodes }
-     * 
+     * @return
+     *     possible object is
+     *     {@link CompletionCodes }
+     *     
      */
     public CompletionCodes getStatus() {
         return status;
     }
 
     /**
-     * Define el valor de la propiedad status.
+     * Sets the value of the status property.
      * 
      * @param value
-     *            allowed object is {@link CompletionCodes }
-     * 
+     *     allowed object is
+     *     {@link CompletionCodes }
+     *     
      */
     public void setStatus(CompletionCodes value) {
         this.status = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad timeStamp.
+     * Gets the value of the timeStamp property.
      * 
-     * @return possible object is {@link XMLGregorianCalendar }
-     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
     public XMLGregorianCalendar getTimeStamp() {
         return timeStamp;
     }
 
     /**
-     * Define el valor de la propiedad timeStamp.
+     * Sets the value of the timeStamp property.
      * 
      * @param value
-     *            allowed object is {@link XMLGregorianCalendar }
-     * 
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
     public void setTimeStamp(XMLGregorianCalendar value) {
         this.timeStamp = value;

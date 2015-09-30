@@ -1,3 +1,4 @@
+
 package org.ebxml.namespaces.messageheader;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -7,13 +8,11 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Clase Java para anonymous complex type.
+ * <p>Java class for anonymous complex type.
  * 
- * <p>
- * El siguiente fragmento de esquema especifica el contenido que se espera que
- * haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -40,42 +39,48 @@ public class Schema {
     protected String version;
 
     /**
-     * Obtiene el valor de la propiedad location.
+     * Gets the value of the location property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getLocation() {
         return location;
     }
 
     /**
-     * Define el valor de la propiedad location.
+     * Sets the value of the location property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setLocation(String value) {
         this.location = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad version.
+     * Gets the value of the version property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getVersion() {
         return version;
     }
 
     /**
-     * Define el valor de la propiedad version.
+     * Sets the value of the version property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setVersion(String value) {
         this.version = value;

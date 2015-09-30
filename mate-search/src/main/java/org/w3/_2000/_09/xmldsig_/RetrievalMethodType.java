@@ -1,3 +1,4 @@
+
 package org.w3._2000._09.xmldsig_;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -7,13 +8,11 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Clase Java para RetrievalMethodType complex type.
+ * <p>Java class for RetrievalMethodType complex type.
  * 
- * <p>
- * El siguiente fragmento de esquema especifica el contenido que se espera que
- * haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="RetrievalMethodType"&gt;
@@ -32,7 +31,9 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "RetrievalMethodType", propOrder = { "transforms" })
+@XmlType(name = "RetrievalMethodType", propOrder = {
+    "transforms"
+})
 public class RetrievalMethodType {
 
     @XmlElement(name = "Transforms")
@@ -45,63 +46,72 @@ public class RetrievalMethodType {
     protected String type;
 
     /**
-     * Obtiene el valor de la propiedad transforms.
+     * Gets the value of the transforms property.
      * 
-     * @return possible object is {@link TransformsType }
-     * 
+     * @return
+     *     possible object is
+     *     {@link TransformsType }
+     *     
      */
     public TransformsType getTransforms() {
         return transforms;
     }
 
     /**
-     * Define el valor de la propiedad transforms.
+     * Sets the value of the transforms property.
      * 
      * @param value
-     *            allowed object is {@link TransformsType }
-     * 
+     *     allowed object is
+     *     {@link TransformsType }
+     *     
      */
     public void setTransforms(TransformsType value) {
         this.transforms = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad uri.
+     * Gets the value of the uri property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getURI() {
         return uri;
     }
 
     /**
-     * Define el valor de la propiedad uri.
+     * Sets the value of the uri property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setURI(String value) {
         this.uri = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad type.
+     * Gets the value of the type property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getType() {
         return type;
     }
 
     /**
-     * Define el valor de la propiedad type.
+     * Sets the value of the type property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setType(String value) {
         this.type = value;

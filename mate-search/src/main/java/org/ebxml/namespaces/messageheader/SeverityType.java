@@ -1,18 +1,16 @@
+
 package org.ebxml.namespaces.messageheader;
 
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Clase Java para severity.type.
+ * <p>Java class for severity.type.
  * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
- * El siguiente fragmento de esquema especifica el contenido que se espera que
- * haya en esta clase.
- * <p>
- * 
  * <pre>
  * &lt;simpleType name="severity.type"&gt;
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
@@ -28,9 +26,9 @@ import javax.xml.bind.annotation.XmlType;
 public enum SeverityType {
 
     @XmlEnumValue("Warning")
-    WARNING("Warning"), @XmlEnumValue("Error")
+    WARNING("Warning"),
+    @XmlEnumValue("Error")
     ERROR("Error");
-
     private final String value;
 
     SeverityType(String v) {
@@ -42,7 +40,7 @@ public enum SeverityType {
     }
 
     public static SeverityType fromValue(String v) {
-        for (SeverityType c : SeverityType.values()) {
+        for (SeverityType c: SeverityType.values()) {
             if (c.value.equals(v)) {
                 return c;
             }

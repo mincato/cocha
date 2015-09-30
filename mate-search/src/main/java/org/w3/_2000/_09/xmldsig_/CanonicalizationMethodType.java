@@ -1,3 +1,4 @@
+
 package org.w3._2000._09.xmldsig_;
 
 import java.util.ArrayList;
@@ -10,13 +11,11 @@ import javax.xml.bind.annotation.XmlMixed;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Clase Java para CanonicalizationMethodType complex type.
+ * <p>Java class for CanonicalizationMethodType complex type.
  * 
- * <p>
- * El siguiente fragmento de esquema especifica el contenido que se espera que
- * haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="CanonicalizationMethodType"&gt;
@@ -34,7 +33,9 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "CanonicalizationMethodType", propOrder = { "content" })
+@XmlType(name = "CanonicalizationMethodType", propOrder = {
+    "content"
+})
 public class CanonicalizationMethodType {
 
     @XmlMixed
@@ -48,22 +49,22 @@ public class CanonicalizationMethodType {
      * Gets the value of the content property.
      * 
      * <p>
-     * This accessor method returns a reference to the live list, not a
-     * snapshot. Therefore any modification you make to the returned list will
-     * be present inside the JAXB object. This is why there is not a
-     * <CODE>set</CODE> method for the content property.
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the content property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * 
      * <pre>
-     * getContent().add(newItem);
+     *    getContent().add(newItem);
      * </pre>
      * 
      * 
      * <p>
-     * Objects of the following type(s) are allowed in the list {@link String }
+     * Objects of the following type(s) are allowed in the list
      * {@link Object }
+     * {@link String }
      * 
      * 
      */
@@ -75,21 +76,24 @@ public class CanonicalizationMethodType {
     }
 
     /**
-     * Obtiene el valor de la propiedad algorithm.
+     * Gets the value of the algorithm property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getAlgorithm() {
         return algorithm;
     }
 
     /**
-     * Define el valor de la propiedad algorithm.
+     * Sets the value of the algorithm property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setAlgorithm(String value) {
         this.algorithm = value;

@@ -1,3 +1,4 @@
+
 package com.sabre.services.stl_header.v120;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -6,13 +7,11 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Clase Java para Diagnostics complex type.
+ * <p>Java class for Diagnostics complex type.
  * 
- * <p>
- * El siguiente fragmento de esquema especifica el contenido que se espera que
- * haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="Diagnostics"&gt;
@@ -31,7 +30,11 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Diagnostics", propOrder = { "level", "data", "diagnostic" })
+@XmlType(name = "Diagnostics", propOrder = {
+    "level",
+    "data",
+    "diagnostic"
+})
 public class Diagnostics {
 
     @XmlElement(name = "Level")
@@ -43,63 +46,72 @@ public class Diagnostics {
     protected DiagnosticResults diagnostic;
 
     /**
-     * Obtiene el valor de la propiedad level.
+     * Gets the value of the level property.
      * 
-     * @return possible object is {@link DiagnosticLevels }
-     * 
+     * @return
+     *     possible object is
+     *     {@link DiagnosticLevels }
+     *     
      */
     public DiagnosticLevels getLevel() {
         return level;
     }
 
     /**
-     * Define el valor de la propiedad level.
+     * Sets the value of the level property.
      * 
      * @param value
-     *            allowed object is {@link DiagnosticLevels }
-     * 
+     *     allowed object is
+     *     {@link DiagnosticLevels }
+     *     
      */
     public void setLevel(DiagnosticLevels value) {
         this.level = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad data.
+     * Gets the value of the data property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getData() {
         return data;
     }
 
     /**
-     * Define el valor de la propiedad data.
+     * Sets the value of the data property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setData(String value) {
         this.data = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad diagnostic.
+     * Gets the value of the diagnostic property.
      * 
-     * @return possible object is {@link DiagnosticResults }
-     * 
+     * @return
+     *     possible object is
+     *     {@link DiagnosticResults }
+     *     
      */
     public DiagnosticResults getDiagnostic() {
         return diagnostic;
     }
 
     /**
-     * Define el valor de la propiedad diagnostic.
+     * Sets the value of the diagnostic property.
      * 
      * @param value
-     *            allowed object is {@link DiagnosticResults }
-     * 
+     *     allowed object is
+     *     {@link DiagnosticResults }
+     *     
      */
     public void setDiagnostic(DiagnosticResults value) {
         this.diagnostic = value;

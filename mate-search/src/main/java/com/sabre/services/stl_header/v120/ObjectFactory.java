@@ -1,3 +1,4 @@
+
 package com.sabre.services.stl_header.v120;
 
 import javax.xml.bind.JAXBElement;
@@ -5,36 +6,34 @@ import javax.xml.bind.annotation.XmlElementDecl;
 import javax.xml.bind.annotation.XmlRegistry;
 import javax.xml.namespace.QName;
 
+
 /**
- * This object contains factory methods for each Java content interface and Java
- * element interface generated in the com.sabre.services.stl_header.v120
- * package.
- * <p>
- * An ObjectFactory allows you to programatically construct new instances of the
- * Java representation for XML content. The Java representation of XML content
- * can consist of schema derived interfaces and classes representing the binding
- * of schema type definitions, element declarations and model groups. Factory
- * methods for each of these are provided in this class.
+ * This object contains factory methods for each 
+ * Java content interface and Java element interface 
+ * generated in the com.sabre.services.stl_header.v120 package. 
+ * <p>An ObjectFactory allows you to programatically 
+ * construct new instances of the Java representation 
+ * for XML content. The Java representation of XML 
+ * content can consist of schema derived interfaces 
+ * and classes representing the binding of schema 
+ * type definitions, element declarations and model 
+ * groups.  Factory methods for each of these are 
+ * provided in this class.
  * 
  */
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _Diagnostics_QNAME = new QName("http://services.sabre.com/STL_Header/v120",
-            "Diagnostics");
-    private final static QName _Identification_QNAME = new QName("http://services.sabre.com/STL_Header/v120",
-            "Identification");
-    private final static QName _ResultSummary_QNAME = new QName("http://services.sabre.com/STL_Header/v120",
-            "ResultSummary");
+    private final static QName _Diagnostics_QNAME = new QName("http://services.sabre.com/STL_Header/v120", "Diagnostics");
+    private final static QName _Identification_QNAME = new QName("http://services.sabre.com/STL_Header/v120", "Identification");
+    private final static QName _ResultSummary_QNAME = new QName("http://services.sabre.com/STL_Header/v120", "ResultSummary");
     private final static QName _Security_QNAME = new QName("http://services.sabre.com/STL_Header/v120", "Security");
     private final static QName _Service_QNAME = new QName("http://services.sabre.com/STL_Header/v120", "Service");
     private final static QName _Traces_QNAME = new QName("http://services.sabre.com/STL_Header/v120", "Traces");
-    private final static QName _SabreHeader_QNAME = new QName("http://services.sabre.com/STL_Header/v120",
-            "SabreHeader");
+    private final static QName _SabreHeader_QNAME = new QName("http://services.sabre.com/STL_Header/v120", "SabreHeader");
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of
-     * schema derived classes for package: com.sabre.services.stl_header.v120
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.sabre.services.stl_header.v120
      * 
      */
     public ObjectFactory() {
@@ -153,8 +152,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Diagnostics }
-     * {@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Diagnostics }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://services.sabre.com/STL_Header/v120", name = "Diagnostics")
@@ -163,8 +161,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Identification }
-     * {@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Identification }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://services.sabre.com/STL_Header/v120", name = "Identification")
@@ -173,8 +170,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ResultSummary }
-     * {@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ResultSummary }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://services.sabre.com/STL_Header/v120", name = "ResultSummary")
@@ -183,8 +179,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Security }
-     * {@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Security }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://services.sabre.com/STL_Header/v120", name = "Security")
@@ -193,7 +188,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Service }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Service }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://services.sabre.com/STL_Header/v120", name = "Service")
@@ -202,7 +197,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Traces }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Traces }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://services.sabre.com/STL_Header/v120", name = "Traces")
@@ -211,8 +206,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SabreHeader }
-     * {@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SabreHeader }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://services.sabre.com/STL_Header/v120", name = "SabreHeader")

@@ -1,3 +1,4 @@
+
 package org.ebxml.namespaces.messageheader;
 
 import java.util.ArrayList;
@@ -19,13 +20,11 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.namespace.QName;
 import org.w3c.dom.Element;
 
+
 /**
- * <p>
- * Clase Java para anonymous complex type.
+ * <p>Java class for anonymous complex type.
  * 
- * <p>
- * El siguiente fragmento de esquema especifica el contenido que se espera que
- * haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -49,7 +48,13 @@ import org.w3c.dom.Element;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = { "timestamp", "refToMessageId", "from", "reference", "any" })
+@XmlType(name = "", propOrder = {
+    "timestamp",
+    "refToMessageId",
+    "from",
+    "reference",
+    "any"
+})
 @XmlRootElement(name = "Acknowledgment")
 public class Acknowledgment {
 
@@ -77,63 +82,72 @@ public class Acknowledgment {
     private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
     /**
-     * Obtiene el valor de la propiedad timestamp.
+     * Gets the value of the timestamp property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getTimestamp() {
         return timestamp;
     }
 
     /**
-     * Define el valor de la propiedad timestamp.
+     * Sets the value of the timestamp property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setTimestamp(String value) {
         this.timestamp = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad refToMessageId.
+     * Gets the value of the refToMessageId property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getRefToMessageId() {
         return refToMessageId;
     }
 
     /**
-     * Define el valor de la propiedad refToMessageId.
+     * Sets the value of the refToMessageId property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setRefToMessageId(String value) {
         this.refToMessageId = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad from.
+     * Gets the value of the from property.
      * 
-     * @return possible object is {@link From }
-     * 
+     * @return
+     *     possible object is
+     *     {@link From }
+     *     
      */
     public From getFrom() {
         return from;
     }
 
     /**
-     * Define el valor de la propiedad from.
+     * Sets the value of the from property.
      * 
      * @param value
-     *            allowed object is {@link From }
-     * 
+     *     allowed object is
+     *     {@link From }
+     *     
      */
     public void setFrom(From value) {
         this.from = value;
@@ -143,16 +157,15 @@ public class Acknowledgment {
      * Gets the value of the reference property.
      * 
      * <p>
-     * This accessor method returns a reference to the live list, not a
-     * snapshot. Therefore any modification you make to the returned list will
-     * be present inside the JAXB object. This is why there is not a
-     * <CODE>set</CODE> method for the reference property.
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the reference property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * 
      * <pre>
-     * getReference().add(newItem);
+     *    getReference().add(newItem);
      * </pre>
      * 
      * 
@@ -173,22 +186,22 @@ public class Acknowledgment {
      * Gets the value of the any property.
      * 
      * <p>
-     * This accessor method returns a reference to the live list, not a
-     * snapshot. Therefore any modification you make to the returned list will
-     * be present inside the JAXB object. This is why there is not a
-     * <CODE>set</CODE> method for the any property.
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the any property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * 
      * <pre>
-     * getAny().add(newItem);
+     *    getAny().add(newItem);
      * </pre>
      * 
      * 
      * <p>
-     * Objects of the following type(s) are allowed in the list {@link Element }
+     * Objects of the following type(s) are allowed in the list
      * {@link Object }
+     * {@link Element }
      * 
      * 
      */
@@ -200,81 +213,90 @@ public class Acknowledgment {
     }
 
     /**
-     * Obtiene el valor de la propiedad actor.
+     * Gets the value of the actor property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getActor() {
         return actor;
     }
 
     /**
-     * Define el valor de la propiedad actor.
+     * Sets the value of the actor property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setActor(String value) {
         this.actor = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad id.
+     * Gets the value of the id property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getId() {
         return id;
     }
 
     /**
-     * Define el valor de la propiedad id.
+     * Sets the value of the id property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setId(String value) {
         this.id = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad version.
+     * Gets the value of the version property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getVersion() {
         return version;
     }
 
     /**
-     * Define el valor de la propiedad version.
+     * Sets the value of the version property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setVersion(String value) {
         this.version = value;
     }
 
     /**
-     * Gets a map that contains attributes that aren't bound to any typed
-     * property on this class.
+     * Gets a map that contains attributes that aren't bound to any typed property on this class.
      * 
      * <p>
-     * the map is keyed by the name of the attribute and the value is the string
-     * value of the attribute.
+     * the map is keyed by the name of the attribute and 
+     * the value is the string value of the attribute.
      * 
-     * the map returned by this method is live, and you can add new attribute by
-     * updating the map directly. Because of this design, there's no setter.
+     * the map returned by this method is live, and you can add new attribute
+     * by updating the map directly. Because of this design, there's no setter.
      * 
      * 
-     * @return always non-null
+     * @return
+     *     always non-null
      */
     public Map<QName, String> getOtherAttributes() {
         return otherAttributes;

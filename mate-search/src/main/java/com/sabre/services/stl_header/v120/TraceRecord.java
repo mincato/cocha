@@ -1,3 +1,4 @@
+
 package com.sabre.services.stl_header.v120;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -8,16 +9,14 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 import javax.xml.datatype.XMLGregorianCalendar;
 
+
 /**
- * Record for all systems (consumer, proxies and gateways, providers) to use to
- * trace the message. The value is the common system name.
+ * Record for all systems (consumer, proxies and gateways, providers) to use to trace the message. 
+ * 			The value is the common system name.
  * 
- * <p>
- * Clase Java para TraceRecord complex type.
+ * <p>Java class for TraceRecord complex type.
  * 
- * <p>
- * El siguiente fragmento de esquema especifica el contenido que se espera que
- * haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="TraceRecord"&gt;
@@ -39,7 +38,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TraceRecord", propOrder = { "value" })
+@XmlType(name = "TraceRecord", propOrder = {
+    "value"
+})
 public class TraceRecord {
 
     @XmlValue
@@ -65,189 +66,216 @@ public class TraceRecord {
     protected TraceRole role;
 
     /**
-     * Obtiene el valor de la propiedad value.
+     * Gets the value of the value property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getValue() {
         return value;
     }
 
     /**
-     * Define el valor de la propiedad value.
+     * Sets the value of the value property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setValue(String value) {
         this.value = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad key.
+     * Gets the value of the key property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getKey() {
         return key;
     }
 
     /**
-     * Define el valor de la propiedad key.
+     * Sets the value of the key property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setKey(String value) {
         this.key = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad start.
+     * Gets the value of the start property.
      * 
-     * @return possible object is {@link XMLGregorianCalendar }
-     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
     public XMLGregorianCalendar getStart() {
         return start;
     }
 
     /**
-     * Define el valor de la propiedad start.
+     * Sets the value of the start property.
      * 
      * @param value
-     *            allowed object is {@link XMLGregorianCalendar }
-     * 
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
     public void setStart(XMLGregorianCalendar value) {
         this.start = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad end.
+     * Gets the value of the end property.
      * 
-     * @return possible object is {@link XMLGregorianCalendar }
-     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
     public XMLGregorianCalendar getEnd() {
         return end;
     }
 
     /**
-     * Define el valor de la propiedad end.
+     * Sets the value of the end property.
      * 
      * @param value
-     *            allowed object is {@link XMLGregorianCalendar }
-     * 
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
     public void setEnd(XMLGregorianCalendar value) {
         this.end = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad appInstance.
+     * Gets the value of the appInstance property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getAppInstance() {
         return appInstance;
     }
 
     /**
-     * Define el valor de la propiedad appInstance.
+     * Sets the value of the appInstance property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setAppInstance(String value) {
         this.appInstance = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad cluster.
+     * Gets the value of the cluster property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getCluster() {
         return cluster;
     }
 
     /**
-     * Define el valor de la propiedad cluster.
+     * Sets the value of the cluster property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setCluster(String value) {
         this.cluster = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad host.
+     * Gets the value of the host property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getHost() {
         return host;
     }
 
     /**
-     * Define el valor de la propiedad host.
+     * Sets the value of the host property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setHost(String value) {
         this.host = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad targetURI.
+     * Gets the value of the targetURI property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getTargetURI() {
         return targetURI;
     }
 
     /**
-     * Define el valor de la propiedad targetURI.
+     * Sets the value of the targetURI property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setTargetURI(String value) {
         this.targetURI = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad role.
+     * Gets the value of the role property.
      * 
-     * @return possible object is {@link TraceRole }
-     * 
+     * @return
+     *     possible object is
+     *     {@link TraceRole }
+     *     
      */
     public TraceRole getRole() {
         return role;
     }
 
     /**
-     * Define el valor de la propiedad role.
+     * Sets the value of the role property.
      * 
      * @param value
-     *            allowed object is {@link TraceRole }
-     * 
+     *     allowed object is
+     *     {@link TraceRole }
+     *     
      */
     public void setRole(TraceRole value) {
         this.role = value;

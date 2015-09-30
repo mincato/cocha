@@ -1,3 +1,4 @@
+
 package com.sabre.services.stl_header.v120;
 
 import java.math.BigInteger;
@@ -8,13 +9,11 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 
+
 /**
- * <p>
- * Clase Java para Service complex type.
+ * <p>Java class for Service complex type.
  * 
- * <p>
- * El siguiente fragmento de esquema especifica el contenido que se espera que
- * haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="Service"&gt;
@@ -31,7 +30,9 @@ import javax.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Service", propOrder = { "value" })
+@XmlType(name = "Service", propOrder = {
+    "value"
+})
 public class Service {
 
     @XmlValue
@@ -45,85 +46,96 @@ public class Service {
     protected BigInteger ttl;
 
     /**
-     * Same as STL Text.Short - A field of text characters and no other
-     * constraints.
+     * Same as STL Text.Short - A field of text characters and no other constraints.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getValue() {
         return value;
     }
 
     /**
-     * Define el valor de la propiedad value.
+     * Sets the value of the value property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setValue(String value) {
         this.value = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad operation.
+     * Gets the value of the operation property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getOperation() {
         return operation;
     }
 
     /**
-     * Define el valor de la propiedad operation.
+     * Sets the value of the operation property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setOperation(String value) {
         this.operation = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad version.
+     * Gets the value of the version property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getVersion() {
         return version;
     }
 
     /**
-     * Define el valor de la propiedad version.
+     * Sets the value of the version property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setVersion(String value) {
         this.version = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad ttl.
+     * Gets the value of the ttl property.
      * 
-     * @return possible object is {@link BigInteger }
-     * 
+     * @return
+     *     possible object is
+     *     {@link BigInteger }
+     *     
      */
     public BigInteger getTtl() {
         return ttl;
     }
 
     /**
-     * Define el valor de la propiedad ttl.
+     * Sets the value of the ttl property.
      * 
      * @param value
-     *            allowed object is {@link BigInteger }
-     * 
+     *     allowed object is
+     *     {@link BigInteger }
+     *     
      */
     public void setTtl(BigInteger value) {
         this.ttl = value;

@@ -1,3 +1,4 @@
+
 package com.sabre.webservices.sabrexml._2011._10;
 
 import java.util.ArrayList;
@@ -10,13 +11,11 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import com.sabre.services.stl.v01.ApplicationResults;
 
+
 /**
- * <p>
- * Clase Java para anonymous complex type.
+ * <p>Java class for anonymous complex type.
  * 
- * <p>
- * El siguiente fragmento de esquema especifica el contenido que se espera que
- * haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -763,7 +762,12 @@ import com.sabre.services.stl.v01.ApplicationResults;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = { "applicationResults", "additionalAvail", "availabilityOptions", "cityList" })
+@XmlType(name = "", propOrder = {
+    "applicationResults",
+    "additionalAvail",
+    "availabilityOptions",
+    "cityList"
+})
 @XmlRootElement(name = "OTA_HotelAvailRS")
 public class OTAHotelAvailRS {
 
@@ -779,117 +783,130 @@ public class OTAHotelAvailRS {
     protected String version;
 
     /**
-     * Obtiene el valor de la propiedad applicationResults.
+     * Gets the value of the applicationResults property.
      * 
-     * @return possible object is {@link ApplicationResults }
-     * 
+     * @return
+     *     possible object is
+     *     {@link ApplicationResults }
+     *     
      */
     public ApplicationResults getApplicationResults() {
         return applicationResults;
     }
 
     /**
-     * Define el valor de la propiedad applicationResults.
+     * Sets the value of the applicationResults property.
      * 
      * @param value
-     *            allowed object is {@link ApplicationResults }
-     * 
+     *     allowed object is
+     *     {@link ApplicationResults }
+     *     
      */
     public void setApplicationResults(ApplicationResults value) {
         this.applicationResults = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad additionalAvail.
+     * Gets the value of the additionalAvail property.
      * 
-     * @return possible object is {@link OTAHotelAvailRS.AdditionalAvail }
-     * 
+     * @return
+     *     possible object is
+     *     {@link OTAHotelAvailRS.AdditionalAvail }
+     *     
      */
     public OTAHotelAvailRS.AdditionalAvail getAdditionalAvail() {
         return additionalAvail;
     }
 
     /**
-     * Define el valor de la propiedad additionalAvail.
+     * Sets the value of the additionalAvail property.
      * 
      * @param value
-     *            allowed object is {@link OTAHotelAvailRS.AdditionalAvail }
-     * 
+     *     allowed object is
+     *     {@link OTAHotelAvailRS.AdditionalAvail }
+     *     
      */
     public void setAdditionalAvail(OTAHotelAvailRS.AdditionalAvail value) {
         this.additionalAvail = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad availabilityOptions.
+     * Gets the value of the availabilityOptions property.
      * 
-     * @return possible object is {@link OTAHotelAvailRS.AvailabilityOptions }
-     * 
+     * @return
+     *     possible object is
+     *     {@link OTAHotelAvailRS.AvailabilityOptions }
+     *     
      */
     public OTAHotelAvailRS.AvailabilityOptions getAvailabilityOptions() {
         return availabilityOptions;
     }
 
     /**
-     * Define el valor de la propiedad availabilityOptions.
+     * Sets the value of the availabilityOptions property.
      * 
      * @param value
-     *            allowed object is {@link OTAHotelAvailRS.AvailabilityOptions }
-     * 
+     *     allowed object is
+     *     {@link OTAHotelAvailRS.AvailabilityOptions }
+     *     
      */
     public void setAvailabilityOptions(OTAHotelAvailRS.AvailabilityOptions value) {
         this.availabilityOptions = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad cityList.
+     * Gets the value of the cityList property.
      * 
-     * @return possible object is {@link OTAHotelAvailRS.CityList }
-     * 
+     * @return
+     *     possible object is
+     *     {@link OTAHotelAvailRS.CityList }
+     *     
      */
     public OTAHotelAvailRS.CityList getCityList() {
         return cityList;
     }
 
     /**
-     * Define el valor de la propiedad cityList.
+     * Sets the value of the cityList property.
      * 
      * @param value
-     *            allowed object is {@link OTAHotelAvailRS.CityList }
-     * 
+     *     allowed object is
+     *     {@link OTAHotelAvailRS.CityList }
+     *     
      */
     public void setCityList(OTAHotelAvailRS.CityList value) {
         this.cityList = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad version.
+     * Gets the value of the version property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getVersion() {
         return version;
     }
 
     /**
-     * Define el valor de la propiedad version.
+     * Sets the value of the version property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setVersion(String value) {
         this.version = value;
     }
 
+
     /**
-     * <p>
-     * Clase Java para anonymous complex type.
+     * <p>Java class for anonymous complex type.
      * 
-     * <p>
-     * El siguiente fragmento de esquema especifica el contenido que se espera
-     * que haya en esta clase.
+     * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
      * &lt;complexType&gt;
@@ -911,21 +928,24 @@ public class OTAHotelAvailRS {
         protected Boolean ind;
 
         /**
-         * Obtiene el valor de la propiedad ind.
+         * Gets the value of the ind property.
          * 
-         * @return possible object is {@link Boolean }
-         * 
+         * @return
+         *     possible object is
+         *     {@link Boolean }
+         *     
          */
         public Boolean isInd() {
             return ind;
         }
 
         /**
-         * Define el valor de la propiedad ind.
+         * Sets the value of the ind property.
          * 
          * @param value
-         *            allowed object is {@link Boolean }
-         * 
+         *     allowed object is
+         *     {@link Boolean }
+         *     
          */
         public void setInd(Boolean value) {
             this.ind = value;
@@ -933,13 +953,11 @@ public class OTAHotelAvailRS {
 
     }
 
+
     /**
-     * <p>
-     * Clase Java para anonymous complex type.
+     * <p>Java class for anonymous complex type.
      * 
-     * <p>
-     * El siguiente fragmento de esquema especifica el contenido que se espera
-     * que haya en esta clase.
+     * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
      * &lt;complexType&gt;
@@ -1642,7 +1660,9 @@ public class OTAHotelAvailRS {
      * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = { "availabilityOption" })
+    @XmlType(name = "", propOrder = {
+        "availabilityOption"
+    })
     public static class AvailabilityOptions {
 
         @XmlElement(name = "AvailabilityOption")
@@ -1652,16 +1672,15 @@ public class OTAHotelAvailRS {
          * Gets the value of the availabilityOption property.
          * 
          * <p>
-         * This accessor method returns a reference to the live list, not a
-         * snapshot. Therefore any modification you make to the returned list
-         * will be present inside the JAXB object. This is why there is not a
-         * <CODE>set</CODE> method for the availabilityOption property.
+         * This accessor method returns a reference to the live list,
+         * not a snapshot. Therefore any modification you make to the
+         * returned list will be present inside the JAXB object.
+         * This is why there is not a <CODE>set</CODE> method for the availabilityOption property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
-         * 
          * <pre>
-         * getAvailabilityOption().add(newItem);
+         *    getAvailabilityOption().add(newItem);
          * </pre>
          * 
          * 
@@ -1678,13 +1697,11 @@ public class OTAHotelAvailRS {
             return this.availabilityOption;
         }
 
+
         /**
-         * <p>
-         * Clase Java para anonymous complex type.
+         * <p>Java class for anonymous complex type.
          * 
-         * <p>
-         * El siguiente fragmento de esquema especifica el contenido que se
-         * espera que haya en esta clase.
+         * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
          * &lt;complexType&gt;
@@ -2377,7 +2394,9 @@ public class OTAHotelAvailRS {
          * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
-        @XmlType(name = "", propOrder = { "basicPropertyInfo" })
+        @XmlType(name = "", propOrder = {
+            "basicPropertyInfo"
+        })
         public static class AvailabilityOption {
 
             @XmlElement(name = "BasicPropertyInfo")
@@ -2386,57 +2405,58 @@ public class OTAHotelAvailRS {
             protected String rph;
 
             /**
-             * Obtiene el valor de la propiedad basicPropertyInfo.
+             * Gets the value of the basicPropertyInfo property.
              * 
-             * @return possible object is
-             *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo }
-             * 
+             * @return
+             *     possible object is
+             *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo }
+             *     
              */
             public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo getBasicPropertyInfo() {
                 return basicPropertyInfo;
             }
 
             /**
-             * Define el valor de la propiedad basicPropertyInfo.
+             * Sets the value of the basicPropertyInfo property.
              * 
              * @param value
-             *            allowed object is
-             *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo }
-             * 
+             *     allowed object is
+             *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo }
+             *     
              */
-            public void setBasicPropertyInfo(
-                    OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo value) {
+            public void setBasicPropertyInfo(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo value) {
                 this.basicPropertyInfo = value;
             }
 
             /**
-             * Obtiene el valor de la propiedad rph.
+             * Gets the value of the rph property.
              * 
-             * @return possible object is {@link String }
-             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getRPH() {
                 return rph;
             }
 
             /**
-             * Define el valor de la propiedad rph.
+             * Sets the value of the rph property.
              * 
              * @param value
-             *            allowed object is {@link String }
-             * 
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setRPH(String value) {
                 this.rph = value;
             }
 
+
             /**
-             * <p>
-             * Clase Java para anonymous complex type.
+             * <p>Java class for anonymous complex type.
              * 
-             * <p>
-             * El siguiente fragmento de esquema especifica el contenido que se
-             * espera que haya en esta clase.
+             * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
              * &lt;complexType&gt;
@@ -3118,9 +3138,19 @@ public class OTAHotelAvailRS {
              * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
-            @XmlType(name = "", propOrder = { "address", "contactNumbers", "contractualRateCodeMatch", "directConnect",
-                    "locationDescription", "negotiatedRateCodeMatch", "property", "propertyOptionInfo", "rateRange",
-                    "roomRate", "specialOffers" })
+            @XmlType(name = "", propOrder = {
+                "address",
+                "contactNumbers",
+                "contractualRateCodeMatch",
+                "directConnect",
+                "locationDescription",
+                "negotiatedRateCodeMatch",
+                "property",
+                "propertyOptionInfo",
+                "rateRange",
+                "roomRate",
+                "specialOffers"
+            })
             public static class BasicPropertyInfo {
 
                 @XmlElement(name = "Address")
@@ -3165,138 +3195,144 @@ public class OTAHotelAvailRS {
                 protected String longitude;
 
                 /**
-                 * Obtiene el valor de la propiedad address.
+                 * Gets the value of the address property.
                  * 
-                 * @return possible object is
-                 *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.Address }
-                 * 
+                 * @return
+                 *     possible object is
+                 *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.Address }
+                 *     
                  */
                 public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.Address getAddress() {
                     return address;
                 }
 
                 /**
-                 * Define el valor de la propiedad address.
+                 * Sets the value of the address property.
                  * 
                  * @param value
-                 *            allowed object is
-                 *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.Address }
-                 * 
+                 *     allowed object is
+                 *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.Address }
+                 *     
                  */
-                public void setAddress(
-                        OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.Address value) {
+                public void setAddress(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.Address value) {
                     this.address = value;
                 }
 
                 /**
-                 * Obtiene el valor de la propiedad contactNumbers.
+                 * Gets the value of the contactNumbers property.
                  * 
-                 * @return possible object is
-                 *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.ContactNumbers }
-                 * 
+                 * @return
+                 *     possible object is
+                 *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.ContactNumbers }
+                 *     
                  */
                 public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.ContactNumbers getContactNumbers() {
                     return contactNumbers;
                 }
 
                 /**
-                 * Define el valor de la propiedad contactNumbers.
+                 * Sets the value of the contactNumbers property.
                  * 
                  * @param value
-                 *            allowed object is
-                 *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.ContactNumbers }
-                 * 
+                 *     allowed object is
+                 *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.ContactNumbers }
+                 *     
                  */
-                public void setContactNumbers(
-                        OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.ContactNumbers value) {
+                public void setContactNumbers(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.ContactNumbers value) {
                     this.contactNumbers = value;
                 }
 
                 /**
-                 * Obtiene el valor de la propiedad contractualRateCodeMatch.
+                 * Gets the value of the contractualRateCodeMatch property.
                  * 
-                 * @return possible object is {@link String }
-                 * 
+                 * @return
+                 *     possible object is
+                 *     {@link String }
+                 *     
                  */
                 public String getContractualRateCodeMatch() {
                     return contractualRateCodeMatch;
                 }
 
                 /**
-                 * Define el valor de la propiedad contractualRateCodeMatch.
+                 * Sets the value of the contractualRateCodeMatch property.
                  * 
                  * @param value
-                 *            allowed object is {@link String }
-                 * 
+                 *     allowed object is
+                 *     {@link String }
+                 *     
                  */
                 public void setContractualRateCodeMatch(String value) {
                     this.contractualRateCodeMatch = value;
                 }
 
                 /**
-                 * Obtiene el valor de la propiedad directConnect.
+                 * Gets the value of the directConnect property.
                  * 
-                 * @return possible object is
-                 *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect }
-                 * 
+                 * @return
+                 *     possible object is
+                 *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect }
+                 *     
                  */
                 public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect getDirectConnect() {
                     return directConnect;
                 }
 
                 /**
-                 * Define el valor de la propiedad directConnect.
+                 * Sets the value of the directConnect property.
                  * 
                  * @param value
-                 *            allowed object is
-                 *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect }
-                 * 
+                 *     allowed object is
+                 *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect }
+                 *     
                  */
-                public void setDirectConnect(
-                        OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect value) {
+                public void setDirectConnect(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect value) {
                     this.directConnect = value;
                 }
 
                 /**
-                 * Obtiene el valor de la propiedad locationDescription.
+                 * Gets the value of the locationDescription property.
                  * 
-                 * @return possible object is
-                 *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.LocationDescription }
-                 * 
+                 * @return
+                 *     possible object is
+                 *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.LocationDescription }
+                 *     
                  */
                 public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.LocationDescription getLocationDescription() {
                     return locationDescription;
                 }
 
                 /**
-                 * Define el valor de la propiedad locationDescription.
+                 * Sets the value of the locationDescription property.
                  * 
                  * @param value
-                 *            allowed object is
-                 *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.LocationDescription }
-                 * 
+                 *     allowed object is
+                 *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.LocationDescription }
+                 *     
                  */
-                public void setLocationDescription(
-                        OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.LocationDescription value) {
+                public void setLocationDescription(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.LocationDescription value) {
                     this.locationDescription = value;
                 }
 
                 /**
-                 * Obtiene el valor de la propiedad negotiatedRateCodeMatch.
+                 * Gets the value of the negotiatedRateCodeMatch property.
                  * 
-                 * @return possible object is {@link String }
-                 * 
+                 * @return
+                 *     possible object is
+                 *     {@link String }
+                 *     
                  */
                 public String getNegotiatedRateCodeMatch() {
                     return negotiatedRateCodeMatch;
                 }
 
                 /**
-                 * Define el valor de la propiedad negotiatedRateCodeMatch.
+                 * Sets the value of the negotiatedRateCodeMatch property.
                  * 
                  * @param value
-                 *            allowed object is {@link String }
-                 * 
+                 *     allowed object is
+                 *     {@link String }
+                 *     
                  */
                 public void setNegotiatedRateCodeMatch(String value) {
                     this.negotiatedRateCodeMatch = value;
@@ -3308,15 +3344,13 @@ public class OTAHotelAvailRS {
                  * <p>
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
-                 * returned list will be present inside the JAXB object. This is
-                 * why there is not a <CODE>set</CODE> method for the property
-                 * property.
+                 * returned list will be present inside the JAXB object.
+                 * This is why there is not a <CODE>set</CODE> method for the property property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
-                 * 
                  * <pre>
-                 * getProperty().add(newItem);
+                 *    getProperty().add(newItem);
                  * </pre>
                  * 
                  * 
@@ -3334,50 +3368,50 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Obtiene el valor de la propiedad propertyOptionInfo.
+                 * Gets the value of the propertyOptionInfo property.
                  * 
-                 * @return possible object is
-                 *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo }
-                 * 
+                 * @return
+                 *     possible object is
+                 *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo }
+                 *     
                  */
                 public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo getPropertyOptionInfo() {
                     return propertyOptionInfo;
                 }
 
                 /**
-                 * Define el valor de la propiedad propertyOptionInfo.
+                 * Sets the value of the propertyOptionInfo property.
                  * 
                  * @param value
-                 *            allowed object is
-                 *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo }
-                 * 
+                 *     allowed object is
+                 *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo }
+                 *     
                  */
-                public void setPropertyOptionInfo(
-                        OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo value) {
+                public void setPropertyOptionInfo(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo value) {
                     this.propertyOptionInfo = value;
                 }
 
                 /**
-                 * Obtiene el valor de la propiedad rateRange.
+                 * Gets the value of the rateRange property.
                  * 
-                 * @return possible object is
-                 *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RateRange }
-                 * 
+                 * @return
+                 *     possible object is
+                 *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RateRange }
+                 *     
                  */
                 public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RateRange getRateRange() {
                     return rateRange;
                 }
 
                 /**
-                 * Define el valor de la propiedad rateRange.
+                 * Sets the value of the rateRange property.
                  * 
                  * @param value
-                 *            allowed object is
-                 *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RateRange }
-                 * 
+                 *     allowed object is
+                 *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RateRange }
+                 *     
                  */
-                public void setRateRange(
-                        OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RateRange value) {
+                public void setRateRange(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RateRange value) {
                     this.rateRange = value;
                 }
 
@@ -3387,15 +3421,13 @@ public class OTAHotelAvailRS {
                  * <p>
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
-                 * returned list will be present inside the JAXB object. This is
-                 * why there is not a <CODE>set</CODE> method for the roomRate
-                 * property.
+                 * returned list will be present inside the JAXB object.
+                 * This is why there is not a <CODE>set</CODE> method for the roomRate property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
-                 * 
                  * <pre>
-                 * getRoomRate().add(newItem);
+                 *    getRoomRate().add(newItem);
                  * </pre>
                  * 
                  * 
@@ -3413,225 +3445,250 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Obtiene el valor de la propiedad specialOffers.
+                 * Gets the value of the specialOffers property.
                  * 
-                 * @return possible object is
-                 *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.SpecialOffers }
-                 * 
+                 * @return
+                 *     possible object is
+                 *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.SpecialOffers }
+                 *     
                  */
                 public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.SpecialOffers getSpecialOffers() {
                     return specialOffers;
                 }
 
                 /**
-                 * Define el valor de la propiedad specialOffers.
+                 * Sets the value of the specialOffers property.
                  * 
                  * @param value
-                 *            allowed object is
-                 *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.SpecialOffers }
-                 * 
+                 *     allowed object is
+                 *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.SpecialOffers }
+                 *     
                  */
-                public void setSpecialOffers(
-                        OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.SpecialOffers value) {
+                public void setSpecialOffers(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.SpecialOffers value) {
                     this.specialOffers = value;
                 }
 
                 /**
-                 * Obtiene el valor de la propiedad areaID.
+                 * Gets the value of the areaID property.
                  * 
-                 * @return possible object is {@link String }
-                 * 
+                 * @return
+                 *     possible object is
+                 *     {@link String }
+                 *     
                  */
                 public String getAreaID() {
                     return areaID;
                 }
 
                 /**
-                 * Define el valor de la propiedad areaID.
+                 * Sets the value of the areaID property.
                  * 
                  * @param value
-                 *            allowed object is {@link String }
-                 * 
+                 *     allowed object is
+                 *     {@link String }
+                 *     
                  */
                 public void setAreaID(String value) {
                     this.areaID = value;
                 }
 
                 /**
-                 * Obtiene el valor de la propiedad chainCode.
+                 * Gets the value of the chainCode property.
                  * 
-                 * @return possible object is {@link String }
-                 * 
+                 * @return
+                 *     possible object is
+                 *     {@link String }
+                 *     
                  */
                 public String getChainCode() {
                     return chainCode;
                 }
 
                 /**
-                 * Define el valor de la propiedad chainCode.
+                 * Sets the value of the chainCode property.
                  * 
                  * @param value
-                 *            allowed object is {@link String }
-                 * 
+                 *     allowed object is
+                 *     {@link String }
+                 *     
                  */
                 public void setChainCode(String value) {
                     this.chainCode = value;
                 }
 
                 /**
-                 * Obtiene el valor de la propiedad distance.
+                 * Gets the value of the distance property.
                  * 
-                 * @return possible object is {@link String }
-                 * 
+                 * @return
+                 *     possible object is
+                 *     {@link String }
+                 *     
                  */
                 public String getDistance() {
                     return distance;
                 }
 
                 /**
-                 * Define el valor de la propiedad distance.
+                 * Sets the value of the distance property.
                  * 
                  * @param value
-                 *            allowed object is {@link String }
-                 * 
+                 *     allowed object is
+                 *     {@link String }
+                 *     
                  */
                 public void setDistance(String value) {
                     this.distance = value;
                 }
 
                 /**
-                 * Obtiene el valor de la propiedad geoConfidenceLevel.
+                 * Gets the value of the geoConfidenceLevel property.
                  * 
-                 * @return possible object is {@link String }
-                 * 
+                 * @return
+                 *     possible object is
+                 *     {@link String }
+                 *     
                  */
                 public String getGEOConfidenceLevel() {
                     return geoConfidenceLevel;
                 }
 
                 /**
-                 * Define el valor de la propiedad geoConfidenceLevel.
+                 * Sets the value of the geoConfidenceLevel property.
                  * 
                  * @param value
-                 *            allowed object is {@link String }
-                 * 
+                 *     allowed object is
+                 *     {@link String }
+                 *     
                  */
                 public void setGEOConfidenceLevel(String value) {
                     this.geoConfidenceLevel = value;
                 }
 
                 /**
-                 * Obtiene el valor de la propiedad hotelCode.
+                 * Gets the value of the hotelCode property.
                  * 
-                 * @return possible object is {@link String }
-                 * 
+                 * @return
+                 *     possible object is
+                 *     {@link String }
+                 *     
                  */
                 public String getHotelCode() {
                     return hotelCode;
                 }
 
                 /**
-                 * Define el valor de la propiedad hotelCode.
+                 * Sets the value of the hotelCode property.
                  * 
                  * @param value
-                 *            allowed object is {@link String }
-                 * 
+                 *     allowed object is
+                 *     {@link String }
+                 *     
                  */
                 public void setHotelCode(String value) {
                     this.hotelCode = value;
                 }
 
                 /**
-                 * Obtiene el valor de la propiedad hotelCityCode.
+                 * Gets the value of the hotelCityCode property.
                  * 
-                 * @return possible object is {@link String }
-                 * 
+                 * @return
+                 *     possible object is
+                 *     {@link String }
+                 *     
                  */
                 public String getHotelCityCode() {
                     return hotelCityCode;
                 }
 
                 /**
-                 * Define el valor de la propiedad hotelCityCode.
+                 * Sets the value of the hotelCityCode property.
                  * 
                  * @param value
-                 *            allowed object is {@link String }
-                 * 
+                 *     allowed object is
+                 *     {@link String }
+                 *     
                  */
                 public void setHotelCityCode(String value) {
                     this.hotelCityCode = value;
                 }
 
                 /**
-                 * Obtiene el valor de la propiedad hotelName.
+                 * Gets the value of the hotelName property.
                  * 
-                 * @return possible object is {@link String }
-                 * 
+                 * @return
+                 *     possible object is
+                 *     {@link String }
+                 *     
                  */
                 public String getHotelName() {
                     return hotelName;
                 }
 
                 /**
-                 * Define el valor de la propiedad hotelName.
+                 * Sets the value of the hotelName property.
                  * 
                  * @param value
-                 *            allowed object is {@link String }
-                 * 
+                 *     allowed object is
+                 *     {@link String }
+                 *     
                  */
                 public void setHotelName(String value) {
                     this.hotelName = value;
                 }
 
                 /**
-                 * Obtiene el valor de la propiedad latitude.
+                 * Gets the value of the latitude property.
                  * 
-                 * @return possible object is {@link String }
-                 * 
+                 * @return
+                 *     possible object is
+                 *     {@link String }
+                 *     
                  */
                 public String getLatitude() {
                     return latitude;
                 }
 
                 /**
-                 * Define el valor de la propiedad latitude.
+                 * Sets the value of the latitude property.
                  * 
                  * @param value
-                 *            allowed object is {@link String }
-                 * 
+                 *     allowed object is
+                 *     {@link String }
+                 *     
                  */
                 public void setLatitude(String value) {
                     this.latitude = value;
                 }
 
                 /**
-                 * Obtiene el valor de la propiedad longitude.
+                 * Gets the value of the longitude property.
                  * 
-                 * @return possible object is {@link String }
-                 * 
+                 * @return
+                 *     possible object is
+                 *     {@link String }
+                 *     
                  */
                 public String getLongitude() {
                     return longitude;
                 }
 
                 /**
-                 * Define el valor de la propiedad longitude.
+                 * Sets the value of the longitude property.
                  * 
                  * @param value
-                 *            allowed object is {@link String }
-                 * 
+                 *     allowed object is
+                 *     {@link String }
+                 *     
                  */
                 public void setLongitude(String value) {
                     this.longitude = value;
                 }
 
+
                 /**
-                 * <p>
-                 * Clase Java para anonymous complex type.
+                 * <p>Java class for anonymous complex type.
                  * 
-                 * <p>
-                 * El siguiente fragmento de esquema especifica el contenido que
-                 * se espera que haya en esta clase.
+                 * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
                  * &lt;complexType&gt;
@@ -3648,7 +3705,9 @@ public class OTAHotelAvailRS {
                  * 
                  */
                 @XmlAccessorType(XmlAccessType.FIELD)
-                @XmlType(name = "", propOrder = { "addressLine" })
+                @XmlType(name = "", propOrder = {
+                    "addressLine"
+                })
                 public static class Address {
 
                     @XmlElement(name = "AddressLine")
@@ -3658,17 +3717,15 @@ public class OTAHotelAvailRS {
                      * Gets the value of the addressLine property.
                      * 
                      * <p>
-                     * This accessor method returns a reference to the live
-                     * list, not a snapshot. Therefore any modification you make
-                     * to the returned list will be present inside the JAXB
-                     * object. This is why there is not a <CODE>set</CODE>
-                     * method for the addressLine property.
+                     * This accessor method returns a reference to the live list,
+                     * not a snapshot. Therefore any modification you make to the
+                     * returned list will be present inside the JAXB object.
+                     * This is why there is not a <CODE>set</CODE> method for the addressLine property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
-                     * 
                      * <pre>
-                     * getAddressLine().add(newItem);
+                     *    getAddressLine().add(newItem);
                      * </pre>
                      * 
                      * 
@@ -3687,13 +3744,11 @@ public class OTAHotelAvailRS {
 
                 }
 
+
                 /**
-                 * <p>
-                 * Clase Java para anonymous complex type.
+                 * <p>Java class for anonymous complex type.
                  * 
-                 * <p>
-                 * El siguiente fragmento de esquema especifica el contenido que
-                 * se espera que haya en esta clase.
+                 * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
                  * &lt;complexType&gt;
@@ -3719,43 +3774,43 @@ public class OTAHotelAvailRS {
                  * 
                  */
                 @XmlAccessorType(XmlAccessType.FIELD)
-                @XmlType(name = "", propOrder = { "contactNumber" })
+                @XmlType(name = "", propOrder = {
+                    "contactNumber"
+                })
                 public static class ContactNumbers {
 
                     @XmlElement(name = "ContactNumber")
                     protected OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.ContactNumbers.ContactNumber contactNumber;
 
                     /**
-                     * Obtiene el valor de la propiedad contactNumber.
+                     * Gets the value of the contactNumber property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.ContactNumbers.ContactNumber }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.ContactNumbers.ContactNumber }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.ContactNumbers.ContactNumber getContactNumber() {
                         return contactNumber;
                     }
 
                     /**
-                     * Define el valor de la propiedad contactNumber.
+                     * Sets the value of the contactNumber property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.ContactNumbers.ContactNumber }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.ContactNumbers.ContactNumber }
+                     *     
                      */
-                    public void setContactNumber(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.ContactNumbers.ContactNumber value) {
+                    public void setContactNumber(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.ContactNumbers.ContactNumber value) {
                         this.contactNumber = value;
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -3780,42 +3835,48 @@ public class OTAHotelAvailRS {
                         protected String phone;
 
                         /**
-                         * Obtiene el valor de la propiedad fax.
+                         * Gets the value of the fax property.
                          * 
-                         * @return possible object is {@link String }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link String }
+                         *     
                          */
                         public String getFax() {
                             return fax;
                         }
 
                         /**
-                         * Define el valor de la propiedad fax.
+                         * Sets the value of the fax property.
                          * 
                          * @param value
-                         *            allowed object is {@link String }
-                         * 
+                         *     allowed object is
+                         *     {@link String }
+                         *     
                          */
                         public void setFax(String value) {
                             this.fax = value;
                         }
 
                         /**
-                         * Obtiene el valor de la propiedad phone.
+                         * Gets the value of the phone property.
                          * 
-                         * @return possible object is {@link String }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link String }
+                         *     
                          */
                         public String getPhone() {
                             return phone;
                         }
 
                         /**
-                         * Define el valor de la propiedad phone.
+                         * Sets the value of the phone property.
                          * 
                          * @param value
-                         *            allowed object is {@link String }
-                         * 
+                         *     allowed object is
+                         *     {@link String }
+                         *     
                          */
                         public void setPhone(String value) {
                             this.phone = value;
@@ -3825,13 +3886,11 @@ public class OTAHotelAvailRS {
 
                 }
 
+
                 /**
-                 * <p>
-                 * Clase Java para anonymous complex type.
+                 * <p>Java class for anonymous complex type.
                  * 
-                 * <p>
-                 * El siguiente fragmento de esquema especifica el contenido que
-                 * se espera que haya en esta clase.
+                 * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
                  * &lt;complexType&gt;
@@ -3892,8 +3951,13 @@ public class OTAHotelAvailRS {
                  * 
                  */
                 @XmlAccessorType(XmlAccessType.FIELD)
-                @XmlType(name = "", propOrder = { "altAvail", "dcAvailParticipant", "dcSellParticipant",
-                        "ratesExceedMax", "unAvail" })
+                @XmlType(name = "", propOrder = {
+                    "altAvail",
+                    "dcAvailParticipant",
+                    "dcSellParticipant",
+                    "ratesExceedMax",
+                    "unAvail"
+                })
                 public static class DirectConnect {
 
                     @XmlElement(name = "Alt_Avail")
@@ -3908,132 +3972,130 @@ public class OTAHotelAvailRS {
                     protected OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.UnAvail unAvail;
 
                     /**
-                     * Obtiene el valor de la propiedad altAvail.
+                     * Gets the value of the altAvail property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.AltAvail }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.AltAvail }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.AltAvail getAltAvail() {
                         return altAvail;
                     }
 
                     /**
-                     * Define el valor de la propiedad altAvail.
+                     * Sets the value of the altAvail property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.AltAvail }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.AltAvail }
+                     *     
                      */
-                    public void setAltAvail(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.AltAvail value) {
+                    public void setAltAvail(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.AltAvail value) {
                         this.altAvail = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad dcAvailParticipant.
+                     * Gets the value of the dcAvailParticipant property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.DCAvailParticipant }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.DCAvailParticipant }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.DCAvailParticipant getDCAvailParticipant() {
                         return dcAvailParticipant;
                     }
 
                     /**
-                     * Define el valor de la propiedad dcAvailParticipant.
+                     * Sets the value of the dcAvailParticipant property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.DCAvailParticipant }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.DCAvailParticipant }
+                     *     
                      */
-                    public void setDCAvailParticipant(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.DCAvailParticipant value) {
+                    public void setDCAvailParticipant(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.DCAvailParticipant value) {
                         this.dcAvailParticipant = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad dcSellParticipant.
+                     * Gets the value of the dcSellParticipant property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.DCSellParticipant }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.DCSellParticipant }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.DCSellParticipant getDCSellParticipant() {
                         return dcSellParticipant;
                     }
 
                     /**
-                     * Define el valor de la propiedad dcSellParticipant.
+                     * Sets the value of the dcSellParticipant property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.DCSellParticipant }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.DCSellParticipant }
+                     *     
                      */
-                    public void setDCSellParticipant(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.DCSellParticipant value) {
+                    public void setDCSellParticipant(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.DCSellParticipant value) {
                         this.dcSellParticipant = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad ratesExceedMax.
+                     * Gets the value of the ratesExceedMax property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.RatesExceedMax }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.RatesExceedMax }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.RatesExceedMax getRatesExceedMax() {
                         return ratesExceedMax;
                     }
 
                     /**
-                     * Define el valor de la propiedad ratesExceedMax.
+                     * Sets the value of the ratesExceedMax property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.RatesExceedMax }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.RatesExceedMax }
+                     *     
                      */
-                    public void setRatesExceedMax(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.RatesExceedMax value) {
+                    public void setRatesExceedMax(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.RatesExceedMax value) {
                         this.ratesExceedMax = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad unAvail.
+                     * Gets the value of the unAvail property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.UnAvail }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.UnAvail }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.UnAvail getUnAvail() {
                         return unAvail;
                     }
 
                     /**
-                     * Define el valor de la propiedad unAvail.
+                     * Sets the value of the unAvail property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.UnAvail }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.UnAvail }
+                     *     
                      */
-                    public void setUnAvail(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.UnAvail value) {
+                    public void setUnAvail(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.UnAvail value) {
                         this.unAvail = value;
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -4055,21 +4117,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -4077,13 +4142,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -4105,21 +4168,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -4127,13 +4193,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -4155,21 +4219,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -4177,13 +4244,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -4205,21 +4270,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -4227,13 +4295,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -4255,21 +4321,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -4279,13 +4348,11 @@ public class OTAHotelAvailRS {
 
                 }
 
+
                 /**
-                 * <p>
-                 * Clase Java para anonymous complex type.
+                 * <p>Java class for anonymous complex type.
                  * 
-                 * <p>
-                 * El siguiente fragmento de esquema especifica el contenido que
-                 * se espera que haya en esta clase.
+                 * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
                  * &lt;complexType&gt;
@@ -4303,7 +4370,9 @@ public class OTAHotelAvailRS {
                  * 
                  */
                 @XmlAccessorType(XmlAccessType.FIELD)
-                @XmlType(name = "", propOrder = { "text" })
+                @XmlType(name = "", propOrder = {
+                    "text"
+                })
                 public static class LocationDescription {
 
                     @XmlElement(name = "Text")
@@ -4312,42 +4381,48 @@ public class OTAHotelAvailRS {
                     protected String code;
 
                     /**
-                     * Obtiene el valor de la propiedad text.
+                     * Gets the value of the text property.
                      * 
-                     * @return possible object is {@link String }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link String }
+                     *     
                      */
                     public String getText() {
                         return text;
                     }
 
                     /**
-                     * Define el valor de la propiedad text.
+                     * Sets the value of the text property.
                      * 
                      * @param value
-                     *            allowed object is {@link String }
-                     * 
+                     *     allowed object is
+                     *     {@link String }
+                     *     
                      */
                     public void setText(String value) {
                         this.text = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad code.
+                     * Gets the value of the code property.
                      * 
-                     * @return possible object is {@link String }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link String }
+                     *     
                      */
                     public String getCode() {
                         return code;
                     }
 
                     /**
-                     * Define el valor de la propiedad code.
+                     * Sets the value of the code property.
                      * 
                      * @param value
-                     *            allowed object is {@link String }
-                     * 
+                     *     allowed object is
+                     *     {@link String }
+                     *     
                      */
                     public void setCode(String value) {
                         this.code = value;
@@ -4355,13 +4430,11 @@ public class OTAHotelAvailRS {
 
                 }
 
+
                 /**
-                 * <p>
-                 * Clase Java para anonymous complex type.
+                 * <p>Java class for anonymous complex type.
                  * 
-                 * <p>
-                 * El siguiente fragmento de esquema especifica el contenido que
-                 * se espera que haya en esta clase.
+                 * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
                  * &lt;complexType&gt;
@@ -4379,7 +4452,9 @@ public class OTAHotelAvailRS {
                  * 
                  */
                 @XmlAccessorType(XmlAccessType.FIELD)
-                @XmlType(name = "", propOrder = { "text" })
+                @XmlType(name = "", propOrder = {
+                    "text"
+                })
                 public static class Property {
 
                     @XmlElement(name = "Text")
@@ -4388,42 +4463,48 @@ public class OTAHotelAvailRS {
                     protected String rating;
 
                     /**
-                     * Obtiene el valor de la propiedad text.
+                     * Gets the value of the text property.
                      * 
-                     * @return possible object is {@link String }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link String }
+                     *     
                      */
                     public String getText() {
                         return text;
                     }
 
                     /**
-                     * Define el valor de la propiedad text.
+                     * Sets the value of the text property.
                      * 
                      * @param value
-                     *            allowed object is {@link String }
-                     * 
+                     *     allowed object is
+                     *     {@link String }
+                     *     
                      */
                     public void setText(String value) {
                         this.text = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad rating.
+                     * Gets the value of the rating property.
                      * 
-                     * @return possible object is {@link String }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link String }
+                     *     
                      */
                     public String getRating() {
                         return rating;
                     }
 
                     /**
-                     * Define el valor de la propiedad rating.
+                     * Sets the value of the rating property.
                      * 
                      * @param value
-                     *            allowed object is {@link String }
-                     * 
+                     *     allowed object is
+                     *     {@link String }
+                     *     
                      */
                     public void setRating(String value) {
                         this.rating = value;
@@ -4431,13 +4512,11 @@ public class OTAHotelAvailRS {
 
                 }
 
+
                 /**
-                 * <p>
-                 * Clase Java para anonymous complex type.
+                 * <p>Java class for anonymous complex type.
                  * 
-                 * <p>
-                 * El siguiente fragmento de esquema especifica el contenido que
-                 * se espera que haya en esta clase.
+                 * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
                  * &lt;complexType&gt;
@@ -4930,17 +5009,61 @@ public class OTAHotelAvailRS {
                  * 
                  */
                 @XmlAccessorType(XmlAccessType.FIELD)
-                @XmlType(name = "", propOrder = { "adaAccessible", "adultsOnly", "beachFront", "breakfast",
-                        "businessCenter", "businessReady", "conventions", "dataport", "dining", "dryClean",
-                        "ecoCertified", "executiveFloors", "fitnessCenter", "freeLocalCalls", "freeParking",
-                        "freeShuttle", "freeWifiInMeetingRooms", "freeWifiInPublicSpaces", "freeWifiInRooms",
-                        "fullServiceSpa", "gameFacilities", "golf", "highSpeedInternet", "hypoallergenicRooms",
-                        "indoorPool", "inRoomCoffeeTea", "inRoomMiniBar", "inRoomRefrigerator", "inRoomSafe",
-                        "interiorDoorways", "jacuzzi", "kidsFacilities", "kitchenFacilities", "mealService",
-                        "meetingFacilities", "noAdultTV", "nonSmoking", "outdoorPool", "pets", "pool",
-                        "publicTransportationAdjacent", "rateAssured", "recreation", "restrictedRoomAccess",
-                        "roomService", "roomService24Hours", "roomsWithBalcony", "skiInOutProperty", "smokeFree",
-                        "smokingRoomsAvail", "tennis", "waterPurificationSystem", "wheelchair" })
+                @XmlType(name = "", propOrder = {
+                    "adaAccessible",
+                    "adultsOnly",
+                    "beachFront",
+                    "breakfast",
+                    "businessCenter",
+                    "businessReady",
+                    "conventions",
+                    "dataport",
+                    "dining",
+                    "dryClean",
+                    "ecoCertified",
+                    "executiveFloors",
+                    "fitnessCenter",
+                    "freeLocalCalls",
+                    "freeParking",
+                    "freeShuttle",
+                    "freeWifiInMeetingRooms",
+                    "freeWifiInPublicSpaces",
+                    "freeWifiInRooms",
+                    "fullServiceSpa",
+                    "gameFacilities",
+                    "golf",
+                    "highSpeedInternet",
+                    "hypoallergenicRooms",
+                    "indoorPool",
+                    "inRoomCoffeeTea",
+                    "inRoomMiniBar",
+                    "inRoomRefrigerator",
+                    "inRoomSafe",
+                    "interiorDoorways",
+                    "jacuzzi",
+                    "kidsFacilities",
+                    "kitchenFacilities",
+                    "mealService",
+                    "meetingFacilities",
+                    "noAdultTV",
+                    "nonSmoking",
+                    "outdoorPool",
+                    "pets",
+                    "pool",
+                    "publicTransportationAdjacent",
+                    "rateAssured",
+                    "recreation",
+                    "restrictedRoomAccess",
+                    "roomService",
+                    "roomService24Hours",
+                    "roomsWithBalcony",
+                    "skiInOutProperty",
+                    "smokeFree",
+                    "smokingRoomsAvail",
+                    "tennis",
+                    "waterPurificationSystem",
+                    "wheelchair"
+                })
                 public static class PropertyOptionInfo {
 
                     @XmlElement(name = "ADA_Accessible")
@@ -5051,1286 +5174,1282 @@ public class OTAHotelAvailRS {
                     protected OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Wheelchair wheelchair;
 
                     /**
-                     * Obtiene el valor de la propiedad adaAccessible.
+                     * Gets the value of the adaAccessible property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.ADAAccessible }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.ADAAccessible }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.ADAAccessible getADAAccessible() {
                         return adaAccessible;
                     }
 
                     /**
-                     * Define el valor de la propiedad adaAccessible.
+                     * Sets the value of the adaAccessible property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.ADAAccessible }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.ADAAccessible }
+                     *     
                      */
-                    public void setADAAccessible(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.ADAAccessible value) {
+                    public void setADAAccessible(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.ADAAccessible value) {
                         this.adaAccessible = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad adultsOnly.
+                     * Gets the value of the adultsOnly property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.AdultsOnly }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.AdultsOnly }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.AdultsOnly getAdultsOnly() {
                         return adultsOnly;
                     }
 
                     /**
-                     * Define el valor de la propiedad adultsOnly.
+                     * Sets the value of the adultsOnly property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.AdultsOnly }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.AdultsOnly }
+                     *     
                      */
-                    public void setAdultsOnly(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.AdultsOnly value) {
+                    public void setAdultsOnly(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.AdultsOnly value) {
                         this.adultsOnly = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad beachFront.
+                     * Gets the value of the beachFront property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.BeachFront }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.BeachFront }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.BeachFront getBeachFront() {
                         return beachFront;
                     }
 
                     /**
-                     * Define el valor de la propiedad beachFront.
+                     * Sets the value of the beachFront property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.BeachFront }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.BeachFront }
+                     *     
                      */
-                    public void setBeachFront(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.BeachFront value) {
+                    public void setBeachFront(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.BeachFront value) {
                         this.beachFront = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad breakfast.
+                     * Gets the value of the breakfast property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Breakfast }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Breakfast }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Breakfast getBreakfast() {
                         return breakfast;
                     }
 
                     /**
-                     * Define el valor de la propiedad breakfast.
+                     * Sets the value of the breakfast property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Breakfast }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Breakfast }
+                     *     
                      */
-                    public void setBreakfast(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Breakfast value) {
+                    public void setBreakfast(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Breakfast value) {
                         this.breakfast = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad businessCenter.
+                     * Gets the value of the businessCenter property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.BusinessCenter }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.BusinessCenter }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.BusinessCenter getBusinessCenter() {
                         return businessCenter;
                     }
 
                     /**
-                     * Define el valor de la propiedad businessCenter.
+                     * Sets the value of the businessCenter property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.BusinessCenter }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.BusinessCenter }
+                     *     
                      */
-                    public void setBusinessCenter(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.BusinessCenter value) {
+                    public void setBusinessCenter(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.BusinessCenter value) {
                         this.businessCenter = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad businessReady.
+                     * Gets the value of the businessReady property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.BusinessReady }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.BusinessReady }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.BusinessReady getBusinessReady() {
                         return businessReady;
                     }
 
                     /**
-                     * Define el valor de la propiedad businessReady.
+                     * Sets the value of the businessReady property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.BusinessReady }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.BusinessReady }
+                     *     
                      */
-                    public void setBusinessReady(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.BusinessReady value) {
+                    public void setBusinessReady(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.BusinessReady value) {
                         this.businessReady = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad conventions.
+                     * Gets the value of the conventions property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Conventions }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Conventions }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Conventions getConventions() {
                         return conventions;
                     }
 
                     /**
-                     * Define el valor de la propiedad conventions.
+                     * Sets the value of the conventions property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Conventions }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Conventions }
+                     *     
                      */
-                    public void setConventions(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Conventions value) {
+                    public void setConventions(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Conventions value) {
                         this.conventions = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad dataport.
+                     * Gets the value of the dataport property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Dataport }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Dataport }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Dataport getDataport() {
                         return dataport;
                     }
 
                     /**
-                     * Define el valor de la propiedad dataport.
+                     * Sets the value of the dataport property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Dataport }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Dataport }
+                     *     
                      */
-                    public void setDataport(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Dataport value) {
+                    public void setDataport(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Dataport value) {
                         this.dataport = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad dining.
+                     * Gets the value of the dining property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Dining }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Dining }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Dining getDining() {
                         return dining;
                     }
 
                     /**
-                     * Define el valor de la propiedad dining.
+                     * Sets the value of the dining property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Dining }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Dining }
+                     *     
                      */
-                    public void setDining(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Dining value) {
+                    public void setDining(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Dining value) {
                         this.dining = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad dryClean.
+                     * Gets the value of the dryClean property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.DryClean }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.DryClean }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.DryClean getDryClean() {
                         return dryClean;
                     }
 
                     /**
-                     * Define el valor de la propiedad dryClean.
+                     * Sets the value of the dryClean property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.DryClean }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.DryClean }
+                     *     
                      */
-                    public void setDryClean(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.DryClean value) {
+                    public void setDryClean(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.DryClean value) {
                         this.dryClean = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad ecoCertified.
+                     * Gets the value of the ecoCertified property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.EcoCertified }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.EcoCertified }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.EcoCertified getEcoCertified() {
                         return ecoCertified;
                     }
 
                     /**
-                     * Define el valor de la propiedad ecoCertified.
+                     * Sets the value of the ecoCertified property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.EcoCertified }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.EcoCertified }
+                     *     
                      */
-                    public void setEcoCertified(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.EcoCertified value) {
+                    public void setEcoCertified(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.EcoCertified value) {
                         this.ecoCertified = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad executiveFloors.
+                     * Gets the value of the executiveFloors property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.ExecutiveFloors }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.ExecutiveFloors }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.ExecutiveFloors getExecutiveFloors() {
                         return executiveFloors;
                     }
 
                     /**
-                     * Define el valor de la propiedad executiveFloors.
+                     * Sets the value of the executiveFloors property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.ExecutiveFloors }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.ExecutiveFloors }
+                     *     
                      */
-                    public void setExecutiveFloors(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.ExecutiveFloors value) {
+                    public void setExecutiveFloors(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.ExecutiveFloors value) {
                         this.executiveFloors = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad fitnessCenter.
+                     * Gets the value of the fitnessCenter property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FitnessCenter }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FitnessCenter }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FitnessCenter getFitnessCenter() {
                         return fitnessCenter;
                     }
 
                     /**
-                     * Define el valor de la propiedad fitnessCenter.
+                     * Sets the value of the fitnessCenter property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FitnessCenter }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FitnessCenter }
+                     *     
                      */
-                    public void setFitnessCenter(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FitnessCenter value) {
+                    public void setFitnessCenter(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FitnessCenter value) {
                         this.fitnessCenter = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad freeLocalCalls.
+                     * Gets the value of the freeLocalCalls property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeLocalCalls }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeLocalCalls }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeLocalCalls getFreeLocalCalls() {
                         return freeLocalCalls;
                     }
 
                     /**
-                     * Define el valor de la propiedad freeLocalCalls.
+                     * Sets the value of the freeLocalCalls property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeLocalCalls }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeLocalCalls }
+                     *     
                      */
-                    public void setFreeLocalCalls(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeLocalCalls value) {
+                    public void setFreeLocalCalls(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeLocalCalls value) {
                         this.freeLocalCalls = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad freeParking.
+                     * Gets the value of the freeParking property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeParking }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeParking }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeParking getFreeParking() {
                         return freeParking;
                     }
 
                     /**
-                     * Define el valor de la propiedad freeParking.
+                     * Sets the value of the freeParking property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeParking }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeParking }
+                     *     
                      */
-                    public void setFreeParking(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeParking value) {
+                    public void setFreeParking(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeParking value) {
                         this.freeParking = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad freeShuttle.
+                     * Gets the value of the freeShuttle property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeShuttle }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeShuttle }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeShuttle getFreeShuttle() {
                         return freeShuttle;
                     }
 
                     /**
-                     * Define el valor de la propiedad freeShuttle.
+                     * Sets the value of the freeShuttle property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeShuttle }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeShuttle }
+                     *     
                      */
-                    public void setFreeShuttle(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeShuttle value) {
+                    public void setFreeShuttle(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeShuttle value) {
                         this.freeShuttle = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad freeWifiInMeetingRooms.
+                     * Gets the value of the freeWifiInMeetingRooms property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeWifiInMeetingRooms }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeWifiInMeetingRooms }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeWifiInMeetingRooms getFreeWifiInMeetingRooms() {
                         return freeWifiInMeetingRooms;
                     }
 
                     /**
-                     * Define el valor de la propiedad freeWifiInMeetingRooms.
+                     * Sets the value of the freeWifiInMeetingRooms property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeWifiInMeetingRooms }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeWifiInMeetingRooms }
+                     *     
                      */
-                    public void setFreeWifiInMeetingRooms(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeWifiInMeetingRooms value) {
+                    public void setFreeWifiInMeetingRooms(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeWifiInMeetingRooms value) {
                         this.freeWifiInMeetingRooms = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad freeWifiInPublicSpaces.
+                     * Gets the value of the freeWifiInPublicSpaces property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeWifiInPublicSpaces }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeWifiInPublicSpaces }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeWifiInPublicSpaces getFreeWifiInPublicSpaces() {
                         return freeWifiInPublicSpaces;
                     }
 
                     /**
-                     * Define el valor de la propiedad freeWifiInPublicSpaces.
+                     * Sets the value of the freeWifiInPublicSpaces property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeWifiInPublicSpaces }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeWifiInPublicSpaces }
+                     *     
                      */
-                    public void setFreeWifiInPublicSpaces(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeWifiInPublicSpaces value) {
+                    public void setFreeWifiInPublicSpaces(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeWifiInPublicSpaces value) {
                         this.freeWifiInPublicSpaces = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad freeWifiInRooms.
+                     * Gets the value of the freeWifiInRooms property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeWifiInRooms }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeWifiInRooms }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeWifiInRooms getFreeWifiInRooms() {
                         return freeWifiInRooms;
                     }
 
                     /**
-                     * Define el valor de la propiedad freeWifiInRooms.
+                     * Sets the value of the freeWifiInRooms property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeWifiInRooms }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeWifiInRooms }
+                     *     
                      */
-                    public void setFreeWifiInRooms(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeWifiInRooms value) {
+                    public void setFreeWifiInRooms(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeWifiInRooms value) {
                         this.freeWifiInRooms = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad fullServiceSpa.
+                     * Gets the value of the fullServiceSpa property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FullServiceSpa }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FullServiceSpa }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FullServiceSpa getFullServiceSpa() {
                         return fullServiceSpa;
                     }
 
                     /**
-                     * Define el valor de la propiedad fullServiceSpa.
+                     * Sets the value of the fullServiceSpa property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FullServiceSpa }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FullServiceSpa }
+                     *     
                      */
-                    public void setFullServiceSpa(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FullServiceSpa value) {
+                    public void setFullServiceSpa(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FullServiceSpa value) {
                         this.fullServiceSpa = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad gameFacilities.
+                     * Gets the value of the gameFacilities property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.GameFacilities }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.GameFacilities }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.GameFacilities getGameFacilities() {
                         return gameFacilities;
                     }
 
                     /**
-                     * Define el valor de la propiedad gameFacilities.
+                     * Sets the value of the gameFacilities property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.GameFacilities }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.GameFacilities }
+                     *     
                      */
-                    public void setGameFacilities(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.GameFacilities value) {
+                    public void setGameFacilities(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.GameFacilities value) {
                         this.gameFacilities = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad golf.
+                     * Gets the value of the golf property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Golf }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Golf }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Golf getGolf() {
                         return golf;
                     }
 
                     /**
-                     * Define el valor de la propiedad golf.
+                     * Sets the value of the golf property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Golf }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Golf }
+                     *     
                      */
-                    public void setGolf(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Golf value) {
+                    public void setGolf(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Golf value) {
                         this.golf = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad highSpeedInternet.
+                     * Gets the value of the highSpeedInternet property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.HighSpeedInternet }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.HighSpeedInternet }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.HighSpeedInternet getHighSpeedInternet() {
                         return highSpeedInternet;
                     }
 
                     /**
-                     * Define el valor de la propiedad highSpeedInternet.
+                     * Sets the value of the highSpeedInternet property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.HighSpeedInternet }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.HighSpeedInternet }
+                     *     
                      */
-                    public void setHighSpeedInternet(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.HighSpeedInternet value) {
+                    public void setHighSpeedInternet(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.HighSpeedInternet value) {
                         this.highSpeedInternet = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad hypoallergenicRooms.
+                     * Gets the value of the hypoallergenicRooms property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.HypoallergenicRooms }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.HypoallergenicRooms }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.HypoallergenicRooms getHypoallergenicRooms() {
                         return hypoallergenicRooms;
                     }
 
                     /**
-                     * Define el valor de la propiedad hypoallergenicRooms.
+                     * Sets the value of the hypoallergenicRooms property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.HypoallergenicRooms }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.HypoallergenicRooms }
+                     *     
                      */
-                    public void setHypoallergenicRooms(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.HypoallergenicRooms value) {
+                    public void setHypoallergenicRooms(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.HypoallergenicRooms value) {
                         this.hypoallergenicRooms = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad indoorPool.
+                     * Gets the value of the indoorPool property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.IndoorPool }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.IndoorPool }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.IndoorPool getIndoorPool() {
                         return indoorPool;
                     }
 
                     /**
-                     * Define el valor de la propiedad indoorPool.
+                     * Sets the value of the indoorPool property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.IndoorPool }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.IndoorPool }
+                     *     
                      */
-                    public void setIndoorPool(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.IndoorPool value) {
+                    public void setIndoorPool(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.IndoorPool value) {
                         this.indoorPool = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad inRoomCoffeeTea.
+                     * Gets the value of the inRoomCoffeeTea property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomCoffeeTea }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomCoffeeTea }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomCoffeeTea getInRoomCoffeeTea() {
                         return inRoomCoffeeTea;
                     }
 
                     /**
-                     * Define el valor de la propiedad inRoomCoffeeTea.
+                     * Sets the value of the inRoomCoffeeTea property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomCoffeeTea }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomCoffeeTea }
+                     *     
                      */
-                    public void setInRoomCoffeeTea(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomCoffeeTea value) {
+                    public void setInRoomCoffeeTea(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomCoffeeTea value) {
                         this.inRoomCoffeeTea = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad inRoomMiniBar.
+                     * Gets the value of the inRoomMiniBar property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomMiniBar }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomMiniBar }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomMiniBar getInRoomMiniBar() {
                         return inRoomMiniBar;
                     }
 
                     /**
-                     * Define el valor de la propiedad inRoomMiniBar.
+                     * Sets the value of the inRoomMiniBar property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomMiniBar }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomMiniBar }
+                     *     
                      */
-                    public void setInRoomMiniBar(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomMiniBar value) {
+                    public void setInRoomMiniBar(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomMiniBar value) {
                         this.inRoomMiniBar = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad inRoomRefrigerator.
+                     * Gets the value of the inRoomRefrigerator property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomRefrigerator }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomRefrigerator }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomRefrigerator getInRoomRefrigerator() {
                         return inRoomRefrigerator;
                     }
 
                     /**
-                     * Define el valor de la propiedad inRoomRefrigerator.
+                     * Sets the value of the inRoomRefrigerator property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomRefrigerator }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomRefrigerator }
+                     *     
                      */
-                    public void setInRoomRefrigerator(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomRefrigerator value) {
+                    public void setInRoomRefrigerator(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomRefrigerator value) {
                         this.inRoomRefrigerator = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad inRoomSafe.
+                     * Gets the value of the inRoomSafe property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomSafe }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomSafe }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomSafe getInRoomSafe() {
                         return inRoomSafe;
                     }
 
                     /**
-                     * Define el valor de la propiedad inRoomSafe.
+                     * Sets the value of the inRoomSafe property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomSafe }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomSafe }
+                     *     
                      */
-                    public void setInRoomSafe(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomSafe value) {
+                    public void setInRoomSafe(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomSafe value) {
                         this.inRoomSafe = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad interiorDoorways.
+                     * Gets the value of the interiorDoorways property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InteriorDoorways }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InteriorDoorways }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InteriorDoorways getInteriorDoorways() {
                         return interiorDoorways;
                     }
 
                     /**
-                     * Define el valor de la propiedad interiorDoorways.
+                     * Sets the value of the interiorDoorways property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InteriorDoorways }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InteriorDoorways }
+                     *     
                      */
-                    public void setInteriorDoorways(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InteriorDoorways value) {
+                    public void setInteriorDoorways(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InteriorDoorways value) {
                         this.interiorDoorways = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad jacuzzi.
+                     * Gets the value of the jacuzzi property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Jacuzzi }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Jacuzzi }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Jacuzzi getJacuzzi() {
                         return jacuzzi;
                     }
 
                     /**
-                     * Define el valor de la propiedad jacuzzi.
+                     * Sets the value of the jacuzzi property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Jacuzzi }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Jacuzzi }
+                     *     
                      */
-                    public void setJacuzzi(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Jacuzzi value) {
+                    public void setJacuzzi(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Jacuzzi value) {
                         this.jacuzzi = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad kidsFacilities.
+                     * Gets the value of the kidsFacilities property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.KidsFacilities }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.KidsFacilities }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.KidsFacilities getKidsFacilities() {
                         return kidsFacilities;
                     }
 
                     /**
-                     * Define el valor de la propiedad kidsFacilities.
+                     * Sets the value of the kidsFacilities property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.KidsFacilities }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.KidsFacilities }
+                     *     
                      */
-                    public void setKidsFacilities(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.KidsFacilities value) {
+                    public void setKidsFacilities(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.KidsFacilities value) {
                         this.kidsFacilities = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad kitchenFacilities.
+                     * Gets the value of the kitchenFacilities property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.KitchenFacilities }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.KitchenFacilities }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.KitchenFacilities getKitchenFacilities() {
                         return kitchenFacilities;
                     }
 
                     /**
-                     * Define el valor de la propiedad kitchenFacilities.
+                     * Sets the value of the kitchenFacilities property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.KitchenFacilities }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.KitchenFacilities }
+                     *     
                      */
-                    public void setKitchenFacilities(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.KitchenFacilities value) {
+                    public void setKitchenFacilities(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.KitchenFacilities value) {
                         this.kitchenFacilities = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad mealService.
+                     * Gets the value of the mealService property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.MealService }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.MealService }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.MealService getMealService() {
                         return mealService;
                     }
 
                     /**
-                     * Define el valor de la propiedad mealService.
+                     * Sets the value of the mealService property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.MealService }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.MealService }
+                     *     
                      */
-                    public void setMealService(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.MealService value) {
+                    public void setMealService(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.MealService value) {
                         this.mealService = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad meetingFacilities.
+                     * Gets the value of the meetingFacilities property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.MeetingFacilities }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.MeetingFacilities }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.MeetingFacilities getMeetingFacilities() {
                         return meetingFacilities;
                     }
 
                     /**
-                     * Define el valor de la propiedad meetingFacilities.
+                     * Sets the value of the meetingFacilities property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.MeetingFacilities }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.MeetingFacilities }
+                     *     
                      */
-                    public void setMeetingFacilities(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.MeetingFacilities value) {
+                    public void setMeetingFacilities(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.MeetingFacilities value) {
                         this.meetingFacilities = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad noAdultTV.
+                     * Gets the value of the noAdultTV property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.NoAdultTV }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.NoAdultTV }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.NoAdultTV getNoAdultTV() {
                         return noAdultTV;
                     }
 
                     /**
-                     * Define el valor de la propiedad noAdultTV.
+                     * Sets the value of the noAdultTV property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.NoAdultTV }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.NoAdultTV }
+                     *     
                      */
-                    public void setNoAdultTV(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.NoAdultTV value) {
+                    public void setNoAdultTV(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.NoAdultTV value) {
                         this.noAdultTV = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad nonSmoking.
+                     * Gets the value of the nonSmoking property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.NonSmoking }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.NonSmoking }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.NonSmoking getNonSmoking() {
                         return nonSmoking;
                     }
 
                     /**
-                     * Define el valor de la propiedad nonSmoking.
+                     * Sets the value of the nonSmoking property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.NonSmoking }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.NonSmoking }
+                     *     
                      */
-                    public void setNonSmoking(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.NonSmoking value) {
+                    public void setNonSmoking(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.NonSmoking value) {
                         this.nonSmoking = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad outdoorPool.
+                     * Gets the value of the outdoorPool property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.OutdoorPool }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.OutdoorPool }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.OutdoorPool getOutdoorPool() {
                         return outdoorPool;
                     }
 
                     /**
-                     * Define el valor de la propiedad outdoorPool.
+                     * Sets the value of the outdoorPool property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.OutdoorPool }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.OutdoorPool }
+                     *     
                      */
-                    public void setOutdoorPool(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.OutdoorPool value) {
+                    public void setOutdoorPool(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.OutdoorPool value) {
                         this.outdoorPool = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad pets.
+                     * Gets the value of the pets property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Pets }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Pets }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Pets getPets() {
                         return pets;
                     }
 
                     /**
-                     * Define el valor de la propiedad pets.
+                     * Sets the value of the pets property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Pets }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Pets }
+                     *     
                      */
-                    public void setPets(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Pets value) {
+                    public void setPets(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Pets value) {
                         this.pets = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad pool.
+                     * Gets the value of the pool property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Pool }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Pool }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Pool getPool() {
                         return pool;
                     }
 
                     /**
-                     * Define el valor de la propiedad pool.
+                     * Sets the value of the pool property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Pool }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Pool }
+                     *     
                      */
-                    public void setPool(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Pool value) {
+                    public void setPool(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Pool value) {
                         this.pool = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad
-                     * publicTransportationAdjacent.
+                     * Gets the value of the publicTransportationAdjacent property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.PublicTransportationAdjacent }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.PublicTransportationAdjacent }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.PublicTransportationAdjacent getPublicTransportationAdjacent() {
                         return publicTransportationAdjacent;
                     }
 
                     /**
-                     * Define el valor de la propiedad
-                     * publicTransportationAdjacent.
+                     * Sets the value of the publicTransportationAdjacent property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.PublicTransportationAdjacent }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.PublicTransportationAdjacent }
+                     *     
                      */
-                    public void setPublicTransportationAdjacent(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.PublicTransportationAdjacent value) {
+                    public void setPublicTransportationAdjacent(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.PublicTransportationAdjacent value) {
                         this.publicTransportationAdjacent = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad rateAssured.
+                     * Gets the value of the rateAssured property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RateAssured }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RateAssured }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RateAssured getRateAssured() {
                         return rateAssured;
                     }
 
                     /**
-                     * Define el valor de la propiedad rateAssured.
+                     * Sets the value of the rateAssured property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RateAssured }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RateAssured }
+                     *     
                      */
-                    public void setRateAssured(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RateAssured value) {
+                    public void setRateAssured(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RateAssured value) {
                         this.rateAssured = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad recreation.
+                     * Gets the value of the recreation property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Recreation }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Recreation }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Recreation getRecreation() {
                         return recreation;
                     }
 
                     /**
-                     * Define el valor de la propiedad recreation.
+                     * Sets the value of the recreation property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Recreation }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Recreation }
+                     *     
                      */
-                    public void setRecreation(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Recreation value) {
+                    public void setRecreation(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Recreation value) {
                         this.recreation = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad restrictedRoomAccess.
+                     * Gets the value of the restrictedRoomAccess property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RestrictedRoomAccess }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RestrictedRoomAccess }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RestrictedRoomAccess getRestrictedRoomAccess() {
                         return restrictedRoomAccess;
                     }
 
                     /**
-                     * Define el valor de la propiedad restrictedRoomAccess.
+                     * Sets the value of the restrictedRoomAccess property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RestrictedRoomAccess }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RestrictedRoomAccess }
+                     *     
                      */
-                    public void setRestrictedRoomAccess(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RestrictedRoomAccess value) {
+                    public void setRestrictedRoomAccess(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RestrictedRoomAccess value) {
                         this.restrictedRoomAccess = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad roomService.
+                     * Gets the value of the roomService property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RoomService }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RoomService }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RoomService getRoomService() {
                         return roomService;
                     }
 
                     /**
-                     * Define el valor de la propiedad roomService.
+                     * Sets the value of the roomService property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RoomService }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RoomService }
+                     *     
                      */
-                    public void setRoomService(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RoomService value) {
+                    public void setRoomService(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RoomService value) {
                         this.roomService = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad roomService24Hours.
+                     * Gets the value of the roomService24Hours property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RoomService24Hours }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RoomService24Hours }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RoomService24Hours getRoomService24Hours() {
                         return roomService24Hours;
                     }
 
                     /**
-                     * Define el valor de la propiedad roomService24Hours.
+                     * Sets the value of the roomService24Hours property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RoomService24Hours }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RoomService24Hours }
+                     *     
                      */
-                    public void setRoomService24Hours(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RoomService24Hours value) {
+                    public void setRoomService24Hours(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RoomService24Hours value) {
                         this.roomService24Hours = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad roomsWithBalcony.
+                     * Gets the value of the roomsWithBalcony property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RoomsWithBalcony }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RoomsWithBalcony }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RoomsWithBalcony getRoomsWithBalcony() {
                         return roomsWithBalcony;
                     }
 
                     /**
-                     * Define el valor de la propiedad roomsWithBalcony.
+                     * Sets the value of the roomsWithBalcony property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RoomsWithBalcony }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RoomsWithBalcony }
+                     *     
                      */
-                    public void setRoomsWithBalcony(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RoomsWithBalcony value) {
+                    public void setRoomsWithBalcony(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RoomsWithBalcony value) {
                         this.roomsWithBalcony = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad skiInOutProperty.
+                     * Gets the value of the skiInOutProperty property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.SkiInOutProperty }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.SkiInOutProperty }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.SkiInOutProperty getSkiInOutProperty() {
                         return skiInOutProperty;
                     }
 
                     /**
-                     * Define el valor de la propiedad skiInOutProperty.
+                     * Sets the value of the skiInOutProperty property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.SkiInOutProperty }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.SkiInOutProperty }
+                     *     
                      */
-                    public void setSkiInOutProperty(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.SkiInOutProperty value) {
+                    public void setSkiInOutProperty(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.SkiInOutProperty value) {
                         this.skiInOutProperty = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad smokeFree.
+                     * Gets the value of the smokeFree property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.SmokeFree }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.SmokeFree }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.SmokeFree getSmokeFree() {
                         return smokeFree;
                     }
 
                     /**
-                     * Define el valor de la propiedad smokeFree.
+                     * Sets the value of the smokeFree property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.SmokeFree }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.SmokeFree }
+                     *     
                      */
-                    public void setSmokeFree(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.SmokeFree value) {
+                    public void setSmokeFree(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.SmokeFree value) {
                         this.smokeFree = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad smokingRoomsAvail.
+                     * Gets the value of the smokingRoomsAvail property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.SmokingRoomsAvail }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.SmokingRoomsAvail }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.SmokingRoomsAvail getSmokingRoomsAvail() {
                         return smokingRoomsAvail;
                     }
 
                     /**
-                     * Define el valor de la propiedad smokingRoomsAvail.
+                     * Sets the value of the smokingRoomsAvail property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.SmokingRoomsAvail }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.SmokingRoomsAvail }
+                     *     
                      */
-                    public void setSmokingRoomsAvail(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.SmokingRoomsAvail value) {
+                    public void setSmokingRoomsAvail(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.SmokingRoomsAvail value) {
                         this.smokingRoomsAvail = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad tennis.
+                     * Gets the value of the tennis property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Tennis }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Tennis }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Tennis getTennis() {
                         return tennis;
                     }
 
                     /**
-                     * Define el valor de la propiedad tennis.
+                     * Sets the value of the tennis property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Tennis }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Tennis }
+                     *     
                      */
-                    public void setTennis(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Tennis value) {
+                    public void setTennis(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Tennis value) {
                         this.tennis = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad waterPurificationSystem.
+                     * Gets the value of the waterPurificationSystem property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.WaterPurificationSystem }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.WaterPurificationSystem }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.WaterPurificationSystem getWaterPurificationSystem() {
                         return waterPurificationSystem;
                     }
 
                     /**
-                     * Define el valor de la propiedad waterPurificationSystem.
+                     * Sets the value of the waterPurificationSystem property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.WaterPurificationSystem }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.WaterPurificationSystem }
+                     *     
                      */
-                    public void setWaterPurificationSystem(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.WaterPurificationSystem value) {
+                    public void setWaterPurificationSystem(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.WaterPurificationSystem value) {
                         this.waterPurificationSystem = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad wheelchair.
+                     * Gets the value of the wheelchair property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Wheelchair }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Wheelchair }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Wheelchair getWheelchair() {
                         return wheelchair;
                     }
 
                     /**
-                     * Define el valor de la propiedad wheelchair.
+                     * Sets the value of the wheelchair property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Wheelchair }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Wheelchair }
+                     *     
                      */
-                    public void setWheelchair(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Wheelchair value) {
+                    public void setWheelchair(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Wheelchair value) {
                         this.wheelchair = value;
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -6352,21 +6471,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -6374,13 +6496,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -6402,21 +6522,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -6424,13 +6547,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -6452,21 +6573,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -6474,13 +6598,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -6502,21 +6624,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -6524,13 +6649,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -6552,21 +6675,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -6574,13 +6700,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -6602,21 +6726,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -6624,13 +6751,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -6652,21 +6777,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -6674,13 +6802,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -6702,21 +6828,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -6724,13 +6853,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -6752,21 +6879,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -6774,13 +6904,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -6802,21 +6930,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -6824,13 +6955,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -6852,21 +6981,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -6874,13 +7006,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -6902,21 +7032,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -6924,13 +7057,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -6952,21 +7083,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -6974,13 +7108,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7002,21 +7134,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -7024,13 +7159,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7052,21 +7185,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -7074,13 +7210,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7102,21 +7236,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -7124,13 +7261,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7152,21 +7287,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -7174,13 +7312,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7202,21 +7338,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -7224,13 +7363,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7252,21 +7389,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -7274,13 +7414,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7302,21 +7440,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -7324,13 +7465,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7352,21 +7491,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -7374,13 +7516,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7402,21 +7542,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -7424,13 +7567,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7452,21 +7593,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -7474,13 +7618,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7502,21 +7644,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -7524,13 +7669,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7552,21 +7695,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -7574,13 +7720,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7602,21 +7746,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -7624,13 +7771,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7652,21 +7797,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -7674,13 +7822,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7702,21 +7848,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -7724,13 +7873,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7752,21 +7899,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -7774,13 +7924,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7802,21 +7950,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -7824,13 +7975,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7852,21 +8001,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -7874,13 +8026,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7902,21 +8052,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -7924,13 +8077,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7952,21 +8103,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -7974,13 +8128,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8002,21 +8154,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -8024,13 +8179,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8052,21 +8205,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -8074,13 +8230,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8102,21 +8256,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -8124,13 +8281,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8152,21 +8307,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -8174,13 +8332,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8202,21 +8358,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -8224,13 +8383,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8252,21 +8409,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -8274,13 +8434,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8302,21 +8460,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -8324,13 +8485,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8352,21 +8511,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -8374,13 +8536,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8402,21 +8562,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -8424,13 +8587,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8452,21 +8613,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -8474,13 +8638,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8502,21 +8664,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -8524,13 +8689,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8552,21 +8715,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -8574,13 +8740,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8602,21 +8766,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -8624,13 +8791,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8652,21 +8817,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -8674,13 +8842,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8702,21 +8868,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -8724,13 +8893,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8752,21 +8919,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -8774,13 +8944,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8802,21 +8970,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -8824,13 +8995,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8852,21 +9021,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -8874,13 +9046,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8902,21 +9072,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -8924,13 +9097,11 @@ public class OTAHotelAvailRS {
 
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8952,21 +9123,24 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Obtiene el valor de la propiedad ind.
+                         * Gets the value of the ind property.
                          * 
-                         * @return possible object is {@link Boolean }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public Boolean isInd() {
                             return ind;
                         }
 
                         /**
-                         * Define el valor de la propiedad ind.
+                         * Sets the value of the ind property.
                          * 
                          * @param value
-                         *            allowed object is {@link Boolean }
-                         * 
+                         *     allowed object is
+                         *     {@link Boolean }
+                         *     
                          */
                         public void setInd(Boolean value) {
                             this.ind = value;
@@ -8976,13 +9150,11 @@ public class OTAHotelAvailRS {
 
                 }
 
+
                 /**
-                 * <p>
-                 * Clase Java para anonymous complex type.
+                 * <p>Java class for anonymous complex type.
                  * 
-                 * <p>
-                 * El siguiente fragmento de esquema especifica el contenido que
-                 * se espera que haya en esta clase.
+                 * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
                  * &lt;complexType&gt;
@@ -9010,63 +9182,72 @@ public class OTAHotelAvailRS {
                     protected String min;
 
                     /**
-                     * Obtiene el valor de la propiedad currencyCode.
+                     * Gets the value of the currencyCode property.
                      * 
-                     * @return possible object is {@link String }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link String }
+                     *     
                      */
                     public String getCurrencyCode() {
                         return currencyCode;
                     }
 
                     /**
-                     * Define el valor de la propiedad currencyCode.
+                     * Sets the value of the currencyCode property.
                      * 
                      * @param value
-                     *            allowed object is {@link String }
-                     * 
+                     *     allowed object is
+                     *     {@link String }
+                     *     
                      */
                     public void setCurrencyCode(String value) {
                         this.currencyCode = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad max.
+                     * Gets the value of the max property.
                      * 
-                     * @return possible object is {@link String }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link String }
+                     *     
                      */
                     public String getMax() {
                         return max;
                     }
 
                     /**
-                     * Define el valor de la propiedad max.
+                     * Sets the value of the max property.
                      * 
                      * @param value
-                     *            allowed object is {@link String }
-                     * 
+                     *     allowed object is
+                     *     {@link String }
+                     *     
                      */
                     public void setMax(String value) {
                         this.max = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad min.
+                     * Gets the value of the min property.
                      * 
-                     * @return possible object is {@link String }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link String }
+                     *     
                      */
                     public String getMin() {
                         return min;
                     }
 
                     /**
-                     * Define el valor de la propiedad min.
+                     * Sets the value of the min property.
                      * 
                      * @param value
-                     *            allowed object is {@link String }
-                     * 
+                     *     allowed object is
+                     *     {@link String }
+                     *     
                      */
                     public void setMin(String value) {
                         this.min = value;
@@ -9074,13 +9255,11 @@ public class OTAHotelAvailRS {
 
                 }
 
+
                 /**
-                 * <p>
-                 * Clase Java para anonymous complex type.
+                 * <p>Java class for anonymous complex type.
                  * 
-                 * <p>
-                 * El siguiente fragmento de esquema especifica el contenido que
-                 * se espera que haya en esta clase.
+                 * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
                  * &lt;complexType&gt;
@@ -9121,7 +9300,11 @@ public class OTAHotelAvailRS {
                  * 
                  */
                 @XmlAccessorType(XmlAccessType.FIELD)
-                @XmlType(name = "", propOrder = { "additionalInfo", "hotelRateCode", "rateTypeCode" })
+                @XmlType(name = "", propOrder = {
+                    "additionalInfo",
+                    "hotelRateCode",
+                    "rateTypeCode"
+                })
                 public static class RoomRate {
 
                     @XmlElement(name = "AdditionalInfo")
@@ -9138,26 +9321,26 @@ public class OTAHotelAvailRS {
                     protected String xpmGuaranteeRequired;
 
                     /**
-                     * Obtiene el valor de la propiedad additionalInfo.
+                     * Gets the value of the additionalInfo property.
                      * 
-                     * @return possible object is
-                     *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RoomRate.AdditionalInfo }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RoomRate.AdditionalInfo }
+                     *     
                      */
                     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RoomRate.AdditionalInfo getAdditionalInfo() {
                         return additionalInfo;
                     }
 
                     /**
-                     * Define el valor de la propiedad additionalInfo.
+                     * Sets the value of the additionalInfo property.
                      * 
                      * @param value
-                     *            allowed object is
-                     *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RoomRate.AdditionalInfo }
-                     * 
+                     *     allowed object is
+                     *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RoomRate.AdditionalInfo }
+                     *     
                      */
-                    public void setAdditionalInfo(
-                            OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RoomRate.AdditionalInfo value) {
+                    public void setAdditionalInfo(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RoomRate.AdditionalInfo value) {
                         this.additionalInfo = value;
                     }
 
@@ -9165,17 +9348,15 @@ public class OTAHotelAvailRS {
                      * Gets the value of the hotelRateCode property.
                      * 
                      * <p>
-                     * This accessor method returns a reference to the live
-                     * list, not a snapshot. Therefore any modification you make
-                     * to the returned list will be present inside the JAXB
-                     * object. This is why there is not a <CODE>set</CODE>
-                     * method for the hotelRateCode property.
+                     * This accessor method returns a reference to the live list,
+                     * not a snapshot. Therefore any modification you make to the
+                     * returned list will be present inside the JAXB object.
+                     * This is why there is not a <CODE>set</CODE> method for the hotelRateCode property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
-                     * 
                      * <pre>
-                     * getHotelRateCode().add(newItem);
+                     *    getHotelRateCode().add(newItem);
                      * </pre>
                      * 
                      * 
@@ -9196,17 +9377,15 @@ public class OTAHotelAvailRS {
                      * Gets the value of the rateTypeCode property.
                      * 
                      * <p>
-                     * This accessor method returns a reference to the live
-                     * list, not a snapshot. Therefore any modification you make
-                     * to the returned list will be present inside the JAXB
-                     * object. This is why there is not a <CODE>set</CODE>
-                     * method for the rateTypeCode property.
+                     * This accessor method returns a reference to the live list,
+                     * not a snapshot. Therefore any modification you make to the
+                     * returned list will be present inside the JAXB object.
+                     * This is why there is not a <CODE>set</CODE> method for the rateTypeCode property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
-                     * 
                      * <pre>
-                     * getRateTypeCode().add(newItem);
+                     *    getRateTypeCode().add(newItem);
                      * </pre>
                      * 
                      * 
@@ -9224,77 +9403,82 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad
-                     * guaranteeSurchargeRequired.
+                     * Gets the value of the guaranteeSurchargeRequired property.
                      * 
-                     * @return possible object is {@link String }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link String }
+                     *     
                      */
                     public String getGuaranteeSurchargeRequired() {
                         return guaranteeSurchargeRequired;
                     }
 
                     /**
-                     * Define el valor de la propiedad
-                     * guaranteeSurchargeRequired.
+                     * Sets the value of the guaranteeSurchargeRequired property.
                      * 
                      * @param value
-                     *            allowed object is {@link String }
-                     * 
+                     *     allowed object is
+                     *     {@link String }
+                     *     
                      */
                     public void setGuaranteeSurchargeRequired(String value) {
                         this.guaranteeSurchargeRequired = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad rateLevelCode.
+                     * Gets the value of the rateLevelCode property.
                      * 
-                     * @return possible object is {@link String }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link String }
+                     *     
                      */
                     public String getRateLevelCode() {
                         return rateLevelCode;
                     }
 
                     /**
-                     * Define el valor de la propiedad rateLevelCode.
+                     * Sets the value of the rateLevelCode property.
                      * 
                      * @param value
-                     *            allowed object is {@link String }
-                     * 
+                     *     allowed object is
+                     *     {@link String }
+                     *     
                      */
                     public void setRateLevelCode(String value) {
                         this.rateLevelCode = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad xpmGuaranteeRequired.
+                     * Gets the value of the xpmGuaranteeRequired property.
                      * 
-                     * @return possible object is {@link String }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link String }
+                     *     
                      */
                     public String getXPMGuaranteeRequired() {
                         return xpmGuaranteeRequired;
                     }
 
                     /**
-                     * Define el valor de la propiedad xpmGuaranteeRequired.
+                     * Sets the value of the xpmGuaranteeRequired property.
                      * 
                      * @param value
-                     *            allowed object is {@link String }
-                     * 
+                     *     allowed object is
+                     *     {@link String }
+                     *     
                      */
                     public void setXPMGuaranteeRequired(String value) {
                         this.xpmGuaranteeRequired = value;
                     }
 
+
                     /**
-                     * <p>
-                     * Clase Java para anonymous complex type.
+                     * <p>Java class for anonymous complex type.
                      * 
-                     * <p>
-                     * El siguiente fragmento de esquema especifica el contenido
-                     * que se espera que haya en esta clase.
+                     * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -9320,43 +9504,43 @@ public class OTAHotelAvailRS {
                      * 
                      */
                     @XmlAccessorType(XmlAccessType.FIELD)
-                    @XmlType(name = "", propOrder = { "cancelPolicy" })
+                    @XmlType(name = "", propOrder = {
+                        "cancelPolicy"
+                    })
                     public static class AdditionalInfo {
 
                         @XmlElement(name = "CancelPolicy")
                         protected OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RoomRate.AdditionalInfo.CancelPolicy cancelPolicy;
 
                         /**
-                         * Obtiene el valor de la propiedad cancelPolicy.
+                         * Gets the value of the cancelPolicy property.
                          * 
-                         * @return possible object is
-                         *         {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RoomRate.AdditionalInfo.CancelPolicy }
-                         * 
+                         * @return
+                         *     possible object is
+                         *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RoomRate.AdditionalInfo.CancelPolicy }
+                         *     
                          */
                         public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RoomRate.AdditionalInfo.CancelPolicy getCancelPolicy() {
                             return cancelPolicy;
                         }
 
                         /**
-                         * Define el valor de la propiedad cancelPolicy.
+                         * Sets the value of the cancelPolicy property.
                          * 
                          * @param value
-                         *            allowed object is
-                         *            {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RoomRate.AdditionalInfo.CancelPolicy }
-                         * 
+                         *     allowed object is
+                         *     {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RoomRate.AdditionalInfo.CancelPolicy }
+                         *     
                          */
-                        public void setCancelPolicy(
-                                OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RoomRate.AdditionalInfo.CancelPolicy value) {
+                        public void setCancelPolicy(OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RoomRate.AdditionalInfo.CancelPolicy value) {
                             this.cancelPolicy = value;
                         }
 
+
                         /**
-                         * <p>
-                         * Clase Java para anonymous complex type.
+                         * <p>Java class for anonymous complex type.
                          * 
-                         * <p>
-                         * El siguiente fragmento de esquema especifica el
-                         * contenido que se espera que haya en esta clase.
+                         * <p>The following schema fragment specifies the expected content contained within this class.
                          * 
                          * <pre>
                          * &lt;complexType&gt;
@@ -9381,42 +9565,48 @@ public class OTAHotelAvailRS {
                             protected String numeric;
 
                             /**
-                             * Obtiene el valor de la propiedad option.
+                             * Gets the value of the option property.
                              * 
-                             * @return possible object is {@link String }
-                             * 
+                             * @return
+                             *     possible object is
+                             *     {@link String }
+                             *     
                              */
                             public String getOption() {
                                 return option;
                             }
 
                             /**
-                             * Define el valor de la propiedad option.
+                             * Sets the value of the option property.
                              * 
                              * @param value
-                             *            allowed object is {@link String }
-                             * 
+                             *     allowed object is
+                             *     {@link String }
+                             *     
                              */
                             public void setOption(String value) {
                                 this.option = value;
                             }
 
                             /**
-                             * Obtiene el valor de la propiedad numeric.
+                             * Gets the value of the numeric property.
                              * 
-                             * @return possible object is {@link String }
-                             * 
+                             * @return
+                             *     possible object is
+                             *     {@link String }
+                             *     
                              */
                             public String getNumeric() {
                                 return numeric;
                             }
 
                             /**
-                             * Define el valor de la propiedad numeric.
+                             * Sets the value of the numeric property.
                              * 
                              * @param value
-                             *            allowed object is {@link String }
-                             * 
+                             *     allowed object is
+                             *     {@link String }
+                             *     
                              */
                             public void setNumeric(String value) {
                                 this.numeric = value;
@@ -9428,13 +9618,11 @@ public class OTAHotelAvailRS {
 
                 }
 
+
                 /**
-                 * <p>
-                 * Clase Java para anonymous complex type.
+                 * <p>Java class for anonymous complex type.
                  * 
-                 * <p>
-                 * El siguiente fragmento de esquema especifica el contenido que
-                 * se espera que haya en esta clase.
+                 * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
                  * &lt;complexType&gt;
@@ -9452,7 +9640,9 @@ public class OTAHotelAvailRS {
                  * 
                  */
                 @XmlAccessorType(XmlAccessType.FIELD)
-                @XmlType(name = "", propOrder = { "text" })
+                @XmlType(name = "", propOrder = {
+                    "text"
+                })
                 public static class SpecialOffers {
 
                     @XmlElement(name = "Text")
@@ -9461,42 +9651,48 @@ public class OTAHotelAvailRS {
                     protected Boolean ind;
 
                     /**
-                     * Obtiene el valor de la propiedad text.
+                     * Gets the value of the text property.
                      * 
-                     * @return possible object is {@link String }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link String }
+                     *     
                      */
                     public String getText() {
                         return text;
                     }
 
                     /**
-                     * Define el valor de la propiedad text.
+                     * Sets the value of the text property.
                      * 
                      * @param value
-                     *            allowed object is {@link String }
-                     * 
+                     *     allowed object is
+                     *     {@link String }
+                     *     
                      */
                     public void setText(String value) {
                         this.text = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad ind.
+                     * Gets the value of the ind property.
                      * 
-                     * @return possible object is {@link Boolean }
-                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link Boolean }
+                     *     
                      */
                     public Boolean isInd() {
                         return ind;
                     }
 
                     /**
-                     * Define el valor de la propiedad ind.
+                     * Sets the value of the ind property.
                      * 
                      * @param value
-                     *            allowed object is {@link Boolean }
-                     * 
+                     *     allowed object is
+                     *     {@link Boolean }
+                     *     
                      */
                     public void setInd(Boolean value) {
                         this.ind = value;
@@ -9510,13 +9706,11 @@ public class OTAHotelAvailRS {
 
     }
 
+
     /**
-     * <p>
-     * Clase Java para anonymous complex type.
+     * <p>Java class for anonymous complex type.
      * 
-     * <p>
-     * El siguiente fragmento de esquema especifica el contenido que se espera
-     * que haya en esta clase.
+     * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
      * &lt;complexType&gt;
@@ -9545,7 +9739,9 @@ public class OTAHotelAvailRS {
      * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = { "line" })
+    @XmlType(name = "", propOrder = {
+        "line"
+    })
     public static class CityList {
 
         @XmlElement(name = "Line")
@@ -9555,16 +9751,15 @@ public class OTAHotelAvailRS {
          * Gets the value of the line property.
          * 
          * <p>
-         * This accessor method returns a reference to the live list, not a
-         * snapshot. Therefore any modification you make to the returned list
-         * will be present inside the JAXB object. This is why there is not a
-         * <CODE>set</CODE> method for the line property.
+         * This accessor method returns a reference to the live list,
+         * not a snapshot. Therefore any modification you make to the
+         * returned list will be present inside the JAXB object.
+         * This is why there is not a <CODE>set</CODE> method for the line property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
-         * 
          * <pre>
-         * getLine().add(newItem);
+         *    getLine().add(newItem);
          * </pre>
          * 
          * 
@@ -9581,13 +9776,11 @@ public class OTAHotelAvailRS {
             return this.line;
         }
 
+
         /**
-         * <p>
-         * Clase Java para anonymous complex type.
+         * <p>Java class for anonymous complex type.
          * 
-         * <p>
-         * El siguiente fragmento de esquema especifica el contenido que se
-         * espera que haya en esta clase.
+         * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
          * &lt;complexType&gt;
@@ -9621,105 +9814,120 @@ public class OTAHotelAvailRS {
             protected String rph;
 
             /**
-             * Obtiene el valor de la propiedad countryStateCode.
+             * Gets the value of the countryStateCode property.
              * 
-             * @return possible object is {@link String }
-             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getCountryStateCode() {
                 return countryStateCode;
             }
 
             /**
-             * Define el valor de la propiedad countryStateCode.
+             * Sets the value of the countryStateCode property.
              * 
              * @param value
-             *            allowed object is {@link String }
-             * 
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setCountryStateCode(String value) {
                 this.countryStateCode = value;
             }
 
             /**
-             * Obtiene el valor de la propiedad latitude.
+             * Gets the value of the latitude property.
              * 
-             * @return possible object is {@link String }
-             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getLatitude() {
                 return latitude;
             }
 
             /**
-             * Define el valor de la propiedad latitude.
+             * Sets the value of the latitude property.
              * 
              * @param value
-             *            allowed object is {@link String }
-             * 
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setLatitude(String value) {
                 this.latitude = value;
             }
 
             /**
-             * Obtiene el valor de la propiedad locationName.
+             * Gets the value of the locationName property.
              * 
-             * @return possible object is {@link String }
-             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getLocationName() {
                 return locationName;
             }
 
             /**
-             * Define el valor de la propiedad locationName.
+             * Sets the value of the locationName property.
              * 
              * @param value
-             *            allowed object is {@link String }
-             * 
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setLocationName(String value) {
                 this.locationName = value;
             }
 
             /**
-             * Obtiene el valor de la propiedad longitude.
+             * Gets the value of the longitude property.
              * 
-             * @return possible object is {@link String }
-             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getLongitude() {
                 return longitude;
             }
 
             /**
-             * Define el valor de la propiedad longitude.
+             * Sets the value of the longitude property.
              * 
              * @param value
-             *            allowed object is {@link String }
-             * 
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setLongitude(String value) {
                 this.longitude = value;
             }
 
             /**
-             * Obtiene el valor de la propiedad rph.
+             * Gets the value of the rph property.
              * 
-             * @return possible object is {@link String }
-             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getRPH() {
                 return rph;
             }
 
             /**
-             * Define el valor de la propiedad rph.
+             * Sets the value of the rph property.
              * 
              * @param value
-             *            allowed object is {@link String }
-             * 
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setRPH(String value) {
                 this.rph = value;

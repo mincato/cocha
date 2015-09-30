@@ -1,3 +1,4 @@
+
 package com.sabre.services.stl.v01;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -6,13 +7,11 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 
+
 /**
- * <p>
- * Clase Java para HostCommand complex type.
+ * <p>Java class for HostCommand complex type.
  * 
- * <p>
- * El siguiente fragmento de esquema especifica el contenido que se espera que
- * haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="HostCommand"&gt;
@@ -27,7 +26,9 @@ import javax.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "HostCommand", propOrder = { "value" })
+@XmlType(name = "HostCommand", propOrder = {
+    "value"
+})
 public class HostCommand {
 
     @XmlValue
@@ -38,40 +39,46 @@ public class HostCommand {
     /**
      * Same as STL Text.Long - A field text characters and no other constraints.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getValue() {
         return value;
     }
 
     /**
-     * Define el valor de la propiedad value.
+     * Sets the value of the value property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setValue(String value) {
         this.value = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad lniata.
+     * Gets the value of the lniata property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getLNIATA() {
         return lniata;
     }
 
     /**
-     * Define el valor de la propiedad lniata.
+     * Sets the value of the lniata property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setLNIATA(String value) {
         this.lniata = value;

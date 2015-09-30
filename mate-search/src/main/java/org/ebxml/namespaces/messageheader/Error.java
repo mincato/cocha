@@ -1,3 +1,4 @@
+
 package org.ebxml.namespaces.messageheader;
 
 import java.util.ArrayList;
@@ -19,13 +20,11 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.namespace.QName;
 import org.w3c.dom.Element;
 
+
 /**
- * <p>
- * Clase Java para anonymous complex type.
+ * <p>Java class for anonymous complex type.
  * 
- * <p>
- * El siguiente fragmento de esquema especifica el contenido que se espera que
- * haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -49,7 +48,10 @@ import org.w3c.dom.Element;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = { "description", "any" })
+@XmlType(name = "", propOrder = {
+    "description",
+    "any"
+})
 @XmlRootElement(name = "Error")
 public class Error {
 
@@ -75,21 +77,24 @@ public class Error {
     private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
     /**
-     * Obtiene el valor de la propiedad description.
+     * Gets the value of the description property.
      * 
-     * @return possible object is {@link Description }
-     * 
+     * @return
+     *     possible object is
+     *     {@link Description }
+     *     
      */
     public Description getDescription() {
         return description;
     }
 
     /**
-     * Define el valor de la propiedad description.
+     * Sets the value of the description property.
      * 
      * @param value
-     *            allowed object is {@link Description }
-     * 
+     *     allowed object is
+     *     {@link Description }
+     *     
      */
     public void setDescription(Description value) {
         this.description = value;
@@ -99,22 +104,22 @@ public class Error {
      * Gets the value of the any property.
      * 
      * <p>
-     * This accessor method returns a reference to the live list, not a
-     * snapshot. Therefore any modification you make to the returned list will
-     * be present inside the JAXB object. This is why there is not a
-     * <CODE>set</CODE> method for the any property.
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the any property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * 
      * <pre>
-     * getAny().add(newItem);
+     *    getAny().add(newItem);
      * </pre>
      * 
      * 
      * <p>
-     * Objects of the following type(s) are allowed in the list {@link Element }
+     * Objects of the following type(s) are allowed in the list
      * {@link Object }
+     * {@link Element }
      * 
      * 
      */
@@ -126,31 +131,36 @@ public class Error {
     }
 
     /**
-     * Obtiene el valor de la propiedad id.
+     * Gets the value of the id property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getId() {
         return id;
     }
 
     /**
-     * Define el valor de la propiedad id.
+     * Sets the value of the id property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setId(String value) {
         this.id = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad codeContext.
+     * Gets the value of the codeContext property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getCodeContext() {
         if (codeContext == null) {
@@ -161,92 +171,102 @@ public class Error {
     }
 
     /**
-     * Define el valor de la propiedad codeContext.
+     * Sets the value of the codeContext property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setCodeContext(String value) {
         this.codeContext = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad errorCode.
+     * Gets the value of the errorCode property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getErrorCode() {
         return errorCode;
     }
 
     /**
-     * Define el valor de la propiedad errorCode.
+     * Sets the value of the errorCode property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setErrorCode(String value) {
         this.errorCode = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad severity.
+     * Gets the value of the severity property.
      * 
-     * @return possible object is {@link SeverityType }
-     * 
+     * @return
+     *     possible object is
+     *     {@link SeverityType }
+     *     
      */
     public SeverityType getSeverity() {
         return severity;
     }
 
     /**
-     * Define el valor de la propiedad severity.
+     * Sets the value of the severity property.
      * 
      * @param value
-     *            allowed object is {@link SeverityType }
-     * 
+     *     allowed object is
+     *     {@link SeverityType }
+     *     
      */
     public void setSeverity(SeverityType value) {
         this.severity = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad location.
+     * Gets the value of the location property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getLocation() {
         return location;
     }
 
     /**
-     * Define el valor de la propiedad location.
+     * Sets the value of the location property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setLocation(String value) {
         this.location = value;
     }
 
     /**
-     * Gets a map that contains attributes that aren't bound to any typed
-     * property on this class.
+     * Gets a map that contains attributes that aren't bound to any typed property on this class.
      * 
      * <p>
-     * the map is keyed by the name of the attribute and the value is the string
-     * value of the attribute.
+     * the map is keyed by the name of the attribute and 
+     * the value is the string value of the attribute.
      * 
-     * the map returned by this method is live, and you can add new attribute by
-     * updating the map directly. Because of this design, there's no setter.
+     * the map returned by this method is live, and you can add new attribute
+     * by updating the map directly. Because of this design, there's no setter.
      * 
      * 
-     * @return always non-null
+     * @return
+     *     always non-null
      */
     public Map<QName, String> getOtherAttributes() {
         return otherAttributes;

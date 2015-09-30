@@ -1,3 +1,4 @@
+
 package com.sabre.services.stl_header.v120;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -6,13 +7,11 @@ import javax.xml.bind.annotation.XmlAnyElement;
 import javax.xml.bind.annotation.XmlType;
 import org.w3c.dom.Element;
 
+
 /**
- * <p>
- * Clase Java para DiagnosticResults complex type.
+ * <p>Java class for DiagnosticResults complex type.
  * 
- * <p>
- * El siguiente fragmento de esquema especifica el contenido que se espera que
- * haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="DiagnosticResults"&gt;
@@ -29,28 +28,35 @@ import org.w3c.dom.Element;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DiagnosticResults", propOrder = { "any" })
+@XmlType(name = "DiagnosticResults", propOrder = {
+    "any"
+})
 public class DiagnosticResults {
 
     @XmlAnyElement(lax = true)
     protected Object any;
 
     /**
-     * Obtiene el valor de la propiedad any.
+     * Gets the value of the any property.
      * 
-     * @return possible object is {@link Element } {@link Object }
-     * 
+     * @return
+     *     possible object is
+     *     {@link Object }
+     *     {@link Element }
+     *     
      */
     public Object getAny() {
         return any;
     }
 
     /**
-     * Define el valor de la propiedad any.
+     * Sets the value of the any property.
      * 
      * @param value
-     *            allowed object is {@link Element } {@link Object }
-     * 
+     *     allowed object is
+     *     {@link Object }
+     *     {@link Element }
+     *     
      */
     public void setAny(Object value) {
         this.any = value;

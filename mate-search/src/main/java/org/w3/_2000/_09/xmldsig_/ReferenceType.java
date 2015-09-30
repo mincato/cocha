@@ -1,3 +1,4 @@
+
 package org.w3._2000._09.xmldsig_;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -10,13 +11,11 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
+
 /**
- * <p>
- * Clase Java para ReferenceType complex type.
+ * <p>Java class for ReferenceType complex type.
  * 
- * <p>
- * El siguiente fragmento de esquema especifica el contenido que se espera que
- * haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="ReferenceType"&gt;
@@ -38,7 +37,11 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ReferenceType", propOrder = { "transforms", "digestMethod", "digestValue" })
+@XmlType(name = "ReferenceType", propOrder = {
+    "transforms",
+    "digestMethod",
+    "digestValue"
+})
 public class ReferenceType {
 
     @XmlElement(name = "Transforms")
@@ -60,124 +63,142 @@ public class ReferenceType {
     protected String type;
 
     /**
-     * Obtiene el valor de la propiedad transforms.
+     * Gets the value of the transforms property.
      * 
-     * @return possible object is {@link TransformsType }
-     * 
+     * @return
+     *     possible object is
+     *     {@link TransformsType }
+     *     
      */
     public TransformsType getTransforms() {
         return transforms;
     }
 
     /**
-     * Define el valor de la propiedad transforms.
+     * Sets the value of the transforms property.
      * 
      * @param value
-     *            allowed object is {@link TransformsType }
-     * 
+     *     allowed object is
+     *     {@link TransformsType }
+     *     
      */
     public void setTransforms(TransformsType value) {
         this.transforms = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad digestMethod.
+     * Gets the value of the digestMethod property.
      * 
-     * @return possible object is {@link DigestMethodType }
-     * 
+     * @return
+     *     possible object is
+     *     {@link DigestMethodType }
+     *     
      */
     public DigestMethodType getDigestMethod() {
         return digestMethod;
     }
 
     /**
-     * Define el valor de la propiedad digestMethod.
+     * Sets the value of the digestMethod property.
      * 
      * @param value
-     *            allowed object is {@link DigestMethodType }
-     * 
+     *     allowed object is
+     *     {@link DigestMethodType }
+     *     
      */
     public void setDigestMethod(DigestMethodType value) {
         this.digestMethod = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad digestValue.
+     * Gets the value of the digestValue property.
      * 
-     * @return possible object is byte[]
+     * @return
+     *     possible object is
+     *     byte[]
      */
     public byte[] getDigestValue() {
         return digestValue;
     }
 
     /**
-     * Define el valor de la propiedad digestValue.
+     * Sets the value of the digestValue property.
      * 
      * @param value
-     *            allowed object is byte[]
+     *     allowed object is
+     *     byte[]
      */
     public void setDigestValue(byte[] value) {
         this.digestValue = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad id.
+     * Gets the value of the id property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getId() {
         return id;
     }
 
     /**
-     * Define el valor de la propiedad id.
+     * Sets the value of the id property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setId(String value) {
         this.id = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad uri.
+     * Gets the value of the uri property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getURI() {
         return uri;
     }
 
     /**
-     * Define el valor de la propiedad uri.
+     * Sets the value of the uri property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setURI(String value) {
         this.uri = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad type.
+     * Gets the value of the type property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getType() {
         return type;
     }
 
     /**
-     * Define el valor de la propiedad type.
+     * Sets the value of the type property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setType(String value) {
         this.type = value;

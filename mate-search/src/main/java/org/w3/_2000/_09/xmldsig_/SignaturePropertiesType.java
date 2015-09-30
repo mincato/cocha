@@ -1,3 +1,4 @@
+
 package org.w3._2000._09.xmldsig_;
 
 import java.util.ArrayList;
@@ -12,13 +13,11 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
+
 /**
- * <p>
- * Clase Java para SignaturePropertiesType complex type.
+ * <p>Java class for SignaturePropertiesType complex type.
  * 
- * <p>
- * El siguiente fragmento de esquema especifica el contenido que se espera que
- * haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="SignaturePropertiesType"&gt;
@@ -36,7 +35,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SignaturePropertiesType", propOrder = { "signatureProperty" })
+@XmlType(name = "SignaturePropertiesType", propOrder = {
+    "signatureProperty"
+})
 public class SignaturePropertiesType {
 
     @XmlElement(name = "SignatureProperty", required = true)
@@ -51,16 +52,15 @@ public class SignaturePropertiesType {
      * Gets the value of the signatureProperty property.
      * 
      * <p>
-     * This accessor method returns a reference to the live list, not a
-     * snapshot. Therefore any modification you make to the returned list will
-     * be present inside the JAXB object. This is why there is not a
-     * <CODE>set</CODE> method for the signatureProperty property.
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the signatureProperty property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * 
      * <pre>
-     * getSignatureProperty().add(newItem);
+     *    getSignatureProperty().add(newItem);
      * </pre>
      * 
      * 
@@ -78,21 +78,24 @@ public class SignaturePropertiesType {
     }
 
     /**
-     * Obtiene el valor de la propiedad id.
+     * Gets the value of the id property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getId() {
         return id;
     }
 
     /**
-     * Define el valor de la propiedad id.
+     * Sets the value of the id property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setId(String value) {
         this.id = value;

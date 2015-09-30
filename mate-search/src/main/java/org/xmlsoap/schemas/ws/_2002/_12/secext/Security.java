@@ -1,3 +1,4 @@
+
 package org.xmlsoap.schemas.ws._2002._12.secext;
 
 import java.util.ArrayList;
@@ -8,13 +9,11 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Clase Java para anonymous complex type.
+ * <p>Java class for anonymous complex type.
  * 
- * <p>
- * El siguiente fragmento de esquema especifica el contenido que se espera que
- * haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -47,7 +46,11 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = { "usernameToken", "sabreAth", "binarySecurityToken" })
+@XmlType(name = "", propOrder = {
+    "usernameToken",
+    "sabreAth",
+    "binarySecurityToken"
+})
 @XmlRootElement(name = "Security")
 public class Security {
 
@@ -59,75 +62,82 @@ public class Security {
     protected String binarySecurityToken;
 
     /**
-     * Obtiene el valor de la propiedad usernameToken.
+     * Gets the value of the usernameToken property.
      * 
-     * @return possible object is {@link Security.UsernameToken }
-     * 
+     * @return
+     *     possible object is
+     *     {@link Security.UsernameToken }
+     *     
      */
     public Security.UsernameToken getUsernameToken() {
         return usernameToken;
     }
 
     /**
-     * Define el valor de la propiedad usernameToken.
+     * Sets the value of the usernameToken property.
      * 
      * @param value
-     *            allowed object is {@link Security.UsernameToken }
-     * 
+     *     allowed object is
+     *     {@link Security.UsernameToken }
+     *     
      */
     public void setUsernameToken(Security.UsernameToken value) {
         this.usernameToken = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad sabreAth.
+     * Gets the value of the sabreAth property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getSabreAth() {
         return sabreAth;
     }
 
     /**
-     * Define el valor de la propiedad sabreAth.
+     * Sets the value of the sabreAth property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setSabreAth(String value) {
         this.sabreAth = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad binarySecurityToken.
+     * Gets the value of the binarySecurityToken property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getBinarySecurityToken() {
         return binarySecurityToken;
     }
 
     /**
-     * Define el valor de la propiedad binarySecurityToken.
+     * Sets the value of the binarySecurityToken property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setBinarySecurityToken(String value) {
         this.binarySecurityToken = value;
     }
 
+
     /**
-     * <p>
-     * Clase Java para anonymous complex type.
+     * <p>Java class for anonymous complex type.
      * 
-     * <p>
-     * El siguiente fragmento de esquema especifica el contenido que se espera
-     * que haya en esta clase.
+     * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
      * &lt;complexType&gt;
@@ -148,7 +158,13 @@ public class Security {
      * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = { "username", "password", "newPassword", "organization", "domain" })
+    @XmlType(name = "", propOrder = {
+        "username",
+        "password",
+        "newPassword",
+        "organization",
+        "domain"
+    })
     public static class UsernameToken {
 
         @XmlElement(name = "Username")
@@ -163,42 +179,48 @@ public class Security {
         protected String domain;
 
         /**
-         * Obtiene el valor de la propiedad username.
+         * Gets the value of the username property.
          * 
-         * @return possible object is {@link String }
-         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
          */
         public String getUsername() {
             return username;
         }
 
         /**
-         * Define el valor de la propiedad username.
+         * Sets the value of the username property.
          * 
          * @param value
-         *            allowed object is {@link String }
-         * 
+         *     allowed object is
+         *     {@link String }
+         *     
          */
         public void setUsername(String value) {
             this.username = value;
         }
 
         /**
-         * Obtiene el valor de la propiedad password.
+         * Gets the value of the password property.
          * 
-         * @return possible object is {@link String }
-         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
          */
         public String getPassword() {
             return password;
         }
 
         /**
-         * Define el valor de la propiedad password.
+         * Sets the value of the password property.
          * 
          * @param value
-         *            allowed object is {@link String }
-         * 
+         *     allowed object is
+         *     {@link String }
+         *     
          */
         public void setPassword(String value) {
             this.password = value;
@@ -208,16 +230,15 @@ public class Security {
          * Gets the value of the newPassword property.
          * 
          * <p>
-         * This accessor method returns a reference to the live list, not a
-         * snapshot. Therefore any modification you make to the returned list
-         * will be present inside the JAXB object. This is why there is not a
-         * <CODE>set</CODE> method for the newPassword property.
+         * This accessor method returns a reference to the live list,
+         * not a snapshot. Therefore any modification you make to the
+         * returned list will be present inside the JAXB object.
+         * This is why there is not a <CODE>set</CODE> method for the newPassword property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
-         * 
          * <pre>
-         * getNewPassword().add(newItem);
+         *    getNewPassword().add(newItem);
          * </pre>
          * 
          * 
@@ -235,42 +256,48 @@ public class Security {
         }
 
         /**
-         * Obtiene el valor de la propiedad organization.
+         * Gets the value of the organization property.
          * 
-         * @return possible object is {@link String }
-         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
          */
         public String getOrganization() {
             return organization;
         }
 
         /**
-         * Define el valor de la propiedad organization.
+         * Sets the value of the organization property.
          * 
          * @param value
-         *            allowed object is {@link String }
-         * 
+         *     allowed object is
+         *     {@link String }
+         *     
          */
         public void setOrganization(String value) {
             this.organization = value;
         }
 
         /**
-         * Obtiene el valor de la propiedad domain.
+         * Gets the value of the domain property.
          * 
-         * @return possible object is {@link String }
-         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
          */
         public String getDomain() {
             return domain;
         }
 
         /**
-         * Define el valor de la propiedad domain.
+         * Sets the value of the domain property.
          * 
          * @param value
-         *            allowed object is {@link String }
-         * 
+         *     allowed object is
+         *     {@link String }
+         *     
          */
         public void setDomain(String value) {
             this.domain = value;

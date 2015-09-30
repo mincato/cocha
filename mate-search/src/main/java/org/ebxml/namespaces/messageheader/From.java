@@ -1,3 +1,4 @@
+
 package org.ebxml.namespaces.messageheader;
 
 import java.util.ArrayList;
@@ -8,13 +9,11 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Clase Java para anonymous complex type.
+ * <p>Java class for anonymous complex type.
  * 
- * <p>
- * El siguiente fragmento de esquema especifica el contenido que se espera que
- * haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -32,7 +31,10 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = { "partyId", "role" })
+@XmlType(name = "", propOrder = {
+    "partyId",
+    "role"
+})
 @XmlRootElement(name = "From")
 public class From {
 
@@ -45,21 +47,21 @@ public class From {
      * Gets the value of the partyId property.
      * 
      * <p>
-     * This accessor method returns a reference to the live list, not a
-     * snapshot. Therefore any modification you make to the returned list will
-     * be present inside the JAXB object. This is why there is not a
-     * <CODE>set</CODE> method for the partyId property.
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the partyId property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * 
      * <pre>
-     * getPartyId().add(newItem);
+     *    getPartyId().add(newItem);
      * </pre>
      * 
      * 
      * <p>
-     * Objects of the following type(s) are allowed in the list {@link PartyId }
+     * Objects of the following type(s) are allowed in the list
+     * {@link PartyId }
      * 
      * 
      */
@@ -71,21 +73,24 @@ public class From {
     }
 
     /**
-     * Obtiene el valor de la propiedad role.
+     * Gets the value of the role property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getRole() {
         return role;
     }
 
     /**
-     * Define el valor de la propiedad role.
+     * Sets the value of the role property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setRole(String value) {
         this.role = value;

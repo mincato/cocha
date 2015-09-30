@@ -1,3 +1,4 @@
+
 package com.sabre.services.stl.v01;
 
 import javax.xml.bind.JAXBElement;
@@ -5,30 +6,31 @@ import javax.xml.bind.annotation.XmlElementDecl;
 import javax.xml.bind.annotation.XmlRegistry;
 import javax.xml.namespace.QName;
 
+
 /**
- * This object contains factory methods for each Java content interface and Java
- * element interface generated in the com.sabre.services.stl.v01 package.
- * <p>
- * An ObjectFactory allows you to programatically construct new instances of the
- * Java representation for XML content. The Java representation of XML content
- * can consist of schema derived interfaces and classes representing the binding
- * of schema type definitions, element declarations and model groups. Factory
- * methods for each of these are provided in this class.
+ * This object contains factory methods for each 
+ * Java content interface and Java element interface 
+ * generated in the com.sabre.services.stl.v01 package. 
+ * <p>An ObjectFactory allows you to programatically 
+ * construct new instances of the Java representation 
+ * for XML content. The Java representation of XML 
+ * content can consist of schema derived interfaces 
+ * and classes representing the binding of schema 
+ * type definitions, element declarations and model 
+ * groups.  Factory methods for each of these are 
+ * provided in this class.
  * 
  */
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _ApplicationResults_QNAME = new QName("http://services.sabre.com/STL/v01",
-            "ApplicationResults");
+    private final static QName _ApplicationResults_QNAME = new QName("http://services.sabre.com/STL/v01", "ApplicationResults");
     private final static QName _Results_QNAME = new QName("http://services.sabre.com/STL/v01", "Results");
     private final static QName _STLPayload_QNAME = new QName("http://services.sabre.com/STL/v01", "STL_Payload");
-    private final static QName _ProblemInformation_QNAME = new QName("http://services.sabre.com/STL/v01",
-            "ProblemInformation");
+    private final static QName _ProblemInformation_QNAME = new QName("http://services.sabre.com/STL/v01", "ProblemInformation");
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of
-     * schema derived classes for package: com.sabre.services.stl.v01
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.sabre.services.stl.v01
      * 
      */
     public ObjectFactory() {
@@ -83,8 +85,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}
-     * {@link ApplicationResults }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ApplicationResults }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://services.sabre.com/STL/v01", name = "ApplicationResults", substitutionHeadNamespace = "http://services.sabre.com/STL/v01", substitutionHeadName = "Results")
@@ -93,7 +94,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Results }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Results }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://services.sabre.com/STL/v01", name = "Results")
@@ -102,8 +103,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link STLPayload }
-     * {@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link STLPayload }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://services.sabre.com/STL/v01", name = "STL_Payload")
@@ -112,8 +112,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}
-     * {@link ProblemInformation }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ProblemInformation }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://services.sabre.com/STL/v01", name = "ProblemInformation")

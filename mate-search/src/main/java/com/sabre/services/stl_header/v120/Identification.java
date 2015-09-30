@@ -1,3 +1,4 @@
+
 package com.sabre.services.stl_header.v120;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -7,15 +8,13 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
+
 /**
  * The Identification metadata uniquely identify each message instance.
  * 
- * <p>
- * Clase Java para Identification complex type.
+ * <p>Java class for Identification complex type.
  * 
- * <p>
- * El siguiente fragmento de esquema especifica el contenido que se espera que
- * haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="Identification"&gt;
@@ -36,8 +35,13 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Identification", propOrder = { "customerID", "customerAppID", "conversationID", "messageID",
-        "timeStamp" })
+@XmlType(name = "Identification", propOrder = {
+    "customerID",
+    "customerAppID",
+    "conversationID",
+    "messageID",
+    "timeStamp"
+})
 public class Identification {
 
     @XmlElement(name = "CustomerID", required = true)
@@ -53,105 +57,120 @@ public class Identification {
     protected XMLGregorianCalendar timeStamp;
 
     /**
-     * Obtiene el valor de la propiedad customerID.
+     * Gets the value of the customerID property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getCustomerID() {
         return customerID;
     }
 
     /**
-     * Define el valor de la propiedad customerID.
+     * Sets the value of the customerID property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setCustomerID(String value) {
         this.customerID = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad customerAppID.
+     * Gets the value of the customerAppID property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getCustomerAppID() {
         return customerAppID;
     }
 
     /**
-     * Define el valor de la propiedad customerAppID.
+     * Sets the value of the customerAppID property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setCustomerAppID(String value) {
         this.customerAppID = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad conversationID.
+     * Gets the value of the conversationID property.
      * 
-     * @return possible object is {@link TrackingID }
-     * 
+     * @return
+     *     possible object is
+     *     {@link TrackingID }
+     *     
      */
     public TrackingID getConversationID() {
         return conversationID;
     }
 
     /**
-     * Define el valor de la propiedad conversationID.
+     * Sets the value of the conversationID property.
      * 
      * @param value
-     *            allowed object is {@link TrackingID }
-     * 
+     *     allowed object is
+     *     {@link TrackingID }
+     *     
      */
     public void setConversationID(TrackingID value) {
         this.conversationID = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad messageID.
+     * Gets the value of the messageID property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getMessageID() {
         return messageID;
     }
 
     /**
-     * Define el valor de la propiedad messageID.
+     * Sets the value of the messageID property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setMessageID(String value) {
         this.messageID = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad timeStamp.
+     * Gets the value of the timeStamp property.
      * 
-     * @return possible object is {@link XMLGregorianCalendar }
-     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
     public XMLGregorianCalendar getTimeStamp() {
         return timeStamp;
     }
 
     /**
-     * Define el valor de la propiedad timeStamp.
+     * Sets the value of the timeStamp property.
      * 
      * @param value
-     *            allowed object is {@link XMLGregorianCalendar }
-     * 
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
     public void setTimeStamp(XMLGregorianCalendar value) {
         this.timeStamp = value;

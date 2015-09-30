@@ -1,3 +1,4 @@
+
 package com.sabre.services.stl.v01;
 
 import java.util.ArrayList;
@@ -11,13 +12,11 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 import com.sabre.services.stl_header.v120.MessageCondition;
 
+
 /**
- * <p>
- * Clase Java para SystemSpecificResults complex type.
+ * <p>Java class for SystemSpecificResults complex type.
  * 
- * <p>
- * El siguiente fragmento de esquema especifica el contenido que se espera que
- * haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="SystemSpecificResults"&gt;
@@ -40,8 +39,14 @@ import com.sabre.services.stl_header.v120.MessageCondition;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SystemSpecificResults", propOrder = { "hostCommand", "message", "shortText", "element", "recordID",
-        "docURL" })
+@XmlType(name = "SystemSpecificResults", propOrder = {
+    "hostCommand",
+    "message",
+    "shortText",
+    "element",
+    "recordID",
+    "docURL"
+})
 public class SystemSpecificResults {
 
     @XmlElement(name = "HostCommand")
@@ -62,21 +67,24 @@ public class SystemSpecificResults {
     protected XMLGregorianCalendar timeStamp;
 
     /**
-     * Obtiene el valor de la propiedad hostCommand.
+     * Gets the value of the hostCommand property.
      * 
-     * @return possible object is {@link HostCommand }
-     * 
+     * @return
+     *     possible object is
+     *     {@link HostCommand }
+     *     
      */
     public HostCommand getHostCommand() {
         return hostCommand;
     }
 
     /**
-     * Define el valor de la propiedad hostCommand.
+     * Sets the value of the hostCommand property.
      * 
      * @param value
-     *            allowed object is {@link HostCommand }
-     * 
+     *     allowed object is
+     *     {@link HostCommand }
+     *     
      */
     public void setHostCommand(HostCommand value) {
         this.hostCommand = value;
@@ -86,16 +94,15 @@ public class SystemSpecificResults {
      * Gets the value of the message property.
      * 
      * <p>
-     * This accessor method returns a reference to the live list, not a
-     * snapshot. Therefore any modification you make to the returned list will
-     * be present inside the JAXB object. This is why there is not a
-     * <CODE>set</CODE> method for the message property.
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the message property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * 
      * <pre>
-     * getMessage().add(newItem);
+     *    getMessage().add(newItem);
      * </pre>
      * 
      * 
@@ -113,105 +120,120 @@ public class SystemSpecificResults {
     }
 
     /**
-     * Obtiene el valor de la propiedad shortText.
+     * Gets the value of the shortText property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getShortText() {
         return shortText;
     }
 
     /**
-     * Define el valor de la propiedad shortText.
+     * Sets the value of the shortText property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setShortText(String value) {
         this.shortText = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad element.
+     * Gets the value of the element property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getElement() {
         return element;
     }
 
     /**
-     * Define el valor de la propiedad element.
+     * Sets the value of the element property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setElement(String value) {
         this.element = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad recordID.
+     * Gets the value of the recordID property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getRecordID() {
         return recordID;
     }
 
     /**
-     * Define el valor de la propiedad recordID.
+     * Sets the value of the recordID property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setRecordID(String value) {
         this.recordID = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad docURL.
+     * Gets the value of the docURL property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getDocURL() {
         return docURL;
     }
 
     /**
-     * Define el valor de la propiedad docURL.
+     * Sets the value of the docURL property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setDocURL(String value) {
         this.docURL = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad timeStamp.
+     * Gets the value of the timeStamp property.
      * 
-     * @return possible object is {@link XMLGregorianCalendar }
-     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
     public XMLGregorianCalendar getTimeStamp() {
         return timeStamp;
     }
 
     /**
-     * Define el valor de la propiedad timeStamp.
+     * Sets the value of the timeStamp property.
      * 
      * @param value
-     *            allowed object is {@link XMLGregorianCalendar }
-     * 
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
     public void setTimeStamp(XMLGregorianCalendar value) {
         this.timeStamp = value;

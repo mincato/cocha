@@ -1,3 +1,4 @@
+
 package com.sabre.services.stl_header.v120;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -6,23 +7,18 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 
+
 /**
- * System identifier used to uniquily identify the specific system. "Source" is
- * used to return the application name responsible for fulfilling the particular
- * request transaction. "ApplicationInstance" is used to return the application
- * instance responsible for fulfilling the particular request transaction.
- * "Cluster" is used to return the application cluster responsible for
- * fulfilling the particular request transaction. "HostName" is used to return
- * the particular server name responsible for fulfilling the particular request
- * transaction.  Example: Source ApplicationInstance="PROD1"
- * Cluster="PROD TPF SCC" HostName="PSS" TPF Source
+ * System identifier used to uniquily identify the specific system.
+ *  	"Source" is used to return the application name responsible for fulfilling the particular request transaction.
+ * 	"ApplicationInstance" is used to return the application instance responsible for fulfilling the particular request transaction.
+ * 	"Cluster" is used to return the application cluster responsible for fulfilling the particular request transaction.
+ * 	"HostName" is used to return the particular server name responsible for fulfilling the particular request transaction.
+ * 	 Example: Source ApplicationInstance="PROD1" Cluster="PROD TPF SCC" HostName="PSS" TPF Source
  * 
- * <p>
- * Clase Java para Identifier.System complex type.
+ * <p>Java class for Identifier.System complex type.
  * 
- * <p>
- * El siguiente fragmento de esquema especifica el contenido que se espera que
- * haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="Identifier.System"&gt;
@@ -40,7 +36,9 @@ import javax.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Identifier.System", propOrder = { "value" })
+@XmlType(name = "Identifier.System", propOrder = {
+    "value"
+})
 public class IdentifierSystem {
 
     @XmlValue
@@ -55,105 +53,120 @@ public class IdentifierSystem {
     protected String uri;
 
     /**
-     * Obtiene el valor de la propiedad value.
+     * Gets the value of the value property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getValue() {
         return value;
     }
 
     /**
-     * Define el valor de la propiedad value.
+     * Sets the value of the value property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setValue(String value) {
         this.value = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad instance.
+     * Gets the value of the instance property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getInstance() {
         return instance;
     }
 
     /**
-     * Define el valor de la propiedad instance.
+     * Sets the value of the instance property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setInstance(String value) {
         this.instance = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad cluster.
+     * Gets the value of the cluster property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getCluster() {
         return cluster;
     }
 
     /**
-     * Define el valor de la propiedad cluster.
+     * Sets the value of the cluster property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setCluster(String value) {
         this.cluster = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad host.
+     * Gets the value of the host property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getHost() {
         return host;
     }
 
     /**
-     * Define el valor de la propiedad host.
+     * Sets the value of the host property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setHost(String value) {
         this.host = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad uri.
+     * Gets the value of the uri property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getUri() {
         return uri;
     }
 
     /**
-     * Define el valor de la propiedad uri.
+     * Sets the value of the uri property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setUri(String value) {
         this.uri = value;

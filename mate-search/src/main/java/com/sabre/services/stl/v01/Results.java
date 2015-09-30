@@ -1,3 +1,4 @@
+
 package com.sabre.services.stl.v01;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -5,13 +6,11 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Clase Java para Results complex type.
+ * <p>Java class for Results complex type.
  * 
- * <p>
- * El siguiente fragmento de esquema especifica el contenido que se espera que
- * haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="Results"&gt;
@@ -26,7 +25,10 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Results")
-@XmlSeeAlso({ ApplicationResults.class })
+@XmlSeeAlso({
+    ApplicationResults.class
+})
 public class Results {
+
 
 }

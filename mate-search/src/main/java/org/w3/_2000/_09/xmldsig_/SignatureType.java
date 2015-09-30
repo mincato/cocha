@@ -1,3 +1,4 @@
+
 package org.w3._2000._09.xmldsig_;
 
 import java.util.ArrayList;
@@ -12,13 +13,11 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
+
 /**
- * <p>
- * Clase Java para SignatureType complex type.
+ * <p>Java class for SignatureType complex type.
  * 
- * <p>
- * El siguiente fragmento de esquema especifica el contenido que se espera que
- * haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="SignatureType"&gt;
@@ -39,7 +38,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SignatureType", propOrder = { "signedInfo", "signatureValue", "keyInfo", "object" })
+@XmlType(name = "SignatureType", propOrder = {
+    "signedInfo",
+    "signatureValue",
+    "keyInfo",
+    "object"
+})
 public class SignatureType {
 
     @XmlElement(name = "SignedInfo", required = true)
@@ -57,63 +61,72 @@ public class SignatureType {
     protected String id;
 
     /**
-     * Obtiene el valor de la propiedad signedInfo.
+     * Gets the value of the signedInfo property.
      * 
-     * @return possible object is {@link SignedInfoType }
-     * 
+     * @return
+     *     possible object is
+     *     {@link SignedInfoType }
+     *     
      */
     public SignedInfoType getSignedInfo() {
         return signedInfo;
     }
 
     /**
-     * Define el valor de la propiedad signedInfo.
+     * Sets the value of the signedInfo property.
      * 
      * @param value
-     *            allowed object is {@link SignedInfoType }
-     * 
+     *     allowed object is
+     *     {@link SignedInfoType }
+     *     
      */
     public void setSignedInfo(SignedInfoType value) {
         this.signedInfo = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad signatureValue.
+     * Gets the value of the signatureValue property.
      * 
-     * @return possible object is {@link SignatureValueType }
-     * 
+     * @return
+     *     possible object is
+     *     {@link SignatureValueType }
+     *     
      */
     public SignatureValueType getSignatureValue() {
         return signatureValue;
     }
 
     /**
-     * Define el valor de la propiedad signatureValue.
+     * Sets the value of the signatureValue property.
      * 
      * @param value
-     *            allowed object is {@link SignatureValueType }
-     * 
+     *     allowed object is
+     *     {@link SignatureValueType }
+     *     
      */
     public void setSignatureValue(SignatureValueType value) {
         this.signatureValue = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad keyInfo.
+     * Gets the value of the keyInfo property.
      * 
-     * @return possible object is {@link KeyInfoType }
-     * 
+     * @return
+     *     possible object is
+     *     {@link KeyInfoType }
+     *     
      */
     public KeyInfoType getKeyInfo() {
         return keyInfo;
     }
 
     /**
-     * Define el valor de la propiedad keyInfo.
+     * Sets the value of the keyInfo property.
      * 
      * @param value
-     *            allowed object is {@link KeyInfoType }
-     * 
+     *     allowed object is
+     *     {@link KeyInfoType }
+     *     
      */
     public void setKeyInfo(KeyInfoType value) {
         this.keyInfo = value;
@@ -123,16 +136,15 @@ public class SignatureType {
      * Gets the value of the object property.
      * 
      * <p>
-     * This accessor method returns a reference to the live list, not a
-     * snapshot. Therefore any modification you make to the returned list will
-     * be present inside the JAXB object. This is why there is not a
-     * <CODE>set</CODE> method for the object property.
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the object property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * 
      * <pre>
-     * getObject().add(newItem);
+     *    getObject().add(newItem);
      * </pre>
      * 
      * 
@@ -150,21 +162,24 @@ public class SignatureType {
     }
 
     /**
-     * Obtiene el valor de la propiedad id.
+     * Gets the value of the id property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getId() {
         return id;
     }
 
     /**
-     * Define el valor de la propiedad id.
+     * Sets the value of the id property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setId(String value) {
         this.id = value;

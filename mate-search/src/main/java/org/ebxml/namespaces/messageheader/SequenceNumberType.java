@@ -1,3 +1,4 @@
+
 package org.ebxml.namespaces.messageheader;
 
 import java.math.BigInteger;
@@ -8,13 +9,11 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 
+
 /**
- * <p>
- * Clase Java para sequenceNumber.type complex type.
+ * <p>Java class for sequenceNumber.type complex type.
  * 
- * <p>
- * El siguiente fragmento de esquema especifica el contenido que se espera que
- * haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="sequenceNumber.type"&gt;
@@ -29,7 +28,9 @@ import javax.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "sequenceNumber.type", propOrder = { "value" })
+@XmlType(name = "sequenceNumber.type", propOrder = {
+    "value"
+})
 public class SequenceNumberType {
 
     @XmlValue
@@ -39,31 +40,36 @@ public class SequenceNumberType {
     protected StatusType status;
 
     /**
-     * Obtiene el valor de la propiedad value.
+     * Gets the value of the value property.
      * 
-     * @return possible object is {@link BigInteger }
-     * 
+     * @return
+     *     possible object is
+     *     {@link BigInteger }
+     *     
      */
     public BigInteger getValue() {
         return value;
     }
 
     /**
-     * Define el valor de la propiedad value.
+     * Sets the value of the value property.
      * 
      * @param value
-     *            allowed object is {@link BigInteger }
-     * 
+     *     allowed object is
+     *     {@link BigInteger }
+     *     
      */
     public void setValue(BigInteger value) {
         this.value = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad status.
+     * Gets the value of the status property.
      * 
-     * @return possible object is {@link StatusType }
-     * 
+     * @return
+     *     possible object is
+     *     {@link StatusType }
+     *     
      */
     public StatusType getStatus() {
         if (status == null) {
@@ -74,11 +80,12 @@ public class SequenceNumberType {
     }
 
     /**
-     * Define el valor de la propiedad status.
+     * Sets the value of the status property.
      * 
      * @param value
-     *            allowed object is {@link StatusType }
-     * 
+     *     allowed object is
+     *     {@link StatusType }
+     *     
      */
     public void setStatus(StatusType value) {
         this.status = value;

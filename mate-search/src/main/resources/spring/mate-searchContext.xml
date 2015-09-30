@@ -98,7 +98,16 @@
     		<cxfCamel:properties>
             	<entry key="dataFormat" value="POJO"/>
         </cxfCamel:properties>
-    </cxfCamel:cxfEndpoint>		
+    </cxfCamel:cxfEndpoint>
+    
+    <cxfCamel:cxfEndpoint id="sabreAvailability" address="https://sws-crt.cert.sabre.com/"    		
+    		wsdlURL="wsdl/OTA_HotelAvailLLS2.2.0RQ.wsdl" endpointName="s:OTA_HotelAvailPortType"
+                 serviceName="s:OTA_HotelAvailService" serviceClass="https.webservices_sabre_com.websvc.OTAHotelAvailPortType"
+                 xmlns:s="https://webservices.sabre.com/websvc">             
+    		<cxfCamel:properties>
+            	<entry key="dataFormat" value="POJO"/>
+        </cxfCamel:properties>
+    </cxfCamel:cxfEndpoint>    		
 		
 	<camel:camelContext id="camel" xmlns="http://camel.apache.org/schema/spring" trace="true">
 		<camel:routeBuilder ref="mateRoute" />

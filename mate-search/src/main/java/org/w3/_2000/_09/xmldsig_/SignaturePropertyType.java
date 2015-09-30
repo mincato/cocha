@@ -1,3 +1,4 @@
+
 package org.w3._2000._09.xmldsig_;
 
 import java.util.ArrayList;
@@ -14,13 +15,11 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import org.w3c.dom.Element;
 
+
 /**
- * <p>
- * Clase Java para SignaturePropertyType complex type.
+ * <p>Java class for SignaturePropertyType complex type.
  * 
- * <p>
- * El siguiente fragmento de esquema especifica el contenido que se espera que
- * haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="SignaturePropertyType"&gt;
@@ -39,7 +38,9 @@ import org.w3c.dom.Element;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SignaturePropertyType", propOrder = { "content" })
+@XmlType(name = "SignaturePropertyType", propOrder = {
+    "content"
+})
 public class SignaturePropertyType {
 
     @XmlMixed
@@ -58,22 +59,23 @@ public class SignaturePropertyType {
      * Gets the value of the content property.
      * 
      * <p>
-     * This accessor method returns a reference to the live list, not a
-     * snapshot. Therefore any modification you make to the returned list will
-     * be present inside the JAXB object. This is why there is not a
-     * <CODE>set</CODE> method for the content property.
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the content property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * 
      * <pre>
-     * getContent().add(newItem);
+     *    getContent().add(newItem);
      * </pre>
      * 
      * 
      * <p>
-     * Objects of the following type(s) are allowed in the list {@link String }
-     * {@link Element } {@link Object }
+     * Objects of the following type(s) are allowed in the list
+     * {@link Object }
+     * {@link String }
+     * {@link Element }
      * 
      * 
      */
@@ -85,42 +87,48 @@ public class SignaturePropertyType {
     }
 
     /**
-     * Obtiene el valor de la propiedad target.
+     * Gets the value of the target property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getTarget() {
         return target;
     }
 
     /**
-     * Define el valor de la propiedad target.
+     * Sets the value of the target property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setTarget(String value) {
         this.target = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad id.
+     * Gets the value of the id property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getId() {
         return id;
     }
 
     /**
-     * Define el valor de la propiedad id.
+     * Sets the value of the id property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setId(String value) {
         this.id = value;

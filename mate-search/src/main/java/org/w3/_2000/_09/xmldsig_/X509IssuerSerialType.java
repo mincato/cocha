@@ -1,3 +1,4 @@
+
 package org.w3._2000._09.xmldsig_;
 
 import java.math.BigInteger;
@@ -6,13 +7,11 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Clase Java para X509IssuerSerialType complex type.
+ * <p>Java class for X509IssuerSerialType complex type.
  * 
- * <p>
- * El siguiente fragmento de esquema especifica el contenido que se espera que
- * haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="X509IssuerSerialType"&gt;
@@ -30,7 +29,10 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "X509IssuerSerialType", propOrder = { "x509IssuerName", "x509SerialNumber" })
+@XmlType(name = "X509IssuerSerialType", propOrder = {
+    "x509IssuerName",
+    "x509SerialNumber"
+})
 public class X509IssuerSerialType {
 
     @XmlElement(name = "X509IssuerName", required = true)
@@ -39,42 +41,48 @@ public class X509IssuerSerialType {
     protected BigInteger x509SerialNumber;
 
     /**
-     * Obtiene el valor de la propiedad x509IssuerName.
+     * Gets the value of the x509IssuerName property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getX509IssuerName() {
         return x509IssuerName;
     }
 
     /**
-     * Define el valor de la propiedad x509IssuerName.
+     * Sets the value of the x509IssuerName property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setX509IssuerName(String value) {
         this.x509IssuerName = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad x509SerialNumber.
+     * Gets the value of the x509SerialNumber property.
      * 
-     * @return possible object is {@link BigInteger }
-     * 
+     * @return
+     *     possible object is
+     *     {@link BigInteger }
+     *     
      */
     public BigInteger getX509SerialNumber() {
         return x509SerialNumber;
     }
 
     /**
-     * Define el valor de la propiedad x509SerialNumber.
+     * Sets the value of the x509SerialNumber property.
      * 
      * @param value
-     *            allowed object is {@link BigInteger }
-     * 
+     *     allowed object is
+     *     {@link BigInteger }
+     *     
      */
     public void setX509SerialNumber(BigInteger value) {
         this.x509SerialNumber = value;

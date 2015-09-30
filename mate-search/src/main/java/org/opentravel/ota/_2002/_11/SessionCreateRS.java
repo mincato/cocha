@@ -1,3 +1,4 @@
+
 package org.opentravel.ota._2002._11;
 
 import java.math.BigInteger;
@@ -11,13 +12,11 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
+
 /**
- * <p>
- * Clase Java para anonymous complex type.
+ * <p>Java class for anonymous complex type.
  * 
- * <p>
- * El siguiente fragmento de esquema especifica el contenido que se espera que
- * haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -130,7 +129,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = { "success", "warnings", "conversationId", "errors" })
+@XmlType(name = "", propOrder = {
+    "success",
+    "warnings",
+    "conversationId",
+    "errors"
+})
 @XmlRootElement(name = "SessionCreateRS")
 public class SessionCreateRS {
 
@@ -166,136 +170,156 @@ public class SessionCreateRS {
     protected String status;
 
     /**
-     * Obtiene el valor de la propiedad success.
+     * Gets the value of the success property.
      * 
-     * @return possible object is {@link SessionCreateRS.Success }
-     * 
+     * @return
+     *     possible object is
+     *     {@link SessionCreateRS.Success }
+     *     
      */
     public SessionCreateRS.Success getSuccess() {
         return success;
     }
 
     /**
-     * Define el valor de la propiedad success.
+     * Sets the value of the success property.
      * 
      * @param value
-     *            allowed object is {@link SessionCreateRS.Success }
-     * 
+     *     allowed object is
+     *     {@link SessionCreateRS.Success }
+     *     
      */
     public void setSuccess(SessionCreateRS.Success value) {
         this.success = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad warnings.
+     * Gets the value of the warnings property.
      * 
-     * @return possible object is {@link SessionCreateRS.Warnings }
-     * 
+     * @return
+     *     possible object is
+     *     {@link SessionCreateRS.Warnings }
+     *     
      */
     public SessionCreateRS.Warnings getWarnings() {
         return warnings;
     }
 
     /**
-     * Define el valor de la propiedad warnings.
+     * Sets the value of the warnings property.
      * 
      * @param value
-     *            allowed object is {@link SessionCreateRS.Warnings }
-     * 
+     *     allowed object is
+     *     {@link SessionCreateRS.Warnings }
+     *     
      */
     public void setWarnings(SessionCreateRS.Warnings value) {
         this.warnings = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad conversationId.
+     * Gets the value of the conversationId property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getConversationId() {
         return conversationId;
     }
 
     /**
-     * Define el valor de la propiedad conversationId.
+     * Sets the value of the conversationId property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setConversationId(String value) {
         this.conversationId = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad errors.
+     * Gets the value of the errors property.
      * 
-     * @return possible object is {@link SessionCreateRS.Errors }
-     * 
+     * @return
+     *     possible object is
+     *     {@link SessionCreateRS.Errors }
+     *     
      */
     public SessionCreateRS.Errors getErrors() {
         return errors;
     }
 
     /**
-     * Define el valor de la propiedad errors.
+     * Sets the value of the errors property.
      * 
      * @param value
-     *            allowed object is {@link SessionCreateRS.Errors }
-     * 
+     *     allowed object is
+     *     {@link SessionCreateRS.Errors }
+     *     
      */
     public void setErrors(SessionCreateRS.Errors value) {
         this.errors = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad echoToken.
+     * Gets the value of the echoToken property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getEchoToken() {
         return echoToken;
     }
 
     /**
-     * Define el valor de la propiedad echoToken.
+     * Sets the value of the echoToken property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setEchoToken(String value) {
         this.echoToken = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad timeStamp.
+     * Gets the value of the timeStamp property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getTimeStamp() {
         return timeStamp;
     }
 
     /**
-     * Define el valor de la propiedad timeStamp.
+     * Sets the value of the timeStamp property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setTimeStamp(String value) {
         this.timeStamp = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad target.
+     * Gets the value of the target property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getTarget() {
         if (target == null) {
@@ -306,128 +330,142 @@ public class SessionCreateRS {
     }
 
     /**
-     * Define el valor de la propiedad target.
+     * Sets the value of the target property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setTarget(String value) {
         this.target = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad version.
+     * Gets the value of the version property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getVersion() {
         return version;
     }
 
     /**
-     * Define el valor de la propiedad version.
+     * Sets the value of the version property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setVersion(String value) {
         this.version = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad sequenceNmbr.
+     * Gets the value of the sequenceNmbr property.
      * 
-     * @return possible object is {@link BigInteger }
-     * 
+     * @return
+     *     possible object is
+     *     {@link BigInteger }
+     *     
      */
     public BigInteger getSequenceNmbr() {
         return sequenceNmbr;
     }
 
     /**
-     * Define el valor de la propiedad sequenceNmbr.
+     * Sets the value of the sequenceNmbr property.
      * 
      * @param value
-     *            allowed object is {@link BigInteger }
-     * 
+     *     allowed object is
+     *     {@link BigInteger }
+     *     
      */
     public void setSequenceNmbr(BigInteger value) {
         this.sequenceNmbr = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad primaryLangID.
+     * Gets the value of the primaryLangID property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getPrimaryLangID() {
         return primaryLangID;
     }
 
     /**
-     * Define el valor de la propiedad primaryLangID.
+     * Sets the value of the primaryLangID property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setPrimaryLangID(String value) {
         this.primaryLangID = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad altLangID.
+     * Gets the value of the altLangID property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getAltLangID() {
         return altLangID;
     }
 
     /**
-     * Define el valor de la propiedad altLangID.
+     * Sets the value of the altLangID property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setAltLangID(String value) {
         this.altLangID = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad status.
+     * Gets the value of the status property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getStatus() {
         return status;
     }
 
     /**
-     * Define el valor de la propiedad status.
+     * Sets the value of the status property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setStatus(String value) {
         this.status = value;
     }
 
+
     /**
-     * <p>
-     * Clase Java para anonymous complex type.
+     * <p>Java class for anonymous complex type.
      * 
-     * <p>
-     * El siguiente fragmento de esquema especifica el contenido que se espera
-     * que haya en esta clase.
+     * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
      * &lt;complexType&gt;
@@ -467,40 +505,43 @@ public class SessionCreateRS {
      * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = { "error" })
+    @XmlType(name = "", propOrder = {
+        "error"
+    })
     public static class Errors {
 
         @XmlElement(name = "Error", required = true)
         protected SessionCreateRS.Errors.Error error;
 
         /**
-         * Obtiene el valor de la propiedad error.
+         * Gets the value of the error property.
          * 
-         * @return possible object is {@link SessionCreateRS.Errors.Error }
-         * 
+         * @return
+         *     possible object is
+         *     {@link SessionCreateRS.Errors.Error }
+         *     
          */
         public SessionCreateRS.Errors.Error getError() {
             return error;
         }
 
         /**
-         * Define el valor de la propiedad error.
+         * Sets the value of the error property.
          * 
          * @param value
-         *            allowed object is {@link SessionCreateRS.Errors.Error }
-         * 
+         *     allowed object is
+         *     {@link SessionCreateRS.Errors.Error }
+         *     
          */
         public void setError(SessionCreateRS.Errors.Error value) {
             this.error = value;
         }
 
+
         /**
-         * <p>
-         * Clase Java para anonymous complex type.
+         * <p>Java class for anonymous complex type.
          * 
-         * <p>
-         * El siguiente fragmento de esquema especifica el contenido que se
-         * espera que haya en esta clase.
+         * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
          * &lt;complexType&gt;
@@ -530,7 +571,9 @@ public class SessionCreateRS {
          * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
-        @XmlType(name = "", propOrder = { "errorInfo" })
+        @XmlType(name = "", propOrder = {
+            "errorInfo"
+        })
         public static class Error {
 
             @XmlElement(name = "ErrorInfo", required = true)
@@ -543,98 +586,106 @@ public class SessionCreateRS {
             protected String errorMessage;
 
             /**
-             * Obtiene el valor de la propiedad errorInfo.
+             * Gets the value of the errorInfo property.
              * 
-             * @return possible object is
-             *         {@link SessionCreateRS.Errors.Error.ErrorInfo }
-             * 
+             * @return
+             *     possible object is
+             *     {@link SessionCreateRS.Errors.Error.ErrorInfo }
+             *     
              */
             public SessionCreateRS.Errors.Error.ErrorInfo getErrorInfo() {
                 return errorInfo;
             }
 
             /**
-             * Define el valor de la propiedad errorInfo.
+             * Sets the value of the errorInfo property.
              * 
              * @param value
-             *            allowed object is
-             *            {@link SessionCreateRS.Errors.Error.ErrorInfo }
-             * 
+             *     allowed object is
+             *     {@link SessionCreateRS.Errors.Error.ErrorInfo }
+             *     
              */
             public void setErrorInfo(SessionCreateRS.Errors.Error.ErrorInfo value) {
                 this.errorInfo = value;
             }
 
             /**
-             * Obtiene el valor de la propiedad errorCode.
+             * Gets the value of the errorCode property.
              * 
-             * @return possible object is {@link String }
-             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getErrorCode() {
                 return errorCode;
             }
 
             /**
-             * Define el valor de la propiedad errorCode.
+             * Sets the value of the errorCode property.
              * 
              * @param value
-             *            allowed object is {@link String }
-             * 
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setErrorCode(String value) {
                 this.errorCode = value;
             }
 
             /**
-             * Obtiene el valor de la propiedad severity.
+             * Gets the value of the severity property.
              * 
-             * @return possible object is {@link String }
-             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getSeverity() {
                 return severity;
             }
 
             /**
-             * Define el valor de la propiedad severity.
+             * Sets the value of the severity property.
              * 
              * @param value
-             *            allowed object is {@link String }
-             * 
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setSeverity(String value) {
                 this.severity = value;
             }
 
             /**
-             * Obtiene el valor de la propiedad errorMessage.
+             * Gets the value of the errorMessage property.
              * 
-             * @return possible object is {@link String }
-             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getErrorMessage() {
                 return errorMessage;
             }
 
             /**
-             * Define el valor de la propiedad errorMessage.
+             * Sets the value of the errorMessage property.
              * 
              * @param value
-             *            allowed object is {@link String }
-             * 
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setErrorMessage(String value) {
                 this.errorMessage = value;
             }
 
+
             /**
-             * <p>
-             * Clase Java para anonymous complex type.
+             * <p>Java class for anonymous complex type.
              * 
-             * <p>
-             * El siguiente fragmento de esquema especifica el contenido que se
-             * espera que haya en esta clase.
+             * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
              * &lt;complexType&gt;
@@ -651,28 +702,33 @@ public class SessionCreateRS {
              * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
-            @XmlType(name = "", propOrder = { "message" })
+            @XmlType(name = "", propOrder = {
+                "message"
+            })
             public static class ErrorInfo {
 
                 @XmlElement(name = "Message", required = true)
                 protected String message;
 
                 /**
-                 * Obtiene el valor de la propiedad message.
+                 * Gets the value of the message property.
                  * 
-                 * @return possible object is {@link String }
-                 * 
+                 * @return
+                 *     possible object is
+                 *     {@link String }
+                 *     
                  */
                 public String getMessage() {
                     return message;
                 }
 
                 /**
-                 * Define el valor de la propiedad message.
+                 * Sets the value of the message property.
                  * 
                  * @param value
-                 *            allowed object is {@link String }
-                 * 
+                 *     allowed object is
+                 *     {@link String }
+                 *     
                  */
                 public void setMessage(String value) {
                     this.message = value;
@@ -684,13 +740,11 @@ public class SessionCreateRS {
 
     }
 
+
     /**
-     * <p>
-     * Clase Java para anonymous complex type.
+     * <p>Java class for anonymous complex type.
      * 
-     * <p>
-     * El siguiente fragmento de esquema especifica el contenido que se espera
-     * que haya en esta clase.
+     * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
      * &lt;complexType&gt;
@@ -707,15 +761,14 @@ public class SessionCreateRS {
     @XmlType(name = "")
     public static class Success {
 
+
     }
 
+
     /**
-     * <p>
-     * Clase Java para anonymous complex type.
+     * <p>Java class for anonymous complex type.
      * 
-     * <p>
-     * El siguiente fragmento de esquema especifica el contenido que se espera
-     * que haya en esta clase.
+     * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
      * &lt;complexType&gt;
@@ -753,40 +806,43 @@ public class SessionCreateRS {
      * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = { "warning" })
+    @XmlType(name = "", propOrder = {
+        "warning"
+    })
     public static class Warnings {
 
         @XmlElement(name = "Warning", required = true)
         protected SessionCreateRS.Warnings.Warning warning;
 
         /**
-         * Obtiene el valor de la propiedad warning.
+         * Gets the value of the warning property.
          * 
-         * @return possible object is {@link SessionCreateRS.Warnings.Warning }
-         * 
+         * @return
+         *     possible object is
+         *     {@link SessionCreateRS.Warnings.Warning }
+         *     
          */
         public SessionCreateRS.Warnings.Warning getWarning() {
             return warning;
         }
 
         /**
-         * Define el valor de la propiedad warning.
+         * Sets the value of the warning property.
          * 
          * @param value
-         *            allowed object is {@link SessionCreateRS.Warnings.Warning }
-         * 
+         *     allowed object is
+         *     {@link SessionCreateRS.Warnings.Warning }
+         *     
          */
         public void setWarning(SessionCreateRS.Warnings.Warning value) {
             this.warning = value;
         }
 
+
         /**
-         * <p>
-         * Clase Java para anonymous complex type.
+         * <p>Java class for anonymous complex type.
          * 
-         * <p>
-         * El siguiente fragmento de esquema especifica el contenido que se
-         * espera que haya en esta clase.
+         * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
          * &lt;complexType&gt;
@@ -836,168 +892,192 @@ public class SessionCreateRS {
             protected String recordId;
 
             /**
-             * Obtiene el valor de la propiedad language.
+             * Gets the value of the language property.
              * 
-             * @return possible object is {@link String }
-             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getLanguage() {
                 return language;
             }
 
             /**
-             * Define el valor de la propiedad language.
+             * Sets the value of the language property.
              * 
              * @param value
-             *            allowed object is {@link String }
-             * 
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setLanguage(String value) {
                 this.language = value;
             }
 
             /**
-             * Obtiene el valor de la propiedad shortText.
+             * Gets the value of the shortText property.
              * 
-             * @return possible object is {@link String }
-             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getShortText() {
                 return shortText;
             }
 
             /**
-             * Define el valor de la propiedad shortText.
+             * Sets the value of the shortText property.
              * 
              * @param value
-             *            allowed object is {@link String }
-             * 
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setShortText(String value) {
                 this.shortText = value;
             }
 
             /**
-             * Obtiene el valor de la propiedad type.
+             * Gets the value of the type property.
              * 
-             * @return possible object is {@link String }
-             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getType() {
                 return type;
             }
 
             /**
-             * Define el valor de la propiedad type.
+             * Sets the value of the type property.
              * 
              * @param value
-             *            allowed object is {@link String }
-             * 
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setType(String value) {
                 this.type = value;
             }
 
             /**
-             * Obtiene el valor de la propiedad code.
+             * Gets the value of the code property.
              * 
-             * @return possible object is {@link String }
-             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getCode() {
                 return code;
             }
 
             /**
-             * Define el valor de la propiedad code.
+             * Sets the value of the code property.
              * 
              * @param value
-             *            allowed object is {@link String }
-             * 
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setCode(String value) {
                 this.code = value;
             }
 
             /**
-             * Obtiene el valor de la propiedad docURL.
+             * Gets the value of the docURL property.
              * 
-             * @return possible object is {@link String }
-             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getDocURL() {
                 return docURL;
             }
 
             /**
-             * Define el valor de la propiedad docURL.
+             * Sets the value of the docURL property.
              * 
              * @param value
-             *            allowed object is {@link String }
-             * 
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setDocURL(String value) {
                 this.docURL = value;
             }
 
             /**
-             * Obtiene el valor de la propiedad status.
+             * Gets the value of the status property.
              * 
-             * @return possible object is {@link String }
-             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getStatus() {
                 return status;
             }
 
             /**
-             * Define el valor de la propiedad status.
+             * Sets the value of the status property.
              * 
              * @param value
-             *            allowed object is {@link String }
-             * 
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setStatus(String value) {
                 this.status = value;
             }
 
             /**
-             * Obtiene el valor de la propiedad tag.
+             * Gets the value of the tag property.
              * 
-             * @return possible object is {@link String }
-             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getTag() {
                 return tag;
             }
 
             /**
-             * Define el valor de la propiedad tag.
+             * Sets the value of the tag property.
              * 
              * @param value
-             *            allowed object is {@link String }
-             * 
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setTag(String value) {
                 this.tag = value;
             }
 
             /**
-             * Obtiene el valor de la propiedad recordId.
+             * Gets the value of the recordId property.
              * 
-             * @return possible object is {@link String }
-             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getRecordId() {
                 return recordId;
             }
 
             /**
-             * Define el valor de la propiedad recordId.
+             * Sets the value of the recordId property.
              * 
              * @param value
-             *            allowed object is {@link String }
-             * 
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setRecordId(String value) {
                 this.recordId = value;

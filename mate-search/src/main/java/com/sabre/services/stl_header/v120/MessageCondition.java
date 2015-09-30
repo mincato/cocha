@@ -1,3 +1,4 @@
+
 package com.sabre.services.stl_header.v120;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -6,19 +7,16 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 
+
 /**
- * Free text and code provided by the application or system that detected the
- * condition. Contents may be anything the system detecting the error chooses to
- * convey. Used by service consumers. Codes and/or messages should be agreed
- * upon by service users. Do not use for structured data, use parameters
- * instead.
+ * Free text and code provided by the application or system that detected the condition. 
+ * 			Contents may be anything the system detecting the error chooses to convey. Used by service consumers.  
+ * 			Codes and/or messages should be agreed upon by service users. 
+ * 			Do not use for structured data, use parameters instead.
  * 
- * <p>
- * Clase Java para Message.Condition complex type.
+ * <p>Java class for Message.Condition complex type.
  * 
- * <p>
- * El siguiente fragmento de esquema especifica el contenido que se espera que
- * haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="Message.Condition"&gt;
@@ -33,7 +31,9 @@ import javax.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Message.Condition", propOrder = { "value" })
+@XmlType(name = "Message.Condition", propOrder = {
+    "value"
+})
 public class MessageCondition {
 
     @XmlValue
@@ -44,40 +44,46 @@ public class MessageCondition {
     /**
      * Same as STL Text.Long - A field text characters and no other constraints.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getValue() {
         return value;
     }
 
     /**
-     * Define el valor de la propiedad value.
+     * Sets the value of the value property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setValue(String value) {
         this.value = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad code.
+     * Gets the value of the code property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getCode() {
         return code;
     }
 
     /**
-     * Define el valor de la propiedad code.
+     * Sets the value of the code property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setCode(String value) {
         this.code = value;

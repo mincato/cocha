@@ -1,3 +1,4 @@
+
 package com.sabre.services.stl_header.v120;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -5,13 +6,11 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Clase Java para SabreHeader complex type.
+ * <p>Java class for SabreHeader complex type.
  * 
- * <p>
- * El siguiente fragmento de esquema especifica el contenido que se espera que
- * haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="SabreHeader"&gt;
@@ -33,8 +32,14 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SabreHeader", propOrder = { "service", "identification", "resultSummary", "security", "traces",
-        "diagnostics" })
+@XmlType(name = "SabreHeader", propOrder = {
+    "service",
+    "identification",
+    "resultSummary",
+    "security",
+    "traces",
+    "diagnostics"
+})
 public class SabreHeader {
 
     @XmlElement(name = "Service", required = true)
@@ -51,126 +56,144 @@ public class SabreHeader {
     protected Diagnostics diagnostics;
 
     /**
-     * Obtiene el valor de la propiedad service.
+     * Gets the value of the service property.
      * 
-     * @return possible object is {@link Service }
-     * 
+     * @return
+     *     possible object is
+     *     {@link Service }
+     *     
      */
     public Service getService() {
         return service;
     }
 
     /**
-     * Define el valor de la propiedad service.
+     * Sets the value of the service property.
      * 
      * @param value
-     *            allowed object is {@link Service }
-     * 
+     *     allowed object is
+     *     {@link Service }
+     *     
      */
     public void setService(Service value) {
         this.service = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad identification.
+     * Gets the value of the identification property.
      * 
-     * @return possible object is {@link Identification }
-     * 
+     * @return
+     *     possible object is
+     *     {@link Identification }
+     *     
      */
     public Identification getIdentification() {
         return identification;
     }
 
     /**
-     * Define el valor de la propiedad identification.
+     * Sets the value of the identification property.
      * 
      * @param value
-     *            allowed object is {@link Identification }
-     * 
+     *     allowed object is
+     *     {@link Identification }
+     *     
      */
     public void setIdentification(Identification value) {
         this.identification = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad resultSummary.
+     * Gets the value of the resultSummary property.
      * 
-     * @return possible object is {@link ResultSummary }
-     * 
+     * @return
+     *     possible object is
+     *     {@link ResultSummary }
+     *     
      */
     public ResultSummary getResultSummary() {
         return resultSummary;
     }
 
     /**
-     * Define el valor de la propiedad resultSummary.
+     * Sets the value of the resultSummary property.
      * 
      * @param value
-     *            allowed object is {@link ResultSummary }
-     * 
+     *     allowed object is
+     *     {@link ResultSummary }
+     *     
      */
     public void setResultSummary(ResultSummary value) {
         this.resultSummary = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad security.
+     * Gets the value of the security property.
      * 
-     * @return possible object is {@link Security }
-     * 
+     * @return
+     *     possible object is
+     *     {@link Security }
+     *     
      */
     public Security getSecurity() {
         return security;
     }
 
     /**
-     * Define el valor de la propiedad security.
+     * Sets the value of the security property.
      * 
      * @param value
-     *            allowed object is {@link Security }
-     * 
+     *     allowed object is
+     *     {@link Security }
+     *     
      */
     public void setSecurity(Security value) {
         this.security = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad traces.
+     * Gets the value of the traces property.
      * 
-     * @return possible object is {@link Traces }
-     * 
+     * @return
+     *     possible object is
+     *     {@link Traces }
+     *     
      */
     public Traces getTraces() {
         return traces;
     }
 
     /**
-     * Define el valor de la propiedad traces.
+     * Sets the value of the traces property.
      * 
      * @param value
-     *            allowed object is {@link Traces }
-     * 
+     *     allowed object is
+     *     {@link Traces }
+     *     
      */
     public void setTraces(Traces value) {
         this.traces = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad diagnostics.
+     * Gets the value of the diagnostics property.
      * 
-     * @return possible object is {@link Diagnostics }
-     * 
+     * @return
+     *     possible object is
+     *     {@link Diagnostics }
+     *     
      */
     public Diagnostics getDiagnostics() {
         return diagnostics;
     }
 
     /**
-     * Define el valor de la propiedad diagnostics.
+     * Sets the value of the diagnostics property.
      * 
      * @param value
-     *            allowed object is {@link Diagnostics }
-     * 
+     *     allowed object is
+     *     {@link Diagnostics }
+     *     
      */
     public void setDiagnostics(Diagnostics value) {
         this.diagnostics = value;

@@ -1,3 +1,4 @@
+
 package com.sabre.services.stl.v01;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -6,18 +7,15 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * All message roots should be created as an extension of this base type. Global
- * message elements must declare they are a member of the STL_Payload
- * substitution group. This type may be used when an empty payload is needed for
- * error handling.
+ * All message roots should be created as an extension of this base type. Global message elements
+ * 				must declare they are a member of the STL_Payload substitution group. This type may be used when an empty payload is
+ * 				needed for error handling.
  * 
- * <p>
- * Clase Java para STL_Payload complex type.
+ * <p>Java class for STL_Payload complex type.
  * 
- * <p>
- * El siguiente fragmento de esquema especifica el contenido que se espera que
- * haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="STL_Payload"&gt;
@@ -42,7 +40,9 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "STL_Payload", propOrder = { "applicationResults" })
+@XmlType(name = "STL_Payload", propOrder = {
+    "applicationResults"
+})
 public class STLPayload {
 
     @XmlElement(name = "ApplicationResults")
@@ -51,42 +51,48 @@ public class STLPayload {
     protected String version;
 
     /**
-     * Obtiene el valor de la propiedad applicationResults.
+     * Gets the value of the applicationResults property.
      * 
-     * @return possible object is {@link ApplicationResults }
-     * 
+     * @return
+     *     possible object is
+     *     {@link ApplicationResults }
+     *     
      */
     public ApplicationResults getApplicationResults() {
         return applicationResults;
     }
 
     /**
-     * Define el valor de la propiedad applicationResults.
+     * Sets the value of the applicationResults property.
      * 
      * @param value
-     *            allowed object is {@link ApplicationResults }
-     * 
+     *     allowed object is
+     *     {@link ApplicationResults }
+     *     
      */
     public void setApplicationResults(ApplicationResults value) {
         this.applicationResults = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad version.
+     * Gets the value of the version property.
      * 
-     * @return possible object is {@link String }
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getVersion() {
         return version;
     }
 
     /**
-     * Define el valor de la propiedad version.
+     * Sets the value of the version property.
      * 
      * @param value
-     *            allowed object is {@link String }
-     * 
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setVersion(String value) {
         this.version = value;

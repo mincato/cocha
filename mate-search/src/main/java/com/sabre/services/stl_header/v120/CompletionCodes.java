@@ -1,18 +1,16 @@
+
 package com.sabre.services.stl_header.v120;
 
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Clase Java para CompletionCodes.
+ * <p>Java class for CompletionCodes.
  * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
- * El siguiente fragmento de esquema especifica el contenido que se espera que
- * haya en esta clase.
- * <p>
- * 
  * <pre>
  * &lt;simpleType name="CompletionCodes"&gt;
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&gt;
@@ -30,11 +28,13 @@ import javax.xml.bind.annotation.XmlType;
 public enum CompletionCodes {
 
     @XmlEnumValue("Complete")
-    COMPLETE("Complete"), @XmlEnumValue("Incomplete")
-    INCOMPLETE("Incomplete"), @XmlEnumValue("NotProcessed")
-    NOT_PROCESSED("NotProcessed"), @XmlEnumValue("Unknown")
+    COMPLETE("Complete"),
+    @XmlEnumValue("Incomplete")
+    INCOMPLETE("Incomplete"),
+    @XmlEnumValue("NotProcessed")
+    NOT_PROCESSED("NotProcessed"),
+    @XmlEnumValue("Unknown")
     UNKNOWN("Unknown");
-
     private final String value;
 
     CompletionCodes(String v) {
@@ -46,7 +46,7 @@ public enum CompletionCodes {
     }
 
     public static CompletionCodes fromValue(String v) {
-        for (CompletionCodes c : CompletionCodes.values()) {
+        for (CompletionCodes c: CompletionCodes.values()) {
             if (c.value.equals(v)) {
                 return c;
             }
