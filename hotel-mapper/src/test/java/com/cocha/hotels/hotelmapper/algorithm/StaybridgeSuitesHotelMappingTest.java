@@ -1,6 +1,7 @@
 package com.cocha.hotels.hotelmapper.algorithm;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.cocha.hotels.hotelmapper.mocks.HotelMock;
@@ -20,6 +21,7 @@ public class StaybridgeSuitesHotelMappingTest extends BaseHotelMappingTest {
     }
 
     @Test
+    @Ignore
     public void testMatchName() {
 
         HotelRule rule = new HotelNameRule();

@@ -11,8 +11,8 @@ public class HotelNameRuleTest {
     @Test
     public void testApply() {
         HotelNameRule rule = new HotelNameRule();
-        Hotel reference = buildHotel("HOLIDAY INN DOWNTOWN MEMPHIS");
-        Hotel toCompare = buildHotel("HOLIDAY INN - MEMPHIS DOWNTOWN - BEALE ST.");
+        Hotel reference = buildHotel("3B Barranco's - Chic and Basic - B&B");
+        Hotel toCompare = buildHotel("Hotel B");
         RuleMatch match = rule.apply(reference, toCompare);
         
         Assert.assertTrue(match.getConfidence() > 0);

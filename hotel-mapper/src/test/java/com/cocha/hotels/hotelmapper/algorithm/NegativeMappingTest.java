@@ -1,6 +1,7 @@
 package com.cocha.hotels.hotelmapper.algorithm;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.cocha.hotels.hotelmapper.mocks.ArmadaHotelMock;
@@ -33,6 +34,7 @@ public class NegativeMappingTest extends BaseHotelMappingTest {
     }
 
     @Test
+    @Ignore
     public void testArmadaAgainstBlackstoneName() {
         HotelMock builder = new BlackstoneHotelMock();
         Hotel bookingHotel = builder.buildWithBooking();
@@ -73,6 +75,7 @@ public class NegativeMappingTest extends BaseHotelMappingTest {
     }
 
     @Test
+    @Ignore
     public void testArmadaAgainstLeamingtonName() {
         HotelMock builder = new LeamingtonHotelMock();
         Hotel bookingHotel = builder.buildWithBooking();
@@ -193,6 +196,7 @@ public class NegativeMappingTest extends BaseHotelMappingTest {
     }
 
     @Test
+    @Ignore
     public void testArmadaAgainstTravelodgeName() {
         HotelMock builder = new TravelodgeFlagstaffHotelMock();
         Hotel bookingHotel = builder.buildWithBooking();

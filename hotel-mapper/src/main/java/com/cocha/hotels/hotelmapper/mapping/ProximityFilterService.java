@@ -17,7 +17,7 @@ public class ProximityFilterService {
     private static final Double EARTH_RADIUS = 6371000d; // meters
     
     //TODO: parametrizar. Distancia en metros
-    private Float maxProximity = 1000f;
+    private Float maxProximity = 1500f;
     
     public List<Hotel> filter(Hotel hotel, List<Hotel> hotelsToFilter) {
         Stream<Hotel> filtered = hotelsToFilter.stream().filter((hotelToCompare) -> {
@@ -27,7 +27,7 @@ public class ProximityFilterService {
         return filtered.collect(Collectors.toList());
     }
 
-    private Float distBetween(final Hotel hotel, final Hotel hotelToCompare) {
+    public Float distBetween(final Hotel hotel, final Hotel hotelToCompare) {
         final Float latReference = hotel.getLatitude().floatValue();
         final Float lngReference = hotel.getLongitude().floatValue();
         final Float latDestination = hotelToCompare.getLatitude().floatValue();

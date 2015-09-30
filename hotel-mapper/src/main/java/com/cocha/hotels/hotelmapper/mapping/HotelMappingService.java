@@ -18,97 +18,121 @@ import com.cocha.hotels.model.content.mapping.MultipleMatch;
 @Service
 public class HotelMappingService {
 
-    private static final Integer INIT_CONFIDENCE = 100;
-    private static final Integer MINIMUM_CONFIDENCE = 40;
-    private String eanCode = "EAN";
-    private String bookingCode = "BKG";
+	private static final Integer INIT_CONFIDENCE = 100;
+	private static final Integer MINIMUM_CONFIDENCE = 1;
+	private String eanCode = "EAN";
+	private String bookingCode = "BKG";
 
-    @Autowired
-    private HotelMatchingService matchingService;
+	@Autowired
+	private HotelMatchingService matchingService;
 
-    @Autowired
-    private ProximityFilterService proximityFilterService;
-    
-    @Autowired
-    private CanonicalIdGenerator canonicalIdGenerator;
+	@Autowired
+	private ProximityFilterService proximityFilterService;
 
-    public List<HotelMapping> map(List<Hotel> hotels) {
-        // separo los hoteles de cada supplier
-        Predicate<Hotel> byEANCode = (hotel) -> hotel.getSupplierCode().equals(eanCode);
-        Predicate<Hotel> byBookingCode = (hotel) -> hotel.getSupplierCode().equals(bookingCode);
-        Stream<Hotel> eanHotels = hotels.stream().filter(byEANCode);
-        List<Hotel> bookingHotels = hotels.stream().filter(byBookingCode).collect(Collectors.toList());
+	@Autowired
+	private CanonicalIdGenerator canonicalIdGenerator;
 
-        List<HotelMapping> mappingEntries = new ArrayList<HotelMapping>();
+	public List<HotelMapping> map(List<Hotel> hotels) {
+		// separo los hoteles de cada supplier
+		Predicate<Hotel> byEANCode = (hotel) -> hotel.getSupplierCode().equals(
+				eanCode);
+		Predicate<Hotel> byBookingCode = (hotel) -> hotel.getSupplierCode()
+				.equals(bookingCode);
+		Stream<Hotel> eanHotels = hotels.stream().filter(byEANCode);
+		List<Hotel> bookingHotels = hotels.stream().filter(byBookingCode)
+				.collect(Collectors.toList());
 
-        eanHotels.forEach((hotel) -> {
-            // inicializo el mapping para la referencia
-                HotelMapping referenceEntry = newEntryFor(hotel);
-                mappingEntries.add(referenceEntry);
+		List<HotelMapping> mappingEntries = new ArrayList<HotelMapping>();
 
-                String canonicalId = referenceEntry.getHotelId();
+		eanHotels.forEach((hotel) -> {
+			// inicializo el mapping para la referencia
+				HotelMapping referenceEntry = newEntryFor(hotel);
+				mappingEntries.add(referenceEntry);
 
-                List<Hotel> hotelsToProcess = proximityFilterService.filter(hotel, bookingHotels);
-                
-                // mapeo el hotel contra los del otro supplier
-                MultipleMatch matches = matchingService.match(hotel, hotelsToProcess);
-                HotelMatch bestMatch = matches.findBestMatch();
-                // si el mejor mapeo es al menos una sospecha, lo agrego
-                if (bestMatch.getConfidence() >= MINIMUM_CONFIDENCE) {
-                    HotelMapping mappingEntry = new HotelMapping(canonicalId, bestMatch);
-                    mappingEntries.add(mappingEntry);
-                }
-            });
+				String canonicalId = referenceEntry.getHotelId();
 
-        bookingHotels.forEach((hotel) -> {
-            // verifico que no exista mapeo previo
-                Optional<String> canonicalIdFound = findCanonicalId(hotel, mappingEntries);
+				List<Hotel> hotelsToProcess = proximityFilterService.filter(
+						hotel, bookingHotels);
 
-                if (!canonicalIdFound.isPresent()) {
-                    // inicializo el mapping para el hotel
-                    HotelMapping newEntry = newEntryFor(hotel);
-                    mappingEntries.add(newEntry);
-                }
-            });
+				// mapeo el hotel contra los del otro supplier
+				MultipleMatch matches = matchingService.match(hotel,
+						hotelsToProcess);
+				HotelMatch bestMatch = matches.findBestMatch();
+				// si el mejor mapeo es al menos una sospecha, lo agrego
+				if (bestMatch.getConfidence() >= MINIMUM_CONFIDENCE) {
+					HotelMapping mappingEntry = new HotelMapping(canonicalId,
+							bestMatch);
+					Optional<HotelMapping> oldMappingEntry = findCanonicalId(
+							mappingEntry.getSupplierHotelId(),
+							mappingEntry.getSupplierCode(), mappingEntries);
+					
+					if (oldMappingEntry.isPresent()) {
+						HotelMapping hotelMapping = oldMappingEntry.get();
+						if (hotelMapping.getConfidence().compareTo(mappingEntry.getConfidence()) < 0) {
+							hotelMapping.setConfidence(mappingEntry.getConfidence());
+							hotelMapping.setHotelId(canonicalId);
+						}
+					} else {
+						mappingEntries.add(mappingEntry);
+					}
+				}
+			});
 
-        return mappingEntries;
-    }
+		bookingHotels.forEach((hotel) -> {
+			// verifico que no exista mapeo previo
+				Optional<HotelMapping> canonicalIdFound = findCanonicalId(
+						hotel.getId(), hotel.getSupplierCode(), mappingEntries);
 
-    private Optional<String> findCanonicalId(Hotel hotel, List<HotelMapping> mappingEntries) {
-        Predicate<HotelMapping> bySupplierId = (entry) -> entry.getSupplierHotelId().equals(hotel.getId());
-        Predicate<HotelMapping> bySupplierCode = (entry) -> entry.getSupplierCode().equals(hotel.getSupplierCode());
-        return mappingEntries.stream().filter(bySupplierId.and(bySupplierCode)).map(entry -> entry.getHotelId())
-                .findFirst();
-    }
+				if (!canonicalIdFound.isPresent()) {
+					// inicializo el mapping para el hotel
+				HotelMapping newEntry = newEntryFor(hotel);
+				mappingEntries.add(newEntry);
+			}
+		});
 
-    private HotelMapping newEntryFor(Hotel hotel) {
-        String canonicalId = canonicalIdGenerator.newId(hotel);
-        HotelMatch match = new HotelMatch(hotel, hotel, INIT_CONFIDENCE);
-        HotelMapping mappingEntry = new HotelMapping(canonicalId, match);
-        return mappingEntry;
-    }
+		return mappingEntries;
+	}
 
-    public HotelMatchingService getMatchingService() {
-        return matchingService;
-    }
+	private Optional<HotelMapping> findCanonicalId(String supplierHotelId,
+			String supplierCode, List<HotelMapping> mappingEntries) {
+		Predicate<HotelMapping> bySupplierId = (entry) -> entry
+				.getSupplierHotelId().equals(supplierHotelId);
+		Predicate<HotelMapping> bySupplierCode = (entry) -> entry
+				.getSupplierCode().equals(supplierCode);
+		return mappingEntries.stream().filter(bySupplierId.and(bySupplierCode))
+				.findFirst();
+	}
 
-    public void setMatchingService(HotelMatchingService matchingService) {
-        this.matchingService = matchingService;
-    }
+	private HotelMapping newEntryFor(Hotel hotel) {
+		String canonicalId = canonicalIdGenerator.newId(hotel);
+		HotelMatch match = new HotelMatch(hotel, hotel, INIT_CONFIDENCE);
+		HotelMapping mappingEntry = new HotelMapping(canonicalId, match);
+		return mappingEntry;
+	}
 
-    public CanonicalIdGenerator getCanonicalIdGenerator() {
-        return canonicalIdGenerator;
-    }
+	public HotelMatchingService getMatchingService() {
+		return matchingService;
+	}
 
-    public void setCanonicalIdGenerator(CanonicalIdGenerator canonicalIdGenerator) {
-        this.canonicalIdGenerator = canonicalIdGenerator;
-    }
-    
-    public ProximityFilterService getProximityFilterService() {
-        return proximityFilterService;
-    }
-    
-    public void setProximityFilterService(ProximityFilterService proximityFilterService) {
-        this.proximityFilterService = proximityFilterService;
-    }
+	public void setMatchingService(HotelMatchingService matchingService) {
+		this.matchingService = matchingService;
+	}
+
+	public CanonicalIdGenerator getCanonicalIdGenerator() {
+		return canonicalIdGenerator;
+	}
+
+	public void setCanonicalIdGenerator(
+			CanonicalIdGenerator canonicalIdGenerator) {
+		this.canonicalIdGenerator = canonicalIdGenerator;
+	}
+
+	public ProximityFilterService getProximityFilterService() {
+		return proximityFilterService;
+	}
+
+	public void setProximityFilterService(
+			ProximityFilterService proximityFilterService) {
+		this.proximityFilterService = proximityFilterService;
+	}
 }
