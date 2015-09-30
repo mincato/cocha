@@ -1,14 +1,35 @@
 package com.cocha.hotels.model.matesearch.canonical;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Transient;
+
+@Entity(name = "Hotel")
 public class Hotel {
 
+	@Id
     private String id;
+	
     private String name;
-    private String addres;
+    
+    private String address;
+    
+    @Transient
     private String city;
+    
+    @Transient
     private String stateProvince;
+    
+    @Column(name="countryCode")
     private String country;
+    
+    @Transient
     private RateInfo rateInfo;
+    
+    public Hotel() {
+    	rateInfo = new RateInfo();
+	}
     
     
 	public String getId() {
@@ -22,12 +43,6 @@ public class Hotel {
 	}
 	public void setName(String name) {
 		this.name = name;
-	}
-	public String getAddres() {
-		return addres;
-	}
-	public void setAddres(String addres) {
-		this.addres = addres;
 	}
 	public String getCity() {
 		return city;
@@ -53,5 +68,10 @@ public class Hotel {
 	public void setRateInfo(RateInfo rateInfo) {
 		this.rateInfo = rateInfo;
 	}
-	
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}	
 }
