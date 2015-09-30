@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.cocha.hotels.matesearch.repositories.HotelRepository;
-import com.cocha.hotels.matesearch.util.MessageUtils;
 import com.cocha.hotels.model.content.hotel.Hotel;
 
 @Service
@@ -17,10 +16,9 @@ public class HotelInformation {
 	HotelRepository hotelRepository;
 	
 	@Handler
-	public Hotel getHotelInformation(String camelHttpQuery) {
-		Map<String, String> parameters = MessageUtils.parseQueryParams(camelHttpQuery);
+	public Hotel getHotelInformation(Map<String, String> parameters) {
 		
-		Hotel hotel = new Hotel();
+		Hotel hotel = hotelRepository.findOne(parameters.get("idHotel"));
 		
 		return hotel; 
 	}

@@ -5,6 +5,7 @@
     <class>com.cocha.hotels.model.content.mapping.HotelMapping</class>
     <class>com.cocha.hotels.model.content.hotel.Hotel</class>
     <class>com.cocha.hotels.model.content.hotel.HotelDescription</class>
+    <class>com.cocha.hotels.model.content.hotel.HotelKey</class>
     <properties>
       <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
       <property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.JBossAppServerJtaPlatform"/>
