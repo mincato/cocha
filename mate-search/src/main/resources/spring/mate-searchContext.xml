@@ -100,6 +100,15 @@
         </cxfCamel:properties>
     </cxfCamel:cxfEndpoint>
     
+    <cxfCamel:cxfEndpoint id="sabreChangeContext" address="https://sws-crt.cert.sabre.com/"    		
+    		wsdlURL="wsdl/ContextChangeLLS2.0.3RQ.wsdl" endpointName="s:ContextChangePortType"
+                 serviceName="s:ContextChangeService" serviceClass="https.webservices_sabre_com.websvc.ContextChangePortType"
+                 xmlns:s="https://webservices.sabre.com/websvc">             
+    		<cxfCamel:properties>
+            	<entry key="dataFormat" value="POJO"/>
+        </cxfCamel:properties>
+    </cxfCamel:cxfEndpoint>
+    
     <cxfCamel:cxfEndpoint id="sabreAvailability" address="https://sws-crt.cert.sabre.com/"    		
     		wsdlURL="wsdl/OTA_HotelAvailLLS2.2.0RQ.wsdl" endpointName="s:OTA_HotelAvailPortType"
                  serviceName="s:OTA_HotelAvailService" serviceClass="https.webservices_sabre_com.websvc.OTAHotelAvailPortType"
@@ -118,6 +127,7 @@
 		<camel:routeBuilder ref="sabreRoute" />
 		<camel:routeBuilder ref="sabreClientRoute" />
 		<camel:routeBuilder ref="sabreSessionClientRoute"/>
+		<camel:routeBuilder ref="sabreChangeContextClientRoute"/>
 		<camel:routeBuilder ref="basicBeanRoute" />
 		<camel:routeBuilder ref="fileLogRoute" />
 		<camel:routeBuilder ref="bookingTransformerRoute" />

@@ -1,8 +1,10 @@
 package com.cocha.hotels.matesearch.providers.processors;
 
 import java.math.BigInteger;
-import java.sql.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -68,9 +70,16 @@ public class SabreClientProcessor implements Processor {
     	Message inMessage = exchange.getIn();    	
 		Map<String, String> parameters = (Map<String, String>) inMessage.getBody(Map.class);    	
         MessageHeader messageHeader = createMessageHeader();        
-        Security security = createSecurityHeader(parameters.get("token"));
-        OTAHotelAvailRQ hotelAvail=createHotelAvailRQ();
+        Security security = createSecurityHeader(parameters.get("token"));        
+        String idsHotels=parameters.get("idsHotelsSabre");
         
+        String arrival = parameters.get("arrival_date");
+	    arrival = dateConvert(arrival);
+	    
+	    String departure = parameters.get("departure_date");
+	     departure = dateConvert(departure);		
+        
+        OTAHotelAvailRQ hotelAvail=createHotelAvailRQ(idsHotels,arrival,departure);        
         List<Object> params = new ArrayList<>();
         params.add(messageHeader);
         params.add(security);
@@ -81,34 +90,25 @@ public class SabreClientProcessor implements Processor {
 	/**
 	 * @return
 	 */
-	private OTAHotelAvailRQ createHotelAvailRQ() {
-		/*<ns:AvailRequestSegment>
-        		<ns:GuestCounts Count="1"/>
-		        <ns:HotelSearchCriteria>
-		           <ns:Criterion>
-		              <ns:HotelRef HotelCityCode="SCL"/>                              
-		             <!--ns:HotelRef HotelCode="0045886"/ -->
-		           </ns:Criterion>
-		        </ns:HotelSearchCriteria>       
-        <ns:TimeSpan End="09-24" Start="09-22"/>
-     </ns:AvailRequestSegmen*/
-		
+	private OTAHotelAvailRQ createHotelAvailRQ(final String idsHotels, final String arrival, final String departure) {		
 		OTAHotelAvailRQ hotelAvailRQ = new OTAHotelAvailRQ();
 		hotelAvailRQ.setVersion("2.2.0");
-		hotelAvailRQ.setReturnHostCommand(true);
+		hotelAvailRQ.setReturnHostCommand(true);		
 		
-		
-		HotelSearchCriteria searchCriteria = new HotelSearchCriteria();		
+		HotelSearchCriteria searchCriteria = new HotelSearchCriteria();
 		Criterion criterion = new Criterion();		
-		HotelRef hotelRef = new HotelRef();
-		hotelRef.setHotelCityCode("SCL");		
-		criterion.getHotelRef().add(hotelRef);		
+		String[] ids = idsHotels.split(",");		
+		
+		for (int i = 0; i < ids.length; i++) {
+			HotelRef hotelRef = new HotelRef();
+			hotelRef.setHotelCode(ids[i]);
+			criterion.getHotelRef().add(hotelRef);
+		}		
 		searchCriteria.setCriterion(criterion);
 				
-		
 		TimeSpan time = new TimeSpan();
-		time.setStart("10-22");
-		time.setEnd("10-24");
+		time.setStart(arrival);
+		time.setEnd(departure);
 		
 		AvailRequestSegment requestSegment = new AvailRequestSegment();
 		GuestCounts guestCounts = new GuestCounts();		
@@ -133,19 +133,7 @@ public class SabreClientProcessor implements Processor {
 	/**
 	 * @return
 	 */
-	private MessageHeader createMessageHeader() {
-/*		
-		<mes:MessageHeader mes:id="1" mes:version="1.0">
-        <mes:From>
-           <mes:PartyId type="urn:x12.org:IO5:01">999999</mes:PartyId>
-        </mes:From>
-        <mes:To>
-           <mes:PartyId type="urn:x12.org:IO5:01">123123</mes:PartyId>
-        </mes:To>
-        <mes:ConversationId>HotelesSession</mes:ConversationId>
-        <mes:Action>OTA_HotelAvailLLSRQ</mes:Action>
-     </mes:MessageHeader>*/		
-		
+	private MessageHeader createMessageHeader() {			
 		MessageHeader messageHeader = new MessageHeader();
         From from = new From();
         PartyId partyId=new PartyId();
@@ -179,4 +167,18 @@ public class SabreClientProcessor implements Processor {
         messageHeader.setMessageData(ebMessageData);
 		return messageHeader;
 	}
+	
+	private String dateConvert(String dateInString) {
+        SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
+        SimpleDateFormat newformatter = new SimpleDateFormat("yyyy-MM-dd");
+        String newDate = null;
+        try {
+            Date date =  formatter.parse(dateInString);
+            newDate = newformatter.format(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return newDate;
+    }
+	
 }
