@@ -1,9 +1,11 @@
 package com.cocha.hotels.hotelmapper.routes;
 
+import org.apache.camel.LoggingLevel;
 import org.apache.camel.spring.SpringRouteBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.cocha.hotels.hotelmapper.processors.GiataProcessor;
 import com.cocha.hotels.hotelmapper.processors.MapperProcessor;
 import com.cocha.hotels.hotelmapper.repositories.feeds.HotelFeedRepository;
 import com.cocha.hotels.model.content.mapping.HotelMapping;
@@ -16,6 +18,9 @@ public class HotelMapperRoute extends SpringRouteBuilder {
 
     @Autowired
     private MapperProcessor mapperProcessor;
+    
+    @Autowired
+    private GiataProcessor giataProcessor;
 
     @Override
     public void configure() throws Exception {
@@ -32,8 +37,11 @@ public class HotelMapperRoute extends SpringRouteBuilder {
                 .to("jpaContent:"
                         + HotelMapping.class.getName()
                         + "?entityType=java.util.ArrayList&transactionManager=#contentTransactionManager&usePersist=true",
-                        "seda:content");
+                        "seda:content", "direct:sabreMappingThruGiata");
 
+        from("direct:sabreMappingThruGiata")
+                .bean(giataProcessor)
+                .log(LoggingLevel.INFO, "Run sabreMappingThruGiata successfully");
     }
 
 }
