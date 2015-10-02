@@ -58,6 +58,9 @@ public class HotelMappingService {
 				MultipleMatch matches = matchingService.match(hotel,
 						hotelsToProcess);
 				HotelMatch bestMatch = matches.findBestMatch();
+				if (bestMatch.getConfidence() > 99) {
+					bestMatch.setConfidence(99);
+				}
 				// si el mejor mapeo es al menos una sospecha, lo agrego
 				if (bestMatch.getConfidence() >= MINIMUM_CONFIDENCE) {
 					HotelMapping mappingEntry = new HotelMapping(canonicalId,

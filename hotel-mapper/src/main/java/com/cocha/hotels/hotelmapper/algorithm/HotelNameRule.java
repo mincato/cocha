@@ -7,12 +7,13 @@ import java.util.Locale;
 import java.util.regex.Pattern;
 
 import org.apache.commons.collections4.ListUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import com.cocha.hotels.model.content.hotel.Hotel;
 
 public class HotelNameRule extends HotelRule {
 
-    private static final Integer FULL_CONFIDENCE = 49;
+    private static final Integer FULL_CONFIDENCE = 60;
     private static final Integer NO_CONFIDENCE = 0;
 
     @Override
@@ -31,16 +32,26 @@ public class HotelNameRule extends HotelRule {
         if (noSpacesRef.compareTo(noSpacesCom) == 0) {
             return new HotelRuleMatch(FULL_CONFIDENCE);
         }
-
-        List<String> refWords = Arrays.asList(attrReference.split("\\s+"));
-        List<String> compWords = Arrays.asList(attrToCompare.split("\\s+"));
+        
+        double rate = StringUtils.getJaroWinklerDistance(attrReference, attrToCompare);
         
         Integer confidence = NO_CONFIDENCE;
-        if (refWords.size() <= compWords.size()) {
-        	confidence = compare(refWords, compWords);
-        } else {
-        	confidence = compare(compWords, refWords);
+        if (rate > 0.85) {
+        	confidence = (int) Math.round((FULL_CONFIDENCE - 10) * rate);
         }
+        else
+        {
+        	List<String> refWords = Arrays.asList(attrReference.split("\\s+"));
+        	List<String> compWords = Arrays.asList(attrToCompare.split("\\s+"));
+        	
+        	confidence = NO_CONFIDENCE;
+        	if (refWords.size() <= compWords.size()) {
+        		confidence = compare(refWords, compWords);
+        	} else {
+        		confidence = compare(compWords, refWords);
+        	}
+        }
+
         return new HotelRuleMatch(confidence);
     }
 
@@ -53,7 +64,7 @@ public class HotelNameRule extends HotelRule {
     		double max = Math.max(refWords.size(), compWords.size());
             rate = commonWords / max;
     	}
-    	return (int) Math.round(FULL_CONFIDENCE * rate);
+    	return (int) Math.round((FULL_CONFIDENCE - 10) * rate);
 	}
 
 	private String flatten(String name) {
