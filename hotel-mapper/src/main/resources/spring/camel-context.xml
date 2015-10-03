@@ -3,19 +3,34 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:util="http://www.springframework.org/schema/util"
 	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:cxf="http://cxf.apache.org/core"
+	xmlns:cxfCamel="http://camel.apache.org/schema/cxf"
+	xmlns:jaxrs="http://cxf.apache.org/jaxrs"		
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xmlns:sec="http://cxf.apache.org/configuration/security"
+	xmlns:http-conf="http://cxf.apache.org/transports/http/configuration"
 	xsi:schemaLocation="
-       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
-       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
-       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd
-       http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd
-       http://www.springframework.org/schema/data/jpa
-       http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd
+		http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd
+		http://www.springframework.org/schema/data/jpa
+		http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+		http://camel.apache.org/schema/cxf 
+		http://camel.apache.org/schema/cxf/camel-cxf.xsd
+		http://cxf.apache.org/jaxrs
+		http://cxf.apache.org/schemas/jaxrs.xsd
+		http://cxf.apache.org/jaxws 
+		http://cxf.apache.org/schemas/jaxws.xsd
+		http://cxf.apache.org/transports/http/configuration
+		http://cxf.apache.org/schemas/configuration/http-conf.xsd
+    
     ">
 
 	<context:component-scan base-package="com.cocha.hotels.hotelmapper"
 		annotation-config="true" />
 	<context:annotation-config />
-
+	
 	<camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
 		<propertyPlaceholder id="properties" location="classpath:properties/camel.properties"/>
 		<contextScan />
@@ -39,6 +54,7 @@
 			<list>
 				<value>classpath:properties/hibernate.properties</value>
 				<value>classpath:properties/jdbc.properties</value>
+				<value>classpath:properties/application.properties</value>
 			</list>
 		</property>
 	</bean>
@@ -116,11 +132,13 @@
 	</bean>
 
 	<!-- Defined the client endpoint to create the cxf-rs consumer for Booking-->
+	<!-- 
+	
 	<cxfCamel:rsClient id="bookingClient"	
 		address="${mate.provider.giata.address.xml}"	
 		serviceClass="com.cocha.hotels.matesearch.providers.services.BookingClientService"
-		loggingFeatureEnabled="true" />
-	
+		loggingFeatureEnabled="true" /> -->
+		
 	<http-conf:conduit 	name="*multicodes.giatamedia.com/webservice/*.*"	
 	  xmlns:sec="http://cxf.apache.org/configuration/security"
 	  xmlns="http://cxf.apache.org/transports/http/configuration">

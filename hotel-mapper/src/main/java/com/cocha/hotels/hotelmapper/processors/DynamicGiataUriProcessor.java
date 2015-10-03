@@ -15,12 +15,13 @@ import com.cocha.hotels.model.content.mapping.HotelMapping;
 public class DynamicGiataUriProcessor implements Processor {
 
     public static final String DYNAMIC_URI_KEY = "dynamicUriHeader";
-    private static final String AVAILABILITY_BOOKING_SERVICE = "";
+    private static final String MAPPING_SABRE_SERVICE = "sabre_tn";
     
     private Logger logger = Logger.getLogger(DynamicGiataUriProcessor.class);
     
     @Value("${mate.provider.giata.address.xml}")
     private String staticUri;
+//    private String staticUri = "http://multicodes.giatamedia.com/webservice/rest/1.0/properties/gds/sabre_tn";
     
     @Override
     public void process(Exchange exchange) throws Exception {
@@ -30,7 +31,7 @@ public class DynamicGiataUriProcessor implements Processor {
 
                 // seteo nombre de servicio para el binding con la llamada al servicio
         // rest.
-        inMessage.setHeader(CxfConstants.OPERATION_NAME, AVAILABILITY_BOOKING_SERVICE);
+        inMessage.setHeader(CxfConstants.OPERATION_NAME, MAPPING_SABRE_SERVICE);
         inMessage.setHeader(CxfConstants.CAMEL_CXF_RS_USING_HTTP_API, Boolean.FALSE);
         
         logger.info("in msg es hotel mapper? " + (inMessage instanceof HotelMapping));
