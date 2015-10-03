@@ -6,6 +6,7 @@ import org.apache.camel.util.toolbox.AggregationStrategies;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.cocha.hotels.hotelmapper.processors.DynamicGiataUriProcessor;
 import com.cocha.hotels.hotelmapper.processors.GiataProcessor;
 import com.cocha.hotels.hotelmapper.processors.MapperProcessor;
 import com.cocha.hotels.hotelmapper.repositories.feeds.HotelFeedRepository;
@@ -22,6 +23,8 @@ public class HotelMapperRoute extends SpringRouteBuilder {
     
     @Autowired
     private GiataProcessor giataProcessor;
+
+    private DynamicGiataUriProcessor dynamicGiataUriProcessor;
 
     @Override
     public void configure() throws Exception {
@@ -46,8 +49,9 @@ public class HotelMapperRoute extends SpringRouteBuilder {
                 .simple("${body}")
                 .filter()
                 .simple("${body.supplierCode} == \"EAN\" && ${body.confidence} == 100")
-                .recipientList()
-                //enrich("", AggregationStrategies.bean(giataProcessor))
+                .process(dynamicGiataUriProcessor)
+                .recipientList(header(DynamicGiataUriProcessor.DYNAMIC_URI_KEY))
+                .aggregationStrategy(AggregationStrategies.bean(giataProcessor))
                 //TODO aggregator por acá para armar un List<HotelMapping>
                 .to("jpaContent:"
                         + HotelMapping.class.getName()
