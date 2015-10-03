@@ -39,7 +39,7 @@
     
 	<import resource="classpath:META-INF/cxf/cxf.xml" />
 	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
-          
+    
 	<context:component-scan base-package="com.cocha.hotels.matesearch" annotation-config="true" />	
 	<context:annotation-config />	  			
 	

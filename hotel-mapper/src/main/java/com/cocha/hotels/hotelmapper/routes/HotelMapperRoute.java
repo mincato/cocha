@@ -2,6 +2,7 @@ package com.cocha.hotels.hotelmapper.routes;
 
 import org.apache.camel.LoggingLevel;
 import org.apache.camel.spring.SpringRouteBuilder;
+import org.apache.camel.util.toolbox.AggregationStrategies;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -40,7 +41,17 @@ public class HotelMapperRoute extends SpringRouteBuilder {
                         "seda:content", "direct:sabreMappingThruGiata");
 
         from("direct:sabreMappingThruGiata")
-                .bean(giataProcessor)
+                .split(body())
+                .transform()
+                .simple("${body}")
+                .filter()
+                .simple("${body.supplierCode} == \"EAN\" && ${body.confidence} == 100")
+                .recipientList()
+                //enrich("", AggregationStrategies.bean(giataProcessor))
+                //TODO aggregator por acá para armar un List<HotelMapping>
+                .to("jpaContent:"
+                        + HotelMapping.class.getName()
+                        + "?entityType=java.util.ArrayList&transactionManager=#contentTransactionManager&usePersist=true")
                 .log(LoggingLevel.INFO, "Run sabreMappingThruGiata successfully");
     }
 

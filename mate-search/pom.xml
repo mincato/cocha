@@ -99,6 +99,7 @@
 		  <artifactId>camel-jaxb</artifactId>
 		  <version>${camel-version}</version>
 		</dependency>
+		
 		<!-- Database -->
 		<dependency>
 			<groupId>mysql</groupId>

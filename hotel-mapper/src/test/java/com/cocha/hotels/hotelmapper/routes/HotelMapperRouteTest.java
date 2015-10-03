@@ -40,7 +40,7 @@ public class HotelMapperRouteTest extends CamelSpringTestSupport {
     }
 
     @Test
-    @Ignore
+//    @Ignore
     public void test() throws Exception {
         NotifyBuilder notify = new NotifyBuilder(context)
                 .from("jpaContent:"

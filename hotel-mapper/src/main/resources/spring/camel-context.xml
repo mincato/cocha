@@ -115,4 +115,20 @@
 		<property name="entityManagerFactory" ref="contentEntityManagerFactory" />
 	</bean>
 
+	<!-- Defined the client endpoint to create the cxf-rs consumer for Booking-->
+	<cxfCamel:rsClient id="bookingClient"	
+		address="${mate.provider.giata.address.xml}"	
+		serviceClass="com.cocha.hotels.matesearch.providers.services.BookingClientService"
+		loggingFeatureEnabled="true" />
+	
+	<http-conf:conduit 	name="*multicodes.giatamedia.com/webservice/*.*"	
+	  xmlns:sec="http://cxf.apache.org/configuration/security"
+	  xmlns="http://cxf.apache.org/transports/http/configuration">
+	  <authorization>
+	     <sec:UserName>${mate.provider.giata.user}</sec:UserName>
+	     <sec:Password>${mate.provider.giata.pass}</sec:Password>
+	     <sec:AuthorizationType>Basic</sec:AuthorizationType>
+	  </authorization>
+	</http-conf:conduit>
+	
 </beans>

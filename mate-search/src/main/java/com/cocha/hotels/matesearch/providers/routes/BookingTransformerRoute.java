@@ -13,8 +13,11 @@ public class BookingTransformerRoute extends RouteBuilder {
     @Override
     public void configure() throws Exception {
 
-        from("direct:transformerResposeBooking").convertBodyTo(GetHotelAvailabilityBooking.class)
-                .bean(new SupplierHotelProcessor()).marshal().json(JsonLibrary.Jackson);
+        from("direct:transformerResposeBooking")
+            .convertBodyTo(GetHotelAvailabilityBooking.class)
+            .bean(new SupplierHotelProcessor())
+            .marshal()
+            .json(JsonLibrary.Jackson);
 
     }
 
