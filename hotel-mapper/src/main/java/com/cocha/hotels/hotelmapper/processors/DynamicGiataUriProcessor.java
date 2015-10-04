@@ -21,7 +21,6 @@ public class DynamicGiataUriProcessor implements Processor {
     
     @Value("${mate.provider.giata.address.xml}")
     private String staticUri;
-//    private String staticUri = "http://multicodes.giatamedia.com/webservice/rest/1.0/properties/gds/sabre_tn";
     
     @Override
     public void process(Exchange exchange) throws Exception {
@@ -29,14 +28,13 @@ public class DynamicGiataUriProcessor implements Processor {
 
         Message inMessage = exchange.getIn();
 
-                // seteo nombre de servicio para el binding con la llamada al servicio
-        // rest.
+        // seteo nombre de servicio para el binding con la llamada al servicio rest.
         inMessage.setHeader(CxfConstants.OPERATION_NAME, MAPPING_SABRE_SERVICE);
         inMessage.setHeader(CxfConstants.CAMEL_CXF_RS_USING_HTTP_API, Boolean.FALSE);
         
         logger.info("in msg es hotel mapper? " + (inMessage instanceof HotelMapping));
         String eanId = inMessage.getBody(HotelMapping.class).getSupplierHotelId();
-        String uri = staticUri + "//" + eanId;
+        String uri = staticUri + "/" + eanId;
         inMessage.setHeader(DYNAMIC_URI_KEY, uri);
     }
 

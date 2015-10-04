@@ -24,6 +24,7 @@ public class HotelMapperRoute extends SpringRouteBuilder {
     @Autowired
     private GiataProcessor giataProcessor;
 
+    @Autowired
     private DynamicGiataUriProcessor dynamicGiataUriProcessor;
 
     @Override
