@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' standalone='yes'?>
 <getHotelAvailability>
 	<chunks>1</chunks>
 	<result>
-		<available_rooms>170</available_rooms>
+		<available_rooms>185</available_rooms>
 		<currency_code>GBP</currency_code>
 		<hotel_id>36913</hotel_id>
 		<max_price>2500.00</max_price>
@@ -13,6 +13,20 @@
 			<currency>GBP</currency>
 			<price>0.00</price>
 		</rack_rate>
+		<ranking>2</ranking>
+	</result>
+	<result>
+		<available_rooms>136</available_rooms>
+		<currency_code>USD</currency_code>
+		<hotel_id>511712</hotel_id>
+		<max_price>79.99</max_price>
+		<max_total_price>159.98</max_total_price>
+		<min_price>47.24</min_price>
+		<min_total_price>94.48</min_total_price>
+		<rack_rate>
+			<currency>USD</currency>
+			<price>0.00</price>
+		</rack_rate>
 		<ranking>1</ranking>
 	</result>
-</getHotelAvailability>
+</getHotelAvailability><!-- RUID: [UmFuZG9tSVYkc2RlIyh9YfyspVKy5PgKXaZOhFWPJVooXEf/o++E9gTXhFZcDZ8BA2AkLR1xOJu3+RzuO0CkiR5yLFtkQxBkugZD16Up54M=] -->

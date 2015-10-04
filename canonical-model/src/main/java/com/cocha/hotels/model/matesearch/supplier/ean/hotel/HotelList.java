@@ -3,6 +3,8 @@
 
 package com.cocha.hotels.model.matesearch.supplier.ean.hotel;
 
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -10,15 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HotelList {
 
     @JsonProperty("HotelSummary")
-    private HotelSummaryElement hotelsummary;
-
-    public HotelSummaryElement getHotelsummary() {
-        return hotelsummary;
-    }
-
-    public void setHotelsummary(HotelSummaryElement hotelsummary) {
-        this.hotelsummary = hotelsummary;
-    }
+    private List<HotelSummaryElement> hotelsummary;
 
     @JsonProperty("@size")
     private java.lang.String size;
@@ -42,4 +36,11 @@ public class HotelList {
         return activepropertycount;
     }
 
+	public List<HotelSummaryElement> getHotelsummary() {
+		return hotelsummary;
+	}
+
+	public void setHotelsummary(List<HotelSummaryElement> hotelsummary) {
+		this.hotelsummary = hotelsummary;
+	}
 }

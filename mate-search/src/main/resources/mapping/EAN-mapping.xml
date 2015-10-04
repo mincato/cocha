@@ -5,22 +5,35 @@
 	
 	<mapping>
 		<class-a>com.cocha.hotels.model.matesearch.supplier.ean.hotel.SupplierEANHotelResponse</class-a>
+		<class-b>com.cocha.hotels.model.matesearch.canonical.RateInfo</class-b>
+		<field map-id="mapperList">
+			<a>hotellistresponse.hotellist.hotelsummary</a>
+			<b>rateForSupplier</b>
+			<a-hint>com.cocha.hotels.model.matesearch.supplier.ean.hotel.HotelSummaryElement</a-hint>
+			<b-hint>com.cocha.hotels.model.matesearch.canonical.RateInfoForSupplier</b-hint>
+		</field>	
+	</mapping>
+	
+	
+	<mapping map-id="mapperList">
+		<class-a>com.cocha.hotels.model.matesearch.supplier.ean.hotel.HotelSummaryElement</class-a>
 		<class-b>com.cocha.hotels.model.matesearch.canonical.RateInfoForSupplier</class-b>
 		<field>
-			<a>hotellistresponse.hotellist.hotelsummary.hotelid</a>
+			<a>hotelid</a>
 			<b>idSupplier</b>
 		</field>
 		<field>
-			<a>hotellistresponse.hotellist.hotelsummary.rateCurrencyCode</a>
+			<a>rateCurrencyCode</a>
 			<b>rateCurrencyCode</b>
 		</field>
 		<field>
-			<a>hotellistresponse.hotellist.hotelsummary.highRate</a>
+			<a>highRate</a>
 			<b>higtRate</b>
 		</field>				
 		<field>
-			<a>hotellistresponse.hotellist.hotelsummary.lowRate</a>
+			<a>lowRate</a>
 			<b>lowRate</b>
 		</field>									
 	</mapping>
+	
 </mappings>
