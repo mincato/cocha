@@ -13,11 +13,14 @@ public class MateRoute extends RouteBuilder {
 
     @Autowired
     private MateHeaderDataProcessor mateHeaderDataProcessor;
+    
+    @Autowired
+    AggregationAvailabilityStrategy aggregationAvailabilityStrategy;
 
     @Override
     public void configure() throws Exception {
         from("cxfrs:bean:mateServer").process(mateHeaderDataProcessor).multicast()
-                .aggregationStrategy(new AggregationAvailabilityStrategy()).parallelProcessing()
+                .aggregationStrategy(aggregationAvailabilityStrategy).parallelProcessing()
                 .to("direct:getHotelInformation","direct:sendEanAvailability", "direct:sendBookingAvailability").end().marshal().json(JsonLibrary.Jackson);
     }
 }

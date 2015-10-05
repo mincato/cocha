@@ -5,7 +5,7 @@
 	
 	<mapping>
 		<class-a>com.cocha.hotels.model.matesearch.supplier.ean.hotel.SupplierEANHotelResponse</class-a>
-		<class-b>com.cocha.hotels.model.matesearch.canonical.RateInfo</class-b>
+		<class-b>com.cocha.hotels.model.matesearch.respose.supplier.ResposeSuppliers</class-b>
 		<field map-id="mapperList">
 			<a>hotellistresponse.hotellist.hotelsummary</a>
 			<b>rateForSupplier</b>
