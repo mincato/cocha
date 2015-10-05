@@ -26,8 +26,15 @@ public class SabreService {
     @GET
     @Produces(MediaType.APPLICATION_XML)
     @Path("/send")
-    public Object send(@QueryParam("code") String code, @QueryParam("idHotel") String idHotel,
-            @QueryParam("session") String session) {
+    public Object send(@QueryParam("idsHotelsSabre") String idsHotelsSabre, @QueryParam("arrival_date") String arrival_date,
+            @QueryParam("departure_date") String departure_date,@QueryParam("token") String token) {
+        return null;
+    }
+
+    @GET
+    @Produces(MediaType.APPLICATION_XML)
+    @Path("/createsession")
+    public Object createsession() {
         return null;
     }
 }

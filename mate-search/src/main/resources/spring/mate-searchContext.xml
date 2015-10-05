@@ -38,7 +38,7 @@
     
     
 	<import resource="classpath:META-INF/cxf/cxf.xml" />
-	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />	
           
 	<context:component-scan base-package="com.cocha.hotels.matesearch" annotation-config="true" />	
 	<context:annotation-config />	  			
@@ -94,15 +94,45 @@
            <bean class="com.cocha.hotels.matesearch.providers.services.rest.SabreService" />
        </cxfCamel:serviceBeans>
    </cxfCamel:rsServer>
+
+   
+   <cxfCamel:cxfEndpoint id="sabreSessionCreate" address="https://sws-crt.cert.sabre.com/"    		
+    		wsdlURL="wsdl/SessionCreateRQ.wsdl" endpointName="s:SessionCreatePortType"
+                 serviceName="s:SessionCreateRQService" serviceClass="https.webservices_sabre_com.websvc.SessionCreatePortType"
+                 xmlns:s="https://webservices.sabre.com/websvc">             
+    		<cxfCamel:properties>
+            	<entry key="dataFormat" value="POJO"/>
+        </cxfCamel:properties>
+    </cxfCamel:cxfEndpoint>
+    
+    <cxfCamel:cxfEndpoint id="sabreChangeContext" address="https://sws-crt.cert.sabre.com/"    		
+    		wsdlURL="wsdl/ContextChangeLLS2.0.3RQ.wsdl" endpointName="s:ContextChangePortType"
+                 serviceName="s:ContextChangeService" serviceClass="https.webservices_sabre_com.websvc.ContextChangePortType"
+                 xmlns:s="https://webservices.sabre.com/websvc">             
+    		<cxfCamel:properties>
+            	<entry key="dataFormat" value="POJO"/>
+        </cxfCamel:properties>
+    </cxfCamel:cxfEndpoint>
+    
+    <cxfCamel:cxfEndpoint id="sabreAvailability" address="https://sws-crt.cert.sabre.com/"    		
+    		wsdlURL="wsdl/OTA_HotelAvailLLS2.2.0RQ.wsdl" endpointName="s:OTA_HotelAvailPortType"
+                 serviceName="s:OTA_HotelAvailService" serviceClass="https.webservices_sabre_com.websvc.OTAHotelAvailPortType"
+                 xmlns:s="https://webservices.sabre.com/websvc">             
+    		<cxfCamel:properties>
+            	<entry key="dataFormat" value="POJO"/>
+        </cxfCamel:properties>
+    </cxfCamel:cxfEndpoint>    		
 		
 	<camel:camelContext id="camel" xmlns="http://camel.apache.org/schema/spring" trace="true">
-		<camel:routeBuilder ref="mateRoute" />		
+		<camel:routeBuilder ref="mateRoute" />
 		<camel:routeBuilder ref="eanRoute" />
 		<camel:routeBuilder ref="eanClientRoute" />
 		<camel:routeBuilder ref="bookingRoute" />
 		<camel:routeBuilder ref="bookingClientRoute" />
 		<camel:routeBuilder ref="sabreRoute" />
 		<camel:routeBuilder ref="sabreClientRoute" />
+		<camel:routeBuilder ref="sabreSessionClientRoute"/>
+		<camel:routeBuilder ref="sabreChangeContextClientRoute"/>
 		<camel:routeBuilder ref="basicBeanRoute" />
 		<camel:routeBuilder ref="fileLogRoute" />
 		<camel:routeBuilder ref="bookingTransformerRoute" />

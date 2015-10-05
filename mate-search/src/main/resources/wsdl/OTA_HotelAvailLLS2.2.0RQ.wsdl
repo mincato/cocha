@@ -42,7 +42,7 @@
 	</wsdl:binding>
 	<wsdl:service name="OTA_HotelAvailService">
 		<wsdl:port name="OTA_HotelAvailPortType" binding="sws:OTA_HotelAvailSoapBinding">
-			<soap:address location="https://webservices.sabre.com/websvc"/>
+			<soap:address location="https://sws-crt.cert.sabre.com/"/>
 		</wsdl:port>
 	</wsdl:service>
 </wsdl:definitions>
