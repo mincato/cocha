@@ -1,8 +1,6 @@
-package com.cocha.hotels.model.content.mapping;
+package com.cocha.hotels.model.matesearch.canonical;
 
 import java.util.List;
-
-import com.cocha.hotels.model.matesearch.canonical.Hotel;
 
 public class HotelList {
 	

@@ -8,9 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.cocha.hotels.matesearch.repositories.HotelMappingRepository;
-import com.cocha.hotels.model.content.mapping.HotelList;
 import com.cocha.hotels.model.content.mapping.HotelMapping;
 import com.cocha.hotels.model.matesearch.canonical.Hotel;
+import com.cocha.hotels.model.matesearch.canonical.HotelList;
 import com.cocha.hotels.model.matesearch.canonical.RateInfo;
 import com.cocha.hotels.model.matesearch.canonical.RateInfoForSupplier;
 import com.cocha.hotels.model.matesearch.respose.supplier.ResposeSuppliers;
@@ -27,13 +27,13 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
     	
 		HotelList hotels;
     	ResposeSuppliers resposeSuppliers;
-    	Exchange exchange = null;
+    	Exchange exchange;
     	
-    	if (oldExchange == null) {
+    	if (newExchange.getIn().getBody(HotelList.class) instanceof HotelList) {
     		   		
     		exchange = newExchange;
     		
-    	} else  {
+    	} else if (newExchange.getIn().getBody(ResposeSuppliers.class) instanceof ResposeSuppliers) {
     		
     		hotels = oldExchange.getIn().getBody(HotelList.class);
     		resposeSuppliers = newExchange.getIn().getBody(ResposeSuppliers.class);
@@ -42,13 +42,12 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
     		oldExchange.getIn().setBody(hotels);
     		
     		exchange = oldExchange;
+    	} else {
+    		exchange = null;
     	}
     	
     	return exchange;
     }
-
-    
-    
     
 	private void addRates(HotelList hotels, ResposeSuppliers resposeSuppliers) {
 		
@@ -65,9 +64,6 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 		}
 		
 	}
-
-
-
 
 	private void addRate(Hotel hotel, RateInfoForSupplier rateInfoForSupplier) {
 
