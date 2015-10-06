@@ -130,15 +130,17 @@
 	<bean id="contentTransactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
 		<property name="entityManagerFactory" ref="contentEntityManagerFactory" />
 	</bean>
-		
-	<http-conf:conduit 	name="*multicodes.giatamedia.com/webservice/*.*"	
-	  xmlns:sec="http://cxf.apache.org/configuration/security"
-	  xmlns="http://cxf.apache.org/transports/http/configuration">
-	  <authorization>
-	     <sec:UserName>${mate.provider.giata.user}</sec:UserName>
-	     <sec:Password>${mate.provider.giata.pass}</sec:Password>
-	     <sec:AuthorizationType>Basic</sec:AuthorizationType>
-	  </authorization>
-	</http-conf:conduit>
+	
+	<bean id="httpAuth" class="org.apache.camel.component.http.HttpConfiguration">
+		<property name="authMethod" value="Basic"/>
+		<property name="authUsername" value="${mate.provider.giata.user}"/>
+		<property name="authPassword" value="${mate.provider.giata.pass}"/>
+	</bean>
+	
+	<bean id="http" class="org.apache.camel.component.http.HttpComponent">
+		<property name="camelContext" ref="camel"/>
+		<property name="httpConfiguration" ref="httpAuth"/>
+	</bean>
+	
 	
 </beans>

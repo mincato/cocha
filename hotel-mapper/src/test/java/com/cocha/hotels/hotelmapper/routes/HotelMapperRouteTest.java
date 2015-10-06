@@ -11,7 +11,6 @@ import javax.persistence.EntityManager;
 import org.apache.camel.builder.NotifyBuilder;
 import org.apache.camel.component.jpa.JpaEndpoint;
 import org.apache.camel.test.spring.CamelSpringTestSupport;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
