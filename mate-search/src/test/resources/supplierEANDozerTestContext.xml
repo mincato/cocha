@@ -8,6 +8,9 @@
 	<camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
 		<route>
 			<from uri="direct:service-in" />
+				<setHeader headerName="supplier">
+					<constant>EAN</constant>
+				</setHeader>
 			<to uri="bean:hotel-processor" />
 			<to uri="mock:verify-model" />
 		</route>

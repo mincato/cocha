@@ -12,9 +12,12 @@
 
 		<route>
 			<from uri="direct:unmarshal" />
+			<bean ref= "approvalResposeEAN"/>
 			<unmarshal ref="hotelSupplierEAN" />
 			<to uri="mock:unmarshalResult" />
 		</route>
 
 	</camelContext>
+	
+	<bean id="approvalResposeEAN" class="com.cocha.hotels.matesearch.providers.processors.ApprovalResposeEAN" />
 </beans>

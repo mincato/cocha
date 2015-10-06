@@ -2,7 +2,8 @@
 <persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence">
   <persistence-unit name="mainPU" transaction-type="JTA">
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
-    <class>com.cocha.hotels.matesearch.model.HotelMapping</class>
+    <class>com.cocha.hotels.model.content.mapping.HotelMapping</class>
+    <class>com.cocha.hotels.model.matesearch.canonical.Hotel</class>
     <properties>
       <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
       <property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.JBossAppServerJtaPlatform"/>

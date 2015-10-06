@@ -1,6 +1,8 @@
 package com.cocha.hotels.matesearch.util;
 
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class MessageUtils {
@@ -22,5 +24,12 @@ public class MessageUtils {
             parameters.put(keyValue[0], (keyValue[1]));
         }
         return parameters;
+    }
+    
+    public static List<String> parseStringHotelIdToHotelId(String stringIds) {
+    	
+    	List<String> ids = Arrays.asList(stringIds.split("\\s*,\\s*"));
+    	
+    	return ids;
     }
 }

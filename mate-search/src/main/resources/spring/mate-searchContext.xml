@@ -39,7 +39,7 @@
     
 	<import resource="classpath:META-INF/cxf/cxf.xml" />
 	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
-    
+	
 	<context:component-scan base-package="com.cocha.hotels.matesearch" annotation-config="true" />	
 	<context:annotation-config />	  			
 	
@@ -48,32 +48,32 @@
 	<!-- Tell CXF/JAX-RS where the Mate - REST service is defined -->			
 	<cxfCamel:rsServer id="mateServer" address="/mate" loggingFeatureEnabled="true">
        <cxfCamel:serviceBeans>
-           <bean class="com.cocha.hotels.matesearch.providers.services.MateService" />           
+           <bean class="com.cocha.hotels.matesearch.providers.services.rest.MateService" />           
        </cxfCamel:serviceBeans>
    </cxfCamel:rsServer>	
 	
 	<!-- Tell CXF/JAX-RS where the REST service is defined -->			
 	<cxfCamel:rsServer id="jaxRsServer" address="/ean" loggingFeatureEnabled="true">
        <cxfCamel:serviceBeans>
-           <bean class="com.cocha.hotels.matesearch.providers.services.EanService" />
+           <bean class="com.cocha.hotels.matesearch.providers.services.rest.EanService" />
        </cxfCamel:serviceBeans>
    </cxfCamel:rsServer>
 	
 	<!-- Defined the client endpoint to create the cxf-rs consumer for EAN-->
   <cxfCamel:rsClient id="eanClient" address="${mate.provider.ean.address.xml}"
-    serviceClass="com.cocha.hotels.matesearch.providers.services.EanClientService"
+    serviceClass="com.cocha.hotels.matesearch.providers.services.rest.EanClientService"
     loggingFeatureEnabled="true"/>
     
     <cxfCamel:rsServer id="jaxBookingServer" address="/booking" loggingFeatureEnabled="true">
        <cxfCamel:serviceBeans>
-           <bean class="com.cocha.hotels.matesearch.providers.services.BookingService" />
+           <bean class="com.cocha.hotels.matesearch.providers.services.rest.BookingService" />
        </cxfCamel:serviceBeans>
    </cxfCamel:rsServer>
    
    <!-- Defined the client endpoint to create the cxf-rs consumer for Booking-->
   <cxfCamel:rsClient id="bookingClient"	
 	address="${mate.provider.booking.address.xml}"	
-	serviceClass="com.cocha.hotels.matesearch.providers.services.BookingClientService"
+	serviceClass="com.cocha.hotels.matesearch.providers.services.rest.BookingClientService"
 	loggingFeatureEnabled="true" />
 
 	
@@ -91,23 +91,54 @@
         
     <cxfCamel:rsServer id="sabreServer" address="/sabre" loggingFeatureEnabled="true">
        <cxfCamel:serviceBeans>
-           <bean class="com.cocha.hotels.matesearch.providers.services.SabreService" />
+           <bean class="com.cocha.hotels.matesearch.providers.services.rest.SabreService" />
        </cxfCamel:serviceBeans>
    </cxfCamel:rsServer>
+
+   
+   <cxfCamel:cxfEndpoint id="sabreSessionCreate" address="https://sws-crt.cert.sabre.com/"    		
+    		wsdlURL="wsdl/SessionCreateRQ.wsdl" endpointName="s:SessionCreatePortType"
+                 serviceName="s:SessionCreateRQService" serviceClass="https.webservices_sabre_com.websvc.SessionCreatePortType"
+                 xmlns:s="https://webservices.sabre.com/websvc">             
+    		<cxfCamel:properties>
+            	<entry key="dataFormat" value="POJO"/>
+        </cxfCamel:properties>
+    </cxfCamel:cxfEndpoint>
+    
+    <cxfCamel:cxfEndpoint id="sabreChangeContext" address="https://sws-crt.cert.sabre.com/"    		
+    		wsdlURL="wsdl/ContextChangeLLS2.0.3RQ.wsdl" endpointName="s:ContextChangePortType"
+                 serviceName="s:ContextChangeService" serviceClass="https.webservices_sabre_com.websvc.ContextChangePortType"
+                 xmlns:s="https://webservices.sabre.com/websvc">             
+    		<cxfCamel:properties>
+            	<entry key="dataFormat" value="POJO"/>
+        </cxfCamel:properties>
+    </cxfCamel:cxfEndpoint>
+    
+    <cxfCamel:cxfEndpoint id="sabreAvailability" address="https://sws-crt.cert.sabre.com/"    		
+    		wsdlURL="wsdl/OTA_HotelAvailLLS2.2.0RQ.wsdl" endpointName="s:OTA_HotelAvailPortType"
+                 serviceName="s:OTA_HotelAvailService" serviceClass="https.webservices_sabre_com.websvc.OTAHotelAvailPortType"
+                 xmlns:s="https://webservices.sabre.com/websvc">             
+    		<cxfCamel:properties>
+            	<entry key="dataFormat" value="POJO"/>
+        </cxfCamel:properties>
+    </cxfCamel:cxfEndpoint>    		
 		
 	<camel:camelContext id="camel" xmlns="http://camel.apache.org/schema/spring" trace="true">
-		<camel:routeBuilder ref="mateRoute" />		
+		<camel:routeBuilder ref="mateRoute" />
 		<camel:routeBuilder ref="eanRoute" />
 		<camel:routeBuilder ref="eanClientRoute" />
 		<camel:routeBuilder ref="bookingRoute" />
 		<camel:routeBuilder ref="bookingClientRoute" />
 		<camel:routeBuilder ref="sabreRoute" />
 		<camel:routeBuilder ref="sabreClientRoute" />
+		<camel:routeBuilder ref="sabreSessionClientRoute"/>
+		<camel:routeBuilder ref="sabreChangeContextClientRoute"/>
 		<camel:routeBuilder ref="basicBeanRoute" />
 		<camel:routeBuilder ref="fileLogRoute" />
 		<camel:routeBuilder ref="bookingTransformerRoute" />
 		<camel:routeBuilder ref="eanTransformaerRoute" />
 		<camel:routeBuilder ref="sabreTransformerRoute" />
+		<camel:routeBuilder ref="hotelInformationRoute" />
 	</camel:camelContext>	
 	
 	<!-- Dozer Mapping -->
