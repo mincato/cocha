@@ -8,15 +8,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "AvailabilityOptions")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AvailabilityOptions {
-	
-	@XmlElement(name="AvailabilityOption")
-	private AvailabilityOption availabilityOption;
 
-	public AvailabilityOption getAvailabilityOption() {
-		return availabilityOption;
-	}
+    @XmlElement(name = "AvailabilityOption")
+    private AvailabilityOption availabilityOption;
 
-	public void setAvailabilityOption(AvailabilityOption availabilityOption) {
-		this.availabilityOption = availabilityOption;
-	}
+    public AvailabilityOption getAvailabilityOption() {
+        return availabilityOption;
+    }
+
+    public void setAvailabilityOption(AvailabilityOption availabilityOption) {
+        this.availabilityOption = availabilityOption;
+    }
 }

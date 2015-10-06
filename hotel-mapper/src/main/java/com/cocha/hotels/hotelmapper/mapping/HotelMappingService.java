@@ -28,7 +28,7 @@ public class HotelMappingService {
 
     @Autowired
     private ProximityFilterService proximityFilterService;
-    
+
     @Autowired
     private CanonicalIdGenerator canonicalIdGenerator;
 
@@ -49,7 +49,7 @@ public class HotelMappingService {
                 String canonicalId = referenceEntry.getHotelId();
 
                 List<Hotel> hotelsToProcess = proximityFilterService.filter(hotel, bookingHotels);
-                
+
                 // mapeo el hotel contra los del otro supplier
                 MultipleMatch matches = matchingService.match(hotel, hotelsToProcess);
                 HotelMatch bestMatch = matches.findBestMatch();
@@ -103,11 +103,11 @@ public class HotelMappingService {
     public void setCanonicalIdGenerator(CanonicalIdGenerator canonicalIdGenerator) {
         this.canonicalIdGenerator = canonicalIdGenerator;
     }
-    
+
     public ProximityFilterService getProximityFilterService() {
         return proximityFilterService;
     }
-    
+
     public void setProximityFilterService(ProximityFilterService proximityFilterService) {
         this.proximityFilterService = proximityFilterService;
     }

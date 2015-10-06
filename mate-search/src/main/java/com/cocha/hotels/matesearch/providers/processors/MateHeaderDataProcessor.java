@@ -16,9 +16,9 @@ import com.cocha.hotels.matesearch.util.MessageUtils;
 
 @Component
 public class MateHeaderDataProcessor implements Processor {
-	
-	@Autowired
-	private HotelMappingRepository hotelMappingRepository;
+
+    @Autowired
+    private HotelMappingRepository hotelMappingRepository;
 
     /*
      * (non-Javadoc)
@@ -34,29 +34,29 @@ public class MateHeaderDataProcessor implements Processor {
 
         List<HotelMapping> providers = hotelMappingRepository.findByHotelId(parameters.get("idHotel"));
 
-        parameters = this.putIdSuppliers(parameters,providers);
-        
+        parameters = this.putIdSuppliers(parameters, providers);
+
         exchange.getOut().setBody(parameters);
     }
 
-	private Map<String, String> putIdSuppliers(Map<String, String> parameters,	List<HotelMapping> providers) {
+    private Map<String, String> putIdSuppliers(Map<String, String> parameters, List<HotelMapping> providers) {
 
-		for(HotelMapping hotelMapping : providers) {
-			
-			switch (hotelMapping.getSupplierCode()) {
-			
-			case CodeSupplier.BOOKING_SUPPLIER_CODE:
-				parameters.put(CodeSupplier.BOOKING_SUPPLIER_ID_HOTEL, hotelMapping.getSupplierHotelId());
-				break;
-				
-			case CodeSupplier.EAN_SUPPLIER_CODE:
-				parameters.put(CodeSupplier.EAN_SUPPLIER_ID_HOTEL, hotelMapping.getSupplierHotelId());
-				break;
-				
-			}
-		}
-		
-		return parameters;
-	}
-    
+        for (HotelMapping hotelMapping : providers) {
+
+            switch (hotelMapping.getSupplierCode()) {
+
+                case CodeSupplier.BOOKING_SUPPLIER_CODE:
+                    parameters.put(CodeSupplier.BOOKING_SUPPLIER_ID_HOTEL, hotelMapping.getSupplierHotelId());
+                    break;
+
+                case CodeSupplier.EAN_SUPPLIER_CODE:
+                    parameters.put(CodeSupplier.EAN_SUPPLIER_ID_HOTEL, hotelMapping.getSupplierHotelId());
+                    break;
+
+            }
+        }
+
+        return parameters;
+    }
+
 }
