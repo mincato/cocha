@@ -9,6 +9,8 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
+import com.google.common.base.Objects;
+
 @Table(uniqueConstraints = @UniqueConstraint(columnNames = { "supplierHotelId", "supplierCode" }))
 @Entity
 @NamedQuery(name = "getMappingByConfidence", query = "select x from HotelMapping x where x.confidence = 100")
@@ -68,5 +70,5 @@ public class HotelMapping {
     public void setConfidence(Integer confidence) {
         this.confidence = confidence;
     }
-
+    
 }
