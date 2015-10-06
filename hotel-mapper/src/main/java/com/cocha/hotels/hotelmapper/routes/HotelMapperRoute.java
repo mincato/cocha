@@ -2,18 +2,14 @@ package com.cocha.hotels.hotelmapper.routes;
 
 import org.apache.camel.Exchange;
 import org.apache.camel.LoggingLevel;
-import org.apache.camel.Processor;
-import org.apache.camel.processor.aggregate.AggregationStrategy;
+import org.apache.camel.Predicate;
 import org.apache.camel.spring.SpringRouteBuilder;
-import org.apache.camel.util.toolbox.AggregationStrategies;
-import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import com.cocha.hotels.hotelmapper.processors.DynamicGiataUriProcessor;
-import com.cocha.hotels.hotelmapper.processors.GiataProcessor;
-import com.cocha.hotels.hotelmapper.processors.GiataProcessorImpl;
+import com.cocha.hotels.hotelmapper.processors.GiataMapperProcessor;
 import com.cocha.hotels.hotelmapper.processors.MapperProcessor;
 import com.cocha.hotels.hotelmapper.repositories.feeds.HotelFeedRepository;
 import com.cocha.hotels.model.content.mapping.HotelMapping;
@@ -25,16 +21,19 @@ public class HotelMapperRoute extends SpringRouteBuilder {
     private HotelFeedRepository hotelFeedRepository;
 
     @Autowired
-    private MapperProcessor mapperProcessor;
+    private MapperProcessor algorithmicMapperProcessor;
     
     @Autowired
-    private GiataProcessorImpl giataProcessor;
+    private GiataMapperProcessor giataMapperProcessor;
 
     @Autowired
-    private DynamicGiataUriProcessor dynamicGiataUriProcessor;
+    private DynamicGiataUriProcessor dynamicUriProcessor;
 
     @Value("${mate.provider.giata.address.xml}")
     private String giataUri;
+    
+    @Value("${mate.provider.giata.xpath.expression}")
+    private String giataXpathExpression;
     
     @Override
     public void configure() throws Exception {
@@ -46,7 +45,7 @@ public class HotelMapperRoute extends SpringRouteBuilder {
                 .transform()
                 .simple("${body[countryCode]}")
                 .bean(hotelFeedRepository, "findByCountryCode")
-                .bean(mapperProcessor)
+                .bean(algorithmicMapperProcessor)
                 .multicast()
                 .to("jpaContent:"
                         + HotelMapping.class.getName()
@@ -59,11 +58,19 @@ public class HotelMapperRoute extends SpringRouteBuilder {
                 .simple("${body}")
                 .filter()
                 .simple("${body.supplierCode} == \"EAN\" && ${body.confidence} == 100")
-                .process(dynamicGiataUriProcessor)
-                .setHeader(Exchange.HTTP_METHOD,constant("GET"))
-                .to(giataUri)
-                .setHeader("sabreId", xpath("/properties/property/propertyCodes/provider[@providerCode='sabre_tn']/code[1]/value[@name='Property Number'][1]/text()", String.class))
-                .bean(giataProcessor)
+                .process(dynamicUriProcessor)
+                .setHeader(Exchange.HTTP_METHOD, constant("GET"))
+                .to(giataUri) //overloaded by dynamicUriProcessor using Exchange.HTTP_URI
+                .setHeader("sabreId", xpath(giataXpathExpression, String.class))
+                .filter(new Predicate() {
+                    
+                    @Override
+                    public boolean matches(Exchange exchange) {
+                        String sabreId = exchange.getIn().getHeader("sabreId", String.class);
+                        return sabreId.length() > 0;
+                    }
+                })
+                .bean(giataMapperProcessor)
                 .to("jpaContent:"
                         + HotelMapping.class.getName()
                         + "?transactionManager=#contentTransactionManager&usePersist=true")

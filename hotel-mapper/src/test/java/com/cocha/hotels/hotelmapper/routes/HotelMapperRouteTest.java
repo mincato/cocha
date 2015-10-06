@@ -11,6 +11,7 @@ import javax.persistence.EntityManager;
 import org.apache.camel.builder.NotifyBuilder;
 import org.apache.camel.component.jpa.JpaEndpoint;
 import org.apache.camel.test.spring.CamelSpringTestSupport;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -39,7 +40,7 @@ public class HotelMapperRouteTest extends CamelSpringTestSupport {
     }
 
     @Test
-//    @Ignore
+    @Ignore
     public void test() throws Exception {
         NotifyBuilder notify = new NotifyBuilder(context)
                 .from("jpaContent:"
