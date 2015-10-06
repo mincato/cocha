@@ -6,7 +6,7 @@ import org.apache.camel.Processor;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 
-import com.sun.org.apache.xml.internal.dtm.ref.DTMNodeList;
+import com.cocha.hotels.model.content.mapping.HotelMapping;
 
 @Component
 public class GiataProcessorImpl implements Processor {
@@ -16,12 +16,20 @@ public class GiataProcessorImpl implements Processor {
     @Override
     public void process(Exchange exchange) throws Exception {
         Message inMessage = exchange.getIn();
-        Message outMessage = exchange.getOut();
         
-        logger.info("IN SABRE ID: " + inMessage.getHeader("sabreId"));
-        logger.info("OUT SABRE ID: " + outMessage.getHeader("sabreId"));
+        String sabreId = inMessage.getHeader("sabreId", String.class);
+        String eanId = inMessage.getHeader("eanId", String.class);
+        logger.info("SABRE ID: " + sabreId);
+        logger.info("EAN ID: " + eanId);
         
-        DTMNodeList node = (DTMNodeList) inMessage.getHeader("sabreId"); 
-        logger.info("node length: " + node.getLength());
+        if (sabreId.length() > 0) {
+            HotelMapping mapping = new HotelMapping();
+            mapping.setConfidence(99);
+            mapping.setSupplierCode("SAB");
+            mapping.setSupplierHotelId(sabreId);
+            mapping.setHotelId("EAN-" + eanId);
+            
+            exchange.getOut().setBody(mapping);
+        }
     }
 }

@@ -31,6 +31,8 @@ public class DynamicGiataUriProcessor implements Processor {
         inMessage.setBody(null);
         
         logger.info("GIATA URI: " + uri);
+        
+        inMessage.setHeader("eanId", eanId);
     }
 
 }
