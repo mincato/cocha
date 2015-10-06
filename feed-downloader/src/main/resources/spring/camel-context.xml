@@ -39,7 +39,7 @@
 		<property name="jpaVendorAdapter" ref="hibernateJpaVendorAdapter" />
 		<property name="packagesToScan">
 			<list>
-				<value>com.cocha.hotels.model.content.hotel.*</value>
+				<value>com.cocha.hotels.model.content.hotel</value>
 			</list>
 		</property>
 		<property name="jpaProperties">
