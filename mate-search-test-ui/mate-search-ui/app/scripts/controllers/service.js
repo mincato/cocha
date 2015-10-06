@@ -11,12 +11,12 @@ serviceMateSearch.controller('serviceController', ['$scope','$http','$location',
 		//if(hotel.service == 'all') {
 			$http.get('http://'+$location.host()+':'+$location.port()+'/mate-search/mate/availability?idHotel='+hotel.ids+'&arrival_date='+moment(hotel.arrivalDate).format('MM/DD/YYYY')+'&departure_date='+moment(hotel.departureDate).format('MM/DD/YYYY'))
 			.success(function(data) {
-				$scope.hotels = data.hotel;
+				$scope.hotels = data;
 				$scope.hotel.ids=hotel.ids;
 				$scope.hotel.arrivalDate = hotel.arrivalDate;
 				$scope.hotel.departureDate = hotel.departureDate;
 				$scope.hotel.service = hotel.service;
-				$scope.hotel.numeroResultado = data.hotel.length;
+				$scope.hotel.numeroResultado = data.length;
 			});
 		//}
 /*		if(hotel.service == 'booking') {
