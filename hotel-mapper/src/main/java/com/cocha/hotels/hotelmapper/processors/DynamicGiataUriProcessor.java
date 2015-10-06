@@ -15,6 +15,7 @@ import com.cocha.hotels.model.content.mapping.HotelMapping;
 public class DynamicGiataUriProcessor implements Processor {
 
     public static final String DYNAMIC_URI_KEY = "dynamicUriHeader";
+    
     private static final String MAPPING_SABRE_SERVICE = "sabre_tn";
     
     private Logger logger = Logger.getLogger(DynamicGiataUriProcessor.class);
