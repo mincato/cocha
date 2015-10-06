@@ -12,9 +12,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
 /**
  * The Identification metadata uniquely identify each message instance.
  * 
- * <p>Java class for Identification complex type.
+ * <p>Clase Java para Identification complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="Identification"&gt;
@@ -57,7 +57,7 @@ public class Identification {
     protected XMLGregorianCalendar timeStamp;
 
     /**
-     * Gets the value of the customerID property.
+     * Obtiene el valor de la propiedad customerID.
      * 
      * @return
      *     possible object is
@@ -69,7 +69,7 @@ public class Identification {
     }
 
     /**
-     * Sets the value of the customerID property.
+     * Define el valor de la propiedad customerID.
      * 
      * @param value
      *     allowed object is
@@ -81,7 +81,7 @@ public class Identification {
     }
 
     /**
-     * Gets the value of the customerAppID property.
+     * Obtiene el valor de la propiedad customerAppID.
      * 
      * @return
      *     possible object is
@@ -93,7 +93,7 @@ public class Identification {
     }
 
     /**
-     * Sets the value of the customerAppID property.
+     * Define el valor de la propiedad customerAppID.
      * 
      * @param value
      *     allowed object is
@@ -105,7 +105,7 @@ public class Identification {
     }
 
     /**
-     * Gets the value of the conversationID property.
+     * Obtiene el valor de la propiedad conversationID.
      * 
      * @return
      *     possible object is
@@ -117,7 +117,7 @@ public class Identification {
     }
 
     /**
-     * Sets the value of the conversationID property.
+     * Define el valor de la propiedad conversationID.
      * 
      * @param value
      *     allowed object is
@@ -129,7 +129,7 @@ public class Identification {
     }
 
     /**
-     * Gets the value of the messageID property.
+     * Obtiene el valor de la propiedad messageID.
      * 
      * @return
      *     possible object is
@@ -141,7 +141,7 @@ public class Identification {
     }
 
     /**
-     * Sets the value of the messageID property.
+     * Define el valor de la propiedad messageID.
      * 
      * @param value
      *     allowed object is
@@ -153,7 +153,7 @@ public class Identification {
     }
 
     /**
-     * Gets the value of the timeStamp property.
+     * Obtiene el valor de la propiedad timeStamp.
      * 
      * @return
      *     possible object is
@@ -165,7 +165,7 @@ public class Identification {
     }
 
     /**
-     * Sets the value of the timeStamp property.
+     * Define el valor de la propiedad timeStamp.
      * 
      * @param value
      *     allowed object is

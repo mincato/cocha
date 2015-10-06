@@ -16,9 +16,9 @@ import org.w3c.dom.Element;
 
 
 /**
- * <p>Java class for Envelope complex type.
+ * <p>Clase Java para Envelope complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="Envelope"&gt;
@@ -84,7 +84,7 @@ public class Envelope {
     }
 
     /**
-     * Gets the value of the body property.
+     * Obtiene el valor de la propiedad body.
      * 
      * @return
      *     possible object is
@@ -96,7 +96,7 @@ public class Envelope {
     }
 
     /**
-     * Sets the value of the body property.
+     * Define el valor de la propiedad body.
      * 
      * @param value
      *     allowed object is
@@ -125,8 +125,8 @@ public class Envelope {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Object }
      * {@link Element }
+     * {@link Object }
      * 
      * 
      */

@@ -13,9 +13,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>Java class for ReferenceType complex type.
+ * <p>Clase Java para ReferenceType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="ReferenceType"&gt;
@@ -63,7 +63,7 @@ public class ReferenceType {
     protected String type;
 
     /**
-     * Gets the value of the transforms property.
+     * Obtiene el valor de la propiedad transforms.
      * 
      * @return
      *     possible object is
@@ -75,7 +75,7 @@ public class ReferenceType {
     }
 
     /**
-     * Sets the value of the transforms property.
+     * Define el valor de la propiedad transforms.
      * 
      * @param value
      *     allowed object is
@@ -87,7 +87,7 @@ public class ReferenceType {
     }
 
     /**
-     * Gets the value of the digestMethod property.
+     * Obtiene el valor de la propiedad digestMethod.
      * 
      * @return
      *     possible object is
@@ -99,7 +99,7 @@ public class ReferenceType {
     }
 
     /**
-     * Sets the value of the digestMethod property.
+     * Define el valor de la propiedad digestMethod.
      * 
      * @param value
      *     allowed object is
@@ -111,7 +111,7 @@ public class ReferenceType {
     }
 
     /**
-     * Gets the value of the digestValue property.
+     * Obtiene el valor de la propiedad digestValue.
      * 
      * @return
      *     possible object is
@@ -122,7 +122,7 @@ public class ReferenceType {
     }
 
     /**
-     * Sets the value of the digestValue property.
+     * Define el valor de la propiedad digestValue.
      * 
      * @param value
      *     allowed object is
@@ -133,7 +133,7 @@ public class ReferenceType {
     }
 
     /**
-     * Gets the value of the id property.
+     * Obtiene el valor de la propiedad id.
      * 
      * @return
      *     possible object is
@@ -145,7 +145,7 @@ public class ReferenceType {
     }
 
     /**
-     * Sets the value of the id property.
+     * Define el valor de la propiedad id.
      * 
      * @param value
      *     allowed object is
@@ -157,7 +157,7 @@ public class ReferenceType {
     }
 
     /**
-     * Gets the value of the uri property.
+     * Obtiene el valor de la propiedad uri.
      * 
      * @return
      *     possible object is
@@ -169,7 +169,7 @@ public class ReferenceType {
     }
 
     /**
-     * Sets the value of the uri property.
+     * Define el valor de la propiedad uri.
      * 
      * @param value
      *     allowed object is
@@ -181,7 +181,7 @@ public class ReferenceType {
     }
 
     /**
-     * Gets the value of the type property.
+     * Obtiene el valor de la propiedad type.
      * 
      * @return
      *     possible object is
@@ -193,7 +193,7 @@ public class ReferenceType {
     }
 
     /**
-     * Sets the value of the type property.
+     * Define el valor de la propiedad type.
      * 
      * @param value
      *     allowed object is

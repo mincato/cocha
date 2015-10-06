@@ -30,14 +30,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS }
-     * 
-     */
-    public OTAHotelAvailRS createOTAHotelAvailRS() {
-        return new OTAHotelAvailRS();
-    }
-
-    /**
      * Create an instance of {@link OTAHotelAvailRQ }
      * 
      */
@@ -46,75 +38,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment }
+     * Create an instance of {@link OTAHotelAvailRS }
      * 
      */
-    public OTAHotelAvailRQ.AvailRequestSegment createOTAHotelAvailRQAvailRequestSegment() {
-        return new OTAHotelAvailRQ.AvailRequestSegment();
-    }
-
-    /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.RatePlanCandidates }
-     * 
-     */
-    public OTAHotelAvailRQ.AvailRequestSegment.RatePlanCandidates createOTAHotelAvailRQAvailRequestSegmentRatePlanCandidates() {
-        return new OTAHotelAvailRQ.AvailRequestSegment.RatePlanCandidates();
-    }
-
-    /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.POS }
-     * 
-     */
-    public OTAHotelAvailRQ.AvailRequestSegment.POS createOTAHotelAvailRQAvailRequestSegmentPOS() {
-        return new OTAHotelAvailRQ.AvailRequestSegment.POS();
-    }
-
-    /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.POS.Source }
-     * 
-     */
-    public OTAHotelAvailRQ.AvailRequestSegment.POS.Source createOTAHotelAvailRQAvailRequestSegmentPOSSource() {
-        return new OTAHotelAvailRQ.AvailRequestSegment.POS.Source();
-    }
-
-    /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.POS.Source.BookingChannel }
-     * 
-     */
-    public OTAHotelAvailRQ.AvailRequestSegment.POS.Source.BookingChannel createOTAHotelAvailRQAvailRequestSegmentPOSSourceBookingChannel() {
-        return new OTAHotelAvailRQ.AvailRequestSegment.POS.Source.BookingChannel();
-    }
-
-    /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria }
-     * 
-     */
-    public OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria createOTAHotelAvailRQAvailRequestSegmentHotelSearchCriteria() {
-        return new OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria();
-    }
-
-    /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion }
-     * 
-     */
-    public OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion createOTAHotelAvailRQAvailRequestSegmentHotelSearchCriteriaCriterion() {
-        return new OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion();
-    }
-
-    /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.ContactNumbers }
-     * 
-     */
-    public OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.ContactNumbers createOTAHotelAvailRQAvailRequestSegmentHotelSearchCriteriaCriterionContactNumbers() {
-        return new OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.ContactNumbers();
-    }
-
-    /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.Customer }
-     * 
-     */
-    public OTAHotelAvailRQ.AvailRequestSegment.Customer createOTAHotelAvailRQAvailRequestSegmentCustomer() {
-        return new OTAHotelAvailRQ.AvailRequestSegment.Customer();
+    public OTAHotelAvailRS createOTAHotelAvailRS() {
+        return new OTAHotelAvailRS();
     }
 
     /**
@@ -190,131 +118,83 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment }
+     * 
+     */
+    public OTAHotelAvailRQ.AvailRequestSegment createOTAHotelAvailRQAvailRequestSegment() {
+        return new OTAHotelAvailRQ.AvailRequestSegment();
+    }
+
+    /**
+     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.RatePlanCandidates }
+     * 
+     */
+    public OTAHotelAvailRQ.AvailRequestSegment.RatePlanCandidates createOTAHotelAvailRQAvailRequestSegmentRatePlanCandidates() {
+        return new OTAHotelAvailRQ.AvailRequestSegment.RatePlanCandidates();
+    }
+
+    /**
+     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.POS }
+     * 
+     */
+    public OTAHotelAvailRQ.AvailRequestSegment.POS createOTAHotelAvailRQAvailRequestSegmentPOS() {
+        return new OTAHotelAvailRQ.AvailRequestSegment.POS();
+    }
+
+    /**
+     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.POS.Source }
+     * 
+     */
+    public OTAHotelAvailRQ.AvailRequestSegment.POS.Source createOTAHotelAvailRQAvailRequestSegmentPOSSource() {
+        return new OTAHotelAvailRQ.AvailRequestSegment.POS.Source();
+    }
+
+    /**
+     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.POS.Source.BookingChannel }
+     * 
+     */
+    public OTAHotelAvailRQ.AvailRequestSegment.POS.Source.BookingChannel createOTAHotelAvailRQAvailRequestSegmentPOSSourceBookingChannel() {
+        return new OTAHotelAvailRQ.AvailRequestSegment.POS.Source.BookingChannel();
+    }
+
+    /**
+     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria }
+     * 
+     */
+    public OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria createOTAHotelAvailRQAvailRequestSegmentHotelSearchCriteria() {
+        return new OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria();
+    }
+
+    /**
+     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion }
+     * 
+     */
+    public OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion createOTAHotelAvailRQAvailRequestSegmentHotelSearchCriteriaCriterion() {
+        return new OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion();
+    }
+
+    /**
+     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.ContactNumbers }
+     * 
+     */
+    public OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.ContactNumbers createOTAHotelAvailRQAvailRequestSegmentHotelSearchCriteriaCriterionContactNumbers() {
+        return new OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.ContactNumbers();
+    }
+
+    /**
+     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.Customer }
+     * 
+     */
+    public OTAHotelAvailRQ.AvailRequestSegment.Customer createOTAHotelAvailRQAvailRequestSegmentCustomer() {
+        return new OTAHotelAvailRQ.AvailRequestSegment.Customer();
+    }
+
+    /**
      * Create an instance of {@link OTAHotelAvailRS.AdditionalAvail }
      * 
      */
     public OTAHotelAvailRS.AdditionalAvail createOTAHotelAvailRSAdditionalAvail() {
         return new OTAHotelAvailRS.AdditionalAvail();
-    }
-
-    /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.AdditionalAvail }
-     * 
-     */
-    public OTAHotelAvailRQ.AvailRequestSegment.AdditionalAvail createOTAHotelAvailRQAvailRequestSegmentAdditionalAvail() {
-        return new OTAHotelAvailRQ.AvailRequestSegment.AdditionalAvail();
-    }
-
-    /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.GuestCounts }
-     * 
-     */
-    public OTAHotelAvailRQ.AvailRequestSegment.GuestCounts createOTAHotelAvailRQAvailRequestSegmentGuestCounts() {
-        return new OTAHotelAvailRQ.AvailRequestSegment.GuestCounts();
-    }
-
-    /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.TimeSpan }
-     * 
-     */
-    public OTAHotelAvailRQ.AvailRequestSegment.TimeSpan createOTAHotelAvailRQAvailRequestSegmentTimeSpan() {
-        return new OTAHotelAvailRQ.AvailRequestSegment.TimeSpan();
-    }
-
-    /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.RatePlanCandidates.RateAccessCode }
-     * 
-     */
-    public OTAHotelAvailRQ.AvailRequestSegment.RatePlanCandidates.RateAccessCode createOTAHotelAvailRQAvailRequestSegmentRatePlanCandidatesRateAccessCode() {
-        return new OTAHotelAvailRQ.AvailRequestSegment.RatePlanCandidates.RateAccessCode();
-    }
-
-    /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.RatePlanCandidates.RateRange }
-     * 
-     */
-    public OTAHotelAvailRQ.AvailRequestSegment.RatePlanCandidates.RateRange createOTAHotelAvailRQAvailRequestSegmentRatePlanCandidatesRateRange() {
-        return new OTAHotelAvailRQ.AvailRequestSegment.RatePlanCandidates.RateRange();
-    }
-
-    /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.POS.Source.BookingChannel.CompanyName }
-     * 
-     */
-    public OTAHotelAvailRQ.AvailRequestSegment.POS.Source.BookingChannel.CompanyName createOTAHotelAvailRQAvailRequestSegmentPOSSourceBookingChannelCompanyName() {
-        return new OTAHotelAvailRQ.AvailRequestSegment.POS.Source.BookingChannel.CompanyName();
-    }
-
-    /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.Address }
-     * 
-     */
-    public OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.Address createOTAHotelAvailRQAvailRequestSegmentHotelSearchCriteriaCriterionAddress() {
-        return new OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.Address();
-    }
-
-    /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.Award }
-     * 
-     */
-    public OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.Award createOTAHotelAvailRQAvailRequestSegmentHotelSearchCriteriaCriterionAward() {
-        return new OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.Award();
-    }
-
-    /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.HotelFeature }
-     * 
-     */
-    public OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.HotelFeature createOTAHotelAvailRQAvailRequestSegmentHotelSearchCriteriaCriterionHotelFeature() {
-        return new OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.HotelFeature();
-    }
-
-    /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.HotelRef }
-     * 
-     */
-    public OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.HotelRef createOTAHotelAvailRQAvailRequestSegmentHotelSearchCriteriaCriterionHotelRef() {
-        return new OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.HotelRef();
-    }
-
-    /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.PointOfInterest }
-     * 
-     */
-    public OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.PointOfInterest createOTAHotelAvailRQAvailRequestSegmentHotelSearchCriteriaCriterionPointOfInterest() {
-        return new OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.PointOfInterest();
-    }
-
-    /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.RefPoint }
-     * 
-     */
-    public OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.RefPoint createOTAHotelAvailRQAvailRequestSegmentHotelSearchCriteriaCriterionRefPoint() {
-        return new OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.RefPoint();
-    }
-
-    /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.ContactNumbers.ContactNumber }
-     * 
-     */
-    public OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.ContactNumbers.ContactNumber createOTAHotelAvailRQAvailRequestSegmentHotelSearchCriteriaCriterionContactNumbersContactNumber() {
-        return new OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.ContactNumbers.ContactNumber();
-    }
-
-    /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.Customer.Corporate }
-     * 
-     */
-    public OTAHotelAvailRQ.AvailRequestSegment.Customer.Corporate createOTAHotelAvailRQAvailRequestSegmentCustomerCorporate() {
-        return new OTAHotelAvailRQ.AvailRequestSegment.Customer.Corporate();
-    }
-
-    /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.Customer.ID }
-     * 
-     */
-    public OTAHotelAvailRQ.AvailRequestSegment.Customer.ID createOTAHotelAvailRQAvailRequestSegmentCustomerID() {
-        return new OTAHotelAvailRQ.AvailRequestSegment.Customer.ID();
     }
 
     /**
@@ -843,6 +723,126 @@ public class ObjectFactory {
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.ContactNumbers.ContactNumber createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoContactNumbersContactNumber() {
         return new OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.ContactNumbers.ContactNumber();
+    }
+
+    /**
+     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.AdditionalAvail }
+     * 
+     */
+    public OTAHotelAvailRQ.AvailRequestSegment.AdditionalAvail createOTAHotelAvailRQAvailRequestSegmentAdditionalAvail() {
+        return new OTAHotelAvailRQ.AvailRequestSegment.AdditionalAvail();
+    }
+
+    /**
+     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.GuestCounts }
+     * 
+     */
+    public OTAHotelAvailRQ.AvailRequestSegment.GuestCounts createOTAHotelAvailRQAvailRequestSegmentGuestCounts() {
+        return new OTAHotelAvailRQ.AvailRequestSegment.GuestCounts();
+    }
+
+    /**
+     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.TimeSpan }
+     * 
+     */
+    public OTAHotelAvailRQ.AvailRequestSegment.TimeSpan createOTAHotelAvailRQAvailRequestSegmentTimeSpan() {
+        return new OTAHotelAvailRQ.AvailRequestSegment.TimeSpan();
+    }
+
+    /**
+     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.RatePlanCandidates.RateAccessCode }
+     * 
+     */
+    public OTAHotelAvailRQ.AvailRequestSegment.RatePlanCandidates.RateAccessCode createOTAHotelAvailRQAvailRequestSegmentRatePlanCandidatesRateAccessCode() {
+        return new OTAHotelAvailRQ.AvailRequestSegment.RatePlanCandidates.RateAccessCode();
+    }
+
+    /**
+     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.RatePlanCandidates.RateRange }
+     * 
+     */
+    public OTAHotelAvailRQ.AvailRequestSegment.RatePlanCandidates.RateRange createOTAHotelAvailRQAvailRequestSegmentRatePlanCandidatesRateRange() {
+        return new OTAHotelAvailRQ.AvailRequestSegment.RatePlanCandidates.RateRange();
+    }
+
+    /**
+     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.POS.Source.BookingChannel.CompanyName }
+     * 
+     */
+    public OTAHotelAvailRQ.AvailRequestSegment.POS.Source.BookingChannel.CompanyName createOTAHotelAvailRQAvailRequestSegmentPOSSourceBookingChannelCompanyName() {
+        return new OTAHotelAvailRQ.AvailRequestSegment.POS.Source.BookingChannel.CompanyName();
+    }
+
+    /**
+     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.Address }
+     * 
+     */
+    public OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.Address createOTAHotelAvailRQAvailRequestSegmentHotelSearchCriteriaCriterionAddress() {
+        return new OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.Address();
+    }
+
+    /**
+     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.Award }
+     * 
+     */
+    public OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.Award createOTAHotelAvailRQAvailRequestSegmentHotelSearchCriteriaCriterionAward() {
+        return new OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.Award();
+    }
+
+    /**
+     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.HotelFeature }
+     * 
+     */
+    public OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.HotelFeature createOTAHotelAvailRQAvailRequestSegmentHotelSearchCriteriaCriterionHotelFeature() {
+        return new OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.HotelFeature();
+    }
+
+    /**
+     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.HotelRef }
+     * 
+     */
+    public OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.HotelRef createOTAHotelAvailRQAvailRequestSegmentHotelSearchCriteriaCriterionHotelRef() {
+        return new OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.HotelRef();
+    }
+
+    /**
+     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.PointOfInterest }
+     * 
+     */
+    public OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.PointOfInterest createOTAHotelAvailRQAvailRequestSegmentHotelSearchCriteriaCriterionPointOfInterest() {
+        return new OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.PointOfInterest();
+    }
+
+    /**
+     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.RefPoint }
+     * 
+     */
+    public OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.RefPoint createOTAHotelAvailRQAvailRequestSegmentHotelSearchCriteriaCriterionRefPoint() {
+        return new OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.RefPoint();
+    }
+
+    /**
+     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.ContactNumbers.ContactNumber }
+     * 
+     */
+    public OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.ContactNumbers.ContactNumber createOTAHotelAvailRQAvailRequestSegmentHotelSearchCriteriaCriterionContactNumbersContactNumber() {
+        return new OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.ContactNumbers.ContactNumber();
+    }
+
+    /**
+     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.Customer.Corporate }
+     * 
+     */
+    public OTAHotelAvailRQ.AvailRequestSegment.Customer.Corporate createOTAHotelAvailRQAvailRequestSegmentCustomerCorporate() {
+        return new OTAHotelAvailRQ.AvailRequestSegment.Customer.Corporate();
+    }
+
+    /**
+     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.Customer.ID }
+     * 
+     */
+    public OTAHotelAvailRQ.AvailRequestSegment.Customer.ID createOTAHotelAvailRQAvailRequestSegmentCustomerID() {
+        return new OTAHotelAvailRQ.AvailRequestSegment.Customer.ID();
     }
 
 }

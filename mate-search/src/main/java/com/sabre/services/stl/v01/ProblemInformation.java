@@ -14,9 +14,9 @@ import com.sabre.services.stl_header.v120.ErrorType;
 
 
 /**
- * <p>Java class for ProblemInformation complex type.
+ * <p>Clase Java para ProblemInformation complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="ProblemInformation"&gt;
@@ -78,7 +78,7 @@ public class ProblemInformation {
     }
 
     /**
-     * Gets the value of the type property.
+     * Obtiene el valor de la propiedad type.
      * 
      * @return
      *     possible object is
@@ -90,7 +90,7 @@ public class ProblemInformation {
     }
 
     /**
-     * Sets the value of the type property.
+     * Define el valor de la propiedad type.
      * 
      * @param value
      *     allowed object is
@@ -102,7 +102,7 @@ public class ProblemInformation {
     }
 
     /**
-     * Gets the value of the timeStamp property.
+     * Obtiene el valor de la propiedad timeStamp.
      * 
      * @return
      *     possible object is
@@ -114,7 +114,7 @@ public class ProblemInformation {
     }
 
     /**
-     * Sets the value of the timeStamp property.
+     * Define el valor de la propiedad timeStamp.
      * 
      * @param value
      *     allowed object is

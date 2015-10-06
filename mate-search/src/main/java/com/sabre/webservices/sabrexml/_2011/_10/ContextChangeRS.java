@@ -14,9 +14,9 @@ import com.sabre.services.stl.v01.ApplicationResults;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Clase Java para anonymous complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -62,7 +62,7 @@ public class ContextChangeRS {
     protected String version;
 
     /**
-     * Gets the value of the applicationResults property.
+     * Obtiene el valor de la propiedad applicationResults.
      * 
      * @return
      *     possible object is
@@ -74,7 +74,7 @@ public class ContextChangeRS {
     }
 
     /**
-     * Sets the value of the applicationResults property.
+     * Define el valor de la propiedad applicationResults.
      * 
      * @param value
      *     allowed object is
@@ -86,7 +86,7 @@ public class ContextChangeRS {
     }
 
     /**
-     * Gets the value of the securityToken property.
+     * Obtiene el valor de la propiedad securityToken.
      * 
      * @return
      *     possible object is
@@ -98,7 +98,7 @@ public class ContextChangeRS {
     }
 
     /**
-     * Sets the value of the securityToken property.
+     * Define el valor de la propiedad securityToken.
      * 
      * @param value
      *     allowed object is
@@ -139,7 +139,7 @@ public class ContextChangeRS {
     }
 
     /**
-     * Gets the value of the version property.
+     * Obtiene el valor de la propiedad version.
      * 
      * @return
      *     possible object is
@@ -151,7 +151,7 @@ public class ContextChangeRS {
     }
 
     /**
-     * Sets the value of the version property.
+     * Define el valor de la propiedad version.
      * 
      * @param value
      *     allowed object is
@@ -164,9 +164,9 @@ public class ContextChangeRS {
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * <p>Clase Java para anonymous complex type.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
      * 
      * <pre>
      * &lt;complexType&gt;
@@ -192,7 +192,7 @@ public class ContextChangeRS {
         protected Boolean updated;
 
         /**
-         * Gets the value of the value property.
+         * Obtiene el valor de la propiedad value.
          * 
          * @return
          *     possible object is
@@ -204,7 +204,7 @@ public class ContextChangeRS {
         }
 
         /**
-         * Sets the value of the value property.
+         * Define el valor de la propiedad value.
          * 
          * @param value
          *     allowed object is
@@ -216,7 +216,7 @@ public class ContextChangeRS {
         }
 
         /**
-         * Gets the value of the updated property.
+         * Obtiene el valor de la propiedad updated.
          * 
          * @return
          *     possible object is
@@ -228,7 +228,7 @@ public class ContextChangeRS {
         }
 
         /**
-         * Sets the value of the updated property.
+         * Define el valor de la propiedad updated.
          * 
          * @param value
          *     allowed object is

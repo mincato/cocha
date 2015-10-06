@@ -17,9 +17,9 @@ import org.w3c.dom.Element;
 
 
 /**
- * <p>Java class for ObjectType complex type.
+ * <p>Clase Java para ObjectType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="ObjectType"&gt;
@@ -76,9 +76,9 @@ public class ObjectType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
+     * {@link Element }
      * {@link Object }
      * {@link String }
-     * {@link Element }
      * 
      * 
      */
@@ -90,7 +90,7 @@ public class ObjectType {
     }
 
     /**
-     * Gets the value of the id property.
+     * Obtiene el valor de la propiedad id.
      * 
      * @return
      *     possible object is
@@ -102,7 +102,7 @@ public class ObjectType {
     }
 
     /**
-     * Sets the value of the id property.
+     * Define el valor de la propiedad id.
      * 
      * @param value
      *     allowed object is
@@ -114,7 +114,7 @@ public class ObjectType {
     }
 
     /**
-     * Gets the value of the mimeType property.
+     * Obtiene el valor de la propiedad mimeType.
      * 
      * @return
      *     possible object is
@@ -126,7 +126,7 @@ public class ObjectType {
     }
 
     /**
-     * Sets the value of the mimeType property.
+     * Define el valor de la propiedad mimeType.
      * 
      * @param value
      *     allowed object is
@@ -138,7 +138,7 @@ public class ObjectType {
     }
 
     /**
-     * Gets the value of the encoding property.
+     * Obtiene el valor de la propiedad encoding.
      * 
      * @return
      *     possible object is
@@ -150,7 +150,7 @@ public class ObjectType {
     }
 
     /**
-     * Sets the value of the encoding property.
+     * Define el valor de la propiedad encoding.
      * 
      * @param value
      *     allowed object is

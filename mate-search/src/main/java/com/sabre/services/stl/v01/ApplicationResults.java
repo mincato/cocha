@@ -12,9 +12,9 @@ import com.sabre.services.stl_header.v120.CompletionCodes;
 
 
 /**
- * <p>Java class for ApplicationResults complex type.
+ * <p>Clase Java para ApplicationResults complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="ApplicationResults"&gt;
@@ -140,7 +140,7 @@ public class ApplicationResults
     }
 
     /**
-     * Gets the value of the status property.
+     * Obtiene el valor de la propiedad status.
      * 
      * @return
      *     possible object is
@@ -152,7 +152,7 @@ public class ApplicationResults
     }
 
     /**
-     * Sets the value of the status property.
+     * Define el valor de la propiedad status.
      * 
      * @param value
      *     allowed object is

@@ -12,9 +12,9 @@ import javax.xml.namespace.QName;
 /**
  * Fault reporting structure
  * 
- * <p>Java class for Fault complex type.
+ * <p>Clase Java para Fault complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="Fault"&gt;
@@ -51,7 +51,7 @@ public class Fault {
     protected Detail detail;
 
     /**
-     * Gets the value of the faultcode property.
+     * Obtiene el valor de la propiedad faultcode.
      * 
      * @return
      *     possible object is
@@ -63,7 +63,7 @@ public class Fault {
     }
 
     /**
-     * Sets the value of the faultcode property.
+     * Define el valor de la propiedad faultcode.
      * 
      * @param value
      *     allowed object is
@@ -75,7 +75,7 @@ public class Fault {
     }
 
     /**
-     * Gets the value of the faultstring property.
+     * Obtiene el valor de la propiedad faultstring.
      * 
      * @return
      *     possible object is
@@ -87,7 +87,7 @@ public class Fault {
     }
 
     /**
-     * Sets the value of the faultstring property.
+     * Define el valor de la propiedad faultstring.
      * 
      * @param value
      *     allowed object is
@@ -99,7 +99,7 @@ public class Fault {
     }
 
     /**
-     * Gets the value of the faultactor property.
+     * Obtiene el valor de la propiedad faultactor.
      * 
      * @return
      *     possible object is
@@ -111,7 +111,7 @@ public class Fault {
     }
 
     /**
-     * Sets the value of the faultactor property.
+     * Define el valor de la propiedad faultactor.
      * 
      * @param value
      *     allowed object is
@@ -123,7 +123,7 @@ public class Fault {
     }
 
     /**
-     * Gets the value of the detail property.
+     * Obtiene el valor de la propiedad detail.
      * 
      * @return
      *     possible object is
@@ -135,7 +135,7 @@ public class Fault {
     }
 
     /**
-     * Sets the value of the detail property.
+     * Define el valor de la propiedad detail.
      * 
      * @param value
      *     allowed object is

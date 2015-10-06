@@ -22,9 +22,9 @@ import org.w3c.dom.Element;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Clase Java para anonymous complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -155,8 +155,8 @@ public class Reference {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Object }
      * {@link Element }
+     * {@link Object }
      * 
      * 
      */
@@ -168,7 +168,7 @@ public class Reference {
     }
 
     /**
-     * Gets the value of the id property.
+     * Obtiene el valor de la propiedad id.
      * 
      * @return
      *     possible object is
@@ -180,7 +180,7 @@ public class Reference {
     }
 
     /**
-     * Sets the value of the id property.
+     * Define el valor de la propiedad id.
      * 
      * @param value
      *     allowed object is
@@ -192,7 +192,7 @@ public class Reference {
     }
 
     /**
-     * Gets the value of the type property.
+     * Obtiene el valor de la propiedad type.
      * 
      * @return
      *     possible object is
@@ -208,7 +208,7 @@ public class Reference {
     }
 
     /**
-     * Sets the value of the type property.
+     * Define el valor de la propiedad type.
      * 
      * @param value
      *     allowed object is
@@ -220,7 +220,7 @@ public class Reference {
     }
 
     /**
-     * Gets the value of the href property.
+     * Obtiene el valor de la propiedad href.
      * 
      * @return
      *     possible object is
@@ -232,7 +232,7 @@ public class Reference {
     }
 
     /**
-     * Sets the value of the href property.
+     * Define el valor de la propiedad href.
      * 
      * @param value
      *     allowed object is
@@ -244,7 +244,7 @@ public class Reference {
     }
 
     /**
-     * Gets the value of the role property.
+     * Obtiene el valor de la propiedad role.
      * 
      * @return
      *     possible object is
@@ -256,7 +256,7 @@ public class Reference {
     }
 
     /**
-     * Sets the value of the role property.
+     * Define el valor de la propiedad role.
      * 
      * @param value
      *     allowed object is

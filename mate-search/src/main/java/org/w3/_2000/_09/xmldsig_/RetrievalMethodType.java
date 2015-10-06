@@ -10,9 +10,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for RetrievalMethodType complex type.
+ * <p>Clase Java para RetrievalMethodType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="RetrievalMethodType"&gt;
@@ -46,7 +46,7 @@ public class RetrievalMethodType {
     protected String type;
 
     /**
-     * Gets the value of the transforms property.
+     * Obtiene el valor de la propiedad transforms.
      * 
      * @return
      *     possible object is
@@ -58,7 +58,7 @@ public class RetrievalMethodType {
     }
 
     /**
-     * Sets the value of the transforms property.
+     * Define el valor de la propiedad transforms.
      * 
      * @param value
      *     allowed object is
@@ -70,7 +70,7 @@ public class RetrievalMethodType {
     }
 
     /**
-     * Gets the value of the uri property.
+     * Obtiene el valor de la propiedad uri.
      * 
      * @return
      *     possible object is
@@ -82,7 +82,7 @@ public class RetrievalMethodType {
     }
 
     /**
-     * Sets the value of the uri property.
+     * Define el valor de la propiedad uri.
      * 
      * @param value
      *     allowed object is
@@ -94,7 +94,7 @@ public class RetrievalMethodType {
     }
 
     /**
-     * Gets the value of the type property.
+     * Obtiene el valor de la propiedad type.
      * 
      * @return
      *     possible object is
@@ -106,7 +106,7 @@ public class RetrievalMethodType {
     }
 
     /**
-     * Sets the value of the type property.
+     * Define el valor de la propiedad type.
      * 
      * @param value
      *     allowed object is

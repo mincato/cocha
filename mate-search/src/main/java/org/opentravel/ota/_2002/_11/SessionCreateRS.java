@@ -14,9 +14,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Clase Java para anonymous complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -170,7 +170,7 @@ public class SessionCreateRS {
     protected String status;
 
     /**
-     * Gets the value of the success property.
+     * Obtiene el valor de la propiedad success.
      * 
      * @return
      *     possible object is
@@ -182,7 +182,7 @@ public class SessionCreateRS {
     }
 
     /**
-     * Sets the value of the success property.
+     * Define el valor de la propiedad success.
      * 
      * @param value
      *     allowed object is
@@ -194,7 +194,7 @@ public class SessionCreateRS {
     }
 
     /**
-     * Gets the value of the warnings property.
+     * Obtiene el valor de la propiedad warnings.
      * 
      * @return
      *     possible object is
@@ -206,7 +206,7 @@ public class SessionCreateRS {
     }
 
     /**
-     * Sets the value of the warnings property.
+     * Define el valor de la propiedad warnings.
      * 
      * @param value
      *     allowed object is
@@ -218,7 +218,7 @@ public class SessionCreateRS {
     }
 
     /**
-     * Gets the value of the conversationId property.
+     * Obtiene el valor de la propiedad conversationId.
      * 
      * @return
      *     possible object is
@@ -230,7 +230,7 @@ public class SessionCreateRS {
     }
 
     /**
-     * Sets the value of the conversationId property.
+     * Define el valor de la propiedad conversationId.
      * 
      * @param value
      *     allowed object is
@@ -242,7 +242,7 @@ public class SessionCreateRS {
     }
 
     /**
-     * Gets the value of the errors property.
+     * Obtiene el valor de la propiedad errors.
      * 
      * @return
      *     possible object is
@@ -254,7 +254,7 @@ public class SessionCreateRS {
     }
 
     /**
-     * Sets the value of the errors property.
+     * Define el valor de la propiedad errors.
      * 
      * @param value
      *     allowed object is
@@ -266,7 +266,7 @@ public class SessionCreateRS {
     }
 
     /**
-     * Gets the value of the echoToken property.
+     * Obtiene el valor de la propiedad echoToken.
      * 
      * @return
      *     possible object is
@@ -278,7 +278,7 @@ public class SessionCreateRS {
     }
 
     /**
-     * Sets the value of the echoToken property.
+     * Define el valor de la propiedad echoToken.
      * 
      * @param value
      *     allowed object is
@@ -290,7 +290,7 @@ public class SessionCreateRS {
     }
 
     /**
-     * Gets the value of the timeStamp property.
+     * Obtiene el valor de la propiedad timeStamp.
      * 
      * @return
      *     possible object is
@@ -302,7 +302,7 @@ public class SessionCreateRS {
     }
 
     /**
-     * Sets the value of the timeStamp property.
+     * Define el valor de la propiedad timeStamp.
      * 
      * @param value
      *     allowed object is
@@ -314,7 +314,7 @@ public class SessionCreateRS {
     }
 
     /**
-     * Gets the value of the target property.
+     * Obtiene el valor de la propiedad target.
      * 
      * @return
      *     possible object is
@@ -330,7 +330,7 @@ public class SessionCreateRS {
     }
 
     /**
-     * Sets the value of the target property.
+     * Define el valor de la propiedad target.
      * 
      * @param value
      *     allowed object is
@@ -342,7 +342,7 @@ public class SessionCreateRS {
     }
 
     /**
-     * Gets the value of the version property.
+     * Obtiene el valor de la propiedad version.
      * 
      * @return
      *     possible object is
@@ -354,7 +354,7 @@ public class SessionCreateRS {
     }
 
     /**
-     * Sets the value of the version property.
+     * Define el valor de la propiedad version.
      * 
      * @param value
      *     allowed object is
@@ -366,7 +366,7 @@ public class SessionCreateRS {
     }
 
     /**
-     * Gets the value of the sequenceNmbr property.
+     * Obtiene el valor de la propiedad sequenceNmbr.
      * 
      * @return
      *     possible object is
@@ -378,7 +378,7 @@ public class SessionCreateRS {
     }
 
     /**
-     * Sets the value of the sequenceNmbr property.
+     * Define el valor de la propiedad sequenceNmbr.
      * 
      * @param value
      *     allowed object is
@@ -390,7 +390,7 @@ public class SessionCreateRS {
     }
 
     /**
-     * Gets the value of the primaryLangID property.
+     * Obtiene el valor de la propiedad primaryLangID.
      * 
      * @return
      *     possible object is
@@ -402,7 +402,7 @@ public class SessionCreateRS {
     }
 
     /**
-     * Sets the value of the primaryLangID property.
+     * Define el valor de la propiedad primaryLangID.
      * 
      * @param value
      *     allowed object is
@@ -414,7 +414,7 @@ public class SessionCreateRS {
     }
 
     /**
-     * Gets the value of the altLangID property.
+     * Obtiene el valor de la propiedad altLangID.
      * 
      * @return
      *     possible object is
@@ -426,7 +426,7 @@ public class SessionCreateRS {
     }
 
     /**
-     * Sets the value of the altLangID property.
+     * Define el valor de la propiedad altLangID.
      * 
      * @param value
      *     allowed object is
@@ -438,7 +438,7 @@ public class SessionCreateRS {
     }
 
     /**
-     * Gets the value of the status property.
+     * Obtiene el valor de la propiedad status.
      * 
      * @return
      *     possible object is
@@ -450,7 +450,7 @@ public class SessionCreateRS {
     }
 
     /**
-     * Sets the value of the status property.
+     * Define el valor de la propiedad status.
      * 
      * @param value
      *     allowed object is
@@ -463,9 +463,9 @@ public class SessionCreateRS {
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * <p>Clase Java para anonymous complex type.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
      * 
      * <pre>
      * &lt;complexType&gt;
@@ -514,7 +514,7 @@ public class SessionCreateRS {
         protected SessionCreateRS.Errors.Error error;
 
         /**
-         * Gets the value of the error property.
+         * Obtiene el valor de la propiedad error.
          * 
          * @return
          *     possible object is
@@ -526,7 +526,7 @@ public class SessionCreateRS {
         }
 
         /**
-         * Sets the value of the error property.
+         * Define el valor de la propiedad error.
          * 
          * @param value
          *     allowed object is
@@ -539,9 +539,9 @@ public class SessionCreateRS {
 
 
         /**
-         * <p>Java class for anonymous complex type.
+         * <p>Clase Java para anonymous complex type.
          * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
+         * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
          * 
          * <pre>
          * &lt;complexType&gt;
@@ -586,7 +586,7 @@ public class SessionCreateRS {
             protected String errorMessage;
 
             /**
-             * Gets the value of the errorInfo property.
+             * Obtiene el valor de la propiedad errorInfo.
              * 
              * @return
              *     possible object is
@@ -598,7 +598,7 @@ public class SessionCreateRS {
             }
 
             /**
-             * Sets the value of the errorInfo property.
+             * Define el valor de la propiedad errorInfo.
              * 
              * @param value
              *     allowed object is
@@ -610,7 +610,7 @@ public class SessionCreateRS {
             }
 
             /**
-             * Gets the value of the errorCode property.
+             * Obtiene el valor de la propiedad errorCode.
              * 
              * @return
              *     possible object is
@@ -622,7 +622,7 @@ public class SessionCreateRS {
             }
 
             /**
-             * Sets the value of the errorCode property.
+             * Define el valor de la propiedad errorCode.
              * 
              * @param value
              *     allowed object is
@@ -634,7 +634,7 @@ public class SessionCreateRS {
             }
 
             /**
-             * Gets the value of the severity property.
+             * Obtiene el valor de la propiedad severity.
              * 
              * @return
              *     possible object is
@@ -646,7 +646,7 @@ public class SessionCreateRS {
             }
 
             /**
-             * Sets the value of the severity property.
+             * Define el valor de la propiedad severity.
              * 
              * @param value
              *     allowed object is
@@ -658,7 +658,7 @@ public class SessionCreateRS {
             }
 
             /**
-             * Gets the value of the errorMessage property.
+             * Obtiene el valor de la propiedad errorMessage.
              * 
              * @return
              *     possible object is
@@ -670,7 +670,7 @@ public class SessionCreateRS {
             }
 
             /**
-             * Sets the value of the errorMessage property.
+             * Define el valor de la propiedad errorMessage.
              * 
              * @param value
              *     allowed object is
@@ -683,9 +683,9 @@ public class SessionCreateRS {
 
 
             /**
-             * <p>Java class for anonymous complex type.
+             * <p>Clase Java para anonymous complex type.
              * 
-             * <p>The following schema fragment specifies the expected content contained within this class.
+             * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
              * 
              * <pre>
              * &lt;complexType&gt;
@@ -711,7 +711,7 @@ public class SessionCreateRS {
                 protected String message;
 
                 /**
-                 * Gets the value of the message property.
+                 * Obtiene el valor de la propiedad message.
                  * 
                  * @return
                  *     possible object is
@@ -723,7 +723,7 @@ public class SessionCreateRS {
                 }
 
                 /**
-                 * Sets the value of the message property.
+                 * Define el valor de la propiedad message.
                  * 
                  * @param value
                  *     allowed object is
@@ -742,9 +742,9 @@ public class SessionCreateRS {
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * <p>Clase Java para anonymous complex type.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
      * 
      * <pre>
      * &lt;complexType&gt;
@@ -766,9 +766,9 @@ public class SessionCreateRS {
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * <p>Clase Java para anonymous complex type.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
      * 
      * <pre>
      * &lt;complexType&gt;
@@ -815,7 +815,7 @@ public class SessionCreateRS {
         protected SessionCreateRS.Warnings.Warning warning;
 
         /**
-         * Gets the value of the warning property.
+         * Obtiene el valor de la propiedad warning.
          * 
          * @return
          *     possible object is
@@ -827,7 +827,7 @@ public class SessionCreateRS {
         }
 
         /**
-         * Sets the value of the warning property.
+         * Define el valor de la propiedad warning.
          * 
          * @param value
          *     allowed object is
@@ -840,9 +840,9 @@ public class SessionCreateRS {
 
 
         /**
-         * <p>Java class for anonymous complex type.
+         * <p>Clase Java para anonymous complex type.
          * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
+         * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
          * 
          * <pre>
          * &lt;complexType&gt;
@@ -892,7 +892,7 @@ public class SessionCreateRS {
             protected String recordId;
 
             /**
-             * Gets the value of the language property.
+             * Obtiene el valor de la propiedad language.
              * 
              * @return
              *     possible object is
@@ -904,7 +904,7 @@ public class SessionCreateRS {
             }
 
             /**
-             * Sets the value of the language property.
+             * Define el valor de la propiedad language.
              * 
              * @param value
              *     allowed object is
@@ -916,7 +916,7 @@ public class SessionCreateRS {
             }
 
             /**
-             * Gets the value of the shortText property.
+             * Obtiene el valor de la propiedad shortText.
              * 
              * @return
              *     possible object is
@@ -928,7 +928,7 @@ public class SessionCreateRS {
             }
 
             /**
-             * Sets the value of the shortText property.
+             * Define el valor de la propiedad shortText.
              * 
              * @param value
              *     allowed object is
@@ -940,7 +940,7 @@ public class SessionCreateRS {
             }
 
             /**
-             * Gets the value of the type property.
+             * Obtiene el valor de la propiedad type.
              * 
              * @return
              *     possible object is
@@ -952,7 +952,7 @@ public class SessionCreateRS {
             }
 
             /**
-             * Sets the value of the type property.
+             * Define el valor de la propiedad type.
              * 
              * @param value
              *     allowed object is
@@ -964,7 +964,7 @@ public class SessionCreateRS {
             }
 
             /**
-             * Gets the value of the code property.
+             * Obtiene el valor de la propiedad code.
              * 
              * @return
              *     possible object is
@@ -976,7 +976,7 @@ public class SessionCreateRS {
             }
 
             /**
-             * Sets the value of the code property.
+             * Define el valor de la propiedad code.
              * 
              * @param value
              *     allowed object is
@@ -988,7 +988,7 @@ public class SessionCreateRS {
             }
 
             /**
-             * Gets the value of the docURL property.
+             * Obtiene el valor de la propiedad docURL.
              * 
              * @return
              *     possible object is
@@ -1000,7 +1000,7 @@ public class SessionCreateRS {
             }
 
             /**
-             * Sets the value of the docURL property.
+             * Define el valor de la propiedad docURL.
              * 
              * @param value
              *     allowed object is
@@ -1012,7 +1012,7 @@ public class SessionCreateRS {
             }
 
             /**
-             * Gets the value of the status property.
+             * Obtiene el valor de la propiedad status.
              * 
              * @return
              *     possible object is
@@ -1024,7 +1024,7 @@ public class SessionCreateRS {
             }
 
             /**
-             * Sets the value of the status property.
+             * Define el valor de la propiedad status.
              * 
              * @param value
              *     allowed object is
@@ -1036,7 +1036,7 @@ public class SessionCreateRS {
             }
 
             /**
-             * Gets the value of the tag property.
+             * Obtiene el valor de la propiedad tag.
              * 
              * @return
              *     possible object is
@@ -1048,7 +1048,7 @@ public class SessionCreateRS {
             }
 
             /**
-             * Sets the value of the tag property.
+             * Define el valor de la propiedad tag.
              * 
              * @param value
              *     allowed object is
@@ -1060,7 +1060,7 @@ public class SessionCreateRS {
             }
 
             /**
-             * Gets the value of the recordId property.
+             * Obtiene el valor de la propiedad recordId.
              * 
              * @return
              *     possible object is
@@ -1072,7 +1072,7 @@ public class SessionCreateRS {
             }
 
             /**
-             * Sets the value of the recordId property.
+             * Define el valor de la propiedad recordId.
              * 
              * @param value
              *     allowed object is

@@ -9,9 +9,9 @@ import org.w3c.dom.Element;
 
 
 /**
- * <p>Java class for DiagnosticResults complex type.
+ * <p>Clase Java para DiagnosticResults complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="DiagnosticResults"&gt;
@@ -37,12 +37,12 @@ public class DiagnosticResults {
     protected Object any;
 
     /**
-     * Gets the value of the any property.
+     * Obtiene el valor de la propiedad any.
      * 
      * @return
      *     possible object is
-     *     {@link Object }
      *     {@link Element }
+     *     {@link Object }
      *     
      */
     public Object getAny() {
@@ -50,12 +50,12 @@ public class DiagnosticResults {
     }
 
     /**
-     * Sets the value of the any property.
+     * Define el valor de la propiedad any.
      * 
      * @param value
      *     allowed object is
-     *     {@link Object }
      *     {@link Element }
+     *     {@link Object }
      *     
      */
     public void setAny(Object value) {

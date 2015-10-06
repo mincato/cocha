@@ -12,9 +12,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Clase Java para anonymous complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -59,7 +59,7 @@ public class MessageData {
     protected BigInteger timeout;
 
     /**
-     * Gets the value of the messageId property.
+     * Obtiene el valor de la propiedad messageId.
      * 
      * @return
      *     possible object is
@@ -71,7 +71,7 @@ public class MessageData {
     }
 
     /**
-     * Sets the value of the messageId property.
+     * Define el valor de la propiedad messageId.
      * 
      * @param value
      *     allowed object is
@@ -83,7 +83,7 @@ public class MessageData {
     }
 
     /**
-     * Gets the value of the timestamp property.
+     * Obtiene el valor de la propiedad timestamp.
      * 
      * @return
      *     possible object is
@@ -95,7 +95,7 @@ public class MessageData {
     }
 
     /**
-     * Sets the value of the timestamp property.
+     * Define el valor de la propiedad timestamp.
      * 
      * @param value
      *     allowed object is
@@ -107,7 +107,7 @@ public class MessageData {
     }
 
     /**
-     * Gets the value of the refToMessageId property.
+     * Obtiene el valor de la propiedad refToMessageId.
      * 
      * @return
      *     possible object is
@@ -119,7 +119,7 @@ public class MessageData {
     }
 
     /**
-     * Sets the value of the refToMessageId property.
+     * Define el valor de la propiedad refToMessageId.
      * 
      * @param value
      *     allowed object is
@@ -131,7 +131,7 @@ public class MessageData {
     }
 
     /**
-     * Gets the value of the timeToLive property.
+     * Obtiene el valor de la propiedad timeToLive.
      * 
      * @return
      *     possible object is
@@ -143,7 +143,7 @@ public class MessageData {
     }
 
     /**
-     * Sets the value of the timeToLive property.
+     * Define el valor de la propiedad timeToLive.
      * 
      * @param value
      *     allowed object is
@@ -155,7 +155,7 @@ public class MessageData {
     }
 
     /**
-     * Gets the value of the timeout property.
+     * Obtiene el valor de la propiedad timeout.
      * 
      * @return
      *     possible object is
@@ -167,7 +167,7 @@ public class MessageData {
     }
 
     /**
-     * Sets the value of the timeout property.
+     * Define el valor de la propiedad timeout.
      * 
      * @param value
      *     allowed object is

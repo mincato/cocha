@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for Diagnostics complex type.
+ * <p>Clase Java para Diagnostics complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="Diagnostics"&gt;
@@ -46,7 +46,7 @@ public class Diagnostics {
     protected DiagnosticResults diagnostic;
 
     /**
-     * Gets the value of the level property.
+     * Obtiene el valor de la propiedad level.
      * 
      * @return
      *     possible object is
@@ -58,7 +58,7 @@ public class Diagnostics {
     }
 
     /**
-     * Sets the value of the level property.
+     * Define el valor de la propiedad level.
      * 
      * @param value
      *     allowed object is
@@ -70,7 +70,7 @@ public class Diagnostics {
     }
 
     /**
-     * Gets the value of the data property.
+     * Obtiene el valor de la propiedad data.
      * 
      * @return
      *     possible object is
@@ -82,7 +82,7 @@ public class Diagnostics {
     }
 
     /**
-     * Sets the value of the data property.
+     * Define el valor de la propiedad data.
      * 
      * @param value
      *     allowed object is
@@ -94,7 +94,7 @@ public class Diagnostics {
     }
 
     /**
-     * Gets the value of the diagnostic property.
+     * Obtiene el valor de la propiedad diagnostic.
      * 
      * @return
      *     possible object is
@@ -106,7 +106,7 @@ public class Diagnostics {
     }
 
     /**
-     * Sets the value of the diagnostic property.
+     * Define el valor de la propiedad diagnostic.
      * 
      * @param value
      *     allowed object is

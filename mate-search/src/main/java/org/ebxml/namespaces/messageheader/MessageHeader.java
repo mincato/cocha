@@ -22,9 +22,9 @@ import org.w3c.dom.Element;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Clase Java para anonymous complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -98,7 +98,7 @@ public class MessageHeader {
     private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
     /**
-     * Gets the value of the from property.
+     * Obtiene el valor de la propiedad from.
      * 
      * @return
      *     possible object is
@@ -110,7 +110,7 @@ public class MessageHeader {
     }
 
     /**
-     * Sets the value of the from property.
+     * Define el valor de la propiedad from.
      * 
      * @param value
      *     allowed object is
@@ -122,7 +122,7 @@ public class MessageHeader {
     }
 
     /**
-     * Gets the value of the to property.
+     * Obtiene el valor de la propiedad to.
      * 
      * @return
      *     possible object is
@@ -134,7 +134,7 @@ public class MessageHeader {
     }
 
     /**
-     * Sets the value of the to property.
+     * Define el valor de la propiedad to.
      * 
      * @param value
      *     allowed object is
@@ -146,7 +146,7 @@ public class MessageHeader {
     }
 
     /**
-     * Gets the value of the cpaId property.
+     * Obtiene el valor de la propiedad cpaId.
      * 
      * @return
      *     possible object is
@@ -158,7 +158,7 @@ public class MessageHeader {
     }
 
     /**
-     * Sets the value of the cpaId property.
+     * Define el valor de la propiedad cpaId.
      * 
      * @param value
      *     allowed object is
@@ -170,7 +170,7 @@ public class MessageHeader {
     }
 
     /**
-     * Gets the value of the conversationId property.
+     * Obtiene el valor de la propiedad conversationId.
      * 
      * @return
      *     possible object is
@@ -182,7 +182,7 @@ public class MessageHeader {
     }
 
     /**
-     * Sets the value of the conversationId property.
+     * Define el valor de la propiedad conversationId.
      * 
      * @param value
      *     allowed object is
@@ -194,7 +194,7 @@ public class MessageHeader {
     }
 
     /**
-     * Gets the value of the service property.
+     * Obtiene el valor de la propiedad service.
      * 
      * @return
      *     possible object is
@@ -206,7 +206,7 @@ public class MessageHeader {
     }
 
     /**
-     * Sets the value of the service property.
+     * Define el valor de la propiedad service.
      * 
      * @param value
      *     allowed object is
@@ -218,7 +218,7 @@ public class MessageHeader {
     }
 
     /**
-     * Gets the value of the action property.
+     * Obtiene el valor de la propiedad action.
      * 
      * @return
      *     possible object is
@@ -230,7 +230,7 @@ public class MessageHeader {
     }
 
     /**
-     * Sets the value of the action property.
+     * Define el valor de la propiedad action.
      * 
      * @param value
      *     allowed object is
@@ -242,7 +242,7 @@ public class MessageHeader {
     }
 
     /**
-     * Gets the value of the messageData property.
+     * Obtiene el valor de la propiedad messageData.
      * 
      * @return
      *     possible object is
@@ -254,7 +254,7 @@ public class MessageHeader {
     }
 
     /**
-     * Sets the value of the messageData property.
+     * Define el valor de la propiedad messageData.
      * 
      * @param value
      *     allowed object is
@@ -266,7 +266,7 @@ public class MessageHeader {
     }
 
     /**
-     * Gets the value of the duplicateElimination property.
+     * Obtiene el valor de la propiedad duplicateElimination.
      * 
      * @return
      *     possible object is
@@ -278,7 +278,7 @@ public class MessageHeader {
     }
 
     /**
-     * Sets the value of the duplicateElimination property.
+     * Define el valor de la propiedad duplicateElimination.
      * 
      * @param value
      *     allowed object is
@@ -336,8 +336,8 @@ public class MessageHeader {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Object }
      * {@link Element }
+     * {@link Object }
      * 
      * 
      */
@@ -349,7 +349,7 @@ public class MessageHeader {
     }
 
     /**
-     * Gets the value of the id property.
+     * Obtiene el valor de la propiedad id.
      * 
      * @return
      *     possible object is
@@ -361,7 +361,7 @@ public class MessageHeader {
     }
 
     /**
-     * Sets the value of the id property.
+     * Define el valor de la propiedad id.
      * 
      * @param value
      *     allowed object is
@@ -373,7 +373,7 @@ public class MessageHeader {
     }
 
     /**
-     * Gets the value of the version property.
+     * Obtiene el valor de la propiedad version.
      * 
      * @return
      *     possible object is
@@ -385,7 +385,7 @@ public class MessageHeader {
     }
 
     /**
-     * Sets the value of the version property.
+     * Define el valor de la propiedad version.
      * 
      * @param value
      *     allowed object is

@@ -15,9 +15,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>Java class for SignedInfoType complex type.
+ * <p>Clase Java para SignedInfoType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="SignedInfoType"&gt;
@@ -57,7 +57,7 @@ public class SignedInfoType {
     protected String id;
 
     /**
-     * Gets the value of the canonicalizationMethod property.
+     * Obtiene el valor de la propiedad canonicalizationMethod.
      * 
      * @return
      *     possible object is
@@ -69,7 +69,7 @@ public class SignedInfoType {
     }
 
     /**
-     * Sets the value of the canonicalizationMethod property.
+     * Define el valor de la propiedad canonicalizationMethod.
      * 
      * @param value
      *     allowed object is
@@ -81,7 +81,7 @@ public class SignedInfoType {
     }
 
     /**
-     * Gets the value of the signatureMethod property.
+     * Obtiene el valor de la propiedad signatureMethod.
      * 
      * @return
      *     possible object is
@@ -93,7 +93,7 @@ public class SignedInfoType {
     }
 
     /**
-     * Sets the value of the signatureMethod property.
+     * Define el valor de la propiedad signatureMethod.
      * 
      * @param value
      *     allowed object is
@@ -134,7 +134,7 @@ public class SignedInfoType {
     }
 
     /**
-     * Gets the value of the id property.
+     * Obtiene el valor de la propiedad id.
      * 
      * @return
      *     possible object is
@@ -146,7 +146,7 @@ public class SignedInfoType {
     }
 
     /**
-     * Sets the value of the id property.
+     * Define el valor de la propiedad id.
      * 
      * @param value
      *     allowed object is

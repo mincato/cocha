@@ -13,9 +13,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Clase Java para anonymous complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -44,7 +44,7 @@ public class Description {
     protected String lang;
 
     /**
-     * Gets the value of the value property.
+     * Obtiene el valor de la propiedad value.
      * 
      * @return
      *     possible object is
@@ -56,7 +56,7 @@ public class Description {
     }
 
     /**
-     * Sets the value of the value property.
+     * Define el valor de la propiedad value.
      * 
      * @param value
      *     allowed object is
@@ -68,7 +68,7 @@ public class Description {
     }
 
     /**
-     * Gets the value of the lang property.
+     * Obtiene el valor de la propiedad lang.
      * 
      * @return
      *     possible object is
@@ -80,7 +80,7 @@ public class Description {
     }
 
     /**
-     * Sets the value of the lang property.
+     * Define el valor de la propiedad lang.
      * 
      * @param value
      *     allowed object is

@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlValue;
  * 	"HostName" is used to return the particular server name responsible for fulfilling the particular request transaction.
  * 	 Example: Source ApplicationInstance="PROD1" Cluster="PROD TPF SCC" HostName="PSS" TPF Source
  * 
- * <p>Java class for Identifier.System complex type.
+ * <p>Clase Java para Identifier.System complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="Identifier.System"&gt;
@@ -53,7 +53,7 @@ public class IdentifierSystem {
     protected String uri;
 
     /**
-     * Gets the value of the value property.
+     * Obtiene el valor de la propiedad value.
      * 
      * @return
      *     possible object is
@@ -65,7 +65,7 @@ public class IdentifierSystem {
     }
 
     /**
-     * Sets the value of the value property.
+     * Define el valor de la propiedad value.
      * 
      * @param value
      *     allowed object is
@@ -77,7 +77,7 @@ public class IdentifierSystem {
     }
 
     /**
-     * Gets the value of the instance property.
+     * Obtiene el valor de la propiedad instance.
      * 
      * @return
      *     possible object is
@@ -89,7 +89,7 @@ public class IdentifierSystem {
     }
 
     /**
-     * Sets the value of the instance property.
+     * Define el valor de la propiedad instance.
      * 
      * @param value
      *     allowed object is
@@ -101,7 +101,7 @@ public class IdentifierSystem {
     }
 
     /**
-     * Gets the value of the cluster property.
+     * Obtiene el valor de la propiedad cluster.
      * 
      * @return
      *     possible object is
@@ -113,7 +113,7 @@ public class IdentifierSystem {
     }
 
     /**
-     * Sets the value of the cluster property.
+     * Define el valor de la propiedad cluster.
      * 
      * @param value
      *     allowed object is
@@ -125,7 +125,7 @@ public class IdentifierSystem {
     }
 
     /**
-     * Gets the value of the host property.
+     * Obtiene el valor de la propiedad host.
      * 
      * @return
      *     possible object is
@@ -137,7 +137,7 @@ public class IdentifierSystem {
     }
 
     /**
-     * Sets the value of the host property.
+     * Define el valor de la propiedad host.
      * 
      * @param value
      *     allowed object is
@@ -149,7 +149,7 @@ public class IdentifierSystem {
     }
 
     /**
-     * Gets the value of the uri property.
+     * Obtiene el valor de la propiedad uri.
      * 
      * @return
      *     possible object is
@@ -161,7 +161,7 @@ public class IdentifierSystem {
     }
 
     /**
-     * Sets the value of the uri property.
+     * Define el valor de la propiedad uri.
      * 
      * @param value
      *     allowed object is

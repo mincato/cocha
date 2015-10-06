@@ -12,9 +12,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Clase Java para anonymous complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -177,7 +177,7 @@ public class ContextChangeRQ {
     protected String version;
 
     /**
-     * Gets the value of the changeAAA property.
+     * Obtiene el valor de la propiedad changeAAA.
      * 
      * @return
      *     possible object is
@@ -189,7 +189,7 @@ public class ContextChangeRQ {
     }
 
     /**
-     * Sets the value of the changeAAA property.
+     * Define el valor de la propiedad changeAAA.
      * 
      * @param value
      *     allowed object is
@@ -201,7 +201,7 @@ public class ContextChangeRQ {
     }
 
     /**
-     * Gets the value of the changeDuty property.
+     * Obtiene el valor de la propiedad changeDuty.
      * 
      * @return
      *     possible object is
@@ -213,7 +213,7 @@ public class ContextChangeRQ {
     }
 
     /**
-     * Sets the value of the changeDuty property.
+     * Define el valor de la propiedad changeDuty.
      * 
      * @param value
      *     allowed object is
@@ -225,7 +225,7 @@ public class ContextChangeRQ {
     }
 
     /**
-     * Gets the value of the changePartition property.
+     * Obtiene el valor de la propiedad changePartition.
      * 
      * @return
      *     possible object is
@@ -237,7 +237,7 @@ public class ContextChangeRQ {
     }
 
     /**
-     * Sets the value of the changePartition property.
+     * Define el valor de la propiedad changePartition.
      * 
      * @param value
      *     allowed object is
@@ -249,7 +249,7 @@ public class ContextChangeRQ {
     }
 
     /**
-     * Gets the value of the overSign property.
+     * Obtiene el valor de la propiedad overSign.
      * 
      * @return
      *     possible object is
@@ -261,7 +261,7 @@ public class ContextChangeRQ {
     }
 
     /**
-     * Sets the value of the overSign property.
+     * Define el valor de la propiedad overSign.
      * 
      * @param value
      *     allowed object is
@@ -273,7 +273,7 @@ public class ContextChangeRQ {
     }
 
     /**
-     * Gets the value of the returnHostCommand property.
+     * Obtiene el valor de la propiedad returnHostCommand.
      * 
      * @return
      *     possible object is
@@ -285,7 +285,7 @@ public class ContextChangeRQ {
     }
 
     /**
-     * Sets the value of the returnHostCommand property.
+     * Define el valor de la propiedad returnHostCommand.
      * 
      * @param value
      *     allowed object is
@@ -297,7 +297,7 @@ public class ContextChangeRQ {
     }
 
     /**
-     * Gets the value of the timeStamp property.
+     * Obtiene el valor de la propiedad timeStamp.
      * 
      * @return
      *     possible object is
@@ -309,7 +309,7 @@ public class ContextChangeRQ {
     }
 
     /**
-     * Sets the value of the timeStamp property.
+     * Define el valor de la propiedad timeStamp.
      * 
      * @param value
      *     allowed object is
@@ -321,7 +321,7 @@ public class ContextChangeRQ {
     }
 
     /**
-     * Gets the value of the version property.
+     * Obtiene el valor de la propiedad version.
      * 
      * @return
      *     possible object is
@@ -337,7 +337,7 @@ public class ContextChangeRQ {
     }
 
     /**
-     * Sets the value of the version property.
+     * Define el valor de la propiedad version.
      * 
      * @param value
      *     allowed object is
@@ -350,9 +350,9 @@ public class ContextChangeRQ {
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * <p>Clase Java para anonymous complex type.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
      * 
      * <pre>
      * &lt;complexType&gt;
@@ -390,7 +390,7 @@ public class ContextChangeRQ {
         protected String pseudoCityCode;
 
         /**
-         * Gets the value of the accountingCity property.
+         * Obtiene el valor de la propiedad accountingCity.
          * 
          * @return
          *     possible object is
@@ -402,7 +402,7 @@ public class ContextChangeRQ {
         }
 
         /**
-         * Sets the value of the accountingCity property.
+         * Define el valor de la propiedad accountingCity.
          * 
          * @param value
          *     allowed object is
@@ -414,7 +414,7 @@ public class ContextChangeRQ {
         }
 
         /**
-         * Gets the value of the accountingCode property.
+         * Obtiene el valor de la propiedad accountingCode.
          * 
          * @return
          *     possible object is
@@ -426,7 +426,7 @@ public class ContextChangeRQ {
         }
 
         /**
-         * Sets the value of the accountingCode property.
+         * Define el valor de la propiedad accountingCode.
          * 
          * @param value
          *     allowed object is
@@ -438,7 +438,7 @@ public class ContextChangeRQ {
         }
 
         /**
-         * Gets the value of the officeStationCode property.
+         * Obtiene el valor de la propiedad officeStationCode.
          * 
          * @return
          *     possible object is
@@ -450,7 +450,7 @@ public class ContextChangeRQ {
         }
 
         /**
-         * Sets the value of the officeStationCode property.
+         * Define el valor de la propiedad officeStationCode.
          * 
          * @param value
          *     allowed object is
@@ -462,7 +462,7 @@ public class ContextChangeRQ {
         }
 
         /**
-         * Gets the value of the pseudoCityCode property.
+         * Obtiene el valor de la propiedad pseudoCityCode.
          * 
          * @return
          *     possible object is
@@ -474,7 +474,7 @@ public class ContextChangeRQ {
         }
 
         /**
-         * Sets the value of the pseudoCityCode property.
+         * Define el valor de la propiedad pseudoCityCode.
          * 
          * @param value
          *     allowed object is
@@ -489,9 +489,9 @@ public class ContextChangeRQ {
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * <p>Clase Java para anonymous complex type.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
      * 
      * <pre>
      * &lt;complexType&gt;
@@ -520,7 +520,7 @@ public class ContextChangeRQ {
         protected String code;
 
         /**
-         * Gets the value of the code property.
+         * Obtiene el valor de la propiedad code.
          * 
          * @return
          *     possible object is
@@ -532,7 +532,7 @@ public class ContextChangeRQ {
         }
 
         /**
-         * Sets the value of the code property.
+         * Define el valor de la propiedad code.
          * 
          * @param value
          *     allowed object is
@@ -547,9 +547,9 @@ public class ContextChangeRQ {
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * <p>Clase Java para anonymous complex type.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
      * 
      * <pre>
      * &lt;complexType&gt;
@@ -610,7 +610,7 @@ public class ContextChangeRQ {
         protected String code;
 
         /**
-         * Gets the value of the newPassword property.
+         * Obtiene el valor de la propiedad newPassword.
          * 
          * @return
          *     possible object is
@@ -622,7 +622,7 @@ public class ContextChangeRQ {
         }
 
         /**
-         * Sets the value of the newPassword property.
+         * Define el valor de la propiedad newPassword.
          * 
          * @param value
          *     allowed object is
@@ -634,7 +634,7 @@ public class ContextChangeRQ {
         }
 
         /**
-         * Gets the value of the password property.
+         * Obtiene el valor de la propiedad password.
          * 
          * @return
          *     possible object is
@@ -646,7 +646,7 @@ public class ContextChangeRQ {
         }
 
         /**
-         * Sets the value of the password property.
+         * Define el valor de la propiedad password.
          * 
          * @param value
          *     allowed object is
@@ -658,7 +658,7 @@ public class ContextChangeRQ {
         }
 
         /**
-         * Gets the value of the pin property.
+         * Obtiene el valor de la propiedad pin.
          * 
          * @return
          *     possible object is
@@ -670,7 +670,7 @@ public class ContextChangeRQ {
         }
 
         /**
-         * Sets the value of the pin property.
+         * Define el valor de la propiedad pin.
          * 
          * @param value
          *     allowed object is
@@ -682,7 +682,7 @@ public class ContextChangeRQ {
         }
 
         /**
-         * Gets the value of the code property.
+         * Obtiene el valor de la propiedad code.
          * 
          * @return
          *     possible object is
@@ -694,7 +694,7 @@ public class ContextChangeRQ {
         }
 
         /**
-         * Sets the value of the code property.
+         * Define el valor de la propiedad code.
          * 
          * @param value
          *     allowed object is
@@ -709,9 +709,9 @@ public class ContextChangeRQ {
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * <p>Clase Java para anonymous complex type.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
      * 
      * <pre>
      * &lt;complexType&gt;
@@ -783,7 +783,7 @@ public class ContextChangeRQ {
         protected String username;
 
         /**
-         * Gets the value of the area property.
+         * Obtiene el valor de la propiedad area.
          * 
          * @return
          *     possible object is
@@ -795,7 +795,7 @@ public class ContextChangeRQ {
         }
 
         /**
-         * Sets the value of the area property.
+         * Define el valor de la propiedad area.
          * 
          * @param value
          *     allowed object is
@@ -807,7 +807,7 @@ public class ContextChangeRQ {
         }
 
         /**
-         * Gets the value of the dutyCode property.
+         * Obtiene el valor de la propiedad dutyCode.
          * 
          * @return
          *     possible object is
@@ -819,7 +819,7 @@ public class ContextChangeRQ {
         }
 
         /**
-         * Sets the value of the dutyCode property.
+         * Define el valor de la propiedad dutyCode.
          * 
          * @param value
          *     allowed object is
@@ -831,7 +831,7 @@ public class ContextChangeRQ {
         }
 
         /**
-         * Gets the value of the organization property.
+         * Obtiene el valor de la propiedad organization.
          * 
          * @return
          *     possible object is
@@ -843,7 +843,7 @@ public class ContextChangeRQ {
         }
 
         /**
-         * Sets the value of the organization property.
+         * Define el valor de la propiedad organization.
          * 
          * @param value
          *     allowed object is
@@ -855,7 +855,7 @@ public class ContextChangeRQ {
         }
 
         /**
-         * Gets the value of the password property.
+         * Obtiene el valor de la propiedad password.
          * 
          * @return
          *     possible object is
@@ -867,7 +867,7 @@ public class ContextChangeRQ {
         }
 
         /**
-         * Sets the value of the password property.
+         * Define el valor de la propiedad password.
          * 
          * @param value
          *     allowed object is
@@ -879,7 +879,7 @@ public class ContextChangeRQ {
         }
 
         /**
-         * Gets the value of the username property.
+         * Obtiene el valor de la propiedad username.
          * 
          * @return
          *     possible object is
@@ -891,7 +891,7 @@ public class ContextChangeRQ {
         }
 
         /**
-         * Sets the value of the username property.
+         * Define el valor de la propiedad username.
          * 
          * @param value
          *     allowed object is

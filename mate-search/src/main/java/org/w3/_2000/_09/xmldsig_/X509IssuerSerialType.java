@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for X509IssuerSerialType complex type.
+ * <p>Clase Java para X509IssuerSerialType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="X509IssuerSerialType"&gt;
@@ -41,7 +41,7 @@ public class X509IssuerSerialType {
     protected BigInteger x509SerialNumber;
 
     /**
-     * Gets the value of the x509IssuerName property.
+     * Obtiene el valor de la propiedad x509IssuerName.
      * 
      * @return
      *     possible object is
@@ -53,7 +53,7 @@ public class X509IssuerSerialType {
     }
 
     /**
-     * Sets the value of the x509IssuerName property.
+     * Define el valor de la propiedad x509IssuerName.
      * 
      * @param value
      *     allowed object is
@@ -65,7 +65,7 @@ public class X509IssuerSerialType {
     }
 
     /**
-     * Gets the value of the x509SerialNumber property.
+     * Obtiene el valor de la propiedad x509SerialNumber.
      * 
      * @return
      *     possible object is
@@ -77,7 +77,7 @@ public class X509IssuerSerialType {
     }
 
     /**
-     * Sets the value of the x509SerialNumber property.
+     * Define el valor de la propiedad x509SerialNumber.
      * 
      * @param value
      *     allowed object is

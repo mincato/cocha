@@ -22,9 +22,9 @@ import org.w3c.dom.Element;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Clase Java para anonymous complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -77,7 +77,7 @@ public class Error {
     private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
     /**
-     * Gets the value of the description property.
+     * Obtiene el valor de la propiedad description.
      * 
      * @return
      *     possible object is
@@ -89,7 +89,7 @@ public class Error {
     }
 
     /**
-     * Sets the value of the description property.
+     * Define el valor de la propiedad description.
      * 
      * @param value
      *     allowed object is
@@ -118,8 +118,8 @@ public class Error {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Object }
      * {@link Element }
+     * {@link Object }
      * 
      * 
      */
@@ -131,7 +131,7 @@ public class Error {
     }
 
     /**
-     * Gets the value of the id property.
+     * Obtiene el valor de la propiedad id.
      * 
      * @return
      *     possible object is
@@ -143,7 +143,7 @@ public class Error {
     }
 
     /**
-     * Sets the value of the id property.
+     * Define el valor de la propiedad id.
      * 
      * @param value
      *     allowed object is
@@ -155,7 +155,7 @@ public class Error {
     }
 
     /**
-     * Gets the value of the codeContext property.
+     * Obtiene el valor de la propiedad codeContext.
      * 
      * @return
      *     possible object is
@@ -171,7 +171,7 @@ public class Error {
     }
 
     /**
-     * Sets the value of the codeContext property.
+     * Define el valor de la propiedad codeContext.
      * 
      * @param value
      *     allowed object is
@@ -183,7 +183,7 @@ public class Error {
     }
 
     /**
-     * Gets the value of the errorCode property.
+     * Obtiene el valor de la propiedad errorCode.
      * 
      * @return
      *     possible object is
@@ -195,7 +195,7 @@ public class Error {
     }
 
     /**
-     * Sets the value of the errorCode property.
+     * Define el valor de la propiedad errorCode.
      * 
      * @param value
      *     allowed object is
@@ -207,7 +207,7 @@ public class Error {
     }
 
     /**
-     * Gets the value of the severity property.
+     * Obtiene el valor de la propiedad severity.
      * 
      * @return
      *     possible object is
@@ -219,7 +219,7 @@ public class Error {
     }
 
     /**
-     * Sets the value of the severity property.
+     * Define el valor de la propiedad severity.
      * 
      * @param value
      *     allowed object is
@@ -231,7 +231,7 @@ public class Error {
     }
 
     /**
-     * Gets the value of the location property.
+     * Obtiene el valor de la propiedad location.
      * 
      * @return
      *     possible object is
@@ -243,7 +243,7 @@ public class Error {
     }
 
     /**
-     * Sets the value of the location property.
+     * Define el valor de la propiedad location.
      * 
      * @param value
      *     allowed object is

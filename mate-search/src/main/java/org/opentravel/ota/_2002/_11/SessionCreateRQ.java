@@ -10,9 +10,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Clase Java para anonymous complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -60,7 +60,7 @@ public class SessionCreateRQ {
     protected Boolean returnContextID;
 
     /**
-     * Gets the value of the pos property.
+     * Obtiene el valor de la propiedad pos.
      * 
      * @return
      *     possible object is
@@ -72,7 +72,7 @@ public class SessionCreateRQ {
     }
 
     /**
-     * Sets the value of the pos property.
+     * Define el valor de la propiedad pos.
      * 
      * @param value
      *     allowed object is
@@ -84,7 +84,7 @@ public class SessionCreateRQ {
     }
 
     /**
-     * Gets the value of the returnContextID property.
+     * Obtiene el valor de la propiedad returnContextID.
      * 
      * @return
      *     possible object is
@@ -96,7 +96,7 @@ public class SessionCreateRQ {
     }
 
     /**
-     * Sets the value of the returnContextID property.
+     * Define el valor de la propiedad returnContextID.
      * 
      * @param value
      *     allowed object is
@@ -109,9 +109,9 @@ public class SessionCreateRQ {
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * <p>Clase Java para anonymous complex type.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
      * 
      * <pre>
      * &lt;complexType&gt;
@@ -145,7 +145,7 @@ public class SessionCreateRQ {
         protected SessionCreateRQ.POS.Source source;
 
         /**
-         * Gets the value of the source property.
+         * Obtiene el valor de la propiedad source.
          * 
          * @return
          *     possible object is
@@ -157,7 +157,7 @@ public class SessionCreateRQ {
         }
 
         /**
-         * Sets the value of the source property.
+         * Define el valor de la propiedad source.
          * 
          * @param value
          *     allowed object is
@@ -170,9 +170,9 @@ public class SessionCreateRQ {
 
 
         /**
-         * <p>Java class for anonymous complex type.
+         * <p>Clase Java para anonymous complex type.
          * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
+         * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
          * 
          * <pre>
          * &lt;complexType&gt;
@@ -194,7 +194,7 @@ public class SessionCreateRQ {
             protected String pseudoCityCode;
 
             /**
-             * Gets the value of the pseudoCityCode property.
+             * Obtiene el valor de la propiedad pseudoCityCode.
              * 
              * @return
              *     possible object is
@@ -206,7 +206,7 @@ public class SessionCreateRQ {
             }
 
             /**
-             * Sets the value of the pseudoCityCode property.
+             * Define el valor de la propiedad pseudoCityCode.
              * 
              * @param value
              *     allowed object is

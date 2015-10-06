@@ -22,9 +22,9 @@ import org.w3c.dom.Element;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Clase Java para anonymous complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -66,7 +66,7 @@ public class MessageOrder {
     private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
     /**
-     * Gets the value of the sequenceNumber property.
+     * Obtiene el valor de la propiedad sequenceNumber.
      * 
      * @return
      *     possible object is
@@ -78,7 +78,7 @@ public class MessageOrder {
     }
 
     /**
-     * Sets the value of the sequenceNumber property.
+     * Define el valor de la propiedad sequenceNumber.
      * 
      * @param value
      *     allowed object is
@@ -107,8 +107,8 @@ public class MessageOrder {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Object }
      * {@link Element }
+     * {@link Object }
      * 
      * 
      */
@@ -120,7 +120,7 @@ public class MessageOrder {
     }
 
     /**
-     * Gets the value of the id property.
+     * Obtiene el valor de la propiedad id.
      * 
      * @return
      *     possible object is
@@ -132,7 +132,7 @@ public class MessageOrder {
     }
 
     /**
-     * Sets the value of the id property.
+     * Define el valor de la propiedad id.
      * 
      * @param value
      *     allowed object is
@@ -144,7 +144,7 @@ public class MessageOrder {
     }
 
     /**
-     * Gets the value of the version property.
+     * Obtiene el valor de la propiedad version.
      * 
      * @return
      *     possible object is
@@ -156,7 +156,7 @@ public class MessageOrder {
     }
 
     /**
-     * Sets the value of the version property.
+     * Define el valor de la propiedad version.
      * 
      * @param value
      *     allowed object is

@@ -22,9 +22,9 @@ import org.w3c.dom.Element;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Clase Java para anonymous complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -73,7 +73,7 @@ public class StatusResponse {
     private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
     /**
-     * Gets the value of the refToMessageId property.
+     * Obtiene el valor de la propiedad refToMessageId.
      * 
      * @return
      *     possible object is
@@ -85,7 +85,7 @@ public class StatusResponse {
     }
 
     /**
-     * Sets the value of the refToMessageId property.
+     * Define el valor de la propiedad refToMessageId.
      * 
      * @param value
      *     allowed object is
@@ -97,7 +97,7 @@ public class StatusResponse {
     }
 
     /**
-     * Gets the value of the timestamp property.
+     * Obtiene el valor de la propiedad timestamp.
      * 
      * @return
      *     possible object is
@@ -109,7 +109,7 @@ public class StatusResponse {
     }
 
     /**
-     * Sets the value of the timestamp property.
+     * Define el valor de la propiedad timestamp.
      * 
      * @param value
      *     allowed object is
@@ -138,8 +138,8 @@ public class StatusResponse {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Object }
      * {@link Element }
+     * {@link Object }
      * 
      * 
      */
@@ -151,7 +151,7 @@ public class StatusResponse {
     }
 
     /**
-     * Gets the value of the messageStatus property.
+     * Obtiene el valor de la propiedad messageStatus.
      * 
      * @return
      *     possible object is
@@ -163,7 +163,7 @@ public class StatusResponse {
     }
 
     /**
-     * Sets the value of the messageStatus property.
+     * Define el valor de la propiedad messageStatus.
      * 
      * @param value
      *     allowed object is
@@ -175,7 +175,7 @@ public class StatusResponse {
     }
 
     /**
-     * Gets the value of the id property.
+     * Obtiene el valor de la propiedad id.
      * 
      * @return
      *     possible object is
@@ -187,7 +187,7 @@ public class StatusResponse {
     }
 
     /**
-     * Sets the value of the id property.
+     * Define el valor de la propiedad id.
      * 
      * @param value
      *     allowed object is
@@ -199,7 +199,7 @@ public class StatusResponse {
     }
 
     /**
-     * Gets the value of the version property.
+     * Obtiene el valor de la propiedad version.
      * 
      * @return
      *     possible object is
@@ -211,7 +211,7 @@ public class StatusResponse {
     }
 
     /**
-     * Sets the value of the version property.
+     * Define el valor de la propiedad version.
      * 
      * @param value
      *     allowed object is

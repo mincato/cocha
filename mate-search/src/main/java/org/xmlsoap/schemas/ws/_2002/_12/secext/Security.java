@@ -11,9 +11,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Clase Java para anonymous complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -62,7 +62,7 @@ public class Security {
     protected String binarySecurityToken;
 
     /**
-     * Gets the value of the usernameToken property.
+     * Obtiene el valor de la propiedad usernameToken.
      * 
      * @return
      *     possible object is
@@ -74,7 +74,7 @@ public class Security {
     }
 
     /**
-     * Sets the value of the usernameToken property.
+     * Define el valor de la propiedad usernameToken.
      * 
      * @param value
      *     allowed object is
@@ -86,7 +86,7 @@ public class Security {
     }
 
     /**
-     * Gets the value of the sabreAth property.
+     * Obtiene el valor de la propiedad sabreAth.
      * 
      * @return
      *     possible object is
@@ -98,7 +98,7 @@ public class Security {
     }
 
     /**
-     * Sets the value of the sabreAth property.
+     * Define el valor de la propiedad sabreAth.
      * 
      * @param value
      *     allowed object is
@@ -110,7 +110,7 @@ public class Security {
     }
 
     /**
-     * Gets the value of the binarySecurityToken property.
+     * Obtiene el valor de la propiedad binarySecurityToken.
      * 
      * @return
      *     possible object is
@@ -122,7 +122,7 @@ public class Security {
     }
 
     /**
-     * Sets the value of the binarySecurityToken property.
+     * Define el valor de la propiedad binarySecurityToken.
      * 
      * @param value
      *     allowed object is
@@ -135,9 +135,9 @@ public class Security {
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * <p>Clase Java para anonymous complex type.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
      * 
      * <pre>
      * &lt;complexType&gt;
@@ -179,7 +179,7 @@ public class Security {
         protected String domain;
 
         /**
-         * Gets the value of the username property.
+         * Obtiene el valor de la propiedad username.
          * 
          * @return
          *     possible object is
@@ -191,7 +191,7 @@ public class Security {
         }
 
         /**
-         * Sets the value of the username property.
+         * Define el valor de la propiedad username.
          * 
          * @param value
          *     allowed object is
@@ -203,7 +203,7 @@ public class Security {
         }
 
         /**
-         * Gets the value of the password property.
+         * Obtiene el valor de la propiedad password.
          * 
          * @return
          *     possible object is
@@ -215,7 +215,7 @@ public class Security {
         }
 
         /**
-         * Sets the value of the password property.
+         * Define el valor de la propiedad password.
          * 
          * @param value
          *     allowed object is
@@ -256,7 +256,7 @@ public class Security {
         }
 
         /**
-         * Gets the value of the organization property.
+         * Obtiene el valor de la propiedad organization.
          * 
          * @return
          *     possible object is
@@ -268,7 +268,7 @@ public class Security {
         }
 
         /**
-         * Sets the value of the organization property.
+         * Define el valor de la propiedad organization.
          * 
          * @param value
          *     allowed object is
@@ -280,7 +280,7 @@ public class Security {
         }
 
         /**
-         * Gets the value of the domain property.
+         * Obtiene el valor de la propiedad domain.
          * 
          * @return
          *     possible object is
@@ -292,7 +292,7 @@ public class Security {
         }
 
         /**
-         * Sets the value of the domain property.
+         * Define el valor de la propiedad domain.
          * 
          * @param value
          *     allowed object is

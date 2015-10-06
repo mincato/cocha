@@ -14,9 +14,9 @@ import javax.xml.bind.annotation.XmlValue;
  * 			Codes and/or messages should be agreed upon by service users. 
  * 			Do not use for structured data, use parameters instead.
  * 
- * <p>Java class for Message.Condition complex type.
+ * <p>Clase Java para Message.Condition complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="Message.Condition"&gt;
@@ -54,7 +54,7 @@ public class MessageCondition {
     }
 
     /**
-     * Sets the value of the value property.
+     * Define el valor de la propiedad value.
      * 
      * @param value
      *     allowed object is
@@ -66,7 +66,7 @@ public class MessageCondition {
     }
 
     /**
-     * Gets the value of the code property.
+     * Obtiene el valor de la propiedad code.
      * 
      * @return
      *     possible object is
@@ -78,7 +78,7 @@ public class MessageCondition {
     }
 
     /**
-     * Sets the value of the code property.
+     * Define el valor de la propiedad code.
      * 
      * @param value
      *     allowed object is

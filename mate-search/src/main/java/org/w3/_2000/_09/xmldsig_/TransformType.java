@@ -16,9 +16,9 @@ import org.w3c.dom.Element;
 
 
 /**
- * <p>Java class for TransformType complex type.
+ * <p>Clase Java para TransformType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="TransformType"&gt;
@@ -68,9 +68,9 @@ public class TransformType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link Object }
      * {@link Element }
+     * {@link Object }
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
      * {@link String }
      * 
      * 
@@ -83,7 +83,7 @@ public class TransformType {
     }
 
     /**
-     * Gets the value of the algorithm property.
+     * Obtiene el valor de la propiedad algorithm.
      * 
      * @return
      *     possible object is
@@ -95,7 +95,7 @@ public class TransformType {
     }
 
     /**
-     * Sets the value of the algorithm property.
+     * Define el valor de la propiedad algorithm.
      * 
      * @param value
      *     allowed object is

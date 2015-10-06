@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for ResultSummary complex type.
+ * <p>Clase Java para ResultSummary complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="ResultSummary"&gt;
@@ -40,7 +40,7 @@ public class ResultSummary {
     protected ProblemSummary error;
 
     /**
-     * Gets the value of the success property.
+     * Obtiene el valor de la propiedad success.
      * 
      * @return
      *     possible object is
@@ -52,7 +52,7 @@ public class ResultSummary {
     }
 
     /**
-     * Sets the value of the success property.
+     * Define el valor de la propiedad success.
      * 
      * @param value
      *     allowed object is
@@ -64,7 +64,7 @@ public class ResultSummary {
     }
 
     /**
-     * Gets the value of the error property.
+     * Obtiene el valor de la propiedad error.
      * 
      * @return
      *     possible object is
@@ -76,7 +76,7 @@ public class ResultSummary {
     }
 
     /**
-     * Sets the value of the error property.
+     * Define el valor de la propiedad error.
      * 
      * @param value
      *     allowed object is

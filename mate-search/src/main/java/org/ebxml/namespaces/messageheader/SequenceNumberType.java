@@ -11,9 +11,9 @@ import javax.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for sequenceNumber.type complex type.
+ * <p>Clase Java para sequenceNumber.type complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="sequenceNumber.type"&gt;
@@ -40,7 +40,7 @@ public class SequenceNumberType {
     protected StatusType status;
 
     /**
-     * Gets the value of the value property.
+     * Obtiene el valor de la propiedad value.
      * 
      * @return
      *     possible object is
@@ -52,7 +52,7 @@ public class SequenceNumberType {
     }
 
     /**
-     * Sets the value of the value property.
+     * Define el valor de la propiedad value.
      * 
      * @param value
      *     allowed object is
@@ -64,7 +64,7 @@ public class SequenceNumberType {
     }
 
     /**
-     * Gets the value of the status property.
+     * Obtiene el valor de la propiedad status.
      * 
      * @return
      *     possible object is
@@ -80,7 +80,7 @@ public class SequenceNumberType {
     }
 
     /**
-     * Sets the value of the status property.
+     * Define el valor de la propiedad status.
      * 
      * @param value
      *     allowed object is

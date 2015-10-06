@@ -14,9 +14,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * Record for all systems (consumer, proxies and gateways, providers) to use to trace the message. 
  * 			The value is the common system name.
  * 
- * <p>Java class for TraceRecord complex type.
+ * <p>Clase Java para TraceRecord complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="TraceRecord"&gt;
@@ -66,7 +66,7 @@ public class TraceRecord {
     protected TraceRole role;
 
     /**
-     * Gets the value of the value property.
+     * Obtiene el valor de la propiedad value.
      * 
      * @return
      *     possible object is
@@ -78,7 +78,7 @@ public class TraceRecord {
     }
 
     /**
-     * Sets the value of the value property.
+     * Define el valor de la propiedad value.
      * 
      * @param value
      *     allowed object is
@@ -90,7 +90,7 @@ public class TraceRecord {
     }
 
     /**
-     * Gets the value of the key property.
+     * Obtiene el valor de la propiedad key.
      * 
      * @return
      *     possible object is
@@ -102,7 +102,7 @@ public class TraceRecord {
     }
 
     /**
-     * Sets the value of the key property.
+     * Define el valor de la propiedad key.
      * 
      * @param value
      *     allowed object is
@@ -114,7 +114,7 @@ public class TraceRecord {
     }
 
     /**
-     * Gets the value of the start property.
+     * Obtiene el valor de la propiedad start.
      * 
      * @return
      *     possible object is
@@ -126,7 +126,7 @@ public class TraceRecord {
     }
 
     /**
-     * Sets the value of the start property.
+     * Define el valor de la propiedad start.
      * 
      * @param value
      *     allowed object is
@@ -138,7 +138,7 @@ public class TraceRecord {
     }
 
     /**
-     * Gets the value of the end property.
+     * Obtiene el valor de la propiedad end.
      * 
      * @return
      *     possible object is
@@ -150,7 +150,7 @@ public class TraceRecord {
     }
 
     /**
-     * Sets the value of the end property.
+     * Define el valor de la propiedad end.
      * 
      * @param value
      *     allowed object is
@@ -162,7 +162,7 @@ public class TraceRecord {
     }
 
     /**
-     * Gets the value of the appInstance property.
+     * Obtiene el valor de la propiedad appInstance.
      * 
      * @return
      *     possible object is
@@ -174,7 +174,7 @@ public class TraceRecord {
     }
 
     /**
-     * Sets the value of the appInstance property.
+     * Define el valor de la propiedad appInstance.
      * 
      * @param value
      *     allowed object is
@@ -186,7 +186,7 @@ public class TraceRecord {
     }
 
     /**
-     * Gets the value of the cluster property.
+     * Obtiene el valor de la propiedad cluster.
      * 
      * @return
      *     possible object is
@@ -198,7 +198,7 @@ public class TraceRecord {
     }
 
     /**
-     * Sets the value of the cluster property.
+     * Define el valor de la propiedad cluster.
      * 
      * @param value
      *     allowed object is
@@ -210,7 +210,7 @@ public class TraceRecord {
     }
 
     /**
-     * Gets the value of the host property.
+     * Obtiene el valor de la propiedad host.
      * 
      * @return
      *     possible object is
@@ -222,7 +222,7 @@ public class TraceRecord {
     }
 
     /**
-     * Sets the value of the host property.
+     * Define el valor de la propiedad host.
      * 
      * @param value
      *     allowed object is
@@ -234,7 +234,7 @@ public class TraceRecord {
     }
 
     /**
-     * Gets the value of the targetURI property.
+     * Obtiene el valor de la propiedad targetURI.
      * 
      * @return
      *     possible object is
@@ -246,7 +246,7 @@ public class TraceRecord {
     }
 
     /**
-     * Sets the value of the targetURI property.
+     * Define el valor de la propiedad targetURI.
      * 
      * @param value
      *     allowed object is
@@ -258,7 +258,7 @@ public class TraceRecord {
     }
 
     /**
-     * Gets the value of the role property.
+     * Obtiene el valor de la propiedad role.
      * 
      * @return
      *     possible object is
@@ -270,7 +270,7 @@ public class TraceRecord {
     }
 
     /**
-     * Sets the value of the role property.
+     * Define el valor de la propiedad role.
      * 
      * @param value
      *     allowed object is

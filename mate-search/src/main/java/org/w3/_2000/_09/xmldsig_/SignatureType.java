@@ -15,9 +15,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>Java class for SignatureType complex type.
+ * <p>Clase Java para SignatureType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="SignatureType"&gt;
@@ -61,7 +61,7 @@ public class SignatureType {
     protected String id;
 
     /**
-     * Gets the value of the signedInfo property.
+     * Obtiene el valor de la propiedad signedInfo.
      * 
      * @return
      *     possible object is
@@ -73,7 +73,7 @@ public class SignatureType {
     }
 
     /**
-     * Sets the value of the signedInfo property.
+     * Define el valor de la propiedad signedInfo.
      * 
      * @param value
      *     allowed object is
@@ -85,7 +85,7 @@ public class SignatureType {
     }
 
     /**
-     * Gets the value of the signatureValue property.
+     * Obtiene el valor de la propiedad signatureValue.
      * 
      * @return
      *     possible object is
@@ -97,7 +97,7 @@ public class SignatureType {
     }
 
     /**
-     * Sets the value of the signatureValue property.
+     * Define el valor de la propiedad signatureValue.
      * 
      * @param value
      *     allowed object is
@@ -109,7 +109,7 @@ public class SignatureType {
     }
 
     /**
-     * Gets the value of the keyInfo property.
+     * Obtiene el valor de la propiedad keyInfo.
      * 
      * @return
      *     possible object is
@@ -121,7 +121,7 @@ public class SignatureType {
     }
 
     /**
-     * Sets the value of the keyInfo property.
+     * Define el valor de la propiedad keyInfo.
      * 
      * @param value
      *     allowed object is
@@ -162,7 +162,7 @@ public class SignatureType {
     }
 
     /**
-     * Gets the value of the id property.
+     * Obtiene el valor de la propiedad id.
      * 
      * @return
      *     possible object is
@@ -174,7 +174,7 @@ public class SignatureType {
     }
 
     /**
-     * Sets the value of the id property.
+     * Define el valor de la propiedad id.
      * 
      * @param value
      *     allowed object is

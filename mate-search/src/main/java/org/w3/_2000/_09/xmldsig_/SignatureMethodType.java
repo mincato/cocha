@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for SignatureMethodType complex type.
+ * <p>Clase Java para SignatureMethodType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="SignatureMethodType"&gt;
@@ -69,8 +69,8 @@ public class SignatureMethodType {
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Object }
-     * {@link String }
      * {@link JAXBElement }{@code <}{@link BigInteger }{@code >}
+     * {@link String }
      * 
      * 
      */
@@ -82,7 +82,7 @@ public class SignatureMethodType {
     }
 
     /**
-     * Gets the value of the algorithm property.
+     * Obtiene el valor de la propiedad algorithm.
      * 
      * @return
      *     possible object is
@@ -94,7 +94,7 @@ public class SignatureMethodType {
     }
 
     /**
-     * Sets the value of the algorithm property.
+     * Define el valor de la propiedad algorithm.
      * 
      * @param value
      *     allowed object is

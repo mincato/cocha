@@ -13,9 +13,9 @@ import javax.xml.bind.annotation.XmlType;
  * 				must declare they are a member of the STL_Payload substitution group. This type may be used when an empty payload is
  * 				needed for error handling.
  * 
- * <p>Java class for STL_Payload complex type.
+ * <p>Clase Java para STL_Payload complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="STL_Payload"&gt;
@@ -51,7 +51,7 @@ public class STLPayload {
     protected String version;
 
     /**
-     * Gets the value of the applicationResults property.
+     * Obtiene el valor de la propiedad applicationResults.
      * 
      * @return
      *     possible object is
@@ -63,7 +63,7 @@ public class STLPayload {
     }
 
     /**
-     * Sets the value of the applicationResults property.
+     * Define el valor de la propiedad applicationResults.
      * 
      * @param value
      *     allowed object is
@@ -75,7 +75,7 @@ public class STLPayload {
     }
 
     /**
-     * Gets the value of the version property.
+     * Obtiene el valor de la propiedad version.
      * 
      * @return
      *     possible object is
@@ -87,7 +87,7 @@ public class STLPayload {
     }
 
     /**
-     * Sets the value of the version property.
+     * Define el valor de la propiedad version.
      * 
      * @param value
      *     allowed object is

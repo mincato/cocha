@@ -22,9 +22,9 @@ import org.w3c.dom.Element;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Clase Java para anonymous complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -82,7 +82,7 @@ public class Acknowledgment {
     private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
     /**
-     * Gets the value of the timestamp property.
+     * Obtiene el valor de la propiedad timestamp.
      * 
      * @return
      *     possible object is
@@ -94,7 +94,7 @@ public class Acknowledgment {
     }
 
     /**
-     * Sets the value of the timestamp property.
+     * Define el valor de la propiedad timestamp.
      * 
      * @param value
      *     allowed object is
@@ -106,7 +106,7 @@ public class Acknowledgment {
     }
 
     /**
-     * Gets the value of the refToMessageId property.
+     * Obtiene el valor de la propiedad refToMessageId.
      * 
      * @return
      *     possible object is
@@ -118,7 +118,7 @@ public class Acknowledgment {
     }
 
     /**
-     * Sets the value of the refToMessageId property.
+     * Define el valor de la propiedad refToMessageId.
      * 
      * @param value
      *     allowed object is
@@ -130,7 +130,7 @@ public class Acknowledgment {
     }
 
     /**
-     * Gets the value of the from property.
+     * Obtiene el valor de la propiedad from.
      * 
      * @return
      *     possible object is
@@ -142,7 +142,7 @@ public class Acknowledgment {
     }
 
     /**
-     * Sets the value of the from property.
+     * Define el valor de la propiedad from.
      * 
      * @param value
      *     allowed object is
@@ -200,8 +200,8 @@ public class Acknowledgment {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Object }
      * {@link Element }
+     * {@link Object }
      * 
      * 
      */
@@ -213,7 +213,7 @@ public class Acknowledgment {
     }
 
     /**
-     * Gets the value of the actor property.
+     * Obtiene el valor de la propiedad actor.
      * 
      * @return
      *     possible object is
@@ -225,7 +225,7 @@ public class Acknowledgment {
     }
 
     /**
-     * Sets the value of the actor property.
+     * Define el valor de la propiedad actor.
      * 
      * @param value
      *     allowed object is
@@ -237,7 +237,7 @@ public class Acknowledgment {
     }
 
     /**
-     * Gets the value of the id property.
+     * Obtiene el valor de la propiedad id.
      * 
      * @return
      *     possible object is
@@ -249,7 +249,7 @@ public class Acknowledgment {
     }
 
     /**
-     * Sets the value of the id property.
+     * Define el valor de la propiedad id.
      * 
      * @param value
      *     allowed object is
@@ -261,7 +261,7 @@ public class Acknowledgment {
     }
 
     /**
-     * Gets the value of the version property.
+     * Obtiene el valor de la propiedad version.
      * 
      * @return
      *     possible object is
@@ -273,7 +273,7 @@ public class Acknowledgment {
     }
 
     /**
-     * Sets the value of the version property.
+     * Define el valor de la propiedad version.
      * 
      * @param value
      *     allowed object is

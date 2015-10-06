@@ -13,9 +13,9 @@ import com.sabre.services.stl.v01.ApplicationResults;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Clase Java para anonymous complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -783,7 +783,7 @@ public class OTAHotelAvailRS {
     protected String version;
 
     /**
-     * Gets the value of the applicationResults property.
+     * Obtiene el valor de la propiedad applicationResults.
      * 
      * @return
      *     possible object is
@@ -795,7 +795,7 @@ public class OTAHotelAvailRS {
     }
 
     /**
-     * Sets the value of the applicationResults property.
+     * Define el valor de la propiedad applicationResults.
      * 
      * @param value
      *     allowed object is
@@ -807,7 +807,7 @@ public class OTAHotelAvailRS {
     }
 
     /**
-     * Gets the value of the additionalAvail property.
+     * Obtiene el valor de la propiedad additionalAvail.
      * 
      * @return
      *     possible object is
@@ -819,7 +819,7 @@ public class OTAHotelAvailRS {
     }
 
     /**
-     * Sets the value of the additionalAvail property.
+     * Define el valor de la propiedad additionalAvail.
      * 
      * @param value
      *     allowed object is
@@ -831,7 +831,7 @@ public class OTAHotelAvailRS {
     }
 
     /**
-     * Gets the value of the availabilityOptions property.
+     * Obtiene el valor de la propiedad availabilityOptions.
      * 
      * @return
      *     possible object is
@@ -843,7 +843,7 @@ public class OTAHotelAvailRS {
     }
 
     /**
-     * Sets the value of the availabilityOptions property.
+     * Define el valor de la propiedad availabilityOptions.
      * 
      * @param value
      *     allowed object is
@@ -855,7 +855,7 @@ public class OTAHotelAvailRS {
     }
 
     /**
-     * Gets the value of the cityList property.
+     * Obtiene el valor de la propiedad cityList.
      * 
      * @return
      *     possible object is
@@ -867,7 +867,7 @@ public class OTAHotelAvailRS {
     }
 
     /**
-     * Sets the value of the cityList property.
+     * Define el valor de la propiedad cityList.
      * 
      * @param value
      *     allowed object is
@@ -879,7 +879,7 @@ public class OTAHotelAvailRS {
     }
 
     /**
-     * Gets the value of the version property.
+     * Obtiene el valor de la propiedad version.
      * 
      * @return
      *     possible object is
@@ -891,7 +891,7 @@ public class OTAHotelAvailRS {
     }
 
     /**
-     * Sets the value of the version property.
+     * Define el valor de la propiedad version.
      * 
      * @param value
      *     allowed object is
@@ -904,9 +904,9 @@ public class OTAHotelAvailRS {
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * <p>Clase Java para anonymous complex type.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
      * 
      * <pre>
      * &lt;complexType&gt;
@@ -928,7 +928,7 @@ public class OTAHotelAvailRS {
         protected Boolean ind;
 
         /**
-         * Gets the value of the ind property.
+         * Obtiene el valor de la propiedad ind.
          * 
          * @return
          *     possible object is
@@ -940,7 +940,7 @@ public class OTAHotelAvailRS {
         }
 
         /**
-         * Sets the value of the ind property.
+         * Define el valor de la propiedad ind.
          * 
          * @param value
          *     allowed object is
@@ -955,9 +955,9 @@ public class OTAHotelAvailRS {
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * <p>Clase Java para anonymous complex type.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
      * 
      * <pre>
      * &lt;complexType&gt;
@@ -1699,9 +1699,9 @@ public class OTAHotelAvailRS {
 
 
         /**
-         * <p>Java class for anonymous complex type.
+         * <p>Clase Java para anonymous complex type.
          * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
+         * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
          * 
          * <pre>
          * &lt;complexType&gt;
@@ -2405,7 +2405,7 @@ public class OTAHotelAvailRS {
             protected String rph;
 
             /**
-             * Gets the value of the basicPropertyInfo property.
+             * Obtiene el valor de la propiedad basicPropertyInfo.
              * 
              * @return
              *     possible object is
@@ -2417,7 +2417,7 @@ public class OTAHotelAvailRS {
             }
 
             /**
-             * Sets the value of the basicPropertyInfo property.
+             * Define el valor de la propiedad basicPropertyInfo.
              * 
              * @param value
              *     allowed object is
@@ -2429,7 +2429,7 @@ public class OTAHotelAvailRS {
             }
 
             /**
-             * Gets the value of the rph property.
+             * Obtiene el valor de la propiedad rph.
              * 
              * @return
              *     possible object is
@@ -2441,7 +2441,7 @@ public class OTAHotelAvailRS {
             }
 
             /**
-             * Sets the value of the rph property.
+             * Define el valor de la propiedad rph.
              * 
              * @param value
              *     allowed object is
@@ -2454,9 +2454,9 @@ public class OTAHotelAvailRS {
 
 
             /**
-             * <p>Java class for anonymous complex type.
+             * <p>Clase Java para anonymous complex type.
              * 
-             * <p>The following schema fragment specifies the expected content contained within this class.
+             * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
              * 
              * <pre>
              * &lt;complexType&gt;
@@ -3195,7 +3195,7 @@ public class OTAHotelAvailRS {
                 protected String longitude;
 
                 /**
-                 * Gets the value of the address property.
+                 * Obtiene el valor de la propiedad address.
                  * 
                  * @return
                  *     possible object is
@@ -3207,7 +3207,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Sets the value of the address property.
+                 * Define el valor de la propiedad address.
                  * 
                  * @param value
                  *     allowed object is
@@ -3219,7 +3219,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Gets the value of the contactNumbers property.
+                 * Obtiene el valor de la propiedad contactNumbers.
                  * 
                  * @return
                  *     possible object is
@@ -3231,7 +3231,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Sets the value of the contactNumbers property.
+                 * Define el valor de la propiedad contactNumbers.
                  * 
                  * @param value
                  *     allowed object is
@@ -3243,7 +3243,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Gets the value of the contractualRateCodeMatch property.
+                 * Obtiene el valor de la propiedad contractualRateCodeMatch.
                  * 
                  * @return
                  *     possible object is
@@ -3255,7 +3255,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Sets the value of the contractualRateCodeMatch property.
+                 * Define el valor de la propiedad contractualRateCodeMatch.
                  * 
                  * @param value
                  *     allowed object is
@@ -3267,7 +3267,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Gets the value of the directConnect property.
+                 * Obtiene el valor de la propiedad directConnect.
                  * 
                  * @return
                  *     possible object is
@@ -3279,7 +3279,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Sets the value of the directConnect property.
+                 * Define el valor de la propiedad directConnect.
                  * 
                  * @param value
                  *     allowed object is
@@ -3291,7 +3291,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Gets the value of the locationDescription property.
+                 * Obtiene el valor de la propiedad locationDescription.
                  * 
                  * @return
                  *     possible object is
@@ -3303,7 +3303,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Sets the value of the locationDescription property.
+                 * Define el valor de la propiedad locationDescription.
                  * 
                  * @param value
                  *     allowed object is
@@ -3315,7 +3315,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Gets the value of the negotiatedRateCodeMatch property.
+                 * Obtiene el valor de la propiedad negotiatedRateCodeMatch.
                  * 
                  * @return
                  *     possible object is
@@ -3327,7 +3327,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Sets the value of the negotiatedRateCodeMatch property.
+                 * Define el valor de la propiedad negotiatedRateCodeMatch.
                  * 
                  * @param value
                  *     allowed object is
@@ -3368,7 +3368,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Gets the value of the propertyOptionInfo property.
+                 * Obtiene el valor de la propiedad propertyOptionInfo.
                  * 
                  * @return
                  *     possible object is
@@ -3380,7 +3380,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Sets the value of the propertyOptionInfo property.
+                 * Define el valor de la propiedad propertyOptionInfo.
                  * 
                  * @param value
                  *     allowed object is
@@ -3392,7 +3392,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Gets the value of the rateRange property.
+                 * Obtiene el valor de la propiedad rateRange.
                  * 
                  * @return
                  *     possible object is
@@ -3404,7 +3404,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Sets the value of the rateRange property.
+                 * Define el valor de la propiedad rateRange.
                  * 
                  * @param value
                  *     allowed object is
@@ -3445,7 +3445,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Gets the value of the specialOffers property.
+                 * Obtiene el valor de la propiedad specialOffers.
                  * 
                  * @return
                  *     possible object is
@@ -3457,7 +3457,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Sets the value of the specialOffers property.
+                 * Define el valor de la propiedad specialOffers.
                  * 
                  * @param value
                  *     allowed object is
@@ -3469,7 +3469,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Gets the value of the areaID property.
+                 * Obtiene el valor de la propiedad areaID.
                  * 
                  * @return
                  *     possible object is
@@ -3481,7 +3481,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Sets the value of the areaID property.
+                 * Define el valor de la propiedad areaID.
                  * 
                  * @param value
                  *     allowed object is
@@ -3493,7 +3493,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Gets the value of the chainCode property.
+                 * Obtiene el valor de la propiedad chainCode.
                  * 
                  * @return
                  *     possible object is
@@ -3505,7 +3505,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Sets the value of the chainCode property.
+                 * Define el valor de la propiedad chainCode.
                  * 
                  * @param value
                  *     allowed object is
@@ -3517,7 +3517,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Gets the value of the distance property.
+                 * Obtiene el valor de la propiedad distance.
                  * 
                  * @return
                  *     possible object is
@@ -3529,7 +3529,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Sets the value of the distance property.
+                 * Define el valor de la propiedad distance.
                  * 
                  * @param value
                  *     allowed object is
@@ -3541,7 +3541,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Gets the value of the geoConfidenceLevel property.
+                 * Obtiene el valor de la propiedad geoConfidenceLevel.
                  * 
                  * @return
                  *     possible object is
@@ -3553,7 +3553,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Sets the value of the geoConfidenceLevel property.
+                 * Define el valor de la propiedad geoConfidenceLevel.
                  * 
                  * @param value
                  *     allowed object is
@@ -3565,7 +3565,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Gets the value of the hotelCode property.
+                 * Obtiene el valor de la propiedad hotelCode.
                  * 
                  * @return
                  *     possible object is
@@ -3577,7 +3577,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Sets the value of the hotelCode property.
+                 * Define el valor de la propiedad hotelCode.
                  * 
                  * @param value
                  *     allowed object is
@@ -3589,7 +3589,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Gets the value of the hotelCityCode property.
+                 * Obtiene el valor de la propiedad hotelCityCode.
                  * 
                  * @return
                  *     possible object is
@@ -3601,7 +3601,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Sets the value of the hotelCityCode property.
+                 * Define el valor de la propiedad hotelCityCode.
                  * 
                  * @param value
                  *     allowed object is
@@ -3613,7 +3613,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Gets the value of the hotelName property.
+                 * Obtiene el valor de la propiedad hotelName.
                  * 
                  * @return
                  *     possible object is
@@ -3625,7 +3625,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Sets the value of the hotelName property.
+                 * Define el valor de la propiedad hotelName.
                  * 
                  * @param value
                  *     allowed object is
@@ -3637,7 +3637,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Gets the value of the latitude property.
+                 * Obtiene el valor de la propiedad latitude.
                  * 
                  * @return
                  *     possible object is
@@ -3649,7 +3649,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Sets the value of the latitude property.
+                 * Define el valor de la propiedad latitude.
                  * 
                  * @param value
                  *     allowed object is
@@ -3661,7 +3661,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Gets the value of the longitude property.
+                 * Obtiene el valor de la propiedad longitude.
                  * 
                  * @return
                  *     possible object is
@@ -3673,7 +3673,7 @@ public class OTAHotelAvailRS {
                 }
 
                 /**
-                 * Sets the value of the longitude property.
+                 * Define el valor de la propiedad longitude.
                  * 
                  * @param value
                  *     allowed object is
@@ -3686,9 +3686,9 @@ public class OTAHotelAvailRS {
 
 
                 /**
-                 * <p>Java class for anonymous complex type.
+                 * <p>Clase Java para anonymous complex type.
                  * 
-                 * <p>The following schema fragment specifies the expected content contained within this class.
+                 * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                  * 
                  * <pre>
                  * &lt;complexType&gt;
@@ -3746,9 +3746,9 @@ public class OTAHotelAvailRS {
 
 
                 /**
-                 * <p>Java class for anonymous complex type.
+                 * <p>Clase Java para anonymous complex type.
                  * 
-                 * <p>The following schema fragment specifies the expected content contained within this class.
+                 * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                  * 
                  * <pre>
                  * &lt;complexType&gt;
@@ -3783,7 +3783,7 @@ public class OTAHotelAvailRS {
                     protected OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.ContactNumbers.ContactNumber contactNumber;
 
                     /**
-                     * Gets the value of the contactNumber property.
+                     * Obtiene el valor de la propiedad contactNumber.
                      * 
                      * @return
                      *     possible object is
@@ -3795,7 +3795,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the contactNumber property.
+                     * Define el valor de la propiedad contactNumber.
                      * 
                      * @param value
                      *     allowed object is
@@ -3808,9 +3808,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -3835,7 +3835,7 @@ public class OTAHotelAvailRS {
                         protected String phone;
 
                         /**
-                         * Gets the value of the fax property.
+                         * Obtiene el valor de la propiedad fax.
                          * 
                          * @return
                          *     possible object is
@@ -3847,7 +3847,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the fax property.
+                         * Define el valor de la propiedad fax.
                          * 
                          * @param value
                          *     allowed object is
@@ -3859,7 +3859,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Gets the value of the phone property.
+                         * Obtiene el valor de la propiedad phone.
                          * 
                          * @return
                          *     possible object is
@@ -3871,7 +3871,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the phone property.
+                         * Define el valor de la propiedad phone.
                          * 
                          * @param value
                          *     allowed object is
@@ -3888,9 +3888,9 @@ public class OTAHotelAvailRS {
 
 
                 /**
-                 * <p>Java class for anonymous complex type.
+                 * <p>Clase Java para anonymous complex type.
                  * 
-                 * <p>The following schema fragment specifies the expected content contained within this class.
+                 * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                  * 
                  * <pre>
                  * &lt;complexType&gt;
@@ -3972,7 +3972,7 @@ public class OTAHotelAvailRS {
                     protected OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.UnAvail unAvail;
 
                     /**
-                     * Gets the value of the altAvail property.
+                     * Obtiene el valor de la propiedad altAvail.
                      * 
                      * @return
                      *     possible object is
@@ -3984,7 +3984,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the altAvail property.
+                     * Define el valor de la propiedad altAvail.
                      * 
                      * @param value
                      *     allowed object is
@@ -3996,7 +3996,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the dcAvailParticipant property.
+                     * Obtiene el valor de la propiedad dcAvailParticipant.
                      * 
                      * @return
                      *     possible object is
@@ -4008,7 +4008,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the dcAvailParticipant property.
+                     * Define el valor de la propiedad dcAvailParticipant.
                      * 
                      * @param value
                      *     allowed object is
@@ -4020,7 +4020,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the dcSellParticipant property.
+                     * Obtiene el valor de la propiedad dcSellParticipant.
                      * 
                      * @return
                      *     possible object is
@@ -4032,7 +4032,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the dcSellParticipant property.
+                     * Define el valor de la propiedad dcSellParticipant.
                      * 
                      * @param value
                      *     allowed object is
@@ -4044,7 +4044,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the ratesExceedMax property.
+                     * Obtiene el valor de la propiedad ratesExceedMax.
                      * 
                      * @return
                      *     possible object is
@@ -4056,7 +4056,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the ratesExceedMax property.
+                     * Define el valor de la propiedad ratesExceedMax.
                      * 
                      * @param value
                      *     allowed object is
@@ -4068,7 +4068,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the unAvail property.
+                     * Obtiene el valor de la propiedad unAvail.
                      * 
                      * @return
                      *     possible object is
@@ -4080,7 +4080,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the unAvail property.
+                     * Define el valor de la propiedad unAvail.
                      * 
                      * @param value
                      *     allowed object is
@@ -4093,9 +4093,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -4117,7 +4117,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -4129,7 +4129,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -4144,9 +4144,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -4168,7 +4168,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -4180,7 +4180,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -4195,9 +4195,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -4219,7 +4219,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -4231,7 +4231,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -4246,9 +4246,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -4270,7 +4270,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -4282,7 +4282,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -4297,9 +4297,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -4321,7 +4321,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -4333,7 +4333,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -4350,9 +4350,9 @@ public class OTAHotelAvailRS {
 
 
                 /**
-                 * <p>Java class for anonymous complex type.
+                 * <p>Clase Java para anonymous complex type.
                  * 
-                 * <p>The following schema fragment specifies the expected content contained within this class.
+                 * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                  * 
                  * <pre>
                  * &lt;complexType&gt;
@@ -4381,7 +4381,7 @@ public class OTAHotelAvailRS {
                     protected String code;
 
                     /**
-                     * Gets the value of the text property.
+                     * Obtiene el valor de la propiedad text.
                      * 
                      * @return
                      *     possible object is
@@ -4393,7 +4393,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the text property.
+                     * Define el valor de la propiedad text.
                      * 
                      * @param value
                      *     allowed object is
@@ -4405,7 +4405,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the code property.
+                     * Obtiene el valor de la propiedad code.
                      * 
                      * @return
                      *     possible object is
@@ -4417,7 +4417,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the code property.
+                     * Define el valor de la propiedad code.
                      * 
                      * @param value
                      *     allowed object is
@@ -4432,9 +4432,9 @@ public class OTAHotelAvailRS {
 
 
                 /**
-                 * <p>Java class for anonymous complex type.
+                 * <p>Clase Java para anonymous complex type.
                  * 
-                 * <p>The following schema fragment specifies the expected content contained within this class.
+                 * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                  * 
                  * <pre>
                  * &lt;complexType&gt;
@@ -4463,7 +4463,7 @@ public class OTAHotelAvailRS {
                     protected String rating;
 
                     /**
-                     * Gets the value of the text property.
+                     * Obtiene el valor de la propiedad text.
                      * 
                      * @return
                      *     possible object is
@@ -4475,7 +4475,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the text property.
+                     * Define el valor de la propiedad text.
                      * 
                      * @param value
                      *     allowed object is
@@ -4487,7 +4487,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the rating property.
+                     * Obtiene el valor de la propiedad rating.
                      * 
                      * @return
                      *     possible object is
@@ -4499,7 +4499,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the rating property.
+                     * Define el valor de la propiedad rating.
                      * 
                      * @param value
                      *     allowed object is
@@ -4514,9 +4514,9 @@ public class OTAHotelAvailRS {
 
 
                 /**
-                 * <p>Java class for anonymous complex type.
+                 * <p>Clase Java para anonymous complex type.
                  * 
-                 * <p>The following schema fragment specifies the expected content contained within this class.
+                 * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                  * 
                  * <pre>
                  * &lt;complexType&gt;
@@ -5174,7 +5174,7 @@ public class OTAHotelAvailRS {
                     protected OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Wheelchair wheelchair;
 
                     /**
-                     * Gets the value of the adaAccessible property.
+                     * Obtiene el valor de la propiedad adaAccessible.
                      * 
                      * @return
                      *     possible object is
@@ -5186,7 +5186,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the adaAccessible property.
+                     * Define el valor de la propiedad adaAccessible.
                      * 
                      * @param value
                      *     allowed object is
@@ -5198,7 +5198,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the adultsOnly property.
+                     * Obtiene el valor de la propiedad adultsOnly.
                      * 
                      * @return
                      *     possible object is
@@ -5210,7 +5210,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the adultsOnly property.
+                     * Define el valor de la propiedad adultsOnly.
                      * 
                      * @param value
                      *     allowed object is
@@ -5222,7 +5222,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the beachFront property.
+                     * Obtiene el valor de la propiedad beachFront.
                      * 
                      * @return
                      *     possible object is
@@ -5234,7 +5234,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the beachFront property.
+                     * Define el valor de la propiedad beachFront.
                      * 
                      * @param value
                      *     allowed object is
@@ -5246,7 +5246,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the breakfast property.
+                     * Obtiene el valor de la propiedad breakfast.
                      * 
                      * @return
                      *     possible object is
@@ -5258,7 +5258,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the breakfast property.
+                     * Define el valor de la propiedad breakfast.
                      * 
                      * @param value
                      *     allowed object is
@@ -5270,7 +5270,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the businessCenter property.
+                     * Obtiene el valor de la propiedad businessCenter.
                      * 
                      * @return
                      *     possible object is
@@ -5282,7 +5282,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the businessCenter property.
+                     * Define el valor de la propiedad businessCenter.
                      * 
                      * @param value
                      *     allowed object is
@@ -5294,7 +5294,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the businessReady property.
+                     * Obtiene el valor de la propiedad businessReady.
                      * 
                      * @return
                      *     possible object is
@@ -5306,7 +5306,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the businessReady property.
+                     * Define el valor de la propiedad businessReady.
                      * 
                      * @param value
                      *     allowed object is
@@ -5318,7 +5318,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the conventions property.
+                     * Obtiene el valor de la propiedad conventions.
                      * 
                      * @return
                      *     possible object is
@@ -5330,7 +5330,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the conventions property.
+                     * Define el valor de la propiedad conventions.
                      * 
                      * @param value
                      *     allowed object is
@@ -5342,7 +5342,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the dataport property.
+                     * Obtiene el valor de la propiedad dataport.
                      * 
                      * @return
                      *     possible object is
@@ -5354,7 +5354,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the dataport property.
+                     * Define el valor de la propiedad dataport.
                      * 
                      * @param value
                      *     allowed object is
@@ -5366,7 +5366,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the dining property.
+                     * Obtiene el valor de la propiedad dining.
                      * 
                      * @return
                      *     possible object is
@@ -5378,7 +5378,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the dining property.
+                     * Define el valor de la propiedad dining.
                      * 
                      * @param value
                      *     allowed object is
@@ -5390,7 +5390,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the dryClean property.
+                     * Obtiene el valor de la propiedad dryClean.
                      * 
                      * @return
                      *     possible object is
@@ -5402,7 +5402,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the dryClean property.
+                     * Define el valor de la propiedad dryClean.
                      * 
                      * @param value
                      *     allowed object is
@@ -5414,7 +5414,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the ecoCertified property.
+                     * Obtiene el valor de la propiedad ecoCertified.
                      * 
                      * @return
                      *     possible object is
@@ -5426,7 +5426,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the ecoCertified property.
+                     * Define el valor de la propiedad ecoCertified.
                      * 
                      * @param value
                      *     allowed object is
@@ -5438,7 +5438,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the executiveFloors property.
+                     * Obtiene el valor de la propiedad executiveFloors.
                      * 
                      * @return
                      *     possible object is
@@ -5450,7 +5450,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the executiveFloors property.
+                     * Define el valor de la propiedad executiveFloors.
                      * 
                      * @param value
                      *     allowed object is
@@ -5462,7 +5462,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the fitnessCenter property.
+                     * Obtiene el valor de la propiedad fitnessCenter.
                      * 
                      * @return
                      *     possible object is
@@ -5474,7 +5474,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the fitnessCenter property.
+                     * Define el valor de la propiedad fitnessCenter.
                      * 
                      * @param value
                      *     allowed object is
@@ -5486,7 +5486,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the freeLocalCalls property.
+                     * Obtiene el valor de la propiedad freeLocalCalls.
                      * 
                      * @return
                      *     possible object is
@@ -5498,7 +5498,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the freeLocalCalls property.
+                     * Define el valor de la propiedad freeLocalCalls.
                      * 
                      * @param value
                      *     allowed object is
@@ -5510,7 +5510,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the freeParking property.
+                     * Obtiene el valor de la propiedad freeParking.
                      * 
                      * @return
                      *     possible object is
@@ -5522,7 +5522,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the freeParking property.
+                     * Define el valor de la propiedad freeParking.
                      * 
                      * @param value
                      *     allowed object is
@@ -5534,7 +5534,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the freeShuttle property.
+                     * Obtiene el valor de la propiedad freeShuttle.
                      * 
                      * @return
                      *     possible object is
@@ -5546,7 +5546,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the freeShuttle property.
+                     * Define el valor de la propiedad freeShuttle.
                      * 
                      * @param value
                      *     allowed object is
@@ -5558,7 +5558,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the freeWifiInMeetingRooms property.
+                     * Obtiene el valor de la propiedad freeWifiInMeetingRooms.
                      * 
                      * @return
                      *     possible object is
@@ -5570,7 +5570,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the freeWifiInMeetingRooms property.
+                     * Define el valor de la propiedad freeWifiInMeetingRooms.
                      * 
                      * @param value
                      *     allowed object is
@@ -5582,7 +5582,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the freeWifiInPublicSpaces property.
+                     * Obtiene el valor de la propiedad freeWifiInPublicSpaces.
                      * 
                      * @return
                      *     possible object is
@@ -5594,7 +5594,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the freeWifiInPublicSpaces property.
+                     * Define el valor de la propiedad freeWifiInPublicSpaces.
                      * 
                      * @param value
                      *     allowed object is
@@ -5606,7 +5606,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the freeWifiInRooms property.
+                     * Obtiene el valor de la propiedad freeWifiInRooms.
                      * 
                      * @return
                      *     possible object is
@@ -5618,7 +5618,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the freeWifiInRooms property.
+                     * Define el valor de la propiedad freeWifiInRooms.
                      * 
                      * @param value
                      *     allowed object is
@@ -5630,7 +5630,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the fullServiceSpa property.
+                     * Obtiene el valor de la propiedad fullServiceSpa.
                      * 
                      * @return
                      *     possible object is
@@ -5642,7 +5642,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the fullServiceSpa property.
+                     * Define el valor de la propiedad fullServiceSpa.
                      * 
                      * @param value
                      *     allowed object is
@@ -5654,7 +5654,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the gameFacilities property.
+                     * Obtiene el valor de la propiedad gameFacilities.
                      * 
                      * @return
                      *     possible object is
@@ -5666,7 +5666,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the gameFacilities property.
+                     * Define el valor de la propiedad gameFacilities.
                      * 
                      * @param value
                      *     allowed object is
@@ -5678,7 +5678,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the golf property.
+                     * Obtiene el valor de la propiedad golf.
                      * 
                      * @return
                      *     possible object is
@@ -5690,7 +5690,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the golf property.
+                     * Define el valor de la propiedad golf.
                      * 
                      * @param value
                      *     allowed object is
@@ -5702,7 +5702,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the highSpeedInternet property.
+                     * Obtiene el valor de la propiedad highSpeedInternet.
                      * 
                      * @return
                      *     possible object is
@@ -5714,7 +5714,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the highSpeedInternet property.
+                     * Define el valor de la propiedad highSpeedInternet.
                      * 
                      * @param value
                      *     allowed object is
@@ -5726,7 +5726,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the hypoallergenicRooms property.
+                     * Obtiene el valor de la propiedad hypoallergenicRooms.
                      * 
                      * @return
                      *     possible object is
@@ -5738,7 +5738,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the hypoallergenicRooms property.
+                     * Define el valor de la propiedad hypoallergenicRooms.
                      * 
                      * @param value
                      *     allowed object is
@@ -5750,7 +5750,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the indoorPool property.
+                     * Obtiene el valor de la propiedad indoorPool.
                      * 
                      * @return
                      *     possible object is
@@ -5762,7 +5762,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the indoorPool property.
+                     * Define el valor de la propiedad indoorPool.
                      * 
                      * @param value
                      *     allowed object is
@@ -5774,7 +5774,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the inRoomCoffeeTea property.
+                     * Obtiene el valor de la propiedad inRoomCoffeeTea.
                      * 
                      * @return
                      *     possible object is
@@ -5786,7 +5786,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the inRoomCoffeeTea property.
+                     * Define el valor de la propiedad inRoomCoffeeTea.
                      * 
                      * @param value
                      *     allowed object is
@@ -5798,7 +5798,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the inRoomMiniBar property.
+                     * Obtiene el valor de la propiedad inRoomMiniBar.
                      * 
                      * @return
                      *     possible object is
@@ -5810,7 +5810,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the inRoomMiniBar property.
+                     * Define el valor de la propiedad inRoomMiniBar.
                      * 
                      * @param value
                      *     allowed object is
@@ -5822,7 +5822,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the inRoomRefrigerator property.
+                     * Obtiene el valor de la propiedad inRoomRefrigerator.
                      * 
                      * @return
                      *     possible object is
@@ -5834,7 +5834,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the inRoomRefrigerator property.
+                     * Define el valor de la propiedad inRoomRefrigerator.
                      * 
                      * @param value
                      *     allowed object is
@@ -5846,7 +5846,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the inRoomSafe property.
+                     * Obtiene el valor de la propiedad inRoomSafe.
                      * 
                      * @return
                      *     possible object is
@@ -5858,7 +5858,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the inRoomSafe property.
+                     * Define el valor de la propiedad inRoomSafe.
                      * 
                      * @param value
                      *     allowed object is
@@ -5870,7 +5870,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the interiorDoorways property.
+                     * Obtiene el valor de la propiedad interiorDoorways.
                      * 
                      * @return
                      *     possible object is
@@ -5882,7 +5882,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the interiorDoorways property.
+                     * Define el valor de la propiedad interiorDoorways.
                      * 
                      * @param value
                      *     allowed object is
@@ -5894,7 +5894,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the jacuzzi property.
+                     * Obtiene el valor de la propiedad jacuzzi.
                      * 
                      * @return
                      *     possible object is
@@ -5906,7 +5906,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the jacuzzi property.
+                     * Define el valor de la propiedad jacuzzi.
                      * 
                      * @param value
                      *     allowed object is
@@ -5918,7 +5918,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the kidsFacilities property.
+                     * Obtiene el valor de la propiedad kidsFacilities.
                      * 
                      * @return
                      *     possible object is
@@ -5930,7 +5930,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the kidsFacilities property.
+                     * Define el valor de la propiedad kidsFacilities.
                      * 
                      * @param value
                      *     allowed object is
@@ -5942,7 +5942,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the kitchenFacilities property.
+                     * Obtiene el valor de la propiedad kitchenFacilities.
                      * 
                      * @return
                      *     possible object is
@@ -5954,7 +5954,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the kitchenFacilities property.
+                     * Define el valor de la propiedad kitchenFacilities.
                      * 
                      * @param value
                      *     allowed object is
@@ -5966,7 +5966,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the mealService property.
+                     * Obtiene el valor de la propiedad mealService.
                      * 
                      * @return
                      *     possible object is
@@ -5978,7 +5978,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the mealService property.
+                     * Define el valor de la propiedad mealService.
                      * 
                      * @param value
                      *     allowed object is
@@ -5990,7 +5990,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the meetingFacilities property.
+                     * Obtiene el valor de la propiedad meetingFacilities.
                      * 
                      * @return
                      *     possible object is
@@ -6002,7 +6002,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the meetingFacilities property.
+                     * Define el valor de la propiedad meetingFacilities.
                      * 
                      * @param value
                      *     allowed object is
@@ -6014,7 +6014,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the noAdultTV property.
+                     * Obtiene el valor de la propiedad noAdultTV.
                      * 
                      * @return
                      *     possible object is
@@ -6026,7 +6026,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the noAdultTV property.
+                     * Define el valor de la propiedad noAdultTV.
                      * 
                      * @param value
                      *     allowed object is
@@ -6038,7 +6038,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the nonSmoking property.
+                     * Obtiene el valor de la propiedad nonSmoking.
                      * 
                      * @return
                      *     possible object is
@@ -6050,7 +6050,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the nonSmoking property.
+                     * Define el valor de la propiedad nonSmoking.
                      * 
                      * @param value
                      *     allowed object is
@@ -6062,7 +6062,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the outdoorPool property.
+                     * Obtiene el valor de la propiedad outdoorPool.
                      * 
                      * @return
                      *     possible object is
@@ -6074,7 +6074,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the outdoorPool property.
+                     * Define el valor de la propiedad outdoorPool.
                      * 
                      * @param value
                      *     allowed object is
@@ -6086,7 +6086,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the pets property.
+                     * Obtiene el valor de la propiedad pets.
                      * 
                      * @return
                      *     possible object is
@@ -6098,7 +6098,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the pets property.
+                     * Define el valor de la propiedad pets.
                      * 
                      * @param value
                      *     allowed object is
@@ -6110,7 +6110,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the pool property.
+                     * Obtiene el valor de la propiedad pool.
                      * 
                      * @return
                      *     possible object is
@@ -6122,7 +6122,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the pool property.
+                     * Define el valor de la propiedad pool.
                      * 
                      * @param value
                      *     allowed object is
@@ -6134,7 +6134,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the publicTransportationAdjacent property.
+                     * Obtiene el valor de la propiedad publicTransportationAdjacent.
                      * 
                      * @return
                      *     possible object is
@@ -6146,7 +6146,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the publicTransportationAdjacent property.
+                     * Define el valor de la propiedad publicTransportationAdjacent.
                      * 
                      * @param value
                      *     allowed object is
@@ -6158,7 +6158,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the rateAssured property.
+                     * Obtiene el valor de la propiedad rateAssured.
                      * 
                      * @return
                      *     possible object is
@@ -6170,7 +6170,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the rateAssured property.
+                     * Define el valor de la propiedad rateAssured.
                      * 
                      * @param value
                      *     allowed object is
@@ -6182,7 +6182,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the recreation property.
+                     * Obtiene el valor de la propiedad recreation.
                      * 
                      * @return
                      *     possible object is
@@ -6194,7 +6194,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the recreation property.
+                     * Define el valor de la propiedad recreation.
                      * 
                      * @param value
                      *     allowed object is
@@ -6206,7 +6206,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the restrictedRoomAccess property.
+                     * Obtiene el valor de la propiedad restrictedRoomAccess.
                      * 
                      * @return
                      *     possible object is
@@ -6218,7 +6218,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the restrictedRoomAccess property.
+                     * Define el valor de la propiedad restrictedRoomAccess.
                      * 
                      * @param value
                      *     allowed object is
@@ -6230,7 +6230,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the roomService property.
+                     * Obtiene el valor de la propiedad roomService.
                      * 
                      * @return
                      *     possible object is
@@ -6242,7 +6242,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the roomService property.
+                     * Define el valor de la propiedad roomService.
                      * 
                      * @param value
                      *     allowed object is
@@ -6254,7 +6254,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the roomService24Hours property.
+                     * Obtiene el valor de la propiedad roomService24Hours.
                      * 
                      * @return
                      *     possible object is
@@ -6266,7 +6266,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the roomService24Hours property.
+                     * Define el valor de la propiedad roomService24Hours.
                      * 
                      * @param value
                      *     allowed object is
@@ -6278,7 +6278,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the roomsWithBalcony property.
+                     * Obtiene el valor de la propiedad roomsWithBalcony.
                      * 
                      * @return
                      *     possible object is
@@ -6290,7 +6290,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the roomsWithBalcony property.
+                     * Define el valor de la propiedad roomsWithBalcony.
                      * 
                      * @param value
                      *     allowed object is
@@ -6302,7 +6302,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the skiInOutProperty property.
+                     * Obtiene el valor de la propiedad skiInOutProperty.
                      * 
                      * @return
                      *     possible object is
@@ -6314,7 +6314,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the skiInOutProperty property.
+                     * Define el valor de la propiedad skiInOutProperty.
                      * 
                      * @param value
                      *     allowed object is
@@ -6326,7 +6326,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the smokeFree property.
+                     * Obtiene el valor de la propiedad smokeFree.
                      * 
                      * @return
                      *     possible object is
@@ -6338,7 +6338,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the smokeFree property.
+                     * Define el valor de la propiedad smokeFree.
                      * 
                      * @param value
                      *     allowed object is
@@ -6350,7 +6350,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the smokingRoomsAvail property.
+                     * Obtiene el valor de la propiedad smokingRoomsAvail.
                      * 
                      * @return
                      *     possible object is
@@ -6362,7 +6362,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the smokingRoomsAvail property.
+                     * Define el valor de la propiedad smokingRoomsAvail.
                      * 
                      * @param value
                      *     allowed object is
@@ -6374,7 +6374,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the tennis property.
+                     * Obtiene el valor de la propiedad tennis.
                      * 
                      * @return
                      *     possible object is
@@ -6386,7 +6386,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the tennis property.
+                     * Define el valor de la propiedad tennis.
                      * 
                      * @param value
                      *     allowed object is
@@ -6398,7 +6398,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the waterPurificationSystem property.
+                     * Obtiene el valor de la propiedad waterPurificationSystem.
                      * 
                      * @return
                      *     possible object is
@@ -6410,7 +6410,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the waterPurificationSystem property.
+                     * Define el valor de la propiedad waterPurificationSystem.
                      * 
                      * @param value
                      *     allowed object is
@@ -6422,7 +6422,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the wheelchair property.
+                     * Obtiene el valor de la propiedad wheelchair.
                      * 
                      * @return
                      *     possible object is
@@ -6434,7 +6434,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the wheelchair property.
+                     * Define el valor de la propiedad wheelchair.
                      * 
                      * @param value
                      *     allowed object is
@@ -6447,9 +6447,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -6471,7 +6471,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -6483,7 +6483,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -6498,9 +6498,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -6522,7 +6522,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -6534,7 +6534,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -6549,9 +6549,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -6573,7 +6573,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -6585,7 +6585,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -6600,9 +6600,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -6624,7 +6624,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -6636,7 +6636,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -6651,9 +6651,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -6675,7 +6675,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -6687,7 +6687,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -6702,9 +6702,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -6726,7 +6726,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -6738,7 +6738,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -6753,9 +6753,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -6777,7 +6777,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -6789,7 +6789,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -6804,9 +6804,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -6828,7 +6828,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -6840,7 +6840,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -6855,9 +6855,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -6879,7 +6879,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -6891,7 +6891,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -6906,9 +6906,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -6930,7 +6930,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -6942,7 +6942,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -6957,9 +6957,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -6981,7 +6981,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -6993,7 +6993,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -7008,9 +7008,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7032,7 +7032,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -7044,7 +7044,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -7059,9 +7059,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7083,7 +7083,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -7095,7 +7095,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -7110,9 +7110,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7134,7 +7134,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -7146,7 +7146,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -7161,9 +7161,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7185,7 +7185,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -7197,7 +7197,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -7212,9 +7212,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7236,7 +7236,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -7248,7 +7248,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -7263,9 +7263,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7287,7 +7287,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -7299,7 +7299,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -7314,9 +7314,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7338,7 +7338,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -7350,7 +7350,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -7365,9 +7365,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7389,7 +7389,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -7401,7 +7401,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -7416,9 +7416,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7440,7 +7440,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -7452,7 +7452,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -7467,9 +7467,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7491,7 +7491,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -7503,7 +7503,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -7518,9 +7518,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7542,7 +7542,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -7554,7 +7554,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -7569,9 +7569,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7593,7 +7593,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -7605,7 +7605,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -7620,9 +7620,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7644,7 +7644,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -7656,7 +7656,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -7671,9 +7671,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7695,7 +7695,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -7707,7 +7707,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -7722,9 +7722,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7746,7 +7746,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -7758,7 +7758,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -7773,9 +7773,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7797,7 +7797,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -7809,7 +7809,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -7824,9 +7824,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7848,7 +7848,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -7860,7 +7860,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -7875,9 +7875,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7899,7 +7899,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -7911,7 +7911,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -7926,9 +7926,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -7950,7 +7950,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -7962,7 +7962,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -7977,9 +7977,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8001,7 +8001,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -8013,7 +8013,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -8028,9 +8028,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8052,7 +8052,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -8064,7 +8064,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -8079,9 +8079,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8103,7 +8103,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -8115,7 +8115,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -8130,9 +8130,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8154,7 +8154,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -8166,7 +8166,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -8181,9 +8181,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8205,7 +8205,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -8217,7 +8217,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -8232,9 +8232,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8256,7 +8256,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -8268,7 +8268,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -8283,9 +8283,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8307,7 +8307,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -8319,7 +8319,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -8334,9 +8334,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8358,7 +8358,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -8370,7 +8370,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -8385,9 +8385,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8409,7 +8409,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -8421,7 +8421,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -8436,9 +8436,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8460,7 +8460,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -8472,7 +8472,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -8487,9 +8487,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8511,7 +8511,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -8523,7 +8523,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -8538,9 +8538,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8562,7 +8562,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -8574,7 +8574,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -8589,9 +8589,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8613,7 +8613,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -8625,7 +8625,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -8640,9 +8640,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8664,7 +8664,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -8676,7 +8676,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -8691,9 +8691,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8715,7 +8715,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -8727,7 +8727,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -8742,9 +8742,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8766,7 +8766,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -8778,7 +8778,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -8793,9 +8793,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8817,7 +8817,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -8829,7 +8829,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -8844,9 +8844,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8868,7 +8868,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -8880,7 +8880,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -8895,9 +8895,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8919,7 +8919,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -8931,7 +8931,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -8946,9 +8946,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -8970,7 +8970,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -8982,7 +8982,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -8997,9 +8997,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -9021,7 +9021,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -9033,7 +9033,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -9048,9 +9048,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -9072,7 +9072,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -9084,7 +9084,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -9099,9 +9099,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -9123,7 +9123,7 @@ public class OTAHotelAvailRS {
                         protected Boolean ind;
 
                         /**
-                         * Gets the value of the ind property.
+                         * Obtiene el valor de la propiedad ind.
                          * 
                          * @return
                          *     possible object is
@@ -9135,7 +9135,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the ind property.
+                         * Define el valor de la propiedad ind.
                          * 
                          * @param value
                          *     allowed object is
@@ -9152,9 +9152,9 @@ public class OTAHotelAvailRS {
 
 
                 /**
-                 * <p>Java class for anonymous complex type.
+                 * <p>Clase Java para anonymous complex type.
                  * 
-                 * <p>The following schema fragment specifies the expected content contained within this class.
+                 * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                  * 
                  * <pre>
                  * &lt;complexType&gt;
@@ -9182,7 +9182,7 @@ public class OTAHotelAvailRS {
                     protected String min;
 
                     /**
-                     * Gets the value of the currencyCode property.
+                     * Obtiene el valor de la propiedad currencyCode.
                      * 
                      * @return
                      *     possible object is
@@ -9194,7 +9194,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the currencyCode property.
+                     * Define el valor de la propiedad currencyCode.
                      * 
                      * @param value
                      *     allowed object is
@@ -9206,7 +9206,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the max property.
+                     * Obtiene el valor de la propiedad max.
                      * 
                      * @return
                      *     possible object is
@@ -9218,7 +9218,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the max property.
+                     * Define el valor de la propiedad max.
                      * 
                      * @param value
                      *     allowed object is
@@ -9230,7 +9230,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the min property.
+                     * Obtiene el valor de la propiedad min.
                      * 
                      * @return
                      *     possible object is
@@ -9242,7 +9242,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the min property.
+                     * Define el valor de la propiedad min.
                      * 
                      * @param value
                      *     allowed object is
@@ -9257,9 +9257,9 @@ public class OTAHotelAvailRS {
 
 
                 /**
-                 * <p>Java class for anonymous complex type.
+                 * <p>Clase Java para anonymous complex type.
                  * 
-                 * <p>The following schema fragment specifies the expected content contained within this class.
+                 * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                  * 
                  * <pre>
                  * &lt;complexType&gt;
@@ -9321,7 +9321,7 @@ public class OTAHotelAvailRS {
                     protected String xpmGuaranteeRequired;
 
                     /**
-                     * Gets the value of the additionalInfo property.
+                     * Obtiene el valor de la propiedad additionalInfo.
                      * 
                      * @return
                      *     possible object is
@@ -9333,7 +9333,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the additionalInfo property.
+                     * Define el valor de la propiedad additionalInfo.
                      * 
                      * @param value
                      *     allowed object is
@@ -9403,7 +9403,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the guaranteeSurchargeRequired property.
+                     * Obtiene el valor de la propiedad guaranteeSurchargeRequired.
                      * 
                      * @return
                      *     possible object is
@@ -9415,7 +9415,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the guaranteeSurchargeRequired property.
+                     * Define el valor de la propiedad guaranteeSurchargeRequired.
                      * 
                      * @param value
                      *     allowed object is
@@ -9427,7 +9427,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the rateLevelCode property.
+                     * Obtiene el valor de la propiedad rateLevelCode.
                      * 
                      * @return
                      *     possible object is
@@ -9439,7 +9439,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the rateLevelCode property.
+                     * Define el valor de la propiedad rateLevelCode.
                      * 
                      * @param value
                      *     allowed object is
@@ -9451,7 +9451,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the xpmGuaranteeRequired property.
+                     * Obtiene el valor de la propiedad xpmGuaranteeRequired.
                      * 
                      * @return
                      *     possible object is
@@ -9463,7 +9463,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the xpmGuaranteeRequired property.
+                     * Define el valor de la propiedad xpmGuaranteeRequired.
                      * 
                      * @param value
                      *     allowed object is
@@ -9476,9 +9476,9 @@ public class OTAHotelAvailRS {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * <p>Clase Java para anonymous complex type.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                      * 
                      * <pre>
                      * &lt;complexType&gt;
@@ -9513,7 +9513,7 @@ public class OTAHotelAvailRS {
                         protected OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RoomRate.AdditionalInfo.CancelPolicy cancelPolicy;
 
                         /**
-                         * Gets the value of the cancelPolicy property.
+                         * Obtiene el valor de la propiedad cancelPolicy.
                          * 
                          * @return
                          *     possible object is
@@ -9525,7 +9525,7 @@ public class OTAHotelAvailRS {
                         }
 
                         /**
-                         * Sets the value of the cancelPolicy property.
+                         * Define el valor de la propiedad cancelPolicy.
                          * 
                          * @param value
                          *     allowed object is
@@ -9538,9 +9538,9 @@ public class OTAHotelAvailRS {
 
 
                         /**
-                         * <p>Java class for anonymous complex type.
+                         * <p>Clase Java para anonymous complex type.
                          * 
-                         * <p>The following schema fragment specifies the expected content contained within this class.
+                         * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                          * 
                          * <pre>
                          * &lt;complexType&gt;
@@ -9565,7 +9565,7 @@ public class OTAHotelAvailRS {
                             protected String numeric;
 
                             /**
-                             * Gets the value of the option property.
+                             * Obtiene el valor de la propiedad option.
                              * 
                              * @return
                              *     possible object is
@@ -9577,7 +9577,7 @@ public class OTAHotelAvailRS {
                             }
 
                             /**
-                             * Sets the value of the option property.
+                             * Define el valor de la propiedad option.
                              * 
                              * @param value
                              *     allowed object is
@@ -9589,7 +9589,7 @@ public class OTAHotelAvailRS {
                             }
 
                             /**
-                             * Gets the value of the numeric property.
+                             * Obtiene el valor de la propiedad numeric.
                              * 
                              * @return
                              *     possible object is
@@ -9601,7 +9601,7 @@ public class OTAHotelAvailRS {
                             }
 
                             /**
-                             * Sets the value of the numeric property.
+                             * Define el valor de la propiedad numeric.
                              * 
                              * @param value
                              *     allowed object is
@@ -9620,9 +9620,9 @@ public class OTAHotelAvailRS {
 
 
                 /**
-                 * <p>Java class for anonymous complex type.
+                 * <p>Clase Java para anonymous complex type.
                  * 
-                 * <p>The following schema fragment specifies the expected content contained within this class.
+                 * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
                  * 
                  * <pre>
                  * &lt;complexType&gt;
@@ -9651,7 +9651,7 @@ public class OTAHotelAvailRS {
                     protected Boolean ind;
 
                     /**
-                     * Gets the value of the text property.
+                     * Obtiene el valor de la propiedad text.
                      * 
                      * @return
                      *     possible object is
@@ -9663,7 +9663,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the text property.
+                     * Define el valor de la propiedad text.
                      * 
                      * @param value
                      *     allowed object is
@@ -9675,7 +9675,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Gets the value of the ind property.
+                     * Obtiene el valor de la propiedad ind.
                      * 
                      * @return
                      *     possible object is
@@ -9687,7 +9687,7 @@ public class OTAHotelAvailRS {
                     }
 
                     /**
-                     * Sets the value of the ind property.
+                     * Define el valor de la propiedad ind.
                      * 
                      * @param value
                      *     allowed object is
@@ -9708,9 +9708,9 @@ public class OTAHotelAvailRS {
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * <p>Clase Java para anonymous complex type.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
      * 
      * <pre>
      * &lt;complexType&gt;
@@ -9778,9 +9778,9 @@ public class OTAHotelAvailRS {
 
 
         /**
-         * <p>Java class for anonymous complex type.
+         * <p>Clase Java para anonymous complex type.
          * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
+         * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
          * 
          * <pre>
          * &lt;complexType&gt;
@@ -9814,7 +9814,7 @@ public class OTAHotelAvailRS {
             protected String rph;
 
             /**
-             * Gets the value of the countryStateCode property.
+             * Obtiene el valor de la propiedad countryStateCode.
              * 
              * @return
              *     possible object is
@@ -9826,7 +9826,7 @@ public class OTAHotelAvailRS {
             }
 
             /**
-             * Sets the value of the countryStateCode property.
+             * Define el valor de la propiedad countryStateCode.
              * 
              * @param value
              *     allowed object is
@@ -9838,7 +9838,7 @@ public class OTAHotelAvailRS {
             }
 
             /**
-             * Gets the value of the latitude property.
+             * Obtiene el valor de la propiedad latitude.
              * 
              * @return
              *     possible object is
@@ -9850,7 +9850,7 @@ public class OTAHotelAvailRS {
             }
 
             /**
-             * Sets the value of the latitude property.
+             * Define el valor de la propiedad latitude.
              * 
              * @param value
              *     allowed object is
@@ -9862,7 +9862,7 @@ public class OTAHotelAvailRS {
             }
 
             /**
-             * Gets the value of the locationName property.
+             * Obtiene el valor de la propiedad locationName.
              * 
              * @return
              *     possible object is
@@ -9874,7 +9874,7 @@ public class OTAHotelAvailRS {
             }
 
             /**
-             * Sets the value of the locationName property.
+             * Define el valor de la propiedad locationName.
              * 
              * @param value
              *     allowed object is
@@ -9886,7 +9886,7 @@ public class OTAHotelAvailRS {
             }
 
             /**
-             * Gets the value of the longitude property.
+             * Obtiene el valor de la propiedad longitude.
              * 
              * @return
              *     possible object is
@@ -9898,7 +9898,7 @@ public class OTAHotelAvailRS {
             }
 
             /**
-             * Sets the value of the longitude property.
+             * Define el valor de la propiedad longitude.
              * 
              * @param value
              *     allowed object is
@@ -9910,7 +9910,7 @@ public class OTAHotelAvailRS {
             }
 
             /**
-             * Gets the value of the rph property.
+             * Obtiene el valor de la propiedad rph.
              * 
              * @return
              *     possible object is
@@ -9922,7 +9922,7 @@ public class OTAHotelAvailRS {
             }
 
             /**
-             * Sets the value of the rph property.
+             * Define el valor de la propiedad rph.
              * 
              * @param value
              *     allowed object is

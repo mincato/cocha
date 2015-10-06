@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for SabreHeader complex type.
+ * <p>Clase Java para SabreHeader complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="SabreHeader"&gt;
@@ -56,7 +56,7 @@ public class SabreHeader {
     protected Diagnostics diagnostics;
 
     /**
-     * Gets the value of the service property.
+     * Obtiene el valor de la propiedad service.
      * 
      * @return
      *     possible object is
@@ -68,7 +68,7 @@ public class SabreHeader {
     }
 
     /**
-     * Sets the value of the service property.
+     * Define el valor de la propiedad service.
      * 
      * @param value
      *     allowed object is
@@ -80,7 +80,7 @@ public class SabreHeader {
     }
 
     /**
-     * Gets the value of the identification property.
+     * Obtiene el valor de la propiedad identification.
      * 
      * @return
      *     possible object is
@@ -92,7 +92,7 @@ public class SabreHeader {
     }
 
     /**
-     * Sets the value of the identification property.
+     * Define el valor de la propiedad identification.
      * 
      * @param value
      *     allowed object is
@@ -104,7 +104,7 @@ public class SabreHeader {
     }
 
     /**
-     * Gets the value of the resultSummary property.
+     * Obtiene el valor de la propiedad resultSummary.
      * 
      * @return
      *     possible object is
@@ -116,7 +116,7 @@ public class SabreHeader {
     }
 
     /**
-     * Sets the value of the resultSummary property.
+     * Define el valor de la propiedad resultSummary.
      * 
      * @param value
      *     allowed object is
@@ -128,7 +128,7 @@ public class SabreHeader {
     }
 
     /**
-     * Gets the value of the security property.
+     * Obtiene el valor de la propiedad security.
      * 
      * @return
      *     possible object is
@@ -140,7 +140,7 @@ public class SabreHeader {
     }
 
     /**
-     * Sets the value of the security property.
+     * Define el valor de la propiedad security.
      * 
      * @param value
      *     allowed object is
@@ -152,7 +152,7 @@ public class SabreHeader {
     }
 
     /**
-     * Gets the value of the traces property.
+     * Obtiene el valor de la propiedad traces.
      * 
      * @return
      *     possible object is
@@ -164,7 +164,7 @@ public class SabreHeader {
     }
 
     /**
-     * Sets the value of the traces property.
+     * Define el valor de la propiedad traces.
      * 
      * @param value
      *     allowed object is
@@ -176,7 +176,7 @@ public class SabreHeader {
     }
 
     /**
-     * Gets the value of the diagnostics property.
+     * Obtiene el valor de la propiedad diagnostics.
      * 
      * @return
      *     possible object is
@@ -188,7 +188,7 @@ public class SabreHeader {
     }
 
     /**
-     * Sets the value of the diagnostics property.
+     * Define el valor de la propiedad diagnostics.
      * 
      * @param value
      *     allowed object is

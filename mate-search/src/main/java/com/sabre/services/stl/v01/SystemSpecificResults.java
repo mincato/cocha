@@ -14,9 +14,9 @@ import com.sabre.services.stl_header.v120.MessageCondition;
 
 
 /**
- * <p>Java class for SystemSpecificResults complex type.
+ * <p>Clase Java para SystemSpecificResults complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="SystemSpecificResults"&gt;
@@ -67,7 +67,7 @@ public class SystemSpecificResults {
     protected XMLGregorianCalendar timeStamp;
 
     /**
-     * Gets the value of the hostCommand property.
+     * Obtiene el valor de la propiedad hostCommand.
      * 
      * @return
      *     possible object is
@@ -79,7 +79,7 @@ public class SystemSpecificResults {
     }
 
     /**
-     * Sets the value of the hostCommand property.
+     * Define el valor de la propiedad hostCommand.
      * 
      * @param value
      *     allowed object is
@@ -120,7 +120,7 @@ public class SystemSpecificResults {
     }
 
     /**
-     * Gets the value of the shortText property.
+     * Obtiene el valor de la propiedad shortText.
      * 
      * @return
      *     possible object is
@@ -132,7 +132,7 @@ public class SystemSpecificResults {
     }
 
     /**
-     * Sets the value of the shortText property.
+     * Define el valor de la propiedad shortText.
      * 
      * @param value
      *     allowed object is
@@ -144,7 +144,7 @@ public class SystemSpecificResults {
     }
 
     /**
-     * Gets the value of the element property.
+     * Obtiene el valor de la propiedad element.
      * 
      * @return
      *     possible object is
@@ -156,7 +156,7 @@ public class SystemSpecificResults {
     }
 
     /**
-     * Sets the value of the element property.
+     * Define el valor de la propiedad element.
      * 
      * @param value
      *     allowed object is
@@ -168,7 +168,7 @@ public class SystemSpecificResults {
     }
 
     /**
-     * Gets the value of the recordID property.
+     * Obtiene el valor de la propiedad recordID.
      * 
      * @return
      *     possible object is
@@ -180,7 +180,7 @@ public class SystemSpecificResults {
     }
 
     /**
-     * Sets the value of the recordID property.
+     * Define el valor de la propiedad recordID.
      * 
      * @param value
      *     allowed object is
@@ -192,7 +192,7 @@ public class SystemSpecificResults {
     }
 
     /**
-     * Gets the value of the docURL property.
+     * Obtiene el valor de la propiedad docURL.
      * 
      * @return
      *     possible object is
@@ -204,7 +204,7 @@ public class SystemSpecificResults {
     }
 
     /**
-     * Sets the value of the docURL property.
+     * Define el valor de la propiedad docURL.
      * 
      * @param value
      *     allowed object is
@@ -216,7 +216,7 @@ public class SystemSpecificResults {
     }
 
     /**
-     * Gets the value of the timeStamp property.
+     * Obtiene el valor de la propiedad timeStamp.
      * 
      * @return
      *     possible object is
@@ -228,7 +228,7 @@ public class SystemSpecificResults {
     }
 
     /**
-     * Sets the value of the timeStamp property.
+     * Define el valor de la propiedad timeStamp.
      * 
      * @param value
      *     allowed object is

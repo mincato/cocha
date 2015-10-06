@@ -11,9 +11,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * <p>Java class for ProblemSummary complex type.
+ * <p>Clase Java para ProblemSummary complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="ProblemSummary"&gt;
@@ -61,7 +61,7 @@ public class ProblemSummary {
     protected XMLGregorianCalendar timeStamp;
 
     /**
-     * Gets the value of the source property.
+     * Obtiene el valor de la propiedad source.
      * 
      * @return
      *     possible object is
@@ -73,7 +73,7 @@ public class ProblemSummary {
     }
 
     /**
-     * Sets the value of the source property.
+     * Define el valor de la propiedad source.
      * 
      * @param value
      *     allowed object is
@@ -85,7 +85,7 @@ public class ProblemSummary {
     }
 
     /**
-     * Gets the value of the reportingSystem property.
+     * Obtiene el valor de la propiedad reportingSystem.
      * 
      * @return
      *     possible object is
@@ -97,7 +97,7 @@ public class ProblemSummary {
     }
 
     /**
-     * Sets the value of the reportingSystem property.
+     * Define el valor de la propiedad reportingSystem.
      * 
      * @param value
      *     allowed object is
@@ -109,7 +109,7 @@ public class ProblemSummary {
     }
 
     /**
-     * Gets the value of the message property.
+     * Obtiene el valor de la propiedad message.
      * 
      * @return
      *     possible object is
@@ -121,7 +121,7 @@ public class ProblemSummary {
     }
 
     /**
-     * Sets the value of the message property.
+     * Define el valor de la propiedad message.
      * 
      * @param value
      *     allowed object is
@@ -133,7 +133,7 @@ public class ProblemSummary {
     }
 
     /**
-     * Gets the value of the shortText property.
+     * Obtiene el valor de la propiedad shortText.
      * 
      * @return
      *     possible object is
@@ -145,7 +145,7 @@ public class ProblemSummary {
     }
 
     /**
-     * Sets the value of the shortText property.
+     * Define el valor de la propiedad shortText.
      * 
      * @param value
      *     allowed object is
@@ -157,7 +157,7 @@ public class ProblemSummary {
     }
 
     /**
-     * Gets the value of the type property.
+     * Obtiene el valor de la propiedad type.
      * 
      * @return
      *     possible object is
@@ -169,7 +169,7 @@ public class ProblemSummary {
     }
 
     /**
-     * Sets the value of the type property.
+     * Define el valor de la propiedad type.
      * 
      * @param value
      *     allowed object is
@@ -181,7 +181,7 @@ public class ProblemSummary {
     }
 
     /**
-     * Gets the value of the status property.
+     * Obtiene el valor de la propiedad status.
      * 
      * @return
      *     possible object is
@@ -193,7 +193,7 @@ public class ProblemSummary {
     }
 
     /**
-     * Sets the value of the status property.
+     * Define el valor de la propiedad status.
      * 
      * @param value
      *     allowed object is
@@ -205,7 +205,7 @@ public class ProblemSummary {
     }
 
     /**
-     * Gets the value of the timeStamp property.
+     * Obtiene el valor de la propiedad timeStamp.
      * 
      * @return
      *     possible object is
@@ -217,7 +217,7 @@ public class ProblemSummary {
     }
 
     /**
-     * Sets the value of the timeStamp property.
+     * Define el valor de la propiedad timeStamp.
      * 
      * @param value
      *     allowed object is

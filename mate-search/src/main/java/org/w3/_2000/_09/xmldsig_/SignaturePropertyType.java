@@ -17,9 +17,9 @@ import org.w3c.dom.Element;
 
 
 /**
- * <p>Java class for SignaturePropertyType complex type.
+ * <p>Clase Java para SignaturePropertyType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="SignaturePropertyType"&gt;
@@ -73,9 +73,9 @@ public class SignaturePropertyType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
+     * {@link Element }
      * {@link Object }
      * {@link String }
-     * {@link Element }
      * 
      * 
      */
@@ -87,7 +87,7 @@ public class SignaturePropertyType {
     }
 
     /**
-     * Gets the value of the target property.
+     * Obtiene el valor de la propiedad target.
      * 
      * @return
      *     possible object is
@@ -99,7 +99,7 @@ public class SignaturePropertyType {
     }
 
     /**
-     * Sets the value of the target property.
+     * Define el valor de la propiedad target.
      * 
      * @param value
      *     allowed object is
@@ -111,7 +111,7 @@ public class SignaturePropertyType {
     }
 
     /**
-     * Gets the value of the id property.
+     * Obtiene el valor de la propiedad id.
      * 
      * @return
      *     possible object is
@@ -123,7 +123,7 @@ public class SignaturePropertyType {
     }
 
     /**
-     * Sets the value of the id property.
+     * Define el valor de la propiedad id.
      * 
      * @param value
      *     allowed object is

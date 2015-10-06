@@ -13,9 +13,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for CanonicalizationMethodType complex type.
+ * <p>Clase Java para CanonicalizationMethodType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="CanonicalizationMethodType"&gt;
@@ -76,7 +76,7 @@ public class CanonicalizationMethodType {
     }
 
     /**
-     * Gets the value of the algorithm property.
+     * Obtiene el valor de la propiedad algorithm.
      * 
      * @return
      *     possible object is
@@ -88,7 +88,7 @@ public class CanonicalizationMethodType {
     }
 
     /**
-     * Sets the value of the algorithm property.
+     * Define el valor de la propiedad algorithm.
      * 
      * @param value
      *     allowed object is

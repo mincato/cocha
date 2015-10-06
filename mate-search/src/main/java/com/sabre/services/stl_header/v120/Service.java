@@ -11,9 +11,9 @@ import javax.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for Service complex type.
+ * <p>Clase Java para Service complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="Service"&gt;
@@ -58,7 +58,7 @@ public class Service {
     }
 
     /**
-     * Sets the value of the value property.
+     * Define el valor de la propiedad value.
      * 
      * @param value
      *     allowed object is
@@ -70,7 +70,7 @@ public class Service {
     }
 
     /**
-     * Gets the value of the operation property.
+     * Obtiene el valor de la propiedad operation.
      * 
      * @return
      *     possible object is
@@ -82,7 +82,7 @@ public class Service {
     }
 
     /**
-     * Sets the value of the operation property.
+     * Define el valor de la propiedad operation.
      * 
      * @param value
      *     allowed object is
@@ -94,7 +94,7 @@ public class Service {
     }
 
     /**
-     * Gets the value of the version property.
+     * Obtiene el valor de la propiedad version.
      * 
      * @return
      *     possible object is
@@ -106,7 +106,7 @@ public class Service {
     }
 
     /**
-     * Sets the value of the version property.
+     * Define el valor de la propiedad version.
      * 
      * @param value
      *     allowed object is
@@ -118,7 +118,7 @@ public class Service {
     }
 
     /**
-     * Gets the value of the ttl property.
+     * Obtiene el valor de la propiedad ttl.
      * 
      * @return
      *     possible object is
@@ -130,7 +130,7 @@ public class Service {
     }
 
     /**
-     * Sets the value of the ttl property.
+     * Define el valor de la propiedad ttl.
      * 
      * @param value
      *     allowed object is

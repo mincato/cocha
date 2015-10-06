@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for DSAKeyValueType complex type.
+ * <p>Clase Java para DSAKeyValueType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="DSAKeyValueType"&gt;
@@ -64,7 +64,7 @@ public class DSAKeyValueType {
     protected byte[] pgenCounter;
 
     /**
-     * Gets the value of the p property.
+     * Obtiene el valor de la propiedad p.
      * 
      * @return
      *     possible object is
@@ -75,7 +75,7 @@ public class DSAKeyValueType {
     }
 
     /**
-     * Sets the value of the p property.
+     * Define el valor de la propiedad p.
      * 
      * @param value
      *     allowed object is
@@ -86,7 +86,7 @@ public class DSAKeyValueType {
     }
 
     /**
-     * Gets the value of the q property.
+     * Obtiene el valor de la propiedad q.
      * 
      * @return
      *     possible object is
@@ -97,7 +97,7 @@ public class DSAKeyValueType {
     }
 
     /**
-     * Sets the value of the q property.
+     * Define el valor de la propiedad q.
      * 
      * @param value
      *     allowed object is
@@ -108,7 +108,7 @@ public class DSAKeyValueType {
     }
 
     /**
-     * Gets the value of the g property.
+     * Obtiene el valor de la propiedad g.
      * 
      * @return
      *     possible object is
@@ -119,7 +119,7 @@ public class DSAKeyValueType {
     }
 
     /**
-     * Sets the value of the g property.
+     * Define el valor de la propiedad g.
      * 
      * @param value
      *     allowed object is
@@ -130,7 +130,7 @@ public class DSAKeyValueType {
     }
 
     /**
-     * Gets the value of the y property.
+     * Obtiene el valor de la propiedad y.
      * 
      * @return
      *     possible object is
@@ -141,7 +141,7 @@ public class DSAKeyValueType {
     }
 
     /**
-     * Sets the value of the y property.
+     * Define el valor de la propiedad y.
      * 
      * @param value
      *     allowed object is
@@ -152,7 +152,7 @@ public class DSAKeyValueType {
     }
 
     /**
-     * Gets the value of the j property.
+     * Obtiene el valor de la propiedad j.
      * 
      * @return
      *     possible object is
@@ -163,7 +163,7 @@ public class DSAKeyValueType {
     }
 
     /**
-     * Sets the value of the j property.
+     * Define el valor de la propiedad j.
      * 
      * @param value
      *     allowed object is
@@ -174,7 +174,7 @@ public class DSAKeyValueType {
     }
 
     /**
-     * Gets the value of the seed property.
+     * Obtiene el valor de la propiedad seed.
      * 
      * @return
      *     possible object is
@@ -185,7 +185,7 @@ public class DSAKeyValueType {
     }
 
     /**
-     * Sets the value of the seed property.
+     * Define el valor de la propiedad seed.
      * 
      * @param value
      *     allowed object is
@@ -196,7 +196,7 @@ public class DSAKeyValueType {
     }
 
     /**
-     * Gets the value of the pgenCounter property.
+     * Obtiene el valor de la propiedad pgenCounter.
      * 
      * @return
      *     possible object is
@@ -207,7 +207,7 @@ public class DSAKeyValueType {
     }
 
     /**
-     * Sets the value of the pgenCounter property.
+     * Define el valor de la propiedad pgenCounter.
      * 
      * @param value
      *     allowed object is

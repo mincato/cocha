@@ -18,9 +18,8 @@ public class SabreRoute extends RouteBuilder {
     public void configure() throws Exception {
 
         from("cxfrs:bean:sabreServer").wireTap("direct:logInfo").choice()
-                .when(simple("${headers.operationName} == 'send'")).process(processor)
-                .to("direct:sendSabreAvailability").when(simple("${headers.operationName} == 'createsession'"))
-                .process(processor).to("direct:sendSabreSessionCreate");
+                .when(simple("${headers.operationName} == 'send'")).process(processor).to("direct:sendSabreAvailability")
+                .when(simple("${headers.operationName} == 'createsession'")).process(processor).to("direct:sendSabreSessionCreate");
 
     }
 }

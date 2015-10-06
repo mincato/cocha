@@ -11,9 +11,9 @@ import javax.xml.bind.annotation.XmlType;
  * Header records no longer contain user credentials (username/password) as these are needed only for 
  *      		 SessionCreateRQ in which the credentials should be in the payload.
  * 
- * <p>Java class for Security complex type.
+ * <p>Clase Java para Security complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="Security"&gt;
@@ -39,7 +39,7 @@ public class Security {
     protected String securityToken;
 
     /**
-     * Gets the value of the securityToken property.
+     * Obtiene el valor de la propiedad securityToken.
      * 
      * @return
      *     possible object is
@@ -51,7 +51,7 @@ public class Security {
     }
 
     /**
-     * Sets the value of the securityToken property.
+     * Define el valor de la propiedad securityToken.
      * 
      * @param value
      *     allowed object is

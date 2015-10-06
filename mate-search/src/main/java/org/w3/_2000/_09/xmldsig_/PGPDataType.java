@@ -12,9 +12,9 @@ import org.w3c.dom.Element;
 
 
 /**
- * <p>Java class for PGPDataType complex type.
+ * <p>Clase Java para PGPDataType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="PGPDataType"&gt;
@@ -48,7 +48,7 @@ public class PGPDataType {
     protected List<Object> any;
 
     /**
-     * Gets the value of the pgpKeyID property.
+     * Obtiene el valor de la propiedad pgpKeyID.
      * 
      * @return
      *     possible object is
@@ -59,7 +59,7 @@ public class PGPDataType {
     }
 
     /**
-     * Sets the value of the pgpKeyID property.
+     * Define el valor de la propiedad pgpKeyID.
      * 
      * @param value
      *     allowed object is
@@ -70,7 +70,7 @@ public class PGPDataType {
     }
 
     /**
-     * Gets the value of the pgpKeyPacket property.
+     * Obtiene el valor de la propiedad pgpKeyPacket.
      * 
      * @return
      *     possible object is
@@ -81,7 +81,7 @@ public class PGPDataType {
     }
 
     /**
-     * Sets the value of the pgpKeyPacket property.
+     * Define el valor de la propiedad pgpKeyPacket.
      * 
      * @param value
      *     allowed object is
@@ -109,8 +109,8 @@ public class PGPDataType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Object }
      * {@link Element }
+     * {@link Object }
      * 
      * 
      */
