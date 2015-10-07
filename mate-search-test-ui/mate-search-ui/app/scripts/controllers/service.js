@@ -5,9 +5,11 @@ serviceMateSearch.controller('serviceController', ['$scope','$http','$location',
 
 	$scope.hotel={};
 	$scope.hotels={};
+	$scope.searching=false;
 
 	$scope.search = function(hotel) {
-
+		$scope.searching = true;
+		$scope.error = "";
 		//if(hotel.service == 'all') {
 			$http.get('http://'+$location.host()+':'+$location.port()+'/mate-search/mate/availability?idHotel='+hotel.ids+'&arrival_date='+moment(hotel.arrivalDate).format('MM/DD/YYYY')+'&departure_date='+moment(hotel.departureDate).format('MM/DD/YYYY'))
 			.success(function(data) {
@@ -17,6 +19,10 @@ serviceMateSearch.controller('serviceController', ['$scope','$http','$location',
 				$scope.hotel.departureDate = hotel.departureDate;
 				$scope.hotel.service = hotel.service;
 				$scope.hotel.numeroResultado = data.hotel.length;
+				$scope.searching = false;
+			}).error(function(data) {
+				$scope.error = "Error al buscar"
+				$scope.searching = false;
 			});
 		//}
 /*		if(hotel.service == 'booking') {

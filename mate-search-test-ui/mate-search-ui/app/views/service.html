@@ -28,6 +28,12 @@
 				<section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
 					<md-button class="md-raised" ng-click="search(hotel)">Search</md-button>
 				</section>
+				<section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+					<div ng-show="searching">
+						<img alt="loading..." src="http://www.ajaxload.info/images/exemples/33.gif" height="20px">
+					</div>
+					<md-subheader class="md-no-sticky">{{error}}</md-subheader>
+				</section>					
 			</md-content>
 	</form>
 
@@ -35,12 +41,12 @@
 		<md-subheader class="md-no-sticky">Result {{hotel.numeroResultado}}</md-subheader>
 		<md-list>
 			<md-list-item ng-repeat="hotel in hotels">
-				<div class="md-list-item-text" layout="column">
-					<h3>Nombre Hotel: {{hotel.name}}</h3>
-					Direccion: {{hotel.address}}</br>
-					Pais: {{hotel.country}}</br>
-					Mayor precio entre todos los proovedores: {{hotel.rateInfo.hightRateBetweenSupplier}}</br>
-					Menor precio entre todos los proovedores: {{hotel.rateInfo.lowRateBetweenSupplier}}</br>
+					<div class="md-list-item-text" layout="column">
+					<h3>{{hotel.name}}</h3>
+					Dirección: {{hotel.address}}</br>
+					País: {{hotel.country}}</br>
+					Mayor precio total: {{hotel.rateInfo.hightRateBetweenSupplier}}</br>
+					Menor precio total: {{hotel.rateInfo.lowRateBetweenSupplier}}</br>
 					<md-list>
 						<md-list-item ng-repeat="rate in hotel.rateInfo.rateForSupplier">
 								<div class="md-list-item-text" layout="column">
