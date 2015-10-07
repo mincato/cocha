@@ -15,7 +15,7 @@
     "angular-mocks": "1.4.7"
   },
   "appPath": "app",
-  "moduleName": "mateSearchUiApp",
+  "moduleName": "mateSearchTestApp",
   "overrides": {
     "bootstrap": {
       "main": [
