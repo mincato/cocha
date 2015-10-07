@@ -20,6 +20,7 @@ public class HotelMappingService {
 
 	private static final Integer INIT_CONFIDENCE = 100;
 	private static final Integer MINIMUM_CONFIDENCE = 1;
+	private static final Integer BEST_CONFIDENCE = 99;
 	private String eanCode = "EAN";
 	private String bookingCode = "BKG";
 
@@ -58,8 +59,8 @@ public class HotelMappingService {
 				MultipleMatch matches = matchingService.match(hotel,
 						hotelsToProcess);
 				HotelMatch bestMatch = matches.findBestMatch();
-				if (bestMatch.getConfidence() > 99) {
-					bestMatch.setConfidence(99);
+				if (bestMatch.getConfidence() > BEST_CONFIDENCE) {
+					bestMatch.setConfidence(BEST_CONFIDENCE);
 				}
 				// si el mejor mapeo es al menos una sospecha, lo agrego
 				if (bestMatch.getConfidence() >= MINIMUM_CONFIDENCE) {

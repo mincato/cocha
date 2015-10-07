@@ -13,8 +13,9 @@ import com.cocha.hotels.model.content.hotel.Hotel;
 
 public class HotelNameRule extends HotelRule {
 
-    private static final Integer FULL_CONFIDENCE = 60;
-    private static final Integer NO_CONFIDENCE = 0;
+    public static final Integer FULL_CONFIDENCE = 60;
+    public static final Integer NO_CONFIDENCE = 0;
+    public static final Integer MAX_CONFIDENCE = 50;
 
     @Override
     public RuleMatch apply(Hotel reference, Hotel toCompare) {
@@ -37,7 +38,7 @@ public class HotelNameRule extends HotelRule {
         
         Integer confidence = NO_CONFIDENCE;
         if (rate > 0.85) {
-        	confidence = (int) Math.round((FULL_CONFIDENCE - 10) * rate);
+        	confidence = (int) Math.round(MAX_CONFIDENCE * rate);
         }
         else
         {
@@ -64,7 +65,7 @@ public class HotelNameRule extends HotelRule {
     		double max = Math.max(refWords.size(), compWords.size());
             rate = commonWords / max;
     	}
-    	return (int) Math.round((FULL_CONFIDENCE - 10) * rate);
+    	return (int) Math.round(MAX_CONFIDENCE * rate);
 	}
 
 	private String flatten(String name) {
