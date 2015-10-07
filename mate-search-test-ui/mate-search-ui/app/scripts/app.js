@@ -1,18 +1,9 @@
 'use strict';
 
-/**
- * @ngdoc overview
- * @name mateSearchTestApp
- * @description
- * # mateSearchTestApp
- *
- * Main module of the application.
- */
-
-var angularApp = angular.module('mateSearchTestApp', ['ngRoute','route-segment','view-segment']); 
+var angularApp = angular.module('mateSearchTestApp', ['ngRoute','route-segment','view-segment','ngMaterial']);
 
 angularApp.config(function($routeProvider, $routeSegmentProvider) {
-	
+
 	$routeSegmentProvider
 						 .when('/','service')
 						 .segment('service',

@@ -1,5 +1,7 @@
 package com.cocha.hotels.model.matesearch.supplier.booking;
 
+import java.util.List;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -13,7 +15,7 @@ public class GetHotelAvailabilityBooking {
     private Integer chunks;
 
     @XmlElement
-    private Result result;
+    private List<Result> result;
 
     public Integer getChunks() {
         return chunks;
@@ -23,12 +25,11 @@ public class GetHotelAvailabilityBooking {
         this.chunks = chunks;
     }
 
-    public Result getResult() {
-        return result;
-    }
+	public List<Result> getResult() {
+		return result;
+	}
 
-    public void setResult(Result result) {
-        this.result = result;
-    }
-
+	public void setResult(List<Result> result) {
+		this.result = result;
+	}
 }

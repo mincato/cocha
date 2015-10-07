@@ -1,5 +1,8 @@
 package com.cocha.hotels.matesearch.transformer.supplier.ean;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.camel.component.mock.MockEndpoint;
 import org.apache.camel.test.spring.CamelSpringTestSupport;
 import org.junit.Test;
@@ -34,6 +37,7 @@ public class TramsformerObjectEAN extends CamelSpringTestSupport {
         SupplierEANHotelResponse hotelSupplierEAN = new SupplierEANHotelResponse();
         HotelListResponse hotelRespose = new HotelListResponse();
         HotelList hotelList = new HotelList();
+        List<HotelSummaryElement> listSumeryElement = new ArrayList<HotelSummaryElement>();
         HotelSummaryElement hotel = new HotelSummaryElement();
         RoomRateDetailsList roomRateDetailsList = new RoomRateDetailsList();
         RoomRateDetails roomRateDetails = new RoomRateDetails();
@@ -44,13 +48,15 @@ public class TramsformerObjectEAN extends CamelSpringTestSupport {
         Surcharge surcharge = new Surcharge();
 
         hotel.setHotelid(164116);
+        
+        listSumeryElement.add(hotel);
 
         surcharges.setSurcharge(surcharge);
         chargeableRateInfo.setSurcharges(surcharges);
         rateInfo.setChargeablerateinfo(chargeableRateInfo);
         rateInfos.setRateinfo(rateInfo);
         roomRateDetailsList.setRoomratedetails(roomRateDetails);
-        hotelList.setHotelsummary(hotel);
+        hotelList.setHotelsummary(listSumeryElement);
         hotelRespose.setHotellist(hotelList);
         hotelSupplierEAN.setHotellistresponse(hotelRespose);
 

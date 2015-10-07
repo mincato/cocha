@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence">
+  <persistence-unit name="mainPU" transaction-type="JTA">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>com.cocha.hotels.model.content.hotel.Hotel</class>
+    <class>com.cocha.hotels.model.content.hotel.HotelDescription</class>
+    <class>com.cocha.hotels.model.content.hotel.HotelKey</class>
+    <properties>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+      <property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.JBossAppServerJtaPlatform"/>
+    </properties>
+  </persistence-unit>
+</persistence>

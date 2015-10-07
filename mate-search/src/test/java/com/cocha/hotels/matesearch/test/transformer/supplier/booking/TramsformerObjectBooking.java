@@ -1,5 +1,8 @@
 package com.cocha.hotels.matesearch.test.transformer.supplier.booking;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.camel.component.mock.MockEndpoint;
 import org.apache.camel.test.spring.CamelSpringTestSupport;
 import org.junit.Test;
@@ -38,7 +41,11 @@ public class TramsformerObjectBooking extends CamelSpringTestSupport {
         rackRate.setPrice("0.00");
 
         result.setRackRate(rackRate);
-        getHotelAvailabilityBooking.setResult(result);
+        List<Result> listResutl = new ArrayList<Result>(); 
+        listResutl.add(result);
+        listResutl.add(result);
+        
+        getHotelAvailabilityBooking.setResult(listResutl);
 
         template.sendBody("direct:service-in", getHotelAvailabilityBooking);
 
