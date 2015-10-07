@@ -1,7 +1,6 @@
 package com.cocha.hotels.hotelmapper.algorithm;
 
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import com.cocha.hotels.hotelmapper.mocks.HotelMock;
@@ -21,14 +20,11 @@ public class QualitySuitesHotelMappingTest extends BaseHotelMappingTest {
     }
 
     @Test
-    @Ignore
     public void testArmadaHotelMatchName() {
 
         HotelRule rule = new HotelNameRule();
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
-        // los strings no tienen un pattern genérico que puedo remover (city
-        // names?)
-        verify(ruleMatch).isNotSuccessful();
+        verify(ruleMatch, HotelNameRule.MAX_CONFIDENCE).isSuccessful();
     }
 
     @Test
@@ -36,7 +32,7 @@ public class QualitySuitesHotelMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelAddressRule();
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
-        verify(ruleMatch).isSuccessful();
+        verify(ruleMatch, HotelAddressRule.MAX_CONFIDENCE).isSuccessful();
     }
 
     @Test
@@ -44,7 +40,7 @@ public class QualitySuitesHotelMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelZipCodeRule();
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
-        verify(ruleMatch).isSuccessful();
+        verify(ruleMatch, 10).isSuccessful();
     }
 
     @Test
@@ -52,7 +48,7 @@ public class QualitySuitesHotelMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelCurrencyCodeRule();
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
-        verify(ruleMatch).isSuccessful();
+        verify(ruleMatch, 10).isSuccessful();
     }
 
     @Test
@@ -60,6 +56,6 @@ public class QualitySuitesHotelMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelStarRatingRule();
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
-        verify(ruleMatch).isSuccessful();
+        verify(ruleMatch, 10).isSuccessful();
     }
 }
