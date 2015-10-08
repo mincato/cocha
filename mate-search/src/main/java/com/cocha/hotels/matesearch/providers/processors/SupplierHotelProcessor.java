@@ -13,10 +13,14 @@ public class SupplierHotelProcessor {
     private static final Logger log = Logger.getLogger(SupplierHotelProcessor.class);
 
     public ResposeSuppliers trasformer(ResposeSuppliers	 rateInfoSupplier, @Header(value = "supplier") String supplier) {
-    	log.debug("Trasformer Supplier Hotel Processor");
-    	for(RateInfoForSupplier rateInfo : rateInfoSupplier.getRateForSupplier()) {
-    		rateInfo.setCodeSupplier(supplier);
-    	}
+     	log.debug("Trasformer Supplier Hotel Processor");
+     	if(rateInfoSupplier != null ) {
+     		for(RateInfoForSupplier rateInfo : rateInfoSupplier.getRateForSupplier()) {
+     			rateInfo.setCodeSupplier(supplier);
+     		}     		
+     	} else {
+     		rateInfoSupplier = new ResposeSuppliers();
+     	}
         return rateInfoSupplier;
     }
 }

@@ -24,6 +24,6 @@ public class SabreSessionClientRoute extends RouteBuilder {
     public void configure() throws Exception {
 		from("direct:sendSabreSessionCreate").errorHandler(loggingErrorHandler(log))
 				.process(sabreSessionClientProcessor).wireTap("direct:logInfo").to("cxf:bean:sabreSessionCreate")
-				.process(sabreSessionClientResponseProcessor).to("direct:sendSabreChangeContext");
+				.process(sabreSessionClientResponseProcessor);
     }
 }

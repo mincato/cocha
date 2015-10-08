@@ -47,6 +47,7 @@ public class MateHeaderDataProcessor implements Processor {
 
 		String idsBooking = "";
 		String idsEan = "";
+		String idsSabre = "";
 		
 		for(HotelMapping hotelMapping : providers) {
 			
@@ -67,12 +68,20 @@ public class MateHeaderDataProcessor implements Processor {
 						idsEan = idsEan.concat(",").concat(hotelMapping.getSupplierHotelId());
 					}
 				break;
+			case CodeSupplier.SABRE_SUPPLIER_CODE:
+				if(StringUtils.isBlank(idsSabre)) {
+					idsSabre = hotelMapping.getSupplierHotelId();
+				} else {
+					idsSabre = idsSabre.concat(",").concat(hotelMapping.getSupplierHotelId());
+				}
+			break;				
 				
 			}
 		}
 		
 		parameters.put(CodeSupplier.BOOKING_SUPPLIER_ID_HOTEL, idsBooking);
 		parameters.put(CodeSupplier.EAN_SUPPLIER_ID_HOTEL, idsEan);
+		parameters.put(CodeSupplier.SABRE_SUPPLIER_ID_HOTEL, idsSabre);
 		
 		return parameters;
 	}

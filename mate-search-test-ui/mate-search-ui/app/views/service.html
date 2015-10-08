@@ -25,14 +25,21 @@
 				</md-radio-group>
 			</md-content>
 			<md-content-->
+
+				<section layout="row" layout-sm="column" layout-align="right center" layout-wrap>
+					<md-button class="md-raised" ng-click="createToken()">Token</md-button>
+					<label>{{hotel.token}}</label>
+				</section>
+				<md-progress-circular md-mode="indeterminate" ng-show="isLoadingToken"></md-progress-circular>
 				<section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
 					<md-button class="md-raised" ng-click="search(hotel)">Search</md-button>
 				</section>
-			</md-content>
+
 	</form>
 
 	<md-divider ></md-divider>
 		<md-subheader class="md-no-sticky">Result {{hotel.numeroResultado}}</md-subheader>
+		<md-progress-circular md-mode="indeterminate" ng-show="isLoadingSearch"></md-progress-circular>
 		<md-list>
 			<md-list-item ng-repeat="hotel in hotels">
 				<div class="md-list-item-text" layout="column">

@@ -2,25 +2,38 @@
 
 <mappings xmlns="http://dozer.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		  xsi:schemaLocation="http://dozer.sourceforge.net  http://dozer.sourceforge.net/schema/beanmapping.xsd">
-	
+
+
+
 	<mapping>
-		<class-a>com.cocha.hotels.model.matesearch.supplier.sabre.AvailabilityOptions</class-a>
+		<class-a>com.sabre.webservices.sabrexml._2011._10.OTAHotelAvailRS</class-a>
+		<class-b>com.cocha.hotels.model.matesearch.respose.supplier.ResposeSuppliers</class-b>
+		<field map-id="mapperList">
+			<a>availabilityOptions.availabilityOption</a>
+			<b>rateForSupplier</b>
+			<a-hint>com.sabre.webservices.sabrexml._2011._10.OTAHotelAvailRS.AvailabilityOptions$AvailabilityOption</a-hint>
+			<b-hint>com.cocha.hotels.model.matesearch.canonical.RateInfoForSupplier</b-hint>
+		</field>
+	</mapping>
+
+	<mapping map-id="mapperList">
+		<class-a>com.sabre.webservices.sabrexml._2011._10.OTAHotelAvailRS.AvailabilityOptions$AvailabilityOption</class-a>
 		<class-b>com.cocha.hotels.model.matesearch.canonical.RateInfoForSupplier</class-b>
 		<field>
-			<a>availabilityOption.basicPropertyInfo.hotelCode</a>
+			<a>basicPropertyInfo.hotelCode</a>
 			<b>idSupplier</b>
 		</field>
 		<field>
-			<a>availabilityOption.basicPropertyInfo.rateRange.currencyCode</a>
+			<a>basicPropertyInfo.rateRange.currencyCode</a>
 			<b>rateCurrencyCode</b>
-		</field>					
+		</field>
 		<field>
-			<a>availabilityOption.basicPropertyInfo.rateRange.min</a>
-			<b>lowRate</b>
-		</field>	
-		<field>
-			<a>availabilityOption.basicPropertyInfo.rateRange.max</a>
+			<a>basicPropertyInfo.rateRange.min</a>
 			<b>higtRate</b>
-		</field>												
+		</field>
+		<field>
+			<a>basicPropertyInfo.rateRange.max</a>
+			<b>lowRate</b>
+		</field>															
 	</mapping>
 </mappings>

@@ -24,6 +24,6 @@ public class SabreClientRoute extends RouteBuilder {
 
         from("direct:sendSabreAvailability").process(sabreClientProcessor).wireTap("direct:logInfo")
                 .to("cxf:bean:sabreAvailability")
-                .log("Testing message").process(sabreClientResponseProcessor);
+                .log("Testing message").bean(sabreClientResponseProcessor).to("direct:transformerResposeSabre");
     }
 }

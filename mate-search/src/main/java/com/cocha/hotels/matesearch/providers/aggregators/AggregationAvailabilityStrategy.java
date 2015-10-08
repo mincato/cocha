@@ -37,7 +37,9 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
     		
     		hotels = oldExchange.getIn().getBody(HotelList.class);
     		resposeSuppliers = newExchange.getIn().getBody(ResposeSuppliers.class);
-    		this.addRates(hotels,resposeSuppliers);
+    		if(resposeSuppliers.getRateForSupplier()  != null) {
+    			this.addRates(hotels,resposeSuppliers);
+    		}
     		
     		oldExchange.getIn().setBody(hotels);
     		
@@ -56,7 +58,7 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 				
 				List<HotelMapping> hotelMapping =  hotelMappingRepository.findByHotelId(hotel.getId());
 				
-				if(hotelMapping.get(0).getSupplierHotelId().equals(rateInfoForSupplier.getIdSupplier()) || hotelMapping.get(1).getSupplierHotelId().equals(rateInfoForSupplier.getIdSupplier())) {
+				if(hotelMapping.get(0).getSupplierHotelId().equals(rateInfoForSupplier.getIdSupplier()) || hotelMapping.get(1).getSupplierHotelId().equals(rateInfoForSupplier.getIdSupplier()) || hotelMapping.get(2).getSupplierHotelId().equals(rateInfoForSupplier.getIdSupplier())) {
 					this.addRate(hotel, rateInfoForSupplier);					
 				}
 				

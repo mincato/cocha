@@ -1,86 +1,422 @@
-<AvailabilityOptions>
-	<AvailabilityOption RPH="001">
-		<BasicPropertyInfo AreaID="000S" ChainCode="HI" Distance="M" GEO_ConfidenceLevel="7" HotelCityCode="SCL" HotelCode="0080052" HotelName="HOLIDAY INN SANTIAGO AIRPORT">
-			<Address>
-				<AddressLine>ARMANDO CORTINEZ NORTE 2150</AddressLine>
-				<AddressLine>SANTIAGO CL 0000</AddressLine>
-			</Address>
-			<ContactNumbers>
-				<ContactNumber Fax="56-2-7999930" Phone="56-2-7999900" />
-			</ContactNumbers>
-			<DirectConnect>
-				<Alt_Avail Ind="false" />
-				<DC_AvailParticipant Ind="true" />
-				<DC_SellParticipant Ind="true" />
-				<RatesExceedMax Ind="false" />
-				<UnAvail Ind="false" />
-			</DirectConnect>
-			<LocationDescription Code="A">
-				<Text>SANTIAGO CL</Text>
-			</LocationDescription>
-			<PropertyOptionInfo>
-				<ADA_Accessible Ind="false" />
-				<AdultsOnly Ind="false" />
-				<BeachFront Ind="false" />
-				<Breakfast Ind="false" />
-				<BusinessCenter Ind="true" />
-				<BusinessReady Ind="false" />
-				<Conventions Ind="false" />
-				<Dataport Ind="true" />
-				<Dining Ind="true" />
-				<DryClean Ind="false" />
-				<EcoCertified Ind="false" />
-				<ExecutiveFloors Ind="false" />
-				<FitnessCenter Ind="true" />
-				<FreeLocalCalls Ind="false" />
-				<FreeParking Ind="false" />
-				<FreeShuttle Ind="false" />
-				<FreeWifiInMeetingRooms Ind="false" />
-				<FreeWifiInPublicSpaces Ind="false" />
-				<FreeWifiInRooms Ind="false" />
-				<FullServiceSpa Ind="false" />
-				<GameFacilities Ind="false" />
-				<Golf Ind="true" />
-				<HighSpeedInternet Ind="true" />
-				<HypoallergenicRooms Ind="false" />
-				<IndoorPool Ind="true" />
-				<InRoomCoffeeTea Ind="false" />
-				<InRoomMiniBar Ind="false" />
-				<InRoomRefrigerator Ind="false" />
-				<InRoomSafe Ind="false" />
-				<InteriorDoorways Ind="false" />
-				<Jacuzzi Ind="false" />
-				<KidsFacilities Ind="false" />
-				<KitchenFacilities Ind="false" />
-				<MealService Ind="false" />
-				<MeetingFacilities Ind="true" />
-				<NoAdultTV Ind="false" />
-				<NonSmoking Ind="true" />
-				<OutdoorPool Ind="false" />
-				<Pets Ind="false" />
-				<Pool Ind="true" />
-				<PublicTransportationAdjacent Ind="false" />
-				<RateAssured Ind="false" />
-				<Recreation Ind="false" />
-				<RestrictedRoomAccess Ind="false" />
-				<RoomService Ind="true" />
-				<RoomService24Hours Ind="false" />
-				<RoomsWithBalcony Ind="false" />
-				<SkiInOutProperty Ind="false" />
-				<SmokeFree Ind="false" />
-				<SmokingRoomsAvail Ind="false" />
-				<Tennis Ind="true" />
-				<WaterPurificationSystem Ind="false" />
-				<Wheelchair Ind="true" />
-			</PropertyOptionInfo>
-			<RateRange CurrencyCode="CLP" Max="164076" Min="129498" />
-			<RoomRate RateLevelCode="RAC">
-				<AdditionalInfo>
-					<CancelPolicy Numeric="00" />
-				</AdditionalInfo>
-				<HotelRateCode>RAC</HotelRateCode>
-			</RoomRate>
-			<SpecialOffers Ind="false" />
-		</BasicPropertyInfo>
-	</AvailabilityOption>
-</AvailabilityOptions>
+      <OTA_HotelAvailRS Version="2.2.0" xmlns="http://webservices.sabre.com/sabreXML/2011/10" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stl="http://services.sabre.com/STL/v01">
+         <stl:ApplicationResults status="Complete">
+            <stl:Success timeStamp="2015-09-21T10:41:53-05:00"/>
+         </stl:ApplicationResults>
+         <AdditionalAvail Ind="true"/>
+         <AvailabilityOptions>
+            <AvailabilityOption RPH="001">
+               <BasicPropertyInfo AreaID="000S" ChainCode="HI" Distance="M" GEO_ConfidenceLevel="7" HotelCityCode="SCL" HotelCode="0080052" HotelName="HOLIDAY INN SANTIAGO AIRPORT">
+                  <Address>
+                     <AddressLine>ARMANDO CORTINEZ NORTE 2150</AddressLine>
+                     <AddressLine>SANTIAGO CL 0000</AddressLine>
+                  </Address>
+                  <ContactNumbers>
+                     <ContactNumber Fax="56-2-7999930" Phone="56-2-7999900"/>
+                  </ContactNumbers>
+                  <DirectConnect>
+                     <Alt_Avail Ind="false"/>
+                     <DC_AvailParticipant Ind="true"/>
+                     <DC_SellParticipant Ind="true"/>
+                     <RatesExceedMax Ind="false"/>
+                     <UnAvail Ind="false"/>
+                  </DirectConnect>
+                  <LocationDescription Code="A">
+                     <Text>SANTIAGO CL</Text>
+                  </LocationDescription>
+                  <PropertyOptionInfo>
+                     <ADA_Accessible Ind="false"/>
+                     <AdultsOnly Ind="false"/>
+                     <BeachFront Ind="false"/>
+                     <Breakfast Ind="false"/>
+                     <BusinessCenter Ind="true"/>
+                     <BusinessReady Ind="false"/>
+                     <Conventions Ind="false"/>
+                     <Dataport Ind="true"/>
+                     <Dining Ind="true"/>
+                     <DryClean Ind="false"/>
+                     <EcoCertified Ind="false"/>
+                     <ExecutiveFloors Ind="false"/>
+                     <FitnessCenter Ind="true"/>
+                     <FreeLocalCalls Ind="false"/>
+                     <FreeParking Ind="false"/>
+                     <FreeShuttle Ind="false"/>
+                     <FreeWifiInMeetingRooms Ind="false"/>
+                     <FreeWifiInPublicSpaces Ind="false"/>
+                     <FreeWifiInRooms Ind="false"/>
+                     <FullServiceSpa Ind="false"/>
+                     <GameFacilities Ind="false"/>
+                     <Golf Ind="true"/>
+                     <HighSpeedInternet Ind="true"/>
+                     <HypoallergenicRooms Ind="false"/>
+                     <IndoorPool Ind="true"/>
+                     <InRoomCoffeeTea Ind="false"/>
+                     <InRoomMiniBar Ind="false"/>
+                     <InRoomRefrigerator Ind="false"/>
+                     <InRoomSafe Ind="false"/>
+                     <InteriorDoorways Ind="false"/>
+                     <Jacuzzi Ind="false"/>
+                     <KidsFacilities Ind="false"/>
+                     <KitchenFacilities Ind="false"/>
+                     <MealService Ind="false"/>
+                     <MeetingFacilities Ind="true"/>
+                     <NoAdultTV Ind="false"/>
+                     <NonSmoking Ind="true"/>
+                     <OutdoorPool Ind="false"/>
+                     <Pets Ind="false"/>
+                     <Pool Ind="true"/>
+                     <PublicTransportationAdjacent Ind="false"/>
+                     <RateAssured Ind="false"/>
+                     <Recreation Ind="false"/>
+                     <RestrictedRoomAccess Ind="false"/>
+                     <RoomService Ind="true"/>
+                     <RoomService24Hours Ind="false"/>
+                     <RoomsWithBalcony Ind="false"/>
+                     <SkiInOutProperty Ind="false"/>
+                     <SmokeFree Ind="false"/>
+                     <SmokingRoomsAvail Ind="false"/>
+                     <Tennis Ind="true"/>
+                     <WaterPurificationSystem Ind="false"/>
+                     <Wheelchair Ind="true"/>
+                  </PropertyOptionInfo>
+                  <RateRange CurrencyCode="CLP" Max="164076" Min="129498"/>
+                  <RoomRate RateLevelCode="RAC">
+                     <AdditionalInfo>
+                        <CancelPolicy Numeric="00"/>
+                     </AdditionalInfo>
+                     <HotelRateCode>RAC</HotelRateCode>
+                  </RoomRate>
+                  <SpecialOffers Ind="false"/>
+               </BasicPropertyInfo>
+            </AvailabilityOption>
+            <AvailabilityOption RPH="002">
+               <BasicPropertyInfo AreaID="010W" ChainCode="TA" Distance="M" GEO_ConfidenceLevel="7" HotelCityCode="SCL" HotelCode="0015422" HotelName="HOTEL DIRECTOR">
+                  <Address>
+                     <AddressLine>VITACURA 3600</AddressLine>
+                     <AddressLine>SANTIAGO DE CHILE CL 6670172</AddressLine>
+                  </Address>
+                  <ContactNumbers>
+                     <ContactNumber Fax="56 2 2460088" Phone="56 2 3891900"/>
+                  </ContactNumbers>
+                  <DirectConnect>
+                     <Alt_Avail Ind="false"/>
+                     <DC_AvailParticipant Ind="true"/>
+                     <DC_SellParticipant Ind="true"/>
+                     <RatesExceedMax Ind="false"/>
+                     <UnAvail Ind="false"/>
+                  </DirectConnect>
+                  <LocationDescription Code="A">
+                     <Text>NEAR THE AIRPORT</Text>
+                  </LocationDescription>
+                  <Property Rating="NTM">
+                     <Text>4 CROWN</Text>
+                  </Property>
+                  <PropertyOptionInfo>
+                     <ADA_Accessible Ind="false"/>
+                     <AdultsOnly Ind="false"/>
+                     <BeachFront Ind="false"/>
+                     <Breakfast Ind="true"/>
+                     <BusinessCenter Ind="false"/>
+                     <BusinessReady Ind="false"/>
+                     <Conventions Ind="false"/>
+                     <Dataport Ind="false"/>
+                     <Dining Ind="true"/>
+                     <DryClean Ind="false"/>
+                     <EcoCertified Ind="false"/>
+                     <ExecutiveFloors Ind="false"/>
+                     <FitnessCenter Ind="true"/>
+                     <FreeLocalCalls Ind="false"/>
+                     <FreeParking Ind="false"/>
+                     <FreeShuttle Ind="false"/>
+                     <FreeWifiInMeetingRooms Ind="false"/>
+                     <FreeWifiInPublicSpaces Ind="false"/>
+                     <FreeWifiInRooms Ind="false"/>
+                     <FullServiceSpa Ind="false"/>
+                     <GameFacilities Ind="false"/>
+                     <Golf Ind="false"/>
+                     <HighSpeedInternet Ind="false"/>
+                     <HypoallergenicRooms Ind="false"/>
+                     <IndoorPool Ind="false"/>
+                     <InRoomCoffeeTea Ind="false"/>
+                     <InRoomMiniBar Ind="false"/>
+                     <InRoomRefrigerator Ind="false"/>
+                     <InRoomSafe Ind="false"/>
+                     <InteriorDoorways Ind="false"/>
+                     <Jacuzzi Ind="false"/>
+                     <KidsFacilities Ind="false"/>
+                     <KitchenFacilities Ind="false"/>
+                     <MealService Ind="false"/>
+                     <MeetingFacilities Ind="false"/>
+                     <NoAdultTV Ind="false"/>
+                     <NonSmoking Ind="true"/>
+                     <OutdoorPool Ind="true"/>
+                     <Pets Ind="false"/>
+                     <Pool Ind="false"/>
+                     <PublicTransportationAdjacent Ind="false"/>
+                     <RateAssured Ind="false"/>
+                     <Recreation Ind="false"/>
+                     <RestrictedRoomAccess Ind="false"/>
+                     <RoomService Ind="false"/>
+                     <RoomService24Hours Ind="false"/>
+                     <RoomsWithBalcony Ind="false"/>
+                     <SkiInOutProperty Ind="false"/>
+                     <SmokeFree Ind="false"/>
+                     <SmokingRoomsAvail Ind="false"/>
+                     <Tennis Ind="false"/>
+                     <WaterPurificationSystem Ind="false"/>
+                     <Wheelchair Ind="true"/>
+                  </PropertyOptionInfo>
+                  <SpecialOffers Ind="false"/>
+               </BasicPropertyInfo>
+            </AvailabilityOption>
+            <AvailabilityOption RPH="003">
+               <BasicPropertyInfo AreaID="002S" ChainCode="UI" Distance="M" GEO_ConfidenceLevel="7" HotelCityCode="SCL" HotelCode="0008908" HotelName="APART HOTEL NERUDA">
+                  <Address>
+                     <AddressLine>AV PEDRO DE VALDIVIA NO 150</AddressLine>
+                     <AddressLine>SANTIAGO CL 7510185</AddressLine>
+                     <AddressLine>7510185</AddressLine>
+                  </Address>
+                  <ContactNumbers>
+                     <ContactNumber Fax="52-2-6790732" Phone="52-2-6790700"/>
+                  </ContactNumbers>
+                  <DirectConnect>
+                     <Alt_Avail Ind="false"/>
+                     <DC_AvailParticipant Ind="true"/>
+                     <DC_SellParticipant Ind="true"/>
+                     <RatesExceedMax Ind="false"/>
+                     <UnAvail Ind="false"/>
+                  </DirectConnect>
+                  <LocationDescription Code="A">
+                     <Text>SANTIAGO</Text>
+                  </LocationDescription>
+                  <PropertyOptionInfo>
+                     <ADA_Accessible Ind="false"/>
+                     <AdultsOnly Ind="false"/>
+                     <BeachFront Ind="false"/>
+                     <Breakfast Ind="false"/>
+                     <BusinessCenter Ind="true"/>
+                     <BusinessReady Ind="false"/>
+                     <Conventions Ind="true"/>
+                     <Dataport Ind="false"/>
+                     <Dining Ind="true"/>
+                     <DryClean Ind="true"/>
+                     <EcoCertified Ind="false"/>
+                     <ExecutiveFloors Ind="false"/>
+                     <FitnessCenter Ind="true"/>
+                     <FreeLocalCalls Ind="false"/>
+                     <FreeParking Ind="false"/>
+                     <FreeShuttle Ind="false"/>
+                     <FreeWifiInMeetingRooms Ind="false"/>
+                     <FreeWifiInPublicSpaces Ind="false"/>
+                     <FreeWifiInRooms Ind="false"/>
+                     <FullServiceSpa Ind="false"/>
+                     <GameFacilities Ind="false"/>
+                     <Golf Ind="false"/>
+                     <HighSpeedInternet Ind="false"/>
+                     <HypoallergenicRooms Ind="false"/>
+                     <IndoorPool Ind="true"/>
+                     <InRoomCoffeeTea Ind="false"/>
+                     <InRoomMiniBar Ind="false"/>
+                     <InRoomRefrigerator Ind="false"/>
+                     <InRoomSafe Ind="false"/>
+                     <InteriorDoorways Ind="false"/>
+                     <Jacuzzi Ind="false"/>
+                     <KidsFacilities Ind="false"/>
+                     <KitchenFacilities Ind="false"/>
+                     <MealService Ind="false"/>
+                     <MeetingFacilities Ind="true"/>
+                     <NoAdultTV Ind="false"/>
+                     <NonSmoking Ind="true"/>
+                     <OutdoorPool Ind="false"/>
+                     <Pets Ind="false"/>
+                     <Pool Ind="true"/>
+                     <PublicTransportationAdjacent Ind="false"/>
+                     <RateAssured Ind="false"/>
+                     <Recreation Ind="false"/>
+                     <RestrictedRoomAccess Ind="false"/>
+                     <RoomService Ind="false"/>
+                     <RoomService24Hours Ind="false"/>
+                     <RoomsWithBalcony Ind="false"/>
+                     <SkiInOutProperty Ind="false"/>
+                     <SmokeFree Ind="false"/>
+                     <SmokingRoomsAvail Ind="false"/>
+                     <Tennis Ind="false"/>
+                     <WaterPurificationSystem Ind="false"/>
+                     <Wheelchair Ind="false"/>
+                  </PropertyOptionInfo>
+                  <RoomRate RateLevelCode="RAC">
+                     <AdditionalInfo>
+                        <CancelPolicy Numeric="00"/>
+                     </AdditionalInfo>
+                     <HotelRateCode>RAC</HotelRateCode>
+                  </RoomRate>
+                  <SpecialOffers Ind="false"/>
+               </BasicPropertyInfo>
+            </AvailabilityOption>
+            <AvailabilityOption RPH="004">
+               <BasicPropertyInfo AreaID="009S" ChainCode="TA" Distance="M" GEO_ConfidenceLevel="7" HotelCityCode="SCL" HotelCode="0079969" HotelName="WINDSOR SUITES HOTEL">
+                  <Address>
+                     <AddressLine>VICTORIA SUBERCASEUAX 65</AddressLine>
+                     <AddressLine>SANTIAGO CL 8320154</AddressLine>
+                  </Address>
+                  <ContactNumbers>
+                     <ContactNumber Fax="56 2 4500640" Phone="56 2 4693100"/>
+                  </ContactNumbers>
+                  <DirectConnect>
+                     <Alt_Avail Ind="false"/>
+                     <DC_AvailParticipant Ind="true"/>
+                     <DC_SellParticipant Ind="true"/>
+                     <RatesExceedMax Ind="false"/>
+                     <UnAvail Ind="false"/>
+                  </DirectConnect>
+                  <LocationDescription Code="A">
+                     <Text>AIRPORT</Text>
+                  </LocationDescription>
+                  <PropertyOptionInfo>
+                     <ADA_Accessible Ind="false"/>
+                     <AdultsOnly Ind="false"/>
+                     <BeachFront Ind="false"/>
+                     <Breakfast Ind="false"/>
+                     <BusinessCenter Ind="true"/>
+                     <BusinessReady Ind="false"/>
+                     <Conventions Ind="false"/>
+                     <Dataport Ind="true"/>
+                     <Dining Ind="false"/>
+                     <DryClean Ind="false"/>
+                     <EcoCertified Ind="false"/>
+                     <ExecutiveFloors Ind="false"/>
+                     <FitnessCenter Ind="false"/>
+                     <FreeLocalCalls Ind="false"/>
+                     <FreeParking Ind="false"/>
+                     <FreeShuttle Ind="false"/>
+                     <FreeWifiInMeetingRooms Ind="false"/>
+                     <FreeWifiInPublicSpaces Ind="false"/>
+                     <FreeWifiInRooms Ind="false"/>
+                     <FullServiceSpa Ind="false"/>
+                     <GameFacilities Ind="false"/>
+                     <Golf Ind="false"/>
+                     <HighSpeedInternet Ind="false"/>
+                     <HypoallergenicRooms Ind="false"/>
+                     <IndoorPool Ind="false"/>
+                     <InRoomCoffeeTea Ind="false"/>
+                     <InRoomMiniBar Ind="false"/>
+                     <InRoomRefrigerator Ind="false"/>
+                     <InRoomSafe Ind="false"/>
+                     <InteriorDoorways Ind="false"/>
+                     <Jacuzzi Ind="false"/>
+                     <KidsFacilities Ind="false"/>
+                     <KitchenFacilities Ind="false"/>
+                     <MealService Ind="false"/>
+                     <MeetingFacilities Ind="true"/>
+                     <NoAdultTV Ind="false"/>
+                     <NonSmoking Ind="true"/>
+                     <OutdoorPool Ind="false"/>
+                     <Pets Ind="false"/>
+                     <Pool Ind="false"/>
+                     <PublicTransportationAdjacent Ind="false"/>
+                     <RateAssured Ind="false"/>
+                     <Recreation Ind="false"/>
+                     <RestrictedRoomAccess Ind="false"/>
+                     <RoomService Ind="true"/>
+                     <RoomService24Hours Ind="false"/>
+                     <RoomsWithBalcony Ind="false"/>
+                     <SkiInOutProperty Ind="false"/>
+                     <SmokeFree Ind="false"/>
+                     <SmokingRoomsAvail Ind="false"/>
+                     <Tennis Ind="false"/>
+                     <WaterPurificationSystem Ind="false"/>
+                     <Wheelchair Ind="false"/>
+                  </PropertyOptionInfo>
+                  <RoomRate RateLevelCode="RAC">
+                     <AdditionalInfo>
+                        <CancelPolicy Numeric="00"/>
+                     </AdditionalInfo>
+                     <HotelRateCode>RAC</HotelRateCode>
+                  </RoomRate>
+                  <SpecialOffers Ind="false"/>
+               </BasicPropertyInfo>
+            </AvailabilityOption>
+            <AvailabilityOption RPH="005">
+               <BasicPropertyInfo AreaID="009E" ChainCode="HA" Distance="M" GEO_ConfidenceLevel="7" HotelCityCode="SCL" HotelCode="0080011" HotelName="PANAMERICANO">
+                  <Address>
+                     <AddressLine>ROSA RODRIGUEZ 1314</AddressLine>
+                     <AddressLine>SANTIAGO DE CHILE CL 00000</AddressLine>
+                  </Address>
+                  <ContactNumbers>
+                     <ContactNumber Fax="005626964992" Phone="005626723060"/>
+                  </ContactNumbers>
+                  <DirectConnect>
+                     <Alt_Avail Ind="false"/>
+                     <DC_AvailParticipant Ind="true"/>
+                     <DC_SellParticipant Ind="true"/>
+                     <RatesExceedMax Ind="false"/>
+                     <UnAvail Ind="false"/>
+                  </DirectConnect>
+                  <LocationDescription Code="A">
+                     <Text>DOWNTOWN</Text>
+                  </LocationDescription>
+                  <PropertyOptionInfo>
+                     <ADA_Accessible Ind="false"/>
+                     <AdultsOnly Ind="false"/>
+                     <BeachFront Ind="false"/>
+                     <Breakfast Ind="false"/>
+                     <BusinessCenter Ind="false"/>
+                     <BusinessReady Ind="false"/>
+                     <Conventions Ind="false"/>
+                     <Dataport Ind="false"/>
+                     <Dining Ind="true"/>
+                     <DryClean Ind="false"/>
+                     <EcoCertified Ind="false"/>
+                     <ExecutiveFloors Ind="false"/>
+                     <FitnessCenter Ind="false"/>
+                     <FreeLocalCalls Ind="true"/>
+                     <FreeParking Ind="false"/>
+                     <FreeShuttle Ind="false"/>
+                     <FreeWifiInMeetingRooms Ind="false"/>
+                     <FreeWifiInPublicSpaces Ind="false"/>
+                     <FreeWifiInRooms Ind="false"/>
+                     <FullServiceSpa Ind="false"/>
+                     <GameFacilities Ind="false"/>
+                     <Golf Ind="false"/>
+                     <HighSpeedInternet Ind="false"/>
+                     <HypoallergenicRooms Ind="false"/>
+                     <IndoorPool Ind="false"/>
+                     <InRoomCoffeeTea Ind="false"/>
+                     <InRoomMiniBar Ind="false"/>
+                     <InRoomRefrigerator Ind="false"/>
+                     <InRoomSafe Ind="false"/>
+                     <InteriorDoorways Ind="false"/>
+                     <Jacuzzi Ind="false"/>
+                     <KidsFacilities Ind="false"/>
+                     <KitchenFacilities Ind="false"/>
+                     <MealService Ind="false"/>
+                     <MeetingFacilities Ind="true"/>
+                     <NoAdultTV Ind="false"/>
+                     <NonSmoking Ind="false"/>
+                     <OutdoorPool Ind="false"/>
+                     <Pets Ind="false"/>
+                     <Pool Ind="false"/>
+                     <PublicTransportationAdjacent Ind="false"/>
+                     <RateAssured Ind="false"/>
+                     <Recreation Ind="false"/>
+                     <RestrictedRoomAccess Ind="false"/>
+                     <RoomService Ind="true"/>
+                     <RoomService24Hours Ind="false"/>
+                     <RoomsWithBalcony Ind="false"/>
+                     <SkiInOutProperty Ind="false"/>
+                     <SmokeFree Ind="false"/>
+                     <SmokingRoomsAvail Ind="false"/>
+                     <Tennis Ind="false"/>
+                     <WaterPurificationSystem Ind="false"/>
+                     <Wheelchair Ind="true"/>
+                  </PropertyOptionInfo>
+                  <RoomRate RateLevelCode="RAC">
+                     <AdditionalInfo>
+                        <CancelPolicy Numeric="00"/>
+                     </AdditionalInfo>
+                     <HotelRateCode>RAC</HotelRateCode>
+                  </RoomRate>
+                  <SpecialOffers Ind="false"/>
+               </BasicPropertyInfo>
+            </AvailabilityOption>
+         </AvailabilityOptions>
+      </OTA_HotelAvailRS>
