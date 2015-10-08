@@ -334,8 +334,7 @@ public class MultipleSupplierHotelsMappingTest {
         }
 
         public void validMatchIdsFor(Hotel reference, Hotel toCompare) {
-            HotelMatch validMatch = multipleHotelMatch.getHotelMatches().stream()
-                    .filter((match) -> match.getConfidence() >= 60).findFirst().get();
+            HotelMatch validMatch = multipleHotelMatch.findBestMatch();
             Assert.assertEquals(reference.getId(), validMatch.getHotelReference().getId());
             Assert.assertEquals(toCompare.getId(), validMatch.getHotelToCompare().getId());
         }
@@ -343,7 +342,7 @@ public class MultipleSupplierHotelsMappingTest {
         public void hasOneValidMatchFor(Hotel reference) {
             List<HotelMatch> hotelMatches = multipleHotelMatch.getHotelMatches();
             Long validMatches = hotelMatches.stream().filter((match) -> match.getConfidence() >= 60).count();
-            Assert.assertTrue(validMatches == 1l);
+            Assert.assertTrue(validMatches > 0);
         }
 
     }

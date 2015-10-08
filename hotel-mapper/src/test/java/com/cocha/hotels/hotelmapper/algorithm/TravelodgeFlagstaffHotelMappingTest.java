@@ -21,13 +21,12 @@ public class TravelodgeFlagstaffHotelMappingTest extends BaseHotelMappingTest {
     }
 
     @Test
-    @Ignore
     public void testMatchName() {
 
         HotelRule rule = new HotelNameRule();
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
         // los strings son muy diferentes para que matcheen
-        verify(ruleMatch).isNotSuccessful();
+        verify(ruleMatch, HotelNameRule.MAX_CONFIDENCE).isNotSuccessful();
     }
 
     @Test
@@ -37,7 +36,7 @@ public class TravelodgeFlagstaffHotelMappingTest extends BaseHotelMappingTest {
         HotelRule rule = new HotelAddressRule();
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
         // directamente no es la misma dirección, no son los mismos hoteles
-        verify(ruleMatch).isNotSuccessful();
+        verify(ruleMatch, HotelAddressRule.MAX_CONFIDENCE).isNotSuccessful();
     }
 
     @Test
@@ -45,7 +44,7 @@ public class TravelodgeFlagstaffHotelMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelZipCodeRule();
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
-        verify(ruleMatch).isSuccessful();
+        verify(ruleMatch, 10).isSuccessful();
     }
 
     @Test
@@ -53,7 +52,7 @@ public class TravelodgeFlagstaffHotelMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelCurrencyCodeRule();
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
-        verify(ruleMatch).isSuccessful();
+        verify(ruleMatch, 10).isSuccessful();
     }
 
     @Test
@@ -62,6 +61,6 @@ public class TravelodgeFlagstaffHotelMappingTest extends BaseHotelMappingTest {
         HotelRule rule = new HotelStarRatingRule();
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
         // son distintos, tiene que fallar
-        verify(ruleMatch).isNotSuccessful();
+        verify(ruleMatch, 10).isNotSuccessful();
     }
 }

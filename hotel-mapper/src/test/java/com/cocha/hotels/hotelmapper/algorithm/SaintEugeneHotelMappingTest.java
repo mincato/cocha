@@ -24,7 +24,7 @@ public class SaintEugeneHotelMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelNameRule();
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
-        verify(ruleMatch).isSuccessful();
+        verify(ruleMatch, HotelNameRule.MAX_CONFIDENCE).isSuccessful();
     }
 
     @Test
@@ -32,7 +32,7 @@ public class SaintEugeneHotelMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelAddressRule();
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
-        verify(ruleMatch).isSuccessful();
+        verify(ruleMatch, HotelAddressRule.MAX_CONFIDENCE).isSuccessful();
     }
 
     @Test
@@ -40,7 +40,7 @@ public class SaintEugeneHotelMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelZipCodeRule();
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
-        verify(ruleMatch).isSuccessful();
+        verify(ruleMatch, 10).isSuccessful();
     }
 
     @Test
@@ -48,7 +48,7 @@ public class SaintEugeneHotelMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelCurrencyCodeRule();
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
-        verify(ruleMatch).isSuccessful();
+        verify(ruleMatch, 10).isSuccessful();
     }
 
     @Test
@@ -56,6 +56,6 @@ public class SaintEugeneHotelMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelStarRatingRule();
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
-        verify(ruleMatch).isSuccessful();
+        verify(ruleMatch, 10).isSuccessful();
     }
 }

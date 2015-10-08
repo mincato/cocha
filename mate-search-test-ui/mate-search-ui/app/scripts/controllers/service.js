@@ -7,6 +7,8 @@ serviceMateSearch.controller('serviceController', ['$scope','$http','$location',
 	$scope.hotels={};
 	$scope.isLoadingSearch=false;
 	$scope.isLoadingToken=false;
+	$scope.searching=false;
+
 
 	$scope.createToken = function() {
 		$scope.isLoadingToken=true;
@@ -17,9 +19,11 @@ serviceMateSearch.controller('serviceController', ['$scope','$http','$location',
 		});
 	}
 
-	$scope.search = function(hotel) {
 
-		//if(hotel.service == 'all') {
+	$scope.search = function(hotel) {
+		$scope.searching = true;
+		$scope.error = "";
+		$scope.hotels={};
 			$scope.isLoadingSearch=true;
 			$http.get('http://'+$location.host()+':'+$location.port()+'/mate-search/mate/availability?idHotel='+hotel.ids+'&arrival_date='+moment(hotel.arrivalDate).format('MM/DD/YYYY')+'&departure_date='+moment(hotel.departureDate).format('MM/DD/YYYY')+'&token='+hotel.token)
 			.success(function(data) {
@@ -30,25 +34,11 @@ serviceMateSearch.controller('serviceController', ['$scope','$http','$location',
 				$scope.hotel.departureDate = hotel.departureDate;
 				$scope.hotel.service = hotel.service;
 				$scope.hotel.numeroResultado = data.hotel.length;
-			})
-			.error(function(data){
+				$scope.searching = false;
+			}).error(function(data) {
 				$scope.isLoadingSearch=false;
-			})
-
-		//}
-/*		if(hotel.service == 'booking') {
-			$http.get('http://'+$location.host()+':'+$location.port()+'/mate-search/booking/send?idHotel='+hotel.idSupplier+'&arrival_date='+hotel.arrivalDate+'&departure_date='+hotel.departureDate)
-			.success(function(data) {
-
+				$scope.error = "Error al buscar"
+				$scope.searching = false;
 			});
-		}
-		if(hotel.service == 'ean') {
-			$http.get('http://'+$location.host()+':'+$location.port()+'/mate-search/ean/send?idHotel='+hotel.idSupplier+'&arrival_date='+hotel.arrivalDate+'&departure_date='+hotel.departureDate)
-			.success(function(data) {
-			});
-		}
-		if(hotel.service == 'sabre') {
-
-		}*/
 	};
 }]);

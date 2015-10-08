@@ -30,6 +30,7 @@
 			<list>
 				<value>classpath:properties/hibernate.properties</value>
 				<value>classpath:properties/jdbc.properties</value>
+				<value>classpath:properties/application.properties</value>
 			</list>
 		</property>
 	</bean>
@@ -94,4 +95,15 @@
 	<tx:annotation-driven transaction-manager="contentTransactionManager"/>
 
 	<jpa:repositories base-package="com.cocha.hotels.hotelmapper.repositories.feeds" entity-manager-factory-ref="feedEntityManagerFactory" transaction-manager-ref="feedTransactionManager" />
+	
+	<bean id="httpAuth" class="org.apache.camel.component.http.HttpConfiguration">
+		<property name="authMethod" value="Basic"/>
+		<property name="authUsername" value="${mate.provider.giata.user}"/>
+		<property name="authPassword" value="${mate.provider.giata.pass}"/>
+	</bean>
+	
+	<bean id="http" class="org.apache.camel.component.http.HttpComponent">
+		<property name="camelContext" ref="camel"/>
+		<property name="httpConfiguration" ref="httpAuth"/>
+	</bean>
 </beans>

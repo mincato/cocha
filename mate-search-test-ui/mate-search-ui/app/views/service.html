@@ -14,17 +14,6 @@
 					<md-datepicker ng-model="hotel.departureDate" md-placeholder="Check Out"></md-datepicker>
 				</div>
 			</md-content>
-			<!--md-content>
-				<md-input-container>
-					<md-radio-group ng-model="hotel.supplier">
-						<md-radio-button value="All" class="md-primary">All</md-radio-button>
-						<md-radio-button value="Booking" class="md-primary">Booking</md-radio-button>
-						<md-radio-button value="EAN" class="md-primary">EAN</md-radio-button>
-						<md-radio-button value="Sabre" class="md-primary">Sabre</md-radio-button>
-					</md-input-container>
-				</md-radio-group>
-			</md-content>
-			<md-content-->
 
 				<section layout="row" layout-sm="column" layout-align="right center" layout-wrap>
 					<md-button class="md-raised" ng-click="createToken()">Token</md-button>
@@ -35,6 +24,10 @@
 					<md-button class="md-raised" ng-click="search(hotel)">Search</md-button>
 				</section>
 
+				<section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+					<md-subheader class="md-no-sticky">{{error}}</md-subheader>
+				</section>
+			</md-content>
 	</form>
 
 	<md-divider ></md-divider>
@@ -42,12 +35,12 @@
 		<md-progress-circular md-mode="indeterminate" ng-show="isLoadingSearch"></md-progress-circular>
 		<md-list>
 			<md-list-item ng-repeat="hotel in hotels">
-				<div class="md-list-item-text" layout="column">
-					<h3>Nombre Hotel: {{hotel.name}}</h3>
-					Direccion: {{hotel.address}}</br>
-					Pais: {{hotel.country}}</br>
-					Mayor precio entre todos los proovedores: {{hotel.rateInfo.hightRateBetweenSupplier}}</br>
-					Menor precio entre todos los proovedores: {{hotel.rateInfo.lowRateBetweenSupplier}}</br>
+					<div class="md-list-item-text" layout="column">
+					<h3>{{hotel.name}}</h3>
+					Dirección: {{hotel.address}}</br>
+					País: {{hotel.country}}</br>
+					Mayor precio total: {{hotel.rateInfo.hightRateBetweenSupplier}}</br>
+					Menor precio total: {{hotel.rateInfo.lowRateBetweenSupplier}}</br>
 					<md-list>
 						<md-list-item ng-repeat="rate in hotel.rateInfo.rateForSupplier">
 								<div class="md-list-item-text" layout="column">
@@ -61,24 +54,3 @@
 				</div>
 			</md-list-item>
 		</md-list>
-
-	<!--div class="md-list-item-text">
-		Result:<br/>
-	<div class="md-list-item-text">
-		<md-list-item  ng-repeat="hotel in hotels">
-			<div class="md-list-item-text">
-				{{hotel.name}}<br/>
-				{{hotel.address}} <br/>
-				{{hotel.country}}<br/>
-				{{hotel.rateInfo.hightRateBetweenSupplier}}<br/>
-				{{hotel.rateInfo.lowRateBetweenSupplier}}<br/>
-				<md-list-item  ng-repeat="rate in hotel.rateInfo.rateForSupplier">
-					{{rate.codeSupplier}}<br/>
-					{{rate.rateCurrencyCode}}<br/>
-					{{rate.higtRate}}<br/>
-					{{rate.lowRate}}<br/>
-				</md-list-item>
-			</div>
-		</md-list-item>
-	</div>
-</div-->
