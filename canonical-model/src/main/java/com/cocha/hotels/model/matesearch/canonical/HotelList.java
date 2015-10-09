@@ -4,7 +4,7 @@ import java.util.List;
 
 public class HotelList {
 	
-	public List<Hotel> hotel;
+	private List<Hotel> hotel;
 
 	public List<Hotel> getHotel() {
 		return hotel;

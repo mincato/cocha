@@ -21,6 +21,7 @@ public class SupplierHotelProcessor {
      	} else {
      		rateInfoSupplier = new ResposeSuppliers();
      	}
+     	rateInfoSupplier.setCodeSupplier(supplier);
         return rateInfoSupplier;
     }
 }
