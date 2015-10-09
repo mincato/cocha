@@ -1,35 +1,56 @@
-<div ng-controller="serviceController">
+<div ng-controller="serviceController" layout="column">
 	<form novalidate id="fromAvailability" name="formRegistro">
-		 <div>
-			<label style="margin-right: 79px;">ID Hotel: </label><input type="text" ng-model="hotel.idSupplier" /><br>
-			<label style="margin-right: 52px;">Arrival Date: </label><input type="text" ng-model="hotel.arrivalDate" /><br>
-			<label style="margin-right: 27px;">Departure Date: </label><input type="text" ng-model="hotel.departureDate" /><br>
-		 </div>
-			<input type="radio" ng-model="hotel.service" value="all" /><label>All</label><br/>
-			<input type="radio" ng-model="hotel.service" value="booking" /><label>Booking</label><br/>
-			<input type="radio" ng-model="hotel.service" value="ean" /><label>EAN</label><br/>
-			<input type="radio" ng-model="hotel.service" value="sabre" /><label>Sabre</label><br/>
-			<button class="btn btn-primary btn-lg" ng-click="search(hotel)">Search</button>
-	
+		 	<md-content layout-padding layout="row" layout-sm="column">
+				<div layout layout-sm="column">
+					<md-input-container flex>
+						<label>ID Hotel</label>
+						<input ng-model="hotel.ids">
+					</md-input-container>
+				</div>
+				<div layout layout-sm="column">
+					<md-datepicker ng-model="hotel.arrivalDate" md-placeholder="Check In"></md-datepicker>
+				</div>
+				<div layout layout-sm="column">
+					<md-datepicker ng-model="hotel.departureDate" md-placeholder="Check Out"></md-datepicker>
+				</div>
+			</md-content>
+
+				<section layout="row" layout-sm="column" layout-align="right center" layout-wrap>
+					<md-button class="md-raised" ng-click="createToken()">Token</md-button>
+					<label>{{hotel.token}}</label>
+				</section>
+				<md-progress-circular md-mode="indeterminate" ng-show="isLoadingToken"></md-progress-circular>
+				<section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+					<md-button class="md-raised" ng-click="search(hotel)">Search</md-button>
+				</section>
+
+				<section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+					<md-subheader class="md-no-sticky">{{error}}</md-subheader>
+				</section>
+			</md-content>
 	</form>
-	
-	<div class="md-list-item-text">		
-		Result:<br/>
-		{{hotel.name}} <br/>
-		{{hotel.city}} <br/>
-		{{hotel.roomDetail.roomDescription}} <br/>
-		{{hotel.roomDetail.rateInfo.currencyCode}} <br/>
-		{{hotel.roomDetail.rateInfo.averageRate}} <br/>
-	</div>
-	<div class="md-list-item-text">	
-		<md-list-item class="md-3-line" ng-repeat="app in hotels">
-			<div class="md-list-item-text">
-				{{app.name}}<br/>
-				{{app.city}} <br/>
-				{{app.roomDetail.roomDescription}}<br/>
-				{{app.roomDetail.rateInfo.currencyCode}}<br/>
-				{{app.roomDetail.rateInfo.averageRate}}<br/>
-			</div>
-		</md-list-item>
-	</div>
-</div>
+
+	<md-divider ></md-divider>
+		<md-subheader class="md-no-sticky">Result {{hotel.numeroResultado}}</md-subheader>
+		<md-progress-circular md-mode="indeterminate" ng-show="isLoadingSearch"></md-progress-circular>
+		<md-list>
+			<md-list-item ng-repeat="hotel in hotels">
+					<div class="md-list-item-text" layout="column">
+					<h3>{{hotel.name}}</h3>
+					Dirección: {{hotel.address}}</br>
+					País: {{hotel.country}}</br>
+					Mayor precio total: {{hotel.rateInfo.hightRateBetweenSupplier}}</br>
+					Menor precio total: {{hotel.rateInfo.lowRateBetweenSupplier}}</br>
+					<md-list>
+						<md-list-item ng-repeat="rate in hotel.rateInfo.rateForSupplier">
+								<div class="md-list-item-text" layout="column">
+									<b>Proovedor: {{rate.codeSupplier}}</b>
+									Codigo Moneda: {{rate.rateCurrencyCode}}</br>
+									Mayor Precio: {{rate.higtRate}}</br>
+									Menor Precio: {{rate.lowRate}}</br>
+								</div>
+						</md-list-item>
+					</md-list>
+				</div>
+			</md-list-item>
+		</md-list>

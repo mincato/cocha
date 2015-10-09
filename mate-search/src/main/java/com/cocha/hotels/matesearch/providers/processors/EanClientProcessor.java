@@ -80,11 +80,6 @@ public class EanClientProcessor implements Processor {
         inMessage.setBody(req);
     }
 
-    /**
-     * @param apikey
-     * @param secret
-     * @return
-     */
     private String getSignature(final String apikey, final String secret) {
         MessageDigest md;
         String signature = "";

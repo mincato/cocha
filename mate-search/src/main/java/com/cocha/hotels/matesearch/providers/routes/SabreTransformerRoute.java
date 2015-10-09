@@ -1,20 +1,23 @@
 package com.cocha.hotels.matesearch.providers.routes;
 
 import org.apache.camel.builder.RouteBuilder;
-import org.apache.camel.model.dataformat.JsonLibrary;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.cocha.hotels.matesearch.providers.processors.SupplierHotelProcessor;
-import com.cocha.hotels.model.matesearch.supplier.sabre.AvailabilityOptions;
+import com.cocha.hotels.matesearch.util.Constant.CodeSupplier;
+import com.sabre.webservices.sabrexml._2011._10.OTAHotelAvailRS;
 
 @Component
 public class SabreTransformerRoute extends RouteBuilder {
 
+	@Autowired
+	private SupplierHotelProcessor supplirHotelProcessor;
+	
     @Override
     public void configure() throws Exception {
 
-        from("direct:transformerResposeSabre").convertBodyTo(AvailabilityOptions.class)
-                .bean(new SupplierHotelProcessor()).marshal().json(JsonLibrary.Jackson);
+        from("direct:transformerResposeSabre").convertBodyTo(OTAHotelAvailRS.class).setHeader("supplier", simple(CodeSupplier.SABRE_SUPPLIER_CODE)).bean(supplirHotelProcessor);
 
     }
 

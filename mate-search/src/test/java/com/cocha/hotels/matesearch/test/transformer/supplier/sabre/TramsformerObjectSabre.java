@@ -44,7 +44,7 @@ public class TramsformerObjectSabre extends CamelSpringTestSupport {
         basicPropertyInfo.setRateRange(rateRange);
 
         availabilityOption.setBasicPropertyInfo(basicPropertyInfo);
-        availabilityOptions.setAvailabilityOption(availabilityOption);
+//        availabilityOptions.setAvailabilityOption(availabilityOption);
 
         template.sendBody("direct:service-in", availabilityOptions);
 

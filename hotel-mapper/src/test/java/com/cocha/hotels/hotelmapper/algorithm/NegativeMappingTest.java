@@ -39,7 +39,7 @@ public class NegativeMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelNameRule();
         RuleMatch ruleMatch = rule.apply(reference, bookingHotel);
-        verify(ruleMatch).isNotSuccessful();
+        verify(ruleMatch, HotelNameRule.MAX_CONFIDENCE).isNotSuccessful();
     }
 
     @Test
@@ -49,7 +49,7 @@ public class NegativeMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelAddressRule();
         RuleMatch ruleMatch = rule.apply(reference, bookingHotel);
-        verify(ruleMatch).isNotSuccessful();
+        verify(ruleMatch, HotelAddressRule.MAX_CONFIDENCE).isNotSuccessful();
     }
 
     @Test
@@ -59,7 +59,7 @@ public class NegativeMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelNameRule();
         RuleMatch ruleMatch = rule.apply(reference, bookingHotel);
-        verify(ruleMatch).isNotSuccessful();
+        verify(ruleMatch, HotelNameRule.MAX_CONFIDENCE).isNotSuccessful();
     }
 
     @Test
@@ -69,7 +69,7 @@ public class NegativeMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelAddressRule();
         RuleMatch ruleMatch = rule.apply(reference, bookingHotel);
-        verify(ruleMatch).isNotSuccessful();
+        verify(ruleMatch, HotelAddressRule.MAX_CONFIDENCE).isNotSuccessful();
     }
 
     @Test
@@ -79,7 +79,7 @@ public class NegativeMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelNameRule();
         RuleMatch ruleMatch = rule.apply(reference, bookingHotel);
-        verify(ruleMatch).isNotSuccessful();
+        verify(ruleMatch, HotelNameRule.MAX_CONFIDENCE).isNotSuccessful();
     }
 
     @Test
@@ -89,7 +89,7 @@ public class NegativeMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelAddressRule();
         RuleMatch ruleMatch = rule.apply(reference, bookingHotel);
-        verify(ruleMatch).isNotSuccessful();
+        verify(ruleMatch, HotelAddressRule.MAX_CONFIDENCE).isNotSuccessful();
     }
 
     @Test
@@ -99,7 +99,7 @@ public class NegativeMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelNameRule();
         RuleMatch ruleMatch = rule.apply(reference, bookingHotel);
-        verify(ruleMatch).isNotSuccessful();
+        verify(ruleMatch, HotelNameRule.MAX_CONFIDENCE).isNotSuccessful();
     }
 
     @Test
@@ -109,7 +109,7 @@ public class NegativeMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelAddressRule();
         RuleMatch ruleMatch = rule.apply(reference, bookingHotel);
-        verify(ruleMatch).isNotSuccessful();
+        verify(ruleMatch, HotelAddressRule.MAX_CONFIDENCE).isNotSuccessful();
     }
 
     @Test
@@ -119,7 +119,7 @@ public class NegativeMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelNameRule();
         RuleMatch ruleMatch = rule.apply(reference, bookingHotel);
-        verify(ruleMatch).isNotSuccessful();
+        verify(ruleMatch, HotelNameRule.MAX_CONFIDENCE).isNotSuccessful();
     }
 
     @Test
@@ -129,7 +129,7 @@ public class NegativeMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelAddressRule();
         RuleMatch ruleMatch = rule.apply(reference, bookingHotel);
-        verify(ruleMatch).isNotSuccessful();
+        verify(ruleMatch, HotelAddressRule.MAX_CONFIDENCE).isNotSuccessful();
     }
 
     @Test
@@ -139,7 +139,7 @@ public class NegativeMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelNameRule();
         RuleMatch ruleMatch = rule.apply(reference, bookingHotel);
-        verify(ruleMatch).isNotSuccessful();
+        verify(ruleMatch, HotelNameRule.MAX_CONFIDENCE).isNotSuccessful();
     }
 
     @Test
@@ -149,7 +149,7 @@ public class NegativeMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelAddressRule();
         RuleMatch ruleMatch = rule.apply(reference, bookingHotel);
-        verify(ruleMatch).isNotSuccessful();
+        verify(ruleMatch, HotelAddressRule.MAX_CONFIDENCE).isNotSuccessful();
     }
 
     @Test
@@ -159,7 +159,7 @@ public class NegativeMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelNameRule();
         RuleMatch ruleMatch = rule.apply(reference, bookingHotel);
-        verify(ruleMatch).isNotSuccessful();
+        verify(ruleMatch, HotelNameRule.MAX_CONFIDENCE).isNotSuccessful();
     }
 
     @Test
@@ -169,7 +169,7 @@ public class NegativeMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelAddressRule();
         RuleMatch ruleMatch = rule.apply(reference, bookingHotel);
-        verify(ruleMatch).isNotSuccessful();
+        verify(ruleMatch, HotelAddressRule.MAX_CONFIDENCE).isNotSuccessful();
     }
 
     @Test
@@ -179,7 +179,7 @@ public class NegativeMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelNameRule();
         RuleMatch ruleMatch = rule.apply(reference, bookingHotel);
-        verify(ruleMatch).isNotSuccessful();
+        verify(ruleMatch, HotelNameRule.MAX_CONFIDENCE).isNotSuccessful();
     }
 
     @Test
@@ -189,7 +189,7 @@ public class NegativeMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelAddressRule();
         RuleMatch ruleMatch = rule.apply(reference, bookingHotel);
-        verify(ruleMatch).isNotSuccessful();
+        verify(ruleMatch, HotelAddressRule.MAX_CONFIDENCE).isNotSuccessful();
     }
 
     @Test
@@ -199,7 +199,7 @@ public class NegativeMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelNameRule();
         RuleMatch ruleMatch = rule.apply(reference, bookingHotel);
-        verify(ruleMatch).isNotSuccessful();
+        verify(ruleMatch, HotelNameRule.MAX_CONFIDENCE).isNotSuccessful();
     }
 
     @Test
@@ -209,7 +209,7 @@ public class NegativeMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelAddressRule();
         RuleMatch ruleMatch = rule.apply(reference, bookingHotel);
-        verify(ruleMatch).isNotSuccessful();
+        verify(ruleMatch, HotelAddressRule.MAX_CONFIDENCE).isNotSuccessful();
     }
 
     @Test
@@ -219,7 +219,7 @@ public class NegativeMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelNameRule();
         RuleMatch ruleMatch = rule.apply(reference, bookingHotel);
-        verify(ruleMatch).isNotSuccessful();
+        verify(ruleMatch, HotelNameRule.MAX_CONFIDENCE).isNotSuccessful();
     }
 
     @Test
@@ -229,7 +229,7 @@ public class NegativeMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelAddressRule();
         RuleMatch ruleMatch = rule.apply(reference, bookingHotel);
-        verify(ruleMatch).isNotSuccessful();
+        verify(ruleMatch, HotelAddressRule.MAX_CONFIDENCE).isNotSuccessful();
     }
 
 }

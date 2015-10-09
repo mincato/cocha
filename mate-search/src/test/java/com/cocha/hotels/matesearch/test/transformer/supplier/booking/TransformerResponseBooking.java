@@ -8,6 +8,7 @@ import org.springframework.context.support.AbstractXmlApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.cocha.hotels.model.matesearch.supplier.booking.GetHotelAvailabilityBooking;
+import com.cocha.hotels.model.matesearch.supplier.booking.Result;
 
 public class TransformerResponseBooking extends CamelSpringTestSupport {
 
@@ -28,13 +29,17 @@ public class TransformerResponseBooking extends CamelSpringTestSupport {
 
         log.info("************************************");
         log.info("Transformer XML to Object");
-        log.info("ID Hotel: " + hotelRespose.getResult().getHotelId());
-        log.info("Habitaciones: " + hotelRespose.getResult().getAvailableRooms());
-        log.info("Codigo Pais: " + hotelRespose.getResult().getCurrencyCode());
-        log.info("Mayor Precio: " + hotelRespose.getResult().getMaxPrice());
-        log.info("Menor Precio: " + hotelRespose.getResult().getMinPrice());
         log.info("************************************");
-
+        for (Result horel : hotelRespose.getResult()) {
+            log.info("************************************");
+        	log.info("ID Hotel: " + horel.getHotelId());
+        	log.info("Habitaciones: " + horel.getAvailableRooms());
+        	log.info("Codigo Pais: " + horel.getCurrencyCode());
+        	log.info("Mayor Precio: " + horel.getMaxPrice());
+        	log.info("Menor Precio: " + horel.getMinPrice());        	
+        	log.info("************************************");
+        }
+        
     }
 
 }

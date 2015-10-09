@@ -1,22 +1,26 @@
 package com.cocha.hotels.matesearch.providers.processors;
 
+import org.apache.camel.Header;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 
-import com.cocha.hotels.model.matesearch.canonical.Hotel;
+import com.cocha.hotels.model.matesearch.canonical.RateInfoForSupplier;
+import com.cocha.hotels.model.matesearch.respose.supplier.ResposeSuppliers;
 
 @Component
 public class SupplierHotelProcessor {
 
     private static final Logger log = Logger.getLogger(SupplierHotelProcessor.class);
 
-    public Hotel processCustomer(Hotel hotel) {
-
-        log.info("************************************");
-        log.info("Hotel Processor");
-        log.info("ID Hotel: " + hotel.getIdSupplier());
-        log.info("Room Price: " + hotel.getRoomDetail().getRateInfo().getAverageRate());
-        log.info("************************************");
-        return hotel;
+    public ResposeSuppliers trasformer(ResposeSuppliers	 rateInfoSupplier, @Header(value = "supplier") String supplier) {
+     	log.debug("Trasformer Supplier Hotel Processor");
+     	if(rateInfoSupplier != null ) {
+     		for(RateInfoForSupplier rateInfo : rateInfoSupplier.getRateForSupplier()) {
+     			rateInfo.setCodeSupplier(supplier);
+     		}     		
+     	} else {
+     		rateInfoSupplier = new ResposeSuppliers();
+     	}
+        return rateInfoSupplier;
     }
 }

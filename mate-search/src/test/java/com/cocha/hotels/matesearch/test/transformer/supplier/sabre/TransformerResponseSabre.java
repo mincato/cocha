@@ -7,7 +7,7 @@ import org.junit.Test;
 import org.springframework.context.support.AbstractXmlApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.cocha.hotels.model.matesearch.supplier.sabre.AvailabilityOptions;
+import com.sabre.webservices.sabrexml._2011._10.OTAHotelAvailRS;
 
 public class TransformerResponseSabre extends CamelSpringTestSupport {
 
@@ -23,24 +23,24 @@ public class TransformerResponseSabre extends CamelSpringTestSupport {
                 "respuestamocks/ResponseHotelSupplierSabre.xml");
         final String xml = context().getTypeConverter().convertTo(String.class, resource);
 
-        AvailabilityOptions hotelRespose = template.requestBody("direct:unmarshal", xml, AvailabilityOptions.class);
+        OTAHotelAvailRS hotelRespose = template.requestBody("direct:unmarshal", xml, OTAHotelAvailRS.class);
 
         log.info("************************************");
         log.info("Transformer XML to Object");
-        log.info("ID Hotel: " + hotelRespose.getAvailabilityOption().getBasicPropertyInfo().getHotelCode());
-        log.info("Nombre Hotel: " + hotelRespose.getAvailabilityOption().getBasicPropertyInfo().getHotelName());
-        log.info("ID Area: " + hotelRespose.getAvailabilityOption().getBasicPropertyInfo().getAreaID());
-        log.info("Chain Code: " + hotelRespose.getAvailabilityOption().getBasicPropertyInfo().getChainCode());
-        log.info("Distancia: " + hotelRespose.getAvailabilityOption().getBasicPropertyInfo().getDistance());
-        log.info("Nivel de Confianza GEO: "
-                + hotelRespose.getAvailabilityOption().getBasicPropertyInfo().getGeoConfidenceLevel());
-        log.info("Codigo Ciudad: " + hotelRespose.getAvailabilityOption().getBasicPropertyInfo().getHotelCityCode());
-        log.info("Codigo Moneda: "
-                + hotelRespose.getAvailabilityOption().getBasicPropertyInfo().getRateRange().getCurrencyCode());
-        log.info("Precio Maximo: "
-                + hotelRespose.getAvailabilityOption().getBasicPropertyInfo().getRateRange().getMax());
-        log.info("Precio Minimo: "
-                + hotelRespose.getAvailabilityOption().getBasicPropertyInfo().getRateRange().getMin());
+//        log.info("ID Hotel: " + hotelRespose.getAvailabilityOption().getBasicPropertyInfo().getHotelCode());
+//        log.info("Nombre Hotel: " + hotelRespose.getAvailabilityOption().getBasicPropertyInfo().getHotelName());
+//        log.info("ID Area: " + hotelRespose.getAvailabilityOption().getBasicPropertyInfo().getAreaID());
+//        log.info("Chain Code: " + hotelRespose.getAvailabilityOption().getBasicPropertyInfo().getChainCode());
+//        log.info("Distancia: " + hotelRespose.getAvailabilityOption().getBasicPropertyInfo().getDistance());
+//        log.info("Nivel de Confianza GEO: "
+//                + hotelRespose.getAvailabilityOption().getBasicPropertyInfo().getGeoConfidenceLevel());
+//        log.info("Codigo Ciudad: " + hotelRespose.getAvailabilityOption().getBasicPropertyInfo().getHotelCityCode());
+//        log.info("Codigo Moneda: "
+//                + hotelRespose.getAvailabilityOption().getBasicPropertyInfo().getRateRange().getCurrencyCode());
+//        log.info("Precio Maximo: "
+//                + hotelRespose.getAvailabilityOption().getBasicPropertyInfo().getRateRange().getMax());
+//        log.info("Precio Minimo: "
+//                + hotelRespose.getAvailabilityOption().getBasicPropertyInfo().getRateRange().getMin());
         log.info("************************************");
 
     }

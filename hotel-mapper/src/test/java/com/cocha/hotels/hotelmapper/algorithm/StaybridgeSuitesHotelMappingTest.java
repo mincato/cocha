@@ -24,9 +24,7 @@ public class StaybridgeSuitesHotelMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelNameRule();
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
-        // los strings no siguen un pattern genérico para compararlos (city
-        // name?)
-        verify(ruleMatch).isNotSuccessful();
+        verify(ruleMatch, HotelNameRule.MAX_CONFIDENCE).isSuccessful();
     }
 
     @Test
@@ -34,7 +32,7 @@ public class StaybridgeSuitesHotelMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelAddressRule();
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
-        verify(ruleMatch).isSuccessful();
+        verify(ruleMatch, HotelAddressRule.MAX_CONFIDENCE).isSuccessful();
     }
 
     @Test
@@ -42,7 +40,7 @@ public class StaybridgeSuitesHotelMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelZipCodeRule();
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
-        verify(ruleMatch).isSuccessful();
+        verify(ruleMatch, 10).isSuccessful();
     }
 
     @Test
@@ -50,7 +48,7 @@ public class StaybridgeSuitesHotelMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelCurrencyCodeRule();
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
-        verify(ruleMatch).isSuccessful();
+        verify(ruleMatch, 10).isSuccessful();
     }
 
     @Test
@@ -58,6 +56,6 @@ public class StaybridgeSuitesHotelMappingTest extends BaseHotelMappingTest {
 
         HotelRule rule = new HotelStarRatingRule();
         RuleMatch ruleMatch = rule.apply(eanHotel, bookingHotel);
-        verify(ruleMatch).isSuccessful();
+        verify(ruleMatch, 10).isSuccessful();
     }
 }
