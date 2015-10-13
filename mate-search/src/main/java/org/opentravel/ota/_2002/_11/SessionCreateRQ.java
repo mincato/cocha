@@ -1,4 +1,3 @@
-
 package org.opentravel.ota._2002._11;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -8,11 +7,13 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Clase Java para anonymous complex type.
+ * <p>
+ * Clase Java para anonymous complex type.
  * 
- * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>
+ * El siguiente fragmento de esquema especifica el contenido que se espera que
+ * haya en esta clase.
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -48,9 +49,7 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "pos"
-})
+@XmlType(name = "", propOrder = { "pos" })
 @XmlRootElement(name = "SessionCreateRQ")
 public class SessionCreateRQ {
 
@@ -62,10 +61,8 @@ public class SessionCreateRQ {
     /**
      * Obtiene el valor de la propiedad pos.
      * 
-     * @return
-     *     possible object is
-     *     {@link SessionCreateRQ.POS }
-     *     
+     * @return possible object is {@link SessionCreateRQ.POS }
+     * 
      */
     public SessionCreateRQ.POS getPOS() {
         return pos;
@@ -75,9 +72,8 @@ public class SessionCreateRQ {
      * Define el valor de la propiedad pos.
      * 
      * @param value
-     *     allowed object is
-     *     {@link SessionCreateRQ.POS }
-     *     
+     *            allowed object is {@link SessionCreateRQ.POS }
+     * 
      */
     public void setPOS(SessionCreateRQ.POS value) {
         this.pos = value;
@@ -86,10 +82,8 @@ public class SessionCreateRQ {
     /**
      * Obtiene el valor de la propiedad returnContextID.
      * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     * @return possible object is {@link Boolean }
+     * 
      */
     public Boolean isReturnContextID() {
         return returnContextID;
@@ -99,19 +93,20 @@ public class SessionCreateRQ {
      * Define el valor de la propiedad returnContextID.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *            allowed object is {@link Boolean }
+     * 
      */
     public void setReturnContextID(Boolean value) {
         this.returnContextID = value;
     }
 
-
     /**
-     * <p>Clase Java para anonymous complex type.
+     * <p>
+     * Clase Java para anonymous complex type.
      * 
-     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+     * <p>
+     * El siguiente fragmento de esquema especifica el contenido que se espera
+     * que haya en esta clase.
      * 
      * <pre>
      * &lt;complexType&gt;
@@ -136,9 +131,7 @@ public class SessionCreateRQ {
      * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "source"
-    })
+    @XmlType(name = "", propOrder = { "source" })
     public static class POS {
 
         @XmlElement(name = "Source", required = true)
@@ -147,10 +140,8 @@ public class SessionCreateRQ {
         /**
          * Obtiene el valor de la propiedad source.
          * 
-         * @return
-         *     possible object is
-         *     {@link SessionCreateRQ.POS.Source }
-         *     
+         * @return possible object is {@link SessionCreateRQ.POS.Source }
+         * 
          */
         public SessionCreateRQ.POS.Source getSource() {
             return source;
@@ -160,19 +151,20 @@ public class SessionCreateRQ {
          * Define el valor de la propiedad source.
          * 
          * @param value
-         *     allowed object is
-         *     {@link SessionCreateRQ.POS.Source }
-         *     
+         *            allowed object is {@link SessionCreateRQ.POS.Source }
+         * 
          */
         public void setSource(SessionCreateRQ.POS.Source value) {
             this.source = value;
         }
 
-
         /**
-         * <p>Clase Java para anonymous complex type.
+         * <p>
+         * Clase Java para anonymous complex type.
          * 
-         * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+         * <p>
+         * El siguiente fragmento de esquema especifica el contenido que se
+         * espera que haya en esta clase.
          * 
          * <pre>
          * &lt;complexType&gt;
@@ -196,10 +188,8 @@ public class SessionCreateRQ {
             /**
              * Obtiene el valor de la propiedad pseudoCityCode.
              * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             * @return possible object is {@link String }
+             * 
              */
             public String getPseudoCityCode() {
                 return pseudoCityCode;
@@ -209,9 +199,8 @@ public class SessionCreateRQ {
              * Define el valor de la propiedad pseudoCityCode.
              * 
              * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *            allowed object is {@link String }
+             * 
              */
             public void setPseudoCityCode(String value) {
                 this.pseudoCityCode = value;

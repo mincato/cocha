@@ -1,4 +1,3 @@
-
 package com.sabre.services.stl_header.v120;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -8,13 +7,15 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
-
 /**
  * The Identification metadata uniquely identify each message instance.
  * 
- * <p>Clase Java para Identification complex type.
+ * <p>
+ * Clase Java para Identification complex type.
  * 
- * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>
+ * El siguiente fragmento de esquema especifica el contenido que se espera que
+ * haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="Identification"&gt;
@@ -35,13 +36,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Identification", propOrder = {
-    "customerID",
-    "customerAppID",
-    "conversationID",
-    "messageID",
-    "timeStamp"
-})
+@XmlType(name = "Identification", propOrder = { "customerID", "customerAppID", "conversationID", "messageID",
+        "timeStamp" })
 public class Identification {
 
     @XmlElement(name = "CustomerID", required = true)
@@ -59,10 +55,8 @@ public class Identification {
     /**
      * Obtiene el valor de la propiedad customerID.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getCustomerID() {
         return customerID;
@@ -72,9 +66,8 @@ public class Identification {
      * Define el valor de la propiedad customerID.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setCustomerID(String value) {
         this.customerID = value;
@@ -83,10 +76,8 @@ public class Identification {
     /**
      * Obtiene el valor de la propiedad customerAppID.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getCustomerAppID() {
         return customerAppID;
@@ -96,9 +87,8 @@ public class Identification {
      * Define el valor de la propiedad customerAppID.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setCustomerAppID(String value) {
         this.customerAppID = value;
@@ -107,10 +97,8 @@ public class Identification {
     /**
      * Obtiene el valor de la propiedad conversationID.
      * 
-     * @return
-     *     possible object is
-     *     {@link TrackingID }
-     *     
+     * @return possible object is {@link TrackingID }
+     * 
      */
     public TrackingID getConversationID() {
         return conversationID;
@@ -120,9 +108,8 @@ public class Identification {
      * Define el valor de la propiedad conversationID.
      * 
      * @param value
-     *     allowed object is
-     *     {@link TrackingID }
-     *     
+     *            allowed object is {@link TrackingID }
+     * 
      */
     public void setConversationID(TrackingID value) {
         this.conversationID = value;
@@ -131,10 +118,8 @@ public class Identification {
     /**
      * Obtiene el valor de la propiedad messageID.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getMessageID() {
         return messageID;
@@ -144,9 +129,8 @@ public class Identification {
      * Define el valor de la propiedad messageID.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setMessageID(String value) {
         this.messageID = value;
@@ -155,10 +139,8 @@ public class Identification {
     /**
      * Obtiene el valor de la propiedad timeStamp.
      * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     * @return possible object is {@link XMLGregorianCalendar }
+     * 
      */
     public XMLGregorianCalendar getTimeStamp() {
         return timeStamp;
@@ -168,9 +150,8 @@ public class Identification {
      * Define el valor de la propiedad timeStamp.
      * 
      * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *            allowed object is {@link XMLGregorianCalendar }
+     * 
      */
     public void setTimeStamp(XMLGregorianCalendar value) {
         this.timeStamp = value;

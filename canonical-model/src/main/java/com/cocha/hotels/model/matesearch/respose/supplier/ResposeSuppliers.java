@@ -9,10 +9,6 @@ public class ResposeSuppliers {
 	private List<RateInfoForSupplier> rateForSupplier;
 	private String	codeSupplier;
 
-	public List<RateInfoForSupplier> getRateForSupplier() {
-		return rateForSupplier;
-	}
-
 	public void setRateForSupplier(List<RateInfoForSupplier> rateForSupplier) {
 		this.rateForSupplier = rateForSupplier;
 	}
@@ -24,4 +20,7 @@ public class ResposeSuppliers {
 	public void setCodeSupplier(String codeSupplier) {
 		this.codeSupplier = codeSupplier;
 	}
+    public List<RateInfoForSupplier> getRateForSupplier() {
+        return rateForSupplier;
+    }
 }

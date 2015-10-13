@@ -12,5 +12,4 @@ public class Constant {
 		public static final String SABRE_SUPPLIER_CODE = "SAB";
 		public static final String SABRE_SUPPLIER_ID_HOTEL = "idsHotelsSabre";
 	}
-
 }

@@ -17,13 +17,13 @@ public class SabreClientRoute extends RouteBuilder {
     private SabreClientProcessor sabreClientProcessor;
 
     @Autowired
-    private  SabreClientResponseProcessor sabreClientResponseProcessor;
-    
+    private SabreClientResponseProcessor sabreClientResponseProcessor;
+
     @Override
     public void configure() throws Exception {
 
         from("direct:sendSabreAvailability").process(sabreClientProcessor).wireTap("direct:logInfo")
-                .to("cxf:bean:sabreAvailability")
-                .log("Testing message").bean(sabreClientResponseProcessor).to("direct:transformerResposeSabre");
+                .to("cxf:bean:sabreAvailability").log("Testing message").bean(sabreClientResponseProcessor)
+                .to("direct:transformerResposeSabre");
     }
 }

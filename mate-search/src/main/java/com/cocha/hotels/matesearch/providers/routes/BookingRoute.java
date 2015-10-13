@@ -14,8 +14,7 @@ public class BookingRoute extends RouteBuilder {
     @Override
     public void configure() throws Exception {
         from("cxfrs:bean:jaxBookingServer")
-        //FIXME refactor: el HeaderDataProcessor no puede inyectarse con IoC?
-            .process(new HeaderDataProcessor())
-            .to("direct:sendBookingAvailability");
+        // FIXME refactor: el HeaderDataProcessor no puede inyectarse con IoC?
+                .process(new HeaderDataProcessor()).to("direct:sendBookingAvailability");
     }
 }

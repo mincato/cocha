@@ -15,15 +15,14 @@ public class SabreChangeContextClientRoute extends RouteBuilder {
 
     @Autowired
     private SabreChangeContextClientProcessor sabreChangeContextClientProcessor;
-    
+
     @Autowired
-    private  SabreChangeContextClientResponseProcessor sabreChangeContextClientResponseProcessor;
-    
+    private SabreChangeContextClientResponseProcessor sabreChangeContextClientResponseProcessor;
 
     @Override
     public void configure() throws Exception {
-		from("direct:sendSabreChangeContext").errorHandler(loggingErrorHandler(log))
-				.process(sabreChangeContextClientProcessor).wireTap("direct:logInfo").to("cxf:bean:sabreChangeContext")
-				.process(sabreChangeContextClientResponseProcessor);
+        from("direct:sendSabreChangeContext").errorHandler(loggingErrorHandler(log))
+                .process(sabreChangeContextClientProcessor).wireTap("direct:logInfo").to("cxf:bean:sabreChangeContext")
+                .process(sabreChangeContextClientResponseProcessor);
     }
 }

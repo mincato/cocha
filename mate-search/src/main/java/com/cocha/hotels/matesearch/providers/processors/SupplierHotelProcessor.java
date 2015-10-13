@@ -16,6 +16,7 @@ public class SupplierHotelProcessor  implements Processor {
 
     private static final Logger log = Logger.getLogger(SupplierHotelProcessor.class);
 
+
     @Override
     public void process(Exchange exchange) throws Exception {
     	
@@ -36,6 +37,7 @@ public class SupplierHotelProcessor  implements Processor {
      		rateInfoSupplier = new ResposeSuppliers();
      	}
      	rateInfoSupplier.setCodeSupplier(supplier);
+
         return rateInfoSupplier;
     }
 

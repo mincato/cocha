@@ -20,9 +20,9 @@ import com.cocha.hotels.model.matesearch.respose.supplier.IdMapping;
 
 @Component
 public class MateHeaderDataProcessor implements Processor {
-	
-	@Autowired
-	private HotelMappingRepository hotelMappingRepository;
+
+    @Autowired
+    private HotelMappingRepository hotelMappingRepository;
 
     /*
      * (non-Javadoc)
@@ -32,8 +32,9 @@ public class MateHeaderDataProcessor implements Processor {
 	@Override
     public void process(Exchange exchange) throws Exception {
         Message inMessage = exchange.getIn();
-        
+
         Map<String, Object> headers = inMessage.getHeaders();
+        
         Map<String, Object> parameters = MessageUtils.parseQueryParams((String)headers.get("CamelHttpQuery"));
         List<String> ids = Arrays.asList(((String) parameters.get(Constant.ID_HOTEL)).split("\\s*,\\s*"));
         
@@ -42,10 +43,10 @@ public class MateHeaderDataProcessor implements Processor {
         this.putIdSuppliersAndIdMapping(parameters,providers);        
         
         exchange.getOut().setBody(parameters);
-        
+
     }
 
-	private void putIdSuppliersAndIdMapping(Map<String, Object> parameters,	List<HotelMapping> providers) {
+    private void putIdSuppliersAndIdMapping(Map<String, Object> parameters,	List<HotelMapping> providers) {
 
 		String idsBooking = "";
 		String idsEan = "";
@@ -124,5 +125,4 @@ public class MateHeaderDataProcessor implements Processor {
 		}
 		
 	}
-    
 }

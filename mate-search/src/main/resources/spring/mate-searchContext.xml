@@ -169,7 +169,7 @@
 	    <property name="jpaVendorAdapter" ref="hibernateJpaVendorAdapter" />
 	</bean>
 	
-	<jee:jndi-lookup id="dataSource" jndi-name="java:jboss/datasources/MYSQLDATASOURCE" />	
+	<jee:jndi-lookup id="dataSource" jndi-name="java:jboss/datasources/ContentDS" />	
 
 	<bean id="jpaVendorAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
 	    <property name="database" value="MYSQL" />

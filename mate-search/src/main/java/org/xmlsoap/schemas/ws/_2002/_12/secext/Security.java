@@ -1,4 +1,3 @@
-
 package org.xmlsoap.schemas.ws._2002._12.secext;
 
 import java.util.ArrayList;
@@ -9,11 +8,13 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Clase Java para anonymous complex type.
+ * <p>
+ * Clase Java para anonymous complex type.
  * 
- * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>
+ * El siguiente fragmento de esquema especifica el contenido que se espera que
+ * haya en esta clase.
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -46,11 +47,7 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "usernameToken",
-    "sabreAth",
-    "binarySecurityToken"
-})
+@XmlType(name = "", propOrder = { "usernameToken", "sabreAth", "binarySecurityToken" })
 @XmlRootElement(name = "Security")
 public class Security {
 
@@ -64,10 +61,8 @@ public class Security {
     /**
      * Obtiene el valor de la propiedad usernameToken.
      * 
-     * @return
-     *     possible object is
-     *     {@link Security.UsernameToken }
-     *     
+     * @return possible object is {@link Security.UsernameToken }
+     * 
      */
     public Security.UsernameToken getUsernameToken() {
         return usernameToken;
@@ -77,9 +72,8 @@ public class Security {
      * Define el valor de la propiedad usernameToken.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Security.UsernameToken }
-     *     
+     *            allowed object is {@link Security.UsernameToken }
+     * 
      */
     public void setUsernameToken(Security.UsernameToken value) {
         this.usernameToken = value;
@@ -88,10 +82,8 @@ public class Security {
     /**
      * Obtiene el valor de la propiedad sabreAth.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getSabreAth() {
         return sabreAth;
@@ -101,9 +93,8 @@ public class Security {
      * Define el valor de la propiedad sabreAth.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setSabreAth(String value) {
         this.sabreAth = value;
@@ -112,10 +103,8 @@ public class Security {
     /**
      * Obtiene el valor de la propiedad binarySecurityToken.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getBinarySecurityToken() {
         return binarySecurityToken;
@@ -125,19 +114,20 @@ public class Security {
      * Define el valor de la propiedad binarySecurityToken.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setBinarySecurityToken(String value) {
         this.binarySecurityToken = value;
     }
 
-
     /**
-     * <p>Clase Java para anonymous complex type.
+     * <p>
+     * Clase Java para anonymous complex type.
      * 
-     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+     * <p>
+     * El siguiente fragmento de esquema especifica el contenido que se espera
+     * que haya en esta clase.
      * 
      * <pre>
      * &lt;complexType&gt;
@@ -158,13 +148,7 @@ public class Security {
      * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "username",
-        "password",
-        "newPassword",
-        "organization",
-        "domain"
-    })
+    @XmlType(name = "", propOrder = { "username", "password", "newPassword", "organization", "domain" })
     public static class UsernameToken {
 
         @XmlElement(name = "Username")
@@ -181,10 +165,8 @@ public class Security {
         /**
          * Obtiene el valor de la propiedad username.
          * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         * @return possible object is {@link String }
+         * 
          */
         public String getUsername() {
             return username;
@@ -194,9 +176,8 @@ public class Security {
          * Define el valor de la propiedad username.
          * 
          * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *            allowed object is {@link String }
+         * 
          */
         public void setUsername(String value) {
             this.username = value;
@@ -205,10 +186,8 @@ public class Security {
         /**
          * Obtiene el valor de la propiedad password.
          * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         * @return possible object is {@link String }
+         * 
          */
         public String getPassword() {
             return password;
@@ -218,9 +197,8 @@ public class Security {
          * Define el valor de la propiedad password.
          * 
          * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *            allowed object is {@link String }
+         * 
          */
         public void setPassword(String value) {
             this.password = value;
@@ -230,15 +208,16 @@ public class Security {
          * Gets the value of the newPassword property.
          * 
          * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the newPassword property.
+         * This accessor method returns a reference to the live list, not a
+         * snapshot. Therefore any modification you make to the returned list
+         * will be present inside the JAXB object. This is why there is not a
+         * <CODE>set</CODE> method for the newPassword property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
+         * 
          * <pre>
-         *    getNewPassword().add(newItem);
+         * getNewPassword().add(newItem);
          * </pre>
          * 
          * 
@@ -258,10 +237,8 @@ public class Security {
         /**
          * Obtiene el valor de la propiedad organization.
          * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         * @return possible object is {@link String }
+         * 
          */
         public String getOrganization() {
             return organization;
@@ -271,9 +248,8 @@ public class Security {
          * Define el valor de la propiedad organization.
          * 
          * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *            allowed object is {@link String }
+         * 
          */
         public void setOrganization(String value) {
             this.organization = value;
@@ -282,10 +258,8 @@ public class Security {
         /**
          * Obtiene el valor de la propiedad domain.
          * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         * @return possible object is {@link String }
+         * 
          */
         public String getDomain() {
             return domain;
@@ -295,9 +269,8 @@ public class Security {
          * Define el valor de la propiedad domain.
          * 
          * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *            allowed object is {@link String }
+         * 
          */
         public void setDomain(String value) {
             this.domain = value;

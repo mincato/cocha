@@ -13,24 +13,24 @@ import com.cocha.hotels.model.content.mapping.HotelMapping;
 public class DynamicGiataUriProcessorImpl implements DynamicGiataUriProcessor {
 
     public static final String DYNAMIC_URI_KEY = "dynamicUriHeader";
-    
+
     private Logger logger = Logger.getLogger(DynamicGiataUriProcessorImpl.class);
-    
+
     @Value("${mate.provider.giata.address.xml}")
     private String staticUri;
-    
+
     @Override
     public void process(Exchange exchange) throws Exception {
         exchange.setPattern(ExchangePattern.InOut);
         Message inMessage = exchange.getIn();
-        
+
         String eanId = inMessage.getBody(HotelMapping.class).getSupplierHotelId();
         String uri = staticUri + "/" + eanId;
         inMessage.setHeader(Exchange.HTTP_URI, uri);
         inMessage.setBody(null);
-        
+
         logger.info("GIATA URI: " + uri);
-        
+
         inMessage.setHeader("eanId", eanId);
     }
 

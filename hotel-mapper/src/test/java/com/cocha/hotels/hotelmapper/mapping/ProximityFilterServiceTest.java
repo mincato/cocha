@@ -22,12 +22,11 @@ import com.cocha.hotels.hotelmapper.mocks.TravelodgeFlagstaffHotelMock;
 import com.cocha.hotels.hotelmapper.mocks.WallStreet_HI_HotelMock;
 import com.cocha.hotels.model.content.hotel.Hotel;
 
-
 public class ProximityFilterServiceTest {
 
     private List<HotelMock> builders;
     private ProximityFilterService service;
-    
+
     @Before
     public void setUp() throws Exception {
         HotelMock armada = new ArmadaHotelMock();
@@ -45,7 +44,7 @@ public class ProximityFilterServiceTest {
         builders = Arrays.asList(armada, blackstone, comfort, leamington, quality, qualityUS, saintEugene, staybridge,
                 taybridge, travelodge, wallstreet);
         service = new ProximityFilterService();
-        
+
     }
 
     @Test
@@ -53,20 +52,20 @@ public class ProximityFilterServiceTest {
         HotelMock builder = new ArmadaHotelMock();
         Hotel hotel = builder.buildWithEan();
         List<Hotel> hotelsToFilter = buildHotelsFromEAN();
-        
+
         List<Hotel> hotelsFiltered = service.filter(hotel, hotelsToFilter);
-        
+
         Assert.assertTrue(hotelsFiltered.contains(hotel));
     }
-    
+
     @Test
     public void filterByProximityOnSameHotel_Booking() {
         HotelMock builder = new ArmadaHotelMock();
         Hotel hotel = builder.buildWithBooking();
         List<Hotel> hotelsToFilter = buildHotelsFromBooking();
-        
+
         List<Hotel> hotelsFiltered = service.filter(hotel, hotelsToFilter);
-        
+
         Assert.assertTrue(hotelsFiltered.contains(hotel));
     }
 

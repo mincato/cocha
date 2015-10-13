@@ -8,7 +8,6 @@ import com.cocha.hotels.matesearch.providers.processors.HotelInformationProcesso
 
 @Component
 public class HotelInformationRoute extends RouteBuilder {
-
 	
 	@Autowired
 	HotelInformationProcessor hotelIntormationProcessor;

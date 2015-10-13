@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 
 import com.cocha.hotels.matesearch.util.MessageUtils;
 
-
 @Component
 public class HeaderDataProcessor implements Processor {
 

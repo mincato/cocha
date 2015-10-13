@@ -19,18 +19,12 @@ public class BookingClientRoute extends RouteBuilder {
 
     @Override
     public void configure() throws Exception {
-        onException(Exception.class)
-            .handled(true)
-            .process(new FailureResponseProcessor());
-        
+        onException(Exception.class).handled(true).process(new FailureResponseProcessor());
+
         errorHandler(new NoErrorHandlerBuilder());
-        
-        from("direct:sendBookingAvailability")
-            .errorHandler(loggingErrorHandler(log))
-            .process(bookingProcessor)
-            .wireTap("direct:logInfo")
-            .to("cxfrs:bean:bookingClient")
-            .to("direct:transformerResposeBooking");
+
+        from("direct:sendBookingAvailability").errorHandler(loggingErrorHandler(log)).process(bookingProcessor)
+                .wireTap("direct:logInfo").to("cxfrs:bean:bookingClient").to("direct:transformerResposeBooking");
 
     }
 }

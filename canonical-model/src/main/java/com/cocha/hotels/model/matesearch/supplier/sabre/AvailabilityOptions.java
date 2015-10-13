@@ -10,15 +10,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "AvailabilityOptions")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AvailabilityOptions {
-	
-	@XmlElement(name="AvailabilityOption")
-	private List<AvailabilityOption> availabilityOption;
 
-	public List<AvailabilityOption> getAvailabilityOption() {
-		return availabilityOption;
-	}
+    @XmlElement(name = "AvailabilityOption")
+    private List<AvailabilityOption> availabilityOption;
 
-	public void setAvailabilityOption(List<AvailabilityOption> availabilityOption) {
-		this.availabilityOption = availabilityOption;
-	}
+    public List<AvailabilityOption> getAvailabilityOption() {
+        return availabilityOption;
+    }
+
+    public void setAvailabilityOption(List<AvailabilityOption> availabilityOption) {
+        this.availabilityOption = availabilityOption;
+    }
 }

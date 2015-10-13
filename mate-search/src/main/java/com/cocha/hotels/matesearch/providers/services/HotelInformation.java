@@ -10,7 +10,6 @@ import com.cocha.hotels.matesearch.repositories.HotelRepository;
 import com.cocha.hotels.model.matesearch.canonical.Hotel;
 import com.cocha.hotels.model.matesearch.canonical.HotelList;
 
-
 @Service
 public class HotelInformation {
 	
@@ -28,5 +27,4 @@ public class HotelInformation {
 		
 		return hotelList; 
 	}
-
 }

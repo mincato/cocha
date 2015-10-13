@@ -15,18 +15,21 @@ import com.sabre.webservices.sabrexml._2011._10.ContextChangeRS.SecurityToken;
 
 @Component
 public class SabreChangeContextClientResponseProcessor implements Processor {
-	 private static final transient Logger log = LoggerFactory.getLogger(SabreChangeContextClientResponseProcessor.class);
-	
+
+    private static final transient Logger log = LoggerFactory
+            .getLogger(SabreChangeContextClientResponseProcessor.class);
+
     @Override
     public void process(Exchange exchange) throws Exception {
-    	log.info("processing SabreSession exchange in SabreSessionClientProcessor");
-    	    	
-    	Message inMessage = exchange.getIn();;    	
-    	MessageContentsList result = (MessageContentsList)inMessage.getBody();
-    	
-    	ContextChangeRS changeResponse = (ContextChangeRS)result.get(0);
-    	SecurityToken token = changeResponse.getSecurityToken();
-    	String response = "<sessionCreate><token>"+token.getValue()+"</token></sessionCreate>";
-    	inMessage.setBody(response);
+        log.info("processing SabreSession exchange in SabreSessionClientProcessor");
+
+        Message inMessage = exchange.getIn();
+        ;
+        MessageContentsList result = (MessageContentsList) inMessage.getBody();
+
+        ContextChangeRS changeResponse = (ContextChangeRS) result.get(0);
+        SecurityToken token = changeResponse.getSecurityToken();
+        String response = "<sessionCreate><token>" + token.getValue() + "</token></sessionCreate>";
+        inMessage.setBody(response);
     }
 }

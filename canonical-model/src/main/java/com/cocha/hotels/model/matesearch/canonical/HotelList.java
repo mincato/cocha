@@ -6,11 +6,11 @@ public class HotelList {
 	
 	private List<Hotel> hotel;
 
-	public List<Hotel> getHotel() {
-		return hotel;
-	}
+    public List<Hotel> getHotel() {
+        return hotel;
+    }
 
-	public void setHotel(List<Hotel> hotel) {
-		this.hotel = hotel;
-	}
+    public void setHotel(List<Hotel> hotel) {
+        this.hotel = hotel;
+    }
 }

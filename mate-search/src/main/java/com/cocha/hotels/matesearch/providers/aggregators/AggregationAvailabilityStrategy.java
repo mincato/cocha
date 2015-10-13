@@ -13,7 +13,6 @@ import org.springframework.stereotype.Component;
 import com.cocha.hotels.matesearch.repositories.HotelMappingRepository;
 import com.cocha.hotels.matesearch.util.Constant;
 import com.cocha.hotels.matesearch.util.Constant.CodeSupplier;
-import com.cocha.hotels.model.content.mapping.HotelMapping;
 import com.cocha.hotels.model.matesearch.canonical.Hotel;
 import com.cocha.hotels.model.matesearch.canonical.HotelList;
 import com.cocha.hotels.model.matesearch.canonical.RateInfo;
@@ -21,14 +20,13 @@ import com.cocha.hotels.model.matesearch.canonical.RateInfoForSupplier;
 import com.cocha.hotels.model.matesearch.respose.supplier.IdMapping;
 import com.cocha.hotels.model.matesearch.respose.supplier.ResposeSuppliers;
 
-
 @Component
 public class AggregationAvailabilityStrategy implements AggregationStrategy {
-	
-	@Autowired
-	HotelMappingRepository hotelMappingRepository;
 
-	@Override
+    @Autowired
+    HotelMappingRepository hotelMappingRepository;
+
+    @Override
     public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {
     	
 		HotelList hotels;
