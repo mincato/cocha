@@ -7,6 +7,8 @@ import javax.xml.bind.annotation.XmlElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class BookingSupplierHotel {
 
+    private static final int IS_CLOSED_FALSE = 0;
+
     @XmlElement(name = "name")
     private String name;
 
@@ -30,6 +32,9 @@ public class BookingSupplierHotel {
 
     @XmlElement(name = "zip")
     private String zip;
+
+    @XmlElement(name = "is_closed")
+    private Integer isClosed;
 
     public String getName() {
         return name;
@@ -93,6 +98,18 @@ public class BookingSupplierHotel {
 
     public void setZip(String zip) {
         this.zip = zip;
+    }
+
+    public Boolean getIsActive() {
+        return new Integer(IS_CLOSED_FALSE).equals(this.isClosed);
+    }
+
+    public Integer getIsClosed() {
+        return isClosed;
+    }
+
+    public void setIsClosed(Integer isClosed) {
+        this.isClosed = isClosed;
     }
 
 }
