@@ -83,7 +83,7 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 				rateForSupplierOptional = resposeSuppliers.getRateForSupplier().stream().filter((RateInfoForSupplier rateForSupplier) -> rateForSupplier.getIdSupplier().equals(idMapping.getSupplierEAN())).findFirst();
 				break;
 			case CodeSupplier.SABRE_SUPPLIER_CODE:
-				rateForSupplierOptional = resposeSuppliers.getRateForSupplier().stream().filter((RateInfoForSupplier rateForSupplier) -> rateForSupplier.getIdSupplier().equals(idMapping.getSupplierSabre().replaceFirst("^0+(?!$)", ""))).findFirst();
+				rateForSupplierOptional = resposeSuppliers.getRateForSupplier().stream().filter((RateInfoForSupplier rateForSupplier) -> rateForSupplier.getIdSupplier().replaceFirst("^0+(?!$)", "").equals(idMapping.getSupplierSabre())).findFirst();
 				break;
 			}
 			
