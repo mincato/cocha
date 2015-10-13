@@ -9,8 +9,6 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
-import com.google.common.base.Objects;
-
 @Table(uniqueConstraints = @UniqueConstraint(columnNames = { "supplierHotelId", "supplierCode" }))
 @Entity
 @NamedQuery(name = "getMappingByConfidence", query = "select x from HotelMapping x where x.confidence = 100")
@@ -29,11 +27,14 @@ public class HotelMapping {
 
     private Integer confidence;
 
+    private boolean active;
+
     public HotelMapping(String canonicalId, HotelMatch match) {
         this.confidence = match.getConfidence();
         this.supplierHotelId = match.getHotelToCompare().getId();
         this.supplierCode = match.getHotelToCompare().getSupplierCode();
         this.hotelId = canonicalId;
+        this.active = match.getHotelToCompare().isActive();
     }
 
     public HotelMapping() {
@@ -69,6 +70,14 @@ public class HotelMapping {
 
     public void setConfidence(Integer confidence) {
         this.confidence = confidence;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
     }
 
 }
