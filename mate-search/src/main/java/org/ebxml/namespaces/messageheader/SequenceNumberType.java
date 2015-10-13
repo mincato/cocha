@@ -1,4 +1,3 @@
-
 package org.ebxml.namespaces.messageheader;
 
 import java.math.BigInteger;
@@ -9,11 +8,13 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 
-
 /**
- * <p>Clase Java para sequenceNumber.type complex type.
+ * <p>
+ * Clase Java para sequenceNumber.type complex type.
  * 
- * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>
+ * El siguiente fragmento de esquema especifica el contenido que se espera que
+ * haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="sequenceNumber.type"&gt;
@@ -28,9 +29,7 @@ import javax.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "sequenceNumber.type", propOrder = {
-    "value"
-})
+@XmlType(name = "sequenceNumber.type", propOrder = { "value" })
 public class SequenceNumberType {
 
     @XmlValue
@@ -42,10 +41,8 @@ public class SequenceNumberType {
     /**
      * Obtiene el valor de la propiedad value.
      * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     * @return possible object is {@link BigInteger }
+     * 
      */
     public BigInteger getValue() {
         return value;
@@ -55,9 +52,8 @@ public class SequenceNumberType {
      * Define el valor de la propiedad value.
      * 
      * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *            allowed object is {@link BigInteger }
+     * 
      */
     public void setValue(BigInteger value) {
         this.value = value;
@@ -66,10 +62,8 @@ public class SequenceNumberType {
     /**
      * Obtiene el valor de la propiedad status.
      * 
-     * @return
-     *     possible object is
-     *     {@link StatusType }
-     *     
+     * @return possible object is {@link StatusType }
+     * 
      */
     public StatusType getStatus() {
         if (status == null) {
@@ -83,9 +77,8 @@ public class SequenceNumberType {
      * Define el valor de la propiedad status.
      * 
      * @param value
-     *     allowed object is
-     *     {@link StatusType }
-     *     
+     *            allowed object is {@link StatusType }
+     * 
      */
     public void setStatus(StatusType value) {
         this.status = value;

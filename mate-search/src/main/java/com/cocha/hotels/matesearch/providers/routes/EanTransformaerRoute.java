@@ -12,19 +12,19 @@ import com.cocha.hotels.model.matesearch.supplier.ean.hotel.SupplierEANHotelResp
 
 @Component
 public class EanTransformaerRoute extends RouteBuilder {
-	
-	@Autowired
-	private SupplierHotelProcessor supplirHotelProcessor;
-	
-	@Autowired
-	private ApprovalResposeEAN approvalResposeEAN;
-	
+
+    @Autowired
+    private SupplierHotelProcessor supplirHotelProcessor;
+
+    @Autowired
+    private ApprovalResposeEAN approvalResposeEAN;
+
     @Override
     public void configure() throws Exception {
 
-        
-		from("direct:transfomerResposeEAN").bean(approvalResposeEAN).unmarshal().json(JsonLibrary.Jackson, SupplierEANHotelResponse.class)
-        .setHeader("supplier", simple(CodeSupplier.EAN_SUPPLIER_CODE)).bean(supplirHotelProcessor);
+        from("direct:transfomerResposeEAN").bean(approvalResposeEAN).unmarshal()
+                .json(JsonLibrary.Jackson, SupplierEANHotelResponse.class)
+                .setHeader("supplier", simple(CodeSupplier.EAN_SUPPLIER_CODE)).bean(supplirHotelProcessor);
     }
 
 }

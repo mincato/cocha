@@ -70,5 +70,5 @@ public class HotelMapping {
     public void setConfidence(Integer confidence) {
         this.confidence = confidence;
     }
-    
+
 }

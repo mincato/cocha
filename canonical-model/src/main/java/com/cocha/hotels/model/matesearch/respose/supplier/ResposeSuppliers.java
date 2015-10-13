@@ -5,14 +5,14 @@ import java.util.List;
 import com.cocha.hotels.model.matesearch.canonical.RateInfoForSupplier;
 
 public class ResposeSuppliers {
-	
-	private List<RateInfoForSupplier> rateForSupplier;
 
-	public List<RateInfoForSupplier> getRateForSupplier() {
-		return rateForSupplier;
-	}
+    private List<RateInfoForSupplier> rateForSupplier;
 
-	public void setRateForSupplier(List<RateInfoForSupplier> rateForSupplier) {
-		this.rateForSupplier = rateForSupplier;
-	}
+    public List<RateInfoForSupplier> getRateForSupplier() {
+        return rateForSupplier;
+    }
+
+    public void setRateForSupplier(List<RateInfoForSupplier> rateForSupplier) {
+        this.rateForSupplier = rateForSupplier;
+    }
 }

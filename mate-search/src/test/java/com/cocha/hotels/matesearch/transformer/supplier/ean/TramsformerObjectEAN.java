@@ -48,7 +48,7 @@ public class TramsformerObjectEAN extends CamelSpringTestSupport {
         Surcharge surcharge = new Surcharge();
 
         hotel.setHotelid(164116);
-        
+
         listSumeryElement.add(hotel);
 
         surcharges.setSurcharge(surcharge);

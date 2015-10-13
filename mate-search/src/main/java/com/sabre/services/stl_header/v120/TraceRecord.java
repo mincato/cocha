@@ -1,4 +1,3 @@
-
 package com.sabre.services.stl_header.v120;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -9,14 +8,16 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 import javax.xml.datatype.XMLGregorianCalendar;
 
-
 /**
- * Record for all systems (consumer, proxies and gateways, providers) to use to trace the message. 
- * 			The value is the common system name.
+ * Record for all systems (consumer, proxies and gateways, providers) to use to
+ * trace the message. The value is the common system name.
  * 
- * <p>Clase Java para TraceRecord complex type.
+ * <p>
+ * Clase Java para TraceRecord complex type.
  * 
- * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>
+ * El siguiente fragmento de esquema especifica el contenido que se espera que
+ * haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="TraceRecord"&gt;
@@ -38,9 +39,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TraceRecord", propOrder = {
-    "value"
-})
+@XmlType(name = "TraceRecord", propOrder = { "value" })
 public class TraceRecord {
 
     @XmlValue
@@ -68,10 +67,8 @@ public class TraceRecord {
     /**
      * Obtiene el valor de la propiedad value.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getValue() {
         return value;
@@ -81,9 +78,8 @@ public class TraceRecord {
      * Define el valor de la propiedad value.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setValue(String value) {
         this.value = value;
@@ -92,10 +88,8 @@ public class TraceRecord {
     /**
      * Obtiene el valor de la propiedad key.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getKey() {
         return key;
@@ -105,9 +99,8 @@ public class TraceRecord {
      * Define el valor de la propiedad key.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setKey(String value) {
         this.key = value;
@@ -116,10 +109,8 @@ public class TraceRecord {
     /**
      * Obtiene el valor de la propiedad start.
      * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     * @return possible object is {@link XMLGregorianCalendar }
+     * 
      */
     public XMLGregorianCalendar getStart() {
         return start;
@@ -129,9 +120,8 @@ public class TraceRecord {
      * Define el valor de la propiedad start.
      * 
      * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *            allowed object is {@link XMLGregorianCalendar }
+     * 
      */
     public void setStart(XMLGregorianCalendar value) {
         this.start = value;
@@ -140,10 +130,8 @@ public class TraceRecord {
     /**
      * Obtiene el valor de la propiedad end.
      * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     * @return possible object is {@link XMLGregorianCalendar }
+     * 
      */
     public XMLGregorianCalendar getEnd() {
         return end;
@@ -153,9 +141,8 @@ public class TraceRecord {
      * Define el valor de la propiedad end.
      * 
      * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *            allowed object is {@link XMLGregorianCalendar }
+     * 
      */
     public void setEnd(XMLGregorianCalendar value) {
         this.end = value;
@@ -164,10 +151,8 @@ public class TraceRecord {
     /**
      * Obtiene el valor de la propiedad appInstance.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getAppInstance() {
         return appInstance;
@@ -177,9 +162,8 @@ public class TraceRecord {
      * Define el valor de la propiedad appInstance.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setAppInstance(String value) {
         this.appInstance = value;
@@ -188,10 +172,8 @@ public class TraceRecord {
     /**
      * Obtiene el valor de la propiedad cluster.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getCluster() {
         return cluster;
@@ -201,9 +183,8 @@ public class TraceRecord {
      * Define el valor de la propiedad cluster.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setCluster(String value) {
         this.cluster = value;
@@ -212,10 +193,8 @@ public class TraceRecord {
     /**
      * Obtiene el valor de la propiedad host.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getHost() {
         return host;
@@ -225,9 +204,8 @@ public class TraceRecord {
      * Define el valor de la propiedad host.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setHost(String value) {
         this.host = value;
@@ -236,10 +214,8 @@ public class TraceRecord {
     /**
      * Obtiene el valor de la propiedad targetURI.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getTargetURI() {
         return targetURI;
@@ -249,9 +225,8 @@ public class TraceRecord {
      * Define el valor de la propiedad targetURI.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setTargetURI(String value) {
         this.targetURI = value;
@@ -260,10 +235,8 @@ public class TraceRecord {
     /**
      * Obtiene el valor de la propiedad role.
      * 
-     * @return
-     *     possible object is
-     *     {@link TraceRole }
-     *     
+     * @return possible object is {@link TraceRole }
+     * 
      */
     public TraceRole getRole() {
         return role;
@@ -273,9 +246,8 @@ public class TraceRecord {
      * Define el valor de la propiedad role.
      * 
      * @param value
-     *     allowed object is
-     *     {@link TraceRole }
-     *     
+     *            allowed object is {@link TraceRole }
+     * 
      */
     public void setRole(TraceRole value) {
         this.role = value;

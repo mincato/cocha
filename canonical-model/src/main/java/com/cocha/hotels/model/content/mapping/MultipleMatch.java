@@ -16,14 +16,13 @@ public class MultipleMatch {
     }
 
     public HotelMatch findBestMatch() {
-        Optional<HotelMatch> match = this.matches
-                .stream()
-                .max((h1, h2) -> h1.getConfidence().compareTo(h2.getConfidence()));
-        if (match.isPresent()){
+        Optional<HotelMatch> match = this.matches.stream().max(
+                (h1, h2) -> h1.getConfidence().compareTo(h2.getConfidence()));
+        if (match.isPresent()) {
             return match.get();
         }
-        
-        //TODO parametrizar
+
+        // TODO parametrizar
         return new HotelMatch(0);
     }
 

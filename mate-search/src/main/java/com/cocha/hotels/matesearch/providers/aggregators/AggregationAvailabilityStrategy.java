@@ -15,63 +15,64 @@ import com.cocha.hotels.model.matesearch.canonical.RateInfo;
 import com.cocha.hotels.model.matesearch.canonical.RateInfoForSupplier;
 import com.cocha.hotels.model.matesearch.respose.supplier.ResposeSuppliers;
 
-
 @Component
 public class AggregationAvailabilityStrategy implements AggregationStrategy {
-	
-	@Autowired
-	HotelMappingRepository hotelMappingRepository;
 
-	@Override
+    @Autowired
+    HotelMappingRepository hotelMappingRepository;
+
+    @Override
     public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {
-    	
-		HotelList hotels;
-    	ResposeSuppliers resposeSuppliers;
-    	Exchange exchange;
-    	
-    	if (newExchange.getIn().getBody(HotelList.class) instanceof HotelList) {
-    		   		
-    		exchange = newExchange;
-    		
-    	} else if (newExchange.getIn().getBody(ResposeSuppliers.class) instanceof ResposeSuppliers) {
-    		
-    		hotels = oldExchange.getIn().getBody(HotelList.class);
-    		resposeSuppliers = newExchange.getIn().getBody(ResposeSuppliers.class);
-    		if(resposeSuppliers.getRateForSupplier()  != null) {
-    			this.addRates(hotels,resposeSuppliers);
-    		}
-    		
-    		oldExchange.getIn().setBody(hotels);
-    		
-    		exchange = oldExchange;
-    	} else {
-    		exchange = null;
-    	}
-    	
-    	return exchange;
+
+        HotelList hotels;
+        ResposeSuppliers resposeSuppliers;
+        Exchange exchange;
+
+        if (newExchange.getIn().getBody(HotelList.class) instanceof HotelList) {
+
+            exchange = newExchange;
+
+        } else if (newExchange.getIn().getBody(ResposeSuppliers.class) instanceof ResposeSuppliers) {
+
+            hotels = oldExchange.getIn().getBody(HotelList.class);
+            resposeSuppliers = newExchange.getIn().getBody(ResposeSuppliers.class);
+            if (resposeSuppliers.getRateForSupplier() != null) {
+                this.addRates(hotels, resposeSuppliers);
+            }
+
+            oldExchange.getIn().setBody(hotels);
+
+            exchange = oldExchange;
+        } else {
+            exchange = null;
+        }
+
+        return exchange;
     }
-    
-	private void addRates(HotelList hotels, ResposeSuppliers resposeSuppliers) {
-		
-		for(Hotel hotel : hotels.getHotel()) {
-			for(RateInfoForSupplier rateInfoForSupplier : resposeSuppliers.getRateForSupplier()) {
-				
-				List<HotelMapping> hotelMapping =  hotelMappingRepository.findByHotelId(hotel.getId());
-				
-				if(hotelMapping.get(0).getSupplierHotelId().equals(rateInfoForSupplier.getIdSupplier()) || hotelMapping.get(1).getSupplierHotelId().equals(rateInfoForSupplier.getIdSupplier()) || hotelMapping.get(2).getSupplierHotelId().equals(rateInfoForSupplier.getIdSupplier())) {
-					this.addRate(hotel, rateInfoForSupplier);					
-				}
-				
-			}
-		}
-		
-	}
 
-	private void addRate(Hotel hotel, RateInfoForSupplier rateInfoForSupplier) {
+    private void addRates(HotelList hotels, ResposeSuppliers resposeSuppliers) {
 
-		RateInfo rateInfo = hotel.getRateInfo();
-		rateInfo.updateRatesHightandLow(rateInfoForSupplier.getHigtRate(), rateInfoForSupplier.getLowRate());
-		rateInfo.add(rateInfoForSupplier);
-		
-	}
+        for (Hotel hotel : hotels.getHotel()) {
+            for (RateInfoForSupplier rateInfoForSupplier : resposeSuppliers.getRateForSupplier()) {
+
+                List<HotelMapping> hotelMapping = hotelMappingRepository.findByHotelId(hotel.getId());
+
+                if (hotelMapping.get(0).getSupplierHotelId().equals(rateInfoForSupplier.getIdSupplier())
+                        || hotelMapping.get(1).getSupplierHotelId().equals(rateInfoForSupplier.getIdSupplier())
+                        || hotelMapping.get(2).getSupplierHotelId().equals(rateInfoForSupplier.getIdSupplier())) {
+                    this.addRate(hotel, rateInfoForSupplier);
+                }
+
+            }
+        }
+
+    }
+
+    private void addRate(Hotel hotel, RateInfoForSupplier rateInfoForSupplier) {
+
+        RateInfo rateInfo = hotel.getRateInfo();
+        rateInfo.updateRatesHightandLow(rateInfoForSupplier.getHigtRate(), rateInfoForSupplier.getLowRate());
+        rateInfo.add(rateInfoForSupplier);
+
+    }
 }

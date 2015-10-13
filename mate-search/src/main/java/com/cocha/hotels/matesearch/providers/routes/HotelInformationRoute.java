@@ -9,13 +9,13 @@ import com.cocha.hotels.matesearch.providers.services.HotelInformation;
 @Component
 public class HotelInformationRoute extends RouteBuilder {
 
-	@Autowired
-	HotelInformation hotelInformation;
-		
-	@Override
-	public void configure() throws Exception {
-		from("direct:getHotelInformation").bean(hotelInformation);
-		
-	}
+    @Autowired
+    HotelInformation hotelInformation;
+
+    @Override
+    public void configure() throws Exception {
+        from("direct:getHotelInformation").bean(hotelInformation);
+
+    }
 
 }

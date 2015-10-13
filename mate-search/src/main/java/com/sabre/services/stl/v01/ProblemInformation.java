@@ -1,4 +1,3 @@
-
 package com.sabre.services.stl.v01;
 
 import java.util.ArrayList;
@@ -12,11 +11,13 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 import com.sabre.services.stl_header.v120.ErrorType;
 
-
 /**
- * <p>Clase Java para ProblemInformation complex type.
+ * <p>
+ * Clase Java para ProblemInformation complex type.
  * 
- * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>
+ * El siguiente fragmento de esquema especifica el contenido que se espera que
+ * haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="ProblemInformation"&gt;
@@ -35,9 +36,7 @@ import com.sabre.services.stl_header.v120.ErrorType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ProblemInformation", propOrder = {
-    "systemSpecificResults"
-})
+@XmlType(name = "ProblemInformation", propOrder = { "systemSpecificResults" })
 public class ProblemInformation {
 
     @XmlElement(name = "SystemSpecificResults")
@@ -52,15 +51,16 @@ public class ProblemInformation {
      * Gets the value of the systemSpecificResults property.
      * 
      * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the systemSpecificResults property.
+     * This accessor method returns a reference to the live list, not a
+     * snapshot. Therefore any modification you make to the returned list will
+     * be present inside the JAXB object. This is why there is not a
+     * <CODE>set</CODE> method for the systemSpecificResults property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * 
      * <pre>
-     *    getSystemSpecificResults().add(newItem);
+     * getSystemSpecificResults().add(newItem);
      * </pre>
      * 
      * 
@@ -80,10 +80,8 @@ public class ProblemInformation {
     /**
      * Obtiene el valor de la propiedad type.
      * 
-     * @return
-     *     possible object is
-     *     {@link ErrorType }
-     *     
+     * @return possible object is {@link ErrorType }
+     * 
      */
     public ErrorType getType() {
         return type;
@@ -93,9 +91,8 @@ public class ProblemInformation {
      * Define el valor de la propiedad type.
      * 
      * @param value
-     *     allowed object is
-     *     {@link ErrorType }
-     *     
+     *            allowed object is {@link ErrorType }
+     * 
      */
     public void setType(ErrorType value) {
         this.type = value;
@@ -104,10 +101,8 @@ public class ProblemInformation {
     /**
      * Obtiene el valor de la propiedad timeStamp.
      * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     * @return possible object is {@link XMLGregorianCalendar }
+     * 
      */
     public XMLGregorianCalendar getTimeStamp() {
         return timeStamp;
@@ -117,9 +112,8 @@ public class ProblemInformation {
      * Define el valor de la propiedad timeStamp.
      * 
      * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *            allowed object is {@link XMLGregorianCalendar }
+     * 
      */
     public void setTimeStamp(XMLGregorianCalendar value) {
         this.timeStamp = value;

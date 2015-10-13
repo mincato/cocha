@@ -50,4 +50,25 @@
 			<field name="propertyDescription"/>
 		</record>
 	</stream>
+	<stream name="eanGeoParentRegions" format="csv">
+		<parser>
+			<property name="delimiter" value="|" />
+			<property name="unquotedQuotesAllowed" value="true"/>
+		</parser>
+		<record name="header" order="1" minOccurs="1" maxOccurs="1" />		
+		<record name="hotel" order="2"
+			class="com.cocha.hotels.feeddownloader.ean.model.EanSupplierGeoParentRegion"
+			minOccurs="1" maxOccurs="unbounded">						
+			<field name="regionId" />
+			<field name="regionType" />
+			<field name="relativeSignificance" />
+			<field name="subClass" />
+			<field name="regionName" />
+			<field name="regionNameLong" />
+			<field name="parentRegionID" />
+			<field name="parentRegionType" />
+			<field name="parentRegionName" />
+			<field name="parentRegionNameLong" />		
+		</record>
+		</stream>
 </beanio>	

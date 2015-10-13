@@ -1,4 +1,3 @@
-
 package org.w3._2000._09.xmldsig_;
 
 import java.util.ArrayList;
@@ -11,11 +10,13 @@ import javax.xml.bind.annotation.XmlElementRef;
 import javax.xml.bind.annotation.XmlType;
 import org.w3c.dom.Element;
 
-
 /**
- * <p>Clase Java para SPKIDataType complex type.
+ * <p>
+ * Clase Java para SPKIDataType complex type.
  * 
- * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>
+ * El siguiente fragmento de esquema especifica el contenido que se espera que
+ * haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="SPKIDataType"&gt;
@@ -33,9 +34,7 @@ import org.w3c.dom.Element;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SPKIDataType", propOrder = {
-    "spkiSexpAndAny"
-})
+@XmlType(name = "SPKIDataType", propOrder = { "spkiSexpAndAny" })
 public class SPKIDataType {
 
     @XmlElementRef(name = "SPKISexp", namespace = "http://www.w3.org/2000/09/xmldsig#", type = JAXBElement.class)
@@ -46,23 +45,22 @@ public class SPKIDataType {
      * Gets the value of the spkiSexpAndAny property.
      * 
      * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the spkiSexpAndAny property.
+     * This accessor method returns a reference to the live list, not a
+     * snapshot. Therefore any modification you make to the returned list will
+     * be present inside the JAXB object. This is why there is not a
+     * <CODE>set</CODE> method for the spkiSexpAndAny property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * 
      * <pre>
-     *    getSPKISexpAndAny().add(newItem);
+     * getSPKISexpAndAny().add(newItem);
      * </pre>
      * 
      * 
      * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link Element }
-     * {@link Object }
-     * {@link JAXBElement }{@code <}{@link byte[]}{@code >}
+     * Objects of the following type(s) are allowed in the list {@link Element }
+     * {@link Object } {@link JAXBElement }{@code <}{@link byte[]}{@code >}
      * 
      * 
      */

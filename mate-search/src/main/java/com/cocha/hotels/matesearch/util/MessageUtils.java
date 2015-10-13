@@ -25,11 +25,11 @@ public class MessageUtils {
         }
         return parameters;
     }
-    
+
     public static List<String> parseStringHotelIdToHotelId(String stringIds) {
-    	
-    	List<String> ids = Arrays.asList(stringIds.split("\\s*,\\s*"));
-    	
-    	return ids;
+
+        List<String> ids = Arrays.asList(stringIds.split("\\s*,\\s*"));
+
+        return ids;
     }
 }

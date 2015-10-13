@@ -5,7 +5,7 @@ import org.junit.Assert;
 public class RuleVerifier {
 
     private RuleMatch ruleMatch;
-	private Integer maxConfidence;
+    private Integer maxConfidence;
 
     public RuleVerifier(RuleMatch ruleMatch, Integer maxConfidence) {
         this.ruleMatch = ruleMatch;
