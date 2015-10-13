@@ -58,7 +58,7 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 				
 				List<HotelMapping> hotelMapping =  hotelMappingRepository.findByHotelId(hotel.getId());
 				
-				if(hotelMapping.get(0).getSupplierHotelId().equals(rateInfoForSupplier.getIdSupplier()) || hotelMapping.get(1).getSupplierHotelId().equals(rateInfoForSupplier.getIdSupplier()) || hotelMapping.get(2).getSupplierHotelId().equals(rateInfoForSupplier.getIdSupplier())) {
+				if(hotelMapping.get(0).getSupplierHotelId().equals(rateInfoForSupplier.getIdSupplier()) || hotelMapping.get(1).getSupplierHotelId().equals(rateInfoForSupplier.getIdSupplier()) || hotelMapping.get(2).getSupplierHotelId().equals(rateInfoForSupplier.getIdSupplier().replaceFirst("^0+(?!$)", ""))) {
 					this.addRate(hotel, rateInfoForSupplier);					
 				}
 				
