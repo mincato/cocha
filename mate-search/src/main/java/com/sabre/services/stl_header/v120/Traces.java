@@ -1,4 +1,3 @@
-
 package com.sabre.services.stl_header.v120;
 
 import java.util.ArrayList;
@@ -8,11 +7,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Clase Java para Traces complex type.
+ * <p>
+ * Clase Java para Traces complex type.
  * 
- * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>
+ * El siguiente fragmento de esquema especifica el contenido que se espera que
+ * haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="Traces"&gt;
@@ -29,9 +30,7 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Traces", propOrder = {
-    "trace"
-})
+@XmlType(name = "Traces", propOrder = { "trace" })
 public class Traces {
 
     @XmlElement(name = "Trace")
@@ -41,15 +40,16 @@ public class Traces {
      * Gets the value of the trace property.
      * 
      * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the trace property.
+     * This accessor method returns a reference to the live list, not a
+     * snapshot. Therefore any modification you make to the returned list will
+     * be present inside the JAXB object. This is why there is not a
+     * <CODE>set</CODE> method for the trace property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * 
      * <pre>
-     *    getTrace().add(newItem);
+     * getTrace().add(newItem);
      * </pre>
      * 
      * 

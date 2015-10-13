@@ -36,11 +36,11 @@ public class HotelList {
         return activepropertycount;
     }
 
-	public List<HotelSummaryElement> getHotelsummary() {
-		return hotelsummary;
-	}
+    public List<HotelSummaryElement> getHotelsummary() {
+        return hotelsummary;
+    }
 
-	public void setHotelsummary(List<HotelSummaryElement> hotelsummary) {
-		this.hotelsummary = hotelsummary;
-	}
+    public void setHotelsummary(List<HotelSummaryElement> hotelsummary) {
+        this.hotelsummary = hotelsummary;
+    }
 }

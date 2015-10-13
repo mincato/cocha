@@ -1,0 +1,401 @@
+RegionID|RegionType|RelativeSignificance|SubClass|RegionName|RegionNameLong|ParentRegionID|ParentRegionType|ParentRegionName|ParentRegionNameLong
+6297325|City||tree|Glaciar Spegazzinni|Glaciar Spegazzinni, Argentina|8|Country|Argentina|Argentina
+6297354|City||tree|Canal Cristina|Canal Cristina, Argentina|8|Country|Argentina|Argentina
+6054191|City|||San Pedro Norte|San Pedro Norte, Argentina|6054204|Multi-Region (within a country)|Cordoba (province)|Cordoba (province), Argentina
+6057800|City|||Villa Maria|Villa Maria, Argentina|6054204|Multi-Region (within a country)|Cordoba (province)|Cordoba (province), Argentina
+564|City|||Bahia Blanca|Bahia Blanca, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+2119|City|||La Plata|La Plata, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+178084|City|||Veinticinco de Mayo|Veinticinco de Mayo, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+6049083|City|||Magdalena|Magdalena, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+6049478|City|||Tapalque|Tapalque, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+6051367|City|||Castelli|Castelli, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+6124835|City|||Necochea|Necochea, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+6129068|City|||Carabelas|Carabelas, Campana, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+6140842|City|||Tandil|Tandil, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+6141340|City|||Brandsen|Brandsen, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+6141816|City|||Coronel Vidal|Coronel Vidal, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+6142856|City|||Junin|Junin, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+6159364|City|||Canuelas|Canuelas, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+6191827|City|||Chascomus|Chascomus, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+6197749|City|||San Miguel del Monte|San Miguel del Monte, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+6201112|City|||Monte Hermoso|Monte Hermoso, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+6201385|City|||Claromeco|Claromeco, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+6217463|City|||Trenque Lauquen|Trenque Lauquen, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+6295394|City|||Quequen|Quequen, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+6308696|City|||Carmen de Patagones|Carmen de Patagones, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+6322424|City|||Sierra de la Ventana|Sierra de la Ventana, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+6323659|City||neighbor|Atalaya|Atalaya, Magdalena, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+6323661|City|||Azul|Azul, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+6323668|City|||Chacabuco|Chacabuco, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+6323669|City|||Chivilcoy|Chivilcoy, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+6323671|City|||Duggan|Duggan, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+6323673|City|||Gardey|Gardey, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+6337969|City||tree|Paseo de las Esculturas|Paseo de las Esculturas, Bahia Blanca, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+6343529|City|||Bragado|Bragado, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+6343530|City|||Carmen de Areco|Carmen de Areco, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+6343531|City|||Coronel Suarez|Coronel Suarez, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+6347425|City|||Lobos|Lobos, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+6347827|City|||Pergamino|Pergamino, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+6348255|City|||Los Toldos|Los Toldos, Argentina|6054206|Multi-Region (within a country)|Buenos Aires (province)|Buenos Aires (province), Argentina
+1351|City|||General Roca|General Roca, Argentina|6210116|Multi-City (Vicinity)|Neuquen (and vicinity)|Neuquen (and vicinity), Argentina
+2595|City|||Neuquen|Neuquen, Argentina|6210116|Multi-City (Vicinity)|Neuquen (and vicinity)|Neuquen (and vicinity), Argentina
+6142499|City|||Cipolletti|Cipolletti, Argentina|6210116|Multi-City (Vicinity)|Neuquen (and vicinity)|Neuquen (and vicinity), Argentina
+6346639|City|||Anelo|Anelo, Argentina|6210116|Multi-City (Vicinity)|Neuquen (and vicinity)|Neuquen (and vicinity), Argentina
+2164|City|||San Luis|San Luis, Argentina|6210438|Multi-City (Vicinity)|San Luis (and vicinity)|San Luis (and vicinity), Argentina
+6141856|City|||Trapiche|Trapiche, Argentina|6210438|Multi-City (Vicinity)|San Luis (and vicinity)|San Luis (and vicinity), Argentina
+6210448|City|||La Punta|La Punta, Argentina|6210438|Multi-City (Vicinity)|San Luis (and vicinity)|San Luis (and vicinity), Argentina
+6210454|City|||Potrero de los Funes|Potrero de los Funes, Argentina|6210438|Multi-City (Vicinity)|San Luis (and vicinity)|San Luis (and vicinity), Argentina
+6127218|City|||Nono|Nono, Argentina|6210708|Multi-City (Vicinity)|Mina Clavero (and vicinity)|Mina Clavero (and vicinity), Argentina
+6128918|City|||Pampa de Achala|Pampa de Achala, Argentina|6210708|Multi-City (Vicinity)|Mina Clavero (and vicinity)|Mina Clavero (and vicinity), Argentina
+6140916|City|||San Javier|San Javier, Argentina|6210708|Multi-City (Vicinity)|Mina Clavero (and vicinity)|Mina Clavero (and vicinity), Argentina
+6159783|City|||Las Rosas|Las Rosas, Argentina|6210708|Multi-City (Vicinity)|Mina Clavero (and vicinity)|Mina Clavero (and vicinity), Argentina
+6177556|City|||Mina Clavero|Mina Clavero, Argentina|6210708|Multi-City (Vicinity)|Mina Clavero (and vicinity)|Mina Clavero (and vicinity), Argentina
+6210719|City|||Villa Cura Brochero|Villa Cura Brochero, Argentina|6210708|Multi-City (Vicinity)|Mina Clavero (and vicinity)|Mina Clavero (and vicinity), Argentina
+178060|City|||Villa General Belgrano|Villa General Belgrano, Argentina|6210727|Multi-City (Vicinity)|Calamuchita Valley|Calamuchita Valley, Argentina
+6130702|City|||Villa Del Dique|Villa Del Dique, Argentina|6210727|Multi-City (Vicinity)|Calamuchita Valley|Calamuchita Valley, Argentina
+6130935|City|||Santa Rosa de Calamuchita|Santa Rosa de Calamuchita, Argentina|6210727|Multi-City (Vicinity)|Calamuchita Valley|Calamuchita Valley, Argentina
+6316195|City|||Villa Yacanto|Villa Yacanto, Argentina|6210727|Multi-City (Vicinity)|Calamuchita Valley|Calamuchita Valley, Argentina
+6346640|City|||Almafuerte|Almafuerte, Argentina|6210727|Multi-City (Vicinity)|Calamuchita Valley|Calamuchita Valley, Argentina
+3562|City|||Tucuman|Tucuman, Argentina|6210982|Multi-City (Vicinity)|Tucuman (and vicinity)|Tucuman (and vicinity), Argentina
+6129485|City|||Tafi del Valle|Tafi del Valle, Argentina|6210982|Multi-City (Vicinity)|Tucuman (and vicinity)|Tucuman (and vicinity), Argentina
+6348175|City||neighbor|Yerba Buena|Yerba Buena, Tucuman, Argentina|6210982|Multi-City (Vicinity)|Tucuman (and vicinity)|Tucuman (and vicinity), Argentina
+6348186|City|||San Pedro de Colalao|San Pedro de Colalao, Argentina|6210982|Multi-City (Vicinity)|Tucuman (and vicinity)|Tucuman (and vicinity), Argentina
+6348188|City|||El Mollar|El Mollar, Argentina|6210982|Multi-City (Vicinity)|Tucuman (and vicinity)|Tucuman (and vicinity), Argentina
+6348239|City|||Concepcion|Concepcion, Argentina|6210982|Multi-City (Vicinity)|Tucuman (and vicinity)|Tucuman (and vicinity), Argentina
+6348660|City|||Famailla|Famailla, Argentina|6210982|Multi-City (Vicinity)|Tucuman (and vicinity)|Tucuman (and vicinity), Argentina
+6034204|City|||Campana|Campana, Argentina|6211235|Multi-City (Vicinity)|Pilar (and vicinity)|Pilar (and vicinity), Argentina
+6035409|City|||Pilar|Pilar, Argentina|6211235|Multi-City (Vicinity)|Pilar (and vicinity)|Pilar (and vicinity), Argentina
+6049682|City|||San Antonio de Areco|San Antonio de Areco, Argentina|6211235|Multi-City (Vicinity)|Pilar (and vicinity)|Pilar (and vicinity), Argentina
+6127600|City|||Lujan|Lujan, Argentina|6211235|Multi-City (Vicinity)|Pilar (and vicinity)|Pilar (and vicinity), Argentina
+6142991|City|||Capilla del Senor|Capilla del Senor, Argentina|6211235|Multi-City (Vicinity)|Pilar (and vicinity)|Pilar (and vicinity), Argentina
+6143394|City|||Mercedes|Mercedes, Argentina|6211235|Multi-City (Vicinity)|Pilar (and vicinity)|Pilar (and vicinity), Argentina
+6323660|City|||Azcuenaga|Azcuenaga, Argentina|6211235|Multi-City (Vicinity)|Pilar (and vicinity)|Pilar (and vicinity), Argentina
+6323666|City|||Carlos Keen|Carlos Keen, Argentina|6211235|Multi-City (Vicinity)|Pilar (and vicinity)|Pilar (and vicinity), Argentina
+6323670|City|||Diego Gaynor|Diego Gaynor, Argentina|6211235|Multi-City (Vicinity)|Pilar (and vicinity)|Pilar (and vicinity), Argentina
+6323675|City|||General Rodriguez|General Rodriguez, Argentina|6211235|Multi-City (Vicinity)|Pilar (and vicinity)|Pilar (and vicinity), Argentina
+6323680|City|||La Reja|La Reja, Argentina|6211235|Multi-City (Vicinity)|Pilar (and vicinity)|Pilar (and vicinity), Argentina
+6323682|City||neighbor|Open Door|Open Door, Lujan, Argentina|6211235|Multi-City (Vicinity)|Pilar (and vicinity)|Pilar (and vicinity), Argentina
+6323688|City|||Ruiz|Ruiz, Argentina|6211235|Multi-City (Vicinity)|Pilar (and vicinity)|Pilar (and vicinity), Argentina
+6323690|City|||San Andres de Giles|San Andres de Giles, Argentina|6211235|Multi-City (Vicinity)|Pilar (and vicinity)|Pilar (and vicinity), Argentina
+1316|City|||Gobernador Gregores|Gobernador Gregores, Argentina|6232229|Multi-Region (within a country)|Santa Cruz (province)|Santa Cruz (province), Argentina
+2899|City|||Puerto Deseado|Puerto Deseado, Argentina|6232229|Multi-Region (within a country)|Santa Cruz (province)|Santa Cruz (province), Argentina
+2985|City|||Rio Gallegos|Rio Gallegos, Argentina|6232229|Multi-Region (within a country)|Santa Cruz (province)|Santa Cruz (province), Argentina
+3065|City|||Rio Turbio|Rio Turbio, Argentina|6232229|Multi-Region (within a country)|Santa Cruz (province)|Santa Cruz (province), Argentina
+3628|City|||San Julian|San Julian, Argentina|6232229|Multi-Region (within a country)|Santa Cruz (province)|Santa Cruz (province), Argentina
+6055664|City|||El Chalten|El Chalten, Argentina|6232229|Multi-Region (within a country)|Santa Cruz (province)|Santa Cruz (province), Argentina
+6201381|City|||Bajo Caracoles|Bajo Caracoles, Argentina|6232229|Multi-Region (within a country)|Santa Cruz (province)|Santa Cruz (province), Argentina
+6323748|City||tree|Viedma Lake|Viedma Lake, El Chalten, Argentina|6232229|Multi-Region (within a country)|Santa Cruz (province)|Santa Cruz (province), Argentina
+6323752|City|||Cabo Virgenes|Cabo Virgenes, Argentina|6232229|Multi-Region (within a country)|Santa Cruz (province)|Santa Cruz (province), Argentina
+913|City|||Comodoro Rivadavia|Comodoro Rivadavia, Argentina|6232240|Multi-Region (within a country)|Chubut (province)|Chubut (province), Argentina
+1154|City|||Esquel|Esquel, Argentina|6232240|Multi-Region (within a country)|Chubut (province)|Chubut (province), Argentina
+1730|City|||Jose de San Martin|Jose de San Martin, Argentina|6232240|Multi-Region (within a country)|Chubut (province)|Chubut (province), Argentina
+3030|City|||Rio Mayo|Rio Mayo, Argentina|6232240|Multi-Region (within a country)|Chubut (province)|Chubut (province), Argentina
+6052470|City|||Camarones|Camarones, Argentina|6232240|Multi-Region (within a country)|Chubut (province)|Chubut (province), Argentina
+6201382|City|||Sarmiento|Sarmiento, Argentina|6232240|Multi-Region (within a country)|Chubut (province)|Chubut (province), Argentina
+6265884|City|||El Maiten|El Maiten, Argentina|6232240|Multi-Region (within a country)|Chubut (province)|Chubut (province), Argentina
+6266453|City|||Hoyo de Epuyen|Hoyo de Epuyen, Argentina|6232240|Multi-Region (within a country)|Chubut (province)|Chubut (province), Argentina
+6276970|City|||Bahia Bustamante|Bahia Bustamante, Argentina|6232240|Multi-Region (within a country)|Chubut (province)|Chubut (province), Argentina
+3036|City|||Santa Rosa|Santa Rosa, Argentina|6232299|Multi-Region (within a country)|La Pampa (province)|La Pampa (province), Argentina
+3026|City|||Rosario|Rosario, Argentina|6232320|Multi-Region (within a country)|Santa Fe (province)|Santa Fe (province), Argentina
+6146247|City|||Cayasta|Cayasta, Argentina|6232320|Multi-Region (within a country)|Santa Fe (province)|Santa Fe (province), Argentina
+6209955|City||shopping|Pedestrian Cordoba Street|Pedestrian Cordoba Street, Rosario, Argentina|6232320|Multi-Region (within a country)|Santa Fe (province)|Santa Fe (province), Argentina
+6323658|City|||Arroyo Seco|Arroyo Seco, Argentina|6232320|Multi-Region (within a country)|Santa Fe (province)|Santa Fe (province), Argentina
+6323672|City|||Funes|Funes, Argentina|6232320|Multi-Region (within a country)|Santa Fe (province)|Santa Fe (province), Argentina
+6323677|City|||Ibarlucea|Ibarlucea, Argentina|6232320|Multi-Region (within a country)|Santa Fe (province)|Santa Fe (province), Argentina
+6323684|City|||Roldan|Roldan, Argentina|6232320|Multi-Region (within a country)|Santa Fe (province)|Santa Fe (province), Argentina
+6323744|City|||Zavalla|Zavalla, Argentina|6232320|Multi-Region (within a country)|Santa Fe (province)|Santa Fe (province), Argentina
+892|City|||Concordia|Concordia, Argentina|6232337|Multi-Region (within a country)|Entre Rios (province)|Entre Rios (province), Argentina
+500197|City|||Parana|Parana, Argentina|6232337|Multi-Region (within a country)|Entre Rios (province)|Entre Rios (province), Argentina
+6141108|City|||Federacion|Federacion, Argentina|6232337|Multi-Region (within a country)|Entre Rios (province)|Entre Rios (province), Argentina
+6144191|City|||Colon|Colon, Argentina|6232337|Multi-Region (within a country)|Entre Rios (province)|Entre Rios (province), Argentina
+6201387|City|||Gualeguaychu|Gualeguaychu, Argentina|6232337|Multi-Region (within a country)|Entre Rios (province)|Entre Rios (province), Argentina
+6201389|City|||San Salvador|San Salvador, Argentina|6232337|Multi-Region (within a country)|Entre Rios (province)|Entre Rios (province), Argentina
+6246538|City|||Victoria|Victoria, Argentina|6232337|Multi-Region (within a country)|Entre Rios (province)|Entre Rios (province), Argentina
+6323676|City|||Gualeguay|Gualeguay, Argentina|6232337|Multi-Region (within a country)|Entre Rios (province)|Entre Rios (province), Argentina
+6335738|City|||Ceibas|Ceibas, Argentina|6232337|Multi-Region (within a country)|Entre Rios (province)|Entre Rios (province), Argentina
+397|City|||Paso de los Libres|Paso de los Libres, Argentina|6232362|Multi-Region (within a country)|Corrientes (province)|Corrientes (province), Argentina
+178069|City|||Bella Vista|Bella Vista, Argentina|6232362|Multi-Region (within a country)|Corrientes (province)|Corrientes (province), Argentina
+6049079|City|||Esquina|Esquina, Argentina|6232362|Multi-Region (within a country)|Corrientes (province)|Corrientes (province), Argentina
+6049974|City|||Ituzaingo|Ituzaingo, Argentina|6232362|Multi-Region (within a country)|Corrientes (province)|Corrientes (province), Argentina
+6229952|City||neighbor|Puerto Valle|Puerto Valle, Ituzaingo, Argentina|6232362|Multi-Region (within a country)|Corrientes (province)|Corrientes (province), Argentina
+2887|City|||Posadas|Posadas, Argentina|6232393|Multi-Region (within a country)|Misiones (province)|Misiones (province), Argentina
+6144162|City|||Puerto Rico|Puerto Rico, Argentina|6232393|Multi-Region (within a country)|Misiones (province)|Misiones (province), Argentina
+6201391|City|||San Ignacio|San Ignacio, Argentina|6232393|Multi-Region (within a country)|Misiones (province)|Misiones (province), Argentina
+6201393|City|||Santa Ana|Santa Ana, Argentina|6232393|Multi-Region (within a country)|Misiones (province)|Misiones (province), Argentina
+6229964|City|||Apostoles|Apostoles, Argentina|6232393|Multi-Region (within a country)|Misiones (province)|Misiones (province), Argentina
+6244614|City|||Eldorado|Eldorado, Argentina|6232393|Multi-Region (within a country)|Misiones (province)|Misiones (province), Argentina
+6249036|City|||Montecarlo|Montecarlo, Argentina|6232393|Multi-Region (within a country)|Misiones (province)|Misiones (province), Argentina
+6343403|City|||Saltos del Mocona|Saltos del Mocona, Argentina|6232393|Multi-Region (within a country)|Misiones (province)|Misiones (province), Argentina
+2976|City|||Resistencia|Resistencia, Argentina|6232456|Multi-Region (within a country)|Chaco (province)|Chaco (province), Argentina
+6201703|City|||Presidencia de la Plaza|Presidencia de la Plaza, Argentina|6232456|Multi-Region (within a country)|Chaco (province)|Chaco (province), Argentina
+1226|City|||Formosa|Formosa, Argentina|6232463|Multi-Region (within a country)|Formosa (province)|Formosa (province), Argentina
+3107|City|||Santiago del Estero|Santiago del Estero, Argentina|6232466|Multi-Region (within a country)|Santiago del Estero (province)|Santiago del Estero (province), Argentina
+6159820|City|||Termas de Rio Hondo|Termas de Rio Hondo, Argentina|6232466|Multi-Region (within a country)|Santiago del Estero (province)|Santiago del Estero (province), Argentina
+6201711|City|||Pampa de los Guanacos|Pampa de los Guanacos, Argentina|6232466|Multi-Region (within a country)|Santiago del Estero (province)|Santiago del Estero (province), Argentina
+6348181|City|||La Banda|La Banda, Argentina|6232466|Multi-Region (within a country)|Santiago del Estero (province)|Santiago del Estero (province), Argentina
+6348226|City|||Frias|Frias, Argentina|6232466|Multi-Region (within a country)|Santiago del Estero (province)|Santiago del Estero (province), Argentina
+6348245|City|||Villa Union|Villa Union, Argentina|6232466|Multi-Region (within a country)|Santiago del Estero (province)|Santiago del Estero (province), Argentina
+6348659|City|||Colalao del Valle|Colalao del Valle, Argentina|6232473|Multi-Region (within a country)|Tucuman (province)|Tucuman (province), Argentina
+6348665|City|||Amaicha Del Valle|Amaicha Del Valle, Argentina|6232473|Multi-Region (within a country)|Tucuman (province)|Tucuman (province), Argentina
+6047252|City|||Cafayate|Cafayate, Argentina|6232476|Multi-Region (within a country)|Salta (province)|Salta (province), Argentina
+6084961|City|||Rosario de la Frontera|Rosario de la Frontera, Argentina|6232476|Multi-Region (within a country)|Salta (province)|Salta (province), Argentina
+6084962|City|||Cachi|Cachi, Argentina|6232476|Multi-Region (within a country)|Salta (province)|Salta (province), Argentina
+6096831|City||tree|Los Cardones National Park|Los Cardones National Park, Cachi, Argentina|6232476|Multi-Region (within a country)|Salta (province)|Salta (province), Argentina
+6124836|City|||Iruya|Iruya, Argentina|6232476|Multi-Region (within a country)|Salta (province)|Salta (province), Argentina
+6124837|City|||San Antonio de los Cobres|San Antonio de los Cobres, Argentina|6232476|Multi-Region (within a country)|Salta (province)|Salta (province), Argentina
+6311918|City|||Payogasta|Payogasta, Argentina|6232476|Multi-Region (within a country)|Salta (province)|Salta (province), Argentina
+6312020|City|||Seclantas|Seclantas, Argentina|6232476|Multi-Region (within a country)|Salta (province)|Salta (province), Argentina
+6338927|City|||Molinos|Molinos, Argentina|6232476|Multi-Region (within a country)|Salta (province)|Salta (province), Argentina
+6348204|City|||Angastaco|Angastaco, Argentina|6232476|Multi-Region (within a country)|Salta (province)|Salta (province), Argentina
+6348205|City|||San Carlos|San Carlos, Argentina|6232476|Multi-Region (within a country)|Salta (province)|Salta (province), Argentina
+6348368|City||tree|Quebrada de Cafayate|Quebrada de Cafayate, Cafayate, Argentina|6232476|Multi-Region (within a country)|Salta (province)|Salta (province), Argentina
+6156969|City|||La Quiaca|La Quiaca, Argentina|6232492|Multi-Region (within a country)|Jujuy (province)|Jujuy (province), Argentina
+6279731|City|||Palca de Aparzo|Palca de Aparzo, Argentina|6232492|Multi-Region (within a country)|Jujuy (province)|Jujuy (province), Argentina
+6348241|City|||Javi|Javi, Argentina|6232492|Multi-Region (within a country)|Jujuy (province)|Jujuy (province), Argentina
+6348244|City|||Palma Sola|Palma Sola, Argentina|6232492|Multi-Region (within a country)|Jujuy (province)|Jujuy (province), Argentina
+925|City|||Catamarca|Catamarca, Argentina|6232516|Multi-Region (within a country)|Catamarca (province)|Catamarca (province), Argentina
+6201664|City|||Belen|Belen, Argentina|6232516|Multi-Region (within a country)|Catamarca (province)|Catamarca (province), Argentina
+6348211|City|||Santa Maria|Santa Maria, Argentina|6232516|Multi-Region (within a country)|Catamarca (province)|Catamarca (province), Argentina
+6348227|City|||Fiambala|Fiambala, Argentina|6232516|Multi-Region (within a country)|Catamarca (province)|Catamarca (province), Argentina
+6348230|City||neighbor|Coneta|Coneta, Catamarca, Argentina|6232516|Multi-Region (within a country)|Catamarca (province)|Catamarca (province), Argentina
+6348231|City|||Antofagasta de la Sierra|Antofagasta de la Sierra, Argentina|6232516|Multi-Region (within a country)|Catamarca (province)|Catamarca (province), Argentina
+6348234|City|||Tinogasta|Tinogasta, Argentina|6232516|Multi-Region (within a country)|Catamarca (province)|Catamarca (province), Argentina
+6348236|City||neighbor|Copacabana|Copacabana, Tinogasta, Argentina|6232516|Multi-Region (within a country)|Catamarca (province)|Catamarca (province), Argentina
+6348238|City||neighbor|La Puntilla|La Puntilla, Tinogasta, Argentina|6232516|Multi-Region (within a country)|Catamarca (province)|Catamarca (province), Argentina
+6348667|City|||Londres|Londres, Argentina|6232516|Multi-Region (within a country)|Catamarca (province)|Catamarca (province), Argentina
+1629|City|||La Rioja|La Rioja, Argentina|6232522|Multi-Region (within a country)|La Rioja (province)|La Rioja (province), Argentina
+6301107|City|||Chilecito|Chilecito, Argentina|6232522|Multi-Region (within a country)|La Rioja (province)|La Rioja (province), Argentina
+6348247|City|||Aimogasta|Aimogasta, Argentina|6232522|Multi-Region (within a country)|La Rioja (province)|La Rioja (province), Argentina
+6348249|City||neighbor|Cochangasta|Cochangasta, La Rioja, Argentina|6232522|Multi-Region (within a country)|La Rioja (province)|La Rioja (province), Argentina
+3599|City|||San Juan|San Juan, Argentina|6232539|Multi-Region (within a country)|San Juan (province)|San Juan (province), Argentina
+6156157|City|||San Agustin de Valle Fertil|San Agustin de Valle Fertil, Argentina|6232539|Multi-Region (within a country)|San Juan (province)|San Juan (province), Argentina
+6267384|City|||Barreal|Barreal, Argentina|6232539|Multi-Region (within a country)|San Juan (province)|San Juan (province), Argentina
+6046685|City|||Villa Mercedes|Villa Mercedes, Argentina|6232547|Multi-Region (within a country)|San Luis (province)|San Luis (province), Argentina
+6054174|City|||Merlo|Merlo, Argentina|6232547|Multi-Region (within a country)|San Luis (province)|San Luis (province), Argentina
+303|City|||San Rafael|San Rafael, Argentina|6232605|Multi-Region (within a country)|Mendoza (province)|Mendoza (province), Argentina
+2066|City|||Malargue|Malargue, Argentina|6232605|Multi-Region (within a country)|Mendoza (province)|Mendoza (province), Argentina
+6144965|City|||San Alberto|San Alberto, Argentina|6232605|Multi-Region (within a country)|Mendoza (province)|Mendoza (province), Argentina
+6307716|City||neighbor|Los Molles|Los Molles, Malargue, Argentina|6232605|Multi-Region (within a country)|Mendoza (province)|Mendoza (province), Argentina
+6096829|City||tree|El Rey National Park|El Rey National Park, General Guemes, Argentina|3199|Multi-City (Vicinity)|Salta (and vicinity)|Salta (and vicinity), Argentina
+6126539|City|||Chicoana|Chicoana, Argentina|3199|Multi-City (Vicinity)|Salta (and vicinity)|Salta (and vicinity), Argentina
+6141109|City|||Rosario de Lerma|Rosario de Lerma, Argentina|3199|Multi-City (Vicinity)|Salta (and vicinity)|Salta (and vicinity), Argentina
+6142131|City|||Villa San Lorenzo|Villa San Lorenzo, Argentina|3199|Multi-City (Vicinity)|Salta (and vicinity)|Salta (and vicinity), Argentina
+6142134|City|||Salta|Salta, Argentina|3199|Multi-City (Vicinity)|Salta (and vicinity)|Salta (and vicinity), Argentina
+6143161|City|||Coronel Moldes|Coronel Moldes, Argentina|3199|Multi-City (Vicinity)|Salta (and vicinity)|Salta (and vicinity), Argentina
+6190519|City|||General Guemes|General Guemes, Argentina|3199|Multi-City (Vicinity)|Salta (and vicinity)|Salta (and vicinity), Argentina
+6279742|City|||La Merced|La Merced, Argentina|3199|Multi-City (Vicinity)|Salta (and vicinity)|Salta (and vicinity), Argentina
+6279779|City|||El Carril|El Carril, Argentina|3199|Multi-City (Vicinity)|Salta (and vicinity)|Salta (and vicinity), Argentina
+6311845|City|||Campo Quijano|Campo Quijano, Argentina|3199|Multi-City (Vicinity)|Salta (and vicinity)|Salta (and vicinity), Argentina
+6311847|City|||Cerrillos|Cerrillos, Argentina|3199|Multi-City (Vicinity)|Salta (and vicinity)|Salta (and vicinity), Argentina
+6311914|City|||El Encon|El Encon, Argentina|3199|Multi-City (Vicinity)|Salta (and vicinity)|Salta (and vicinity), Argentina
+6311915|City|||La Caldera|La Caldera, Argentina|3199|Multi-City (Vicinity)|Salta (and vicinity)|Salta (and vicinity), Argentina
+6312040|City|||Vaqueros|Vaqueros, Argentina|3199|Multi-City (Vicinity)|Salta (and vicinity)|Salta (and vicinity), Argentina
+6348183|City|||La Silleta|La Silleta, Argentina|3199|Multi-City (Vicinity)|Salta (and vicinity)|Salta (and vicinity), Argentina
+6348184|City|||Osma|Osma, Argentina|3199|Multi-City (Vicinity)|Salta (and vicinity)|Salta (and vicinity), Argentina
+6348389|City||tree|Valle de Lerma|Valle de Lerma, Salta, Argentina|3199|Multi-City (Vicinity)|Salta (and vicinity)|Salta (and vicinity), Argentina
+2982|City|||Rio Grande|Rio Grande, Argentina|6208785|Multi-Region (within a country)|Tierra del Fuego (province)|Tierra del Fuego (province), Argentina
+3654|City|||Ushuaia|Ushuaia, Argentina|6208785|Multi-Region (within a country)|Tierra del Fuego (province)|Tierra del Fuego (province), Argentina
+6297392|City|||Tolhuin|Tolhuin, Argentina|6208785|Multi-Region (within a country)|Tierra del Fuego (province)|Tierra del Fuego (province), Argentina
+6302975|City||neighbor|Almanza Port|Almanza Port, Ushuaia, Argentina|6208785|Multi-Region (within a country)|Tierra del Fuego (province)|Tierra del Fuego (province), Argentina
+6313211|City||regional|Fagnano Lake|Fagnano Lake, Argentina|6208785|Multi-Region (within a country)|Tierra del Fuego (province)|Tierra del Fuego (province), Argentina
+6229945|City|||Isla de Cerrito|Isla de Cerrito, Argentina|6208822|Multi-Region (within a country)|Greater Chaco Region|Greater Chaco Region, Argentina
+938|City|||Cutral|Cutral, Argentina|6226759|Multi-Region (within a country)|Comahue|Comahue, Argentina
+1501|City|||Chos Malal|Chos Malal, Argentina|6226759|Multi-Region (within a country)|Comahue|Comahue, Argentina
+2643|City|||San Antonio Oeste|San Antonio Oeste, Argentina|6226759|Multi-Region (within a country)|Comahue|Comahue, Argentina
+2965|City|||Rincon de los Sauces|Rincon de los Sauces, Argentina|6226759|Multi-Region (within a country)|Comahue|Comahue, Argentina
+3691|City|||Viedma|Viedma, Argentina|6226759|Multi-Region (within a country)|Comahue|Comahue, Argentina
+178071|City|||Boca|Boca, Argentina|6226759|Multi-Region (within a country)|Comahue|Comahue, Argentina
+6052079|City|||Villa Pehuenia|Villa Pehuenia, Argentina|6226759|Multi-Region (within a country)|Comahue|Comahue, Argentina
+6130808|City|||Zapala|Zapala, Argentina|6226759|Multi-Region (within a country)|Comahue|Comahue, Argentina
+6140821|City|||Caviahue|Caviahue, Argentina|6226759|Multi-Region (within a country)|Comahue|Comahue, Argentina
+6142310|City|||El Bolson|El Bolson, Argentina|6226759|Multi-Region (within a country)|Comahue|Comahue, Argentina
+6264981|City|||Ingeniero Jacobacci|Ingeniero Jacobacci, Argentina|6226759|Multi-Region (within a country)|Comahue|Comahue, Argentina
+6308688|City|||Colonia Catriel|Colonia Catriel, Argentina|6226759|Multi-Region (within a country)|Comahue|Comahue, Argentina
+6130809|City|||Junin de los Andes|Junin de los Andes, Argentina|903|Multi-City (Vicinity)|San Martin de los Andes (and vicinity)|San Martin de los Andes (and vicinity), Argentina
+6131378|City|||Laguna Carilafquen|Laguna Carilafquen, Argentina|903|Multi-City (Vicinity)|San Martin de los Andes (and vicinity)|San Martin de los Andes (and vicinity), Argentina
+6131563|City|||San Martin de los Andes|San Martin de los Andes, Argentina|903|Multi-City (Vicinity)|San Martin de los Andes (and vicinity)|San Martin de los Andes (and vicinity), Argentina
+6266467|City|||Meliquina|Meliquina, Argentina|903|Multi-City (Vicinity)|San Martin de los Andes (and vicinity)|San Martin de los Andes (and vicinity), Argentina
+6144364|City|||Miramar|Miramar, Argentina|2252|Multi-City (Vicinity)|Mar del Plata (and vicinity)|Mar del Plata (and vicinity), Argentina
+6211294|City|||Mar del Plata|Mar del Plata, Argentina|2252|Multi-City (Vicinity)|Mar del Plata (and vicinity)|Mar del Plata (and vicinity), Argentina
+6281972|City||neighbor|Punta Mogotes|Punta Mogotes, Mar del Plata, Argentina|2252|Multi-City (Vicinity)|Mar del Plata (and vicinity)|Mar del Plata (and vicinity), Argentina
+6281980|City||tree|Peralta Ramos Woods|Peralta Ramos Woods, Mar del Plata, Argentina|2252|Multi-City (Vicinity)|Mar del Plata (and vicinity)|Mar del Plata (and vicinity), Argentina
+6295613|City|||Balcarce|Balcarce, Argentina|2252|Multi-City (Vicinity)|Mar del Plata (and vicinity)|Mar del Plata (and vicinity), Argentina
+6295617|City|||Sierra de los Padres|Sierra de los Padres, Argentina|2252|Multi-City (Vicinity)|Mar del Plata (and vicinity)|Mar del Plata (and vicinity), Argentina
+6295619|City|||Colonia Chapadmalal|Colonia Chapadmalal, Argentina|2252|Multi-City (Vicinity)|Mar del Plata (and vicinity)|Mar del Plata (and vicinity), Argentina
+6311501|City||shopping|Martin Miguel de Guemes|Martin Miguel de Guemes, Mar del Plata, Argentina|2252|Multi-City (Vicinity)|Mar del Plata (and vicinity)|Mar del Plata (and vicinity), Argentina
+6316530|City||neighbor|Alem Street|Alem Street, Mar del Plata, Argentina|2252|Multi-City (Vicinity)|Mar del Plata (and vicinity)|Mar del Plata (and vicinity), Argentina
+6323743|City|||Laguna Brava|Laguna Brava, Argentina|2252|Multi-City (Vicinity)|Mar del Plata (and vicinity)|Mar del Plata (and vicinity), Argentina
+716|City|||Buenos Aires|Buenos Aires, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+178067|City|||Avellaneda|Avellaneda, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+178068|City|||Banfield|Banfield, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+178070|City|||Berazategui|Berazategui, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+178072|City|||Caseros|Caseros, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+178073|City|||Florencio Varela|Florencio Varela, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+178074|City|||General San Martin|General San Martin, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+178075|City|||Hurlingham|Hurlingham, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+178077|City|||Lanus|Lanus, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+178078|City|||Lomas de Zamora|Lomas de Zamora, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+178079|City|||Moron|Moron, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+178080|City|||Quilmes|Quilmes, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+178081|City|||San Fernando|San Fernando, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+178082|City|||San Isidro|San Isidro, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+178083|City|||Vicente Lopez|Vicente Lopez, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+178085|City|||Tigre|Tigre, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+178087|City|||Almirante Brown|Almirante Brown, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+178374|City|||San Justo|San Justo, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6060876|City||shopping|Florida Street|Florida Street, Buenos Aires, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6125145|City|||Don Torcuato|Don Torcuato, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6132120|City|||Monte Grande|Monte Grande, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6144399|City|||Ezeiza|Ezeiza, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6144978|City|||Gonzalez Catan|Gonzalez Catan, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6145348|City|||Paso del Rey|Paso del Rey, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6159346|City||neighbor|Montserrat|Montserrat, Buenos Aires, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6159347|City||neighbor|Palermo Soho|Palermo Soho, Buenos Aires, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6159363|City||neighbor|Boedo|Boedo, Buenos Aires, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6159367|City|||Belen de Escobar|Belen de Escobar, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6159368|City||neighbor|Victoria|Victoria, San Fernando, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6159369|City||neighbor|Acassuso|Acassuso, San Isidro, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6159370|City|||Bernal|Bernal, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6159398|City||neighbor|Barrio Norte|Barrio Norte, Buenos Aires, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6159639|City||shopping|Santa Fe Avenue|Santa Fe Avenue, Buenos Aires, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6182096|City||neighbor|9 de Julio Avenue|9 de Julio Avenue, Buenos Aires, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6182238|City||neighbor|Palermo Hollywood|Palermo Hollywood, Buenos Aires, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6182245|City||neighbor|Las Canitas|Las Canitas, Buenos Aires, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6200143|City||shopping|Lavalle Street|Lavalle Street, Buenos Aires, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6200146|City||shopping|San Telmo Antique Fair|San Telmo Antique Fair, Buenos Aires, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6202174|City|||Parana Delta|Parana Delta, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6210327|City||neighbor|Alem Street|Alem Street, Buenos Aires, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6225607|City||neighbor|Old Palermo|Old Palermo, Buenos Aires, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6225858|City||neighbor|Avenida Corrientes|Avenida Corrientes, Buenos Aires, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6225898|City|||Martinez|Martinez, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6225899|City|||Olivos|Olivos, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6225903|City||neighbor|Beccar|Beccar, San Isidro, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6225907|City|||Glew|Glew, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6229991|City|||Merlo|Merlo, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6230011|City|||Ciudad Evita|Ciudad Evita, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6232394|City|||Florida|Florida, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6245199|City|||Boulogne|Boulogne, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6263131|City|||Moreno|Moreno, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6263138|City|||Esteban Echeverria|Esteban Echeverria, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6263151|City|||Dock Sud|Dock Sud, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6270369|City||neighbor|La Boca|La Boca, Buenos Aires, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6306290|City|||Tristan Suarez|Tristan Suarez, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6325614|City||neighbor|Chinatown|Chinatown, Buenos Aires, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6336189|City|||Guillermo Hudson|Guillermo Hudson, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6339259|City||neighbor|San Cristobal|San Cristobal, Buenos Aires, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6339347|City||tree|Palermo Woods|Palermo Woods, Buenos Aires, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6348220|City|||Spegazzini|Spegazzini, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+2973|City|||Trelew|Trelew, Argentina|500751|Multi-City (Vicinity)|Puerto Madryn (and vicinity)|Puerto Madryn (and vicinity), Argentina
+6143673|City|||Punta Delgada|Punta Delgada, Argentina|500751|Multi-City (Vicinity)|Puerto Madryn (and vicinity)|Puerto Madryn (and vicinity), Argentina
+6201039|City|||Rawson|Rawson, Argentina|500751|Multi-City (Vicinity)|Puerto Madryn (and vicinity)|Puerto Madryn (and vicinity), Argentina
+6201042|City|||Puerto Piramides|Puerto Piramides, Argentina|500751|Multi-City (Vicinity)|Puerto Madryn (and vicinity)|Puerto Madryn (and vicinity), Argentina
+6211318|City|||Puerto Madryn|Puerto Madryn, Argentina|500751|Multi-City (Vicinity)|Puerto Madryn (and vicinity)|Puerto Madryn (and vicinity), Argentina
+6130869|City|||Perito Moreno|Perito Moreno, Argentina|6023812|Multi-City (Vicinity)|El Calafate (and vicinity)|El Calafate (and vicinity), Argentina
+6154694|City|||El Calafate|El Calafate, Argentina|6023812|Multi-City (Vicinity)|El Calafate (and vicinity)|El Calafate (and vicinity), Argentina
+6171970|City||tree|Perito Moreno Glacier|Perito Moreno Glacier, El Calafate, Argentina|6023812|Multi-City (Vicinity)|El Calafate (and vicinity)|El Calafate (and vicinity), Argentina
+6210932|City||tree|Lake Argentino|Lake Argentino, El Calafate, Argentina|6023812|Multi-City (Vicinity)|El Calafate (and vicinity)|El Calafate (and vicinity), Argentina
+6297022|City||tree|Bahia Redonda|Bahia Redonda, El Calafate, Argentina|6023812|Multi-City (Vicinity)|El Calafate (and vicinity)|El Calafate (and vicinity), Argentina
+6297025|City||tree|Lago Rico|Lago Rico, El Calafate, Argentina|6023812|Multi-City (Vicinity)|El Calafate (and vicinity)|El Calafate (and vicinity), Argentina
+6297036|City||neighbor|Puerto Punta Bandera|Puerto Punta Bandera, El Calafate, Argentina|6023812|Multi-City (Vicinity)|El Calafate (and vicinity)|El Calafate (and vicinity), Argentina
+6297088|City||tree|Cerro Frias|Cerro Frias, El Calafate, Argentina|6023812|Multi-City (Vicinity)|El Calafate (and vicinity)|El Calafate (and vicinity), Argentina
+6297310|City||tree|Bahia Tranquila|Bahia Tranquila, El Calafate, Argentina|6023812|Multi-City (Vicinity)|El Calafate (and vicinity)|El Calafate (and vicinity), Argentina
+6297315|City||tree|Canal Upsala|Canal Upsala, El Calafate, Argentina|6023812|Multi-City (Vicinity)|El Calafate (and vicinity)|El Calafate (and vicinity), Argentina
+6297322|City||tree|Canal Spegazzinni|Canal Spegazzinni, El Calafate, Argentina|6023812|Multi-City (Vicinity)|El Calafate (and vicinity)|El Calafate (and vicinity), Argentina
+6297342|City||tree|Brazo Rico|Brazo Rico, Argentina|6023812|Multi-City (Vicinity)|El Calafate (and vicinity)|El Calafate (and vicinity), Argentina
+6338749|City|||Perosa Argentina|Perosa Argentina, Italy|6054993|Multi-City (Vicinity)|Central Piedmont Alps|Central Piedmont Alps, Italy
+2255|City|||Mendoza|Mendoza, Argentina|6054200|Multi-City (Vicinity)|Mendoza Wine Region|Mendoza Wine Region, Argentina
+6047316|City|||Maipu|Maipu, Argentina|6054200|Multi-City (Vicinity)|Mendoza Wine Region|Mendoza Wine Region, Argentina
+6047582|City|||Tunuyan|Tunuyan, Argentina|6054200|Multi-City (Vicinity)|Mendoza Wine Region|Mendoza Wine Region, Argentina
+6049685|City|||Chacras de Coria|Chacras de Coria, Argentina|6054200|Multi-City (Vicinity)|Mendoza Wine Region|Mendoza Wine Region, Argentina
+6084968|City|||Potrerillos|Potrerillos, Argentina|6054200|Multi-City (Vicinity)|Mendoza Wine Region|Mendoza Wine Region, Argentina
+6125726|City|||Lujan de Cuyo|Lujan de Cuyo, Argentina|6054200|Multi-City (Vicinity)|Mendoza Wine Region|Mendoza Wine Region, Argentina
+6141780|City|||Las Heras|Las Heras, Argentina|6054200|Multi-City (Vicinity)|Mendoza Wine Region|Mendoza Wine Region, Argentina
+6142021|City|||Uspallata|Uspallata, Argentina|6054200|Multi-City (Vicinity)|Mendoza Wine Region|Mendoza Wine Region, Argentina
+6144867|City||neighbor|Vista Flores|Vista Flores, Tunuyan, Argentina|6054200|Multi-City (Vicinity)|Mendoza Wine Region|Mendoza Wine Region, Argentina
+6267734|City|||Los Arboles|Los Arboles, Argentina|6054200|Multi-City (Vicinity)|Mendoza Wine Region|Mendoza Wine Region, Argentina
+6272344|City|||Bajo Lunlunta|Bajo Lunlunta, Argentina|6054200|Multi-City (Vicinity)|Mendoza Wine Region|Mendoza Wine Region, Argentina
+6272349|City|||Cacheuta|Cacheuta, Argentina|6054200|Multi-City (Vicinity)|Mendoza Wine Region|Mendoza Wine Region, Argentina
+6272359|City||neighbor|Coquimbito|Coquimbito, Maipu, Argentina|6054200|Multi-City (Vicinity)|Mendoza Wine Region|Mendoza Wine Region, Argentina
+6272364|City||neighbor|Godoy Cruz|Godoy Cruz, Mendoza, Argentina|6054200|Multi-City (Vicinity)|Mendoza Wine Region|Mendoza Wine Region, Argentina
+6272392|City|||San Martin|San Martin, Argentina|6054200|Multi-City (Vicinity)|Mendoza Wine Region|Mendoza Wine Region, Argentina
+6272393|City||neighbor|Villa Nueva|Villa Nueva, Guaymallen, Argentina|6054200|Multi-City (Vicinity)|Mendoza Wine Region|Mendoza Wine Region, Argentina
+6272762|City||shopping|Alameda Promenade|Alameda Promenade, Mendoza, Argentina|6054200|Multi-City (Vicinity)|Mendoza Wine Region|Mendoza Wine Region, Argentina
+6273687|City||neighbor|Historic Center|Historic Center, Mendoza, Argentina|6054200|Multi-City (Vicinity)|Mendoza Wine Region|Mendoza Wine Region, Argentina
+6277853|City||shopping|Peatonal Sarmiento|Peatonal Sarmiento, Mendoza, Argentina|6054200|Multi-City (Vicinity)|Mendoza Wine Region|Mendoza Wine Region, Argentina
+6279911|City||neighbor|Civic Park|Civic Park, Mendoza, Argentina|6054200|Multi-City (Vicinity)|Mendoza Wine Region|Mendoza Wine Region, Argentina
+6280044|City|||Guaymallen|Guaymallen, Argentina|6054200|Multi-City (Vicinity)|Mendoza Wine Region|Mendoza Wine Region, Argentina
+6281916|City|||Las Compuertas|Las Compuertas, Argentina|6054200|Multi-City (Vicinity)|Mendoza Wine Region|Mendoza Wine Region, Argentina
+6317984|City|||Tupungato|Tupungato, Argentina|6054200|Multi-City (Vicinity)|Mendoza Wine Region|Mendoza Wine Region, Argentina
+888|City|||Corrientes|Corrientes, Argentina|6054203|Multi-City (Vicinity)|Corrientes (and vicinity)|Corrientes (and vicinity), Argentina
+6050259|City|||Paso de la Patria|Paso de la Patria, Argentina|6054203|Multi-City (Vicinity)|Corrientes (and vicinity)|Corrientes (and vicinity), Argentina
+6050260|City|||Empedrado|Empedrado, Argentina|6054203|Multi-City (Vicinity)|Corrientes (and vicinity)|Corrientes (and vicinity), Argentina
+899|City|||Cordoba|Cordoba, Argentina|6054205|Multi-City (Vicinity)|Cordoba (and vicinity)|Cordoba (and vicinity), Argentina
+500198|City|||Villa Carlos Paz|Villa Carlos Paz, Argentina|6054205|Multi-City (Vicinity)|Cordoba (and vicinity)|Cordoba (and vicinity), Argentina
+6034666|City|||Rio Ceballos|Rio Ceballos, Argentina|6054205|Multi-City (Vicinity)|Cordoba (and vicinity)|Cordoba (and vicinity), Argentina
+6047317|City|||Ascochinga|Ascochinga, Argentina|6054205|Multi-City (Vicinity)|Cordoba (and vicinity)|Cordoba (and vicinity), Argentina
+6048251|City|||La Cumbre|La Cumbre, Argentina|6054205|Multi-City (Vicinity)|Cordoba (and vicinity)|Cordoba (and vicinity), Argentina
+6049085|City|||Alta Gracia|Alta Gracia, Argentina|6054205|Multi-City (Vicinity)|Cordoba (and vicinity)|Cordoba (and vicinity), Argentina
+6054193|City|||Santa Catalina|Santa Catalina (Cordoba), Argentina|6054205|Multi-City (Vicinity)|Cordoba (and vicinity)|Cordoba (and vicinity), Argentina
+6126425|City|||Capilla del Monte|Capilla del Monte, Argentina|6054205|Multi-City (Vicinity)|Cordoba (and vicinity)|Cordoba (and vicinity), Argentina
+6161902|City|||Huerta Grande|Huerta Grande, Argentina|6054205|Multi-City (Vicinity)|Cordoba (and vicinity)|Cordoba (and vicinity), Argentina
+6344783|City|||Ongamira|Ongamira, Argentina|6054205|Multi-City (Vicinity)|Cordoba (and vicinity)|Cordoba (and vicinity), Argentina
+6348250|City|||Cosquin|Cosquin, Argentina|6054205|Multi-City (Vicinity)|Cordoba (and vicinity)|Cordoba (and vicinity), Argentina
+6348253|City||neighbor|Villa Bustos|Villa Bustos, Cosquin, Argentina|6054205|Multi-City (Vicinity)|Cordoba (and vicinity)|Cordoba (and vicinity), Argentina
+2960|City|||Rio Cuarto|Rio Cuarto, Argentina|6126070|Multi-City (Vicinity)|Rio Cuarto (and vicinity)|Rio Cuarto (and vicinity), Argentina
+6049680|City|||Santa Catalina (Rio Cuarto)|Santa Catalina (Rio Cuarto), Argentina|6126070|Multi-City (Vicinity)|Rio Cuarto (and vicinity)|Rio Cuarto (and vicinity), Argentina
+1574|City|||Iguazu|Iguazu, Argentina|6126331|Multi-City (Vicinity)|Iguazu (and vicinity)|Iguazu (and vicinity), Argentina
+6085283|City|||Puerto Libertad|Puerto Libertad, Argentina|6126331|Multi-City (Vicinity)|Iguazu (and vicinity)|Iguazu (and vicinity), Argentina
+6244605|City|||Wanda|Wanda, Argentina|6126331|Multi-City (Vicinity)|Iguazu (and vicinity)|Iguazu (and vicinity), Argentina
+6244611|City|||Andresito|Andresito, Argentina|6126331|Multi-City (Vicinity)|Iguazu (and vicinity)|Iguazu (and vicinity), Argentina
+6345673|City||neighbor|Zona Granja|Zona Granja, Iguazu, Argentina|6126331|Multi-City (Vicinity)|Iguazu (and vicinity)|Iguazu (and vicinity), Argentina
+3131|City|||Santa Fe|Santa Fe, Argentina|6126334|Multi-City (Vicinity)|Santa Fe - Parana (and vicinity)|Santa Fe - Parana (and vicinity), Argentina
+1739|City|||Jujuy|Jujuy, Argentina|6126344|Multi-City (Vicinity)|Jujuy (and vicinity)|Jujuy (and vicinity), Argentina
+6047322|City|||Purmamarca|Purmamarca, Argentina|6126344|Multi-City (Vicinity)|Jujuy (and vicinity)|Jujuy (and vicinity), Argentina
+6049080|City|||Tilcara|Tilcara, Argentina|6126344|Multi-City (Vicinity)|Jujuy (and vicinity)|Jujuy (and vicinity), Argentina
+6131837|City|||Huacalera|Huacalera, Argentina|6126344|Multi-City (Vicinity)|Jujuy (and vicinity)|Jujuy (and vicinity), Argentina
+6157032|City|||Humahuaca|Humahuaca, Argentina|6126344|Multi-City (Vicinity)|Jujuy (and vicinity)|Jujuy (and vicinity), Argentina
+6157922|City|||Yala|Yala, Argentina|6126344|Multi-City (Vicinity)|Jujuy (and vicinity)|Jujuy (and vicinity), Argentina
+6201394|City|||Libertador General San Martin|Libertador General San Martin, Argentina|6126344|Multi-City (Vicinity)|Jujuy (and vicinity)|Jujuy (and vicinity), Argentina
+6311853|City|||El Carmen|El Carmen, Argentina|6126344|Multi-City (Vicinity)|Jujuy (and vicinity)|Jujuy (and vicinity), Argentina
+6312003|City|||Termas de Reyes|Termas de Reyes, Argentina|6126344|Multi-City (Vicinity)|Jujuy (and vicinity)|Jujuy (and vicinity), Argentina
+6312011|City||neighbor|Reyes|Reyes, Jujuy, Argentina|6126344|Multi-City (Vicinity)|Jujuy (and vicinity)|Jujuy (and vicinity), Argentina
+6348185|City|||Perico|Perico, Argentina|6126344|Multi-City (Vicinity)|Jujuy (and vicinity)|Jujuy (and vicinity), Argentina
+6348212|City|||Maimara|Maimara, Argentina|6126344|Multi-City (Vicinity)|Jujuy (and vicinity)|Jujuy (and vicinity), Argentina
+6348213|City|||Volcan|Volcan, Argentina|6126344|Multi-City (Vicinity)|Jujuy (and vicinity)|Jujuy (and vicinity), Argentina
+6348214|City|||Leon|Leon, Argentina|6126344|Multi-City (Vicinity)|Jujuy (and vicinity)|Jujuy (and vicinity), Argentina
+6348215|City||neighbor|Calilegua|Calilegua, Libertador General San Martin, Argentina|6126344|Multi-City (Vicinity)|Jujuy (and vicinity)|Jujuy (and vicinity), Argentina
+6348216|City|||Palpala|Palpala, Argentina|6126344|Multi-City (Vicinity)|Jujuy (and vicinity)|Jujuy (and vicinity), Argentina
+6348217|City|||Susques|Susques, Argentina|6126344|Multi-City (Vicinity)|Jujuy (and vicinity)|Jujuy (and vicinity), Argentina
+6348240|City|||San Pedro de Jujuy|San Pedro de Jujuy, Argentina|6126344|Multi-City (Vicinity)|Jujuy (and vicinity)|Jujuy (and vicinity), Argentina
+6348590|City|||Uquia|Uquia, Argentina|6126344|Multi-City (Vicinity)|Jujuy (and vicinity)|Jujuy (and vicinity), Argentina
+602816|City|||Pinamar|Pinamar, Argentina|6126518|Multi-City (Vicinity)|Pinamar (and vicinity)|Pinamar (and vicinity), Argentina
+6047913|City|||Villa Gesell|Villa Gesell, Argentina|6126518|Multi-City (Vicinity)|Pinamar (and vicinity)|Pinamar (and vicinity), Argentina
+6132118|City|||Carilo|Carilo, Argentina|6126518|Multi-City (Vicinity)|Pinamar (and vicinity)|Pinamar (and vicinity), Argentina
+6248027|City|||Mar de Las Pampas|Mar de Las Pampas, Argentina|6126518|Multi-City (Vicinity)|Pinamar (and vicinity)|Pinamar (and vicinity), Argentina
+6295398|City|||Mar Azul|Mar Azul, Argentina|6126518|Multi-City (Vicinity)|Pinamar (and vicinity)|Pinamar (and vicinity), Argentina
+6323674|City|||General Juan Madariaga|General Juan Madariaga, Argentina|6126518|Multi-City (Vicinity)|Pinamar (and vicinity)|Pinamar (and vicinity), Argentina
+6323693|City|||Ostende|Ostende, Argentina|6126518|Multi-City (Vicinity)|Pinamar (and vicinity)|Pinamar (and vicinity), Argentina
+6323695|City|||Valeria del Mar|Valeria del Mar, Argentina|6126518|Multi-City (Vicinity)|Pinamar (and vicinity)|Pinamar (and vicinity), Argentina
+6337975|City||shopping|Avenida Jorge Bunge|Avenida Jorge Bunge, Pinamar, Argentina|6126518|Multi-City (Vicinity)|Pinamar (and vicinity)|Pinamar (and vicinity), Argentina
+6084969|City|||San Clemente|San Clemente, Argentina|6126520|Multi-City (Vicinity)|La Costa Partido|La Costa Partido, Argentina
+6085080|City|||San Bernardo|San Bernardo, Argentina|6126520|Multi-City (Vicinity)|La Costa Partido|La Costa Partido, Argentina
+6085280|City|||Santa Teresita|Santa Teresita, Argentina|6126520|Multi-City (Vicinity)|La Costa Partido|La Costa Partido, Argentina
+6323681|City|||Mar de Ajo|Mar de Ajo, Argentina|6126520|Multi-City (Vicinity)|La Costa Partido|La Costa Partido, Argentina
+6343532|City|||Costa del Este|Costa del Este, Argentina|6126520|Multi-City (Vicinity)|La Costa Partido|La Costa Partido, Argentina
+6343533|City|||La Lucila del Mar|La Lucila del Mar, Argentina|6126520|Multi-City (Vicinity)|La Costa Partido|La Costa Partido, Argentina
+6034133|City|||San Nicolas de los Arroyos|San Nicolas de los Arroyos, Argentina|6126774|Multi-City (Vicinity)|San Nicolas de los Arroyos (and vicinity)|San Nicolas de los Arroyos (and vicinity), Argentina
+6054166|City|||San Pedro|San Pedro, Argentina|6126774|Multi-City (Vicinity)|San Nicolas de los Arroyos (and vicinity)|San Nicolas de los Arroyos (and vicinity), Argentina
+6123950|City|||Ramallo|Ramallo, Argentina|6126774|Multi-City (Vicinity)|San Nicolas de los Arroyos (and vicinity)|San Nicolas de los Arroyos (and vicinity), Argentina
+6323662|City|||Baradero|Baradero, Argentina|6126774|Multi-City (Vicinity)|San Nicolas de los Arroyos (and vicinity)|San Nicolas de los Arroyos (and vicinity), Argentina
+6096857|City||tree|Ibera Wetlands|Ibera Wetlands, Colonia Carlos Pellegrini, Argentina|6343234|Multi-City (Vicinity)|Colonia Carlos Pellegrini (and vicinity)|Colonia Carlos Pellegrini (and vicinity), Argentina
+6143447|City|||Colonia Carlos Pellegrini|Colonia Carlos Pellegrini, Argentina|6343234|Multi-City (Vicinity)|Colonia Carlos Pellegrini (and vicinity)|Colonia Carlos Pellegrini (and vicinity), Argentina
+6338887|City|||Mercedes|Mercedes (Corrientes), Argentina|6343234|Multi-City (Vicinity)|Colonia Carlos Pellegrini (and vicinity)|Colonia Carlos Pellegrini (and vicinity), Argentina
+677|City|||Bariloche|Bariloche, Argentina|6085464|Multi-City (Vicinity)|Bariloche (and vicinity)|Bariloche (and vicinity), Argentina
+500199|City||neighbor|Llao Llao|Llao Llao, Bariloche, Argentina|6085464|Multi-City (Vicinity)|Bariloche (and vicinity)|Bariloche (and vicinity), Argentina
+6035429|City|||Villa La Angostura|Villa La Angostura, Argentina|6085464|Multi-City (Vicinity)|Bariloche (and vicinity)|Bariloche (and vicinity), Argentina
+6124858|City|||Victoria Island|Victoria Island, Argentina|6085464|Multi-City (Vicinity)|Bariloche (and vicinity)|Bariloche (and vicinity), Argentina
+6254301|City|||Dina Huapi|Dina Huapi, Argentina|6085464|Multi-City (Vicinity)|Bariloche (and vicinity)|Bariloche (and vicinity), Argentina
+6254326|City|||Puerto Huemul|Puerto Huemul, Argentina|6085464|Multi-City (Vicinity)|Bariloche (and vicinity)|Bariloche (and vicinity), Argentina
+6254328|City||neighbor|Puerto Manzano|Puerto Manzano, Villa La Angostura, Argentina|6085464|Multi-City (Vicinity)|Bariloche (and vicinity)|Bariloche (and vicinity), Argentina
+6254332|City|||Villa Mascardi|Villa Mascardi, Argentina|6085464|Multi-City (Vicinity)|Bariloche (and vicinity)|Bariloche (and vicinity), Argentina
+6254333|City|||Villa Traful|Villa Traful, Argentina|6085464|Multi-City (Vicinity)|Bariloche (and vicinity)|Bariloche (and vicinity), Argentina

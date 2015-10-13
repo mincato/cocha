@@ -70,6 +70,7 @@
 		<property name="packagesToScan">
 			<list>
 				<value>com.cocha.hotels.model.content.hotel</value>
+				<value>com.cocha.hotels.model.content.geo</value>
 			</list>
 		</property>
 		<property name="jpaProperties">
@@ -97,6 +98,7 @@
 		<property name="packagesToScan">
 			<list>
 				<value>com.cocha.hotels.model.content.hotel</value>
+				<value>com.cocha.hotels.model.content.geo</value>
 				<value>com.cocha.hotels.model.content.mapping</value>
 			</list>
 		</property>

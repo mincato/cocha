@@ -41,10 +41,10 @@ public class TramsformerObjectBooking extends CamelSpringTestSupport {
         rackRate.setPrice("0.00");
 
         result.setRackRate(rackRate);
-        List<Result> listResutl = new ArrayList<Result>(); 
+        List<Result> listResutl = new ArrayList<Result>();
         listResutl.add(result);
         listResutl.add(result);
-        
+
         getHotelAvailabilityBooking.setResult(listResutl);
 
         template.sendBody("direct:service-in", getHotelAvailabilityBooking);

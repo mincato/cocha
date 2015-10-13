@@ -1,29 +1,26 @@
-
 package com.sabre.webservices.sabrexml._2011._10;
 
 import javax.xml.bind.annotation.XmlRegistry;
 
-
 /**
- * This object contains factory methods for each 
- * Java content interface and Java element interface 
- * generated in the com.sabre.webservices.sabrexml._2011._10 package. 
- * <p>An ObjectFactory allows you to programatically 
- * construct new instances of the Java representation 
- * for XML content. The Java representation of XML 
- * content can consist of schema derived interfaces 
- * and classes representing the binding of schema 
- * type definitions, element declarations and model 
- * groups.  Factory methods for each of these are 
- * provided in this class.
+ * This object contains factory methods for each Java content interface and Java
+ * element interface generated in the com.sabre.webservices.sabrexml._2011._10
+ * package.
+ * <p>
+ * An ObjectFactory allows you to programatically construct new instances of the
+ * Java representation for XML content. The Java representation of XML content
+ * can consist of schema derived interfaces and classes representing the binding
+ * of schema type definitions, element declarations and model groups. Factory
+ * methods for each of these are provided in this class.
  * 
  */
 @XmlRegistry
 public class ObjectFactory {
 
-
     /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.sabre.webservices.sabrexml._2011._10
+     * Create a new ObjectFactory that can be used to create new instances of
+     * schema derived classes for package:
+     * com.sabre.webservices.sabrexml._2011._10
      * 
      */
     public ObjectFactory() {
@@ -62,7 +59,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption createOTAHotelAvailRSAvailabilityOptionsAvailabilityOption() {
@@ -70,7 +68,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfo() {
@@ -78,7 +77,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RoomRate }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RoomRate }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RoomRate createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoRoomRate() {
@@ -86,7 +86,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RoomRate.AdditionalInfo }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RoomRate.AdditionalInfo }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RoomRate.AdditionalInfo createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoRoomRateAdditionalInfo() {
@@ -94,7 +95,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfo() {
@@ -102,7 +104,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoDirectConnect() {
@@ -110,7 +113,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.ContactNumbers }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.ContactNumbers }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.ContactNumbers createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoContactNumbers() {
@@ -126,7 +130,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.RatePlanCandidates }
+     * Create an instance of
+     * {@link OTAHotelAvailRQ.AvailRequestSegment.RatePlanCandidates }
      * 
      */
     public OTAHotelAvailRQ.AvailRequestSegment.RatePlanCandidates createOTAHotelAvailRQAvailRequestSegmentRatePlanCandidates() {
@@ -142,7 +147,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.POS.Source }
+     * Create an instance of
+     * {@link OTAHotelAvailRQ.AvailRequestSegment.POS.Source }
      * 
      */
     public OTAHotelAvailRQ.AvailRequestSegment.POS.Source createOTAHotelAvailRQAvailRequestSegmentPOSSource() {
@@ -150,7 +156,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.POS.Source.BookingChannel }
+     * Create an instance of
+     * {@link OTAHotelAvailRQ.AvailRequestSegment.POS.Source.BookingChannel }
      * 
      */
     public OTAHotelAvailRQ.AvailRequestSegment.POS.Source.BookingChannel createOTAHotelAvailRQAvailRequestSegmentPOSSourceBookingChannel() {
@@ -158,7 +165,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria }
+     * Create an instance of
+     * {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria }
      * 
      */
     public OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria createOTAHotelAvailRQAvailRequestSegmentHotelSearchCriteria() {
@@ -166,7 +174,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion }
+     * Create an instance of
+     * {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion }
      * 
      */
     public OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion createOTAHotelAvailRQAvailRequestSegmentHotelSearchCriteriaCriterion() {
@@ -174,7 +183,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.ContactNumbers }
+     * Create an instance of
+     * {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.ContactNumbers }
      * 
      */
     public OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.ContactNumbers createOTAHotelAvailRQAvailRequestSegmentHotelSearchCriteriaCriterionContactNumbers() {
@@ -182,7 +192,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.Customer }
+     * Create an instance of
+     * {@link OTAHotelAvailRQ.AvailRequestSegment.Customer }
      * 
      */
     public OTAHotelAvailRQ.AvailRequestSegment.Customer createOTAHotelAvailRQAvailRequestSegmentCustomer() {
@@ -206,7 +217,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.Address }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.Address }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.Address createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoAddress() {
@@ -214,7 +226,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.LocationDescription }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.LocationDescription }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.LocationDescription createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoLocationDescription() {
@@ -222,7 +235,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.Property }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.Property }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.Property createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoProperty() {
@@ -230,7 +244,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RateRange }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RateRange }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RateRange createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoRateRange() {
@@ -238,7 +253,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.SpecialOffers }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.SpecialOffers }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.SpecialOffers createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoSpecialOffers() {
@@ -246,7 +262,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RoomRate.AdditionalInfo.CancelPolicy }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RoomRate.AdditionalInfo.CancelPolicy }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.RoomRate.AdditionalInfo.CancelPolicy createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoRoomRateAdditionalInfoCancelPolicy() {
@@ -254,7 +271,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.ADAAccessible }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.ADAAccessible }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.ADAAccessible createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoADAAccessible() {
@@ -262,7 +280,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.AdultsOnly }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.AdultsOnly }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.AdultsOnly createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoAdultsOnly() {
@@ -270,7 +289,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.BeachFront }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.BeachFront }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.BeachFront createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoBeachFront() {
@@ -278,7 +298,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Breakfast }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Breakfast }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Breakfast createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoBreakfast() {
@@ -286,7 +307,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.BusinessCenter }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.BusinessCenter }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.BusinessCenter createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoBusinessCenter() {
@@ -294,7 +316,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.BusinessReady }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.BusinessReady }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.BusinessReady createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoBusinessReady() {
@@ -302,7 +325,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Conventions }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Conventions }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Conventions createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoConventions() {
@@ -310,7 +334,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Dataport }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Dataport }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Dataport createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoDataport() {
@@ -318,7 +343,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Dining }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Dining }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Dining createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoDining() {
@@ -326,7 +352,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.DryClean }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.DryClean }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.DryClean createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoDryClean() {
@@ -334,7 +361,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.EcoCertified }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.EcoCertified }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.EcoCertified createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoEcoCertified() {
@@ -342,7 +370,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.ExecutiveFloors }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.ExecutiveFloors }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.ExecutiveFloors createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoExecutiveFloors() {
@@ -350,7 +379,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FitnessCenter }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FitnessCenter }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FitnessCenter createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoFitnessCenter() {
@@ -358,7 +388,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeLocalCalls }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeLocalCalls }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeLocalCalls createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoFreeLocalCalls() {
@@ -366,7 +397,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeParking }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeParking }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeParking createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoFreeParking() {
@@ -374,7 +406,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeShuttle }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeShuttle }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeShuttle createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoFreeShuttle() {
@@ -382,7 +415,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeWifiInMeetingRooms }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeWifiInMeetingRooms }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeWifiInMeetingRooms createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoFreeWifiInMeetingRooms() {
@@ -390,7 +424,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeWifiInPublicSpaces }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeWifiInPublicSpaces }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeWifiInPublicSpaces createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoFreeWifiInPublicSpaces() {
@@ -398,7 +433,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeWifiInRooms }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeWifiInRooms }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FreeWifiInRooms createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoFreeWifiInRooms() {
@@ -406,7 +442,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FullServiceSpa }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FullServiceSpa }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.FullServiceSpa createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoFullServiceSpa() {
@@ -414,7 +451,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.GameFacilities }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.GameFacilities }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.GameFacilities createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoGameFacilities() {
@@ -422,7 +460,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Golf }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Golf }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Golf createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoGolf() {
@@ -430,7 +469,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.HighSpeedInternet }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.HighSpeedInternet }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.HighSpeedInternet createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoHighSpeedInternet() {
@@ -438,7 +478,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.HypoallergenicRooms }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.HypoallergenicRooms }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.HypoallergenicRooms createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoHypoallergenicRooms() {
@@ -446,7 +487,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.IndoorPool }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.IndoorPool }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.IndoorPool createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoIndoorPool() {
@@ -454,7 +496,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomCoffeeTea }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomCoffeeTea }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomCoffeeTea createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoInRoomCoffeeTea() {
@@ -462,7 +505,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomMiniBar }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomMiniBar }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomMiniBar createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoInRoomMiniBar() {
@@ -470,7 +514,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomRefrigerator }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomRefrigerator }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomRefrigerator createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoInRoomRefrigerator() {
@@ -478,7 +523,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomSafe }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomSafe }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InRoomSafe createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoInRoomSafe() {
@@ -486,7 +532,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InteriorDoorways }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InteriorDoorways }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.InteriorDoorways createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoInteriorDoorways() {
@@ -494,7 +541,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Jacuzzi }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Jacuzzi }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Jacuzzi createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoJacuzzi() {
@@ -502,7 +550,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.KidsFacilities }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.KidsFacilities }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.KidsFacilities createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoKidsFacilities() {
@@ -510,7 +559,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.KitchenFacilities }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.KitchenFacilities }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.KitchenFacilities createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoKitchenFacilities() {
@@ -518,7 +568,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.MealService }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.MealService }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.MealService createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoMealService() {
@@ -526,7 +577,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.MeetingFacilities }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.MeetingFacilities }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.MeetingFacilities createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoMeetingFacilities() {
@@ -534,7 +586,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.NoAdultTV }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.NoAdultTV }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.NoAdultTV createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoNoAdultTV() {
@@ -542,7 +595,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.NonSmoking }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.NonSmoking }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.NonSmoking createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoNonSmoking() {
@@ -550,7 +604,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.OutdoorPool }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.OutdoorPool }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.OutdoorPool createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoOutdoorPool() {
@@ -558,7 +613,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Pets }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Pets }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Pets createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoPets() {
@@ -566,7 +622,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Pool }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Pool }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Pool createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoPool() {
@@ -574,7 +631,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.PublicTransportationAdjacent }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.PublicTransportationAdjacent }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.PublicTransportationAdjacent createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoPublicTransportationAdjacent() {
@@ -582,7 +640,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RateAssured }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RateAssured }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RateAssured createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoRateAssured() {
@@ -590,7 +649,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Recreation }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Recreation }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Recreation createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoRecreation() {
@@ -598,7 +658,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RestrictedRoomAccess }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RestrictedRoomAccess }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RestrictedRoomAccess createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoRestrictedRoomAccess() {
@@ -606,7 +667,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RoomService }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RoomService }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RoomService createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoRoomService() {
@@ -614,7 +676,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RoomService24Hours }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RoomService24Hours }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RoomService24Hours createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoRoomService24Hours() {
@@ -622,7 +685,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RoomsWithBalcony }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RoomsWithBalcony }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.RoomsWithBalcony createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoRoomsWithBalcony() {
@@ -630,7 +694,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.SkiInOutProperty }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.SkiInOutProperty }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.SkiInOutProperty createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoSkiInOutProperty() {
@@ -638,7 +703,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.SmokeFree }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.SmokeFree }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.SmokeFree createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoSmokeFree() {
@@ -646,7 +712,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.SmokingRoomsAvail }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.SmokingRoomsAvail }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.SmokingRoomsAvail createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoSmokingRoomsAvail() {
@@ -654,7 +721,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Tennis }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Tennis }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Tennis createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoTennis() {
@@ -662,7 +730,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.WaterPurificationSystem }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.WaterPurificationSystem }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.WaterPurificationSystem createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoWaterPurificationSystem() {
@@ -670,7 +739,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Wheelchair }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Wheelchair }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.PropertyOptionInfo.Wheelchair createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoPropertyOptionInfoWheelchair() {
@@ -678,7 +748,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.AltAvail }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.AltAvail }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.AltAvail createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoDirectConnectAltAvail() {
@@ -686,7 +757,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.DCAvailParticipant }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.DCAvailParticipant }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.DCAvailParticipant createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoDirectConnectDCAvailParticipant() {
@@ -694,7 +766,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.DCSellParticipant }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.DCSellParticipant }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.DCSellParticipant createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoDirectConnectDCSellParticipant() {
@@ -702,7 +775,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.RatesExceedMax }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.RatesExceedMax }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.RatesExceedMax createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoDirectConnectRatesExceedMax() {
@@ -710,7 +784,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.UnAvail }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.UnAvail }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.DirectConnect.UnAvail createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoDirectConnectUnAvail() {
@@ -718,7 +793,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.ContactNumbers.ContactNumber }
+     * Create an instance of
+     * {@link OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.ContactNumbers.ContactNumber }
      * 
      */
     public OTAHotelAvailRS.AvailabilityOptions.AvailabilityOption.BasicPropertyInfo.ContactNumbers.ContactNumber createOTAHotelAvailRSAvailabilityOptionsAvailabilityOptionBasicPropertyInfoContactNumbersContactNumber() {
@@ -726,7 +802,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.AdditionalAvail }
+     * Create an instance of
+     * {@link OTAHotelAvailRQ.AvailRequestSegment.AdditionalAvail }
      * 
      */
     public OTAHotelAvailRQ.AvailRequestSegment.AdditionalAvail createOTAHotelAvailRQAvailRequestSegmentAdditionalAvail() {
@@ -734,7 +811,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.GuestCounts }
+     * Create an instance of
+     * {@link OTAHotelAvailRQ.AvailRequestSegment.GuestCounts }
      * 
      */
     public OTAHotelAvailRQ.AvailRequestSegment.GuestCounts createOTAHotelAvailRQAvailRequestSegmentGuestCounts() {
@@ -742,7 +820,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.TimeSpan }
+     * Create an instance of
+     * {@link OTAHotelAvailRQ.AvailRequestSegment.TimeSpan }
      * 
      */
     public OTAHotelAvailRQ.AvailRequestSegment.TimeSpan createOTAHotelAvailRQAvailRequestSegmentTimeSpan() {
@@ -750,7 +829,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.RatePlanCandidates.RateAccessCode }
+     * Create an instance of
+     * {@link OTAHotelAvailRQ.AvailRequestSegment.RatePlanCandidates.RateAccessCode }
      * 
      */
     public OTAHotelAvailRQ.AvailRequestSegment.RatePlanCandidates.RateAccessCode createOTAHotelAvailRQAvailRequestSegmentRatePlanCandidatesRateAccessCode() {
@@ -758,7 +838,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.RatePlanCandidates.RateRange }
+     * Create an instance of
+     * {@link OTAHotelAvailRQ.AvailRequestSegment.RatePlanCandidates.RateRange }
      * 
      */
     public OTAHotelAvailRQ.AvailRequestSegment.RatePlanCandidates.RateRange createOTAHotelAvailRQAvailRequestSegmentRatePlanCandidatesRateRange() {
@@ -766,7 +847,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.POS.Source.BookingChannel.CompanyName }
+     * Create an instance of
+     * {@link OTAHotelAvailRQ.AvailRequestSegment.POS.Source.BookingChannel.CompanyName }
      * 
      */
     public OTAHotelAvailRQ.AvailRequestSegment.POS.Source.BookingChannel.CompanyName createOTAHotelAvailRQAvailRequestSegmentPOSSourceBookingChannelCompanyName() {
@@ -774,7 +856,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.Address }
+     * Create an instance of
+     * {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.Address }
      * 
      */
     public OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.Address createOTAHotelAvailRQAvailRequestSegmentHotelSearchCriteriaCriterionAddress() {
@@ -782,7 +865,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.Award }
+     * Create an instance of
+     * {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.Award }
      * 
      */
     public OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.Award createOTAHotelAvailRQAvailRequestSegmentHotelSearchCriteriaCriterionAward() {
@@ -790,7 +874,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.HotelFeature }
+     * Create an instance of
+     * {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.HotelFeature }
      * 
      */
     public OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.HotelFeature createOTAHotelAvailRQAvailRequestSegmentHotelSearchCriteriaCriterionHotelFeature() {
@@ -798,7 +883,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.HotelRef }
+     * Create an instance of
+     * {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.HotelRef }
      * 
      */
     public OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.HotelRef createOTAHotelAvailRQAvailRequestSegmentHotelSearchCriteriaCriterionHotelRef() {
@@ -806,7 +892,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.PointOfInterest }
+     * Create an instance of
+     * {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.PointOfInterest }
      * 
      */
     public OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.PointOfInterest createOTAHotelAvailRQAvailRequestSegmentHotelSearchCriteriaCriterionPointOfInterest() {
@@ -814,7 +901,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.RefPoint }
+     * Create an instance of
+     * {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.RefPoint }
      * 
      */
     public OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.RefPoint createOTAHotelAvailRQAvailRequestSegmentHotelSearchCriteriaCriterionRefPoint() {
@@ -822,7 +910,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.ContactNumbers.ContactNumber }
+     * Create an instance of
+     * {@link OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.ContactNumbers.ContactNumber }
      * 
      */
     public OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.ContactNumbers.ContactNumber createOTAHotelAvailRQAvailRequestSegmentHotelSearchCriteriaCriterionContactNumbersContactNumber() {
@@ -830,7 +919,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.Customer.Corporate }
+     * Create an instance of
+     * {@link OTAHotelAvailRQ.AvailRequestSegment.Customer.Corporate }
      * 
      */
     public OTAHotelAvailRQ.AvailRequestSegment.Customer.Corporate createOTAHotelAvailRQAvailRequestSegmentCustomerCorporate() {
@@ -838,7 +928,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OTAHotelAvailRQ.AvailRequestSegment.Customer.ID }
+     * Create an instance of
+     * {@link OTAHotelAvailRQ.AvailRequestSegment.Customer.ID }
      * 
      */
     public OTAHotelAvailRQ.AvailRequestSegment.Customer.ID createOTAHotelAvailRQAvailRequestSegmentCustomerID() {

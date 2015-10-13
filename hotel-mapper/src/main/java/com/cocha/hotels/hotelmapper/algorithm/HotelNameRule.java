@@ -33,59 +33,50 @@ public class HotelNameRule extends HotelRule {
         if (noSpacesRef.compareTo(noSpacesCom) == 0) {
             return new HotelRuleMatch(FULL_CONFIDENCE);
         }
-        
+
         double rate = StringUtils.getJaroWinklerDistance(attrReference, attrToCompare);
-        
+
         Integer confidence = NO_CONFIDENCE;
         if (rate > 0.85) {
-        	confidence = (int) Math.round(MAX_CONFIDENCE * rate);
-        }
-        else
-        {
-        	List<String> refWords = Arrays.asList(attrReference.split("\\s+"));
-        	List<String> compWords = Arrays.asList(attrToCompare.split("\\s+"));
-        	
-        	confidence = NO_CONFIDENCE;
-        	if (refWords.size() <= compWords.size()) {
-        		confidence = compare(refWords, compWords);
-        	} else {
-        		confidence = compare(compWords, refWords);
-        	}
+            confidence = (int) Math.round(MAX_CONFIDENCE * rate);
+        } else {
+            List<String> refWords = Arrays.asList(attrReference.split("\\s+"));
+            List<String> compWords = Arrays.asList(attrToCompare.split("\\s+"));
+
+            confidence = NO_CONFIDENCE;
+            if (refWords.size() <= compWords.size()) {
+                confidence = compare(refWords, compWords);
+            } else {
+                confidence = compare(compWords, refWords);
+            }
         }
 
         return new HotelRuleMatch(confidence);
     }
 
     private Integer compare(List<String> refWords, List<String> compWords) {
-    	double rate = 0;
-    	if (compWords.containsAll(refWords)) {
-    		rate = 1;
-    	} else {
-    		double commonWords = ListUtils.intersection(refWords, compWords).size();
-    		double max = Math.max(refWords.size(), compWords.size());
+        double rate = 0;
+        if (compWords.containsAll(refWords)) {
+            rate = 1;
+        } else {
+            double commonWords = ListUtils.intersection(refWords, compWords).size();
+            double max = Math.max(refWords.size(), compWords.size());
             rate = commonWords / max;
-    	}
-    	return (int) Math.round(MAX_CONFIDENCE * rate);
-	}
+        }
+        return (int) Math.round(MAX_CONFIDENCE * rate);
+    }
 
-	private String flatten(String name) {
-        return name.toUpperCase(Locale.ENGLISH)
-                .replace("&AMP;", " ")
-                .replace("AND", " ")
-                .replace("SOUTH", "S")
-                .replace("WEST", "W")
-                .replace("EAST", "E")
-                .replace("NORTH", "N")
-                .replaceAll("[^\\w\\s]", " ")
-                .trim();
+    private String flatten(String name) {
+        return name.toUpperCase(Locale.ENGLISH).replace("&AMP;", " ").replace("AND", " ").replace("SOUTH", "S")
+                .replace("WEST", "W").replace("EAST", "E").replace("NORTH", "N").replaceAll("[^\\w\\s]", " ").trim();
     }
-    
+
     private String toAscii(String input) {
-    	String normalized = Normalizer.normalize(input, Normalizer.Form.NFD);
-    	// Nos quedamos únicamente con los caracteres ASCII
-    	Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
-    	return pattern.matcher(normalized).replaceAll("");
-    	
+        String normalized = Normalizer.normalize(input, Normalizer.Form.NFD);
+        // Nos quedamos unicamente con los caracteres ASCII
+        Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
+        return pattern.matcher(normalized).replaceAll("");
+
     }
-    
+
 }

@@ -12,25 +12,24 @@ import com.cocha.hotels.matesearch.repositories.HotelRepository;
 import com.cocha.hotels.model.matesearch.canonical.Hotel;
 import com.cocha.hotels.model.matesearch.canonical.HotelList;
 
-
 @Service
 public class HotelInformation {
-	
-	@Autowired
-	HotelRepository hotelRepository;
-	
-	@Handler
-	public HotelList getHotelInformation(Map<String, String> parameters) {
-		
-		HotelList hotelList = new HotelList();
-		
-		List<String> ids = Arrays.asList(parameters.get("idHotel").split("\\s*,\\s*"));
-		
-		List<Hotel> hotels = hotelRepository.findByHotelIds(ids);
-		
-		hotelList.setHotel(hotels);
-		
-		return hotelList; 
-	}
+
+    @Autowired
+    HotelRepository hotelRepository;
+
+    @Handler
+    public HotelList getHotelInformation(Map<String, String> parameters) {
+
+        HotelList hotelList = new HotelList();
+
+        List<String> ids = Arrays.asList(parameters.get("idHotel").split("\\s*,\\s*"));
+
+        List<Hotel> hotels = hotelRepository.findByHotelIds(ids);
+
+        hotelList.setHotel(hotels);
+
+        return hotelList;
+    }
 
 }

@@ -1,4 +1,3 @@
-
 package com.sabre.services.stl_header.v120;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -6,11 +5,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Clase Java para ResultSummary complex type.
+ * <p>
+ * Clase Java para ResultSummary complex type.
  * 
- * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>
+ * El siguiente fragmento de esquema especifica el contenido que se espera que
+ * haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="ResultSummary"&gt;
@@ -28,10 +29,7 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ResultSummary", propOrder = {
-    "success",
-    "error"
-})
+@XmlType(name = "ResultSummary", propOrder = { "success", "error" })
 public class ResultSummary {
 
     @XmlElement(name = "Success")
@@ -42,10 +40,8 @@ public class ResultSummary {
     /**
      * Obtiene el valor de la propiedad success.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getSuccess() {
         return success;
@@ -55,9 +51,8 @@ public class ResultSummary {
      * Define el valor de la propiedad success.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setSuccess(String value) {
         this.success = value;
@@ -66,10 +61,8 @@ public class ResultSummary {
     /**
      * Obtiene el valor de la propiedad error.
      * 
-     * @return
-     *     possible object is
-     *     {@link ProblemSummary }
-     *     
+     * @return possible object is {@link ProblemSummary }
+     * 
      */
     public ProblemSummary getError() {
         return error;
@@ -79,9 +72,8 @@ public class ResultSummary {
      * Define el valor de la propiedad error.
      * 
      * @param value
-     *     allowed object is
-     *     {@link ProblemSummary }
-     *     
+     *            allowed object is {@link ProblemSummary }
+     * 
      */
     public void setError(ProblemSummary value) {
         this.error = value;

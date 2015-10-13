@@ -11,14 +11,14 @@ import com.cocha.hotels.model.matesearch.supplier.booking.GetHotelAvailabilityBo
 @Component
 public class BookingTransformerRoute extends RouteBuilder {
 
-	@Autowired
-	private SupplierHotelProcessor supplirHotelProcessor;
-	
+    @Autowired
+    private SupplierHotelProcessor supplirHotelProcessor;
+
     @Override
     public void configure() throws Exception {
 
-        from("direct:transformerResposeBooking").convertBodyTo(GetHotelAvailabilityBooking.class).setHeader("supplier", simple(CodeSupplier.BOOKING_SUPPLIER_CODE))
-                .bean(supplirHotelProcessor);
+        from("direct:transformerResposeBooking").convertBodyTo(GetHotelAvailabilityBooking.class)
+                .setHeader("supplier", simple(CodeSupplier.BOOKING_SUPPLIER_CODE)).bean(supplirHotelProcessor);
 
     }
 

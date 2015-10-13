@@ -15,15 +15,14 @@ public class SabreSessionClientRoute extends RouteBuilder {
 
     @Autowired
     private SabreSessionClientProcessor sabreSessionClientProcessor;
-    
+
     @Autowired
-    private  SabreSessionClientResponseProcessor sabreSessionClientResponseProcessor;
-    
+    private SabreSessionClientResponseProcessor sabreSessionClientResponseProcessor;
 
     @Override
     public void configure() throws Exception {
-		from("direct:sendSabreSessionCreate").errorHandler(loggingErrorHandler(log))
-				.process(sabreSessionClientProcessor).wireTap("direct:logInfo").to("cxf:bean:sabreSessionCreate")
-				.process(sabreSessionClientResponseProcessor);
+        from("direct:sendSabreSessionCreate").errorHandler(loggingErrorHandler(log))
+                .process(sabreSessionClientProcessor).wireTap("direct:logInfo").to("cxf:bean:sabreSessionCreate")
+                .process(sabreSessionClientResponseProcessor);
     }
 }

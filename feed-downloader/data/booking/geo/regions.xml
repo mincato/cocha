@@ -1,0 +1,164 @@
+<?xml version='1.0' standalone='yes' ?>
+<getRegions>
+	<result>
+		<countrycode>ar</countrycode>
+		<languagecode>es</languagecode>
+		<name>Entre Ríos</name>
+		<region_id>595</region_id>
+		<region_type>province</region_type>
+	</result>
+	<result>
+		<countrycode>ar</countrycode>
+		<languagecode>es</languagecode>
+		<name>Jujuy</name>
+		<region_id>596</region_id>
+		<region_type>province</region_type>
+	</result>
+	<result>
+		<countrycode>ar</countrycode>
+		<languagecode>es</languagecode>
+		<name>Mendoza</name>
+		<region_id>597</region_id>
+		<region_type>province</region_type>
+	</result>
+	<result>
+		<countrycode>ar</countrycode>
+		<languagecode>es</languagecode>
+		<name>Río Negro</name>
+		<region_id>598</region_id>
+		<region_type>province</region_type>
+	</result>
+	<result>
+		<countrycode>ar</countrycode>
+		<languagecode>es</languagecode>
+		<name>Salta</name>
+		<region_id>599</region_id>
+		<region_type>province</region_type>
+	</result>
+	<result>
+		<countrycode>ar</countrycode>
+		<languagecode>es</languagecode>
+		<name>San Juan</name>
+		<region_id>600</region_id>
+		<region_type>province</region_type>
+	</result>
+	<result>
+		<countrycode>ar</countrycode>
+		<languagecode>es</languagecode>
+		<name>San Luis</name>
+		<region_id>601</region_id>
+		<region_type>province</region_type>
+	</result>
+	<result>
+		<countrycode>ar</countrycode>
+		<languagecode>es</languagecode>
+		<name>Santiago del Estero</name>
+		<region_id>602</region_id>
+		<region_type>province</region_type>
+	</result>
+	<result>
+		<countrycode>ar</countrycode>
+		<languagecode>es</languagecode>
+		<name>Tierra del Fuego</name>
+		<region_id>603</region_id>
+		<region_type>province</region_type>
+	</result>
+	<result>
+		<countrycode>ar</countrycode>
+		<languagecode>es</languagecode>
+		<name>Córdoba</name>
+		<region_id>1342</region_id>
+		<region_type>province</region_type>
+	</result>
+	<result>
+		<countrycode>ar</countrycode>
+		<languagecode>es</languagecode>
+		<name>Misiones</name>
+		<region_id>1343</region_id>
+		<region_type>province</region_type>
+	</result>
+	<result>
+		<countrycode>ar</countrycode>
+		<languagecode>es</languagecode>
+		<name>Santa Cruz</name>
+		<region_id>3618</region_id>
+		<region_type>province</region_type>
+	</result>
+	<result>
+		<countrycode>ar</countrycode>
+		<languagecode>es</languagecode>
+		<name>Provincia de Buenos Aires</name>
+		<region_id>3619</region_id>
+		<region_type>province</region_type>
+	</result>
+	<result>
+		<countrycode>ar</countrycode>
+		<languagecode>es</languagecode>
+		<name>Catamarca</name>
+		<region_id>3620</region_id>
+		<region_type>province</region_type>
+	</result>
+	<result>
+		<countrycode>ar</countrycode>
+		<languagecode>es</languagecode>
+		<name>Chaco</name>
+		<region_id>3621</region_id>
+		<region_type>province</region_type>
+	</result>
+	<result>
+		<countrycode>ar</countrycode>
+		<languagecode>es</languagecode>
+		<name>Chubut</name>
+		<region_id>3622</region_id>
+		<region_type>province</region_type>
+	</result>
+	<result>
+		<countrycode>ar</countrycode>
+		<languagecode>es</languagecode>
+		<name>Corrientes</name>
+		<region_id>3623</region_id>
+		<region_type>province</region_type>
+	</result>
+	<result>
+		<countrycode>ar</countrycode>
+		<languagecode>es</languagecode>
+		<name>Isla de Taiwán</name>
+		<region_id>3624</region_id>
+		<region_type>province</region_type>
+	</result>
+	<result>
+		<countrycode>ar</countrycode>
+		<languagecode>es</languagecode>
+		<name>La Pampa</name>
+		<region_id>3625</region_id>
+		<region_type>province</region_type>
+	</result>
+	<result>
+		<countrycode>ar</countrycode>
+		<languagecode>es</languagecode>
+		<name>La Rioja</name>
+		<region_id>3626</region_id>
+		<region_type>province</region_type>
+	</result>
+	<result>
+		<countrycode>ar</countrycode>
+		<languagecode>es</languagecode>
+		<name>Neuquén</name>
+		<region_id>3627</region_id>
+		<region_type>province</region_type>
+	</result>
+	<result>
+		<countrycode>ar</countrycode>
+		<languagecode>es</languagecode>
+		<name>Santa Fe</name>
+		<region_id>3628</region_id>
+		<region_type>province</region_type>
+	</result>
+	<result>
+		<countrycode>ar</countrycode>
+		<languagecode>es</languagecode>
+		<name>Tucumán</name>
+		<region_id>3629</region_id>
+		<region_type>province</region_type>
+	</result>
+</getRegions>
