@@ -38,7 +38,7 @@ public class HotelMapperRoute extends SpringRouteBuilder {
     @Override
     public void configure() throws Exception {
 
-        from("timer://{{mapper.quartz.trigger}}")
+        from("{{mapper.consumer.uri}}")
                 .errorHandler(loggingErrorHandler(log))
                 .to("sql:select distinct(countryCode) from Hotel?dataSource=#feedDataSource")
                 .split(body())
@@ -47,10 +47,12 @@ public class HotelMapperRoute extends SpringRouteBuilder {
                 .bean(hotelFeedRepository, "findByCountryCode")
                 .bean(algorithmicMapperProcessor)
                 .multicast()
+                .parallelProcessing()
                 .to("jpaContent:"
                         + HotelMapping.class.getName()
                         + "?entityType=java.util.ArrayList&transactionManager=#contentTransactionManager&usePersist=true",
-                        "seda:content", "direct:sabreMappingThruGiata");
+                        "seda:content", "direct:sabreMappingThruGiata").end()
+                .log(LoggingLevel.INFO, "Run Hotel Mapper successfully");
 
         from("direct:sabreMappingThruGiata")
                 .split(body())
