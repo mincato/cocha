@@ -29,12 +29,18 @@ public class HotelMapping {
 
     private boolean active;
 
+    private boolean unmapped;
+
+    private boolean mappedByUser;
+
     public HotelMapping(String canonicalId, HotelMatch match) {
         this.confidence = match.getConfidence();
         this.supplierHotelId = match.getHotelToCompare().getId();
         this.supplierCode = match.getHotelToCompare().getSupplierCode();
         this.hotelId = canonicalId;
         this.active = match.getHotelToCompare().isActive();
+        this.unmapped = false;
+        this.mappedByUser = false;
     }
 
     public HotelMapping() {
@@ -78,6 +84,22 @@ public class HotelMapping {
 
     public void setActive(boolean active) {
         this.active = active;
+    }
+
+    public void setMappedByUser(boolean mappedByUser) {
+        this.mappedByUser = mappedByUser;
+    }
+
+    public boolean isMappedByUser() {
+        return mappedByUser;
+    }
+
+    public boolean isUnmapped() {
+        return unmapped;
+    }
+
+    public void setUnmapped(boolean unmapped) {
+        this.unmapped = unmapped;
     }
 
 }
