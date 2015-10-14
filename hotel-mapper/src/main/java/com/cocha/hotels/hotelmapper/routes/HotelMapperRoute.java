@@ -47,6 +47,7 @@ public class HotelMapperRoute extends SpringRouteBuilder {
                 .bean(hotelFeedRepository, "findByCountryCode")
                 .bean(algorithmicMapperProcessor)
                 .multicast()
+                .parallelProcessing()
                 .to("jpaContent:"
                         + HotelMapping.class.getName()
                         + "?entityType=java.util.ArrayList&transactionManager=#contentTransactionManager&usePersist=true",
