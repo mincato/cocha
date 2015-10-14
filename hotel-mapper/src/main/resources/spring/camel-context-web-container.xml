@@ -5,6 +5,7 @@
 	xmlns:jee="http://www.springframework.org/schema/jee"
 	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
 	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:cxfCamel="http://camel.apache.org/schema/cxf"
 	xsi:schemaLocation="
        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
@@ -12,7 +13,8 @@
        http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd
        http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.0.xsd
        http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
-       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd 
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+       http://camel.apache.org/schema/cxf http://camel.apache.org/schema/cxf/camel-cxf.xsd 
     ">
 
 	<context:component-scan base-package="com.cocha.hotels.hotelmapper"
@@ -20,9 +22,16 @@
 	<context:annotation-config />
 
 	<camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
-		<propertyPlaceholder id="properties" location="classpath:properties/camel.properties"/>
+		<propertyPlaceholder id="properties" location="classpath:properties/webcontainer/camel.properties"/>
 		<contextScan />
 	</camelContext>
+	
+	<!-- Tell CXF/JAX-RS where the Hotel Mapper - REST service is defined -->			
+	<cxfCamel:rsServer id="hotelMapper" address="/mapper" loggingFeatureEnabled="true">
+       <cxfCamel:serviceBeans>
+           <bean class="com.cocha.hotels.hotelmapper.services.rest.HotelMapperService" />           
+       </cxfCamel:serviceBeans>
+   </cxfCamel:rsServer>	
 
 	<bean id="databaseProperties"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
