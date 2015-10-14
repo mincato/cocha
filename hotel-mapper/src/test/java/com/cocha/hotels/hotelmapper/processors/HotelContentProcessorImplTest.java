@@ -1,6 +1,7 @@
 package com.cocha.hotels.hotelmapper.processors;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
@@ -154,6 +155,68 @@ public class HotelContentProcessorImplTest {
         assertEquals(TEST_ZIP_CODE, hotels.get(0).getZipCode());
         assertEquals(Hotel.EAN_SUPPLIER_CODE, hotels.get(0).getSupplierCode());
         assertEquals(TEST_DESCRIPTION, hotels.get(0).getDescription().getDescription());
+
+        verify(hotelFeedRepository, times(1)).findOne(Matchers.any(HotelKey.class));
+    }
+
+    @Test
+    public void testProcessTwoMappingsActive() {
+        List<HotelMapping> hotelMappings = new ArrayList<HotelMapping>();
+        HotelMapping hotelMapping = new HotelMapping();
+        hotelMapping.setHotelId(TEST_HOTEL_ID);
+        hotelMapping.setSupplierCode(Hotel.EAN_SUPPLIER_CODE);
+        hotelMapping.setSupplierHotelId(EAN_HOTEL_ID);
+        hotelMapping.setConfidence(100);
+        hotelMapping.setActive(true);
+        hotelMappings.add(hotelMapping);
+
+        hotelMapping = new HotelMapping();
+        hotelMapping.setHotelId(TEST_HOTEL_ID);
+        hotelMapping.setSupplierCode(Hotel.BOOKING_SUPPLIER_CODE);
+        hotelMapping.setSupplierHotelId(BKG_HOTEL_ID);
+        hotelMapping.setActive(false);
+        hotelMapping.setConfidence(99);
+
+        HotelKey hotelKey = new HotelKey();
+        hotelKey.setId(EAN_HOTEL_ID);
+        hotelKey.setSupplierCode(Hotel.EAN_SUPPLIER_CODE);
+
+        when(hotelFeedRepository.findOne(hotelKey)).thenReturn(createHotel());
+
+        List<Hotel> hotels = hotelContentProcessor.process(hotelMappings);
+
+        assertTrue(hotels.get(0).isActive());
+
+        verify(hotelFeedRepository, times(1)).findOne(Matchers.any(HotelKey.class));
+    }
+
+    @Test
+    public void testProcessTwoMappingsInactive() {
+        List<HotelMapping> hotelMappings = new ArrayList<HotelMapping>();
+        HotelMapping hotelMapping = new HotelMapping();
+        hotelMapping.setHotelId(TEST_HOTEL_ID);
+        hotelMapping.setSupplierCode(Hotel.EAN_SUPPLIER_CODE);
+        hotelMapping.setSupplierHotelId(EAN_HOTEL_ID);
+        hotelMapping.setConfidence(100);
+        hotelMapping.setActive(false);
+        hotelMappings.add(hotelMapping);
+
+        hotelMapping = new HotelMapping();
+        hotelMapping.setHotelId(TEST_HOTEL_ID);
+        hotelMapping.setSupplierCode(Hotel.BOOKING_SUPPLIER_CODE);
+        hotelMapping.setSupplierHotelId(BKG_HOTEL_ID);
+        hotelMapping.setActive(false);
+        hotelMapping.setConfidence(99);
+
+        HotelKey hotelKey = new HotelKey();
+        hotelKey.setId(EAN_HOTEL_ID);
+        hotelKey.setSupplierCode(Hotel.EAN_SUPPLIER_CODE);
+
+        when(hotelFeedRepository.findOne(hotelKey)).thenReturn(createHotel());
+
+        List<Hotel> hotels = hotelContentProcessor.process(hotelMappings);
+
+        assertFalse(hotels.get(0).isActive());
 
         verify(hotelFeedRepository, times(1)).findOne(Matchers.any(HotelKey.class));
     }

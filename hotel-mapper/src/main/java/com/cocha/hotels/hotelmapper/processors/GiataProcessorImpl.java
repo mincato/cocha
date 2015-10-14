@@ -10,6 +10,8 @@ import com.cocha.hotels.model.content.mapping.HotelMapping;
 @Component
 public class GiataProcessorImpl implements GiataMapperProcessor {
 
+    private static final boolean DEFAULT_HOTEL_ACTIVE = true;
+
     private Logger logger = Logger.getLogger(GiataProcessorImpl.class);
 
     @Override
@@ -25,6 +27,7 @@ public class GiataProcessorImpl implements GiataMapperProcessor {
         mapping.setSupplierCode("SAB");
         mapping.setSupplierHotelId(sabreId);
         mapping.setHotelId("EAN" + eanId);
+        mapping.setActive(DEFAULT_HOTEL_ACTIVE);
 
         exchange.getOut().setBody(mapping);
     }
