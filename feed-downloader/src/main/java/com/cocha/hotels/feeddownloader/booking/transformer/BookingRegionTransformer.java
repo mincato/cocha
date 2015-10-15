@@ -37,9 +37,9 @@ public class BookingRegionTransformer {
             canonicalRegion.setId(supplierRegion.getRegionId());
             canonicalRegion.setRegionName(supplierRegion.getName());
             canonicalRegion.setRegionNameLong(supplierRegion.getName());
-            canonicalRegion.setRegionType(supplierRegion.getRegionType());
-            canonicalRegion.setSubClass("City");
-            canonicalRegion.setSupplierCode(Hotel.BOOKING_SUPPLIER_CODE);
+            //canonicalRegion.setRegionType(supplierRegion.getRegionType());
+            //canonicalRegion.setSubClass("City");
+            //canonicalRegion.setSupplierCode(Hotel.BOOKING_SUPPLIER_CODE);
         }
         return canonicalRegion;
     }

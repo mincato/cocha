@@ -1,0 +1,10 @@
+11700|Continent|||Antarctica|Antarctica|0|World|World|World
+500001|Continent|||North America|North America|0|World|World|World
+6022967|Continent|||Europe|Europe|0|World|World|World
+6022969|Continent|||Caribbean|Caribbean|0|World|World|World
+6023099|Continent|||Asia|Asia|0|World|World|World
+6023117|Continent|||South America|South America|0|World|World|World
+6023180|Continent|||Australia - New Zealand and the South Pacific|Australia - New Zealand and the South Pacific|0|World|World|World
+6023181|Continent|||Mexico and Central America|Mexico and Central America|0|World|World|World
+6023182|Continent|||Middle East|Middle East|0|World|World|World
+6023185|Continent|||Africa and Indian Ocean|Africa and Indian Ocean|0|World|World|World
