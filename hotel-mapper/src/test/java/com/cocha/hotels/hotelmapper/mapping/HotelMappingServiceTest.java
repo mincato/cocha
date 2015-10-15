@@ -1,5 +1,7 @@
 package com.cocha.hotels.hotelmapper.mapping;
 
+import static org.mockito.Mockito.when;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -8,6 +10,10 @@ import java.util.function.Predicate;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.runners.MockitoJUnitRunner;
 
 import com.cocha.hotels.hotelmapper.algorithm.HotelRulesProcessor;
 import com.cocha.hotels.hotelmapper.mocks.ArmadaHotelMock;
@@ -22,13 +28,20 @@ import com.cocha.hotels.hotelmapper.mocks.StaybridgeSuitesHotelMock;
 import com.cocha.hotels.hotelmapper.mocks.TaybridgeSuitesHotelMock;
 import com.cocha.hotels.hotelmapper.mocks.TravelodgeFlagstaffHotelMock;
 import com.cocha.hotels.hotelmapper.mocks.WallStreet_HI_HotelMock;
+import com.cocha.hotels.hotelmapper.repositories.content.HotelMappingRepository;
 import com.cocha.hotels.model.content.hotel.Hotel;
 import com.cocha.hotels.model.content.mapping.HotelMapping;
 
+@RunWith(MockitoJUnitRunner.class)
 public class HotelMappingServiceTest {
 
     private List<HotelMock> builders;
-    private HotelMappingService mappingService;
+
+    @InjectMocks
+    private HotelMappingService mappingService = new HotelMappingService();
+
+    @Mock
+    private HotelMappingRepository hotelMappingRepository;
 
     @Before
     public void setUp() throws Exception {
@@ -47,7 +60,6 @@ public class HotelMappingServiceTest {
         builders = Arrays.asList(armada, blackstone, comfort, leamington, quality, qualityUS, saintEugene, staybridge,
                 taybridge, travelodge, wallstreet);
 
-        mappingService = new HotelMappingService();
         mappingService.setCanonicalIdGenerator(new CanonicalIdGenerator());
         mappingService.setMatchingService(new HotelMatchingService(new HotelRulesProcessor()));
         mappingService.setProximityFilterService(new ProximityFilterService());
@@ -55,6 +67,8 @@ public class HotelMappingServiceTest {
 
     @Test
     public void mappingEANandBookingHotels() {
+        when(hotelMappingRepository.findAll()).thenReturn(new ArrayList<HotelMapping>());
+
         List<Hotel> eanHotels = buildHotelsFromEAN();
         List<Hotel> bookingHotels = buildHotelsFromBooking();
 
@@ -69,6 +83,7 @@ public class HotelMappingServiceTest {
 
     @Test
     public void mappingDifferentHotels() {
+        when(hotelMappingRepository.findAll()).thenReturn(new ArrayList<HotelMapping>());
         HotelMock builder = new TravelodgeFlagstaffHotelMock();
         List<Hotel> eanHotels = Arrays.asList(builder.buildWithEan());
         List<Hotel> bookingHotels = Arrays.asList(builder.buildWithBooking());
