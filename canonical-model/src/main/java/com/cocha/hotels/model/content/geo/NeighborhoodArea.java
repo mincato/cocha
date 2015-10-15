@@ -10,28 +10,28 @@ import javax.persistence.Lob;
 @Entity(name = "NeighborhoodArea")
 public class NeighborhoodArea implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@Id
-	private String id;
-	
-	@Lob
+    @Id
+    private String id;
+
+    @Lob
     @Column
-	private String coordinates;
+    private String coordinates;
 
-	public String getId() {
-		return id;
-	}
+    public String getId() {
+        return id;
+    }
 
-	public void setId(String id) {
-		this.id = id;
-	}
+    public void setId(String id) {
+        this.id = id;
+    }
 
-	public String getCoordinates() {
-		return coordinates;
-	}
+    public String getCoordinates() {
+        return coordinates;
+    }
 
-	public void setCoordinates(String coordinates) {
-		this.coordinates = coordinates;
-	}	
+    public void setCoordinates(String coordinates) {
+        this.coordinates = coordinates;
+    }
 }

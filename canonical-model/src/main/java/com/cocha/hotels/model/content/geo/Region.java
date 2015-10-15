@@ -9,13 +9,10 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.OneToOne;
 
-
-@IdClass(RegionKey.class)
 @Entity(name = "Region")
 public class Region implements Serializable {
 
@@ -23,9 +20,9 @@ public class Region implements Serializable {
 
     @Id
     private String id;
-    
+
     private String idParent;
-        
+
     @Enumerated(EnumType.STRING)
     @Column(name = "regionType")
     private RegionType regionType;
@@ -37,28 +34,28 @@ public class Region implements Serializable {
     private String regionName;
 
     private String regionNameLong;
-        
+
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumns({ @JoinColumn(name = "id", referencedColumnName = "id")})
+    @JoinColumns({ @JoinColumn(name = "id", referencedColumnName = "id") })
     private NeighborhoodArea area;
-    
+
     public String getId() {
         return id;
     }
 
     public void setId(String id) {
         this.id = id;
-    }    
+    }
 
     public String getIdParent() {
-		return idParent;
-	}
+        return idParent;
+    }
 
-	public void setIdParent(String idParent) {
-		this.idParent = idParent;
-	}
+    public void setIdParent(String idParent) {
+        this.idParent = idParent;
+    }
 
-	public RegionType getRegionType() {
+    public RegionType getRegionType() {
         return regionType;
     }
 
@@ -90,12 +87,12 @@ public class Region implements Serializable {
         this.regionNameLong = regionNameLong;
     }
 
-	public NeighborhoodArea getArea() {
-		return area;
-	}
+    public NeighborhoodArea getArea() {
+        return area;
+    }
 
-	public void setArea(NeighborhoodArea area) {
-		this.area = area;
-	}
+    public void setArea(NeighborhoodArea area) {
+        this.area = area;
+    }
 
 }

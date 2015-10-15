@@ -35,15 +35,16 @@ public class EanGeoTransformer {
             canonicalRegion = new Region();
             canonicalRegion.setId(supplierRegion.getRegionId());
             canonicalRegion.setRegionType(RegionType.getValue(supplierRegion.getRegionType()));
-            canonicalRegion.setSubClass(RegionClass.getValue(supplierRegion.getSubClass()));            
+            canonicalRegion.setSubClass(RegionClass.getValue(supplierRegion.getSubClass()));
             canonicalRegion.setIdParent(supplierRegion.getParentRegionID());
             canonicalRegion.setRegionName(supplierRegion.getRegionName());
-            canonicalRegion.setRegionNameLong(supplierRegion.getRegionNameLong());            
+            canonicalRegion.setRegionNameLong(supplierRegion.getRegionNameLong());
         }
         return canonicalRegion;
     }
-    
-    public List<NeighborhoodArea> toCanonicalNeighborhoodsArea (List<EanSupplierGeoNeighborhood> supplierNeighborhoodsArea) {
+
+    public List<NeighborhoodArea> toCanonicalNeighborhoodsArea(
+            List<EanSupplierGeoNeighborhood> supplierNeighborhoodsArea) {
         List<NeighborhoodArea> neighborhoodsArea = null;
 
         if (supplierNeighborhoodsArea != null) {
@@ -54,17 +55,17 @@ public class EanGeoTransformer {
         }
         return neighborhoodsArea;
     }
-    
+
     private NeighborhoodArea toCanonicalNeighborhoodArea(EanSupplierGeoNeighborhood supplierNeighborhoodArea) {
-    	NeighborhoodArea canonicalNeighborhoodArea = null;
+        NeighborhoodArea canonicalNeighborhoodArea = null;
         if (supplierNeighborhoodArea != null) {
             canonicalNeighborhoodArea = new NeighborhoodArea();
             canonicalNeighborhoodArea.setId(supplierNeighborhoodArea.getRegionID());
-            canonicalNeighborhoodArea.setCoordinates(supplierNeighborhoodArea.getCoordinates());            
+            canonicalNeighborhoodArea.setCoordinates(supplierNeighborhoodArea.getCoordinates());
         }
         return canonicalNeighborhoodArea;
     }
-     
+
     public List<Airport> toCanonicalAirports(List<EanSupplierGeoAirport> supplierAirports) {
         List<Airport> airports = null;
 
@@ -84,13 +85,12 @@ public class EanGeoTransformer {
             canonicalAirport.setId(supplierAirport.getAirportID());
             canonicalAirport.setCode(supplierAirport.getAirportCode());
             canonicalAirport.setName(supplierAirport.getAirportName());
-            canonicalAirport.setCountryCode(supplierAirport.getCountryCode());            
-            canonicalAirport.setIdParentCity(supplierAirport.getMainCityID());            
+            canonicalAirport.setCountryCode(supplierAirport.getCountryCode());
+            canonicalAirport.setIdParentCity(supplierAirport.getMainCityID());
             canonicalAirport.setLatitude(supplierAirport.getLatitude());
-            canonicalAirport.setLongitude(supplierAirport.getLongitude());            
+            canonicalAirport.setLongitude(supplierAirport.getLongitude());
         }
         return canonicalAirport;
     }
-    
 
 }

@@ -8,13 +8,12 @@ public class RegionKey implements Serializable {
 
     private static final long serialVersionUID = 1583125273900651441L;
 
-    private String id;    
+    private String id;
 
     public String getId() {
         return id;
     }
 
-    
     public void setId(String id) {
         this.id = id;
     }

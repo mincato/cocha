@@ -50,27 +50,30 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
         return exchange;
     }
 
-	private void addRates(HotelList hotels, ResposeSuppliers resposeSuppliers) {
-		
-		for(Hotel hotel : hotels.getHotel()) {
-			for(RateInfoForSupplier rateInfoForSupplier : resposeSuppliers.getRateForSupplier()) {
-				
-				List<HotelMapping> hotelMapping =  hotelMappingRepository.findByHotelId(hotel.getId());
-				
-				if(hotelMapping.get(0).getSupplierHotelId().equals(rateInfoForSupplier.getIdSupplier()) || hotelMapping.get(1).getSupplierHotelId().equals(rateInfoForSupplier.getIdSupplier()) || hotelMapping.get(2).getSupplierHotelId().equals(rateInfoForSupplier.getIdSupplier().replaceFirst("^0+(?!$)", ""))) {
-					this.addRate(hotel, rateInfoForSupplier);					
-				}
-				
-			}
-		}
-		
-	}
+    private void addRates(HotelList hotels, ResposeSuppliers resposeSuppliers) {
 
-	private void addRate(Hotel hotel, RateInfoForSupplier rateInfoForSupplier) {
+        for (Hotel hotel : hotels.getHotel()) {
+            for (RateInfoForSupplier rateInfoForSupplier : resposeSuppliers.getRateForSupplier()) {
 
-		RateInfo rateInfo = hotel.getRateInfo();
-		rateInfo.updateRatesHightandLow(rateInfoForSupplier.getHigtRate(), rateInfoForSupplier.getLowRate());
-		rateInfo.add(rateInfoForSupplier);
-		
-	}
+                List<HotelMapping> hotelMapping = hotelMappingRepository.findByHotelId(hotel.getId());
+
+                if (hotelMapping.get(0).getSupplierHotelId().equals(rateInfoForSupplier.getIdSupplier())
+                        || hotelMapping.get(1).getSupplierHotelId().equals(rateInfoForSupplier.getIdSupplier())
+                        || hotelMapping.get(2).getSupplierHotelId()
+                                .equals(rateInfoForSupplier.getIdSupplier().replaceFirst("^0+(?!$)", ""))) {
+                    this.addRate(hotel, rateInfoForSupplier);
+                }
+
+            }
+        }
+
+    }
+
+    private void addRate(Hotel hotel, RateInfoForSupplier rateInfoForSupplier) {
+
+        RateInfo rateInfo = hotel.getRateInfo();
+        rateInfo.updateRatesHightandLow(rateInfoForSupplier.getHigtRate(), rateInfoForSupplier.getLowRate());
+        rateInfo.add(rateInfoForSupplier);
+
+    }
 }
