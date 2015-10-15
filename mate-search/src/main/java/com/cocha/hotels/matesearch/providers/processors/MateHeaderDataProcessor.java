@@ -36,9 +36,17 @@ public class MateHeaderDataProcessor implements Processor {
         Map<String, Object> headers = inMessage.getHeaders();
         
         Map<String, Object> parameters = MessageUtils.parseQueryParams((String)headers.get("CamelHttpQuery"));
+        
         List<String> ids = Arrays.asList(((String) parameters.get(Constant.ID_HOTEL)).split("\\s*,\\s*"));
         
         List<HotelMapping> providers = hotelMappingRepository.findByHotelIds(ids);
+        
+        String currncyCode = (String) parameters.get("currncyCode");
+        
+        if(currncyCode == null) {
+        	currncyCode = Constant.CURRNCY_DEFAULT;
+        	parameters.put("currncyCode", Constant.CURRNCY_DEFAULT);
+        }
 
         this.putIdSuppliersAndIdMapping(parameters,providers);        
         

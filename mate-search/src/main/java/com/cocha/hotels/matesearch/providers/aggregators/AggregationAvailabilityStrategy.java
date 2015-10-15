@@ -15,9 +15,11 @@ import com.cocha.hotels.matesearch.util.Constant;
 import com.cocha.hotels.matesearch.util.Constant.CodeSupplier;
 import com.cocha.hotels.model.matesearch.canonical.Hotel;
 import com.cocha.hotels.model.matesearch.canonical.HotelList;
+import com.cocha.hotels.model.matesearch.canonical.RateForSupplier;
 import com.cocha.hotels.model.matesearch.canonical.RateInfo;
 import com.cocha.hotels.model.matesearch.canonical.RateInfoForSupplier;
 import com.cocha.hotels.model.matesearch.error.ErrorSupplier;
+import com.cocha.hotels.model.matesearch.response.Status;
 import com.cocha.hotels.model.matesearch.respose.supplier.IdMapping;
 import com.cocha.hotels.model.matesearch.respose.supplier.ResposeSuppliers;
 
@@ -106,13 +108,13 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 			}
 			
 			if(rateForSupplierOptional.isPresent()) {
+
 				this.addRate(hotelOptinal.get(), rateForSupplierOptional.get());
 			} else {
 				ErrorSupplier errorSupplier = new ErrorSupplier();
 				errorSupplier.setCodeSupplier(resposeSuppliers.getCodeSupplier());
 				errorSupplier.setIdSupplier(idSupplier);
-				errorSupplier.setDetail("Error en la busqueda");
-				this.addError(hotelOptinal.get(), errorSupplier);
+				this.addError(hotelOptinal.get(),errorSupplier);
 			}
 		}
 	}
@@ -140,8 +142,6 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 				errorSupplier.setIdSupplier(idMapping.getSupplierSabre());
 				break;
 			}
-			
-			errorSupplier.setDetail("Error en el Servicio");
 			this.addError(hotelOptinal.get(), errorSupplier);
 		}
 	}
@@ -151,14 +151,26 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 
 		RateInfo rateInfo = hotel.getRateInfo();
 		rateInfo.updateRatesHightandLow(rateInfoForSupplier.getHigtRate(), rateInfoForSupplier.getLowRate());
-		rateInfo.add(rateInfoForSupplier);
+		Status status = new Status();
+		status.setCode("200");
+		status.setCause("success");
+		RateForSupplier rateForSupplier = new RateForSupplier();
+		rateForSupplier.setStatus(status);
+		rateForSupplier.setSupplierServiceRespose(rateInfoForSupplier);
+		rateInfo.getRateForSupplier().add(rateForSupplier);
 		
 	}
 	
 	private void addError(Hotel hotel, ErrorSupplier errorSupplier) {
 		
 		RateInfo rateInfo = hotel.getRateInfo();
-		rateInfo.add(errorSupplier);
+		Status status = new Status();
+		status.setCode("500");
+		status.setCause("Supplier Error");
+		RateForSupplier rateForSupplier = new RateForSupplier();
+		rateForSupplier.setStatus(status);
+		rateForSupplier.setSupplierServiceRespose(errorSupplier);
+		rateInfo.getRateForSupplier().add(rateForSupplier);
 		
 	}
 }

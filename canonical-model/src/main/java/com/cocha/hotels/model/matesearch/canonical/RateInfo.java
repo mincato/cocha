@@ -3,15 +3,30 @@ package com.cocha.hotels.model.matesearch.canonical;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class RateInfo {
 
     private Float hightRateBetweenSupplier;
     private Float lowRateBetweenSupplier;
-    private List<Object> rateForSupplier;
+    private List<RateForSupplier> rateForSupplier;
 
+	
+	public void add(RateForSupplier rateForSupplier) {
+		this.rateForSupplier.add(rateForSupplier);
+	}
+    
     public RateInfo() {
-        rateForSupplier = new ArrayList<Object>();
+    	rateForSupplier = new ArrayList<RateForSupplier>();
+	}
+    
+    public void updateRatesHightandLow(Float hightRate, Float lowRate) {
 
+        if (hightRateBetweenSupplier == null || (hightRate != null && hightRateBetweenSupplier < hightRate)) {
+            this.hightRateBetweenSupplier = hightRate;
+        }
+        if (lowRateBetweenSupplier == null || (lowRate != null && lowRateBetweenSupplier > lowRate)) {
+            this.lowRateBetweenSupplier = lowRate;
+        }
     }
 
     public Float getHightRateBetweenSupplier() {
@@ -30,26 +45,12 @@ public class RateInfo {
         this.lowRateBetweenSupplier = lowRateBetweenSupplier;
     }
 
-    public List<Object> getRateForSupplier() {
-        return rateForSupplier;
-    }
+	public List<RateForSupplier> getRateForSupplier() {
+		return rateForSupplier;
+	}
 
-    public void setRateForSupplier(List<Object> rateForSupplier) {
-        this.rateForSupplier = rateForSupplier;
-    }
-
-    public void add(Object rateSupplier) {
-        this.rateForSupplier.add(rateSupplier);
-    }
-
-    public void updateRatesHightandLow(Float hightRate, Float lowRate) {
-
-        if (hightRateBetweenSupplier == null || (hightRate != null && hightRateBetweenSupplier < hightRate)) {
-            this.hightRateBetweenSupplier = hightRate;
-        }
-        if (lowRateBetweenSupplier == null || (lowRate != null && lowRateBetweenSupplier > lowRate)) {
-            this.lowRateBetweenSupplier = lowRate;
-        }
-    }
-
+	public void setRateForSupplier(List<RateForSupplier> rateForSupplier) {
+		this.rateForSupplier = rateForSupplier;
+	}
+    
 }

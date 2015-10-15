@@ -2,6 +2,7 @@ package com.cocha.hotels.matesearch.util;
 
 public class Constant {
 	
+	public static final String CURRNCY_DEFAULT = "USD";
 	public static final String ID_HOTEL = "idHotel";
 	public static final String SUPPLIER = "supplier";
 	

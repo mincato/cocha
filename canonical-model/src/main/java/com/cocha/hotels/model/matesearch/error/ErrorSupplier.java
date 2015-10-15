@@ -1,6 +1,9 @@
 package com.cocha.hotels.model.matesearch.error;
 
-public class ErrorSupplier {
+import com.cocha.hotels.model.matesearch.response.SupplierServiceRespose;
+
+
+public class ErrorSupplier extends SupplierServiceRespose{
 	
 	public ErrorSupplier() {
 	}
@@ -11,7 +14,6 @@ public class ErrorSupplier {
 	
 	private String idSupplier;
 	private String codeSupplier;
-	private String detail;
 	
 	public String getCodeSupplier() {
 		return codeSupplier;
@@ -27,13 +29,5 @@ public class ErrorSupplier {
 
 	public void setIdSupplier(String idSupplier) {
 		this.idSupplier = idSupplier;
-	}
-
-	public String getDetail() {
-		return detail;
-	}
-
-	public void setDetail(String detail) {
-		this.detail = detail;
 	}
 }
