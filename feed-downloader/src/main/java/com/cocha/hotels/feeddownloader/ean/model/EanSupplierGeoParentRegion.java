@@ -14,7 +14,7 @@ public class EanSupplierGeoParentRegion {
 
     private String regionNameLong;
 
-    private Integer parentRegionID;
+    private String parentRegionID;
 
     private String parentRegionType;
 
@@ -70,11 +70,11 @@ public class EanSupplierGeoParentRegion {
         this.regionNameLong = regionNameLong;
     }
 
-    public Integer getParentRegionID() {
+    public String getParentRegionID() {
         return parentRegionID;
     }
 
-    public void setParentRegionID(Integer parentRegionID) {
+    public void setParentRegionID(String parentRegionID) {
         this.parentRegionID = parentRegionID;
     }
 

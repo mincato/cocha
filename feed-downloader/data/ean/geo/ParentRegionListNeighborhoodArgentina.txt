@@ -1,0 +1,52 @@
+6210122|Neighborhood||city|Neuquen|Neuquen, Argentina|6210116|Multi-City (Vicinity)|Neuquen (and vicinity)|Neuquen (and vicinity), Argentina
+6210714|Neighborhood||city|Cipolletti|Cipolletti, Argentina|6210116|Multi-City (Vicinity)|Neuquen (and vicinity)|Neuquen (and vicinity), Argentina
+6210443|Neighborhood||city|San Luis|San Luis, Argentina|6210438|Multi-City (Vicinity)|San Luis (and vicinity)|San Luis (and vicinity), Argentina
+6210711|Neighborhood||city|Mina Clavero|Mina Clavero, Argentina|6210708|Multi-City (Vicinity)|Mina Clavero (and vicinity)|Mina Clavero (and vicinity), Argentina
+6210717|Neighborhood||city|Pampa de Achala|Pampa de Achala, Argentina|6210708|Multi-City (Vicinity)|Mina Clavero (and vicinity)|Mina Clavero (and vicinity), Argentina
+6210728|Neighborhood||city|Villa General Belgrano|Villa General Belgrano, Argentina|6210727|Multi-City (Vicinity)|Calamuchita Valley|Calamuchita Valley, Argentina
+6210729|Neighborhood||city|Villa Del Dique|Villa Del Dique, Argentina|6210727|Multi-City (Vicinity)|Calamuchita Valley|Calamuchita Valley, Argentina
+6211001|Neighborhood||city|Tucuman|Tucuman, Argentina|6210982|Multi-City (Vicinity)|Tucuman (and vicinity)|Tucuman (and vicinity), Argentina
+6211342|Neighborhood||city|Tafi del Valle|Tafi del Valle, Argentina|6210982|Multi-City (Vicinity)|Tucuman (and vicinity)|Tucuman (and vicinity), Argentina
+6211241|Neighborhood||city|Pilar|Pilar, Argentina|6211235|Multi-City (Vicinity)|Pilar (and vicinity)|Pilar (and vicinity), Argentina
+6211245|Neighborhood||city|Capilla del Senor|Capilla del Senor, Argentina|6211235|Multi-City (Vicinity)|Pilar (and vicinity)|Pilar (and vicinity), Argentina
+6211251|Neighborhood||city|Campana|Campana, Argentina|6211235|Multi-City (Vicinity)|Pilar (and vicinity)|Pilar (and vicinity), Argentina
+6211256|Neighborhood||city|Lujan|Lujan, Argentina|6211235|Multi-City (Vicinity)|Pilar (and vicinity)|Pilar (and vicinity), Argentina
+6142137|Neighborhood||city|Salta|Salta, Argentina|3199|Multi-City (Vicinity)|Salta (and vicinity)|Salta (and vicinity), Argentina
+6131567|Neighborhood||city|Laguna Carilafquen|Laguna Carilafquen, Argentina|903|Multi-City (Vicinity)|San Martin de los Andes (and vicinity)|San Martin de los Andes (and vicinity), Argentina
+6211308|Neighborhood||city|Mar del Plata|Mar del Plata, Argentina|2252|Multi-City (Vicinity)|Mar del Plata (and vicinity)|Mar del Plata (and vicinity), Argentina
+178059|Neighborhood||neighbor|Palermo|Palermo, Buenos Aires, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+178086|Neighborhood||neighbor|San Telmo|San Telmo, Buenos Aires, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6054195|Neighborhood||neighbor|Recoleta|Recoleta, Buenos Aires, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6054196|Neighborhood||downtown|Downtown Buenos Aires|Downtown Buenos Aires, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6140917|Neighborhood||neighbor|Puerto Madero|Puerto Madero, Buenos Aires, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6140918|Neighborhood||neighbor|Belgrano|Belgrano, Buenos Aires, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6159360|Neighborhood||neighbor|Retiro|Retiro, Buenos Aires, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6225770|Neighborhood||neighbor|Colegiales|Colegiales, Buenos Aires, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6242240|Neighborhood||neighbor|Balvanera|Balvanera, Buenos Aires, Argentina|178242|Multi-City (Vicinity)|Buenos Aires (and vicinity)|Buenos Aires (and vicinity), Argentina
+6211325|Neighborhood||city|Puerto Madryn|Puerto Madryn, Argentina|500751|Multi-City (Vicinity)|Puerto Madryn (and vicinity)|Puerto Madryn (and vicinity), Argentina
+6211329|Neighborhood||city|Trelew|Trelew, Argentina|500751|Multi-City (Vicinity)|Puerto Madryn (and vicinity)|Puerto Madryn (and vicinity), Argentina
+6211331|Neighborhood||city|Punta Delgada|Punta Delgada, Argentina|500751|Multi-City (Vicinity)|Puerto Madryn (and vicinity)|Puerto Madryn (and vicinity), Argentina
+6154695|Neighborhood||city|El Calafate|El Calafate, Argentina|6023812|Multi-City (Vicinity)|El Calafate (and vicinity)|El Calafate (and vicinity), Argentina
+6154696|Neighborhood||city|Perito Moreno|Perito Moreno, Argentina|6023812|Multi-City (Vicinity)|El Calafate (and vicinity)|El Calafate (and vicinity), Argentina
+6084477|Neighborhood||city|Mendoza|Mendoza, Argentina|6054200|Multi-City (Vicinity)|Mendoza Wine Region|Mendoza Wine Region, Argentina
+6155618|Neighborhood||city|Tunuyan|Tunuyan, Argentina|6054200|Multi-City (Vicinity)|Mendoza Wine Region|Mendoza Wine Region, Argentina
+6297297|Neighborhood||city|Chacras de Coria|Chacras de Coria, Argentina|6054200|Multi-City (Vicinity)|Mendoza Wine Region|Mendoza Wine Region, Argentina
+6084479|Neighborhood||city|Resistencia|Resistencia, Argentina|6054203|Multi-City (Vicinity)|Corrientes (and vicinity)|Corrientes (and vicinity), Argentina
+6209342|Neighborhood||city|Corrientes|Corrientes, Argentina|6054203|Multi-City (Vicinity)|Corrientes (and vicinity)|Corrientes (and vicinity), Argentina
+6084480|Neighborhood||city|Cordoba|Cordoba, Argentina|6054205|Multi-City (Vicinity)|Cordoba (and vicinity)|Cordoba (and vicinity), Argentina
+6126071|Neighborhood||city|Rio Cuarto|Rio Cuarto, Argentina|6126070|Multi-City (Vicinity)|Rio Cuarto (and vicinity)|Rio Cuarto (and vicinity), Argentina
+6126332|Neighborhood||downtown|Downtown Iguazu|Downtown Iguazu, Argentina|6126331|Multi-City (Vicinity)|Iguazu (and vicinity)|Iguazu (and vicinity), Argentina
+6284996|Neighborhood||neighbor|600 Hectareas|600 Hectareas, Iguazu, Argentina|6126331|Multi-City (Vicinity)|Iguazu (and vicinity)|Iguazu (and vicinity), Argentina
+6285732|Neighborhood||city|Puerto Libertad|Puerto Libertad, Argentina|6126331|Multi-City (Vicinity)|Iguazu (and vicinity)|Iguazu (and vicinity), Argentina
+6126335|Neighborhood||city|Santa Fe|Santa Fe, Argentina|6126334|Multi-City (Vicinity)|Santa Fe - Parana (and vicinity)|Santa Fe - Parana (and vicinity), Argentina
+6126336|Neighborhood||city|Parana|Parana, Argentina|6126334|Multi-City (Vicinity)|Santa Fe - Parana (and vicinity)|Santa Fe - Parana (and vicinity), Argentina
+6126345|Neighborhood||city|Jujuy|Jujuy, Argentina|6126344|Multi-City (Vicinity)|Jujuy (and vicinity)|Jujuy (and vicinity), Argentina
+6126519|Neighborhood||city|Pinamar|Pinamar, Argentina|6126518|Multi-City (Vicinity)|Pinamar (and vicinity)|Pinamar (and vicinity), Argentina
+6297294|Neighborhood||city|Villa Gesell|Villa Gesell, Argentina|6126518|Multi-City (Vicinity)|Pinamar (and vicinity)|Pinamar (and vicinity), Argentina
+6126523|Neighborhood||city|San Bernardo|San Bernardo, Argentina|6126520|Multi-City (Vicinity)|La Costa Partido|La Costa Partido, Argentina
+6126775|Neighborhood||city|San Nicolas de los Arroyos|San Nicolas de los Arroyos, Argentina|6126774|Multi-City (Vicinity)|San Nicolas de los Arroyos (and vicinity)|San Nicolas de los Arroyos (and vicinity), Argentina
+6343235|Neighborhood||city|Colonia Carlos Pellegrini|Colonia Carlos Pellegrini, Argentina|6343234|Multi-City (Vicinity)|Colonia Carlos Pellegrini (and vicinity)|Colonia Carlos Pellegrini (and vicinity), Argentina
+6085465|Neighborhood||downtown|Downtown Bariloche|Downtown Bariloche, Argentina|6085464|Multi-City (Vicinity)|Bariloche (and vicinity)|Bariloche (and vicinity), Argentina
+6085466|Neighborhood||city|Villa La Angostura|Villa La Angostura, Argentina|6085464|Multi-City (Vicinity)|Bariloche (and vicinity)|Bariloche (and vicinity), Argentina
+6254336|Neighborhood||neighbor|Playa Bonita|Playa Bonita, Bariloche, Argentina|6085464|Multi-City (Vicinity)|Bariloche (and vicinity)|Bariloche (and vicinity), Argentina
+6288345|Neighborhood||skiing|Cerro Catedral|Cerro Catedral, Bariloche, Argentina|6085464|Multi-City (Vicinity)|Bariloche (and vicinity)|Bariloche (and vicinity), Argentina
