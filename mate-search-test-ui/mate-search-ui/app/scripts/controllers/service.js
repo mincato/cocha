@@ -15,7 +15,7 @@ serviceMateSearch.controller('serviceController', ['$scope','$http','$location',
 		$http.get('http://'+$location.host()+':'+$location.port()+'/mate-search/sabre/createsession?code=125')
 		.success(function(data) {
 			$scope.isLoadingToken=false;
-			$scope.hotel.token = data;
+			$scope.hotel.token = data.replace('\"','').replace('\"','');
 		});
 	}
 

@@ -7,10 +7,10 @@ public class RateInfo {
 
     private Float hightRateBetweenSupplier;
     private Float lowRateBetweenSupplier;
-    private List<RateInfoForSupplier> rateForSupplier;
+    private List<Object> rateForSupplier;
 
     public RateInfo() {
-        rateForSupplier = new ArrayList<RateInfoForSupplier>();
+        rateForSupplier = new ArrayList<Object>();
 
     }
 
@@ -30,24 +30,24 @@ public class RateInfo {
         this.lowRateBetweenSupplier = lowRateBetweenSupplier;
     }
 
-    public List<RateInfoForSupplier> getRateForSupplier() {
+    public List<Object> getRateForSupplier() {
         return rateForSupplier;
     }
 
-    public void setRateForSupplier(List<RateInfoForSupplier> rateForSupplier) {
+    public void setRateForSupplier(List<Object> rateForSupplier) {
         this.rateForSupplier = rateForSupplier;
     }
 
-    public void add(RateInfoForSupplier rateSupplier) {
+    public void add(Object rateSupplier) {
         this.rateForSupplier.add(rateSupplier);
     }
 
     public void updateRatesHightandLow(Float hightRate, Float lowRate) {
 
-        if (hightRateBetweenSupplier == null || hightRateBetweenSupplier < hightRate) {
+        if (hightRateBetweenSupplier == null || (hightRate != null && hightRateBetweenSupplier < hightRate)) {
             this.hightRateBetweenSupplier = hightRate;
         }
-        if (lowRateBetweenSupplier == null || lowRateBetweenSupplier > lowRate) {
+        if (lowRateBetweenSupplier == null || (lowRate != null && lowRateBetweenSupplier > lowRate)) {
             this.lowRateBetweenSupplier = lowRate;
         }
     }

@@ -12,7 +12,7 @@ import com.cocha.hotels.model.matesearch.canonical.RateInfoForSupplier;
 import com.cocha.hotels.model.matesearch.respose.supplier.ResposeSuppliers;
 
 @Component
-public class SupplierHotelProcessor  implements Processor {
+public class SupplierHotelProcessor  implements Processor{
 
     private static final Logger log = Logger.getLogger(SupplierHotelProcessor.class);
 

@@ -3,6 +3,7 @@ package com.cocha.hotels.matesearch.util;
 public class Constant {
 	
 	public static final String ID_HOTEL = "idHotel";
+	public static final String SUPPLIER = "supplier";
 	
 	public interface CodeSupplier {
 		public static final String BOOKING_SUPPLIER_CODE = "BKG";

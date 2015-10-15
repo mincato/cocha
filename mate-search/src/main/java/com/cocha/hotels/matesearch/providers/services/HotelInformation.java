@@ -23,7 +23,7 @@ public class HotelInformation {
 		
 		List<Hotel> hotels = hotelRepository.findByHotelIds(ids);
 		
-		hotelList.setHotel(hotels);
+		hotelList.setHotels(hotels);
 		
 		return hotelList; 
 	}

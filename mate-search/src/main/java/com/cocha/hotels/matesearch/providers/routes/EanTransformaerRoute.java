@@ -21,8 +21,8 @@ public class EanTransformaerRoute extends RouteBuilder {
 
     @Override
     public void configure() throws Exception {
-
-        from("direct:transfomerResposeEAN").bean(approvalResposeEAN).unmarshal()
+    	
+        from("direct:transfomerResposeEAN").unmarshal()
                 .json(JsonLibrary.Jackson, SupplierEANHotelResponse.class)
                 .setHeader("supplier", simple(CodeSupplier.EAN_SUPPLIER_CODE)).bean(supplirHotelProcessor);
     }
