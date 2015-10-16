@@ -13,6 +13,8 @@ import org.apache.camel.component.cxf.common.message.CxfConstants;
 import org.apache.cxf.message.MessageContentsList;
 import org.springframework.stereotype.Component;
 
+import com.cocha.hotels.matesearch.util.Constant;
+
 @Component
 public class BookingClientProcessor implements Processor {
 
@@ -40,6 +42,11 @@ public class BookingClientProcessor implements Processor {
         req.add(arrival);
         req.add(parameters.get("idHotelBooking"));
         String departure = parameters.get("departure_date");
+        String currencyCode = parameters.get("currencyCode");
+        if(currencyCode == null) {
+        	currencyCode = Constant.CURRNCY_DEFAULT;
+        }
+        req.add(currencyCode);
         departure = dateConvert(departure);
         req.add(departure);
         inMessage.setBody(req);

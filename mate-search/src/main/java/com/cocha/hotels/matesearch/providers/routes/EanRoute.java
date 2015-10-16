@@ -7,6 +7,8 @@ import org.springframework.stereotype.Component;
 
 import com.cocha.hotels.matesearch.providers.processors.ErrorSupplierProcessor;
 import com.cocha.hotels.matesearch.providers.processors.HeaderDataProcessor;
+import com.cocha.hotels.matesearch.util.Constant;
+import com.cocha.hotels.matesearch.util.Constant.CodeSupplier;
 
 /**
  * Defines the camel route for Ean access service.
@@ -23,7 +25,7 @@ public class EanRoute extends RouteBuilder {
     @Override
     public void configure() throws Exception {
     	
-    	onException(Exception.class).handled(true).bean(errorSupplierProcessor).end();
+    	onException(RuntimeException.class).handled(true).setHeader(Constant.SUPPLIER, simple(CodeSupplier.EAN_SUPPLIER_CODE)).process(errorSupplierProcessor).end();
     	
         from("cxfrs:bean:jaxRsServer").process(headerDataProcessor).to("direct:sendEanAvailability").marshal().json(JsonLibrary.Jackson);
     }

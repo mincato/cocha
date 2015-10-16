@@ -107,7 +107,7 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 				break;
 			}
 			
-			if(rateForSupplierOptional.isPresent()) {
+			if(rateForSupplierOptional.isPresent() && this.isAvailability(rateForSupplierOptional.get())) {
 
 				this.addRate(hotelOptinal.get(), rateForSupplierOptional.get());
 			} else {
@@ -120,6 +120,10 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 	}
 	
 	
+	private boolean isAvailability(RateInfoForSupplier rateInfoForSupplier) {
+		return rateInfoForSupplier.getLowRate() != null && rateInfoForSupplier.getHigtRate() != null;
+	}
+
 	private void addErrors (HotelList hotels, ErrorSupplier errorSupplier, Map<String, Object> parameters) {
 		
 		List<String> ids = Arrays.asList(((String) parameters.get(Constant.ID_HOTEL)).split("\\s*,\\s*"));

@@ -13,8 +13,13 @@
 				<div layout layout-sm="column">
 					<md-datepicker ng-model="hotel.departureDate" md-placeholder="Check Out"></md-datepicker>
 				</div>
-			</md-content>
-
+				<div layout layout-sm="column" style="margin-left: 15px;">
+					<md-input-container flex>
+						<label>Currency Code</label>
+						<input ng-model="hotel.currencyCode">
+					</md-input-container>
+				</div>
+				</md-content>
 				<section layout="row" layout-sm="column" layout-align="right center" layout-wrap>
 					<md-button class="md-raised" ng-click="createToken()">Token</md-button>
 					<label>{{hotel.token}}</label>
