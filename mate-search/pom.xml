@@ -24,6 +24,7 @@
 		<slf4j-version>1.7.5</slf4j-version>
 		<mysql-version>5.1.36</mysql-version>
 		<h2-version>1.4.188</h2-version>
+		<es-version>1.7.1</es-version>
 		<springdata-version>1.9.0.RELEASE</springdata-version>
 	</properties>
 
@@ -174,7 +175,17 @@
 			<artifactId>log4j</artifactId>
 			<version>${log4j-version}</version>
 		</dependency>
-
+		<!-- Elasticsearch -->
+		<dependency>
+			<groupId>org.elasticsearch</groupId>
+			<artifactId>elasticsearch</artifactId>
+			<version>${es-version}</version>
+		</dependency>
+		<dependency>
+  			<groupId>org.springframework.data</groupId>
+  			<artifactId>spring-data-elasticsearch</artifactId>
+  			<version>1.2.2.RELEASE</version>
+		</dependency>
 	</dependencies>
 
 	<build>

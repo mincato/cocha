@@ -12,6 +12,7 @@
 	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
     xmlns:jee="http://www.springframework.org/schema/jee"
     xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:elasticsearch="http://www.springframework.org/schema/data/elasticsearch"
 	  	  		
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 	http://www.springframework.org/schema/beans/spring-beans.xsd
@@ -34,8 +35,9 @@
     http://www.springframework.org/schema/data/jpa
     http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
     http://www.springframework.org/schema/tx
-    http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
-    
+    http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+    http://www.springframework.org/schema/data/elasticsearch
+    http://www.springframework.org/schema/data/elasticsearch/spring-elasticsearch-1.0.xsd">    
     
 	<import resource="classpath:META-INF/cxf/cxf.xml" />
 	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
@@ -44,7 +46,7 @@
 	<context:annotation-config />	  			
 	
 	<context:property-placeholder location="classpath:properties/application.properties"/>
-		
+			
 	<!-- Tell CXF/JAX-RS where the Mate - REST service is defined -->			
 	<cxfCamel:rsServer id="mateServer" address="/mate" loggingFeatureEnabled="true">
        <cxfCamel:serviceBeans>
