@@ -19,6 +19,8 @@ public class HotelContentProcessorImpl implements HotelContentProcessor {
 
     private static final Integer PERFECT_CONFIDENCE = 100;
 
+    private static final Integer MIN_CONFIDENCE = 64;
+
     @Autowired
     private HotelFeedRepository hotelFeedRepository;
 
@@ -57,8 +59,9 @@ public class HotelContentProcessorImpl implements HotelContentProcessor {
     private boolean checkActive(List<HotelMapping> hotelMappings, String hotelId) {
         Predicate<HotelMapping> hotelIdPredicate = hotelMapping -> hotelMapping.getHotelId().equals(hotelId);
         Predicate<HotelMapping> activatePredicate = hotelMapping -> hotelMapping.isActive();
+        Predicate<HotelMapping> confidencePredicate = hotelMapping -> hotelMapping.getConfidence() > MIN_CONFIDENCE;
         Stream<HotelMapping> hotelMappingsByHotelId = hotelMappings.stream().filter(
-                hotelIdPredicate.and(activatePredicate));
+                hotelIdPredicate.and(activatePredicate).and(confidencePredicate));
         return hotelMappingsByHotelId.findAny().isPresent();
     }
 

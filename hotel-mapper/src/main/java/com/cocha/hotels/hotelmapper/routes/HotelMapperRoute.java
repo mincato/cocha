@@ -48,9 +48,8 @@ public class HotelMapperRoute extends SpringRouteBuilder {
                 .bean(algorithmicMapperProcessor)
                 .multicast()
                 .parallelProcessing()
-                .to("jpaContent:"
-                        + HotelMapping.class.getName()
-                        + "?entityType=java.util.ArrayList&transactionManager=#contentTransactionManager&usePersist=true",
+                .to("jpaContent:" + HotelMapping.class.getName()
+                        + "?entityType=java.util.ArrayList&transactionManager=#contentTransactionManager",
                         "seda:content", "direct:sabreMappingThruGiata").end()
                 .log(LoggingLevel.INFO, "Run Hotel Mapper successfully");
 
@@ -74,8 +73,8 @@ public class HotelMapperRoute extends SpringRouteBuilder {
                     }
                 })
                 .bean(giataMapperProcessor)
-                .to("jpaContent:" + HotelMapping.class.getName()
-                        + "?transactionManager=#contentTransactionManager&usePersist=true")
+                .to("jpaContent:" + HotelMapping.class.getName() + "?entityType=" + HotelMapping.class.getName()
+                        + "&transactionManager=#contentTransactionManager")
                 .log(LoggingLevel.INFO, "Run sabreMappingThruGiata successfully");
     }
 

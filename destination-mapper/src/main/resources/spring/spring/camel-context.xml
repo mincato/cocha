@@ -9,7 +9,7 @@
        http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd
     ">
 
-	<context:component-scan base-package="com.cocha.hotels.feeddownloader"
+	<context:component-scan base-package="com.cocha.geo.mapper"
 		annotation-config="true" />
 	<context:annotation-config />
 
@@ -38,10 +38,8 @@
 		<property name="dataSource" ref="dataSource" />
 		<property name="jpaVendorAdapter" ref="hibernateJpaVendorAdapter" />
 		<property name="packagesToScan">
-			<list>
-				<value>com.cocha.hotels.model.content.hotel</value>
-				<value>com.cocha.hotels.model.content.geo</value>
-				<value>com.cocha.hotels.model.content.geo.mapping</value>					   				
+			<list>	
+				<value>com.cocha.hotels.model.content.geo</value>				
 			</list>
 		</property>
 		<property name="jpaProperties">

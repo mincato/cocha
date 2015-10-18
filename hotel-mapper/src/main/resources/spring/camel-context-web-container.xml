@@ -97,6 +97,8 @@
 
 	<jpa:repositories base-package="com.cocha.hotels.hotelmapper.repositories.feeds" entity-manager-factory-ref="feedEntityManagerFactory" transaction-manager-ref="feedTransactionManager" />
 	
+	<jpa:repositories base-package="com.cocha.hotels.hotelmapper.repositories.content" entity-manager-factory-ref="contentEntityManagerFactory" transaction-manager-ref="contentTransactionManager" />
+	
 	<bean id="httpAuth" class="org.apache.camel.component.http.HttpConfiguration">
 		<property name="authMethod" value="Basic"/>
 		<property name="authUsername" value="${mate.provider.giata.user}"/>
