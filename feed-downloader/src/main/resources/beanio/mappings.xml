@@ -102,5 +102,18 @@
 			<field name="regionName" />
 			<field name="coordinates" />
 		</record>
+	</stream>
+	<stream name="eanRegionsHotels" format="csv">
+		<parser>
+			<property name="delimiter" value="|" />
+			<property name="unquotedQuotesAllowed" value="true"/>
+		</parser>
+		<record name="header" order="1" minOccurs="1" maxOccurs="1" />		
+		<record name="regionHotel" order="2"
+			class="com.cocha.hotels.feeddownloader.ean.model.EanSupplierRegionHotel"
+			minOccurs="1" maxOccurs="unbounded">			
+			<field name="regionID" />
+			<field name="hotelID" />			
+		</record>
 	</stream>	
 </beanio>	
