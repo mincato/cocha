@@ -150,6 +150,11 @@
 				<value>mapping/Sabre-mapping.xml</value>
 			</list>
 		</property>
+		<property name="customConverters">
+            <list>
+                <bean class="com.cocha.hotels.matesearch.converte.BookingConverterCustom"/>      
+            </list>
+        </property>		
 	</bean>
 
 	<!-- Dozer Configuration -->
