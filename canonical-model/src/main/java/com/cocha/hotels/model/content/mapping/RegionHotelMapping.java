@@ -6,16 +6,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
 @Entity(name = "RegionHotelMapping")
 public class RegionHotelMapping {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id; 
-    
+    private Long id;
+
     private String regionId;
-    
+
     private String hotelId;
 
     private String supplierHotelId;
@@ -26,19 +25,19 @@ public class RegionHotelMapping {
     private Integer confidence;
 
     private boolean active;
-    
+
     public RegionHotelMapping() {
     }
 
     public String getRegionId() {
-		return regionId;
-	}
+        return regionId;
+    }
 
-	public void setRegionId(String regionId) {
-		this.regionId = regionId;
-	}
+    public void setRegionId(String regionId) {
+        this.regionId = regionId;
+    }
 
-	public String getHotelId() {
+    public String getHotelId() {
         return hotelId;
     }
 

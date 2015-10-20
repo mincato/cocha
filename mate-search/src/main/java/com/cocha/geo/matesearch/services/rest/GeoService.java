@@ -28,5 +28,5 @@ public class GeoService {
     @Path("/getHotelsByRegionId")
     public Object getHotelsByRegionId(@QueryParam("idRegion") String idRegion) {
         return null;
-    }    
+    }
 }

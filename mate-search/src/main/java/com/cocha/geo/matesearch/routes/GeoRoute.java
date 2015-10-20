@@ -10,17 +10,16 @@ import com.cocha.geo.matesearch.processors.GeoRegionHotelProcessor;
  */
 @Component
 public class GeoRoute extends RouteBuilder {
-    
+
     @Autowired
     private GeoRegionHotelProcessor geoRegionHotelProcessor;
-    
+
     @Override
     public void configure() throws Exception {
 
         from("cxfrs:bean:geoServer").wireTap("direct:logInfo").choice()
-                .when(simple("${headers.operationName} == 'getHotelsByRegionId'"))
-                .to("direct:getRegionHotel");
-        
-		from("direct:getRegionHotel").process(geoRegionHotelProcessor).wireTap("direct:logInfo");
+                .when(simple("${headers.operationName} == 'getHotelsByRegionId'")).to("direct:getRegionHotel");
+
+        from("direct:getRegionHotel").process(geoRegionHotelProcessor).wireTap("direct:logInfo");
     }
 }
