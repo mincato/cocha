@@ -9,7 +9,7 @@
     <class>com.cocha.hotels.model.content.geo.RegionKey</class>
     <class>com.cocha.hotels.model.content.geo.NeighborhoodArea</class>
     <class>com.cocha.hotels.model.content.geo.Airport</class>
-    <class>com.cocha.hotels.model.content.geo.mapping.RegionHotelMapping</class>
+    <class>com.cocha.hotels.model.content.geo.RegionHotel</class>
     <properties>
       <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
       <property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.JBossAppServerJtaPlatform"/>

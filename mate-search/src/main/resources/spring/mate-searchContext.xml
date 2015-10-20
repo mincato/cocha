@@ -12,6 +12,7 @@
 	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
     xmlns:jee="http://www.springframework.org/schema/jee"
     xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:elasticsearch="http://www.springframework.org/schema/data/elasticsearch"
 	  	  		
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 	http://www.springframework.org/schema/beans/spring-beans.xsd
@@ -34,17 +35,18 @@
     http://www.springframework.org/schema/data/jpa
     http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
     http://www.springframework.org/schema/tx
-    http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
-    
+    http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+    http://www.springframework.org/schema/data/elasticsearch
+    http://www.springframework.org/schema/data/elasticsearch/spring-elasticsearch-1.0.xsd">    
     
 	<import resource="classpath:META-INF/cxf/cxf.xml" />
 	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
 	
-	<context:component-scan base-package="com.cocha.hotels.matesearch" annotation-config="true" />	
+	<context:component-scan base-package="com.cocha" annotation-config="true" />	
 	<context:annotation-config />	  			
 	
 	<context:property-placeholder location="classpath:properties/application.properties"/>
-		
+			
 	<!-- Tell CXF/JAX-RS where the Mate - REST service is defined -->			
 	<cxfCamel:rsServer id="mateServer" address="/mate" loggingFeatureEnabled="true">
        <cxfCamel:serviceBeans>
@@ -64,7 +66,7 @@
     serviceClass="com.cocha.hotels.matesearch.providers.services.rest.EanClientService"
     loggingFeatureEnabled="true"/>
     
-    <cxfCamel:rsServer id="jaxBookingServer" address="/booking" loggingFeatureEnabled="true">
+   <cxfCamel:rsServer id="jaxBookingServer" address="/booking" loggingFeatureEnabled="true">
        <cxfCamel:serviceBeans>
            <bean class="com.cocha.hotels.matesearch.providers.services.rest.BookingService" />
        </cxfCamel:serviceBeans>
@@ -89,7 +91,7 @@
 	</http-conf:conduit>
 	
         
-    <cxfCamel:rsServer id="sabreServer" address="/sabre" loggingFeatureEnabled="true">
+   <cxfCamel:rsServer id="sabreServer" address="/sabre" loggingFeatureEnabled="true">
        <cxfCamel:serviceBeans>
            <bean class="com.cocha.hotels.matesearch.providers.services.rest.SabreService" />
        </cxfCamel:serviceBeans>
@@ -123,6 +125,13 @@
         </cxfCamel:properties>
     </cxfCamel:cxfEndpoint>    		
 		
+	<cxfCamel:rsServer id="geoServer" address="/geo" loggingFeatureEnabled="true">
+       <cxfCamel:serviceBeans>
+           <bean class="com.cocha.geo.matesearch.services.rest.GeoService" />
+       </cxfCamel:serviceBeans>
+   </cxfCamel:rsServer>	
+		
+		
 	<camel:camelContext id="camel" xmlns="http://camel.apache.org/schema/spring" trace="true">
 		<camel:routeBuilder ref="mateRoute" />
 		<camel:routeBuilder ref="eanRoute" />
@@ -139,6 +148,7 @@
 		<camel:routeBuilder ref="eanTransformaerRoute" />
 		<camel:routeBuilder ref="sabreTransformerRoute" />
 		<camel:routeBuilder ref="hotelInformationRoute" />
+		<camel:routeBuilder ref="geoRoute" />
 	</camel:camelContext>	
 	
 	<!-- Dozer Mapping -->

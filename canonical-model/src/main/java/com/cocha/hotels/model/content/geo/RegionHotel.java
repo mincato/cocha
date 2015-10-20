@@ -1,4 +1,4 @@
-package com.cocha.hotels.model.content.geo.mapping;
+package com.cocha.hotels.model.content.geo;
 
 import java.io.Serializable;
 
@@ -8,9 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
-@Entity(name = "RegionHotelMapping")
-public class RegionHotelMapping implements Serializable {
+@Entity(name = "RegionHotel")
+public class RegionHotel implements Serializable {
 
     public static final String BOOKING_SUPPLIER_CODE = "BKG";
     public static final String EAN_SUPPLIER_CODE = "EAN";
@@ -23,12 +22,11 @@ public class RegionHotelMapping implements Serializable {
 
     @Column(length = 3)
     private String supplierCode;
-    
-    private String idRegion;    
-    
+
+    private String idRegion;
+
     private String idHotel;
-    
-    
+
     public Long getId() {
         return id;
     }
@@ -37,28 +35,28 @@ public class RegionHotelMapping implements Serializable {
         this.id = id;
     }
 
-	public String getSupplierCode() {
-		return supplierCode;
-	}
+    public String getSupplierCode() {
+        return supplierCode;
+    }
 
-	public void setSupplierCode(String supplierCode) {
-		this.supplierCode = supplierCode;
-	}
+    public void setSupplierCode(String supplierCode) {
+        this.supplierCode = supplierCode;
+    }
 
-	public String getIdRegion() {
-		return idRegion;
-	}
+    public String getIdRegion() {
+        return idRegion;
+    }
 
-	public void setIdRegion(String idRegion) {
-		this.idRegion = idRegion;
-	}
+    public void setIdRegion(String idRegion) {
+        this.idRegion = idRegion;
+    }
 
-	public String getIdHotel() {
-		return idHotel;
-	}
+    public String getIdHotel() {
+        return idHotel;
+    }
 
-	public void setIdHotel(String idHotel) {
-		this.idHotel = idHotel;
-	}   
+    public void setIdHotel(String idHotel) {
+        this.idHotel = idHotel;
+    }
 
 }

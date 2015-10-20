@@ -6,23 +6,23 @@ package com.cocha.hotels.feeddownloader.ean.model;
  */
 public class EanSupplierRegionHotel {
 
-	private String regionID;
+    private String regionID;
 
-	private String hotelID;
+    private String hotelID;
 
-	public String getHotelID() {
-		return hotelID;
-	}
+    public String getHotelID() {
+        return hotelID;
+    }
 
-	public void setHotelID(String hotelID) {
-		this.hotelID = hotelID;
-	}
+    public void setHotelID(String hotelID) {
+        this.hotelID = hotelID;
+    }
 
-	public String getRegionID() {
-		return regionID;
-	}
+    public String getRegionID() {
+        return regionID;
+    }
 
-	public void setRegionID(String regionID) {
-		this.regionID = regionID;
-	}
+    public void setRegionID(String regionID) {
+        this.regionID = regionID;
+    }
 }
