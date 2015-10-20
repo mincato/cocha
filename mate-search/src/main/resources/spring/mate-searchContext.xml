@@ -42,7 +42,7 @@
 	<import resource="classpath:META-INF/cxf/cxf.xml" />
 	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
 	
-	<context:component-scan base-package="com.cocha.hotels.matesearch" annotation-config="true" />	
+	<context:component-scan base-package="com.cocha" annotation-config="true" />	
 	<context:annotation-config />	  			
 	
 	<context:property-placeholder location="classpath:properties/application.properties"/>
@@ -66,7 +66,7 @@
     serviceClass="com.cocha.hotels.matesearch.providers.services.rest.EanClientService"
     loggingFeatureEnabled="true"/>
     
-    <cxfCamel:rsServer id="jaxBookingServer" address="/booking" loggingFeatureEnabled="true">
+   <cxfCamel:rsServer id="jaxBookingServer" address="/booking" loggingFeatureEnabled="true">
        <cxfCamel:serviceBeans>
            <bean class="com.cocha.hotels.matesearch.providers.services.rest.BookingService" />
        </cxfCamel:serviceBeans>
@@ -91,7 +91,7 @@
 	</http-conf:conduit>
 	
         
-    <cxfCamel:rsServer id="sabreServer" address="/sabre" loggingFeatureEnabled="true">
+   <cxfCamel:rsServer id="sabreServer" address="/sabre" loggingFeatureEnabled="true">
        <cxfCamel:serviceBeans>
            <bean class="com.cocha.hotels.matesearch.providers.services.rest.SabreService" />
        </cxfCamel:serviceBeans>
@@ -125,6 +125,13 @@
         </cxfCamel:properties>
     </cxfCamel:cxfEndpoint>    		
 		
+	<cxfCamel:rsServer id="geoServer" address="/geo" loggingFeatureEnabled="true">
+       <cxfCamel:serviceBeans>
+           <bean class="com.cocha.geo.matesearch.services.rest.GeoService" />
+       </cxfCamel:serviceBeans>
+   </cxfCamel:rsServer>	
+		
+		
 	<camel:camelContext id="camel" xmlns="http://camel.apache.org/schema/spring" trace="true">
 		<camel:routeBuilder ref="mateRoute" />
 		<camel:routeBuilder ref="eanRoute" />
@@ -141,6 +148,7 @@
 		<camel:routeBuilder ref="eanTransformaerRoute" />
 		<camel:routeBuilder ref="sabreTransformerRoute" />
 		<camel:routeBuilder ref="hotelInformationRoute" />
+		<camel:routeBuilder ref="geoRoute" />
 	</camel:camelContext>	
 	
 	<!-- Dozer Mapping -->
