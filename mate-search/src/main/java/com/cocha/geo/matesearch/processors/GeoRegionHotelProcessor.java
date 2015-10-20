@@ -29,9 +29,9 @@ public class GeoRegionHotelProcessor implements Processor {
         Message inMessage = exchange.getIn();
 
         Map<String, Object> headers = inMessage.getHeaders();
-        Map<String, String> parameters = MessageUtils.parseQueryParams((String) headers.get("CamelHttpQuery"));
+        Map<String, Object> parameters = MessageUtils.parseQueryParams((String) headers.get("CamelHttpQuery"));
 
-        String id = parameters.get("idRegion");
+        String id = (String) parameters.get("idRegion");
         List<RegionHotelMapping> hotelsByRegion = regionHotelMappingRepository.findByRegionId(id);
         // parameters = this.putIdSuppliers(parameters, providers);
         String response = "<hotels>";
