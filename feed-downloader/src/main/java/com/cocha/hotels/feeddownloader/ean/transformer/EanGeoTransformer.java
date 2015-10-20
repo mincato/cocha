@@ -14,7 +14,7 @@ import com.cocha.hotels.model.content.geo.NeighborhoodArea;
 import com.cocha.hotels.model.content.geo.Region;
 import com.cocha.hotels.model.content.geo.RegionClass;
 import com.cocha.hotels.model.content.geo.RegionType;
-import com.cocha.hotels.model.content.geo.mapping.RegionHotelMapping;
+import com.cocha.hotels.model.content.geo.RegionHotel;
 import com.cocha.hotels.model.content.hotel.Hotel;
 
 @Component
@@ -96,11 +96,11 @@ public class EanGeoTransformer {
         return canonicalAirport;
     }
     
-    public List<RegionHotelMapping> toCanonicalRegionHotelMappings(List<EanSupplierRegionHotel> supplierRegionHotelMappings) {
-        List<RegionHotelMapping> regionHotelMappings = null;
+    public List<RegionHotel> toCanonicalRegionHotelMappings(List<EanSupplierRegionHotel> supplierRegionHotelMappings) {
+        List<RegionHotel> regionHotelMappings = null;
 
         if (supplierRegionHotelMappings != null) {
-            regionHotelMappings = new ArrayList<RegionHotelMapping>();
+            regionHotelMappings = new ArrayList<RegionHotel>();
             for (EanSupplierRegionHotel supplierRegionHotelMapping : supplierRegionHotelMappings) {
                 regionHotelMappings.add(toCanonicalRegionHotelMapping(supplierRegionHotelMapping));
             }
@@ -108,10 +108,10 @@ public class EanGeoTransformer {
         return regionHotelMappings;
     }
 
-    private RegionHotelMapping toCanonicalRegionHotelMapping(EanSupplierRegionHotel supplierRegionHotelMapping) {
-    	RegionHotelMapping canonicalRegionHotelMapping = null;
+    private RegionHotel toCanonicalRegionHotelMapping(EanSupplierRegionHotel supplierRegionHotelMapping) {
+    	RegionHotel canonicalRegionHotelMapping = null;
         if (supplierRegionHotelMapping != null) {
-        	canonicalRegionHotelMapping = new RegionHotelMapping();
+        	canonicalRegionHotelMapping = new RegionHotel();
         	canonicalRegionHotelMapping.setIdRegion(supplierRegionHotelMapping.getRegionID());
         	canonicalRegionHotelMapping.setIdHotel(supplierRegionHotelMapping.getHotelID());
         	canonicalRegionHotelMapping.setSupplierCode(Hotel.EAN_SUPPLIER_CODE);

@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 import com.cocha.hotels.model.content.geo.Airport;
 import com.cocha.hotels.model.content.geo.NeighborhoodArea;
 import com.cocha.hotels.model.content.geo.Region;
-import com.cocha.hotels.model.content.geo.mapping.RegionHotelMapping;
+import com.cocha.hotels.model.content.geo.RegionHotel;
 
 @Component
 public class EanETLGeoRoute extends SpringRouteBuilder {
@@ -72,7 +72,7 @@ public class EanETLGeoRoute extends SpringRouteBuilder {
 				.errorHandler(loggingErrorHandler(log)).unmarshal(geoRegionsHotelsDataFormat)
 				.log(LoggingLevel.INFO, "Processing EAN Region - Hotel mappings")
 				.beanRef("eanGeoTransformer", "toCanonicalRegionHotelMappings")
-				.to("jpa:" + RegionHotelMapping.class.getName() + "?entityType=java.util.ArrayList")
+				.to("jpa:" + RegionHotel.class.getName() + "?entityType=java.util.ArrayList")
 				.log(LoggingLevel.INFO, "EAN Geo RegionHotelMapping store on database successfully");
 
     }
