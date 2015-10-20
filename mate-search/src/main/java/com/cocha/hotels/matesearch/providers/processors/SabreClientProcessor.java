@@ -27,6 +27,8 @@ import com.sabre.webservices.sabrexml._2011._10.OTAHotelAvailRQ.AvailRequestSegm
 import com.sabre.webservices.sabrexml._2011._10.OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria;
 import com.sabre.webservices.sabrexml._2011._10.OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion;
 import com.sabre.webservices.sabrexml._2011._10.OTAHotelAvailRQ.AvailRequestSegment.HotelSearchCriteria.Criterion.HotelRef;
+import com.sabre.webservices.sabrexml._2011._10.OTAHotelAvailRQ.AvailRequestSegment.RatePlanCandidates;
+import com.sabre.webservices.sabrexml._2011._10.OTAHotelAvailRQ.AvailRequestSegment.RatePlanCandidates.RateRange;
 import com.sabre.webservices.sabrexml._2011._10.OTAHotelAvailRQ.AvailRequestSegment.TimeSpan;
 
 @Component
@@ -80,7 +82,9 @@ public class SabreClientProcessor implements Processor {
         String departure = parameters.get("departure_date");
         departure = dateConvert(departure);
 
-        OTAHotelAvailRQ hotelAvail = createHotelAvailRQ(idsHotels, arrival, departure);
+        String currencyCode = parameters.get("currencyCode");
+        
+		OTAHotelAvailRQ hotelAvail = createHotelAvailRQ(idsHotels, arrival, departure, currencyCode);
         List<Object> params = new ArrayList<>();
         params.add(messageHeader);
         params.add(security);
@@ -89,13 +93,14 @@ public class SabreClientProcessor implements Processor {
     }
 
     /**
+     * @param currencyCode 
      * @return
      */
-    private OTAHotelAvailRQ createHotelAvailRQ(final String idsHotels, final String arrival, final String departure) {
+    private OTAHotelAvailRQ createHotelAvailRQ(final String idsHotels, final String arrival, final String departure, String currencyCode) {
         OTAHotelAvailRQ hotelAvailRQ = new OTAHotelAvailRQ();
         hotelAvailRQ.setVersion("2.2.0");
         hotelAvailRQ.setReturnHostCommand(true);
-
+        
         HotelSearchCriteria searchCriteria = new HotelSearchCriteria();
         Criterion criterion = new Criterion();
         String[] ids = idsHotels.split(",");
@@ -117,6 +122,11 @@ public class SabreClientProcessor implements Processor {
         requestSegment.setGuestCounts(guestCounts);
         requestSegment.setHotelSearchCriteria(searchCriteria);
         requestSegment.setTimeSpan(time);
+        RateRange rateRage = new RateRange();
+        rateRage.setCurrencyCode(currencyCode);
+        RatePlanCandidates ratePlanCandidates = new RatePlanCandidates();
+        ratePlanCandidates.setRateRange(rateRage);
+        requestSegment.setRatePlanCandidates(ratePlanCandidates);
 
         hotelAvailRQ.setAvailRequestSegment(requestSegment);
         return hotelAvailRQ;

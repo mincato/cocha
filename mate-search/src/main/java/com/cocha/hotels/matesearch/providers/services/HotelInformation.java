@@ -1,8 +1,6 @@
 package com.cocha.hotels.matesearch.providers.services;
 
-import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
 import org.apache.camel.Handler;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,22 +12,19 @@ import com.cocha.hotels.model.matesearch.canonical.HotelList;
 
 @Service
 public class HotelInformation {
-
-    @Autowired
-    HotelRepository hotelRepository;
-
-    @Handler
-    public HotelList getHotelInformation(Map<String, String> parameters) {
-
-        HotelList hotelList = new HotelList();
-
-        List<String> ids = Arrays.asList(parameters.get("idHotel").split("\\s*,\\s*"));
-
-        List<Hotel> hotels = hotelRepository.findByHotelIds(ids);
-
-        hotelList.setHotel(hotels);
-
-        return hotelList;
-    }
-
+	
+	@Autowired
+	HotelRepository hotelRepository;
+	
+	@Handler
+	public HotelList getHotelInformation(List<String> ids) {
+		
+		HotelList hotelList = new HotelList();
+		
+		List<Hotel> hotels = hotelRepository.findByHotelIds(ids);
+		
+		hotelList.setHotels(hotels);
+		
+		return hotelList; 
+	}
 }

@@ -13,8 +13,13 @@
 				<div layout layout-sm="column">
 					<md-datepicker ng-model="hotel.departureDate" md-placeholder="Check Out"></md-datepicker>
 				</div>
-			</md-content>
-
+				<div layout layout-sm="column" style="margin-left: 15px;">
+					<md-input-container flex>
+						<label>Currency Code</label>
+						<input ng-model="hotel.currencyCode">
+					</md-input-container>
+				</div>
+				</md-content>
 				<section layout="row" layout-sm="column" layout-align="right center" layout-wrap>
 					<md-button class="md-raised" ng-click="createToken()">Token</md-button>
 					<label>{{hotel.token}}</label>
@@ -44,10 +49,16 @@
 					<md-list>
 						<md-list-item ng-repeat="rate in hotel.rateInfo.rateForSupplier">
 								<div class="md-list-item-text" layout="column">
-									<b>Proovedor: {{rate.codeSupplier}}</b>
-									Codigo Moneda: {{rate.rateCurrencyCode}}</br>
-									Mayor Precio: {{rate.higtRate}}</br>
-									Menor Precio: {{rate.lowRate}}</br>
+									<div ng-show='rate.status.code == 200'>
+										<b>Proovedor: {{rate.availability.codeSupplier}}</b></br>
+										Codigo Moneda: {{rate.availability.rateCurrencyCode}}</br>
+										Mayor Precio: {{rate.availability.higtRate}}</br>
+										Menor Precio: {{rate.availability.lowRate}}
+									</div>
+									<div ng-show='rate.status.code == 500'>
+										<b>Proovedor: {{rate.availability.codeSupplier}}</b></br>
+										{{rate.status.cause}}
+									</div>
 								</div>
 						</md-list-item>
 					</md-list>

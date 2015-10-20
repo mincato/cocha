@@ -28,7 +28,7 @@ public class SabreService {
     @Path("/send")
     public Object send(@QueryParam("idsHotelsSabre") String idsHotelsSabre,
             @QueryParam("arrival_date") String arrival_date, @QueryParam("departure_date") String departure_date,
-            @QueryParam("token") String token) {
+            @QueryParam("token") String token,@QueryParam("currencyCode") String currencyCode) {
         return null;
     }
 

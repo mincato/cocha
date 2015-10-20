@@ -27,7 +27,7 @@ public class MateService {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/availability")
     public String availability(@QueryParam("idHotel") String idHotel, @QueryParam("arrival_date") String arrival_date,
-            @QueryParam("departure_date") String departure_date, @QueryParam("token") String token) {
+            @QueryParam("departure_date") String departure_date,@QueryParam("currencyCode") String currencyCode ,@QueryParam("token") String token) {
         return null;
     }
 }

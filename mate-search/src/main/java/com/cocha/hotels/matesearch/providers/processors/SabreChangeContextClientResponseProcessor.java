@@ -4,11 +4,9 @@ import org.apache.camel.Exchange;
 import org.apache.camel.Message;
 import org.apache.camel.Processor;
 import org.apache.cxf.message.MessageContentsList;
-import org.opentravel.ota._2002._11.SessionCreateRS;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
-import org.xmlsoap.schemas.ws._2002._12.secext.Security;
 
 import com.sabre.webservices.sabrexml._2011._10.ContextChangeRS;
 import com.sabre.webservices.sabrexml._2011._10.ContextChangeRS.SecurityToken;

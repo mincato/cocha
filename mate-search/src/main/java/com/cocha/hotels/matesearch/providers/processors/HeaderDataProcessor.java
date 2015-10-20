@@ -6,6 +6,7 @@ import org.apache.camel.Exchange;
 import org.apache.camel.Message;
 import org.apache.camel.Processor;
 import org.springframework.stereotype.Component;
+
 import com.cocha.hotels.matesearch.util.MessageUtils;
 
 @Component
@@ -16,10 +17,10 @@ public class HeaderDataProcessor implements Processor {
         Message inMessage = exchange.getIn();
 
         String queryStrings = (String) inMessage.getHeader("CamelHttpQuery");
-        Map<String, String> parameters = MessageUtils.parseQueryParams(queryStrings);
+        Map<String, Object> parameters = MessageUtils.parseQueryParams(queryStrings);
 
         // se debe obtener equivalencias de la base de datos
-        String idHotel = parameters.get("idHotel");
+        String idHotel = (String) parameters.get("idHotel");
 
         String idHotelEan = idHotel;
         String idHotelBooking = idHotel;
