@@ -28,7 +28,6 @@ public class GiataProcessorImpl implements GiataMapperProcessor {
         mapping.setSupplierHotelId(sabreId);
         mapping.setHotelId("EAN" + eanId);
         mapping.setActive(DEFAULT_HOTEL_ACTIVE);
-        mapping.setUnmapped(false);
         mapping.setMappedByUser(false);
 
         exchange.getOut().setBody(mapping);

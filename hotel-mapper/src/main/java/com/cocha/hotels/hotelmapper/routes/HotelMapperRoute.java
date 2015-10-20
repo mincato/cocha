@@ -54,6 +54,7 @@ public class HotelMapperRoute extends SpringRouteBuilder {
                 .log(LoggingLevel.INFO, "Run Hotel Mapper successfully");
 
         from("direct:sabreMappingThruGiata")
+                .to("sql:delete from HotelMapping where supplierCode='SAB'?dataSource=#contentDataSource")
                 .split(body())
                 .transform()
                 .simple("${body}")
