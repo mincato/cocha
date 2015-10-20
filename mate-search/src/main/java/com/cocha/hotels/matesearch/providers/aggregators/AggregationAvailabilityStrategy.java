@@ -7,6 +7,7 @@ import java.util.Optional;
 
 import org.apache.camel.Exchange;
 import org.apache.camel.processor.aggregate.AggregationStrategy;
+import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -50,9 +51,7 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
     		
     		resposeSuppliers = newExchange.getIn().getBody(ResposeSuppliers.class);
     		
-    		if(resposeSuppliers.getRateForSupplier()  != null) {
-    			this.addRates(hotels,resposeSuppliers,parameters);
-    		}
+    		this.addRates(hotels,resposeSuppliers,parameters);
     		
     		oldExchange.getIn().setBody(hotels);
     		
@@ -110,11 +109,14 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 			if(rateForSupplierOptional.isPresent() && this.isAvailability(rateForSupplierOptional.get())) {
 
 				this.addRate(hotelOptinal.get(), rateForSupplierOptional.get());
+			
 			} else {
+				
 				ErrorSupplier errorSupplier = new ErrorSupplier();
 				errorSupplier.setCodeSupplier(resposeSuppliers.getCodeSupplier());
 				errorSupplier.setIdSupplier(idSupplier);
 				this.addError(hotelOptinal.get(),errorSupplier);
+			
 			}
 		}
 	}
@@ -160,7 +162,7 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 		status.setCause("success");
 		RateForSupplier rateForSupplier = new RateForSupplier();
 		rateForSupplier.setStatus(status);
-		rateForSupplier.setSupplierServiceRespose(rateInfoForSupplier);
+		rateForSupplier.setAvailability(rateInfoForSupplier);
 		rateInfo.getRateForSupplier().add(rateForSupplier);
 		
 	}
@@ -173,7 +175,7 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 		status.setCause("Supplier Error");
 		RateForSupplier rateForSupplier = new RateForSupplier();
 		rateForSupplier.setStatus(status);
-		rateForSupplier.setSupplierServiceRespose(errorSupplier);
+		rateForSupplier.setAvailability(ObjectUtils.clone(errorSupplier));
 		rateInfo.getRateForSupplier().add(rateForSupplier);
 		
 	}

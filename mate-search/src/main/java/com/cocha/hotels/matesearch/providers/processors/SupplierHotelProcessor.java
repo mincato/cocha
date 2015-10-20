@@ -3,7 +3,6 @@ package com.cocha.hotels.matesearch.providers.processors;
 import java.util.Map;
 
 import org.apache.camel.Exchange;
-import org.apache.camel.Header;
 import org.apache.camel.Processor;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
@@ -23,22 +22,20 @@ public class SupplierHotelProcessor  implements Processor{
     	ResposeSuppliers rateInfoSupplier = exchange.getIn().getBody(ResposeSuppliers.class);
     	Map<String, Object> header = exchange.getIn().getHeaders();
     	
-    	exchange.getIn().setBody(trasformer(rateInfoSupplier, (String) header.get("supplier")));
+    	if(rateInfoSupplier != null && !rateInfoSupplier.getRateForSupplier().isEmpty()) {
+    		setCodeSupplier(rateInfoSupplier, (String) header.get("supplier"));
+    	}
+    	
+    	rateInfoSupplier.setCodeSupplier((String) header.get("supplier"));
+    	
+    	exchange.getIn().setBody(rateInfoSupplier);
     	
     }
 
-    public ResposeSuppliers trasformer(ResposeSuppliers	 rateInfoSupplier, @Header(value = "supplier") String supplier) {
+    public void setCodeSupplier(ResposeSuppliers rateInfoSupplier, String supplier) {
      	log.debug("Trasformer Supplier Hotel Processor");
-     	if(rateInfoSupplier != null ) {
-     		for(RateInfoForSupplier rateInfo : rateInfoSupplier.getRateForSupplier()) {
-     			rateInfo.setCodeSupplier(supplier);
-     		}     		
-     	} else {
-     		rateInfoSupplier = new ResposeSuppliers();
-     	}
-     	rateInfoSupplier.setCodeSupplier(supplier);
-
-        return rateInfoSupplier;
+ 		for(RateInfoForSupplier rateInfo : rateInfoSupplier.getRateForSupplier()) {
+ 			rateInfo.setCodeSupplier(supplier);
+ 		}     	
     }
-
 }

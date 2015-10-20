@@ -1,20 +1,21 @@
 package com.cocha.hotels.model.matesearch.canonical;
 
 import com.cocha.hotels.model.matesearch.response.Status;
-import com.cocha.hotels.model.matesearch.response.SupplierServiceRespose;
+import com.cocha.hotels.model.matesearch.response.Availability;
 
 public class RateForSupplier {
 	
 	private Status status;
-	private SupplierServiceRespose supplierServiceRespose;
+	private Availability availability;
 
-	public SupplierServiceRespose getSupplierServiceRespose() {
-		return supplierServiceRespose;
+	public Availability getAvailability() {
+		return availability;
 	}
 
-	public void setSupplierServiceRespose(SupplierServiceRespose supplierServiceRespose) {
-		this.supplierServiceRespose = supplierServiceRespose;
+	public void setAvailability(Availability availability) {
+		this.availability = availability;
 	}
+
 	public Status getStatus() {
 		return status;
 	}

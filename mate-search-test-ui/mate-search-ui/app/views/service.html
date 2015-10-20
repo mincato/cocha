@@ -49,10 +49,16 @@
 					<md-list>
 						<md-list-item ng-repeat="rate in hotel.rateInfo.rateForSupplier">
 								<div class="md-list-item-text" layout="column">
-									<b>Proovedor: {{rate.codeSupplier}}</b>
-									Codigo Moneda: {{rate.rateCurrencyCode}}</br>
-									Mayor Precio: {{rate.higtRate}}</br>
-									Menor Precio: {{rate.lowRate}}</br>
+									<div ng-show='rate.status.code == 200'>
+										<b>Proovedor: {{rate.availability.codeSupplier}}</b></br>
+										Codigo Moneda: {{rate.availability.rateCurrencyCode}}</br>
+										Mayor Precio: {{rate.availability.higtRate}}</br>
+										Menor Precio: {{rate.availability.lowRate}}
+									</div>
+									<div ng-show='rate.status.code == 500'>
+										<b>Proovedor: {{rate.availability.codeSupplier}}</b></br>
+										{{rate.status.cause}}
+									</div>
 								</div>
 						</md-list-item>
 					</md-list>

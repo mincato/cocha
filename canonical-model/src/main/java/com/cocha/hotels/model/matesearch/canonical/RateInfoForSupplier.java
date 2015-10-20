@@ -1,8 +1,8 @@
 package com.cocha.hotels.model.matesearch.canonical;
 
-import com.cocha.hotels.model.matesearch.response.SupplierServiceRespose;
+import com.cocha.hotels.model.matesearch.response.Availability;
 
-public class RateInfoForSupplier extends SupplierServiceRespose{
+public class RateInfoForSupplier extends Availability {
 
     private String idSupplier;
     private String codeSupplier;
