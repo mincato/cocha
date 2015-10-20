@@ -21,6 +21,7 @@ public class ArmadaHotelMock implements HotelMock {
         hotel.setLongitude(4.89845);
         hotel.setCurrencyCode("EUR");
         hotel.setStarRating("2.0");
+        hotel.setActive(true);
         return hotel;
     }
 
@@ -45,6 +46,7 @@ public class ArmadaHotelMock implements HotelMock {
         hotel.setLongitude(4.8984455689787865);
         hotel.setCurrencyCode("EUR");
         hotel.setStarRating("2.0");
+        hotel.setActive(true);
         return hotel;
     }
 }
