@@ -1,4 +1,3 @@
-
 package com.sabre.services.stl_header.v120;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -6,11 +5,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Clase Java para SabreHeader complex type.
+ * <p>
+ * Clase Java para SabreHeader complex type.
  * 
- * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>
+ * El siguiente fragmento de esquema especifica el contenido que se espera que
+ * haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="SabreHeader"&gt;
@@ -32,14 +33,8 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SabreHeader", propOrder = {
-    "service",
-    "identification",
-    "resultSummary",
-    "security",
-    "traces",
-    "diagnostics"
-})
+@XmlType(name = "SabreHeader", propOrder = { "service", "identification", "resultSummary", "security", "traces",
+        "diagnostics" })
 public class SabreHeader {
 
     @XmlElement(name = "Service", required = true)
@@ -58,10 +53,8 @@ public class SabreHeader {
     /**
      * Obtiene el valor de la propiedad service.
      * 
-     * @return
-     *     possible object is
-     *     {@link Service }
-     *     
+     * @return possible object is {@link Service }
+     * 
      */
     public Service getService() {
         return service;
@@ -71,9 +64,8 @@ public class SabreHeader {
      * Define el valor de la propiedad service.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Service }
-     *     
+     *            allowed object is {@link Service }
+     * 
      */
     public void setService(Service value) {
         this.service = value;
@@ -82,10 +74,8 @@ public class SabreHeader {
     /**
      * Obtiene el valor de la propiedad identification.
      * 
-     * @return
-     *     possible object is
-     *     {@link Identification }
-     *     
+     * @return possible object is {@link Identification }
+     * 
      */
     public Identification getIdentification() {
         return identification;
@@ -95,9 +85,8 @@ public class SabreHeader {
      * Define el valor de la propiedad identification.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Identification }
-     *     
+     *            allowed object is {@link Identification }
+     * 
      */
     public void setIdentification(Identification value) {
         this.identification = value;
@@ -106,10 +95,8 @@ public class SabreHeader {
     /**
      * Obtiene el valor de la propiedad resultSummary.
      * 
-     * @return
-     *     possible object is
-     *     {@link ResultSummary }
-     *     
+     * @return possible object is {@link ResultSummary }
+     * 
      */
     public ResultSummary getResultSummary() {
         return resultSummary;
@@ -119,9 +106,8 @@ public class SabreHeader {
      * Define el valor de la propiedad resultSummary.
      * 
      * @param value
-     *     allowed object is
-     *     {@link ResultSummary }
-     *     
+     *            allowed object is {@link ResultSummary }
+     * 
      */
     public void setResultSummary(ResultSummary value) {
         this.resultSummary = value;
@@ -130,10 +116,8 @@ public class SabreHeader {
     /**
      * Obtiene el valor de la propiedad security.
      * 
-     * @return
-     *     possible object is
-     *     {@link Security }
-     *     
+     * @return possible object is {@link Security }
+     * 
      */
     public Security getSecurity() {
         return security;
@@ -143,9 +127,8 @@ public class SabreHeader {
      * Define el valor de la propiedad security.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Security }
-     *     
+     *            allowed object is {@link Security }
+     * 
      */
     public void setSecurity(Security value) {
         this.security = value;
@@ -154,10 +137,8 @@ public class SabreHeader {
     /**
      * Obtiene el valor de la propiedad traces.
      * 
-     * @return
-     *     possible object is
-     *     {@link Traces }
-     *     
+     * @return possible object is {@link Traces }
+     * 
      */
     public Traces getTraces() {
         return traces;
@@ -167,9 +148,8 @@ public class SabreHeader {
      * Define el valor de la propiedad traces.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Traces }
-     *     
+     *            allowed object is {@link Traces }
+     * 
      */
     public void setTraces(Traces value) {
         this.traces = value;
@@ -178,10 +158,8 @@ public class SabreHeader {
     /**
      * Obtiene el valor de la propiedad diagnostics.
      * 
-     * @return
-     *     possible object is
-     *     {@link Diagnostics }
-     *     
+     * @return possible object is {@link Diagnostics }
+     * 
      */
     public Diagnostics getDiagnostics() {
         return diagnostics;
@@ -191,9 +169,8 @@ public class SabreHeader {
      * Define el valor de la propiedad diagnostics.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Diagnostics }
-     *     
+     *            allowed object is {@link Diagnostics }
+     * 
      */
     public void setDiagnostics(Diagnostics value) {
         this.diagnostics = value;

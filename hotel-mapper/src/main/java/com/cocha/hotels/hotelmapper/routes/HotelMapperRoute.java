@@ -22,7 +22,7 @@ public class HotelMapperRoute extends SpringRouteBuilder {
 
     @Autowired
     private MapperProcessor algorithmicMapperProcessor;
-    
+
     @Autowired
     private GiataMapperProcessor giataMapperProcessor;
 
@@ -31,14 +31,14 @@ public class HotelMapperRoute extends SpringRouteBuilder {
 
     @Value("${mate.provider.giata.address.xml}")
     private String giataUri;
-    
+
     @Value("${mate.provider.giata.xpath.expression}")
     private String giataXpathExpression;
-    
+
     @Override
     public void configure() throws Exception {
 
-        from("timer://{{mapper.quartz.trigger}}")
+        from("{{mapper.consumer.uri}}")
                 .errorHandler(loggingErrorHandler(log))
                 .to("sql:select distinct(countryCode) from Hotel?dataSource=#feedDataSource")
                 .split(body())
@@ -47,12 +47,14 @@ public class HotelMapperRoute extends SpringRouteBuilder {
                 .bean(hotelFeedRepository, "findByCountryCode")
                 .bean(algorithmicMapperProcessor)
                 .multicast()
-                .to("jpaContent:"
-                        + HotelMapping.class.getName()
-                        + "?entityType=java.util.ArrayList&transactionManager=#contentTransactionManager&usePersist=true",
-                        "seda:content", "direct:sabreMappingThruGiata");
+                .parallelProcessing()
+                .to("jpaContent:" + HotelMapping.class.getName()
+                        + "?entityType=java.util.ArrayList&transactionManager=#contentTransactionManager",
+                        "seda:content", "direct:sabreMappingThruGiata").end()
+                .log(LoggingLevel.INFO, "Run Hotel Mapper successfully");
 
         from("direct:sabreMappingThruGiata")
+                .to("sql:delete from HotelMapping where supplierCode='SAB'?dataSource=#contentDataSource")
                 .split(body())
                 .transform()
                 .simple("${body}")
@@ -60,10 +62,11 @@ public class HotelMapperRoute extends SpringRouteBuilder {
                 .simple("${body.supplierCode} == \"EAN\" && ${body.confidence} == 100")
                 .process(dynamicUriProcessor)
                 .setHeader(Exchange.HTTP_METHOD, constant("GET"))
-                .to(giataUri) //overloaded by dynamicUriProcessor using Exchange.HTTP_URI
+                .to(giataUri)
+                // overloaded by dynamicUriProcessor using Exchange.HTTP_URI
                 .setHeader("sabreId", xpath(giataXpathExpression, String.class))
                 .filter(new Predicate() {
-                    
+
                     @Override
                     public boolean matches(Exchange exchange) {
                         String sabreId = exchange.getIn().getHeader("sabreId", String.class);
@@ -71,9 +74,8 @@ public class HotelMapperRoute extends SpringRouteBuilder {
                     }
                 })
                 .bean(giataMapperProcessor)
-                .to("jpaContent:"
-                        + HotelMapping.class.getName()
-                        + "?transactionManager=#contentTransactionManager&usePersist=true")
+                .to("jpaContent:" + HotelMapping.class.getName() + "?entityType=" + HotelMapping.class.getName()
+                        + "&transactionManager=#contentTransactionManager")
                 .log(LoggingLevel.INFO, "Run sabreMappingThruGiata successfully");
     }
 

@@ -4,7 +4,6 @@ import java.nio.charset.Charset;
 
 import org.apache.camel.LoggingLevel;
 import org.apache.camel.dataformat.beanio.BeanIODataFormat;
-import org.apache.camel.spi.DataFormat;
 import org.apache.camel.spring.SpringRouteBuilder;
 import org.springframework.stereotype.Component;
 
@@ -27,8 +26,8 @@ public class EanETLRoute extends SpringRouteBuilder {
         descriptionDataFormat.setEncoding(Charset.forName("UTF-8"));
 
         from("file:{{feeds.input.ean}}").errorHandler(loggingErrorHandler(log)).choice()
-                .when(simple("${file:onlyname} contains 'ActivePropertyList'")).to("direct:processEanHotels")
-                .when(simple("${file:onlyname} contains 'PropertyDescriptionList'"))
+                .when(simple("${file:onlyname} contains '{{feeds.ean.hotelname}}'")).to("direct:processEanHotels")
+                .when(simple("${file:onlyname} contains '{{feeds.ean.descriptionname}}'"))
                 .to("direct:processEanDescriptions").otherwise().log(LoggingLevel.INFO, "File not supported");
 
         from("direct:processEanHotels").routeId(EAN_HOTEL_FEED_ROUTE).errorHandler(loggingErrorHandler(log))

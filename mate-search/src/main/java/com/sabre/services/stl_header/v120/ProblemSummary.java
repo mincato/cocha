@@ -1,4 +1,3 @@
-
 package com.sabre.services.stl_header.v120;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -9,11 +8,13 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
-
 /**
- * <p>Clase Java para ProblemSummary complex type.
+ * <p>
+ * Clase Java para ProblemSummary complex type.
  * 
- * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>
+ * El siguiente fragmento de esquema especifica el contenido que se espera que
+ * haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="ProblemSummary"&gt;
@@ -36,12 +37,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ProblemSummary", propOrder = {
-    "source",
-    "reportingSystem",
-    "message",
-    "shortText"
-})
+@XmlType(name = "ProblemSummary", propOrder = { "source", "reportingSystem", "message", "shortText" })
 public class ProblemSummary {
 
     @XmlElement(name = "Source")
@@ -63,10 +59,8 @@ public class ProblemSummary {
     /**
      * Obtiene el valor de la propiedad source.
      * 
-     * @return
-     *     possible object is
-     *     {@link IdentifierSystem }
-     *     
+     * @return possible object is {@link IdentifierSystem }
+     * 
      */
     public IdentifierSystem getSource() {
         return source;
@@ -76,9 +70,8 @@ public class ProblemSummary {
      * Define el valor de la propiedad source.
      * 
      * @param value
-     *     allowed object is
-     *     {@link IdentifierSystem }
-     *     
+     *            allowed object is {@link IdentifierSystem }
+     * 
      */
     public void setSource(IdentifierSystem value) {
         this.source = value;
@@ -87,10 +80,8 @@ public class ProblemSummary {
     /**
      * Obtiene el valor de la propiedad reportingSystem.
      * 
-     * @return
-     *     possible object is
-     *     {@link IdentifierSystem }
-     *     
+     * @return possible object is {@link IdentifierSystem }
+     * 
      */
     public IdentifierSystem getReportingSystem() {
         return reportingSystem;
@@ -100,9 +91,8 @@ public class ProblemSummary {
      * Define el valor de la propiedad reportingSystem.
      * 
      * @param value
-     *     allowed object is
-     *     {@link IdentifierSystem }
-     *     
+     *            allowed object is {@link IdentifierSystem }
+     * 
      */
     public void setReportingSystem(IdentifierSystem value) {
         this.reportingSystem = value;
@@ -111,10 +101,8 @@ public class ProblemSummary {
     /**
      * Obtiene el valor de la propiedad message.
      * 
-     * @return
-     *     possible object is
-     *     {@link MessageCondition }
-     *     
+     * @return possible object is {@link MessageCondition }
+     * 
      */
     public MessageCondition getMessage() {
         return message;
@@ -124,9 +112,8 @@ public class ProblemSummary {
      * Define el valor de la propiedad message.
      * 
      * @param value
-     *     allowed object is
-     *     {@link MessageCondition }
-     *     
+     *            allowed object is {@link MessageCondition }
+     * 
      */
     public void setMessage(MessageCondition value) {
         this.message = value;
@@ -135,10 +122,8 @@ public class ProblemSummary {
     /**
      * Obtiene el valor de la propiedad shortText.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getShortText() {
         return shortText;
@@ -148,9 +133,8 @@ public class ProblemSummary {
      * Define el valor de la propiedad shortText.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setShortText(String value) {
         this.shortText = value;
@@ -159,10 +143,8 @@ public class ProblemSummary {
     /**
      * Obtiene el valor de la propiedad type.
      * 
-     * @return
-     *     possible object is
-     *     {@link ErrorType }
-     *     
+     * @return possible object is {@link ErrorType }
+     * 
      */
     public ErrorType getType() {
         return type;
@@ -172,9 +154,8 @@ public class ProblemSummary {
      * Define el valor de la propiedad type.
      * 
      * @param value
-     *     allowed object is
-     *     {@link ErrorType }
-     *     
+     *            allowed object is {@link ErrorType }
+     * 
      */
     public void setType(ErrorType value) {
         this.type = value;
@@ -183,10 +164,8 @@ public class ProblemSummary {
     /**
      * Obtiene el valor de la propiedad status.
      * 
-     * @return
-     *     possible object is
-     *     {@link CompletionCodes }
-     *     
+     * @return possible object is {@link CompletionCodes }
+     * 
      */
     public CompletionCodes getStatus() {
         return status;
@@ -196,9 +175,8 @@ public class ProblemSummary {
      * Define el valor de la propiedad status.
      * 
      * @param value
-     *     allowed object is
-     *     {@link CompletionCodes }
-     *     
+     *            allowed object is {@link CompletionCodes }
+     * 
      */
     public void setStatus(CompletionCodes value) {
         this.status = value;
@@ -207,10 +185,8 @@ public class ProblemSummary {
     /**
      * Obtiene el valor de la propiedad timeStamp.
      * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     * @return possible object is {@link XMLGregorianCalendar }
+     * 
      */
     public XMLGregorianCalendar getTimeStamp() {
         return timeStamp;
@@ -220,9 +196,8 @@ public class ProblemSummary {
      * Define el valor de la propiedad timeStamp.
      * 
      * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *            allowed object is {@link XMLGregorianCalendar }
+     * 
      */
     public void setTimeStamp(XMLGregorianCalendar value) {
         this.timeStamp = value;

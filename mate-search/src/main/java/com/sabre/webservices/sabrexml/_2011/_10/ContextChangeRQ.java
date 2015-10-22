@@ -1,4 +1,3 @@
-
 package com.sabre.webservices.sabrexml._2011._10;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -10,11 +9,13 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
-
 /**
- * <p>Clase Java para anonymous complex type.
+ * <p>
+ * Clase Java para anonymous complex type.
  * 
- * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>
+ * El siguiente fragmento de esquema especifica el contenido que se espera que
+ * haya en esta clase.
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -151,12 +152,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "changeAAA",
-    "changeDuty",
-    "changePartition",
-    "overSign"
-})
+@XmlType(name = "", propOrder = { "changeAAA", "changeDuty", "changePartition", "overSign" })
 @XmlRootElement(name = "ContextChangeRQ")
 public class ContextChangeRQ {
 
@@ -179,10 +175,8 @@ public class ContextChangeRQ {
     /**
      * Obtiene el valor de la propiedad changeAAA.
      * 
-     * @return
-     *     possible object is
-     *     {@link ContextChangeRQ.ChangeAAA }
-     *     
+     * @return possible object is {@link ContextChangeRQ.ChangeAAA }
+     * 
      */
     public ContextChangeRQ.ChangeAAA getChangeAAA() {
         return changeAAA;
@@ -192,9 +186,8 @@ public class ContextChangeRQ {
      * Define el valor de la propiedad changeAAA.
      * 
      * @param value
-     *     allowed object is
-     *     {@link ContextChangeRQ.ChangeAAA }
-     *     
+     *            allowed object is {@link ContextChangeRQ.ChangeAAA }
+     * 
      */
     public void setChangeAAA(ContextChangeRQ.ChangeAAA value) {
         this.changeAAA = value;
@@ -203,10 +196,8 @@ public class ContextChangeRQ {
     /**
      * Obtiene el valor de la propiedad changeDuty.
      * 
-     * @return
-     *     possible object is
-     *     {@link ContextChangeRQ.ChangeDuty }
-     *     
+     * @return possible object is {@link ContextChangeRQ.ChangeDuty }
+     * 
      */
     public ContextChangeRQ.ChangeDuty getChangeDuty() {
         return changeDuty;
@@ -216,9 +207,8 @@ public class ContextChangeRQ {
      * Define el valor de la propiedad changeDuty.
      * 
      * @param value
-     *     allowed object is
-     *     {@link ContextChangeRQ.ChangeDuty }
-     *     
+     *            allowed object is {@link ContextChangeRQ.ChangeDuty }
+     * 
      */
     public void setChangeDuty(ContextChangeRQ.ChangeDuty value) {
         this.changeDuty = value;
@@ -227,10 +217,8 @@ public class ContextChangeRQ {
     /**
      * Obtiene el valor de la propiedad changePartition.
      * 
-     * @return
-     *     possible object is
-     *     {@link ContextChangeRQ.ChangePartition }
-     *     
+     * @return possible object is {@link ContextChangeRQ.ChangePartition }
+     * 
      */
     public ContextChangeRQ.ChangePartition getChangePartition() {
         return changePartition;
@@ -240,9 +228,8 @@ public class ContextChangeRQ {
      * Define el valor de la propiedad changePartition.
      * 
      * @param value
-     *     allowed object is
-     *     {@link ContextChangeRQ.ChangePartition }
-     *     
+     *            allowed object is {@link ContextChangeRQ.ChangePartition }
+     * 
      */
     public void setChangePartition(ContextChangeRQ.ChangePartition value) {
         this.changePartition = value;
@@ -251,10 +238,8 @@ public class ContextChangeRQ {
     /**
      * Obtiene el valor de la propiedad overSign.
      * 
-     * @return
-     *     possible object is
-     *     {@link ContextChangeRQ.OverSign }
-     *     
+     * @return possible object is {@link ContextChangeRQ.OverSign }
+     * 
      */
     public ContextChangeRQ.OverSign getOverSign() {
         return overSign;
@@ -264,9 +249,8 @@ public class ContextChangeRQ {
      * Define el valor de la propiedad overSign.
      * 
      * @param value
-     *     allowed object is
-     *     {@link ContextChangeRQ.OverSign }
-     *     
+     *            allowed object is {@link ContextChangeRQ.OverSign }
+     * 
      */
     public void setOverSign(ContextChangeRQ.OverSign value) {
         this.overSign = value;
@@ -275,10 +259,8 @@ public class ContextChangeRQ {
     /**
      * Obtiene el valor de la propiedad returnHostCommand.
      * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     * @return possible object is {@link Boolean }
+     * 
      */
     public Boolean isReturnHostCommand() {
         return returnHostCommand;
@@ -288,9 +270,8 @@ public class ContextChangeRQ {
      * Define el valor de la propiedad returnHostCommand.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *            allowed object is {@link Boolean }
+     * 
      */
     public void setReturnHostCommand(Boolean value) {
         this.returnHostCommand = value;
@@ -299,10 +280,8 @@ public class ContextChangeRQ {
     /**
      * Obtiene el valor de la propiedad timeStamp.
      * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     * @return possible object is {@link XMLGregorianCalendar }
+     * 
      */
     public XMLGregorianCalendar getTimeStamp() {
         return timeStamp;
@@ -312,9 +291,8 @@ public class ContextChangeRQ {
      * Define el valor de la propiedad timeStamp.
      * 
      * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *            allowed object is {@link XMLGregorianCalendar }
+     * 
      */
     public void setTimeStamp(XMLGregorianCalendar value) {
         this.timeStamp = value;
@@ -323,10 +301,8 @@ public class ContextChangeRQ {
     /**
      * Obtiene el valor de la propiedad version.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getVersion() {
         if (version == null) {
@@ -340,19 +316,20 @@ public class ContextChangeRQ {
      * Define el valor de la propiedad version.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setVersion(String value) {
         this.version = value;
     }
 
-
     /**
-     * <p>Clase Java para anonymous complex type.
+     * <p>
+     * Clase Java para anonymous complex type.
      * 
-     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+     * <p>
+     * El siguiente fragmento de esquema especifica el contenido que se espera
+     * que haya en esta clase.
      * 
      * <pre>
      * &lt;complexType&gt;
@@ -392,10 +369,8 @@ public class ContextChangeRQ {
         /**
          * Obtiene el valor de la propiedad accountingCity.
          * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         * @return possible object is {@link String }
+         * 
          */
         public String getAccountingCity() {
             return accountingCity;
@@ -405,9 +380,8 @@ public class ContextChangeRQ {
          * Define el valor de la propiedad accountingCity.
          * 
          * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *            allowed object is {@link String }
+         * 
          */
         public void setAccountingCity(String value) {
             this.accountingCity = value;
@@ -416,10 +390,8 @@ public class ContextChangeRQ {
         /**
          * Obtiene el valor de la propiedad accountingCode.
          * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         * @return possible object is {@link String }
+         * 
          */
         public String getAccountingCode() {
             return accountingCode;
@@ -429,9 +401,8 @@ public class ContextChangeRQ {
          * Define el valor de la propiedad accountingCode.
          * 
          * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *            allowed object is {@link String }
+         * 
          */
         public void setAccountingCode(String value) {
             this.accountingCode = value;
@@ -440,10 +411,8 @@ public class ContextChangeRQ {
         /**
          * Obtiene el valor de la propiedad officeStationCode.
          * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         * @return possible object is {@link String }
+         * 
          */
         public String getOfficeStationCode() {
             return officeStationCode;
@@ -453,9 +422,8 @@ public class ContextChangeRQ {
          * Define el valor de la propiedad officeStationCode.
          * 
          * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *            allowed object is {@link String }
+         * 
          */
         public void setOfficeStationCode(String value) {
             this.officeStationCode = value;
@@ -464,10 +432,8 @@ public class ContextChangeRQ {
         /**
          * Obtiene el valor de la propiedad pseudoCityCode.
          * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         * @return possible object is {@link String }
+         * 
          */
         public String getPseudoCityCode() {
             return pseudoCityCode;
@@ -477,9 +443,8 @@ public class ContextChangeRQ {
          * Define el valor de la propiedad pseudoCityCode.
          * 
          * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *            allowed object is {@link String }
+         * 
          */
         public void setPseudoCityCode(String value) {
             this.pseudoCityCode = value;
@@ -487,11 +452,13 @@ public class ContextChangeRQ {
 
     }
 
-
     /**
-     * <p>Clase Java para anonymous complex type.
+     * <p>
+     * Clase Java para anonymous complex type.
      * 
-     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+     * <p>
+     * El siguiente fragmento de esquema especifica el contenido que se espera
+     * que haya en esta clase.
      * 
      * <pre>
      * &lt;complexType&gt;
@@ -522,10 +489,8 @@ public class ContextChangeRQ {
         /**
          * Obtiene el valor de la propiedad code.
          * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         * @return possible object is {@link String }
+         * 
          */
         public String getCode() {
             return code;
@@ -535,9 +500,8 @@ public class ContextChangeRQ {
          * Define el valor de la propiedad code.
          * 
          * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *            allowed object is {@link String }
+         * 
          */
         public void setCode(String value) {
             this.code = value;
@@ -545,11 +509,13 @@ public class ContextChangeRQ {
 
     }
 
-
     /**
-     * <p>Clase Java para anonymous complex type.
+     * <p>
+     * Clase Java para anonymous complex type.
      * 
-     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+     * <p>
+     * El siguiente fragmento de esquema especifica el contenido que se espera
+     * que haya en esta clase.
      * 
      * <pre>
      * &lt;complexType&gt;
@@ -593,11 +559,7 @@ public class ContextChangeRQ {
      * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "newPassword",
-        "password",
-        "pin"
-    })
+    @XmlType(name = "", propOrder = { "newPassword", "password", "pin" })
     public static class ChangePartition {
 
         @XmlElement(name = "NewPassword")
@@ -612,10 +574,8 @@ public class ContextChangeRQ {
         /**
          * Obtiene el valor de la propiedad newPassword.
          * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         * @return possible object is {@link String }
+         * 
          */
         public String getNewPassword() {
             return newPassword;
@@ -625,9 +585,8 @@ public class ContextChangeRQ {
          * Define el valor de la propiedad newPassword.
          * 
          * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *            allowed object is {@link String }
+         * 
          */
         public void setNewPassword(String value) {
             this.newPassword = value;
@@ -636,10 +595,8 @@ public class ContextChangeRQ {
         /**
          * Obtiene el valor de la propiedad password.
          * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         * @return possible object is {@link String }
+         * 
          */
         public String getPassword() {
             return password;
@@ -649,9 +606,8 @@ public class ContextChangeRQ {
          * Define el valor de la propiedad password.
          * 
          * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *            allowed object is {@link String }
+         * 
          */
         public void setPassword(String value) {
             this.password = value;
@@ -660,10 +616,8 @@ public class ContextChangeRQ {
         /**
          * Obtiene el valor de la propiedad pin.
          * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         * @return possible object is {@link String }
+         * 
          */
         public String getPIN() {
             return pin;
@@ -673,9 +627,8 @@ public class ContextChangeRQ {
          * Define el valor de la propiedad pin.
          * 
          * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *            allowed object is {@link String }
+         * 
          */
         public void setPIN(String value) {
             this.pin = value;
@@ -684,10 +637,8 @@ public class ContextChangeRQ {
         /**
          * Obtiene el valor de la propiedad code.
          * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         * @return possible object is {@link String }
+         * 
          */
         public String getCode() {
             return code;
@@ -697,9 +648,8 @@ public class ContextChangeRQ {
          * Define el valor de la propiedad code.
          * 
          * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *            allowed object is {@link String }
+         * 
          */
         public void setCode(String value) {
             this.code = value;
@@ -707,11 +657,13 @@ public class ContextChangeRQ {
 
     }
 
-
     /**
-     * <p>Clase Java para anonymous complex type.
+     * <p>
+     * Clase Java para anonymous complex type.
      * 
-     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+     * <p>
+     * El siguiente fragmento de esquema especifica el contenido que se espera
+     * que haya en esta clase.
      * 
      * <pre>
      * &lt;complexType&gt;
@@ -762,13 +714,7 @@ public class ContextChangeRQ {
      * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "area",
-        "dutyCode",
-        "organization",
-        "password",
-        "username"
-    })
+    @XmlType(name = "", propOrder = { "area", "dutyCode", "organization", "password", "username" })
     public static class OverSign {
 
         @XmlElement(name = "Area")
@@ -785,10 +731,8 @@ public class ContextChangeRQ {
         /**
          * Obtiene el valor de la propiedad area.
          * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         * @return possible object is {@link String }
+         * 
          */
         public String getArea() {
             return area;
@@ -798,9 +742,8 @@ public class ContextChangeRQ {
          * Define el valor de la propiedad area.
          * 
          * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *            allowed object is {@link String }
+         * 
          */
         public void setArea(String value) {
             this.area = value;
@@ -809,10 +752,8 @@ public class ContextChangeRQ {
         /**
          * Obtiene el valor de la propiedad dutyCode.
          * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         * @return possible object is {@link String }
+         * 
          */
         public String getDutyCode() {
             return dutyCode;
@@ -822,9 +763,8 @@ public class ContextChangeRQ {
          * Define el valor de la propiedad dutyCode.
          * 
          * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *            allowed object is {@link String }
+         * 
          */
         public void setDutyCode(String value) {
             this.dutyCode = value;
@@ -833,10 +773,8 @@ public class ContextChangeRQ {
         /**
          * Obtiene el valor de la propiedad organization.
          * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         * @return possible object is {@link String }
+         * 
          */
         public String getOrganization() {
             return organization;
@@ -846,9 +784,8 @@ public class ContextChangeRQ {
          * Define el valor de la propiedad organization.
          * 
          * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *            allowed object is {@link String }
+         * 
          */
         public void setOrganization(String value) {
             this.organization = value;
@@ -857,10 +794,8 @@ public class ContextChangeRQ {
         /**
          * Obtiene el valor de la propiedad password.
          * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         * @return possible object is {@link String }
+         * 
          */
         public String getPassword() {
             return password;
@@ -870,9 +805,8 @@ public class ContextChangeRQ {
          * Define el valor de la propiedad password.
          * 
          * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *            allowed object is {@link String }
+         * 
          */
         public void setPassword(String value) {
             this.password = value;
@@ -881,10 +815,8 @@ public class ContextChangeRQ {
         /**
          * Obtiene el valor de la propiedad username.
          * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         * @return possible object is {@link String }
+         * 
          */
         public String getUsername() {
             return username;
@@ -894,9 +826,8 @@ public class ContextChangeRQ {
          * Define el valor de la propiedad username.
          * 
          * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *            allowed object is {@link String }
+         * 
          */
         public void setUsername(String value) {
             this.username = value;

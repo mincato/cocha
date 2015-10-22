@@ -3,8 +3,10 @@
 
 package com.cocha.hotels.model.matesearch.supplier.ean.hotel;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class HotelSummaryElement {
 
     @JsonProperty("RoomRateDetailsList")
@@ -347,5 +349,16 @@ public class HotelSummaryElement {
     public java.lang.String getName() {
         return name;
     }
+    
+    @JsonProperty("address2")
+    public java.lang.String getAddress2() {
+		return address2;
+	}
+
+	public void setAddress2(java.lang.String address2) {
+		this.address2 = address2;
+	}
+
+	private java.lang.String address2;
 
 }

@@ -4,13 +4,13 @@ import java.util.List;
 
 public class HotelList {
 	
-	public List<Hotel> hotel;
+	private List<Hotel> hotels;
 
-	public List<Hotel> getHotel() {
-		return hotel;
-	}
+    public List<Hotel> getHotels() {
+        return hotels;
+    }
 
-	public void setHotel(List<Hotel> hotel) {
-		this.hotel = hotel;
-	}
+    public void setHotels(List<Hotel> hotels) {
+        this.hotels = hotels;
+    }
 }

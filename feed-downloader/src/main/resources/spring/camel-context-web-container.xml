@@ -18,7 +18,7 @@
 	<context:annotation-config />
 
 	<camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
-		<propertyPlaceholder id="properties" location="classpath:properties/camel.properties"/>
+		<propertyPlaceholder id="properties" location="classpath:properties/webcontainer/camel.properties"/>
 		<contextScan />
 	</camelContext>
 
@@ -43,8 +43,9 @@
 		<property name="jpaVendorAdapter" ref="hibernateJpaVendorAdapter" />
 		<property name="persistenceUnitName" value="mainPU" />
 		<property name="packagesToScan">
-			<list>
-				<value>com.cocha.hotels.model.*</value>
+			<list>				
+				<value>com.cocha.hotels.model.content.hotel</value>
+				<value>com.cocha.hotels.model.content.geo</value>				
 			</list>
 		</property>
 	</bean>

@@ -60,6 +60,44 @@ public class BookingHotelTransformerTest {
 
     }
 
+    @SuppressWarnings("unchecked")
+    @Test
+    public void testTransformNotNullSupplierHotelListActive() {
+        GetHotelsResponse hotelsResponse = createSupplierHotelActive();
+        List<Hotel> canonicalHotels = BookingHotelTransformer.toCanonicalHotels(hotelsResponse);
+
+        assertTrue(canonicalHotels.get(0).isActive());
+    }
+
+    @SuppressWarnings("unchecked")
+    @Test
+    public void testTransformNotNullSupplierHotelListInactive() {
+        GetHotelsResponse hotelsResponse = createSupplierHotelInactive();
+        List<Hotel> canonicalHotels = BookingHotelTransformer.toCanonicalHotels(hotelsResponse);
+
+        assertFalse(canonicalHotels.get(0).isActive());
+    }
+
+    private GetHotelsResponse createSupplierHotelInactive() {
+        GetHotelsResponse hotelsResponse = new GetHotelsResponse();
+        List<BookingSupplierHotel> supplierHotelList = new ArrayList<BookingSupplierHotel>();
+        BookingSupplierHotel supplierHotel = new BookingSupplierHotel();
+        supplierHotel.setIsClosed(1);
+        supplierHotelList.add(supplierHotel);
+        hotelsResponse.setHotels(supplierHotelList);
+        return hotelsResponse;
+    }
+
+    private GetHotelsResponse createSupplierHotelActive() {
+        GetHotelsResponse hotelsResponse = new GetHotelsResponse();
+        List<BookingSupplierHotel> supplierHotelList = new ArrayList<BookingSupplierHotel>();
+        BookingSupplierHotel supplierHotel = new BookingSupplierHotel();
+        supplierHotel.setIsClosed(0);
+        supplierHotelList.add(supplierHotel);
+        hotelsResponse.setHotels(supplierHotelList);
+        return hotelsResponse;
+    }
+
     private GetHotelsResponse createSupplierHotel() {
         GetHotelsResponse hotelsResponse = new GetHotelsResponse();
         List<BookingSupplierHotel> supplierHotelList = new ArrayList<BookingSupplierHotel>();
@@ -75,6 +113,7 @@ public class BookingHotelTransformerTest {
         supplierHotel.setName(TEST_NAME);
         supplierHotel.setStars(TEST_STARS);
         supplierHotel.setZip(TEST_ZIP);
+        supplierHotel.setIsClosed(0);
         supplierHotelList.add(supplierHotel);
         hotelsResponse.setHotels(supplierHotelList);
         return hotelsResponse;

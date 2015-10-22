@@ -32,14 +32,14 @@ public class TransformerResponseBooking extends CamelSpringTestSupport {
         log.info("************************************");
         for (Result horel : hotelRespose.getResult()) {
             log.info("************************************");
-        	log.info("ID Hotel: " + horel.getHotelId());
-        	log.info("Habitaciones: " + horel.getAvailableRooms());
-        	log.info("Codigo Pais: " + horel.getCurrencyCode());
-        	log.info("Mayor Precio: " + horel.getMaxPrice());
-        	log.info("Menor Precio: " + horel.getMinPrice());        	
-        	log.info("************************************");
+            log.info("ID Hotel: " + horel.getHotelId());
+            log.info("Habitaciones: " + horel.getAvailableRooms());
+            log.info("Codigo Pais: " + horel.getCurrencyCode());
+            log.info("Mayor Precio: " + horel.getMaxPrice());
+            log.info("Menor Precio: " + horel.getMinPrice());
+            log.info("************************************");
         }
-        
+
     }
 
 }

@@ -1,4 +1,3 @@
-
 package org.ebxml.namespaces.messageheader;
 
 import java.util.ArrayList;
@@ -20,11 +19,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.namespace.QName;
 import org.w3c.dom.Element;
 
-
 /**
- * <p>Clase Java para anonymous complex type.
+ * <p>
+ * Clase Java para anonymous complex type.
  * 
- * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>
+ * El siguiente fragmento de esquema especifica el contenido que se espera que
+ * haya en esta clase.
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -52,18 +53,8 @@ import org.w3c.dom.Element;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "from",
-    "to",
-    "cpaId",
-    "conversationId",
-    "service",
-    "action",
-    "messageData",
-    "duplicateElimination",
-    "description",
-    "any"
-})
+@XmlType(name = "", propOrder = { "from", "to", "cpaId", "conversationId", "service", "action", "messageData",
+        "duplicateElimination", "description", "any" })
 @XmlRootElement(name = "MessageHeader")
 public class MessageHeader {
 
@@ -100,10 +91,8 @@ public class MessageHeader {
     /**
      * Obtiene el valor de la propiedad from.
      * 
-     * @return
-     *     possible object is
-     *     {@link From }
-     *     
+     * @return possible object is {@link From }
+     * 
      */
     public From getFrom() {
         return from;
@@ -113,9 +102,8 @@ public class MessageHeader {
      * Define el valor de la propiedad from.
      * 
      * @param value
-     *     allowed object is
-     *     {@link From }
-     *     
+     *            allowed object is {@link From }
+     * 
      */
     public void setFrom(From value) {
         this.from = value;
@@ -124,10 +112,8 @@ public class MessageHeader {
     /**
      * Obtiene el valor de la propiedad to.
      * 
-     * @return
-     *     possible object is
-     *     {@link To }
-     *     
+     * @return possible object is {@link To }
+     * 
      */
     public To getTo() {
         return to;
@@ -137,9 +123,8 @@ public class MessageHeader {
      * Define el valor de la propiedad to.
      * 
      * @param value
-     *     allowed object is
-     *     {@link To }
-     *     
+     *            allowed object is {@link To }
+     * 
      */
     public void setTo(To value) {
         this.to = value;
@@ -148,10 +133,8 @@ public class MessageHeader {
     /**
      * Obtiene el valor de la propiedad cpaId.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getCPAId() {
         return cpaId;
@@ -161,9 +144,8 @@ public class MessageHeader {
      * Define el valor de la propiedad cpaId.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setCPAId(String value) {
         this.cpaId = value;
@@ -172,10 +154,8 @@ public class MessageHeader {
     /**
      * Obtiene el valor de la propiedad conversationId.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getConversationId() {
         return conversationId;
@@ -185,9 +165,8 @@ public class MessageHeader {
      * Define el valor de la propiedad conversationId.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setConversationId(String value) {
         this.conversationId = value;
@@ -196,10 +175,8 @@ public class MessageHeader {
     /**
      * Obtiene el valor de la propiedad service.
      * 
-     * @return
-     *     possible object is
-     *     {@link Service }
-     *     
+     * @return possible object is {@link Service }
+     * 
      */
     public Service getService() {
         return service;
@@ -209,9 +186,8 @@ public class MessageHeader {
      * Define el valor de la propiedad service.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Service }
-     *     
+     *            allowed object is {@link Service }
+     * 
      */
     public void setService(Service value) {
         this.service = value;
@@ -220,10 +196,8 @@ public class MessageHeader {
     /**
      * Obtiene el valor de la propiedad action.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getAction() {
         return action;
@@ -233,9 +207,8 @@ public class MessageHeader {
      * Define el valor de la propiedad action.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setAction(String value) {
         this.action = value;
@@ -244,10 +217,8 @@ public class MessageHeader {
     /**
      * Obtiene el valor de la propiedad messageData.
      * 
-     * @return
-     *     possible object is
-     *     {@link MessageData }
-     *     
+     * @return possible object is {@link MessageData }
+     * 
      */
     public MessageData getMessageData() {
         return messageData;
@@ -257,9 +228,8 @@ public class MessageHeader {
      * Define el valor de la propiedad messageData.
      * 
      * @param value
-     *     allowed object is
-     *     {@link MessageData }
-     *     
+     *            allowed object is {@link MessageData }
+     * 
      */
     public void setMessageData(MessageData value) {
         this.messageData = value;
@@ -268,10 +238,8 @@ public class MessageHeader {
     /**
      * Obtiene el valor de la propiedad duplicateElimination.
      * 
-     * @return
-     *     possible object is
-     *     {@link Object }
-     *     
+     * @return possible object is {@link Object }
+     * 
      */
     public Object getDuplicateElimination() {
         return duplicateElimination;
@@ -281,9 +249,8 @@ public class MessageHeader {
      * Define el valor de la propiedad duplicateElimination.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Object }
-     *     
+     *            allowed object is {@link Object }
+     * 
      */
     public void setDuplicateElimination(Object value) {
         this.duplicateElimination = value;
@@ -293,15 +260,16 @@ public class MessageHeader {
      * Gets the value of the description property.
      * 
      * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the description property.
+     * This accessor method returns a reference to the live list, not a
+     * snapshot. Therefore any modification you make to the returned list will
+     * be present inside the JAXB object. This is why there is not a
+     * <CODE>set</CODE> method for the description property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * 
      * <pre>
-     *    getDescription().add(newItem);
+     * getDescription().add(newItem);
      * </pre>
      * 
      * 
@@ -322,21 +290,21 @@ public class MessageHeader {
      * Gets the value of the any property.
      * 
      * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the any property.
+     * This accessor method returns a reference to the live list, not a
+     * snapshot. Therefore any modification you make to the returned list will
+     * be present inside the JAXB object. This is why there is not a
+     * <CODE>set</CODE> method for the any property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * 
      * <pre>
-     *    getAny().add(newItem);
+     * getAny().add(newItem);
      * </pre>
      * 
      * 
      * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link Element }
+     * Objects of the following type(s) are allowed in the list {@link Element }
      * {@link Object }
      * 
      * 
@@ -351,10 +319,8 @@ public class MessageHeader {
     /**
      * Obtiene el valor de la propiedad id.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getId() {
         return id;
@@ -364,9 +330,8 @@ public class MessageHeader {
      * Define el valor de la propiedad id.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setId(String value) {
         this.id = value;
@@ -375,10 +340,8 @@ public class MessageHeader {
     /**
      * Obtiene el valor de la propiedad version.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getVersion() {
         return version;
@@ -388,27 +351,26 @@ public class MessageHeader {
      * Define el valor de la propiedad version.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setVersion(String value) {
         this.version = value;
     }
 
     /**
-     * Gets a map that contains attributes that aren't bound to any typed property on this class.
+     * Gets a map that contains attributes that aren't bound to any typed
+     * property on this class.
      * 
      * <p>
-     * the map is keyed by the name of the attribute and 
-     * the value is the string value of the attribute.
+     * the map is keyed by the name of the attribute and the value is the string
+     * value of the attribute.
      * 
-     * the map returned by this method is live, and you can add new attribute
-     * by updating the map directly. Because of this design, there's no setter.
+     * the map returned by this method is live, and you can add new attribute by
+     * updating the map directly. Because of this design, there's no setter.
      * 
      * 
-     * @return
-     *     always non-null
+     * @return always non-null
      */
     public Map<QName, String> getOtherAttributes() {
         return otherAttributes;

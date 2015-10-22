@@ -12,7 +12,7 @@
        http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd
        http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.0.xsd
        http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
-       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd 
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
     ">
 
 	<context:component-scan base-package="com.cocha.hotels.hotelmapper"
@@ -20,10 +20,10 @@
 	<context:annotation-config />
 
 	<camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
-		<propertyPlaceholder id="properties" location="classpath:properties/camel.properties"/>
+		<propertyPlaceholder id="properties" location="classpath:properties/webcontainer/camel.properties"/>
 		<contextScan />
 	</camelContext>
-
+	
 	<bean id="databaseProperties"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="locations">
@@ -54,6 +54,7 @@
 		<property name="packagesToScan">
 			<list>
 				<value>com.cocha.hotels.model.content.hotel</value>
+				<value>com.cocha.hotels.model.content.geo</value>
 			</list>
 		</property>
 	</bean>
@@ -95,6 +96,8 @@
 	<tx:annotation-driven transaction-manager="contentTransactionManager"/>
 
 	<jpa:repositories base-package="com.cocha.hotels.hotelmapper.repositories.feeds" entity-manager-factory-ref="feedEntityManagerFactory" transaction-manager-ref="feedTransactionManager" />
+	
+	<jpa:repositories base-package="com.cocha.hotels.hotelmapper.repositories.content" entity-manager-factory-ref="contentEntityManagerFactory" transaction-manager-ref="contentTransactionManager" />
 	
 	<bean id="httpAuth" class="org.apache.camel.component.http.HttpConfiguration">
 		<property name="authMethod" value="Basic"/>

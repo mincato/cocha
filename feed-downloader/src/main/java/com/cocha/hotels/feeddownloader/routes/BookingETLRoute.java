@@ -19,9 +19,10 @@ public class BookingETLRoute extends SpringRouteBuilder {
     public void configure() throws Exception {
 
         from("file:{{feeds.input.booking}}").errorHandler(loggingErrorHandler(log)).choice()
-                .when(simple("${file:onlyname} contains 'hotels'")).to("direct:processBookingHotels")
-                .when(simple("${file:onlyname} contains 'descriptions'")).to("direct:processBookingDescriptions")
-                .otherwise().log(LoggingLevel.INFO, "File not supported");
+                .when(simple("${file:onlyname} contains '{{feeds.booking.hotelname}}'"))
+                .to("direct:processBookingHotels")
+                .when(simple("${file:onlyname} contains '{{feeds.booking.descriptionname}}'"))
+                .to("direct:processBookingDescriptions").otherwise().log(LoggingLevel.INFO, "File not supported");
 
         from("direct:processBookingDescriptions").routeId(BOOKING_DESCRIPTION_FEED_ROUTE)
                 .errorHandler(loggingErrorHandler(log)).log(LoggingLevel.INFO, "Processing Booking descriptions")

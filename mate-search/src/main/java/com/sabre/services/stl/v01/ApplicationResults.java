@@ -1,4 +1,3 @@
-
 package com.sabre.services.stl.v01;
 
 import java.util.ArrayList;
@@ -10,11 +9,13 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import com.sabre.services.stl_header.v120.CompletionCodes;
 
-
 /**
- * <p>Clase Java para ApplicationResults complex type.
+ * <p>
+ * Clase Java para ApplicationResults complex type.
  * 
- * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>
+ * El siguiente fragmento de esquema especifica el contenido que se espera que
+ * haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="ApplicationResults"&gt;
@@ -34,14 +35,8 @@ import com.sabre.services.stl_header.v120.CompletionCodes;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ApplicationResults", propOrder = {
-    "success",
-    "error",
-    "warning"
-})
-public class ApplicationResults
-    extends Results
-{
+@XmlType(name = "ApplicationResults", propOrder = { "success", "error", "warning" })
+public class ApplicationResults extends Results {
 
     @XmlElement(name = "Success")
     protected List<ProblemInformation> success;
@@ -56,15 +51,16 @@ public class ApplicationResults
      * Gets the value of the success property.
      * 
      * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the success property.
+     * This accessor method returns a reference to the live list, not a
+     * snapshot. Therefore any modification you make to the returned list will
+     * be present inside the JAXB object. This is why there is not a
+     * <CODE>set</CODE> method for the success property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * 
      * <pre>
-     *    getSuccess().add(newItem);
+     * getSuccess().add(newItem);
      * </pre>
      * 
      * 
@@ -85,15 +81,16 @@ public class ApplicationResults
      * Gets the value of the error property.
      * 
      * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the error property.
+     * This accessor method returns a reference to the live list, not a
+     * snapshot. Therefore any modification you make to the returned list will
+     * be present inside the JAXB object. This is why there is not a
+     * <CODE>set</CODE> method for the error property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * 
      * <pre>
-     *    getError().add(newItem);
+     * getError().add(newItem);
      * </pre>
      * 
      * 
@@ -114,15 +111,16 @@ public class ApplicationResults
      * Gets the value of the warning property.
      * 
      * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the warning property.
+     * This accessor method returns a reference to the live list, not a
+     * snapshot. Therefore any modification you make to the returned list will
+     * be present inside the JAXB object. This is why there is not a
+     * <CODE>set</CODE> method for the warning property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * 
      * <pre>
-     *    getWarning().add(newItem);
+     * getWarning().add(newItem);
      * </pre>
      * 
      * 
@@ -142,10 +140,8 @@ public class ApplicationResults
     /**
      * Obtiene el valor de la propiedad status.
      * 
-     * @return
-     *     possible object is
-     *     {@link CompletionCodes }
-     *     
+     * @return possible object is {@link CompletionCodes }
+     * 
      */
     public CompletionCodes getStatus() {
         return status;
@@ -155,9 +151,8 @@ public class ApplicationResults
      * Define el valor de la propiedad status.
      * 
      * @param value
-     *     allowed object is
-     *     {@link CompletionCodes }
-     *     
+     *            allowed object is {@link CompletionCodes }
+     * 
      */
     public void setStatus(CompletionCodes value) {
         this.status = value;

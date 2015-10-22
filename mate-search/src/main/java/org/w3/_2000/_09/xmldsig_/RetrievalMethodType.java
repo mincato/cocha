@@ -1,4 +1,3 @@
-
 package org.w3._2000._09.xmldsig_;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -8,11 +7,13 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Clase Java para RetrievalMethodType complex type.
+ * <p>
+ * Clase Java para RetrievalMethodType complex type.
  * 
- * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>
+ * El siguiente fragmento de esquema especifica el contenido que se espera que
+ * haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="RetrievalMethodType"&gt;
@@ -31,9 +32,7 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "RetrievalMethodType", propOrder = {
-    "transforms"
-})
+@XmlType(name = "RetrievalMethodType", propOrder = { "transforms" })
 public class RetrievalMethodType {
 
     @XmlElement(name = "Transforms")
@@ -48,10 +47,8 @@ public class RetrievalMethodType {
     /**
      * Obtiene el valor de la propiedad transforms.
      * 
-     * @return
-     *     possible object is
-     *     {@link TransformsType }
-     *     
+     * @return possible object is {@link TransformsType }
+     * 
      */
     public TransformsType getTransforms() {
         return transforms;
@@ -61,9 +58,8 @@ public class RetrievalMethodType {
      * Define el valor de la propiedad transforms.
      * 
      * @param value
-     *     allowed object is
-     *     {@link TransformsType }
-     *     
+     *            allowed object is {@link TransformsType }
+     * 
      */
     public void setTransforms(TransformsType value) {
         this.transforms = value;
@@ -72,10 +68,8 @@ public class RetrievalMethodType {
     /**
      * Obtiene el valor de la propiedad uri.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getURI() {
         return uri;
@@ -85,9 +79,8 @@ public class RetrievalMethodType {
      * Define el valor de la propiedad uri.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setURI(String value) {
         this.uri = value;
@@ -96,10 +89,8 @@ public class RetrievalMethodType {
     /**
      * Obtiene el valor de la propiedad type.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getType() {
         return type;
@@ -109,9 +100,8 @@ public class RetrievalMethodType {
      * Define el valor de la propiedad type.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setType(String value) {
         this.type = value;

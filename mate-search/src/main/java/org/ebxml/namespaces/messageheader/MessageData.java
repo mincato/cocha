@@ -1,4 +1,3 @@
-
 package org.ebxml.namespaces.messageheader;
 
 import java.math.BigInteger;
@@ -10,11 +9,13 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
-
 /**
- * <p>Clase Java para anonymous complex type.
+ * <p>
+ * Clase Java para anonymous complex type.
  * 
- * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>
+ * El siguiente fragmento de esquema especifica el contenido que se espera que
+ * haya en esta clase.
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -35,13 +36,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "messageId",
-    "timestamp",
-    "refToMessageId",
-    "timeToLive",
-    "timeout"
-})
+@XmlType(name = "", propOrder = { "messageId", "timestamp", "refToMessageId", "timeToLive", "timeout" })
 @XmlRootElement(name = "MessageData")
 public class MessageData {
 
@@ -61,10 +56,8 @@ public class MessageData {
     /**
      * Obtiene el valor de la propiedad messageId.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getMessageId() {
         return messageId;
@@ -74,9 +67,8 @@ public class MessageData {
      * Define el valor de la propiedad messageId.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setMessageId(String value) {
         this.messageId = value;
@@ -85,10 +77,8 @@ public class MessageData {
     /**
      * Obtiene el valor de la propiedad timestamp.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getTimestamp() {
         return timestamp;
@@ -98,9 +88,8 @@ public class MessageData {
      * Define el valor de la propiedad timestamp.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setTimestamp(String value) {
         this.timestamp = value;
@@ -109,10 +98,8 @@ public class MessageData {
     /**
      * Obtiene el valor de la propiedad refToMessageId.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getRefToMessageId() {
         return refToMessageId;
@@ -122,9 +109,8 @@ public class MessageData {
      * Define el valor de la propiedad refToMessageId.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setRefToMessageId(String value) {
         this.refToMessageId = value;
@@ -133,10 +119,8 @@ public class MessageData {
     /**
      * Obtiene el valor de la propiedad timeToLive.
      * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     * @return possible object is {@link XMLGregorianCalendar }
+     * 
      */
     public XMLGregorianCalendar getTimeToLive() {
         return timeToLive;
@@ -146,9 +130,8 @@ public class MessageData {
      * Define el valor de la propiedad timeToLive.
      * 
      * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *            allowed object is {@link XMLGregorianCalendar }
+     * 
      */
     public void setTimeToLive(XMLGregorianCalendar value) {
         this.timeToLive = value;
@@ -157,10 +140,8 @@ public class MessageData {
     /**
      * Obtiene el valor de la propiedad timeout.
      * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     * @return possible object is {@link BigInteger }
+     * 
      */
     public BigInteger getTimeout() {
         return timeout;
@@ -170,9 +151,8 @@ public class MessageData {
      * Define el valor de la propiedad timeout.
      * 
      * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *            allowed object is {@link BigInteger }
+     * 
      */
     public void setTimeout(BigInteger value) {
         this.timeout = value;

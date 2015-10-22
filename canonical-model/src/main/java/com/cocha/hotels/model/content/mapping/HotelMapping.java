@@ -6,12 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
-import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
 
-import com.google.common.base.Objects;
-
-@Table(uniqueConstraints = @UniqueConstraint(columnNames = { "supplierHotelId", "supplierCode" }))
 @Entity
 @NamedQuery(name = "getMappingByConfidence", query = "select x from HotelMapping x where x.confidence = 100")
 public class HotelMapping {
@@ -29,11 +24,20 @@ public class HotelMapping {
 
     private Integer confidence;
 
+    private boolean active;
+
+    private boolean unmapped;
+
+    private boolean mappedByUser;
+
     public HotelMapping(String canonicalId, HotelMatch match) {
         this.confidence = match.getConfidence();
         this.supplierHotelId = match.getHotelToCompare().getId();
         this.supplierCode = match.getHotelToCompare().getSupplierCode();
         this.hotelId = canonicalId;
+        this.active = match.getHotelToCompare().isActive();
+        this.unmapped = false;
+        this.mappedByUser = false;
     }
 
     public HotelMapping() {
@@ -70,5 +74,48 @@ public class HotelMapping {
     public void setConfidence(Integer confidence) {
         this.confidence = confidence;
     }
-    
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    public void setMappedByUser(boolean mappedByUser) {
+        this.mappedByUser = mappedByUser;
+    }
+
+    public boolean isMappedByUser() {
+        return mappedByUser;
+    }
+
+    public boolean isUnmapped() {
+        return unmapped;
+    }
+
+    private void setUnmapped(boolean unmapped) {
+        this.unmapped = unmapped;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void unMap() {
+        if (!isMappedByUser()) {
+            this.setUnmapped(true);
+            this.setActive(false);
+        }
+    }
+
+    public void map() {
+        this.setUnmapped(false);
+    }
+
 }

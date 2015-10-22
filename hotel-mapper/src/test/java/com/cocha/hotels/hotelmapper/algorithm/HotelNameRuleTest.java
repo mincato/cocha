@@ -5,7 +5,6 @@ import org.junit.Test;
 
 import com.cocha.hotels.model.content.hotel.Hotel;
 
-
 public class HotelNameRuleTest {
 
     @Test
@@ -14,7 +13,7 @@ public class HotelNameRuleTest {
         Hotel reference = buildHotel("3B Barranco's - Chic and Basic - B&B");
         Hotel toCompare = buildHotel("Hotel B");
         RuleMatch match = rule.apply(reference, toCompare);
-        
+
         Assert.assertTrue(match.getConfidence() > 0);
     }
 

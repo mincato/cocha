@@ -1,4 +1,3 @@
-
 package org.xmlsoap.schemas.soap.envelope;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -8,13 +7,15 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
-
 /**
  * Fault reporting structure
  * 
- * <p>Clase Java para Fault complex type.
+ * <p>
+ * Clase Java para Fault complex type.
  * 
- * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>
+ * El siguiente fragmento de esquema especifica el contenido que se espera que
+ * haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="Fault"&gt;
@@ -34,12 +35,7 @@ import javax.xml.namespace.QName;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Fault", propOrder = {
-    "faultcode",
-    "faultstring",
-    "faultactor",
-    "detail"
-})
+@XmlType(name = "Fault", propOrder = { "faultcode", "faultstring", "faultactor", "detail" })
 public class Fault {
 
     @XmlElement(required = true)
@@ -53,10 +49,8 @@ public class Fault {
     /**
      * Obtiene el valor de la propiedad faultcode.
      * 
-     * @return
-     *     possible object is
-     *     {@link QName }
-     *     
+     * @return possible object is {@link QName }
+     * 
      */
     public QName getFaultcode() {
         return faultcode;
@@ -66,9 +60,8 @@ public class Fault {
      * Define el valor de la propiedad faultcode.
      * 
      * @param value
-     *     allowed object is
-     *     {@link QName }
-     *     
+     *            allowed object is {@link QName }
+     * 
      */
     public void setFaultcode(QName value) {
         this.faultcode = value;
@@ -77,10 +70,8 @@ public class Fault {
     /**
      * Obtiene el valor de la propiedad faultstring.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getFaultstring() {
         return faultstring;
@@ -90,9 +81,8 @@ public class Fault {
      * Define el valor de la propiedad faultstring.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setFaultstring(String value) {
         this.faultstring = value;
@@ -101,10 +91,8 @@ public class Fault {
     /**
      * Obtiene el valor de la propiedad faultactor.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getFaultactor() {
         return faultactor;
@@ -114,9 +102,8 @@ public class Fault {
      * Define el valor de la propiedad faultactor.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setFaultactor(String value) {
         this.faultactor = value;
@@ -125,10 +112,8 @@ public class Fault {
     /**
      * Obtiene el valor de la propiedad detail.
      * 
-     * @return
-     *     possible object is
-     *     {@link Detail }
-     *     
+     * @return possible object is {@link Detail }
+     * 
      */
     public Detail getDetail() {
         return detail;
@@ -138,9 +123,8 @@ public class Fault {
      * Define el valor de la propiedad detail.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Detail }
-     *     
+     *            allowed object is {@link Detail }
+     * 
      */
     public void setDetail(Detail value) {
         this.detail = value;

@@ -41,6 +41,8 @@ public class Hotel implements Serializable {
 
     private String currencyCode;
 
+    private boolean active;
+
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumns({ @JoinColumn(name = "id", referencedColumnName = "hotelId"),
             @JoinColumn(name = "supplierCode", referencedColumnName = "supplierCode") })
@@ -132,6 +134,14 @@ public class Hotel implements Serializable {
 
     public void setDescription(HotelDescription description) {
         this.description = description;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
     }
 
     @Override

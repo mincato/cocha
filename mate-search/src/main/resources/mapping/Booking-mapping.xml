@@ -3,35 +3,19 @@
 <mappings xmlns="http://dozer.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		  xsi:schemaLocation="http://dozer.sourceforge.net  http://dozer.sourceforge.net/schema/beanmapping.xsd">
 	
+	
+	<configuration>
+		<custom-converters>
+			<converter type="com.cocha.hotels.matesearch.converte.BookingConverterCustom">
+				<class-a>com.cocha.hotels.model.matesearch.supplier.booking.GetHotelAvailabilityBooking</class-a>
+				<class-b>com.cocha.hotels.model.matesearch.respose.supplier.ResposeSuppliers</class-b>
+			</converter>
+		</custom-converters>
+	</configuration>
+	
 	<mapping>
 		<class-a>com.cocha.hotels.model.matesearch.supplier.booking.GetHotelAvailabilityBooking</class-a>
 		<class-b>com.cocha.hotels.model.matesearch.respose.supplier.ResposeSuppliers</class-b>
-		<field map-id="mapperList">
-			<a>result</a>
-			<b>rateForSupplier</b>
-			<a-hint>com.cocha.hotels.model.matesearch.supplier.booking.Result</a-hint>
-			<b-hint>com.cocha.hotels.model.matesearch.canonical.RateInfoForSupplier</b-hint>
-		</field>
 	</mapping>
 	
-	<mapping map-id="mapperList">
-		<class-a>com.cocha.hotels.model.matesearch.supplier.booking.Result</class-a>
-		<class-b>com.cocha.hotels.model.matesearch.canonical.RateInfoForSupplier</class-b>
-		<field>
-			<a>hotelId</a>
-			<b>idSupplier</b>
-		</field>
-		<field>
-			<a>currencyCode</a>
-			<b>rateCurrencyCode</b>
-		</field>
-		<field>
-			<a>maxPrice</a>
-			<b>higtRate</b>
-		</field>			
-		<field>
-			<a>minPrice</a>
-			<b>lowRate</b>
-		</field>															
-	</mapping>
 </mappings>

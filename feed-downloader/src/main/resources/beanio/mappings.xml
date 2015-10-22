@@ -50,4 +50,70 @@
 			<field name="propertyDescription"/>
 		</record>
 	</stream>
+	<stream name="eanGeoParentRegions" format="csv">
+		<parser>
+			<property name="delimiter" value="|" />
+			<property name="unquotedQuotesAllowed" value="true"/>
+		</parser>
+		<record name="header" order="1" minOccurs="1" maxOccurs="1" />		
+		<record name="region" order="2"
+			class="com.cocha.hotels.feeddownloader.ean.model.EanSupplierGeoParentRegion"
+			minOccurs="1" maxOccurs="unbounded">						
+			<field name="regionId" />
+			<field name="regionType" />
+			<field name="relativeSignificance" />
+			<field name="subClass" />
+			<field name="regionName" />
+			<field name="regionNameLong" />
+			<field name="parentRegionID" />
+			<field name="parentRegionType" />
+			<field name="parentRegionName" />
+			<field name="parentRegionNameLong" />		
+		</record>
+	</stream>
+	<stream name="eanGeoAirports" format="csv">
+		<parser>
+			<property name="delimiter" value="|" />
+			<property name="unquotedQuotesAllowed" value="true"/>
+		</parser>
+		<record name="header" order="1" minOccurs="1" maxOccurs="1" />		
+		<record name="Airport" order="2"
+			class="com.cocha.hotels.feeddownloader.ean.model.EanSupplierGeoAirport"
+			minOccurs="1" maxOccurs="unbounded">
+			<field name="airportID" />
+			<field name="airportCode" />
+			<field name="airportName" />
+			<field name="latitude" />
+			<field name="longitude" />
+			<field name="mainCityID" />
+			<field name="countryCode" />		
+		</record>
+	</stream>
+	<stream name="eanGeoNeighborhoods" format="csv">
+		<parser>
+			<property name="delimiter" value="|" />
+			<property name="unquotedQuotesAllowed" value="true"/>
+		</parser>
+		<record name="header" order="1" minOccurs="1" maxOccurs="1" />		
+		<record name="neighborhood" order="2"
+			class="com.cocha.hotels.feeddownloader.ean.model.EanSupplierGeoNeighborhood"
+			minOccurs="1" maxOccurs="unbounded">			
+			<field name="regionID" />
+			<field name="regionName" />
+			<field name="coordinates" />
+		</record>
+	</stream>
+	<stream name="eanRegionsHotels" format="csv">
+		<parser>
+			<property name="delimiter" value="|" />
+			<property name="unquotedQuotesAllowed" value="true"/>
+		</parser>
+		<record name="header" order="1" minOccurs="1" maxOccurs="1" />		
+		<record name="regionHotel" order="2"
+			class="com.cocha.hotels.feeddownloader.ean.model.EanSupplierRegionHotel"
+			minOccurs="1" maxOccurs="unbounded">			
+			<field name="regionID" />
+			<field name="hotelID" />			
+		</record>
+	</stream>	
 </beanio>	

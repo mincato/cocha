@@ -1,4 +1,3 @@
-
 package org.w3._2000._09.xmldsig_;
 
 import java.util.ArrayList;
@@ -13,11 +12,13 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
-
 /**
- * <p>Clase Java para ManifestType complex type.
+ * <p>
+ * Clase Java para ManifestType complex type.
  * 
- * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>
+ * El siguiente fragmento de esquema especifica el contenido que se espera que
+ * haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="ManifestType"&gt;
@@ -35,9 +36,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ManifestType", propOrder = {
-    "reference"
-})
+@XmlType(name = "ManifestType", propOrder = { "reference" })
 public class ManifestType {
 
     @XmlElement(name = "Reference", required = true)
@@ -52,15 +51,16 @@ public class ManifestType {
      * Gets the value of the reference property.
      * 
      * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the reference property.
+     * This accessor method returns a reference to the live list, not a
+     * snapshot. Therefore any modification you make to the returned list will
+     * be present inside the JAXB object. This is why there is not a
+     * <CODE>set</CODE> method for the reference property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * 
      * <pre>
-     *    getReference().add(newItem);
+     * getReference().add(newItem);
      * </pre>
      * 
      * 
@@ -80,10 +80,8 @@ public class ManifestType {
     /**
      * Obtiene el valor de la propiedad id.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getId() {
         return id;
@@ -93,9 +91,8 @@ public class ManifestType {
      * Define el valor de la propiedad id.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setId(String value) {
         this.id = value;

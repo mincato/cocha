@@ -2,6 +2,7 @@ package com.cocha.hotels.feeddownloader.ean.transformer;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,6 +50,7 @@ public class EanHotelTransformerTest {
         assertEquals(TEST_STARS, canonicalHotels.get(0).getStarRating());
         assertEquals(TEST_ZIP, canonicalHotels.get(0).getZipCode());
         assertEquals(Hotel.EAN_SUPPLIER_CODE, canonicalHotels.get(0).getSupplierCode());
+        assertTrue(canonicalHotels.get(0).isActive());
     }
 
     private List<EanSupplierHotel> createSupplierHotel() {

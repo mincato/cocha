@@ -14,6 +14,8 @@ import com.cocha.hotels.model.content.hotel.HotelDescription;
 @Component
 public class EanHotelTransformer {
 
+    private static final boolean DEFAULT_HOTEL_ACTIVE = true;
+
     public List<Hotel> toCanonicalHotels(List<EanSupplierHotel> supplierHotels) {
         List<Hotel> hotels = null;
         if (supplierHotels != null) {
@@ -53,6 +55,7 @@ public class EanHotelTransformer {
             canonicalHotel.setStarRating(supplierHotel.getStarRating());
             canonicalHotel.setZipCode(supplierHotel.getPostalCode());
             canonicalHotel.setSupplierCode(Hotel.EAN_SUPPLIER_CODE);
+            canonicalHotel.setActive(DEFAULT_HOTEL_ACTIVE);
         }
         return canonicalHotel;
     }
