@@ -139,13 +139,25 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 			switch (errorSupplier.getCodeSupplier()) {
 			
 			case CodeSupplier.BOOKING_SUPPLIER_CODE:
-				errorSupplier.setIdSupplier(idMapping.getSupplierBooking());
+				if(idMapping.getSupplierBooking() != null) {
+					errorSupplier.setIdSupplier(idMapping.getSupplierBooking());					
+				} else {
+					errorSupplier.setIdSupplier("");
+				}
 				break;
 			case CodeSupplier.EAN_SUPPLIER_CODE:
-				errorSupplier.setIdSupplier(idMapping.getSupplierEAN());
+				if(idMapping.getSupplierEAN() != null) {
+					errorSupplier.setIdSupplier(idMapping.getSupplierEAN());					
+				} else {
+					errorSupplier.setIdSupplier("");
+				}
 				break;
 			case CodeSupplier.SABRE_SUPPLIER_CODE:
-				errorSupplier.setIdSupplier(idMapping.getSupplierSabre());
+				if(idMapping.getSupplierSabre() != null) {
+					errorSupplier.setIdSupplier(idMapping.getSupplierSabre());					
+				} else {
+					errorSupplier.setIdSupplier("");
+				}
 				break;
 			}
 			this.addError(hotelOptinal.get(), errorSupplier);
@@ -162,7 +174,7 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 		status.setCause("success");
 		RateForSupplier rateForSupplier = new RateForSupplier();
 		rateForSupplier.setStatus(status);
-		rateForSupplier.setAvailability(rateInfoForSupplier);
+		rateForSupplier.setAvailability((RateInfoForSupplier) rateInfoForSupplier);
 		rateInfo.getRateForSupplier().add(rateForSupplier);
 		
 	}
@@ -175,7 +187,7 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 		status.setCause("Supplier Error");
 		RateForSupplier rateForSupplier = new RateForSupplier();
 		rateForSupplier.setStatus(status);
-		rateForSupplier.setAvailability(ObjectUtils.clone(errorSupplier));
+		rateForSupplier.setAvailability((ErrorSupplier) ObjectUtils.clone(errorSupplier));
 		rateInfo.getRateForSupplier().add(rateForSupplier);
 		
 	}

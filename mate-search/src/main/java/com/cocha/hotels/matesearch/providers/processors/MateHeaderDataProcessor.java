@@ -48,6 +48,8 @@ public class MateHeaderDataProcessor implements Processor {
         	parameters.put("currncyCode", Constant.CURRNCY_DEFAULT);
         }
 
+        parameters.put("Content-Type", (String)headers.get("Content-Type"));
+        
         this.putIdSuppliersAndIdMapping(parameters,providers);        
         
         exchange.getOut().setBody(parameters);

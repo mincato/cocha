@@ -29,7 +29,7 @@ public class EanTransformaerRoute extends RouteBuilder {
     	
     	onException(RuntimeException.class).handled(true).setHeader(Constant.SUPPLIER, simple(CodeSupplier.EAN_SUPPLIER_CODE)).process(errorSupplierProcessor).end();
     	
-        from("direct:transfomerResposeEAN").unmarshal()
+        from("direct:transfomerResposeEAN").bean(approvalResposeEAN).unmarshal()
                 .json(JsonLibrary.Jackson, SupplierEANHotelResponse.class)
                 .setHeader("supplier", simple(CodeSupplier.EAN_SUPPLIER_CODE)).bean(supplirHotelProcessor);
     }

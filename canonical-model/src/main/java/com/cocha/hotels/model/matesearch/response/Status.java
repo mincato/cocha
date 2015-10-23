@@ -1,8 +1,16 @@
 package com.cocha.hotels.model.matesearch.response;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Status {
 	
+	@XmlElement
 	private String code;
+	
+	@XmlElement
 	private String cause;
 	
 	public String getCode() {

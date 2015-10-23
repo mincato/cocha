@@ -3,12 +3,22 @@ package com.cocha.hotels.model.matesearch.canonical;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 
+
+@XmlAccessorType(XmlAccessType.FIELD)
 public class RateInfo {
 
+	@XmlElement
     private Float hightRateBetweenSupplier;
+	
+	@XmlElement
     private Float lowRateBetweenSupplier;
-    private List<RateForSupplier> rateForSupplier;
+    
+	@XmlElement
+	private List<RateForSupplier> rateForSupplier;
 
 	
 	public void add(RateForSupplier rateForSupplier) {

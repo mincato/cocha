@@ -1,14 +1,28 @@
 package com.cocha.hotels.model.matesearch.canonical;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+
 import com.cocha.hotels.model.matesearch.response.Availability;
 
+@XmlAccessorType(XmlAccessType.FIELD)
 public class RateInfoForSupplier extends Availability {
 
+	@XmlElement
     private String idSupplier;
+	
+	@XmlElement
     private String codeSupplier;
-    private String rateCurrencyCode;
-    private Float higtRate;
-    private Float lowRate;
+    
+	@XmlElement
+	private String rateCurrencyCode;
+    
+	@XmlElement
+	private Float higtRate;
+    
+	@XmlElement
+	private Float lowRate;
 
     public String getIdSupplier() {
         return idSupplier;

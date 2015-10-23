@@ -4,27 +4,38 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Transient;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 
 @Entity(name = "Hotel")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Hotel {
 
     @Id
+    @XmlElement
     private String id;
 
+    @XmlElement
     private String name;
 
+    @XmlElement
     private String address;
 
     @Transient
+    @XmlElement
     private String city;
 
     @Transient
+    @XmlElement
     private String stateProvince;
 
+    @XmlElement
     @Column(name = "countryCode")
     private String country;
 
     @Transient
+    @XmlElement
     private RateInfo rateInfo;
 
     public Hotel() {

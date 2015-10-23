@@ -1,11 +1,18 @@
 package com.cocha.hotels.model.matesearch.error;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+
 import com.cocha.hotels.model.matesearch.response.Availability;
 
-
+@XmlAccessorType(XmlAccessType.FIELD)
 public class ErrorSupplier extends Availability implements Cloneable {
 	
+	@XmlElement
 	private String idSupplier;
+	
+	@XmlElement
 	private String codeSupplier;
 	
 	public ErrorSupplier(String supplier) {

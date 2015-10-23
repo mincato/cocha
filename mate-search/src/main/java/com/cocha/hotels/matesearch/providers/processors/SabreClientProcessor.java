@@ -21,6 +21,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.xmlsoap.schemas.ws._2002._12.secext.Security;
 
+import com.cocha.hotels.matesearch.util.Constant;
 import com.sabre.webservices.sabrexml._2011._10.OTAHotelAvailRQ;
 import com.sabre.webservices.sabrexml._2011._10.OTAHotelAvailRQ.AvailRequestSegment;
 import com.sabre.webservices.sabrexml._2011._10.OTAHotelAvailRQ.AvailRequestSegment.GuestCounts;
@@ -83,6 +84,9 @@ public class SabreClientProcessor implements Processor {
         departure = dateConvert(departure);
 
         String currencyCode = parameters.get("currencyCode");
+        if(currencyCode == null) {
+        	currencyCode = Constant.CURRNCY_DEFAULT;
+        }
         
 		OTAHotelAvailRQ hotelAvail = createHotelAvailRQ(idsHotels, arrival, departure, currencyCode);
         List<Object> params = new ArrayList<>();
