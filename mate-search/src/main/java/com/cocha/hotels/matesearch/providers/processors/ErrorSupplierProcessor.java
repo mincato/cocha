@@ -1,5 +1,6 @@
 package com.cocha.hotels.matesearch.providers.processors;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.camel.Exchange;
@@ -7,7 +8,7 @@ import org.apache.camel.Message;
 import org.apache.camel.Processor;
 import org.springframework.stereotype.Component;
 
-import com.cocha.hotels.model.matesearch.canonical.ErrorSupplier;
+import com.cocha.hotels.model.matesearch.error.SupplierError;
 
 @Component
 public class ErrorSupplierProcessor implements Processor {
@@ -18,9 +19,12 @@ public class ErrorSupplierProcessor implements Processor {
 		Message in = exchange.getIn();
 		Map<String, Object> parameters = in.getHeaders();
 		
-		ErrorSupplier errorSupplier = new ErrorSupplier((String) parameters.get("supplier"));
+		parameters.remove("Content-Type");
 		
-		exchange.getOut().setBody(errorSupplier);
+		SupplierError errorSupplier = new SupplierError((String) parameters.get("supplier"));
+		
+		exchange.getIn().setBody(errorSupplier);
+		exchange.getIn().setHeaders(new HashMap<String, Object>());
 		
 	}
 }

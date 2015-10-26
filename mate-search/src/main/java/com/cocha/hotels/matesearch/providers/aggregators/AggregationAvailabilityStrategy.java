@@ -21,6 +21,7 @@ import com.cocha.hotels.model.matesearch.canonical.RateForSupplier;
 import com.cocha.hotels.model.matesearch.canonical.RateInfo;
 import com.cocha.hotels.model.matesearch.canonical.RateInfoForSupplier;
 import com.cocha.hotels.model.matesearch.canonical.Status;
+import com.cocha.hotels.model.matesearch.error.SupplierError;
 import com.cocha.hotels.model.matesearch.respose.supplier.IdMapping;
 import com.cocha.hotels.model.matesearch.respose.supplier.ResposeSuppliers;
 
@@ -63,6 +64,16 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
     		Map<String, Object> parameters = oldExchange.getIn().getHeaders(); 
     		
     		this.addErrors(hotels, errorSupplier, parameters);
+    		
+    		exchange = oldExchange;
+    		
+    	} else if (newExchange.getIn().getBody(SupplierError.class) instanceof SupplierError) {
+    	
+    		hotels = oldExchange.getIn().getBody(HotelList.class);
+    		errorSupplier = newExchange.getIn().getBody(SupplierError.class);
+    		Map<String, Object> parameters = oldExchange.getIn().getHeaders(); 
+    		
+    		this.addErrors(hotels,(ErrorSupplier) errorSupplier, parameters);
     		
     		exchange = oldExchange;
     		

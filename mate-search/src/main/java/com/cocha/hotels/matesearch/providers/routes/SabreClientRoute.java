@@ -28,7 +28,7 @@ public class SabreClientRoute extends RouteBuilder {
     @Override
     public void configure() throws Exception {
 
-    	onException(RuntimeException.class).handled(true).setHeader(Constant.SUPPLIER, simple(CodeSupplier.SABRE_SUPPLIER_CODE)).process(errorSupplierProcessor).end();
+    	onException(RuntimeException.class).handled(true).setHeader(Constant.SUPPLIER, simple(CodeSupplier.SABRE_SUPPLIER_CODE)).bean(errorSupplierProcessor).end();
     	
         from("direct:sendSabreAvailability").process(sabreClientProcessor).wireTap("direct:logInfo")
                 .to("cxf:bean:sabreAvailability").log("Testing message").bean(sabreClientResponseProcessor)
