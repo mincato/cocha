@@ -48,9 +48,10 @@ public class HotelMappingManagerImpl implements HotelMappingManager {
     public HotelMapping find(String hotelId, String supplierCode) {
         Predicate<HotelMapping> byHotelId = hotelMapping -> hotelMapping.getHotelId().equals(hotelId);
         Predicate<HotelMapping> bySupplierCode = hotelMapping -> hotelMapping.getSupplierCode().equals(supplierCode);
+        Predicate<HotelMapping> byUnmapped = hotelMapping -> !hotelMapping.isUnmapped();
 
         HotelMapping hotelMapping = null;
-        Optional<HotelMapping> optionalHotelMapping = hotelMappings.stream().filter(byHotelId.and(bySupplierCode))
+        Optional<HotelMapping> optionalHotelMapping = hotelMappings.stream().filter(byHotelId.and(bySupplierCode).and(byUnmapped))
                 .findFirst();
         if (optionalHotelMapping.isPresent()) {
             hotelMapping = optionalHotelMapping.get();
