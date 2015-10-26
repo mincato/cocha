@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import com.cocha.hotels.hotelmapper.managers.HotelMappingManager;
 import com.cocha.hotels.hotelmapper.processors.DynamicGiataUriProcessor;
 import com.cocha.hotels.hotelmapper.processors.GiataMapperProcessor;
 import com.cocha.hotels.hotelmapper.processors.MapperProcessor;
@@ -35,31 +36,35 @@ public class HotelMapperRoute extends SpringRouteBuilder {
     @Value("${mate.provider.giata.xpath.expression}")
     private String giataXpathExpression;
 
+    @Autowired
+    private HotelMappingManager hotelMappingManager;
+
     @Override
     public void configure() throws Exception {
 
         from("{{mapper.consumer.uri}}")
                 .errorHandler(loggingErrorHandler(log))
+                .bean(hotelMappingManager, "init")
                 .to("sql:select distinct(countryCode) from Hotel?dataSource=#feedDataSource")
                 .split(body())
                 .transform()
                 .simple("${body[countryCode]}")
                 .bean(hotelFeedRepository, "findByCountryCode")
                 .bean(algorithmicMapperProcessor)
-                .multicast()
-                .parallelProcessing()
+                .wireTap("seda:content")
+                .wireTap("direct:sabreMappingThruGiata")
                 .to("jpaContent:" + HotelMapping.class.getName()
-                        + "?entityType=java.util.ArrayList&transactionManager=#contentTransactionManager",
-                        "seda:content", "direct:sabreMappingThruGiata").end()
+                        + "?entityType=java.util.ArrayList&transactionManager=#contentTransactionManager")
                 .log(LoggingLevel.INFO, "Run Hotel Mapper successfully");
 
         from("direct:sabreMappingThruGiata")
-                .to("sql:delete from HotelMapping where supplierCode='SAB'?dataSource=#contentDataSource")
                 .split(body())
                 .transform()
                 .simple("${body}")
                 .filter()
                 .simple("${body.supplierCode} == \"EAN\" && ${body.confidence} == 100")
+                .filter()
+                .method(hotelMappingManager, "noExistSabreMapping")
                 .process(dynamicUriProcessor)
                 .setHeader(Exchange.HTTP_METHOD, constant("GET"))
                 .to(giataUri)

@@ -41,8 +41,8 @@ public class BookingHotelTransformer {
             canonicalHotel.setCountryCode(StringUtils.upperCase(supplierHotel.getCountryCode()));
             canonicalHotel.setCurrencyCode(supplierHotel.getCurrencyCode());
             if (supplierHotel.getLocation() != null) {
-                canonicalHotel.setLatitude(Double.parseDouble(supplierHotel.getLocation().getLatitude()));
-                canonicalHotel.setLongitude(Double.parseDouble(supplierHotel.getLocation().getLongitude()));
+                canonicalHotel.setLatitude(parse(supplierHotel.getLocation().getLatitude()));
+                canonicalHotel.setLongitude(parse(supplierHotel.getLocation().getLongitude()));
             }
             canonicalHotel.setName(supplierHotel.getName());
             canonicalHotel.setStarRating(supplierHotel.getStars());
@@ -51,6 +51,14 @@ public class BookingHotelTransformer {
             canonicalHotel.setSupplierCode(Hotel.BOOKING_SUPPLIER_CODE);
         }
         return canonicalHotel;
+    }
+
+    private static Double parse(String coordinate) {
+        Double returnCoordinate = null;
+        if (StringUtils.isNotEmpty(coordinate)) {
+            returnCoordinate = Double.parseDouble(coordinate);
+        }
+        return returnCoordinate;
     }
 
     @SuppressWarnings("rawtypes")

@@ -11,4 +11,6 @@ public interface HotelMappingRepository extends CrudRepository<HotelMapping, Lon
     public HotelMapping findBySupplierHotelIdAndSupplierCodeAndConfidence(String supplierHotelId, String supplierCode,
             Integer confidence);
 
+    public HotelMapping findByHotelIdAndSupplierCode(String hotelId, String supplierCode);
+
 }

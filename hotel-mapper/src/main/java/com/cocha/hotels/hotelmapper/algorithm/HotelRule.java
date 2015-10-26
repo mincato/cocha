@@ -15,7 +15,7 @@ public abstract class HotelRule {
         String refId = reference.getId();
         String compId = toCompare.getId();
 
-        log.info(String.format("[%s : %s] -> [%s] -> [%s : %s] -> %d", refId, compId, ruleName, attrReference,
+        log.debug(String.format("[%s : %s] -> [%s] -> [%s : %s] -> %d", refId, compId, ruleName, attrReference,
                 attrToCompare, match.getConfidence()));
     }
 }
