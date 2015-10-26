@@ -41,11 +41,11 @@ public class MateHeaderDataProcessor implements Processor {
         
         List<HotelMapping> providers = hotelMappingRepository.findByHotelIds(ids);
         
-        String currncyCode = (String) parameters.get("currncyCode");
+        String currencyCode = (String) parameters.get("currencyCode");
         
-        if(currncyCode == null) {
-        	currncyCode = Constant.CURRNCY_DEFAULT;
-        	parameters.put("currncyCode", Constant.CURRNCY_DEFAULT);
+        if(currencyCode == null) {
+        	currencyCode = Constant.CURRNCY_DEFAULT;
+        	parameters.put("currencyCode", Constant.CURRNCY_DEFAULT);
         }
 
         parameters.put("Content-Type", (String)headers.get("Content-Type"));

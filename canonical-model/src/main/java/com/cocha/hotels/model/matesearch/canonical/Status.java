@@ -1,4 +1,4 @@
-package com.cocha.hotels.model.matesearch.response;
+package com.cocha.hotels.model.matesearch.canonical;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

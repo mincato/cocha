@@ -7,7 +7,7 @@ import org.apache.camel.Message;
 import org.apache.camel.Processor;
 import org.springframework.stereotype.Component;
 
-import com.cocha.hotels.model.matesearch.error.ErrorSupplier;
+import com.cocha.hotels.model.matesearch.canonical.ErrorSupplier;
 
 @Component
 public class ErrorSupplierProcessor implements Processor {
@@ -18,7 +18,9 @@ public class ErrorSupplierProcessor implements Processor {
 		Message in = exchange.getIn();
 		Map<String, Object> parameters = in.getHeaders();
 		
-		exchange.getOut().setBody(new ErrorSupplier((String) parameters.get("supplier")));
+		ErrorSupplier errorSupplier = new ErrorSupplier((String) parameters.get("supplier"));
+		
+		exchange.getOut().setBody(errorSupplier);
 		
 	}
 }

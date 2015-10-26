@@ -14,13 +14,13 @@ import org.springframework.stereotype.Component;
 import com.cocha.hotels.matesearch.repositories.HotelMappingRepository;
 import com.cocha.hotels.matesearch.util.Constant;
 import com.cocha.hotels.matesearch.util.Constant.CodeSupplier;
+import com.cocha.hotels.model.matesearch.canonical.ErrorSupplier;
 import com.cocha.hotels.model.matesearch.canonical.Hotel;
 import com.cocha.hotels.model.matesearch.canonical.HotelList;
 import com.cocha.hotels.model.matesearch.canonical.RateForSupplier;
 import com.cocha.hotels.model.matesearch.canonical.RateInfo;
 import com.cocha.hotels.model.matesearch.canonical.RateInfoForSupplier;
-import com.cocha.hotels.model.matesearch.error.ErrorSupplier;
-import com.cocha.hotels.model.matesearch.response.Status;
+import com.cocha.hotels.model.matesearch.canonical.Status;
 import com.cocha.hotels.model.matesearch.respose.supplier.IdMapping;
 import com.cocha.hotels.model.matesearch.respose.supplier.ResposeSuppliers;
 
@@ -37,7 +37,6 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
     	ResposeSuppliers resposeSuppliers;
     	ErrorSupplier errorSupplier;
     	Exchange exchange;
-    	
     	
     	if (newExchange.getIn().getBody(HotelList.class) instanceof HotelList) {
     		   		
@@ -111,7 +110,9 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 				this.addRate(hotelOptinal.get(), rateForSupplierOptional.get());
 			
 			} else {
-				
+				if(idSupplier == null) {
+					idSupplier = "0000000";
+				}
 				ErrorSupplier errorSupplier = new ErrorSupplier();
 				errorSupplier.setCodeSupplier(resposeSuppliers.getCodeSupplier());
 				errorSupplier.setIdSupplier(idSupplier);

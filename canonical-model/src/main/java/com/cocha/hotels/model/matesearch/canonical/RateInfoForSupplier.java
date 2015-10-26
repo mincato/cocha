@@ -3,9 +3,9 @@ package com.cocha.hotels.model.matesearch.canonical;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
-import com.cocha.hotels.model.matesearch.response.Availability;
-
+@XmlRootElement(name="rateInfoForSupplier")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RateInfoForSupplier extends Availability {
 
