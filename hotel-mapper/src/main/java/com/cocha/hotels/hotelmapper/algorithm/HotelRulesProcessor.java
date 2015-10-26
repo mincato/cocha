@@ -22,7 +22,7 @@ public class HotelRulesProcessor {
     public HotelMatch applyRules(final Hotel hotelReference, final Hotel hotelToCompare) {
         int confidence = 0;
 
-        log.info(String.format("Applying rules to compare ref[%s] with [%s].", hotelReference.getId(),
+        log.debug(String.format("Applying rules to compare ref[%s] with [%s].", hotelReference.getId(),
                 hotelToCompare.getId()));
 
         for (HotelRule rule : ruleList) {
@@ -30,7 +30,7 @@ public class HotelRulesProcessor {
             confidence += match.getConfidence();
         }
 
-        log.info(String.format("Applied rules between ref[%s] and [%s]. Confidence level: %d", hotelReference.getId(),
+        log.debug(String.format("Applied rules between ref[%s] and [%s]. Confidence level: %d", hotelReference.getId(),
                 hotelToCompare.getId(), confidence));
         return new HotelMatch(hotelReference, hotelToCompare, confidence);
     }
