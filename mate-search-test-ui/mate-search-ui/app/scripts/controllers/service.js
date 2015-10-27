@@ -27,7 +27,12 @@ serviceMateSearch.controller('serviceController', ['$scope','$http','$location',
 		$scope.error = "";
 		$scope.hotels={};
 			$scope.isLoadingSearch=true;
-			$http.get('http://'+$location.host()+':'+$location.port()+'/mate-search/mate/availability?idHotel='+hotel.ids+'&arrival_date='+moment(hotel.arrivalDate).format('MM/DD/YYYY')+'&departure_date='+moment(hotel.departureDate).format('MM/DD/YYYY')+'&currencyCode='+hotel.currencyCode+'&token='+hotel.token)
+			$http({
+				method: 'GET',
+				data : '',
+				url: 'http://'+$location.host()+':'+$location.port()+'/mate-search/mate/availability?idHotel='+hotel.ids+'&arrival_date='+moment(hotel.arrivalDate).format('MM/DD/YYYY')+'&departure_date='+moment(hotel.departureDate).format('MM/DD/YYYY')+'&currencyCode='+hotel.currencyCode+'&token='+hotel.token,
+ 				headers: {'Content-Type': 'application/json'}
+			})
 			.success(function(data) {
 				$scope.isLoadingSearch=false;
 				$scope.hotels = data.hotels;
