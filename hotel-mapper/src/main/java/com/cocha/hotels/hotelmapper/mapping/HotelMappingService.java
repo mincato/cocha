@@ -2,6 +2,7 @@ package com.cocha.hotels.hotelmapper.mapping;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -11,16 +12,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.cocha.hotels.hotelmapper.managers.HotelMappingManager;
+import com.cocha.hotels.hotelmapper.repositories.content.ReplacementRuleRepository;
 import com.cocha.hotels.model.content.hotel.Hotel;
 import com.cocha.hotels.model.content.mapping.HotelMapping;
 import com.cocha.hotels.model.content.mapping.HotelMatch;
 import com.cocha.hotels.model.content.mapping.MultipleMatch;
+import com.cocha.hotels.model.hotelmapper.dictionary.HotelAttribute;
+import com.cocha.hotels.model.hotelmapper.dictionary.ReplacementRule;
 
 @Service
 public class HotelMappingService {
 
     private static final Integer INIT_CONFIDENCE = 100;
-    private static final Integer MINIMUM_CONFIDENCE = 1;
+    private static final Integer MINIMUM_CONFIDENCE = 40;
     private static final Integer BEST_CONFIDENCE = 99;
     private String eanCode = "EAN";
     private String bookingCode = "BKG";
@@ -37,12 +41,20 @@ public class HotelMappingService {
     @Autowired
     private HotelMappingManager hotelMappingManager;
 
+    @Autowired
+    private ReplacementRuleRepository replacementRuleRepository;
+
     public List<HotelMapping> map(List<Hotel> hotels) {
         // separo los hoteles de cada supplier
         Predicate<Hotel> byEANCode = (hotel) -> hotel.getSupplierCode().equals(eanCode);
         Predicate<Hotel> byBookingCode = (hotel) -> hotel.getSupplierCode().equals(bookingCode);
         Stream<Hotel> eanHotels = hotels.stream().filter(byEANCode);
         List<Hotel> bookingHotels = hotels.stream().filter(byBookingCode).collect(Collectors.toList());
+
+        List<ReplacementRule> replacementRules = replacementRuleRepository.findByCountryCodeOrCountryCodeIsNull(hotels
+                .get(0).getCountryCode());
+        Map<HotelAttribute, List<ReplacementRule>> replacementRulesMap = replacementRules.stream().collect(
+                Collectors.groupingBy(ReplacementRule::getHotelAttribute));
 
         List<HotelMapping> mappingEntries = new ArrayList<HotelMapping>();
 
@@ -77,7 +89,7 @@ public class HotelMappingService {
                     String canonicalId = referenceEntry.getHotelId();
 
                     // mapeo el hotel contra los del otro supplier
-                    MultipleMatch matches = matchingService.match(hotel, hotelsToProcess);
+                    MultipleMatch matches = matchingService.match(hotel, hotelsToProcess, replacementRulesMap);
                     HotelMatch bestMatch = matches.findBestMatch();
                     if (bestMatch.getConfidence() > BEST_CONFIDENCE) {
                         bestMatch.setConfidence(BEST_CONFIDENCE);

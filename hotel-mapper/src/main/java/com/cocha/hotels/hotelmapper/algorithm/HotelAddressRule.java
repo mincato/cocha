@@ -1,15 +1,15 @@
 package com.cocha.hotels.hotelmapper.algorithm;
 
-import java.text.Normalizer;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Locale;
-import java.util.regex.Pattern;
+import java.util.Map;
 
 import org.apache.commons.collections4.ListUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import com.cocha.hotels.model.content.hotel.Hotel;
+import com.cocha.hotels.model.hotelmapper.dictionary.HotelAttribute;
+import com.cocha.hotels.model.hotelmapper.dictionary.ReplacementRule;
 
 public class HotelAddressRule extends HotelRule {
 
@@ -18,11 +18,14 @@ public class HotelAddressRule extends HotelRule {
     public static final Integer MAX_CONFIDENCE = 44;
 
     @Override
-    public RuleMatch apply(Hotel reference, Hotel toCompare) {
+    public RuleMatch apply(Hotel reference, Hotel toCompare,
+            Map<HotelAttribute, List<ReplacementRule>> replacementRulesMap) {
+
+        List<ReplacementRule> addressReplacementRules = replacementRulesMap.get(HotelAttribute.ADDRESS);
 
         // obtener atributos, uniformizarlos, compararlos
-        String attrReference = flatten(toAscii(reference.getAddress()));
-        String attrToCompare = flatten(toAscii(toCompare.getAddress()));
+        String attrReference = flatten(reference.getAddress(), addressReplacementRules);
+        String attrToCompare = flatten(toCompare.getAddress(), addressReplacementRules);
         RuleMatch match = compare(attrReference, attrToCompare);
         log("HotelAddressRule", reference, toCompare, attrReference, attrToCompare, match);
         return match;
@@ -66,23 +69,6 @@ public class HotelAddressRule extends HotelRule {
             rate = commonWords / max;
         }
         return (int) Math.round(MAX_CONFIDENCE * rate);
-    }
-
-    private String flatten(String name) {
-        // primer paso, todo el mayusculas, remuevo los espacios
-        // TODO refactor: parametrizar esto!
-        return name.toUpperCase(Locale.ENGLISH).replace("SOUTH", "S").replace("WEST", "W").replace("EAST", "E")
-                .replace("NORTH", "N").replace("STREET", "ST").replace("AVENUE", "AVE").replace("ROAD", "RD")
-                .replace("DRIVE", "DR").replace("BOULEVARD", "BLVD").replace("SQUARE", "SQ").replace("HIGHWAY", "HWY")
-                .replace("AVENIDA", "AV").replaceAll("[^\\w\\s]", " ");
-    }
-
-    private String toAscii(String input) {
-        String normalized = Normalizer.normalize(input, Normalizer.Form.NFD);
-        // Nos quedamos unicamente con los caracteres ASCII
-        Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
-        return pattern.matcher(normalized).replaceAll("");
-
     }
 
 }

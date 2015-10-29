@@ -1,13 +1,22 @@
 package com.cocha.hotels.hotelmapper.algorithm;
 
+import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 import com.cocha.hotels.model.content.hotel.Hotel;
+import com.cocha.hotels.model.hotelmapper.dictionary.HotelAttribute;
+import com.cocha.hotels.model.hotelmapper.dictionary.ReplacementRule;
 
 public class HotelCurrencyCodeRule extends HotelRule {
 
     @Override
-    public RuleMatch apply(Hotel reference, Hotel toCompare) {
+    public RuleMatch apply(Hotel reference, Hotel toCompare,
+            Map<HotelAttribute, List<ReplacementRule>> replacementRulesMap) {
+        return apply(reference, toCompare);
+    }
+
+    private RuleMatch apply(Hotel reference, Hotel toCompare) {
         // obtener atributos, uniformizarlos, compararlos
         String attrReference = flatten(reference.getCurrencyCode());
         String attrToCompare = flatten(toCompare.getCurrencyCode());

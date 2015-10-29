@@ -1,15 +1,15 @@
 package com.cocha.hotels.hotelmapper.algorithm;
 
-import java.text.Normalizer;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Locale;
-import java.util.regex.Pattern;
+import java.util.Map;
 
 import org.apache.commons.collections4.ListUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import com.cocha.hotels.model.content.hotel.Hotel;
+import com.cocha.hotels.model.hotelmapper.dictionary.HotelAttribute;
+import com.cocha.hotels.model.hotelmapper.dictionary.ReplacementRule;
 
 public class HotelNameRule extends HotelRule {
 
@@ -18,10 +18,14 @@ public class HotelNameRule extends HotelRule {
     public static final Integer MAX_CONFIDENCE = 50;
 
     @Override
-    public RuleMatch apply(Hotel reference, Hotel toCompare) {
+    public RuleMatch apply(Hotel reference, Hotel toCompare,
+            Map<HotelAttribute, List<ReplacementRule>> replacementRulesMap) {
+
+        List<ReplacementRule> replacementRules = replacementRulesMap.get(HotelAttribute.NAME);
+
         // obtener atributos, uniformizarlos, compararlos
-        String attrReference = flatten(toAscii(reference.getName()));
-        String attrToCompare = flatten(toAscii(toCompare.getName()));
+        String attrReference = flatten(reference.getName(), replacementRules);
+        String attrToCompare = flatten(toCompare.getName(), replacementRules);
         RuleMatch match = compare(attrReference, attrToCompare);
         log("HotelNameRule", reference, toCompare, attrReference, attrToCompare, match);
         return match;
@@ -64,19 +68,6 @@ public class HotelNameRule extends HotelRule {
             rate = commonWords / max;
         }
         return (int) Math.round(MAX_CONFIDENCE * rate);
-    }
-
-    private String flatten(String name) {
-        return name.toUpperCase(Locale.ENGLISH).replace("&AMP;", " ").replace("AND", " ").replace("SOUTH", "S")
-                .replace("WEST", "W").replace("EAST", "E").replace("NORTH", "N").replaceAll("[^\\w\\s]", " ").trim();
-    }
-
-    private String toAscii(String input) {
-        String normalized = Normalizer.normalize(input, Normalizer.Form.NFD);
-        // Nos quedamos unicamente con los caracteres ASCII
-        Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
-        return pattern.matcher(normalized).replaceAll("");
-
     }
 
 }
