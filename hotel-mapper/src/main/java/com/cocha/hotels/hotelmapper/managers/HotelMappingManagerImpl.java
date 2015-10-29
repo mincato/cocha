@@ -51,8 +51,8 @@ public class HotelMappingManagerImpl implements HotelMappingManager {
         Predicate<HotelMapping> byUnmapped = hotelMapping -> !hotelMapping.isUnmapped();
 
         HotelMapping hotelMapping = null;
-        Optional<HotelMapping> optionalHotelMapping = hotelMappings.stream().filter(byHotelId.and(bySupplierCode).and(byUnmapped))
-                .findFirst();
+        Optional<HotelMapping> optionalHotelMapping = hotelMappings.stream()
+                .filter(byHotelId.and(bySupplierCode).and(byUnmapped)).findFirst();
         if (optionalHotelMapping.isPresent()) {
             hotelMapping = optionalHotelMapping.get();
         }

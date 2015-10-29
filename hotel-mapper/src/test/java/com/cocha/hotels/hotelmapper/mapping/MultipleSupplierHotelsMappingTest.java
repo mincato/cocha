@@ -1,7 +1,9 @@
 package com.cocha.hotels.hotelmapper.mapping;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -15,6 +17,7 @@ import com.cocha.hotels.hotelmapper.mocks.HotelMock;
 import com.cocha.hotels.hotelmapper.mocks.LeamingtonHotelMock;
 import com.cocha.hotels.hotelmapper.mocks.QualitySuitesHotelMock;
 import com.cocha.hotels.hotelmapper.mocks.QualitySuitesUSHotelMock;
+import com.cocha.hotels.hotelmapper.mocks.ReplacementRuleMock;
 import com.cocha.hotels.hotelmapper.mocks.SaintEugeneHotelMock;
 import com.cocha.hotels.hotelmapper.mocks.StaybridgeSuitesHotelMock;
 import com.cocha.hotels.hotelmapper.mocks.TaybridgeSuitesHotelMock;
@@ -23,14 +26,22 @@ import com.cocha.hotels.hotelmapper.mocks.WallStreet_HI_HotelMock;
 import com.cocha.hotels.model.content.hotel.Hotel;
 import com.cocha.hotels.model.content.mapping.HotelMatch;
 import com.cocha.hotels.model.content.mapping.MultipleMatch;
+import com.cocha.hotels.model.hotelmapper.dictionary.HotelAttribute;
+import com.cocha.hotels.model.hotelmapper.dictionary.ReplacementRule;
 
 public class MultipleSupplierHotelsMappingTest {
 
     private HotelMatchingService matchingService;
+    private Map<HotelAttribute, List<ReplacementRule>> replacementRules;
 
     @Before
     public void setUp() throws Exception {
         matchingService = new HotelMatchingService(new HotelRulesProcessor());
+
+        ReplacementRuleMock replacementRuleMock = new ReplacementRuleMock();
+        replacementRules = new HashMap<HotelAttribute, List<ReplacementRule>>();
+        replacementRules.put(HotelAttribute.ADDRESS, replacementRuleMock.buildAddressReplacements());
+        replacementRules.put(HotelAttribute.NAME, replacementRuleMock.buildNameReplacements());
     }
 
     @Test
@@ -40,7 +51,7 @@ public class MultipleSupplierHotelsMappingTest {
 
         List<Hotel> hotelsFromOtherSupplier = buildHotelsFromBooking();
 
-        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier);
+        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier, replacementRules);
 
         Assert.assertEquals(hotelsFromOtherSupplier.size(), matches.getHotelMatches().size());
     }
@@ -52,7 +63,7 @@ public class MultipleSupplierHotelsMappingTest {
 
         List<Hotel> hotelsFromOtherSupplier = buildHotelsFromBooking();
 
-        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier);
+        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier, replacementRules);
 
         validate(matches).hasOneValidMatchFor(reference);
     }
@@ -64,7 +75,7 @@ public class MultipleSupplierHotelsMappingTest {
 
         List<Hotel> hotelsFromOtherSupplier = buildHotelsFromBooking();
 
-        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier);
+        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier, replacementRules);
 
         validate(matches).validMatchIdsFor(reference, hotelBuilder.buildWithBooking());
     }
@@ -76,7 +87,7 @@ public class MultipleSupplierHotelsMappingTest {
 
         List<Hotel> hotelsFromOtherSupplier = buildHotelsFromBooking();
 
-        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier);
+        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier, replacementRules);
 
         validate(matches).hasOneValidMatchFor(reference);
     }
@@ -88,7 +99,7 @@ public class MultipleSupplierHotelsMappingTest {
 
         List<Hotel> hotelsFromOtherSupplier = buildHotelsFromBooking();
 
-        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier);
+        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier, replacementRules);
 
         validate(matches).validMatchIdsFor(reference, hotelBuilder.buildWithBooking());
     }
@@ -100,7 +111,7 @@ public class MultipleSupplierHotelsMappingTest {
 
         List<Hotel> hotelsFromOtherSupplier = buildHotelsFromBooking();
 
-        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier);
+        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier, replacementRules);
 
         validate(matches).hasOneValidMatchFor(reference);
     }
@@ -112,7 +123,7 @@ public class MultipleSupplierHotelsMappingTest {
 
         List<Hotel> hotelsFromOtherSupplier = buildHotelsFromBooking();
 
-        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier);
+        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier, replacementRules);
 
         validate(matches).validMatchIdsFor(reference, hotelBuilder.buildWithBooking());
     }
@@ -124,7 +135,7 @@ public class MultipleSupplierHotelsMappingTest {
 
         List<Hotel> hotelsFromOtherSupplier = buildHotelsFromBooking();
 
-        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier);
+        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier, replacementRules);
 
         validate(matches).hasOneValidMatchFor(reference);
     }
@@ -136,7 +147,7 @@ public class MultipleSupplierHotelsMappingTest {
 
         List<Hotel> hotelsFromOtherSupplier = buildHotelsFromBooking();
 
-        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier);
+        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier, replacementRules);
 
         validate(matches).validMatchIdsFor(reference, hotelBuilder.buildWithBooking());
     }
@@ -148,7 +159,7 @@ public class MultipleSupplierHotelsMappingTest {
 
         List<Hotel> hotelsFromOtherSupplier = buildHotelsFromBooking();
 
-        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier);
+        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier, replacementRules);
 
         validate(matches).hasOneValidMatchFor(reference);
     }
@@ -160,7 +171,7 @@ public class MultipleSupplierHotelsMappingTest {
 
         List<Hotel> hotelsFromOtherSupplier = buildHotelsFromBooking();
 
-        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier);
+        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier, replacementRules);
 
         validate(matches).validMatchIdsFor(reference, hotelBuilder.buildWithBooking());
     }
@@ -172,7 +183,7 @@ public class MultipleSupplierHotelsMappingTest {
 
         List<Hotel> hotelsFromOtherSupplier = buildHotelsFromBooking();
 
-        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier);
+        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier, replacementRules);
 
         validate(matches).hasOneValidMatchFor(reference);
     }
@@ -184,7 +195,7 @@ public class MultipleSupplierHotelsMappingTest {
 
         List<Hotel> hotelsFromOtherSupplier = buildHotelsFromBooking();
 
-        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier);
+        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier, replacementRules);
 
         validate(matches).validMatchIdsFor(reference, hotelBuilder.buildWithBooking());
     }
@@ -196,7 +207,7 @@ public class MultipleSupplierHotelsMappingTest {
 
         List<Hotel> hotelsFromOtherSupplier = buildHotelsFromBooking();
 
-        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier);
+        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier, replacementRules);
 
         validate(matches).hasOneValidMatchFor(reference);
     }
@@ -208,7 +219,7 @@ public class MultipleSupplierHotelsMappingTest {
 
         List<Hotel> hotelsFromOtherSupplier = buildHotelsFromBooking();
 
-        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier);
+        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier, replacementRules);
 
         validate(matches).validMatchIdsFor(reference, hotelBuilder.buildWithBooking());
     }
@@ -220,7 +231,7 @@ public class MultipleSupplierHotelsMappingTest {
 
         List<Hotel> hotelsFromOtherSupplier = buildHotelsFromBooking();
 
-        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier);
+        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier, replacementRules);
 
         validate(matches).hasOneValidMatchFor(reference);
     }
@@ -232,7 +243,7 @@ public class MultipleSupplierHotelsMappingTest {
 
         List<Hotel> hotelsFromOtherSupplier = buildHotelsFromBooking();
 
-        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier);
+        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier, replacementRules);
 
         validate(matches).validMatchIdsFor(reference, hotelBuilder.buildWithBooking());
     }
@@ -244,7 +255,7 @@ public class MultipleSupplierHotelsMappingTest {
 
         List<Hotel> hotelsFromOtherSupplier = buildHotelsFromBooking();
 
-        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier);
+        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier, replacementRules);
 
         validate(matches).hasOneValidMatchFor(reference);
     }
@@ -256,7 +267,7 @@ public class MultipleSupplierHotelsMappingTest {
 
         List<Hotel> hotelsFromOtherSupplier = buildHotelsFromBooking();
 
-        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier);
+        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier, replacementRules);
 
         validate(matches).validMatchIdsFor(reference, hotelBuilder.buildWithBooking());
     }
@@ -268,7 +279,7 @@ public class MultipleSupplierHotelsMappingTest {
 
         List<Hotel> hotelsFromOtherSupplier = buildHotelsFromBooking();
 
-        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier);
+        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier, replacementRules);
 
         validate(matches).hasOneValidMatchFor(reference);
     }
@@ -280,7 +291,7 @@ public class MultipleSupplierHotelsMappingTest {
 
         List<Hotel> hotelsFromOtherSupplier = buildHotelsFromBooking();
 
-        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier);
+        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier, replacementRules);
 
         validate(matches).validMatchIdsFor(reference, hotelBuilder.buildWithBooking());
     }
@@ -292,7 +303,7 @@ public class MultipleSupplierHotelsMappingTest {
 
         List<Hotel> hotelsFromOtherSupplier = buildHotelsFromBooking();
 
-        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier);
+        MultipleMatch matches = matchingService.match(reference, hotelsFromOtherSupplier, replacementRules);
 
         validate(matches).hasNoValidMatchFor(reference);
     }

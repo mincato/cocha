@@ -20,13 +20,14 @@ public class GiataProcessorImpl implements GiataMapperProcessor {
 
         String sabreId = inMessage.getHeader("sabreId", String.class);
         String eanId = inMessage.getHeader("eanId", String.class);
+        String hotelId = inMessage.getHeader("hotelId", String.class);
         logger.info(String.format("GIATA MAPPING: [SABRE ID: %s, EAN ID: %s]", sabreId, eanId));
 
         HotelMapping mapping = new HotelMapping();
         mapping.setConfidence(99);
         mapping.setSupplierCode("SAB");
         mapping.setSupplierHotelId(sabreId);
-        mapping.setHotelId("EAN" + eanId);
+        mapping.setHotelId(hotelId);
         mapping.setActive(DEFAULT_HOTEL_ACTIVE);
         mapping.setMappedByUser(false);
 
