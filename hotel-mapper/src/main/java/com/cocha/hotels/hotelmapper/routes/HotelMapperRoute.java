@@ -42,19 +42,12 @@ public class HotelMapperRoute extends SpringRouteBuilder {
     @Override
     public void configure() throws Exception {
 
-        from("{{mapper.consumer.uri}}")
-                .errorHandler(loggingErrorHandler(log))
-                .bean(hotelMappingManager, "init")
-                .choice()
-                    .when(header("countryCode").isNotNull())
-                        .transform().simple("${header[countryCode]}").to("direct:processMapper")
-                    .otherwise()
-                        .to("sql:select distinct(countryCode) from Hotel?dataSource=#feedDataSource")
-                        .split(body())
-                        .transform()
-                        .simple("${body[countryCode]}")
-                        .to("direct:processMapper");
-                     
+        from("{{mapper.consumer.uri}}").errorHandler(loggingErrorHandler(log)).bean(hotelMappingManager, "init")
+                .choice().when(header("countryCode").isNotNull()).transform().simple("${header[countryCode]}")
+                .to("direct:processMapper").otherwise()
+                .to("sql:select distinct(countryCode) from Hotel?dataSource=#feedDataSource").split(body()).transform()
+                .simple("${body[countryCode]}").to("direct:processMapper");
+
         from("direct:processMapper")
                 .bean(hotelFeedRepository, "findByCountryCode")
                 .bean(algorithmicMapperProcessor)
