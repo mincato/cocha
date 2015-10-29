@@ -31,9 +31,8 @@
 		<property name="transactionManager" ref="contentTransactionManager" />
 	</bean>
 
-	<jpa:repositories base-package="com.cocha.hotels.hotelmapper.repositories.feeds" entity-manager-factory-ref="feedEntityManagerFactory" transaction-manager-ref="feedTransactionManager" />
-	
-	<jpa:repositories base-package="com.cocha.hotels.hotelmapper.repositories.content" entity-manager-factory-ref="contentEntityManagerFactory" transaction-manager-ref="contentTransactionManager" />
+	<jpa:repositories base-package="com.cocha.hotels.destinationmapper.repositories.feeds" entity-manager-factory-ref="feedEntityManagerFactory" transaction-manager-ref="feedTransactionManager" />	
+	<jpa:repositories base-package="com.cocha.hotels.destinationmapper.repositories.content" entity-manager-factory-ref="contentEntityManagerFactory" transaction-manager-ref="contentTransactionManager" />
 
 	<bean id="databaseProperties"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
