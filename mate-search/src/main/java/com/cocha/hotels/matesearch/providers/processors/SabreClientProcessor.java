@@ -4,6 +4,7 @@ import java.math.BigInteger;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -68,6 +69,10 @@ public class SabreClientProcessor implements Processor {
     @Value("${mate.provider.sabre.pcc}")
     private String pcc;
 
+    @Value("${mate.provider.sabre.contract.negotiated.rate.code}")
+    private String contractNegotiatedRateCode;
+
+    
     @Override
     @SuppressWarnings("unchecked")
     public void process(Exchange exchange) throws Exception {
@@ -88,7 +93,7 @@ public class SabreClientProcessor implements Processor {
         	currencyCode = Constant.CURRNCY_DEFAULT;
         }
         
-		OTAHotelAvailRQ hotelAvail = createHotelAvailRQ(idsHotels, arrival, departure, currencyCode);
+		OTAHotelAvailRQ hotelAvail = createHotelAvailRQ(idsHotels, arrival, departure, currencyCode,contractNegotiatedRateCode);
         List<Object> params = new ArrayList<>();
         params.add(messageHeader);
         params.add(security);
@@ -98,9 +103,10 @@ public class SabreClientProcessor implements Processor {
 
     /**
      * @param currencyCode 
+     * @param ratePlanCandidates 
      * @return
      */
-    private OTAHotelAvailRQ createHotelAvailRQ(final String idsHotels, final String arrival, final String departure, String currencyCode) {
+    private OTAHotelAvailRQ createHotelAvailRQ(final String idsHotels, final String arrival, final String departure, String currencyCode, String contractNegotiatedRateCode) {
         OTAHotelAvailRQ hotelAvailRQ = new OTAHotelAvailRQ();
         hotelAvailRQ.setVersion("2.2.0");
         hotelAvailRQ.setReturnHostCommand(true);
@@ -120,6 +126,8 @@ public class SabreClientProcessor implements Processor {
         time.setStart(arrival);
         time.setEnd(departure);
 
+        List<String> rateCodeList = Arrays.asList(contractNegotiatedRateCode.split("\\s*,\\s*")); 
+        
         AvailRequestSegment requestSegment = new AvailRequestSegment();
         GuestCounts guestCounts = new GuestCounts();
         guestCounts.setCount(new BigInteger("1"));
@@ -130,6 +138,8 @@ public class SabreClientProcessor implements Processor {
         rateRage.setCurrencyCode(currencyCode);
         RatePlanCandidates ratePlanCandidates = new RatePlanCandidates();
         ratePlanCandidates.setRateRange(rateRage);
+        List<String> contractNegotiatedRateCodeList =  ratePlanCandidates.getContractNegotiatedRateCode();
+        contractNegotiatedRateCodeList.addAll(rateCodeList);
         requestSegment.setRatePlanCandidates(ratePlanCandidates);
 
         hotelAvailRQ.setAvailRequestSegment(requestSegment);
