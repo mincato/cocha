@@ -14,6 +14,7 @@ public class HotelInformationRoute extends RouteBuilder {
 		
 	@Override
 	public void configure() throws Exception {
+		
 		from("direct:getHotelInformation").bean(hotelIntormationProcessor);
 		
 	}

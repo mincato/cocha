@@ -19,9 +19,9 @@ public class HotelInformation {
 	@Handler
 	public HotelList getHotelInformation(List<String> ids) {
 		
-		HotelList hotelList = new HotelList();
-		
 		List<Hotel> hotels = hotelRepository.findByHotelIds(ids);
+			
+		HotelList hotelList = new HotelList();		
 		
 		hotelList.setHotels(hotels);
 		
