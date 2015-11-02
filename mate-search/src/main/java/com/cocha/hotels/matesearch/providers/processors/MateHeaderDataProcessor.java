@@ -8,12 +8,13 @@ import org.apache.camel.Exchange;
 import org.apache.camel.Message;
 import org.apache.camel.Processor;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.cocha.hotels.matesearch.repositories.HotelMappingRepository;
-import com.cocha.hotels.matesearch.util.Constant.CodeSupplier;
 import com.cocha.hotels.matesearch.util.Constant;
+import com.cocha.hotels.matesearch.util.Constant.CodeSupplier;
 import com.cocha.hotels.matesearch.util.MessageUtils;
 import com.cocha.hotels.model.content.mapping.HotelMapping;
 import com.cocha.hotels.model.matesearch.respose.supplier.IdMapping;
@@ -21,9 +22,11 @@ import com.cocha.hotels.model.matesearch.respose.supplier.IdMapping;
 @Component
 public class MateHeaderDataProcessor implements Processor {
 
+	private static final Logger log = Logger.getLogger(MateHeaderDataProcessor.class);
+	
     @Autowired
     private HotelMappingRepository hotelMappingRepository;
-
+    
     /*
      * (non-Javadoc)
      * 
@@ -31,28 +34,36 @@ public class MateHeaderDataProcessor implements Processor {
      */
     @Override
     public void process(Exchange exchange) throws Exception {
-        Message inMessage = exchange.getIn();
-
-        Map<String, Object> headers = inMessage.getHeaders();
-
-        Map<String, Object> parameters = MessageUtils.parseQueryParams((String) headers.get("CamelHttpQuery"));
-
-        List<String> ids = Arrays.asList(((String) parameters.get(Constant.ID_HOTEL)).split("\\s*,\\s*"));
-
-        List<HotelMapping> providers = hotelMappingRepository.findByHotelIds(ids);
-
-        String currencyCode = (String) parameters.get("currencyCode");
-
-        if (currencyCode == null) {
-            currencyCode = Constant.CURRNCY_DEFAULT;
-            parameters.put("currencyCode", Constant.CURRNCY_DEFAULT);
-        }
-
-        parameters.put("Content-Type", (String) headers.get("Content-Type"));
-
-        this.putIdSuppliersAndIdMapping(parameters, providers);
-
-        exchange.getOut().setBody(parameters);
+    	
+		try {
+			
+			Message inMessage = exchange.getIn();
+			
+			Map<String, Object> headers = inMessage.getHeaders();
+			
+			Map<String, Object> parameters = MessageUtils.parseQueryParams((String)headers.get("CamelHttpQuery"));
+			
+			List<String> ids = Arrays.asList(((String) parameters.get(Constant.ID_HOTEL)).split("\\s*,\\s*"));
+			
+			List<HotelMapping> providers = hotelMappingRepository.findByHotelIds(ids);
+			
+			String currencyCode = (String) parameters.get("currencyCode");
+			
+			if(currencyCode == null) {
+				currencyCode = Constant.CURRNCY_DEFAULT;
+				parameters.put("currencyCode", Constant.CURRNCY_DEFAULT);
+			}
+			
+			parameters.put("Content-Type", (String)headers.get("Content-Type"));
+			
+			this.putIdSuppliersAndIdMapping(parameters,providers);        
+			
+			exchange.getOut().setBody(parameters);
+			
+		} catch (Exception e) {
+			log.info("Error al armar Hearder del Mate Search");
+			exchange.setException(e);
+		}
 
     }
 
