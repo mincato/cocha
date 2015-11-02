@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 import com.cocha.hotels.destinationmapper.mapping.GeoMappingService;
 import com.cocha.hotels.destinationmapper.repositories.content.HotelMappingContentRepository;
 import com.cocha.hotels.destinationmapper.repositories.feeds.NeighborhoodCoordinatesRepository;
-import com.cocha.hotels.model.content.geo.NeighborhoodArea;
+import com.cocha.hotels.model.content.geo.RegionCoordinates;
 import com.cocha.hotels.model.content.hotel.Hotel;
 import com.cocha.hotels.model.content.mapping.HotelMapping;
 import com.cocha.hotels.model.content.mapping.RegionHotelMapping;
@@ -32,14 +32,14 @@ public class CoordinateMapperProcessorImpl implements CoordinateMapperProcessor 
     public List<RegionHotelMapping> process(List<Hotel> hotels) {
         List<RegionHotelMapping> mapping = new ArrayList<RegionHotelMapping>();
         if (hotels != null & hotels.size() > 0) {
-            List<NeighborhoodArea> neighborhoodAreas = (List<NeighborhoodArea>) neighborhoodCoordinatesRepository
+            List<RegionCoordinates> neighborhoodAreas = (List<RegionCoordinates>) neighborhoodCoordinatesRepository
                     .findAll();
             for (Hotel hotel : hotels) {
                 HotelMapping hotelMapping = hotelMappingContentRepository.findByhotelIdAndSupplierCode(hotel.getId(),
                         Hotel.BOOKING_SUPPLIER_CODE);
                 String supplierHotelId = hotelMapping.getSupplierHotelId();
                 logger.info("Started mapping regions-hotels. hotel id: " + hotel.getId());
-                for (NeighborhoodArea neighborhoodArea : neighborhoodAreas) {
+                for (RegionCoordinates neighborhoodArea : neighborhoodAreas) {
                     if (mappingService.validatePointInArea(neighborhoodArea, hotel.getLatitude(), hotel.getLongitude())) {
                         RegionHotelMapping regionHotelMapping = createRegionHotelMappingContent(supplierHotelId,
                                 neighborhoodArea.getId(), hotel);

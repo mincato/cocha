@@ -4,10 +4,10 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.cocha.hotels.model.content.geo.NeighborhoodArea;
+import com.cocha.hotels.model.content.geo.RegionCoordinates;
 import com.cocha.hotels.model.content.geo.RegionHotel;
 
-public interface NeighborhoodCoordinatesRepository extends CrudRepository<NeighborhoodArea, String> {
+public interface NeighborhoodCoordinatesRepository extends CrudRepository<RegionCoordinates, String> {
 
     public List<RegionHotel> findById(String id);
 

@@ -89,6 +89,20 @@
 			<field name="countryCode" />		
 		</record>
 	</stream>
+	<stream name="eanGeoCities" format="csv">
+		<parser>
+			<property name="delimiter" value="|" />
+			<property name="unquotedQuotesAllowed" value="true"/>
+		</parser>
+		<record name="header" order="1" minOccurs="1" maxOccurs="1" />		
+		<record name="city" order="2"
+			class="com.cocha.hotels.feeddownloader.ean.model.EanSupplierGeoCity"
+			minOccurs="1" maxOccurs="unbounded">			
+			<field name="regionID" />
+			<field name="regionName" />
+			<field name="coordinates" />
+		</record>
+	</stream>
 	<stream name="eanGeoNeighborhoods" format="csv">
 		<parser>
 			<property name="delimiter" value="|" />
@@ -103,6 +117,23 @@
 			<field name="coordinates" />
 		</record>
 	</stream>
+	<stream name="eanGeoPOI" format="csv">
+		<parser>
+			<property name="delimiter" value="|" />
+			<property name="unquotedQuotesAllowed" value="true"/>
+		</parser>
+		<record name="header" order="1" minOccurs="1" maxOccurs="1" />		
+		<record name="point" order="2"
+			class="com.cocha.hotels.feeddownloader.ean.model.EanSupplierGeoPOI"
+			minOccurs="1" maxOccurs="unbounded">
+			<field name="regionID" />
+			<field name="regionName" />
+			<field name="regionNameLong" />
+			<field name="latitude" />
+			<field name="longitude" />
+			<field name="subClassification" />
+		</record>		
+	</stream>	
 	<stream name="eanRegionsHotels" format="csv">
 		<parser>
 			<property name="delimiter" value="|" />
