@@ -34,11 +34,11 @@ public class RegionMapperProcessorImpl implements RegionMapperProcessor {
 					Hotel.EAN_SUPPLIER_CODE);
 			
 			if (hotelMapping != null){
-				String idSupplierHotel = hotelMapping.getSupplierHotelId();			
-				List<RegionHotel> regionHotels = regionHotelRepository.findByidHotelAndSupplierCode(idSupplierHotel,
+				String supplierHotelId = hotelMapping.getSupplierHotelId();			
+				List<RegionHotel> regionHotels = regionHotelRepository.findByidHotelAndSupplierCode(supplierHotelId,
 						RegionHotel.EAN_SUPPLIER_CODE);
 				for (RegionHotel regionHotel : regionHotels) {
-					RegionHotelMapping regionHotelMapping = createRegionHotelMappingContent(hotel.getId(), regionHotel,
+					RegionHotelMapping regionHotelMapping = createRegionHotelMappingContent(supplierHotelId, regionHotel,
 							hotel);
 					mapping.add(regionHotelMapping);
 				}
@@ -47,15 +47,15 @@ public class RegionMapperProcessorImpl implements RegionMapperProcessor {
 		return mapping;
 	}
     
-    private RegionHotelMapping createRegionHotelMappingContent(String hotelId,RegionHotel regionHotel,Hotel hotel) {        
+    private RegionHotelMapping createRegionHotelMappingContent(String supplierHotelId,RegionHotel regionHotel,Hotel hotel) {        
     	RegionHotelMapping contentRegionHotel = null;
         if (regionHotel != null) {
         	contentRegionHotel = new RegionHotelMapping();
             contentRegionHotel.setActive(true);
-            contentRegionHotel.setHotelId(hotelId);
+            contentRegionHotel.setHotelId(hotel.getId());
             contentRegionHotel.setRegionId(regionHotel.getIdRegion());
             contentRegionHotel.setSupplierCode(regionHotel.getSupplierCode());
-            contentRegionHotel.setSupplierHotelId(hotel.getId());
+            contentRegionHotel.setSupplierHotelId(supplierHotelId);
         }
         return contentRegionHotel;
     }

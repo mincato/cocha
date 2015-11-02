@@ -28,6 +28,7 @@
 		<commons-collections-version>4.0</commons-collections-version>
 		<commons-lang-version>3.4</commons-lang-version>
 		<spring-version>4.1.6.RELEASE</spring-version>
+		<jts-version>1.13</jts-version>
 	</properties>
 	
 	<dependencies>
@@ -187,9 +188,12 @@
 			<artifactId>log4j</artifactId>
 			<version>${log4j-version}</version>
 		</dependency>
-
+		<dependency>
+			<groupId>com.vividsolutions</groupId>
+			<artifactId>jts</artifactId>
+			<version>${jts-version}</version>
+		</dependency>
 	</dependencies>
-
 	<build>
 		<!-- Maven will append the version to the finalName (which is the name 
 			given to the generated war, and hence the context root) -->

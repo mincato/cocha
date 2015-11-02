@@ -52,10 +52,7 @@ public class RegionMapperRoute extends SpringRouteBuilder {
                 .log(LoggingLevel.INFO, "Region Hotels from EAN store on database successfully");     
                                 
        from("direct:singleBKGHotelChannel")
-		       .errorHandler(loggingErrorHandler(log))
-		       
-		       
-		       
+		       .errorHandler(loggingErrorHandler(log))		       
 		       .bean(coordinateMapperProcessor, "process")
 		       .to("jpaContent:" + RegionHotelMapping.class.getName()
 		               + "?entityType=java.util.ArrayList&transactionManager=#contentTransactionManager")

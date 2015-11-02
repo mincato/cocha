@@ -9,6 +9,5 @@ import com.cocha.hotels.model.content.geo.RegionHotel;
 public interface RegionHotelRepository extends CrudRepository<RegionHotel, Long> {
 
     public List<RegionHotel> findByidHotelAndSupplierCode(String hotelId, String supplierCode);    
-    
 
 }
