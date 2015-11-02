@@ -21,7 +21,7 @@ public class SupplierHotelProcessor implements Processor {
         ResposeSuppliers rateInfoSupplier = exchange.getIn().getBody(ResposeSuppliers.class);
         Map<String, Object> header = exchange.getIn().getHeaders();
 
-        if (rateInfoSupplier != null && !rateInfoSupplier.getRateForSupplier().isEmpty()) {
+        if (rateInfoSupplier != null && rateInfoSupplier.getRateForSupplier() != null && !rateInfoSupplier.getRateForSupplier().isEmpty()) {
             setCodeSupplier(rateInfoSupplier, (String) header.get("supplier"));
         }
 

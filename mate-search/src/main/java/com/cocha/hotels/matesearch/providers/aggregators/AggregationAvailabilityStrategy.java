@@ -1,5 +1,6 @@
 package com.cocha.hotels.matesearch.providers.aggregators;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -78,7 +79,12 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 			
 		} catch (Exception e) {
 			log.info("Error al reunir las respuestas de los supplier");
-			oldExchange.setException(e);
+			HotelList hotelList = new HotelList();
+			Status	status = new Status("500","Error Interno de Servidor");
+			hotelList.setStatus(status);
+			hotelList.setHotels(new ArrayList<Hotel>());
+			
+			oldExchange.getIn().setBody(hotelList);
 			return oldExchange;
 		}
 
