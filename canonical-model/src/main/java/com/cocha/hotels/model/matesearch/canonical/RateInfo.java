@@ -10,24 +10,23 @@ import javax.xml.bind.annotation.XmlElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RateInfo {
 
-	@XmlElement
+    @XmlElement
     private Float hightRateBetweenSupplier;
-	
-	@XmlElement
-    private Float lowRateBetweenSupplier;
-    
-	@XmlElement
-	private List<RateForSupplier> rateForSupplier;
 
-	
-	public void add(RateForSupplier rateForSupplier) {
-		this.rateForSupplier.add(rateForSupplier);
-	}
-    
+    @XmlElement
+    private Float lowRateBetweenSupplier;
+
+    @XmlElement
+    private List<RateForSupplier> rateForSupplier;
+
+    public void add(RateForSupplier rateForSupplier) {
+        this.rateForSupplier.add(rateForSupplier);
+    }
+
     public RateInfo() {
-    	rateForSupplier = new ArrayList<RateForSupplier>();
-	}
-    
+        rateForSupplier = new ArrayList<RateForSupplier>();
+    }
+
     public void updateRatesHightandLow(Float hightRate, Float lowRate) {
 
         if (hightRateBetweenSupplier == null || (hightRate != null && hightRateBetweenSupplier < hightRate)) {
@@ -54,12 +53,12 @@ public class RateInfo {
         this.lowRateBetweenSupplier = lowRateBetweenSupplier;
     }
 
-	public List<RateForSupplier> getRateForSupplier() {
-		return rateForSupplier;
-	}
+    public List<RateForSupplier> getRateForSupplier() {
+        return rateForSupplier;
+    }
 
-	public void setRateForSupplier(List<RateForSupplier> rateForSupplier) {
-		this.rateForSupplier = rateForSupplier;
-	}
-    
+    public void setRateForSupplier(List<RateForSupplier> rateForSupplier) {
+        this.rateForSupplier = rateForSupplier;
+    }
+
 }

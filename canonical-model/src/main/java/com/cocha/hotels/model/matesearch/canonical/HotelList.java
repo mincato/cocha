@@ -10,10 +10,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class HotelList {
-	
-	@XmlElement
-	private List<Hotel> hotels;
-	
+
+    @XmlElement
+    private List<Hotel> hotels;
+
     public List<Hotel> getHotels() {
         return hotels;
     }

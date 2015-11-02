@@ -21,9 +21,9 @@ public class MessageUtils {
         for (int i = 0; i < pairs.length; i++) {
             String pair = pairs[i];
             String[] keyValue = pair.split("\\=");
-            if(keyValue!=null && keyValue.length>1){
-            	parameters.put(keyValue[0], (keyValue[1]));
-            }	
+            if (keyValue != null && keyValue.length > 1) {
+                parameters.put(keyValue[0], (keyValue[1]));
+            }
         }
         return parameters;
     }

@@ -15,14 +15,16 @@ public class SabreTransformerRoute extends RouteBuilder {
 
     @Autowired
     private SupplierHotelProcessor supplirHotelProcessor;
-    
+
     @Autowired
     private ErrorSupplierProcessor errorSupplierProcessor;
 
     @Override
     public void configure() throws Exception {
-    	
-    	onException(RuntimeException.class).handled(true).setHeader(Constant.SUPPLIER, simple(CodeSupplier.SABRE_SUPPLIER_CODE)).process(errorSupplierProcessor).end();
+
+        onException(RuntimeException.class).handled(true)
+                .setHeader(Constant.SUPPLIER, simple(CodeSupplier.SABRE_SUPPLIER_CODE)).process(errorSupplierProcessor)
+                .end();
 
         from("direct:transformerResposeSabre").convertBodyTo(OTAHotelAvailRS.class)
                 .setHeader("supplier", simple(CodeSupplier.SABRE_SUPPLIER_CODE)).bean(supplirHotelProcessor);

@@ -43,8 +43,8 @@ public class BookingClientProcessor implements Processor {
         req.add(parameters.get("idHotelBooking"));
         String departure = parameters.get("departure_date");
         String currencyCode = parameters.get("currencyCode");
-        if(currencyCode == null) {
-        	currencyCode = Constant.CURRNCY_DEFAULT;
+        if (currencyCode == null) {
+            currencyCode = Constant.CURRNCY_DEFAULT;
         }
         req.add(currencyCode);
         departure = dateConvert(departure);

@@ -17,14 +17,16 @@ public class EanClientRoute extends RouteBuilder {
 
     @Autowired
     private EanClientProcessor eanClientProcessor;
-    
+
     @Autowired
     private ErrorSupplierProcessor errorSupplierProcessor;
 
     @Override
     public void configure() throws Exception {
-    	onException(RuntimeException.class).handled(true).setHeader(Constant.SUPPLIER, simple(CodeSupplier.EAN_SUPPLIER_CODE)).process(errorSupplierProcessor).end();
-    	
+        onException(RuntimeException.class).handled(true)
+                .setHeader(Constant.SUPPLIER, simple(CodeSupplier.EAN_SUPPLIER_CODE)).process(errorSupplierProcessor)
+                .end();
+
         from("direct:sendEanAvailability").errorHandler(loggingErrorHandler(log)).process(eanClientProcessor)
                 .wireTap("direct:logInfo").to("cxfrs:bean:eanClient").to("direct:transfomerResposeEAN");
     }

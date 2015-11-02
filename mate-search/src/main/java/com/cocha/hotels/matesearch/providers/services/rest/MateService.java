@@ -24,10 +24,11 @@ public class MateService {
      * @return A response in String format with MIME of application/json
      */
     @GET
-    @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+    @Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
     @Path("/availability")
     public String availability(@QueryParam("idHotel") String idHotel, @QueryParam("arrival_date") String arrival_date,
-            @QueryParam("departure_date") String departure_date,@QueryParam("currencyCode") String currencyCode ,@QueryParam("token") String token) {
+            @QueryParam("departure_date") String departure_date, @QueryParam("currencyCode") String currencyCode,
+            @QueryParam("token") String token) {
         return null;
     }
 }

@@ -15,7 +15,7 @@ public class SabreClientResponseProcessor implements Processor {
     public void process(Exchange exchange) throws Exception {
 
         Message inMessage = exchange.getIn();
-        
+
         MessageContentsList result = (MessageContentsList) inMessage.getBody();
 
         OTAHotelAvailRS hotelAvail = (OTAHotelAvailRS) result.get(0);

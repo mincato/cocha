@@ -26,28 +26,26 @@ public class MateRoute extends RouteBuilder {
 
     @Override
     public void configure() throws Exception {
-    	
+
         JaxbDataFormat jaxb = createHotelListJaxbDataFormat();
-        
-    	Predicate isJson = header("Content-Type").isEqualTo(MediaType.APPLICATION_JSON);
-    	Predicate isXml = header("Content-Type").isEqualTo(MediaType.APPLICATION_XML);
-    	
+
+        Predicate isJson = header("Content-Type").isEqualTo(MediaType.APPLICATION_JSON);
+        Predicate isXml = header("Content-Type").isEqualTo(MediaType.APPLICATION_XML);
+
         from("cxfrs:bean:mateServer")
                 .process(mateHeaderDataProcessor)
                 .multicast()
                 .aggregationStrategy(aggregationAvailabilityStrategy)
                 .parallelProcessing()
                 .to("direct:getHotelInformation", "direct:sendEanAvailability", "direct:sendBookingAvailability",
-                        "direct:sendSabreAvailability").end()
-                        .choice()
-                        .when(isJson).to("direct:JsonRespose")
-                        .when(isXml).to("direct:XmlRespose");
-        
+                        "direct:sendSabreAvailability").end().choice().when(isJson).to("direct:JsonRespose")
+                .when(isXml).to("direct:XmlRespose");
+
         from("direct:JsonRespose").marshal().json(JsonLibrary.Jackson).end();
         from("direct:XmlRespose").marshal(jaxb).end();
-        
+
     }
-    
+
     private JaxbDataFormat createHotelListJaxbDataFormat() throws JAXBException {
         JAXBContext jaxbContext = JAXBContext.newInstance(HotelList.class);
         JaxbDataFormat jaxb = new JaxbDataFormat(jaxbContext);
