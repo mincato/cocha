@@ -8,6 +8,7 @@ import java.util.Optional;
 import org.apache.camel.Exchange;
 import org.apache.camel.processor.aggregate.AggregationStrategy;
 import org.apache.commons.lang3.ObjectUtils;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -27,8 +28,10 @@ import com.cocha.hotels.model.matesearch.respose.supplier.ResposeSuppliers;
 @Component
 public class AggregationAvailabilityStrategy implements AggregationStrategy {
 
+	 private static final Logger log = Logger.getLogger(AggregationAvailabilityStrategy.class);
+	
     @Autowired
-    HotelMappingRepository hotelMappingRepository;
+    private HotelMappingRepository hotelMappingRepository;
 
     @Override
     public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {
@@ -37,33 +40,48 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
     	ResposeSuppliers resposeSuppliers;
     	ErrorSupplier errorSupplier;
     	
-    	if (newExchange.getIn().getBody(HotelList.class) instanceof HotelList) {
-    		   		
-    		return newExchange;
+    	try {
     		
-    	} else if (newExchange.getIn().getBody(ResposeSuppliers.class) instanceof ResposeSuppliers) {
-    		
-    		hotels = oldExchange.getIn().getBody(HotelList.class);
-    		
-    		Map<String, Object> parameters = oldExchange.getIn().getHeaders(); 
-    		
-    		resposeSuppliers = newExchange.getIn().getBody(ResposeSuppliers.class);
-    		
-    		this.addRates(hotels,resposeSuppliers,parameters);
-    		
-    		oldExchange.getIn().setBody(hotels);
-    		
-    	} else if (newExchange.getIn().getBody(ErrorSupplier.class) instanceof ErrorSupplier) {
-    		
-    		hotels = oldExchange.getIn().getBody(HotelList.class);
-    		errorSupplier = newExchange.getIn().getBody(ErrorSupplier.class);
-    		Map<String, Object> parameters = oldExchange.getIn().getHeaders(); 
-    		
-    		this.addErrors(hotels, errorSupplier, parameters);
-    		
-    	} 
-    	
-    	return oldExchange;
+        	if (newExchange.getIn().getBody(HotelList.class) instanceof HotelList) {
+		   		
+        		hotels = newExchange.getIn().getBody(HotelList.class);
+        		Status status = new Status();
+        		status.setCause("successes");
+        		status.setCode("200");
+        		hotels.setStatus(status);
+        		
+        		return newExchange;
+        		
+        	} else if (newExchange.getIn().getBody(ResposeSuppliers.class) instanceof ResposeSuppliers) {
+        		
+        		hotels = oldExchange.getIn().getBody(HotelList.class);
+        		
+        		Map<String, Object> parameters = oldExchange.getIn().getHeaders(); 
+        		
+        		resposeSuppliers = newExchange.getIn().getBody(ResposeSuppliers.class);
+        		
+        		this.addRates(hotels,resposeSuppliers,parameters);
+        		
+        		oldExchange.getIn().setBody(hotels);
+        		
+        	} else if (newExchange.getIn().getBody(ErrorSupplier.class) instanceof ErrorSupplier) {
+        		
+        		hotels = oldExchange.getIn().getBody(HotelList.class);
+        		errorSupplier = newExchange.getIn().getBody(ErrorSupplier.class);
+        		Map<String, Object> parameters = oldExchange.getIn().getHeaders(); 
+        		
+        		this.addErrors(hotels, errorSupplier, parameters);
+        		
+        	} 
+        	
+        	return oldExchange;
+			
+		} catch (Exception e) {
+			log.info("Error al reunir las respuestas de los supplier");
+			oldExchange.setException(e);
+			return oldExchange;
+		}
+
     }
     
 	private void addRates(HotelList hotels, ResposeSuppliers resposeSuppliers, Map<String, Object> parameters) {
@@ -101,16 +119,23 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 				this.addRate(hotelOptinal.get(), rateForSupplierOptional.get());
 			
 			} else {
+				Status status = new Status();
 				if(idSupplier == null) {
 					idSupplier = "0000000";
+					status.setCause("El hotel no esta mapeado en Cocha");
+					status.setCode("999");
+				} else {
+					status.setCause("El hotel no tiene disponibilidad");
+					status.setCode("999");
 				}
 				ErrorSupplier errorSupplier = new ErrorSupplier();
 				errorSupplier.setCodeSupplier(resposeSuppliers.getCodeSupplier());
 				errorSupplier.setIdSupplier(idSupplier);
-				this.addError(hotelOptinal.get(),errorSupplier);
+				this.addError(hotelOptinal.get(),errorSupplier, status);
 			
 			}
 		}
+		
 	}
 	
 	
@@ -152,7 +177,7 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 				}
 				break;
 			}
-			this.addError(hotelOptinal.get(), errorSupplier);
+			this.addError(hotelOptinal.get(), errorSupplier,new Status("500", "Error en el servicio del supplier"));
 		}
 	}
 	
@@ -171,16 +196,14 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 		
 	}
 	
-	private void addError(Hotel hotel, ErrorSupplier errorSupplier) {
+	private void addError(Hotel hotel, ErrorSupplier errorSupplier, Status statusError) {
 		
 		RateInfo rateInfo = hotel.getRateInfo();
-		Status status = new Status();
-		status.setCode("500");
-		status.setCause("Supplier Error");
 		RateForSupplier rateForSupplier = new RateForSupplier();
-		rateForSupplier.setStatus(status);
+		rateForSupplier.setStatus(statusError);
 		rateForSupplier.setAvailability((ErrorSupplier) ObjectUtils.clone(errorSupplier));
 		rateInfo.getRateForSupplier().add(rateForSupplier);
 		
 	}
+	
 }

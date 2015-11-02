@@ -21,15 +21,17 @@ public class SabreSessionClientRoute extends RouteBuilder {
 
     @Autowired
     private SabreSessionClientResponseProcessor sabreSessionClientResponseProcessor;
-    
+
     @Autowired
     private ErrorSupplierProcessor errorSupplierProcessor;
 
     @Override
     public void configure() throws Exception {
-    	
-    	onException(RuntimeException.class).handled(true).setHeader(Constant.SUPPLIER, simple(CodeSupplier.SABRE_SUPPLIER_CODE)).process(errorSupplierProcessor).end();
-    	
+
+        onException(RuntimeException.class).handled(true)
+                .setHeader(Constant.SUPPLIER, simple(CodeSupplier.SABRE_SUPPLIER_CODE)).process(errorSupplierProcessor)
+                .end();
+
         from("direct:sendSabreSessionCreate").errorHandler(loggingErrorHandler(log))
                 .process(sabreSessionClientProcessor).wireTap("direct:logInfo").to("cxf:bean:sabreSessionCreate")
                 .process(sabreSessionClientResponseProcessor);

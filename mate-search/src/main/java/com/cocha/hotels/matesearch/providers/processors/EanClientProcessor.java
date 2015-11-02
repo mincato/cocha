@@ -65,14 +65,14 @@ public class EanClientProcessor implements Processor {
         String departure = parameters.get("departure_date");
         departure = departure.replace("-", "/");
         String currencyCode = parameters.get("currencyCode");
-        if(currencyCode == null) {
-        	currencyCode = currency;
+        if (currencyCode == null) {
+            currencyCode = currency;
         }
-        
+
         String message = "<HotelListRequest><hotelIdList>" + parameters.get("idHotelEan")
                 + "</hotelIdList><arrivalDate>" + arrival + "</arrivalDate><departureDate>" + departure
-                + "</departureDate></HotelListRequest>";        
-        
+                + "</departureDate></HotelListRequest>";
+
         MessageContentsList req = new MessageContentsList();
         req.add(cid);
         req.add(minorRev);

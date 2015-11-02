@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.cocha.hotels.matesearch.providers.aggregators.AggregationAvailabilityStrategy;
+import com.cocha.hotels.matesearch.providers.processors.ErrorApiProcessor;
 import com.cocha.hotels.matesearch.providers.processors.MateHeaderDataProcessor;
 import com.cocha.hotels.model.matesearch.canonical.HotelList;
 
@@ -23,14 +24,22 @@ public class MateRoute extends RouteBuilder {
 
     @Autowired
     AggregationAvailabilityStrategy aggregationAvailabilityStrategy;
+    
+    @Autowired
+    ErrorApiProcessor errorApiProcessor;
 
     @Override
     public void configure() throws Exception {
     	
-        JaxbDataFormat jaxb = createHotelListJaxbDataFormat();
-        
+    	JaxbDataFormat jaxb = createHotelListJaxbDataFormat();
+    	
     	Predicate isJson = header("Content-Type").isEqualTo(MediaType.APPLICATION_JSON);
     	Predicate isXml = header("Content-Type").isEqualTo(MediaType.APPLICATION_XML);
+    	
+    	onException(Exception.class).handled(true).process(errorApiProcessor).choice()
+        .when(isJson).to("direct:JsonRespose")
+        .when(isXml).to("direct:XmlRespose");
+
     	
         from("cxfrs:bean:mateServer")
                 .process(mateHeaderDataProcessor)
@@ -38,16 +47,14 @@ public class MateRoute extends RouteBuilder {
                 .aggregationStrategy(aggregationAvailabilityStrategy)
                 .parallelProcessing()
                 .to("direct:getHotelInformation", "direct:sendEanAvailability", "direct:sendBookingAvailability",
-                        "direct:sendSabreAvailability").end()
-                        .choice()
-                        .when(isJson).to("direct:JsonRespose")
-                        .when(isXml).to("direct:XmlRespose");
-        
+                        "direct:sendSabreAvailability").end().choice().when(isJson).to("direct:JsonRespose")
+                .when(isXml).to("direct:XmlRespose");
+
         from("direct:JsonRespose").marshal().json(JsonLibrary.Jackson).end();
         from("direct:XmlRespose").marshal(jaxb).end();
-        
+
     }
-    
+
     private JaxbDataFormat createHotelListJaxbDataFormat() throws JAXBException {
         JAXBContext jaxbContext = JAXBContext.newInstance(HotelList.class);
         JaxbDataFormat jaxb = new JaxbDataFormat(jaxbContext);

@@ -27,7 +27,6 @@ public class Result {
     private Long ranking;
     @XmlElement(name = "other_currency")
     private OtherCurrency otherCurrency;
-    
 
     public Long getAvailableRooms() {
         return availableRooms;
@@ -101,11 +100,11 @@ public class Result {
         this.ranking = ranking;
     }
 
-	public OtherCurrency getOtherCurrency() {
-		return otherCurrency;
-	}
+    public OtherCurrency getOtherCurrency() {
+        return otherCurrency;
+    }
 
-	public void setOtherCurrency(OtherCurrency otherCurrency) {
-		this.otherCurrency = otherCurrency;
-	}
+    public void setOtherCurrency(OtherCurrency otherCurrency) {
+        this.otherCurrency = otherCurrency;
+    }
 }
