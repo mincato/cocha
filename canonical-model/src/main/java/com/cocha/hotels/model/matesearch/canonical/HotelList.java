@@ -12,6 +12,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class HotelList {
 	
 	@XmlElement
+	private Status status;
+	
+	@XmlElement
 	private List<Hotel> hotels;
 	
     public List<Hotel> getHotels() {
@@ -21,4 +24,14 @@ public class HotelList {
     public void setHotels(List<Hotel> hotels) {
         this.hotels = hotels;
     }
+
+	public Status getStatus() {
+		return status;
+	}
+
+	public void setStatus(Status status) {
+		this.status = status;
+	}
+    
+    
 }
