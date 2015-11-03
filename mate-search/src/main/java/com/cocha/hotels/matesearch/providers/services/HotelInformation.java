@@ -40,6 +40,7 @@ public class HotelInformation {
         }).collect(Collectors.toList());
 
         hotelList.setHotelSummary(hotelSummaries);
+        hotelList.setSize(hotels.size());
 
         return hotelList;
     }
