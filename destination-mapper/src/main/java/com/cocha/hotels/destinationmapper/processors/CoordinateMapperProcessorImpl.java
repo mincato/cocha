@@ -78,7 +78,7 @@ public class CoordinateMapperProcessorImpl implements CoordinateMapperProcessor 
                                     String[] pointCoordinate = pointRegionCoordinates.getCoordinates().split(";");
                                     if (mappingService.calculateDistance(Double.valueOf(pointCoordinate[0]),
                                             Double.valueOf(pointCoordinate[1]), hotel.getLatitude(),
-                                            hotel.getLongitude()) > poiDistance) {
+                                            hotel.getLongitude()) < poiDistance) {
                                         RegionHotelMapping pointOfInterestHotelMapping = createRegionHotelMappingContent(
                                                 supplierHotelId, point.getId(), hotel);
                                         mapping.add(pointOfInterestHotelMapping);
