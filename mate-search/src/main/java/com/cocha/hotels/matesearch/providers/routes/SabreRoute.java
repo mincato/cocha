@@ -21,17 +21,18 @@ public class SabreRoute extends RouteBuilder {
 
     @Autowired
     private ErrorSupplierProcessor errorSupplierProcessor;
-    
+
     @Override
     public void configure() throws Exception {
-    	
-    	onException(RuntimeException.class).handled(true).setHeader(Constant.SUPPLIER, simple(CodeSupplier.SABRE_SUPPLIER_CODE)).process(errorSupplierProcessor).end();
+
+        onException(RuntimeException.class).handled(true)
+                .setHeader(Constant.SUPPLIER, simple(CodeSupplier.SABRE_SUPPLIER_CODE)).process(errorSupplierProcessor)
+                .end();
 
         from("cxfrs:bean:sabreServer").wireTap("direct:logInfo").choice()
                 .when(simple("${headers.operationName} == 'send'")).process(processor)
                 .to("direct:sendSabreAvailability").when(simple("${headers.operationName} == 'createsession'"))
-                .process(processor).to("direct:sendSabreSessionCreate").end()
-                .marshal().json(JsonLibrary.Jackson);
+                .process(processor).to("direct:sendSabreSessionCreate").end().marshal().json(JsonLibrary.Jackson);
 
     }
 }

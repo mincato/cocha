@@ -18,8 +18,17 @@
 
 		<!-- Dependencies Versions -->
 		<camel-version>2.15.3</camel-version>
+		<servlet-version>3.0.1</servlet-version>
 		<log4j-version>1.2.17</log4j-version>
 		<slf4j-version>1.7.5</slf4j-version>
+		<mysql-version>5.1.36</mysql-version>
+		<h2-version>1.4.188</h2-version>
+		<springdata-version>1.9.0.RELEASE</springdata-version>
+		<mockito-version>1.10.19</mockito-version>
+		<commons-collections-version>4.0</commons-collections-version>
+		<commons-lang-version>3.4</commons-lang-version>
+		<spring-version>4.1.6.RELEASE</spring-version>
+		<jts-version>1.13</jts-version>
 	</properties>
 	
 	<dependencies>
@@ -41,7 +50,49 @@
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
+		<!-- Database -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql-version}</version>
+		</dependency>
 
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>${h2-version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+			<version>${springdata-version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-collections4</artifactId>
+			<version>${commons-collections-version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${commons-lang-version}</version>
+		</dependency>
+		
 		<!-- Apache Camel -->
 		<dependency>
 			<groupId>org.apache.camel</groupId>
@@ -58,6 +109,67 @@
 			<artifactId>camel-test-spring</artifactId>
 			<version>${camel-version}</version>
 			<scope>test</scope>
+		</dependency>		
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-servlet</artifactId>
+			<version>${camel-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-spring</artifactId>
+			<version>${camel-version}</version>
+		</dependency>		
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jpa</artifactId>
+			<version>${camel-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-sql</artifactId>
+			<version>${camel-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-quartz2</artifactId>
+			<version>${camel-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-cxf</artifactId>
+			<version>${camel-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-cxf-transport</artifactId>
+			<version>${camel-version}</version>
+		</dependency>
+		<dependency>
+		     <groupId>org.apache.camel</groupId>
+		     <artifactId>camel-http</artifactId>
+		     <version>${camel-version}</version>
+		 </dependency>
+		
+		<!-- Servlet 3.1 Specification for Tomcat 8 -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${servlet-version}</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<!-- Spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring-version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring-version}</version>
 		</dependency>
 
 		<!-- Log -->
@@ -76,9 +188,12 @@
 			<artifactId>log4j</artifactId>
 			<version>${log4j-version}</version>
 		</dependency>
-
+		<dependency>
+			<groupId>com.vividsolutions</groupId>
+			<artifactId>jts</artifactId>
+			<version>${jts-version}</version>
+		</dependency>
 	</dependencies>
-
 	<build>
 		<!-- Maven will append the version to the finalName (which is the name 
 			given to the generated war, and hence the context root) -->

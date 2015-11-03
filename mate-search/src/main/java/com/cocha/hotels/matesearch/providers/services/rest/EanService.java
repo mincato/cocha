@@ -26,8 +26,8 @@ public class EanService {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/send")
-    public String send(@QueryParam("idHotel") String idHotel, @QueryParam("arrival_date") String arrival_date,
-            @QueryParam("departure_date") String departure_date,@QueryParam("currencyCode") String currencyCode) {
+    public String send(@QueryParam("idHotel") String idHotel, @QueryParam("arrivalDate") String arrival_date,
+            @QueryParam("departureDate") String departure_date, @QueryParam("currencyCode") String currencyCode) {
         return null;
     }
 }

@@ -5,24 +5,24 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name="rateInfoForSupplier")
+@XmlRootElement(name = "rateInfoForSupplier")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RateInfoForSupplier extends Availability {
 
-	@XmlElement
+    @XmlElement
     private String idSupplier;
-	
-	@XmlElement
+
+    @XmlElement
     private String codeSupplier;
-    
-	@XmlElement
-	private String rateCurrencyCode;
-    
-	@XmlElement
-	private Float higtRate;
-    
-	@XmlElement
-	private Float lowRate;
+
+    @XmlElement
+    private String rateCurrencyCode;
+
+    @XmlElement
+    private Float higtRate;
+
+    @XmlElement
+    private Float lowRate;
 
     public String getIdSupplier() {
         return idSupplier;

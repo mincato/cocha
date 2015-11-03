@@ -8,30 +8,27 @@ import javax.xml.bind.annotation.XmlElementRefs;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RateForSupplier {
-	
-	@XmlElement
-	private Status status;
-	
-	@XmlElementRefs({
-	    @XmlElementRef(name="rateInfoForSupplier", type=RateInfoForSupplier.class),
-	    @XmlElementRef(name="errorSupplier", type=ErrorSupplier.class)
-	})
-	private Availability availability;
 
-	public Availability getAvailability() {
-		return availability;
-	}
+    @XmlElement
+    private Status status;
 
-	public void setAvailability(Availability availability) {
-		this.availability = availability;
-	}
+    @XmlElementRefs({ @XmlElementRef(name = "rateInfoForSupplier", type = RateInfoForSupplier.class),
+            @XmlElementRef(name = "errorSupplier", type = ErrorSupplier.class) })
+    private Availability availability;
 
-	public Status getStatus() {
-		return status;
-	}
-	
-	public void setStatus(Status status) {
-		this.status = status;
-	}
+    public Availability getAvailability() {
+        return availability;
+    }
+
+    public void setAvailability(Availability availability) {
+        this.availability = availability;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
 }
-

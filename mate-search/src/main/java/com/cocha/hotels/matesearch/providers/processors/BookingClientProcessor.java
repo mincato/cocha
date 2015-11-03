@@ -37,14 +37,14 @@ public class BookingClientProcessor implements Processor {
         inMessage.setHeader(CxfConstants.CAMEL_CXF_RS_USING_HTTP_API, Boolean.FALSE);
         MessageContentsList req = new MessageContentsList();
 
-        String arrival = parameters.get("arrival_date");
+        String arrival = parameters.get(Constant.ARRIVAL_DATE);
         arrival = dateConvert(arrival);
         req.add(arrival);
         req.add(parameters.get("idHotelBooking"));
-        String departure = parameters.get("departure_date");
-        String currencyCode = parameters.get("currencyCode");
-        if(currencyCode == null) {
-        	currencyCode = Constant.CURRNCY_DEFAULT;
+        String departure = parameters.get(Constant.DEPARTURE_DATE);
+        String currencyCode = parameters.get(Constant.CURRENCY_CODE);
+        if (currencyCode == null) {
+            currencyCode = Constant.CURRNCY_DEFAULT;
         }
         req.add(currencyCode);
         departure = dateConvert(departure);

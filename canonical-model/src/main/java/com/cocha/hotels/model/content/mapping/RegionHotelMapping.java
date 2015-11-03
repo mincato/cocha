@@ -22,8 +22,6 @@ public class RegionHotelMapping {
     @Column(length = 3)
     private String supplierCode;
 
-    private Integer confidence;
-
     private boolean active;
 
     public RegionHotelMapping() {
@@ -49,10 +47,6 @@ public class RegionHotelMapping {
         return supplierCode;
     }
 
-    public Integer getConfidence() {
-        return confidence;
-    }
-
     public void setHotelId(String hotelId) {
         this.hotelId = hotelId;
     }
@@ -63,10 +57,6 @@ public class RegionHotelMapping {
 
     public void setSupplierCode(String supplierCode) {
         this.supplierCode = supplierCode;
-    }
-
-    public void setConfidence(Integer confidence) {
-        this.confidence = confidence;
     }
 
     public boolean isActive() {

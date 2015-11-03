@@ -20,11 +20,13 @@ public class BookingClientRoute extends RouteBuilder {
 
     @Autowired
     private ErrorSupplierProcessor errorSupplierProcessor;
-    
+
     @Override
     public void configure() throws Exception {
-    	
-    	onException(RuntimeException.class).handled(true).setHeader(Constant.SUPPLIER, simple(CodeSupplier.BOOKING_SUPPLIER_CODE)).process(errorSupplierProcessor).end();
+
+        onException(RuntimeException.class).handled(true)
+                .setHeader(Constant.SUPPLIER, simple(CodeSupplier.BOOKING_SUPPLIER_CODE))
+                .process(errorSupplierProcessor).end();
 
         from("direct:sendBookingAvailability").errorHandler(loggingErrorHandler(log)).process(bookingProcessor)
                 .wireTap("direct:logInfo").to("cxfrs:bean:bookingClient").to("direct:transformerResposeBooking");

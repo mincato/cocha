@@ -20,15 +20,17 @@ public class EanTransformaerRoute extends RouteBuilder {
 
     @Autowired
     private ApprovalResposeEAN approvalResposeEAN;
-    
+
     @Autowired
     private ErrorSupplierProcessor errorSupplierProcessor;
 
     @Override
     public void configure() throws Exception {
-    	
-    	onException(RuntimeException.class).handled(true).setHeader(Constant.SUPPLIER, simple(CodeSupplier.EAN_SUPPLIER_CODE)).process(errorSupplierProcessor).end();
-    	
+
+        onException(RuntimeException.class).handled(true)
+                .setHeader(Constant.SUPPLIER, simple(CodeSupplier.EAN_SUPPLIER_CODE)).process(errorSupplierProcessor)
+                .end();
+
         from("direct:transfomerResposeEAN").bean(approvalResposeEAN).unmarshal()
                 .json(JsonLibrary.Jackson, SupplierEANHotelResponse.class)
                 .setHeader("supplier", simple(CodeSupplier.EAN_SUPPLIER_CODE)).bean(supplirHotelProcessor);
