@@ -4,16 +4,22 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 
-@Entity(name = "NeighborhoodArea")
-public class NeighborhoodArea implements Serializable {
+@Entity(name = "RegionCoordinates")
+public class RegionCoordinates implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @Id
     private String id;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "regionType")
+    private RegionType regionType;
 
     @Lob
     @Column
@@ -25,6 +31,14 @@ public class NeighborhoodArea implements Serializable {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public RegionType getRegionType() {
+        return regionType;
+    }
+
+    public void setRegionType(RegionType regionType) {
+        this.regionType = regionType;
     }
 
     public String getCoordinates() {

@@ -9,6 +9,7 @@ import org.apache.camel.ExchangePattern;
 import org.apache.camel.Message;
 import org.apache.camel.Processor;
 import org.apache.camel.component.cxf.common.message.CxfConstants;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.cxf.message.MessageContentsList;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -54,6 +55,12 @@ public class EanClientProcessor implements Processor {
 
         // String queryStrings = inMessage.getBody(String.class);
         Map<String, String> parameters = (Map<String, String>) inMessage.getBody(Map.class);
+
+        String idHotelEan = parameters.get("idHotelEan");
+        if (StringUtils.isBlank(idHotelEan)) {
+            throw new Exception("Missing EAN hotel ID");
+        }
+
         // Map<String, String> parameters =
         // MessageUtils.parseQueryParams(queryStrings);
         exchange.setPattern(ExchangePattern.InOut);
@@ -71,9 +78,8 @@ public class EanClientProcessor implements Processor {
             currencyCode = currency;
         }
 
-        String message = "<HotelListRequest><hotelIdList>" + parameters.get("idHotelEan")
-                + "</hotelIdList><arrivalDate>" + arrival + "</arrivalDate><departureDate>" + departure
-                + "</departureDate></HotelListRequest>";
+        String message = "<HotelListRequest><hotelIdList>" + idHotelEan + "</hotelIdList><arrivalDate>" + arrival
+                + "</arrivalDate><departureDate>" + departure + "</departureDate></HotelListRequest>";
 
         MessageContentsList req = new MessageContentsList();
         req.add(cid);

@@ -12,6 +12,7 @@ import java.util.Map;
 import org.apache.camel.Exchange;
 import org.apache.camel.Message;
 import org.apache.camel.Processor;
+import org.apache.commons.lang3.StringUtils;
 import org.ebxml.namespaces.messageheader.From;
 import org.ebxml.namespaces.messageheader.MessageData;
 import org.ebxml.namespaces.messageheader.MessageHeader;
@@ -80,6 +81,10 @@ public class SabreClientProcessor implements Processor {
         MessageHeader messageHeader = createMessageHeader();
         Security security = createSecurityHeader(parameters.get("token"));
         String idsHotels = parameters.get("idsHotelsSabre");
+
+        if (StringUtils.isBlank(idsHotels)) {
+            throw new Exception("Missing SABRE hotel ID");
+        }
 
         String arrival = parameters.get(Constant.ARRIVAL_DATE);
         arrival = dateConvert(arrival);

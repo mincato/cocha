@@ -10,6 +10,7 @@ import org.apache.camel.ExchangePattern;
 import org.apache.camel.Message;
 import org.apache.camel.Processor;
 import org.apache.camel.component.cxf.common.message.CxfConstants;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.cxf.message.MessageContentsList;
 import org.springframework.stereotype.Component;
 
@@ -29,6 +30,11 @@ public class BookingClientProcessor implements Processor {
         // Map<String, String> parameters =
         // MessageUtils.parseQueryParams(queryStrings);
 
+        String idHotelBooking = parameters.get("idHotelBooking");
+        if (StringUtils.isBlank(idHotelBooking)) {
+            throw new Exception("Missing BOOKING hotel ID");
+        }
+
         exchange.setPattern(ExchangePattern.InOut);
 
         // seteo nombre de servicio para el binding con la llamada al servicio
@@ -40,7 +46,7 @@ public class BookingClientProcessor implements Processor {
         String arrival = parameters.get(Constant.ARRIVAL_DATE);
         arrival = dateConvert(arrival);
         req.add(arrival);
-        req.add(parameters.get("idHotelBooking"));
+        req.add(idHotelBooking);
         String departure = parameters.get(Constant.DEPARTURE_DATE);
         String currencyCode = parameters.get(Constant.CURRENCY_CODE);
         if (currencyCode == null) {
