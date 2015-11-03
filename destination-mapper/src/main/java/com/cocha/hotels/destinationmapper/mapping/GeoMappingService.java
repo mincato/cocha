@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Service;
 
-import com.cocha.hotels.model.content.geo.NeighborhoodArea;
+import com.cocha.hotels.model.content.geo.RegionCoordinates;
 import com.vividsolutions.jts.geom.Coordinate;
 import com.vividsolutions.jts.geom.GeometryFactory;
 import com.vividsolutions.jts.geom.LinearRing;
@@ -18,7 +18,7 @@ public class GeoMappingService {
 
     private Logger logger = Logger.getLogger(GeoMappingService.class);
 
-    public boolean validatePointInArea(final NeighborhoodArea neighborhoodArea, final Double latitude,
+    public boolean validatePointInArea(final RegionCoordinates neighborhoodArea, final Double latitude,
             final Double longitude) {
 
         String poligon = neighborhoodArea.getCoordinates();

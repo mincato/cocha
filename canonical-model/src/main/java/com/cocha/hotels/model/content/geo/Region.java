@@ -37,7 +37,7 @@ public class Region implements Serializable {
 
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumns({ @JoinColumn(name = "id", referencedColumnName = "id") })
-    private NeighborhoodArea area;
+    private RegionCoordinates coordinates;
 
     public String getId() {
         return id;
@@ -87,12 +87,12 @@ public class Region implements Serializable {
         this.regionNameLong = regionNameLong;
     }
 
-    public NeighborhoodArea getArea() {
-        return area;
-    }
+	public RegionCoordinates getCoordinates() {
+		return coordinates;
+	}
 
-    public void setArea(NeighborhoodArea area) {
-        this.area = area;
-    }
+	public void setCoordinates(RegionCoordinates coordinates) {
+		this.coordinates = coordinates;
+	}  
 
 }
