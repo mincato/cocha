@@ -24,23 +24,21 @@ public class MateRoute extends RouteBuilder {
 
     @Autowired
     AggregationAvailabilityStrategy aggregationAvailabilityStrategy;
-    
+
     @Autowired
     ErrorApiProcessor errorApiProcessor;
 
     @Override
     public void configure() throws Exception {
-    	
-    	JaxbDataFormat jaxb = createHotelListJaxbDataFormat();
-    	
-    	Predicate isJson = header("Content-Type").isEqualTo(MediaType.APPLICATION_JSON);
-    	Predicate isXml = header("Content-Type").isEqualTo(MediaType.APPLICATION_XML);
-    	
-    	onException(Exception.class).handled(true).process(errorApiProcessor).choice()
-        .when(isJson).to("direct:JsonRespose")
-        .when(isXml).to("direct:XmlRespose");
 
-    	
+        JaxbDataFormat jaxb = createHotelListJaxbDataFormat();
+
+        Predicate isJson = header("Content-Type").isEqualTo(MediaType.APPLICATION_JSON);
+        Predicate isXml = header("Content-Type").isEqualTo(MediaType.APPLICATION_XML);
+
+        onException(Exception.class).handled(true).process(errorApiProcessor).choice().when(isJson)
+                .to("direct:JsonRespose").when(isXml).to("direct:XmlRespose");
+
         from("cxfrs:bean:mateServer")
                 .process(mateHeaderDataProcessor)
                 .multicast()

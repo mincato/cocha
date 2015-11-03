@@ -62,7 +62,7 @@ public class EanGeoTransformer {
     }
 
     private RegionCoordinates toCanonicalNeighborhoodArea(EanSupplierGeoNeighborhood supplierNeighborhoodArea) {
-    	RegionCoordinates canonicalNeighborhoodArea = null;
+        RegionCoordinates canonicalNeighborhoodArea = null;
         if (supplierNeighborhoodArea != null) {
             canonicalNeighborhoodArea = new RegionCoordinates();
             canonicalNeighborhoodArea.setId(supplierNeighborhoodArea.getRegionID());
@@ -71,9 +71,8 @@ public class EanGeoTransformer {
         }
         return canonicalNeighborhoodArea;
     }
-    
-    public List<RegionCoordinates> toCanonicalCitiesArea(
-            List<EanSupplierGeoCity> supplierCityArea) {
+
+    public List<RegionCoordinates> toCanonicalCitiesArea(List<EanSupplierGeoCity> supplierCityArea) {
         List<RegionCoordinates> citiesArea = null;
 
         if (supplierCityArea != null) {
@@ -86,7 +85,7 @@ public class EanGeoTransformer {
     }
 
     private RegionCoordinates toCanonicalCityArea(EanSupplierGeoCity supplierCityArea) {
-    	RegionCoordinates canonicalCityArea = null;
+        RegionCoordinates canonicalCityArea = null;
         if (supplierCityArea != null) {
             canonicalCityArea = new RegionCoordinates();
             canonicalCityArea.setId(supplierCityArea.getRegionID());
@@ -94,10 +93,9 @@ public class EanGeoTransformer {
             canonicalCityArea.setCoordinates(supplierCityArea.getCoordinates());
         }
         return canonicalCityArea;
-    }    
-    
-    public List<RegionCoordinates> toCanonicalPointsOfInterest(
-            List<EanSupplierGeoPOI> supplierPOIs) {
+    }
+
+    public List<RegionCoordinates> toCanonicalPointsOfInterest(List<EanSupplierGeoPOI> supplierPOIs) {
         List<RegionCoordinates> pois = null;
 
         if (supplierPOIs != null) {
@@ -110,7 +108,7 @@ public class EanGeoTransformer {
     }
 
     private RegionCoordinates toCanonicalPointOfInterest(EanSupplierGeoPOI supplierPOI) {
-    	RegionCoordinates canonicalPOI = null;
+        RegionCoordinates canonicalPOI = null;
         if (supplierPOI != null) {
             canonicalPOI = new RegionCoordinates();
             canonicalPOI.setId(supplierPOI.getRegionID());
@@ -118,14 +116,12 @@ public class EanGeoTransformer {
             StringBuffer coordinateBuffer = new StringBuffer();
             coordinateBuffer.append(supplierPOI.getLatitude());
             coordinateBuffer.append(";");
-            coordinateBuffer.append(supplierPOI.getLongitude());            
+            coordinateBuffer.append(supplierPOI.getLongitude());
             canonicalPOI.setCoordinates(coordinateBuffer.toString());
         }
         return canonicalPOI;
     }
-        
-    
-    
+
     public List<Airport> toCanonicalAirports(List<EanSupplierGeoAirport> supplierAirports) {
         List<Airport> airports = null;
 

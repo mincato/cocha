@@ -10,12 +10,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class HotelList {
-	
-	@XmlElement
-	private Status status;
-	
-	@XmlElement
-	private List<Hotel> hotels;
+
+    @XmlElement
+    private Status status;
+
+    @XmlElement
+    private List<Hotel> hotels;
 
     public List<Hotel> getHotels() {
         return hotels;
@@ -25,13 +25,12 @@ public class HotelList {
         this.hotels = hotels;
     }
 
-	public Status getStatus() {
-		return status;
-	}
+    public Status getStatus() {
+        return status;
+    }
 
-	public void setStatus(Status status) {
-		this.status = status;
-	}
-    
-    
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
 }

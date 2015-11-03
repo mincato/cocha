@@ -16,10 +16,10 @@ public class RegionCoordinates implements Serializable {
 
     @Id
     private String id;
-    
+
     @Enumerated(EnumType.STRING)
     @Column(name = "regionType")
-    private RegionType regionType;   
+    private RegionType regionType;
 
     @Lob
     @Column
@@ -34,14 +34,14 @@ public class RegionCoordinates implements Serializable {
     }
 
     public RegionType getRegionType() {
-		return regionType;
-	}
+        return regionType;
+    }
 
-	public void setRegionType(RegionType regionType) {
-		this.regionType = regionType;
-	}
+    public void setRegionType(RegionType regionType) {
+        this.regionType = regionType;
+    }
 
-	public String getCoordinates() {
+    public String getCoordinates() {
         return coordinates;
     }
 

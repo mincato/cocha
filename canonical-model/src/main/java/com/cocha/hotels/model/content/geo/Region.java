@@ -87,12 +87,12 @@ public class Region implements Serializable {
         this.regionNameLong = regionNameLong;
     }
 
-	public RegionCoordinates getCoordinates() {
-		return coordinates;
-	}
+    public RegionCoordinates getCoordinates() {
+        return coordinates;
+    }
 
-	public void setCoordinates(RegionCoordinates coordinates) {
-		this.coordinates = coordinates;
-	}  
+    public void setCoordinates(RegionCoordinates coordinates) {
+        this.coordinates = coordinates;
+    }
 
 }
