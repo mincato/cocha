@@ -8,6 +8,7 @@ import java.util.Optional;
 import org.apache.camel.Exchange;
 import org.apache.camel.processor.aggregate.AggregationStrategy;
 import org.apache.commons.lang3.ObjectUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -39,6 +40,10 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
         HotelList hotels;
         ResposeSuppliers resposeSuppliers;
         ErrorSupplier errorSupplier;
+        
+        if(oldExchange != null && oldExchange.getException() != null) {
+        	return oldExchange;
+        }
 
         try {
 
@@ -133,7 +138,7 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 
             } else {
                 Status status = new Status();
-                if (idSupplier == null) {
+                if (StringUtils.isBlank(idSupplier)) {
                     idSupplier = "0000000";
                     status.setCause("El hotel no esta mapeado en Cocha");
                     status.setCode("999");
@@ -198,9 +203,7 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 
         RateInfo rateInfo = hotel.getRateInfo();
         rateInfo.updateRatesHightandLow(rateInfoForSupplier.getHigtRate(), rateInfoForSupplier.getLowRate());
-        Status status = new Status();
-        status.setCode("200");
-        status.setCause("success");
+        Status status = new Status("200", "success");
         RateForSupplier rateForSupplier = new RateForSupplier();
         rateForSupplier.setStatus(status);
         rateForSupplier.setAvailability((RateInfoForSupplier) rateInfoForSupplier);

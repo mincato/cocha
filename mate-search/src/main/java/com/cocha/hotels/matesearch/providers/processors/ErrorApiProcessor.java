@@ -17,14 +17,10 @@ public class ErrorApiProcessor implements Processor {
     @Override
     public void process(Exchange exchange) throws Exception {
 
-        if (exchange.getException() != null) {
-            logg.info(exchange.getException());
-        } else {
-            logg.info("Ocurrio un error no tratados");
-        }
+        logg.info(exchange.getException());
 
         HotelListResponse hotelListResponse = new HotelListResponse();
-        Status status = new Status("500", "Error");
+        Status status = new Status("500", "Error interno");
         hotelListResponse.setStatus(status);
         HotelList hotelList = new HotelList();
         hotelListResponse.setHotelList(hotelList);
