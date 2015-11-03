@@ -36,7 +36,7 @@ index=0
 for url in "${urls[@]}"
 do
 	stop=0
-	offset=726000
+	offset=0
 	while [ $stop -eq 0 ]
 	do
 		echo "Bajando archivo ${nombres[index]}$offset.xml"

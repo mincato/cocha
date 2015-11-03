@@ -129,7 +129,14 @@
        <cxfCamel:serviceBeans>
            <bean class="com.cocha.geo.matesearch.services.rest.GeoService" />
        </cxfCamel:serviceBeans>
-   </cxfCamel:rsServer>	
+   </cxfCamel:rsServer>
+
+	<cxfCamel:rsServer id="hotelServer" address="/hotel"
+		loggingFeatureEnabled="true">
+		<cxfCamel:serviceBeans>
+			<bean class="com.cocha.hotels.matesearch.providers.services.rest.HotelService" />
+		</cxfCamel:serviceBeans>
+	</cxfCamel:rsServer>		
 		
 		
 	<camel:camelContext id="camel" xmlns="http://camel.apache.org/schema/spring" trace="true">
@@ -149,6 +156,7 @@
 		<camel:routeBuilder ref="sabreTransformerRoute" />
 		<camel:routeBuilder ref="hotelInformationRoute" />
 		<camel:routeBuilder ref="geoRoute" />
+		<camel:routeBuilder ref="hotelRoute" />
 	</camel:camelContext>	
 	
 	<!-- Dozer Mapping -->

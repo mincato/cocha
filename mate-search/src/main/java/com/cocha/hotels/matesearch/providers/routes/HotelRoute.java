@@ -13,15 +13,18 @@ import org.springframework.stereotype.Component;
 
 import com.cocha.hotels.matesearch.providers.aggregators.AggregationAvailabilityStrategy;
 import com.cocha.hotels.matesearch.providers.processors.ErrorApiProcessor;
-import com.cocha.hotels.matesearch.providers.processors.MateHeaderDataProcessor;
+import com.cocha.hotels.matesearch.providers.processors.HotelListHeaderDataProcessor;
 import com.cocha.hotels.matesearch.providers.services.rest.response.HotelListResponseBuilder;
 import com.cocha.hotels.model.matesearch.canonical.response.HotelListResponse;
 
+/**
+ * Defines the camel routes
+ */
 @Component
-public class MateRoute extends RouteBuilder {
+public class HotelRoute extends RouteBuilder {
 
     @Autowired
-    private MateHeaderDataProcessor mateHeaderDataProcessor;
+    private HotelListHeaderDataProcessor hotelListHeaderDataProcessor;
 
     @Autowired
     AggregationAvailabilityStrategy aggregationAvailabilityStrategy;
@@ -35,29 +38,29 @@ public class MateRoute extends RouteBuilder {
     @Override
     public void configure() throws Exception {
 
-        JaxbDataFormat jaxb = createHotelListJaxbDataFormat();
+        JaxbDataFormat jaxb = createHotelListResponseJaxbDataFormat();
 
         Predicate isJson = header("Content-Type").isEqualTo(MediaType.APPLICATION_JSON);
         Predicate isXml = header("Content-Type").isEqualTo(MediaType.APPLICATION_XML);
 
-        onException(Exception.class).handled(true).process(errorApiProcessor).choice().when(isJson)
-                .to("direct:JsonRespose").when(isXml).to("direct:XmlRespose");
+        onException(Exception.class).handled(true).process(errorApiProcessor).to("direct:marshalResponse").choice()
+                .when(isJson).to("direct:JsonResponse").when(isXml).to("direct:XmlResponse");
 
-        from("cxfrs:bean:mateServer")
-                .process(mateHeaderDataProcessor)
+        from("cxfrs:bean:hotelServer")
+                .wireTap("direct:logInfo")
+                .process(hotelListHeaderDataProcessor)
                 .multicast()
                 .aggregationStrategy(aggregationAvailabilityStrategy)
                 .parallelProcessing()
                 .to("direct:getHotelInformation", "direct:sendEanAvailability", "direct:sendBookingAvailability",
                         "direct:sendSabreAvailability").end().bean(hotelListResponseBuilder).choice().when(isJson)
-                .to("direct:JsonRespose").when(isXml).to("direct:XmlRespose");
+                .to("direct:JsonResponse").when(isXml).to("direct:XmlResponse");
 
-        from("direct:JsonRespose").marshal().json(JsonLibrary.Jackson).end();
-        from("direct:XmlRespose").marshal(jaxb).end();
-
+        from("direct:JsonResponse").marshal().json(JsonLibrary.Jackson).end();
+        from("direct:XmlResponse").marshal(jaxb).end();
     }
 
-    private JaxbDataFormat createHotelListJaxbDataFormat() throws JAXBException {
+    private JaxbDataFormat createHotelListResponseJaxbDataFormat() throws JAXBException {
         JAXBContext jaxbContext = JAXBContext.newInstance(HotelListResponse.class);
         JaxbDataFormat jaxb = new JaxbDataFormat(jaxbContext);
         jaxb.setContextPath(HotelListResponse.class.getPackage().toString());
