@@ -4,43 +4,32 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Transient;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 
 @Entity(name = "Hotel")
-@XmlAccessorType(XmlAccessType.FIELD)
 public class Hotel {
 
     @Id
-    @XmlElement
     private String id;
 
-    @XmlElement
     private String name;
 
-    @XmlElement
     private String address;
 
     @Transient
-    @XmlElement
+    @XmlElement(name = "city")
     private String city;
 
-    @Transient
-    @XmlElement
-    private String stateProvince;
+    private String zipCode;
 
-    @XmlElement
     @Column(name = "countryCode")
     private String country;
 
-    @Transient
-    @XmlElement
-    private RateInfo rateInfo;
+    private String starRating;
 
-    public Hotel() {
-        rateInfo = new RateInfo();
-    }
+    private String latitude;
+
+    private String longitude;
 
     public String getId() {
         return id;
@@ -66,28 +55,12 @@ public class Hotel {
         this.city = city;
     }
 
-    public String getStateProvince() {
-        return stateProvince;
-    }
-
-    public void setStateProvince(String stateProvince) {
-        this.stateProvince = stateProvince;
-    }
-
     public String getCountry() {
         return country;
     }
 
     public void setCountry(String country) {
         this.country = country;
-    }
-
-    public RateInfo getRateInfo() {
-        return rateInfo;
-    }
-
-    public void setRateInfo(RateInfo rateInfo) {
-        this.rateInfo = rateInfo;
     }
 
     public String getAddress() {
@@ -97,4 +70,37 @@ public class Hotel {
     public void setAddress(String address) {
         this.address = address;
     }
+
+    public String getZipCode() {
+        return zipCode;
+    }
+
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
+    }
+
+    public String getStarRating() {
+        return starRating;
+    }
+
+    public void setStarRating(String starRating) {
+        this.starRating = starRating;
+    }
+
+    public String getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
+    }
+
+    public String getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
+    }
+
 }

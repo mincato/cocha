@@ -81,13 +81,13 @@ public class SabreClientProcessor implements Processor {
         Security security = createSecurityHeader(parameters.get("token"));
         String idsHotels = parameters.get("idsHotelsSabre");
 
-        String arrival = parameters.get("arrival_date");
+        String arrival = parameters.get(Constant.ARRIVAL_DATE);
         arrival = dateConvert(arrival);
 
-        String departure = parameters.get("departure_date");
+        String departure = parameters.get(Constant.DEPARTURE_DATE);
         departure = dateConvert(departure);
 
-        String currencyCode = parameters.get("currencyCode");
+        String currencyCode = parameters.get(Constant.CURRENCY_CODE);
         if (currencyCode == null) {
             currencyCode = Constant.CURRNCY_DEFAULT;
         }

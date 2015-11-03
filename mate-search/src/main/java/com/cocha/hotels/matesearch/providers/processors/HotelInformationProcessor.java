@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 
 import com.cocha.hotels.matesearch.providers.services.HotelInformation;
 import com.cocha.hotels.matesearch.util.Constant;
-import com.cocha.hotels.model.matesearch.canonical.HotelList;
+import com.cocha.hotels.model.matesearch.canonical.response.HotelList;
 
 @Component
 public class HotelInformationProcessor implements Processor {

@@ -1,8 +1,8 @@
 package com.cocha.hotels.matesearch.providers.processors;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import org.apache.camel.Exchange;
 import org.apache.camel.Message;
@@ -13,19 +13,24 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.cocha.hotels.matesearch.repositories.HotelMappingRepository;
+import com.cocha.hotels.matesearch.repositories.RegionHotelMappingRepository;
 import com.cocha.hotels.matesearch.util.Constant;
 import com.cocha.hotels.matesearch.util.Constant.CodeSupplier;
 import com.cocha.hotels.matesearch.util.MessageUtils;
 import com.cocha.hotels.model.content.mapping.HotelMapping;
+import com.cocha.hotels.model.content.mapping.RegionHotelMapping;
 import com.cocha.hotels.model.matesearch.respose.supplier.IdMapping;
 
 @Component
-public class MateHeaderDataProcessor implements Processor {
+public class HotelListHeaderDataProcessor implements Processor {
 
-    private static final Logger log = Logger.getLogger(MateHeaderDataProcessor.class);
+    private static final Logger log = Logger.getLogger(HotelListHeaderDataProcessor.class);
 
     @Autowired
     private HotelMappingRepository hotelMappingRepository;
+
+    @Autowired
+    private RegionHotelMappingRepository regionHotelMappingRepository;
 
     /*
      * (non-Javadoc)
@@ -43,15 +48,22 @@ public class MateHeaderDataProcessor implements Processor {
 
             Map<String, Object> parameters = MessageUtils.parseQueryParams((String) headers.get("CamelHttpQuery"));
 
-            List<String> ids = Arrays.asList(((String) parameters.get(Constant.ID_HOTEL)).split("\\s*,\\s*"));
+            String regionId = (String) parameters.get(Constant.REGION_ID);
 
-            List<HotelMapping> providers = hotelMappingRepository.findByHotelIds(ids);
+            List<RegionHotelMapping> regionHotelMappings = regionHotelMappingRepository.findByRegionId(regionId);
 
-            String currencyCode = (String) parameters.get("currencyCode");
+            List<String> hotelIds = regionHotelMappings.stream().map(RegionHotelMapping::getHotelId)
+                    .collect(Collectors.toList());
+
+            parameters.put(Constant.ID_HOTEL, String.join(",", hotelIds));
+
+            List<HotelMapping> providers = hotelMappingRepository.findByHotelIds(hotelIds);
+
+            String currencyCode = (String) parameters.get(Constant.CURRENCY_CODE);
 
             if (currencyCode == null) {
                 currencyCode = Constant.CURRNCY_DEFAULT;
-                parameters.put("currencyCode", Constant.CURRNCY_DEFAULT);
+                parameters.put(Constant.CURRENCY_CODE, Constant.CURRNCY_DEFAULT);
             }
 
             parameters.put("Content-Type", (String) headers.get("Content-Type"));

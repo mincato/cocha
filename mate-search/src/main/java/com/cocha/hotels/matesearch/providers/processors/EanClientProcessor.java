@@ -13,6 +13,8 @@ import org.apache.cxf.message.MessageContentsList;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import com.cocha.hotels.matesearch.util.Constant;
+
 @Component
 public class EanClientProcessor implements Processor {
 
@@ -60,11 +62,11 @@ public class EanClientProcessor implements Processor {
         inMessage.setHeader(CxfConstants.OPERATION_NAME, AVAILABILITY_EAN_SERVICE);
         inMessage.setHeader(CxfConstants.CAMEL_CXF_RS_USING_HTTP_API, Boolean.FALSE);
 
-        String arrival = parameters.get("arrival_date");
+        String arrival = parameters.get(Constant.ARRIVAL_DATE);
         arrival = arrival.replace("-", "/");
-        String departure = parameters.get("departure_date");
+        String departure = parameters.get(Constant.DEPARTURE_DATE);
         departure = departure.replace("-", "/");
-        String currencyCode = parameters.get("currencyCode");
+        String currencyCode = parameters.get(Constant.CURRENCY_CODE);
         if (currencyCode == null) {
             currencyCode = currency;
         }
