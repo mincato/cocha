@@ -9,9 +9,12 @@ import org.apache.camel.ExchangePattern;
 import org.apache.camel.Message;
 import org.apache.camel.Processor;
 import org.apache.camel.component.cxf.common.message.CxfConstants;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.cxf.message.MessageContentsList;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+
+import com.cocha.hotels.matesearch.util.Constant;
 
 @Component
 public class EanClientProcessor implements Processor {
@@ -52,6 +55,12 @@ public class EanClientProcessor implements Processor {
 
         // String queryStrings = inMessage.getBody(String.class);
         Map<String, String> parameters = (Map<String, String>) inMessage.getBody(Map.class);
+
+        String idHotelEan = parameters.get("idHotelEan");
+        if (StringUtils.isBlank(idHotelEan)) {
+            throw new Exception("Missing EAN hotel ID");
+        }
+
         // Map<String, String> parameters =
         // MessageUtils.parseQueryParams(queryStrings);
         exchange.setPattern(ExchangePattern.InOut);
@@ -60,18 +69,17 @@ public class EanClientProcessor implements Processor {
         inMessage.setHeader(CxfConstants.OPERATION_NAME, AVAILABILITY_EAN_SERVICE);
         inMessage.setHeader(CxfConstants.CAMEL_CXF_RS_USING_HTTP_API, Boolean.FALSE);
 
-        String arrival = parameters.get("arrival_date");
+        String arrival = parameters.get(Constant.ARRIVAL_DATE);
         arrival = arrival.replace("-", "/");
-        String departure = parameters.get("departure_date");
+        String departure = parameters.get(Constant.DEPARTURE_DATE);
         departure = departure.replace("-", "/");
-        String currencyCode = parameters.get("currencyCode");
+        String currencyCode = parameters.get(Constant.CURRENCY_CODE);
         if (currencyCode == null) {
             currencyCode = currency;
         }
 
-        String message = "<HotelListRequest><hotelIdList>" + parameters.get("idHotelEan")
-                + "</hotelIdList><arrivalDate>" + arrival + "</arrivalDate><departureDate>" + departure
-                + "</departureDate></HotelListRequest>";
+        String message = "<HotelListRequest><hotelIdList>" + idHotelEan + "</hotelIdList><arrivalDate>" + arrival
+                + "</arrivalDate><departureDate>" + departure + "</departureDate></HotelListRequest>";
 
         MessageContentsList req = new MessageContentsList();
         req.add(cid);

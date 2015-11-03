@@ -1,6 +1,5 @@
 package com.cocha.hotels.matesearch.providers.aggregators;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -9,6 +8,7 @@ import java.util.Optional;
 import org.apache.camel.Exchange;
 import org.apache.camel.processor.aggregate.AggregationStrategy;
 import org.apache.commons.lang3.ObjectUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -17,12 +17,12 @@ import com.cocha.hotels.matesearch.repositories.HotelMappingRepository;
 import com.cocha.hotels.matesearch.util.Constant;
 import com.cocha.hotels.matesearch.util.Constant.CodeSupplier;
 import com.cocha.hotels.model.matesearch.canonical.ErrorSupplier;
-import com.cocha.hotels.model.matesearch.canonical.Hotel;
-import com.cocha.hotels.model.matesearch.canonical.HotelList;
 import com.cocha.hotels.model.matesearch.canonical.RateForSupplier;
 import com.cocha.hotels.model.matesearch.canonical.RateInfo;
 import com.cocha.hotels.model.matesearch.canonical.RateInfoForSupplier;
 import com.cocha.hotels.model.matesearch.canonical.Status;
+import com.cocha.hotels.model.matesearch.canonical.response.HotelList;
+import com.cocha.hotels.model.matesearch.canonical.response.HotelSummary;
 import com.cocha.hotels.model.matesearch.respose.supplier.IdMapping;
 import com.cocha.hotels.model.matesearch.respose.supplier.ResposeSuppliers;
 
@@ -46,11 +46,6 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
             if (newExchange.getIn().getBody(HotelList.class) instanceof HotelList) {
 
                 hotels = newExchange.getIn().getBody(HotelList.class);
-                Status status = new Status();
-                status.setCause("successes");
-                status.setCode("200");
-                hotels.setStatus(status);
-
                 return newExchange;
 
             } else if (newExchange.getIn().getBody(ResposeSuppliers.class) instanceof ResposeSuppliers) {
@@ -79,13 +74,13 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 
         } catch (Exception e) {
             log.info("Error al reunir las respuestas de los supplier");
-            HotelList hotelList = new HotelList();
-            Status status = new Status("500", "Error Interno de Servidor");
-            hotelList.setStatus(status);
-            hotelList.setHotels(new ArrayList<Hotel>());
-
-            oldExchange.getIn().setBody(hotelList);
-            return oldExchange;
+            if (oldExchange == null) {
+                newExchange.setException(e);
+                return newExchange;
+            } else {
+                oldExchange.setException(e);
+                return oldExchange;
+            }
         }
 
     }
@@ -98,10 +93,10 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 
         for (String id : ids) {
 
-            Optional<Hotel> hotelOptinal = hotels.getHotels().stream()
-                    .filter((Hotel hotel) -> hotel.getId().equals(id)).findFirst();
+            Optional<HotelSummary> hotelOptinal = hotels.getHotelSummary().stream()
+                    .filter((HotelSummary hotel) -> hotel.getHotelId().equals(id)).findFirst();
 
-            IdMapping idMapping = (IdMapping) parameters.get(hotelOptinal.get().getId());
+            IdMapping idMapping = (IdMapping) parameters.get(hotelOptinal.get().getHotelId());
 
             Optional<RateInfoForSupplier> rateForSupplierOptional = null;
 
@@ -139,7 +134,7 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 
             } else {
                 Status status = new Status();
-                if (idSupplier == null) {
+                if (StringUtils.isBlank(idSupplier)) {
                     idSupplier = "0000000";
                     status.setCause("El hotel no esta mapeado en Cocha");
                     status.setCode("999");
@@ -167,10 +162,10 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 
         for (String id : ids) {
 
-            Optional<Hotel> hotelOptinal = hotels.getHotels().stream()
-                    .filter((Hotel hotel) -> hotel.getId().equals(id)).findFirst();
+            Optional<HotelSummary> hotelOptinal = hotels.getHotelSummary().stream()
+                    .filter((HotelSummary hotel) -> hotel.getHotelId().equals(id)).findFirst();
 
-            IdMapping idMapping = (IdMapping) parameters.get(hotelOptinal.get().getId());
+            IdMapping idMapping = (IdMapping) parameters.get(hotelOptinal.get().getHotelId());
 
             switch (errorSupplier.getCodeSupplier()) {
 
@@ -200,7 +195,7 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
         }
     }
 
-    private void addRate(Hotel hotel, RateInfoForSupplier rateInfoForSupplier) {
+    private void addRate(HotelSummary hotel, RateInfoForSupplier rateInfoForSupplier) {
 
         RateInfo rateInfo = hotel.getRateInfo();
         rateInfo.updateRatesHightandLow(rateInfoForSupplier.getHigtRate(), rateInfoForSupplier.getLowRate());
@@ -214,7 +209,7 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 
     }
 
-    private void addError(Hotel hotel, ErrorSupplier errorSupplier, Status statusError) {
+    private void addError(HotelSummary hotel, ErrorSupplier errorSupplier, Status statusError) {
 
         RateInfo rateInfo = hotel.getRateInfo();
         RateForSupplier rateForSupplier = new RateForSupplier();

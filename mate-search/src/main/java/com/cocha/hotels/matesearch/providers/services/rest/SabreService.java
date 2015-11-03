@@ -27,7 +27,7 @@ public class SabreService {
     @Produces(MediaType.APPLICATION_XML)
     @Path("/send")
     public Object send(@QueryParam("idsHotelsSabre") String idsHotelsSabre,
-            @QueryParam("arrival_date") String arrival_date, @QueryParam("departure_date") String departure_date,
+            @QueryParam("arrivalDate") String arrival_date, @QueryParam("departureDate") String departure_date,
             @QueryParam("token") String token, @QueryParam("currencyCode") String currencyCode) {
         return null;
     }

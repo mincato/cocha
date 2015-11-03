@@ -1,15 +1,13 @@
 package com.cocha.hotels.matesearch.providers.processors;
 
-import java.util.ArrayList;
-
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 
-import com.cocha.hotels.model.matesearch.canonical.Hotel;
-import com.cocha.hotels.model.matesearch.canonical.HotelList;
 import com.cocha.hotels.model.matesearch.canonical.Status;
+import com.cocha.hotels.model.matesearch.canonical.response.HotelList;
+import com.cocha.hotels.model.matesearch.canonical.response.HotelListResponse;
 
 @Component
 public class ErrorApiProcessor implements Processor {
@@ -25,12 +23,13 @@ public class ErrorApiProcessor implements Processor {
             logg.info("Ocurrio un error no tratados");
         }
 
-        HotelList hotelList = new HotelList();
+        HotelListResponse hotelListResponse = new HotelListResponse();
         Status status = new Status("500", "Error");
-        hotelList.setStatus(status);
-        hotelList.setHotels(new ArrayList<Hotel>());
+        hotelListResponse.setStatus(status);
+        HotelList hotelList = new HotelList();
+        hotelListResponse.setHotelList(hotelList);
 
-        exchange.getIn().setBody(hotelList);
+        exchange.getIn().setBody(hotelListResponse);
 
     }
 
