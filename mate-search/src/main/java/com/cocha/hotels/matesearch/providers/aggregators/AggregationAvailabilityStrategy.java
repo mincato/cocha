@@ -8,7 +8,6 @@ import java.util.Optional;
 import org.apache.camel.Exchange;
 import org.apache.camel.processor.aggregate.AggregationStrategy;
 import org.apache.commons.lang3.ObjectUtils;
-import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -27,8 +26,6 @@ import com.cocha.hotels.model.matesearch.respose.supplier.ResposeSuppliers;
 
 @Component
 public class AggregationAvailabilityStrategy implements AggregationStrategy {
-
-	 private static final Logger log = Logger.getLogger(AggregationAvailabilityStrategy.class);
 	
     @Autowired
     private HotelMappingRepository hotelMappingRepository;
@@ -39,48 +36,38 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 		HotelList hotels;
     	ResposeSuppliers resposeSuppliers;
     	ErrorSupplier errorSupplier;
-    	
-    	try {
     		
-        	if (newExchange.getIn().getBody(HotelList.class) instanceof HotelList) {
-		   		
-        		hotels = newExchange.getIn().getBody(HotelList.class);
-        		Status status = new Status();
-        		status.setCause("successes");
-        		status.setCode("200");
-        		hotels.setStatus(status);
-        		
-        		return newExchange;
-        		
-        	} else if (newExchange.getIn().getBody(ResposeSuppliers.class) instanceof ResposeSuppliers) {
-        		
-        		hotels = oldExchange.getIn().getBody(HotelList.class);
-        		
-        		Map<String, Object> parameters = oldExchange.getIn().getHeaders(); 
-        		
-        		resposeSuppliers = newExchange.getIn().getBody(ResposeSuppliers.class);
-        		
-        		this.addRates(hotels,resposeSuppliers,parameters);
-        		
-        		oldExchange.getIn().setBody(hotels);
-        		
-        	} else if (newExchange.getIn().getBody(ErrorSupplier.class) instanceof ErrorSupplier) {
-        		
-        		hotels = oldExchange.getIn().getBody(HotelList.class);
-        		errorSupplier = newExchange.getIn().getBody(ErrorSupplier.class);
-        		Map<String, Object> parameters = oldExchange.getIn().getHeaders(); 
-        		
-        		this.addErrors(hotels, errorSupplier, parameters);
-        		
-        	} 
-        	
-        	return oldExchange;
-			
-		} catch (Exception e) {
-			log.info("Error al reunir las respuestas de los supplier");
-			oldExchange.setException(e);
-			return oldExchange;
-		}
+    	if (newExchange.getIn().getBody(HotelList.class) instanceof HotelList) {
+	   		
+    		hotels = newExchange.getIn().getBody(HotelList.class);
+    		Status status = new Status();
+    		status.setCause("successes");
+    		status.setCode("200");
+    		hotels.setStatus(status);
+    		
+    		return newExchange;
+    		
+    	} else if (newExchange.getIn().getBody(ResposeSuppliers.class) instanceof ResposeSuppliers) {
+    		
+    		hotels = oldExchange.getIn().getBody(HotelList.class);
+    		
+    		Map<String, Object> parameters = oldExchange.getIn().getHeaders(); 
+    		
+    		resposeSuppliers = newExchange.getIn().getBody(ResposeSuppliers.class);
+    		
+    		this.addRates(hotels,resposeSuppliers,parameters);
+    		
+    	} else if (newExchange.getIn().getBody(ErrorSupplier.class) instanceof ErrorSupplier) {
+    		
+    		hotels = oldExchange.getIn().getBody(HotelList.class);
+    		errorSupplier = newExchange.getIn().getBody(ErrorSupplier.class);
+    		Map<String, Object> parameters = oldExchange.getIn().getHeaders(); 
+    		
+    		this.addErrors(hotels, errorSupplier, parameters);
+    		
+    	} 
+    	
+    	return oldExchange;
 
     }
     
