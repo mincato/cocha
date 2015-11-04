@@ -2,15 +2,14 @@ package com.cocha.hotels.model.content.mapping;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
 
+@IdClass(RegionHotelMappingKey.class)
 @Entity(name = "RegionHotelMapping")
 public class RegionHotelMapping {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Id
@@ -27,6 +26,14 @@ public class RegionHotelMapping {
     private boolean active;
 
     public RegionHotelMapping() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getRegionId() {
