@@ -38,15 +38,15 @@ public class SabreClientRoute extends RouteBuilder {
                 .end();
 
         from("direct:sendSabreAvailability").filter(new Predicate() {
+
             @Override
             public boolean matches(Exchange exchange) {
-            	@SuppressWarnings("unchecked")
-				Map<String, String> parameters = (Map<String, String>) exchange.getIn().getBody(Map.class);
-            	String idsHotelsSabre = parameters.get("idsHotelsSabre");
+                @SuppressWarnings("unchecked")
+                Map<String, String> parameters = (Map<String, String>) exchange.getIn().getBody(Map.class);
+                String idsHotelsSabre = parameters.get("idsHotelsSabre");
                 return StringUtils.isNotBlank(idsHotelsSabre);
             }
-        }).process(sabreClientProcessor).wireTap("direct:logInfo")
-                .to("cxf:bean:sabreAvailability").log("Testing message").bean(sabreClientResponseProcessor)
-                .to("direct:transformerResposeSabre");
+        }).process(sabreClientProcessor).wireTap("direct:logInfo").to("cxf:bean:sabreAvailability")
+                .log("Testing message").bean(sabreClientResponseProcessor).to("direct:transformerResposeSabre");
     }
 }
