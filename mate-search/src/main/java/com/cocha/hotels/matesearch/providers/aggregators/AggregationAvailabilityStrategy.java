@@ -36,15 +36,16 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
     @Override
     public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {
 
-        HotelList hotels;
-        ResposeSuppliers resposeSuppliers;
-        ErrorSupplier errorSupplier;
-        
-        if(oldExchange != null && oldExchange.getException() != null) {
-        	return oldExchange;
-        }
+    	try {
 
-        try {
+    		HotelList hotels;
+    		ResposeSuppliers resposeSuppliers;
+    		ErrorSupplier errorSupplier;
+        
+	        if(oldExchange != null && oldExchange.getException() != null) {
+	        	return oldExchange;
+	        }
+
 
             if (newExchange.getIn().getBody(HotelList.class) instanceof HotelList) {
 

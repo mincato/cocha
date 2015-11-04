@@ -48,7 +48,8 @@ public class MateRoute extends RouteBuilder {
                 .multicast()
                 .aggregationStrategy(aggregationAvailabilityStrategy)
                 .parallelProcessing()
-                .to("direct:getHotelInformation", "direct:sendSabreAvailability").end().bean(hotelListResponseBuilder).choice().when(isJson)
+                .to("direct:getHotelInformation", "direct:sendEanAvailability", "direct:sendBookingAvailability",
+                        "direct:sendSabreAvailability").end().bean(hotelListResponseBuilder).choice().when(isJson)
                 .to("direct:JsonRespose").when(isXml).to("direct:XmlRespose");
 
         from("direct:JsonRespose").marshal().json(JsonLibrary.Jackson).end();
