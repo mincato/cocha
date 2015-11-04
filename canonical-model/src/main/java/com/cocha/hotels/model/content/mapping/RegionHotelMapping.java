@@ -13,8 +13,10 @@ public class RegionHotelMapping {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @Id
     private String regionId;
 
+    @Id
     private String hotelId;
 
     private String supplierHotelId;
