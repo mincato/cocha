@@ -20,7 +20,7 @@ public class ErrorApiProcessor implements Processor {
         logg.info(exchange.getException());
 
         HotelListResponse hotelListResponse = new HotelListResponse();
-        Status status = new Status("500", "Error interno");
+        Status status = new Status("500", "Error interno del Servidor");
         hotelListResponse.setStatus(status);
         HotelList hotelList = new HotelList();
         hotelListResponse.setHotelList(hotelList);

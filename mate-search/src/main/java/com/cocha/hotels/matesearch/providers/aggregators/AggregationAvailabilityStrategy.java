@@ -8,7 +8,6 @@ import java.util.Optional;
 import org.apache.camel.Exchange;
 import org.apache.camel.processor.aggregate.AggregationStrategy;
 import org.apache.commons.lang3.ObjectUtils;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -135,21 +134,6 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
             if (rateForSupplierOptional.isPresent() && this.isAvailability(rateForSupplierOptional.get())) {
 
                 this.addRate(hotelOptinal.get(), rateForSupplierOptional.get());
-
-            } else {
-                Status status = new Status();
-                if (StringUtils.isBlank(idSupplier)) {
-                    idSupplier = "0000000";
-                    status.setCause("El hotel no esta mapeado en Cocha");
-                    status.setCode("999");
-                } else {
-                    status.setCause("El hotel no tiene disponibilidad");
-                    status.setCode("999");
-                }
-                ErrorSupplier errorSupplier = new ErrorSupplier();
-                errorSupplier.setCodeSupplier(resposeSuppliers.getCodeSupplier());
-                errorSupplier.setIdSupplier(idSupplier);
-                this.addError(hotelOptinal.get(), errorSupplier, status);
 
             }
         }

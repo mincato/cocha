@@ -22,7 +22,7 @@ public class BookingTransformerRoute extends RouteBuilder {
     @Override
     public void configure() throws Exception {
 
-        onException(RuntimeException.class).handled(true)
+        onException(Exception.class).handled(true)
                 .setHeader(Constant.SUPPLIER, simple(CodeSupplier.BOOKING_SUPPLIER_CODE))
                 .process(errorSupplierProcessor).end();
 
