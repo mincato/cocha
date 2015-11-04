@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import com.cocha.hotels.model.matesearch.canonical.Status;
 
-@XmlRootElement
+@XmlRootElement(name = "HotelListResponse")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class HotelListResponse {
 

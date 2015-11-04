@@ -53,7 +53,9 @@ public class HotelRoute extends RouteBuilder {
                 .aggregationStrategy(aggregationAvailabilityStrategy)
                 .parallelProcessing()
                 .to("direct:getHotelInformation", "direct:sendEanAvailability", "direct:sendBookingAvailability",
-                        "direct:sendSabreAvailability").end().bean(hotelListResponseBuilder).choice().when(isJson)
+                        "direct:sendSabreAvailability")
+                .end()
+                .bean(hotelListResponseBuilder).choice().when(isJson)
                 .to("direct:JsonResponse").when(isXml).to("direct:XmlResponse");
 
         from("direct:JsonResponse").marshal().json(JsonLibrary.Jackson).end();

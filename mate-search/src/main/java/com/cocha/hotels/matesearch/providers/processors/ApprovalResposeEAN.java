@@ -12,7 +12,7 @@ public class ApprovalResposeEAN {
     public static final String KEY_OPEN = "{";
     public static final String KEY_CLOSE = "}";
 
-    public String approvalRespose(String stringRespose) {
+    public String approvalRespose(String stringRespose) throws Exception {
 
         stringRespose = stringRespose.replaceAll(" ", "");
 

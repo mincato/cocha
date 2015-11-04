@@ -27,7 +27,7 @@ public class EanTransformaerRoute extends RouteBuilder {
     @Override
     public void configure() throws Exception {
 
-        onException(RuntimeException.class).handled(true)
+        onException(Exception.class).handled(true)
                 .setHeader(Constant.SUPPLIER, simple(CodeSupplier.EAN_SUPPLIER_CODE)).process(errorSupplierProcessor)
                 .end();
 

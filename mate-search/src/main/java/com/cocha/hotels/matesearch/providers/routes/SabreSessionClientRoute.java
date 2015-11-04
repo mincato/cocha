@@ -28,7 +28,7 @@ public class SabreSessionClientRoute extends RouteBuilder {
     @Override
     public void configure() throws Exception {
 
-        onException(RuntimeException.class).handled(true)
+        onException(Exception.class).handled(true)
                 .setHeader(Constant.SUPPLIER, simple(CodeSupplier.SABRE_SUPPLIER_CODE)).process(errorSupplierProcessor)
                 .end();
 

@@ -23,7 +23,7 @@ public class SupplierHotelProcessor implements Processor {
 
         if (rateInfoSupplier != null && rateInfoSupplier.getRateForSupplier() != null
                 && !rateInfoSupplier.getRateForSupplier().isEmpty()) {
-            setCodeSupplier(rateInfoSupplier, (String) header.get("supplier"));
+            this.setCodeSupplier(rateInfoSupplier, (String) header.get("supplier"));
         }
 
         rateInfoSupplier.setCodeSupplier((String) header.get("supplier"));
