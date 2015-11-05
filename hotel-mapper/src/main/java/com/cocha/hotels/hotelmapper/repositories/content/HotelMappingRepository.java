@@ -1,5 +1,7 @@
 package com.cocha.hotels.hotelmapper.repositories.content;
 
+import java.util.List;
+
 import org.springframework.data.repository.CrudRepository;
 
 import com.cocha.hotels.model.content.mapping.HotelMapping;
@@ -12,5 +14,7 @@ public interface HotelMappingRepository extends CrudRepository<HotelMapping, Lon
             Integer confidence);
 
     public HotelMapping findByHotelIdAndSupplierCode(String hotelId, String supplierCode);
+
+    public List<HotelMapping> findByCountryCodeAndUnmapped(String countryCode, boolean unmapped);
 
 }

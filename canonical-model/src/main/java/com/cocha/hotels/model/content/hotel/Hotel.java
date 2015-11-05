@@ -18,6 +18,7 @@ public class Hotel implements Serializable {
 
     public static final String BOOKING_SUPPLIER_CODE = "BKG";
     public static final String EAN_SUPPLIER_CODE = "EAN";
+    public static final String SABRE_SUPPLIER_CODE = "SAB";
 
     private static final long serialVersionUID = 3131863372470063252L;
 
