@@ -3,7 +3,7 @@
 		 	<md-content layout-padding layout="row" layout-sm="column">
 				<div layout layout-sm="column">
 					<md-input-container flex>
-						<label>ID Hotel</label>
+						<label>Region</label>
 						<input ng-model="hotel.ids">
 					</md-input-container>
 				</div>
@@ -20,10 +20,10 @@
 					</md-input-container>
 				</div>
 				</md-content>
-				<section layout="row" layout-sm="column" layout-align="right center" layout-wrap>
+				<!--section layout="row" layout-sm="column" layout-align="right center" layout-wrap>
 					<md-button class="md-raised" ng-click="createToken()">Token</md-button>
 					<label>{{hotel.token}}</label>
-				</section>
+				</section-->
 				<md-progress-circular md-mode="indeterminate" ng-show="isLoadingToken"></md-progress-circular>
 				<section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
 					<md-button class="md-raised" ng-click="search(hotel)">Search</md-button>
@@ -39,23 +39,27 @@
 		<md-subheader class="md-no-sticky">Result {{hotel.numeroResultado}}</md-subheader>
 		<md-progress-circular md-mode="indeterminate" ng-show="isLoadingSearch"></md-progress-circular>
 		<md-list>
-			<md-list-item ng-repeat="hotel in hotels">
+			<md-list-item ng-repeat="hotel in hotels.HotelSummary">
 					<div class="md-list-item-text" layout="column">
 					<h3>{{hotel.name}}</h3>
-					Dirección: {{hotel.address}}</br>
-					País: {{hotel.country}}</br>
+					Dirección: {{hotel.address1}}</br>
+					País: {{hotel.countryCode}}</br>
 					Mayor precio total: {{hotel.rateInfo.hightRateBetweenSupplier}}</br>
 					Menor precio total: {{hotel.rateInfo.lowRateBetweenSupplier}}</br>
 					<md-list>
 						<md-list-item ng-repeat="rate in hotel.rateInfo.rateForSupplier">
 								<div class="md-list-item-text" layout="column">
 									<div ng-show='rate.status.code == 200'>
-										<b>Proovedor: {{rate.availability.codeSupplier}}</b></br>
-										Codigo Moneda: {{rate.availability.rateCurrencyCode}}</br>
-										Mayor Precio: {{rate.availability.higtRate}}</br>
-										Menor Precio: {{rate.availability.lowRate}}
+										<b>Proovedor: {{rate.availability.rateInfoForSupplier.codeSupplier}}</b></br>
+										Codigo Moneda: {{rate.availability.rateInfoForSupplier.rateCurrencyCode}}</br>
+										Mayor Precio: {{rate.availability.rateInfoForSupplier.higtRate}}</br>
+										Menor Precio: {{rate.availability.rateInfoForSupplier.lowRate}}
 									</div>
-									<div ng-show='rate.status.code == 500'>
+									<div ng-show='rate.rateForSupplier.status.code == 500'>
+										<b>Proovedor: {{rate.availability.codeSupplier}}</b></br>
+										{{rate.status.cause}}
+									</div>
+									<div ng-show='rate.rateForSupplier.status.code == 999'>
 										<b>Proovedor: {{rate.availability.codeSupplier}}</b></br>
 										{{rate.status.cause}}
 									</div>

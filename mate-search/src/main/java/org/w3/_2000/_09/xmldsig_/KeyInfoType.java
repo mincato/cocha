@@ -86,26 +86,21 @@ public class KeyInfoType {
      * 
      * 
      * <p>
-     * Objects of the following type(s) are allowed in the list
-<<<<<<< HEAD
-     * {@link Element }
-     * {@link JAXBElement }{@code <}{@link KeyValueType }{@code >}
-     * {@link Object }
-     * {@link JAXBElement }{@code <}{@link SPKIDataType }{@code >}
-=======
-     * {@link JAXBElement }{@code <}{@link X509DataType }{@code >} {@link Element }
-     * {@link Object } {@link JAXBElement }{@code <}{@link KeyValueType }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >} {@link JAXBElement }
-     * {@code <}{@link RetrievalMethodType }{@code >} {@link JAXBElement }{@code <}
-     * {@link PGPDataType }{@code >} {@link JAXBElement }{@code <}{@link String }
-     * {@code >} {@link JAXBElement }{@code <}{@link SPKIDataType }{@code >}
->>>>>>> development
-     * {@link String }
+     * Objects of the following type(s) are allowed in the list <<<<<<< HEAD
+     * {@link Element } {@link JAXBElement }{@code <}{@link KeyValueType }{@code >}
+     * {@link Object } {@link JAXBElement }{@code <}{@link SPKIDataType }{@code >}
+     * ======= {@link JAXBElement }{@code <}{@link X509DataType }{@code >}
+     * {@link Element } {@link Object } {@link JAXBElement }{@code <}
+     * {@link KeyValueType }{@code >} {@link JAXBElement }{@code <}{@link String }
+     * {@code >} {@link JAXBElement } {@code <}{@link RetrievalMethodType }
+     * {@code >} {@link JAXBElement }{@code <} {@link PGPDataType }{@code >}
+     * {@link JAXBElement }{@code <}{@link String } {@code >} {@link JAXBElement }
+     * {@code <}{@link SPKIDataType }{@code >} >>>>>>> development {@link String }
      * {@link JAXBElement }{@code <}{@link PGPDataType }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link RetrievalMethodType }{@code >}
-     * {@link JAXBElement }{@code <}{@link X509DataType }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >} {@link JAXBElement }
+     * {@code <}{@link String }{@code >} {@link JAXBElement }{@code <}
+     * {@link RetrievalMethodType }{@code >} {@link JAXBElement }{@code <}
+     * {@link X509DataType }{@code >}
      * 
      * 
      */

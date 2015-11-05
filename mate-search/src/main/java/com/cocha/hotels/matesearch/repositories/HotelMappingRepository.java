@@ -12,7 +12,7 @@ public interface HotelMappingRepository extends JpaRepository<HotelMapping, Stri
 
     public List<HotelMapping> findByHotelId(String hotelId);
 
-    @Query("select h from HotelMapping h where h.hotelId in (:hotelIds)")
+    @Query("select h from HotelMapping h where h.hotelId in (:hotelIds) and h.active = true and h.confidence > 64")
     public List<HotelMapping> findByHotelIds(@Param("hotelIds") List<String> hotelIds);
 
 }

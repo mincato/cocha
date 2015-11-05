@@ -18,15 +18,18 @@ public class EanRoute extends RouteBuilder {
 
     @Autowired
     private HeaderDataProcessor headerDataProcessor;
-    
+
     @Autowired
     private ErrorSupplierProcessor errorSupplierProcessor;
 
     @Override
     public void configure() throws Exception {
-    	
-    	onException(RuntimeException.class).handled(true).setHeader(Constant.SUPPLIER, simple(CodeSupplier.EAN_SUPPLIER_CODE)).process(errorSupplierProcessor).end();
-    	
-        from("cxfrs:bean:jaxRsServer").process(headerDataProcessor).to("direct:sendEanAvailability").marshal().json(JsonLibrary.Jackson);
+
+        onException(RuntimeException.class).handled(true)
+                .setHeader(Constant.SUPPLIER, simple(CodeSupplier.EAN_SUPPLIER_CODE)).process(errorSupplierProcessor)
+                .end();
+
+        from("cxfrs:bean:jaxRsServer").process(headerDataProcessor).to("direct:sendEanAvailability").marshal()
+                .json(JsonLibrary.Jackson);
     }
 }

@@ -20,9 +20,15 @@ public class ProximityFilterService {
     private Float maxProximity = 1500f;
 
     public List<Hotel> filter(Hotel hotel, List<Hotel> hotelsToFilter) {
-        Stream<Hotel> filtered = hotelsToFilter.stream().filter((hotelToCompare) -> {
-            return maxProximity >= distBetween(hotel, hotelToCompare);
-        });
+        Stream<Hotel> filtered = hotelsToFilter.stream().filter(
+                (hotelToCompare) -> {
+                    if (hotel.getLatitude() != null && hotel.getLongitude() != null
+                            && hotelToCompare.getLatitude() != null && hotelToCompare.getLongitude() != null) {
+                        return maxProximity >= distBetween(hotel, hotelToCompare);
+                    } else {
+                        return false;
+                    }
+                });
 
         return filtered.collect(Collectors.toList());
     }
@@ -44,7 +50,7 @@ public class ProximityFilterService {
         Double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
         Float dist = (float) (EARTH_RADIUS * c);
 
-        logger.info(String.format("[%f %f] [%f %f] -> %f", latReference, lngReference, latDestination, lngDestination,
+        logger.debug(String.format("[%f %f] [%f %f] -> %f", latReference, lngReference, latDestination, lngDestination,
                 dist));
         return dist;
     }

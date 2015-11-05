@@ -4,6 +4,7 @@ import java.math.BigInteger;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -11,6 +12,7 @@ import java.util.Map;
 import org.apache.camel.Exchange;
 import org.apache.camel.Message;
 import org.apache.camel.Processor;
+import org.apache.commons.lang3.StringUtils;
 import org.ebxml.namespaces.messageheader.From;
 import org.ebxml.namespaces.messageheader.MessageData;
 import org.ebxml.namespaces.messageheader.MessageHeader;
@@ -21,6 +23,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.xmlsoap.schemas.ws._2002._12.secext.Security;
 
+import com.cocha.hotels.matesearch.util.Constant;
 import com.sabre.webservices.sabrexml._2011._10.OTAHotelAvailRQ;
 import com.sabre.webservices.sabrexml._2011._10.OTAHotelAvailRQ.AvailRequestSegment;
 import com.sabre.webservices.sabrexml._2011._10.OTAHotelAvailRQ.AvailRequestSegment.GuestCounts;
@@ -67,6 +70,9 @@ public class SabreClientProcessor implements Processor {
     @Value("${mate.provider.sabre.pcc}")
     private String pcc;
 
+    @Value("${mate.provider.sabre.contract.negotiated.rate.code}")
+    private String contractNegotiatedRateCode;
+
     @Override
     @SuppressWarnings("unchecked")
     public void process(Exchange exchange) throws Exception {
@@ -76,15 +82,23 @@ public class SabreClientProcessor implements Processor {
         Security security = createSecurityHeader(parameters.get("token"));
         String idsHotels = parameters.get("idsHotelsSabre");
 
-        String arrival = parameters.get("arrival_date");
+        if (StringUtils.isBlank(idsHotels)) {
+            throw new Exception("Missing SABRE hotel ID");
+        }
+
+        String arrival = parameters.get(Constant.ARRIVAL_DATE);
         arrival = dateConvert(arrival);
 
-        String departure = parameters.get("departure_date");
+        String departure = parameters.get(Constant.DEPARTURE_DATE);
         departure = dateConvert(departure);
 
-        String currencyCode = parameters.get("currencyCode");
-        
-		OTAHotelAvailRQ hotelAvail = createHotelAvailRQ(idsHotels, arrival, departure, currencyCode);
+        String currencyCode = parameters.get(Constant.CURRENCY_CODE);
+        if (currencyCode == null) {
+            currencyCode = Constant.CURRNCY_DEFAULT;
+        }
+
+        OTAHotelAvailRQ hotelAvail = createHotelAvailRQ(idsHotels, arrival, departure, currencyCode,
+                contractNegotiatedRateCode);
         List<Object> params = new ArrayList<>();
         params.add(messageHeader);
         params.add(security);
@@ -93,14 +107,16 @@ public class SabreClientProcessor implements Processor {
     }
 
     /**
-     * @param currencyCode 
+     * @param currencyCode
+     * @param ratePlanCandidates
      * @return
      */
-    private OTAHotelAvailRQ createHotelAvailRQ(final String idsHotels, final String arrival, final String departure, String currencyCode) {
+    private OTAHotelAvailRQ createHotelAvailRQ(final String idsHotels, final String arrival, final String departure,
+            String currencyCode, String contractNegotiatedRateCode) {
         OTAHotelAvailRQ hotelAvailRQ = new OTAHotelAvailRQ();
         hotelAvailRQ.setVersion("2.2.0");
         hotelAvailRQ.setReturnHostCommand(true);
-        
+
         HotelSearchCriteria searchCriteria = new HotelSearchCriteria();
         Criterion criterion = new Criterion();
         String[] ids = idsHotels.split(",");
@@ -116,6 +132,8 @@ public class SabreClientProcessor implements Processor {
         time.setStart(arrival);
         time.setEnd(departure);
 
+        List<String> rateCodeList = Arrays.asList(contractNegotiatedRateCode.split("\\s*,\\s*"));
+
         AvailRequestSegment requestSegment = new AvailRequestSegment();
         GuestCounts guestCounts = new GuestCounts();
         guestCounts.setCount(new BigInteger("1"));
@@ -126,6 +144,8 @@ public class SabreClientProcessor implements Processor {
         rateRage.setCurrencyCode(currencyCode);
         RatePlanCandidates ratePlanCandidates = new RatePlanCandidates();
         ratePlanCandidates.setRateRange(rateRage);
+        List<String> contractNegotiatedRateCodeList = ratePlanCandidates.getContractNegotiatedRateCode();
+        contractNegotiatedRateCodeList.addAll(rateCodeList);
         requestSegment.setRatePlanCandidates(ratePlanCandidates);
 
         hotelAvailRQ.setAvailRequestSegment(requestSegment);

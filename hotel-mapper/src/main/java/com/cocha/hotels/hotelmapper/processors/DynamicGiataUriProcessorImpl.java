@@ -25,6 +25,7 @@ public class DynamicGiataUriProcessorImpl implements DynamicGiataUriProcessor {
         Message inMessage = exchange.getIn();
 
         String eanId = inMessage.getBody(HotelMapping.class).getSupplierHotelId();
+        String hotelId = inMessage.getBody(HotelMapping.class).getHotelId();
         String uri = staticUri + "/" + eanId;
         inMessage.setHeader(Exchange.HTTP_URI, uri);
         inMessage.setBody(null);
@@ -32,6 +33,7 @@ public class DynamicGiataUriProcessorImpl implements DynamicGiataUriProcessor {
         logger.info("GIATA URI: " + uri);
 
         inMessage.setHeader("eanId", eanId);
+        inMessage.setHeader("hotelId", hotelId);
     }
 
 }

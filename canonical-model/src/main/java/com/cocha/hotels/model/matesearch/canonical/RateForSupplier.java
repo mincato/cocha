@@ -1,27 +1,34 @@
 package com.cocha.hotels.model.matesearch.canonical;
 
-import com.cocha.hotels.model.matesearch.response.Status;
-import com.cocha.hotels.model.matesearch.response.Availability;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementRef;
+import javax.xml.bind.annotation.XmlElementRefs;
 
+@XmlAccessorType(XmlAccessType.FIELD)
 public class RateForSupplier {
-	
-	private Status status;
-	private Availability availability;
 
-	public Availability getAvailability() {
-		return availability;
-	}
+    @XmlElement
+    private Status status;
 
-	public void setAvailability(Availability availability) {
-		this.availability = availability;
-	}
+    @XmlElementRefs({ @XmlElementRef(name = "rateInfoForSupplier", type = RateInfoForSupplier.class),
+            @XmlElementRef(name = "errorSupplier", type = ErrorSupplier.class) })
+    private Availability availability;
 
-	public Status getStatus() {
-		return status;
-	}
-	
-	public void setStatus(Status status) {
-		this.status = status;
-	}
+    public Availability getAvailability() {
+        return availability;
+    }
+
+    public void setAvailability(Availability availability) {
+        this.availability = availability;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
 }
-

@@ -1,5 +1,9 @@
 package com.cocha.hotels.hotelmapper.algorithm;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,6 +14,7 @@ import com.cocha.hotels.hotelmapper.mocks.HotelMock;
 import com.cocha.hotels.hotelmapper.mocks.LeamingtonHotelMock;
 import com.cocha.hotels.hotelmapper.mocks.QualitySuitesHotelMock;
 import com.cocha.hotels.hotelmapper.mocks.QualitySuitesUSHotelMock;
+import com.cocha.hotels.hotelmapper.mocks.ReplacementRuleMock;
 import com.cocha.hotels.hotelmapper.mocks.SaintEugeneHotelMock;
 import com.cocha.hotels.hotelmapper.mocks.StaybridgeSuitesHotelMock;
 import com.cocha.hotels.hotelmapper.mocks.TaybridgeSuitesHotelMock;
@@ -17,6 +22,8 @@ import com.cocha.hotels.hotelmapper.mocks.TravelodgeFlagstaffHotelMock;
 import com.cocha.hotels.hotelmapper.mocks.WallStreet_HI_HotelMock;
 import com.cocha.hotels.model.content.hotel.Hotel;
 import com.cocha.hotels.model.content.mapping.HotelMatch;
+import com.cocha.hotels.model.hotelmapper.dictionary.HotelAttribute;
+import com.cocha.hotels.model.hotelmapper.dictionary.ReplacementRule;
 
 /**
  * Tests para probar las reglas con cada hotel y obtener el nivel de confianza
@@ -26,9 +33,14 @@ import com.cocha.hotels.model.content.mapping.HotelMatch;
 public class ConfidenceLevelTest {
 
     private static final Integer MINIMUM_CONFIDENCE_LEVEL = 60;
+    private Map<HotelAttribute, List<ReplacementRule>> replacementRules;
 
     @Before
     public void setUp() throws Exception {
+        ReplacementRuleMock replacementRuleMock = new ReplacementRuleMock();
+        replacementRules = new HashMap<HotelAttribute, List<ReplacementRule>>();
+        replacementRules.put(HotelAttribute.ADDRESS, replacementRuleMock.buildAddressReplacements());
+        replacementRules.put(HotelAttribute.NAME, replacementRuleMock.buildNameReplacements());
     }
 
     @Test
@@ -39,7 +51,7 @@ public class ConfidenceLevelTest {
 
         HotelRulesProcessor rulesProcessor = new HotelRulesProcessor();
 
-        HotelMatch match = rulesProcessor.applyRules(hotelReference, hotelToCompare);
+        HotelMatch match = rulesProcessor.applyRules(hotelReference, hotelToCompare, replacementRules);
 
         verify(match).hasGreatOrEqualConfidenceThan(MINIMUM_CONFIDENCE_LEVEL);
     }
@@ -52,7 +64,7 @@ public class ConfidenceLevelTest {
 
         HotelRulesProcessor rulesProcessor = new HotelRulesProcessor();
 
-        HotelMatch match = rulesProcessor.applyRules(hotelReference, hotelToCompare);
+        HotelMatch match = rulesProcessor.applyRules(hotelReference, hotelToCompare, replacementRules);
 
         verify(match).hasGreatOrEqualConfidenceThan(MINIMUM_CONFIDENCE_LEVEL);
     }
@@ -65,7 +77,7 @@ public class ConfidenceLevelTest {
 
         HotelRulesProcessor rulesProcessor = new HotelRulesProcessor();
 
-        HotelMatch match = rulesProcessor.applyRules(hotelReference, hotelToCompare);
+        HotelMatch match = rulesProcessor.applyRules(hotelReference, hotelToCompare, replacementRules);
 
         verify(match).hasGreatOrEqualConfidenceThan(MINIMUM_CONFIDENCE_LEVEL);
     }
@@ -78,7 +90,7 @@ public class ConfidenceLevelTest {
 
         HotelRulesProcessor rulesProcessor = new HotelRulesProcessor();
 
-        HotelMatch match = rulesProcessor.applyRules(hotelReference, hotelToCompare);
+        HotelMatch match = rulesProcessor.applyRules(hotelReference, hotelToCompare, replacementRules);
 
         verify(match).hasGreatOrEqualConfidenceThan(MINIMUM_CONFIDENCE_LEVEL);
     }
@@ -91,7 +103,7 @@ public class ConfidenceLevelTest {
 
         HotelRulesProcessor rulesProcessor = new HotelRulesProcessor();
 
-        HotelMatch match = rulesProcessor.applyRules(hotelReference, hotelToCompare);
+        HotelMatch match = rulesProcessor.applyRules(hotelReference, hotelToCompare, replacementRules);
 
         verify(match).hasGreatOrEqualConfidenceThan(MINIMUM_CONFIDENCE_LEVEL);
     }
@@ -104,7 +116,7 @@ public class ConfidenceLevelTest {
 
         HotelRulesProcessor rulesProcessor = new HotelRulesProcessor();
 
-        HotelMatch match = rulesProcessor.applyRules(hotelReference, hotelToCompare);
+        HotelMatch match = rulesProcessor.applyRules(hotelReference, hotelToCompare, replacementRules);
 
         verify(match).hasGreatOrEqualConfidenceThan(MINIMUM_CONFIDENCE_LEVEL);
     }
@@ -117,7 +129,7 @@ public class ConfidenceLevelTest {
 
         HotelRulesProcessor rulesProcessor = new HotelRulesProcessor();
 
-        HotelMatch match = rulesProcessor.applyRules(hotelReference, hotelToCompare);
+        HotelMatch match = rulesProcessor.applyRules(hotelReference, hotelToCompare, replacementRules);
 
         verify(match).hasGreatOrEqualConfidenceThan(MINIMUM_CONFIDENCE_LEVEL);
     }
@@ -130,7 +142,7 @@ public class ConfidenceLevelTest {
 
         HotelRulesProcessor rulesProcessor = new HotelRulesProcessor();
 
-        HotelMatch match = rulesProcessor.applyRules(hotelReference, hotelToCompare);
+        HotelMatch match = rulesProcessor.applyRules(hotelReference, hotelToCompare, replacementRules);
 
         verify(match).hasGreatOrEqualConfidenceThan(MINIMUM_CONFIDENCE_LEVEL);
     }
@@ -143,7 +155,7 @@ public class ConfidenceLevelTest {
 
         HotelRulesProcessor rulesProcessor = new HotelRulesProcessor();
 
-        HotelMatch match = rulesProcessor.applyRules(hotelReference, hotelToCompare);
+        HotelMatch match = rulesProcessor.applyRules(hotelReference, hotelToCompare, replacementRules);
 
         verify(match).hasGreatOrEqualConfidenceThan(MINIMUM_CONFIDENCE_LEVEL);
     }
@@ -156,7 +168,7 @@ public class ConfidenceLevelTest {
 
         HotelRulesProcessor rulesProcessor = new HotelRulesProcessor();
 
-        HotelMatch match = rulesProcessor.applyRules(hotelReference, hotelToCompare);
+        HotelMatch match = rulesProcessor.applyRules(hotelReference, hotelToCompare, replacementRules);
 
         // SON HOTELES DISTINTOS
         verify(match).hasLessConfidenceThan(MINIMUM_CONFIDENCE_LEVEL);
@@ -170,7 +182,7 @@ public class ConfidenceLevelTest {
 
         HotelRulesProcessor rulesProcessor = new HotelRulesProcessor();
 
-        HotelMatch match = rulesProcessor.applyRules(hotelReference, hotelToCompare);
+        HotelMatch match = rulesProcessor.applyRules(hotelReference, hotelToCompare, replacementRules);
 
         verify(match).hasGreatOrEqualConfidenceThan(MINIMUM_CONFIDENCE_LEVEL);
     }

@@ -1,7 +1,11 @@
 package com.cocha.hotels.matesearch.providers.routes;
 
+import java.util.Map;
+
+import org.apache.camel.Exchange;
+import org.apache.camel.Predicate;
 import org.apache.camel.builder.RouteBuilder;
-import org.apache.camel.model.dataformat.JsonLibrary;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -21,14 +25,26 @@ public class BookingClientRoute extends RouteBuilder {
 
     @Autowired
     private ErrorSupplierProcessor errorSupplierProcessor;
-    
+
     @Override
     public void configure() throws Exception {
-    	
-    	onException(RuntimeException.class).handled(true).setHeader(Constant.SUPPLIER, simple(CodeSupplier.BOOKING_SUPPLIER_CODE)).process(errorSupplierProcessor).end();
 
-        from("direct:sendBookingAvailability").errorHandler(loggingErrorHandler(log)).process(bookingProcessor)
-                .wireTap("direct:logInfo").to("cxfrs:bean:bookingClient").to("direct:transformerResposeBooking");
+        onException(Exception.class).handled(true)
+                .setHeader(Constant.SUPPLIER, simple(CodeSupplier.BOOKING_SUPPLIER_CODE))
+                .process(errorSupplierProcessor).end();
+
+        from("direct:sendBookingAvailability").errorHandler(loggingErrorHandler(log)).filter(new Predicate() {
+
+            @Override
+            public boolean matches(Exchange exchange) {
+                @SuppressWarnings("unchecked")
+                Map<String, String> parameters = (Map<String, String>) exchange.getIn().getBody(Map.class);
+                String idHotelBooking = parameters.get("idHotelBooking");
+                return StringUtils.isNotBlank(idHotelBooking);
+            }
+        }).process(bookingProcessor).wireTap("direct:logInfo").to("cxfrs:bean:bookingClient")
+                .to("direct:transformerResposeBooking");
 
     }
+
 }

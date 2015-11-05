@@ -15,8 +15,8 @@ public class SabreSessionClientResponseProcessor implements Processor {
 
     private static final transient Logger log = LoggerFactory.getLogger(SabreSessionClientResponseProcessor.class);
 
-	@Override
-	@SuppressWarnings("unused")
+    @Override
+    @SuppressWarnings("unused")
     public void process(Exchange exchange) throws Exception {
         log.info("processing SabreSession exchange in SabreSessionClientProcessor");
 

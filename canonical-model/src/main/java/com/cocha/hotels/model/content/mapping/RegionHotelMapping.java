@@ -2,19 +2,20 @@ package com.cocha.hotels.model.content.mapping;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
 
+@IdClass(RegionHotelMappingKey.class)
 @Entity(name = "RegionHotelMapping")
 public class RegionHotelMapping {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @Id
     private String regionId;
 
+    @Id
     private String hotelId;
 
     private String supplierHotelId;
@@ -22,11 +23,17 @@ public class RegionHotelMapping {
     @Column(length = 3)
     private String supplierCode;
 
-    private Integer confidence;
-
     private boolean active;
 
     public RegionHotelMapping() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getRegionId() {
@@ -49,10 +56,6 @@ public class RegionHotelMapping {
         return supplierCode;
     }
 
-    public Integer getConfidence() {
-        return confidence;
-    }
-
     public void setHotelId(String hotelId) {
         this.hotelId = hotelId;
     }
@@ -63,10 +66,6 @@ public class RegionHotelMapping {
 
     public void setSupplierCode(String supplierCode) {
         this.supplierCode = supplierCode;
-    }
-
-    public void setConfidence(Integer confidence) {
-        this.confidence = confidence;
     }
 
     public boolean isActive() {

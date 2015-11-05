@@ -22,7 +22,7 @@ public class SabreChangeContextClientResponseProcessor implements Processor {
         log.info("processing SabreSession exchange in SabreSessionClientProcessor");
 
         Message inMessage = exchange.getIn();
-        ;
+
         MessageContentsList result = (MessageContentsList) inMessage.getBody();
 
         ContextChangeRS changeResponse = (ContextChangeRS) result.get(0);

@@ -26,13 +26,16 @@ import com.cocha.hotels.hotelmapper.mocks.HotelMock;
 import com.cocha.hotels.hotelmapper.mocks.LeamingtonHotelMock;
 import com.cocha.hotels.hotelmapper.mocks.QualitySuitesHotelMock;
 import com.cocha.hotels.hotelmapper.mocks.QualitySuitesUSHotelMock;
+import com.cocha.hotels.hotelmapper.mocks.ReplacementRuleMock;
 import com.cocha.hotels.hotelmapper.mocks.SaintEugeneHotelMock;
 import com.cocha.hotels.hotelmapper.mocks.StaybridgeSuitesHotelMock;
 import com.cocha.hotels.hotelmapper.mocks.TaybridgeSuitesHotelMock;
 import com.cocha.hotels.hotelmapper.mocks.TravelodgeFlagstaffHotelMock;
 import com.cocha.hotels.hotelmapper.mocks.WallStreet_HI_HotelMock;
+import com.cocha.hotels.hotelmapper.repositories.content.ReplacementRuleRepository;
 import com.cocha.hotels.model.content.hotel.Hotel;
 import com.cocha.hotels.model.content.mapping.HotelMapping;
+import com.cocha.hotels.model.hotelmapper.dictionary.ReplacementRule;
 
 @RunWith(MockitoJUnitRunner.class)
 public class HotelMappingServiceTest {
@@ -44,6 +47,11 @@ public class HotelMappingServiceTest {
 
     @Mock
     private HotelMappingManager hotelMappingManager;
+
+    @Mock
+    private ReplacementRuleRepository replacementRuleRepository;
+
+    private List<ReplacementRule> replacementRules;
 
     @Before
     public void setUp() throws Exception {
@@ -65,6 +73,12 @@ public class HotelMappingServiceTest {
         mappingService.setCanonicalIdGenerator(new CanonicalIdGenerator());
         mappingService.setMatchingService(new HotelMatchingService(new HotelRulesProcessor()));
         mappingService.setProximityFilterService(new ProximityFilterService());
+
+        ReplacementRuleMock replacementRuleMock = new ReplacementRuleMock();
+        replacementRules = new ArrayList<>(replacementRuleMock.buildAddressReplacements());
+        replacementRules.addAll(replacementRuleMock.buildNameReplacements());
+        when(replacementRuleRepository.findByCountryCodeOrCountryCodeIsNull(any(String.class))).thenReturn(
+                replacementRules);
     }
 
     @Test

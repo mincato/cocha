@@ -70,6 +70,7 @@
 			<list>
 				<value>com.cocha.hotels.model.content.hotel</value>
 				<value>com.cocha.hotels.model.content.mapping</value>
+				<value>com.cocha.hotels.model.hotelmapper.dictionary</value>
 			</list>
 		</property>
 	</bean>
