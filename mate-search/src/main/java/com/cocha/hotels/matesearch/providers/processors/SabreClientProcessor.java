@@ -23,7 +23,12 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.xmlsoap.schemas.ws._2002._12.secext.Security;
 
+import cl.cocha.session.client.dto.ConfJmsDTO;
+import cl.cocha.session.client.ejb.SabreSessionSvc;
+import cl.cocha.session.dto.SessionDTO;
+
 import com.cocha.hotels.matesearch.util.Constant;
+import com.cocha.hotels.matesearch.util.Constant.SabreSecurityToken;
 import com.sabre.webservices.sabrexml._2011._10.OTAHotelAvailRQ;
 import com.sabre.webservices.sabrexml._2011._10.OTAHotelAvailRQ.AvailRequestSegment;
 import com.sabre.webservices.sabrexml._2011._10.OTAHotelAvailRQ.AvailRequestSegment.GuestCounts;
@@ -72,6 +77,9 @@ public class SabreClientProcessor implements Processor {
 
     @Value("${mate.provider.sabre.contract.negotiated.rate.code}")
     private String contractNegotiatedRateCode;
+    
+    @Value("${mate.provider.sabre.session.cocha}")
+    private Boolean sabreTokenSecurity;
 
     @Override
     @SuppressWarnings("unchecked")
@@ -79,7 +87,7 @@ public class SabreClientProcessor implements Processor {
         Message inMessage = exchange.getIn();
         Map<String, String> parameters = (Map<String, String>) inMessage.getBody(Map.class);
         MessageHeader messageHeader = createMessageHeader();
-        Security security = createSecurityHeader(parameters.get("token"));
+        Security security = this.createSecurityHeader();
         String idsHotels = parameters.get("idsHotelsSabre");
 
         if (StringUtils.isBlank(idsHotels)) {
@@ -155,9 +163,31 @@ public class SabreClientProcessor implements Processor {
     /**
      * @return
      */
-    private Security createSecurityHeader(final String token) {
-        Security security = new Security();
-        security.setBinarySecurityToken(token);
+    private Security createSecurityHeader() throws Exception {
+        
+    	Security security = new Security();
+        String token = null;
+        
+        if(sabreTokenSecurity) {
+
+        	SabreSessionSvc sabreSessionSvc = new SabreSessionSvc();
+        	
+        	ConfJmsDTO confJmsDTO = new ConfJmsDTO();
+        	confJmsDTO.setProviderUrlInput(SabreSecurityToken.DESTINATION_IP);
+        	confJmsDTO.setProviderUrlOutput(SabreSecurityToken.DESTINATION_OP);
+        	confJmsDTO.setHost(SabreSecurityToken.HOST);
+        	confJmsDTO.setPort(SabreSecurityToken.PORT);
+        	
+        	SessionDTO sessionDTO = sabreSessionSvc.openAvailabilitySession(confJmsDTO);
+        	
+        	if(sessionDTO != null) {
+        		security.setBinarySecurityToken(token);        		
+        	} else {
+        		throw new Exception();
+        	}
+        	
+        }
+     
         return security;
     }
 
