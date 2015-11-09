@@ -13,6 +13,7 @@ import org.apache.camel.Exchange;
 import org.apache.camel.Message;
 import org.apache.camel.Processor;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.log4j.Logger;
 import org.ebxml.namespaces.messageheader.From;
 import org.ebxml.namespaces.messageheader.MessageData;
 import org.ebxml.namespaces.messageheader.MessageHeader;
@@ -28,7 +29,6 @@ import cl.cocha.session.client.ejb.SabreSessionSvc;
 import cl.cocha.session.dto.SessionDTO;
 
 import com.cocha.hotels.matesearch.util.Constant;
-import com.cocha.hotels.matesearch.util.Constant.SabreSecurityToken;
 import com.sabre.webservices.sabrexml._2011._10.OTAHotelAvailRQ;
 import com.sabre.webservices.sabrexml._2011._10.OTAHotelAvailRQ.AvailRequestSegment;
 import com.sabre.webservices.sabrexml._2011._10.OTAHotelAvailRQ.AvailRequestSegment.GuestCounts;
@@ -41,6 +41,8 @@ import com.sabre.webservices.sabrexml._2011._10.OTAHotelAvailRQ.AvailRequestSegm
 
 @Component
 public class SabreClientProcessor implements Processor {
+	
+	private static final Logger log = Logger.getLogger(SabreClientProcessor.class);
 
     private static final String MESSAGE_ID = "mid:20001209-133003-2333@clientofsabre.com1";
 
@@ -78,8 +80,20 @@ public class SabreClientProcessor implements Processor {
     @Value("${mate.provider.sabre.contract.negotiated.rate.code}")
     private String contractNegotiatedRateCode;
     
-    @Value("${mate.provider.sabre.session.cocha}")
+    @Value("${mate.provider.sabre.session.token.cocha}")
     private Boolean sabreTokenSecurity;
+    
+    @Value("${mate.provider.sabre.session.token.destination.op}")
+    private String outputOpenSabreSession;
+    
+    @Value("${mate.provider.sabre.session.token.destination.ip}")
+    private String inputOpenSabreSession;
+    
+    @Value("${mate.provider.sabre.session.token.host}")
+    private String host;
+    
+    @Value("${mate.provider.sabre.session.token.ip}")
+    private String port;
 
     @Override
     @SuppressWarnings("unchecked")
@@ -87,7 +101,10 @@ public class SabreClientProcessor implements Processor {
         Message inMessage = exchange.getIn();
         Map<String, String> parameters = (Map<String, String>) inMessage.getBody(Map.class);
         MessageHeader messageHeader = createMessageHeader();
-        Security security = this.createSecurityHeader();
+        Security security = null;
+        
+        security = this.createSecurityHeader();			
+
         String idsHotels = parameters.get("idsHotelsSabre");
 
         if (StringUtils.isBlank(idsHotels)) {
@@ -161,34 +178,40 @@ public class SabreClientProcessor implements Processor {
     }
 
     /**
+     * @param exchange 
      * @return
      */
     private Security createSecurityHeader() throws Exception {
         
-    	Security security = new Security();
-        String token = null;
-        
-        if(sabreTokenSecurity) {
+    	log.info("Obtener token de seguridad de sabre");
+    	try {
+    		
+    	   	Security security = new Security();
+            
+            if(sabreTokenSecurity) {
 
-        	SabreSessionSvc sabreSessionSvc = new SabreSessionSvc();
-        	
-        	ConfJmsDTO confJmsDTO = new ConfJmsDTO();
-        	confJmsDTO.setProviderUrlInput(SabreSecurityToken.DESTINATION_IP);
-        	confJmsDTO.setProviderUrlOutput(SabreSecurityToken.DESTINATION_OP);
-        	confJmsDTO.setHost(SabreSecurityToken.HOST);
-        	confJmsDTO.setPort(SabreSecurityToken.PORT);
-        	
-        	SessionDTO sessionDTO = sabreSessionSvc.openAvailabilitySession(confJmsDTO);
-        	
-        	if(sessionDTO != null) {
-        		security.setBinarySecurityToken(token);        		
-        	} else {
-        		throw new Exception();
-        	}
-        	
-        }
-     
-        return security;
+            	SabreSessionSvc sabreSessionSvc = new SabreSessionSvc();
+            	
+            	ConfJmsDTO confJmsDTO = new ConfJmsDTO();
+            	confJmsDTO.setProviderUrlInput(inputOpenSabreSession);
+            	confJmsDTO.setProviderUrlOutput(outputOpenSabreSession);
+            	confJmsDTO.setHost(host);
+            	confJmsDTO.setPort(port);
+            	SessionDTO sessionDTO = sabreSessionSvc.openAvailabilitySession(confJmsDTO);; 				
+
+            	if(sessionDTO != null && StringUtils.isNoneBlank(sessionDTO.getSecurityToken())) {
+            		security.setBinarySecurityToken(sessionDTO.getSecurityToken());        		
+            	} else {
+            		throw new Exception("No se pudo obtener el token de suguridad de sabre");
+            	}
+            }
+            
+            return security;
+    		
+    	} catch(Exception e) {
+    		throw new Exception("Ocurrio un error al obtener el token de seguridad de sabre");
+    	}
+
     }
 
     /**
