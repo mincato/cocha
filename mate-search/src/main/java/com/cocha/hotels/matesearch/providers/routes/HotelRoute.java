@@ -43,8 +43,8 @@ public class HotelRoute extends RouteBuilder {
         Predicate isJson = header("Content-Type").isEqualTo(MediaType.APPLICATION_JSON);
         Predicate isXml = header("Content-Type").isEqualTo(MediaType.APPLICATION_XML);
 
-        onException(Exception.class).handled(true).process(errorApiProcessor).to("direct:marshalResponse").choice()
-                .when(isJson).to("direct:JsonResponse").when(isXml).to("direct:XmlResponse");
+        onException(Exception.class).handled(true).process(errorApiProcessor).choice().when(isJson)
+                .to("direct:JsonResponse").when(isXml).to("direct:XmlResponse");
 
         from("cxfrs:bean:hotelServer")
                 .wireTap("direct:logInfo")
