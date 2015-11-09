@@ -10,9 +10,6 @@ import javax.persistence.IdClass;
 public class RegionHotelMapping {
 
     @Id
-    private Long id;
-
-    @Id
     private String regionId;
 
     @Id
@@ -26,14 +23,6 @@ public class RegionHotelMapping {
     private boolean active;
 
     public RegionHotelMapping() {
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getRegionId() {
