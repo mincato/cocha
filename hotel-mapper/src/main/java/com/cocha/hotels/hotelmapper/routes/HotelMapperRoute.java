@@ -42,8 +42,8 @@ public class HotelMapperRoute extends SpringRouteBuilder {
     @Override
     public void configure() throws Exception {
 
-        from("{{mapper.consumer.uri}}").errorHandler(loggingErrorHandler(log)).bean(hotelMappingManager, "init")
-                .choice().when(header("countryCode").isNotNull()).transform().simple("${header[countryCode]}")
+        from("{{mapper.consumer.uri}}").errorHandler(loggingErrorHandler(log)).choice()
+                .when(header("countryCode").isNotNull()).transform().simple("${header[countryCode]}")
                 .to("direct:processMapper").otherwise()
                 .to("sql:select distinct(countryCode) from Hotel?dataSource=#feedDataSource").split(body()).transform()
                 .simple("${body[countryCode]}").to("direct:processMapper");
@@ -51,10 +51,10 @@ public class HotelMapperRoute extends SpringRouteBuilder {
         from("direct:processMapper")
                 .bean(hotelFeedRepository, "findByCountryCode")
                 .bean(algorithmicMapperProcessor)
-                .wireTap("seda:content")
-                .wireTap("direct:sabreMappingThruGiata")
+                .multicast()
                 .to("jpaContent:" + HotelMapping.class.getName()
-                        + "?entityType=java.util.ArrayList&transactionManager=#contentTransactionManager")
+                        + "?entityType=java.util.ArrayList&transactionManager=#contentTransactionManager",
+                        "direct:content", "direct:sabreMappingThruGiata")
                 .log(LoggingLevel.INFO, "Run Hotel Mapper successfully");
 
         from("direct:sabreMappingThruGiata")
