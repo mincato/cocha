@@ -36,11 +36,6 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
     		HotelList hotels;
     		ResposeSuppliers resposeSuppliers;
     		ErrorInternal errorInternal;
-
-    		if(oldExchange != null) {
-    			Exception cause = oldExchange.getProperty(Exchange.EXCEPTION_CAUGHT, Exception.class);
-    			log.error(cause);    			
-    		}
     		
             if (newExchange.getIn().getBody(HotelList.class) instanceof HotelList) {
 
