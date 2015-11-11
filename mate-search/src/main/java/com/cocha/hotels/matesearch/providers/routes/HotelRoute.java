@@ -44,7 +44,7 @@ public class HotelRoute extends RouteBuilder {
         Predicate isXml = header("Content-Type").isEqualTo(MediaType.APPLICATION_XML);
 
 
-        onException(Exception.class).handled(true).process(errorMateProcessor).to("direct:marshalResponse").choice()
+        onException(Exception.class).handled(true).process(errorMateProcessor).choice()
                 .when(isJson).to("direct:JsonResponse").when(isXml).to("direct:XmlResponse");
 
 
