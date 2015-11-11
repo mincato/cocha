@@ -41,12 +41,12 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
     		HotelList hotels;
     		ResposeSuppliers resposeSuppliers;
     		ErrorSupplier errorSupplier;
-        
-	        if(oldExchange != null && oldExchange.getException() != null) {
-	        	return oldExchange;
-	        }
 
-
+    		if(oldExchange != null) {
+    			Exception cause = oldExchange.getProperty(Exchange.EXCEPTION_CAUGHT, Exception.class);
+    			log.error(cause);    			
+    		}
+    		
             if (newExchange.getIn().getBody(HotelList.class) instanceof HotelList) {
 
                 hotels = newExchange.getIn().getBody(HotelList.class);
@@ -79,10 +79,8 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
         } catch (Exception e) {
             log.info("Error al reunir las respuestas de los supplier");
             if (oldExchange == null) {
-                newExchange.setException(e);
                 return newExchange;
             } else {
-                oldExchange.setException(e);
                 return oldExchange;
             }
         }
@@ -90,8 +88,6 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
     }
 
     private void addRates(HotelList hotels, ResposeSuppliers resposeSuppliers, Map<String, Object> parameters) {
-
-        String idSupplier = null;
 
         List<String> ids = Arrays.asList(((String) parameters.get(Constant.ID_HOTEL)).split("\\s*,\\s*"));
 
@@ -112,7 +108,6 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
                             .stream()
                             .filter((RateInfoForSupplier rateForSupplier) -> rateForSupplier.getIdSupplier().equals(
                                     idMapping.getSupplierBooking())).findFirst();
-                    idSupplier = idMapping.getSupplierBooking();
                     break;
                 case CodeSupplier.EAN_SUPPLIER_CODE:
                     rateForSupplierOptional = resposeSuppliers
@@ -120,7 +115,6 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
                             .stream()
                             .filter((RateInfoForSupplier rateForSupplier) -> rateForSupplier.getIdSupplier().equals(
                                     idMapping.getSupplierEAN())).findFirst();
-                    idSupplier = idMapping.getSupplierEAN();
                     break;
                 case CodeSupplier.SABRE_SUPPLIER_CODE:
                     rateForSupplierOptional = resposeSuppliers
@@ -128,7 +122,6 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
                             .stream()
                             .filter((RateInfoForSupplier rateForSupplier) -> rateForSupplier.getIdSupplier()
                                     .replaceFirst("^0+(?!$)", "").equals(idMapping.getSupplierSabre())).findFirst();
-                    idSupplier = idMapping.getSupplierSabre();
                     break;
             }
 

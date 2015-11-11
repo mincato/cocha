@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.cocha.hotels.matesearch.providers.aggregators.AggregationAvailabilityStrategy;
-import com.cocha.hotels.matesearch.providers.processors.ErrorApiProcessor;
+import com.cocha.hotels.matesearch.providers.processors.ErrorMateProcessor;
 import com.cocha.hotels.matesearch.providers.processors.HotelListHeaderDataProcessor;
 import com.cocha.hotels.matesearch.providers.services.rest.response.HotelListResponseBuilder;
 import com.cocha.hotels.model.matesearch.canonical.response.HotelListResponse;
@@ -30,7 +30,7 @@ public class HotelRoute extends RouteBuilder {
     AggregationAvailabilityStrategy aggregationAvailabilityStrategy;
 
     @Autowired
-    ErrorApiProcessor errorApiProcessor;
+    ErrorMateProcessor errorMateProcessor;
 
     @Autowired
     private HotelListResponseBuilder hotelListResponseBuilder;
@@ -43,7 +43,7 @@ public class HotelRoute extends RouteBuilder {
         Predicate isJson = header("Content-Type").isEqualTo(MediaType.APPLICATION_JSON);
         Predicate isXml = header("Content-Type").isEqualTo(MediaType.APPLICATION_XML);
 
-        onException(Exception.class).handled(true).process(errorApiProcessor).to("direct:marshalResponse").choice()
+        onException(Exception.class).handled(true).process(errorMateProcessor).to("direct:marshalResponse").choice()
                 .when(isJson).to("direct:JsonResponse").when(isXml).to("direct:XmlResponse");
 
         from("cxfrs:bean:hotelServer")
