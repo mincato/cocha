@@ -10,6 +10,7 @@ import org.apache.camel.Message;
 import org.apache.camel.Processor;
 import org.apache.camel.component.cxf.common.message.CxfConstants;
 import org.apache.cxf.message.MessageContentsList;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -23,6 +24,8 @@ public class EanClientProcessor implements Processor {
     private static final String MD5_DIGEST_ALGORITHM = "MD5";
 
     private static final int SECONDS_CONSTANT = 1000;
+    
+    private static final Logger log = Logger.getLogger(EanClientProcessor.class);
 
     @Value("${mate.provider.ean.apikey}")
     private String apikey;
@@ -50,39 +53,49 @@ public class EanClientProcessor implements Processor {
     @SuppressWarnings("unchecked")
     @Override
     public void process(Exchange exchange) throws Exception {
-        Message inMessage = exchange.getIn();
-
-        Map<String, String> parameters = (Map<String, String>) inMessage.getBody(Map.class);
-
-        String idHotelEan = parameters.get("idHotelEan");
-
-        exchange.setPattern(ExchangePattern.InOut);
-
-        // set the operation name
-        inMessage.setHeader(CxfConstants.OPERATION_NAME, AVAILABILITY_EAN_SERVICE);
-        inMessage.setHeader(CxfConstants.CAMEL_CXF_RS_USING_HTTP_API, Boolean.FALSE);
-
-        String arrival = parameters.get(Constant.ARRIVAL_DATE);
-        arrival = arrival.replace("-", "/");
-        String departure = parameters.get(Constant.DEPARTURE_DATE);
-        departure = departure.replace("-", "/");
-        String currencyCode = parameters.get(Constant.CURRENCY_CODE);
-        if (currencyCode == null) {
-            currencyCode = currency;
-        }
-
-        String message = "<HotelListRequest><hotelIdList>" + idHotelEan + "</hotelIdList><arrivalDate>" + arrival
-                + "</arrivalDate><departureDate>" + departure + "</departureDate></HotelListRequest>";
-
-        MessageContentsList req = new MessageContentsList();
-        req.add(cid);
-        req.add(minorRev);
-        req.add(apikey);
-        req.add(locale);
-        req.add(currencyCode);
-        req.add(getSignature(apikey, secret));
-        req.add(message);
-        inMessage.setBody(req);
+    	
+    	
+    	try {
+    		
+    		Message inMessage = exchange.getIn();
+    		
+    		Map<String, String> parameters = (Map<String, String>) inMessage.getBody(Map.class);
+    		
+    		String idHotelEan = parameters.get("idHotelEan");
+    		
+    		exchange.setPattern(ExchangePattern.InOut);
+    		
+    		// set the operation name
+    		inMessage.setHeader(CxfConstants.OPERATION_NAME, AVAILABILITY_EAN_SERVICE);
+    		inMessage.setHeader(CxfConstants.CAMEL_CXF_RS_USING_HTTP_API, Boolean.FALSE);
+    		
+    		String arrival = parameters.get(Constant.ARRIVAL_DATE);
+    		arrival = arrival.replace("-", "/");
+    		String departure = parameters.get(Constant.DEPARTURE_DATE);
+    		departure = departure.replace("-", "/");
+    		String currencyCode = parameters.get(Constant.CURRENCY_CODE);
+    		if (currencyCode == null) {
+    			currencyCode = currency;
+    		}
+    		
+    		String message = "<HotelListRequest><hotelIdList>" + idHotelEan + "</hotelIdList><arrivalDate>" + arrival
+    				+ "</arrivalDate><departureDate>" + departure + "</departureDate></HotelListRequest>";
+    		
+    		MessageContentsList req = new MessageContentsList();
+    		req.add(cid);
+    		req.add(minorRev);
+    		req.add(apikey);
+    		req.add(locale);
+    		req.add(currencyCode);
+    		req.add(getSignature(apikey, secret));
+    		req.add(message);
+    		inMessage.setBody(req);
+			
+		} catch (Exception e) {
+			log.error("Error al crear el cliente EAN");
+			throw e;
+		}
+    	
     }
 
     private String getSignature(final String apikey, final String secret) {

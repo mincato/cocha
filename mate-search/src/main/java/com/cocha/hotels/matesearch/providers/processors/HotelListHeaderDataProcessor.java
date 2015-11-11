@@ -73,8 +73,8 @@ public class HotelListHeaderDataProcessor implements Processor {
             exchange.getOut().setBody(parameters);
 
         } catch (Exception e) {
-            log.info("Error al armar Hearder del Mate Search");
-            exchange.setException(e);
+            log.error("Error al armar Hearder del Mate Search");
+            throw e;
         }
 
     }

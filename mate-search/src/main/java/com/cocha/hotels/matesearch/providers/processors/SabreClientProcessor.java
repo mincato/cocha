@@ -98,37 +98,46 @@ public class SabreClientProcessor implements Processor {
     @Override
     @SuppressWarnings("unchecked")
     public void process(Exchange exchange) throws Exception {
-        Message inMessage = exchange.getIn();
-        Map<String, String> parameters = (Map<String, String>) inMessage.getBody(Map.class);
-        MessageHeader messageHeader = createMessageHeader();
-        Security security = null;
-        
-        security = this.createSecurityHeader();			
+    	
+    	try {
 
-        String idsHotels = parameters.get("idsHotelsSabre");
-
-        if (StringUtils.isBlank(idsHotels)) {
-            throw new Exception("Missing SABRE hotel ID");
-        }
-
-        String arrival = parameters.get(Constant.ARRIVAL_DATE);
-        arrival = dateConvert(arrival);
-
-        String departure = parameters.get(Constant.DEPARTURE_DATE);
-        departure = dateConvert(departure);
-
-        String currencyCode = parameters.get(Constant.CURRENCY_CODE);
-        if (currencyCode == null) {
-            currencyCode = Constant.CURRNCY_DEFAULT;
-        }
-
-        OTAHotelAvailRQ hotelAvail = createHotelAvailRQ(idsHotels, arrival, departure, currencyCode,
-                contractNegotiatedRateCode);
-        List<Object> params = new ArrayList<>();
-        params.add(messageHeader);
-        params.add(security);
-        params.add(hotelAvail);
-        inMessage.setBody(params);
+    		Message inMessage = exchange.getIn();
+    		Map<String, String> parameters = (Map<String, String>) inMessage.getBody(Map.class);
+    		MessageHeader messageHeader = createMessageHeader();
+    		Security security = null;
+    		
+    		security = this.createSecurityHeader();			
+    		
+    		String idsHotels = parameters.get("idsHotelsSabre");
+    		
+    		if (StringUtils.isBlank(idsHotels)) {
+    			throw new Exception("Missing SABRE hotel ID");
+    		}
+    		
+    		String arrival = parameters.get(Constant.ARRIVAL_DATE);
+    		arrival = dateConvert(arrival);
+    		
+    		String departure = parameters.get(Constant.DEPARTURE_DATE);
+    		departure = dateConvert(departure);
+    		
+    		String currencyCode = parameters.get(Constant.CURRENCY_CODE);
+    		if (currencyCode == null) {
+    			currencyCode = Constant.CURRNCY_DEFAULT;
+    		}
+    		
+    		OTAHotelAvailRQ hotelAvail = createHotelAvailRQ(idsHotels, arrival, departure, currencyCode,
+    				contractNegotiatedRateCode);
+    		List<Object> params = new ArrayList<>();
+    		params.add(messageHeader);
+    		params.add(security);
+    		params.add(hotelAvail);
+    		inMessage.setBody(params);
+			
+		} catch (Exception e) {
+			log.error("Error al crear el cliente Sabre");
+			throw e;
+		}
+    	
     }
 
     /**
@@ -252,7 +261,7 @@ public class SabreClientProcessor implements Processor {
         return messageHeader;
     }
 
-    private String dateConvert(String dateInString) {
+    private String dateConvert(String dateInString) throws ParseException {
         SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
         SimpleDateFormat newformatter = new SimpleDateFormat("yyyy-MM-dd");
         String newDate = null;
@@ -260,7 +269,7 @@ public class SabreClientProcessor implements Processor {
             Date date = formatter.parse(dateInString);
             newDate = newformatter.format(date);
         } catch (ParseException e) {
-            e.printStackTrace();
+            throw e;
         }
         return newDate;
     }
