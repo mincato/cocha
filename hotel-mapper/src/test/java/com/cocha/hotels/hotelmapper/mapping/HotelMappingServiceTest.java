@@ -167,7 +167,8 @@ public class HotelMappingServiceTest {
         hotelMapping.setId(1L);
         hotelMapping.setSupplierCode(eanHotel.getSupplierCode());
         hotelMapping.setSupplierHotelId(eanHotel.getId());
-        when(hotelMappingManager.find(eanHotel.getId(), eanHotel.getSupplierCode(), 100)).thenReturn(hotelMapping);
+        when(hotelMappingManager.findOwnerReference(eanHotel.getId(), eanHotel.getSupplierCode())).thenReturn(
+                hotelMapping);
         List<Hotel> eanHotels = Arrays.asList(eanHotel);
 
         Hotel bookingHotel = hotelMock.buildWithBooking();
@@ -177,8 +178,8 @@ public class HotelMappingServiceTest {
         hotelMapping.setId(2L);
         hotelMapping.setSupplierCode(bookingHotel.getSupplierCode());
         hotelMapping.setSupplierHotelId(bookingHotel.getId());
-        when(hotelMappingManager.find(hotelMapping.getHotelId(), bookingHotel.getSupplierCode())).thenReturn(
-                hotelMapping);
+        when(hotelMappingManager.findMappedReference(hotelMapping.getHotelId(), bookingHotel.getSupplierCode()))
+                .thenReturn(hotelMapping);
         bookingHotel.setName("no matchea");
         bookingHotel.setAddress("fake");
         List<Hotel> bookingHotels = Arrays.asList(bookingHotel);
@@ -207,7 +208,8 @@ public class HotelMappingServiceTest {
         hotelMapping.setId(1L);
         hotelMapping.setSupplierCode(eanHotel.getSupplierCode());
         hotelMapping.setSupplierHotelId(eanHotel.getId());
-        when(hotelMappingManager.find(eanHotel.getId(), eanHotel.getSupplierCode(), 100)).thenReturn(hotelMapping);
+        when(hotelMappingManager.findOwnerReference(eanHotel.getId(), eanHotel.getSupplierCode())).thenReturn(
+                hotelMapping);
         List<Hotel> eanHotels = Arrays.asList(eanHotel);
 
         Hotel bookingHotel = hotelMock.buildWithBooking();
@@ -217,9 +219,9 @@ public class HotelMappingServiceTest {
         hotelMapping.setId(2L);
         hotelMapping.setSupplierCode(bookingHotel.getSupplierCode());
         hotelMapping.setSupplierHotelId(bookingHotel.getId());
-        hotelMapping.setMappedByUser(true);
-        when(hotelMappingManager.find(hotelMapping.getHotelId(), bookingHotel.getSupplierCode())).thenReturn(
-                hotelMapping);
+        hotelMapping.mappedByUser();
+        when(hotelMappingManager.findMappedReference(hotelMapping.getHotelId(), bookingHotel.getSupplierCode()))
+                .thenReturn(hotelMapping);
         bookingHotel.setName("no matchea");
         bookingHotel.setAddress("fake");
         List<Hotel> bookingHotels = Arrays.asList(bookingHotel);
@@ -248,7 +250,8 @@ public class HotelMappingServiceTest {
         hotelMapping.setId(1L);
         hotelMapping.setSupplierCode(eanHotel.getSupplierCode());
         hotelMapping.setSupplierHotelId(eanHotel.getId());
-        when(hotelMappingManager.find(eanHotel.getId(), eanHotel.getSupplierCode(), 100)).thenReturn(hotelMapping);
+        when(hotelMappingManager.findOwnerReference(eanHotel.getId(), eanHotel.getSupplierCode())).thenReturn(
+                hotelMapping);
         List<Hotel> eanHotels = Arrays.asList(eanHotel);
 
         Hotel bookingHotel = hotelMock.buildWithBooking();
@@ -258,9 +261,9 @@ public class HotelMappingServiceTest {
         hotelMapping.setId(2L);
         hotelMapping.setSupplierCode(bookingHotel.getSupplierCode());
         hotelMapping.setSupplierHotelId(bookingHotel.getId());
-        hotelMapping.setMappedByUser(true);
-        when(hotelMappingManager.find(hotelMapping.getHotelId(), bookingHotel.getSupplierCode())).thenReturn(
-                hotelMapping);
+        hotelMapping.mappedByUser();
+        when(hotelMappingManager.findMappedReference(hotelMapping.getHotelId(), bookingHotel.getSupplierCode()))
+                .thenReturn(hotelMapping);
         bookingHotel.setName("no matchea");
         bookingHotel.setAddress("fake");
         bookingHotel.setActive(false);
@@ -290,7 +293,8 @@ public class HotelMappingServiceTest {
         hotelMapping.setId(1L);
         hotelMapping.setSupplierCode(eanHotel.getSupplierCode());
         hotelMapping.setSupplierHotelId(eanHotel.getId());
-        when(hotelMappingManager.find(eanHotel.getId(), eanHotel.getSupplierCode(), 100)).thenReturn(hotelMapping);
+        when(hotelMappingManager.findOwnerReference(eanHotel.getId(), eanHotel.getSupplierCode())).thenReturn(
+                hotelMapping);
         Hotel eanHotel2 = hotelMock.buildWithEan();
         eanHotel2.setId("EAN-12345");
         eanHotel2.setName("no matchea");
@@ -304,9 +308,9 @@ public class HotelMappingServiceTest {
         hotelMapping.setId(2L);
         hotelMapping.setSupplierCode(bookingHotel.getSupplierCode());
         hotelMapping.setSupplierHotelId(bookingHotel.getId());
-        hotelMapping.setMappedByUser(true);
-        when(hotelMappingManager.find(hotelMapping.getHotelId(), bookingHotel.getSupplierCode())).thenReturn(
-                hotelMapping);
+        hotelMapping.mappedByUser();
+        when(hotelMappingManager.findMappedReference(hotelMapping.getHotelId(), bookingHotel.getSupplierCode()))
+                .thenReturn(hotelMapping);
         bookingHotel.setName("no matchea");
         bookingHotel.setAddress("fake");
         List<Hotel> bookingHotels = Arrays.asList(bookingHotel);
@@ -339,7 +343,8 @@ public class HotelMappingServiceTest {
         hotelMapping.setId(1L);
         hotelMapping.setSupplierCode(eanHotel.getSupplierCode());
         hotelMapping.setSupplierHotelId(eanHotel.getId());
-        when(hotelMappingManager.find(eanHotel.getId(), eanHotel.getSupplierCode(), 100)).thenReturn(hotelMapping);
+        when(hotelMappingManager.findOwnerReference(eanHotel.getId(), eanHotel.getSupplierCode())).thenReturn(
+                hotelMapping);
         List<Hotel> eanHotels = Arrays.asList(eanHotel);
 
         Hotel bookingHotel = hotelMock.buildWithBooking();
@@ -349,9 +354,9 @@ public class HotelMappingServiceTest {
         hotelMapping.setId(2L);
         hotelMapping.setSupplierCode(bookingHotel.getSupplierCode());
         hotelMapping.setSupplierHotelId(bookingHotel.getId());
-        hotelMapping.setMappedByUser(true);
-        when(hotelMappingManager.find(hotelMapping.getHotelId(), bookingHotel.getSupplierCode())).thenReturn(
-                hotelMapping);
+        hotelMapping.mappedByUser();
+        when(hotelMappingManager.findMappedReference(hotelMapping.getHotelId(), bookingHotel.getSupplierCode()))
+                .thenReturn(hotelMapping);
         bookingHotel.setName("no matchea");
         bookingHotel.setAddress("fake");
 

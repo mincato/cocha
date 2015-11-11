@@ -36,7 +36,7 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
     @Override
     public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {
 
-    	try {
+        try {
 
     		HotelList hotels;
     		ResposeSuppliers resposeSuppliers;

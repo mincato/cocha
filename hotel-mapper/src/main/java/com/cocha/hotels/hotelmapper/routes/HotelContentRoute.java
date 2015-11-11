@@ -17,7 +17,7 @@ public class HotelContentRoute extends SpringRouteBuilder {
     @Override
     public void configure() throws Exception {
 
-        from("seda:content")
+        from("direct:content")
                 .routeId("HotelContentRoute")
                 .errorHandler(loggingErrorHandler(log))
                 .bean(hotelContentProcessor, "process")

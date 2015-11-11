@@ -43,8 +43,10 @@ public class HotelRoute extends RouteBuilder {
         Predicate isJson = header("Content-Type").isEqualTo(MediaType.APPLICATION_JSON);
         Predicate isXml = header("Content-Type").isEqualTo(MediaType.APPLICATION_XML);
 
+
         onException(Exception.class).handled(true).process(errorMateProcessor).to("direct:marshalResponse").choice()
                 .when(isJson).to("direct:JsonResponse").when(isXml).to("direct:XmlResponse");
+
 
         from("cxfrs:bean:hotelServer")
                 .wireTap("direct:logInfo")
@@ -53,9 +55,7 @@ public class HotelRoute extends RouteBuilder {
                 .aggregationStrategy(aggregationAvailabilityStrategy)
                 .parallelProcessing()
                 .to("direct:getHotelInformation", "direct:sendEanAvailability", "direct:sendBookingAvailability",
-                        "direct:sendSabreAvailability")
-                .end()
-                .bean(hotelListResponseBuilder).choice().when(isJson)
+                        "direct:sendSabreAvailability").end().bean(hotelListResponseBuilder).choice().when(isJson)
                 .to("direct:JsonResponse").when(isXml).to("direct:XmlResponse");
 
         from("direct:JsonResponse").marshal().json(JsonLibrary.Jackson).end();

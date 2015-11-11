@@ -37,15 +37,14 @@ public class BookingClientRoute extends RouteBuilder {
 
             @Override
             public boolean matches(Exchange exchange) {
-            	@SuppressWarnings("unchecked")
-				Map<String, String> parameters = (Map<String, String>) exchange.getIn().getBody(Map.class);
-            	String idHotelBooking = parameters.get("idHotelBooking");
+                @SuppressWarnings("unchecked")
+                Map<String, String> parameters = (Map<String, String>) exchange.getIn().getBody(Map.class);
+                String idHotelBooking = parameters.get("idHotelBooking");
                 return StringUtils.isNotBlank(idHotelBooking);
             }
-        }).process(bookingProcessor)
-                .wireTap("direct:logInfo").to("cxfrs:bean:bookingClient").to("direct:transformerResposeBooking");
+        }).process(bookingProcessor).wireTap("direct:logInfo").to("cxfrs:bean:bookingClient")
+                .to("direct:transformerResposeBooking");
 
     }
- 
-    
+
 }

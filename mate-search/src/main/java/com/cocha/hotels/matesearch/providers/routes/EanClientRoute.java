@@ -28,20 +28,19 @@ public class EanClientRoute extends RouteBuilder {
 
     @Override
     public void configure() throws Exception {
-        onException(Exception.class).handled(true)
-                .setHeader(Constant.SUPPLIER, simple(CodeSupplier.EAN_SUPPLIER_CODE)).process(errorSupplierProcessor)
-                .end();
+        onException(Exception.class).handled(true).setHeader(Constant.SUPPLIER, simple(CodeSupplier.EAN_SUPPLIER_CODE))
+                .process(errorSupplierProcessor).end();
 
         from("direct:sendEanAvailability").errorHandler(loggingErrorHandler(log)).filter(new Predicate() {
 
             @Override
             public boolean matches(Exchange exchange) {
-            	@SuppressWarnings("unchecked")
-				Map<String, String> parameters = (Map<String, String>) exchange.getIn().getBody(Map.class);
-            	String idHotelEan = parameters.get("idHotelEan");
+                @SuppressWarnings("unchecked")
+                Map<String, String> parameters = (Map<String, String>) exchange.getIn().getBody(Map.class);
+                String idHotelEan = parameters.get("idHotelEan");
                 return StringUtils.isNotBlank(idHotelEan);
             }
-        }).process(eanClientProcessor)
-                .wireTap("direct:logInfo").to("cxfrs:bean:eanClient").to("direct:transfomerResposeEAN");
+        }).process(eanClientProcessor).wireTap("direct:logInfo").to("cxfrs:bean:eanClient")
+                .to("direct:transfomerResposeEAN");
     }
 }
