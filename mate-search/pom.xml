@@ -27,6 +27,7 @@
 		<es-version>1.7.1</es-version>
 		<springdata-version>1.9.0.RELEASE</springdata-version>
 		<hornetq-version>2.3.25.Final</hornetq-version>
+		<infinispan-version>5.2.11.Final</infinispan-version>
 	</properties>
 
 	<dependencies>
@@ -200,6 +201,19 @@
 			<artifactId>spring-data-elasticsearch</artifactId>
 			<version>1.2.2.RELEASE</version>
 		</dependency>
+		
+		<!-- Infinispan -->
+		<dependency>
+    		<groupId>org.infinispan</groupId>
+    		<artifactId>infinispan-core</artifactId>
+    		<version>${infinispan-version}</version>
+    		<scope>provided</scope>
+  		</dependency>
+  		<dependency>
+         	<groupId>org.infinispan</groupId>
+         	<artifactId>infinispan-spring</artifactId>
+         	<version>${infinispan-version}</version>
+      	</dependency>
 	</dependencies>
 
 	<build>
@@ -211,6 +225,11 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>${version.war.plugin}</version>
 				<configuration>
+					<archive>
+           				<manifestEntries>
+             				<Dependencies>org.infinispan services</Dependencies>
+           				</manifestEntries>
+         			</archive>
 					<webResources>
 						<resource>
 							<directory>${basedir}/cocha/lib/</directory>
