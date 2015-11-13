@@ -31,6 +31,8 @@ public class Hotel {
 
     private String longitude;
 
+    private boolean active;
+
     public String getId() {
         return id;
     }
@@ -101,6 +103,14 @@ public class Hotel {
 
     public void setLongitude(String longitude) {
         this.longitude = longitude;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    public boolean isActive() {
+        return active;
     }
 
 }

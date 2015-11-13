@@ -1,0 +1,15 @@
+<infinispan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="urn:infinispan:config:5.2 http://www.infinispan.org/schemas/infinispan-config-5.2.xsd"
+	xmlns="urn:infinispan:config:5.2">
+
+	<namedCache name="regionHotelMappings">
+	</namedCache>
+	
+	<namedCache name="hotelMappings">
+	</namedCache>
+	
+	<namedCache name="hotels">
+	</namedCache>
+
+</infinispan>
+
