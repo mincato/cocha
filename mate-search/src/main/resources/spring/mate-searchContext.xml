@@ -252,5 +252,10 @@
 		class="com.cocha.hotels.matesearch.providers.splitter.SupplierRequestSplitterByHotels"
 		p:idHotelsParameterKey="#{T(com.cocha.hotels.matesearch.util.Constant.CodeSupplier).BOOKING_SUPPLIER_ID_HOTEL}"
 		p:maxHotelsPerRequest="${mate.provider.booking.maxHotelsPerRequest}" />
+		
+	<bean id="sabreSupplierRequestSplitter"
+		class="com.cocha.hotels.matesearch.providers.splitter.SupplierRequestSplitterByHotels"
+		p:idHotelsParameterKey="#{T(com.cocha.hotels.matesearch.util.Constant.CodeSupplier).SABRE_SUPPLIER_ID_HOTEL}"
+		p:maxHotelsPerRequest="${mate.provider.sabre.maxHotelsPerRequest}" />
 	
 </beans>
