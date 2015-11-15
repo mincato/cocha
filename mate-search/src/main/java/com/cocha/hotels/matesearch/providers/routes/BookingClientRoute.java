@@ -7,10 +7,13 @@ import org.apache.camel.Predicate;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+import com.cocha.hotels.matesearch.providers.aggregators.SupplierRequestAggregationStrategy;
 import com.cocha.hotels.matesearch.providers.processors.BookingClientProcessor;
 import com.cocha.hotels.matesearch.providers.processors.ErrorSupplierProcessor;
+import com.cocha.hotels.matesearch.providers.splitter.SupplierRequestSplitter;
 import com.cocha.hotels.matesearch.util.Constant;
 import com.cocha.hotels.matesearch.util.Constant.CodeSupplier;
 
@@ -25,6 +28,13 @@ public class BookingClientRoute extends RouteBuilder {
 
     @Autowired
     private ErrorSupplierProcessor errorSupplierProcessor;
+
+    @Autowired
+    @Qualifier("bookingSupplierRequestSplitter")
+    private SupplierRequestSplitter supplierRequestSplitter;
+
+    @Autowired
+    private SupplierRequestAggregationStrategy supplierRequestAggregationStrategy;
 
     @Override
     public void configure() throws Exception {
@@ -42,9 +52,9 @@ public class BookingClientRoute extends RouteBuilder {
                 String idHotelBooking = parameters.get("idHotelBooking");
                 return StringUtils.isNotBlank(idHotelBooking);
             }
-        }).process(bookingProcessor).wireTap("direct:logInfo").to("cxfrs:bean:bookingClient")
-                .to("direct:transformerResposeBooking");
+        }).split().method(supplierRequestSplitter, "splitRequest")
+                .aggregationStrategy(supplierRequestAggregationStrategy).parallelProcessing().process(bookingProcessor)
+                .wireTap("direct:logInfo").to("cxfrs:bean:bookingClient").to("direct:transformerResposeBooking");
 
     }
-
 }
