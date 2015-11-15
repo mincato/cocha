@@ -39,8 +39,23 @@
         p:maxStatementsPerConnection="10"
         p:numHelperThreads="10"
         p:minPoolSize="10" />
+        
+    <bean id="contentDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+        destroy-method="close"
+        p:driverClass="${db.driver.classname}"
+        p:jdbcUrl="${db.connection.url.content}"
+        p:user="${db.connection.username}"
+        p:password="${db.connection.password}"
+        p:acquireIncrement="10"
+        p:idleConnectionTestPeriod="60"
+        p:maxPoolSize="150"
+        p:maxStatements="0"
+        p:maxStatementsPerConnection="10"
+        p:numHelperThreads="10"
+        p:minPoolSize="10" />
     
     
+    <!-- SECURITY DATABASE CONFIG -->
     <bean id="securityTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="securityDataSource" />
     </bean>
@@ -51,6 +66,7 @@
 	    <property name="dataSource" ref="securityDataSource" />
 	</bean>
 
+	<!-- FEEDS DATABASE CONFIG -->
 	<bean id="feedsTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="feedsDataSource" />
     </bean>
@@ -59,6 +75,17 @@
 
 	<bean id="feedsSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 	    <property name="dataSource" ref="feedsDataSource" />
+	</bean>
+	
+	<!-- CONTENT DATABASE CONFIG -->
+	<bean id="contentTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="contentDataSource" />
+    </bean>
+    
+    <tx:annotation-driven transaction-manager="contentTransactionManager" />
+
+	<bean id="contentSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+	    <property name="dataSource" ref="contentDataSource" />
 	</bean>
 
     <!-- scan for mappers and let them be autowired -->
@@ -70,5 +97,10 @@
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.cocha.hotels.matesearch.backoffice.repository.feeds" />
         <property name="sqlSessionFactoryBeanName" value="feedsSqlSessionFactory"/>
+    </bean>
+    
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.cocha.hotels.matesearch.backoffice.repository.content" />
+        <property name="sqlSessionFactoryBeanName" value="contentSqlSessionFactory"/>
     </bean>
 </beans>
