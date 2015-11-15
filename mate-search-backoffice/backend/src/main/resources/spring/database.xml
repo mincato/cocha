@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+
+    <bean id="securityDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+        destroy-method="close"
+        p:driverClass="${db.driver.classname}"
+        p:jdbcUrl="${db.connection.url.security}"
+        p:user="${db.connection.username}"
+        p:password="${db.connection.password}"
+        p:acquireIncrement="10"
+        p:idleConnectionTestPeriod="60"
+        p:maxPoolSize="150"
+        p:maxStatements="0"
+        p:maxStatementsPerConnection="10"
+        p:numHelperThreads="10"
+        p:minPoolSize="10" />
+        
+    <bean id="feedsDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+        destroy-method="close"
+        p:driverClass="${db.driver.classname}"
+        p:jdbcUrl="${db.connection.url.feeds}"
+        p:user="${db.connection.username}"
+        p:password="${db.connection.password}"
+        p:acquireIncrement="10"
+        p:idleConnectionTestPeriod="60"
+        p:maxPoolSize="150"
+        p:maxStatements="0"
+        p:maxStatementsPerConnection="10"
+        p:numHelperThreads="10"
+        p:minPoolSize="10" />
+    
+    
+    <bean id="securityTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="securityDataSource" />
+    </bean>
+    
+    <tx:annotation-driven transaction-manager="securityTransactionManager" />
+
+	<bean id="securitySqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+	    <property name="dataSource" ref="securityDataSource" />
+	</bean>
+
+	<bean id="feedsTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="feedsDataSource" />
+    </bean>
+    
+    <tx:annotation-driven transaction-manager="feedsTransactionManager" />
+
+	<bean id="feedsSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+	    <property name="dataSource" ref="feedsDataSource" />
+	</bean>
+
+    <!-- scan for mappers and let them be autowired -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.cocha.hotels.matesearch.backoffice.repository.security" />
+        <property name="sqlSessionFactoryBeanName" value="securitySqlSessionFactory"/>
+    </bean>
+    
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.cocha.hotels.matesearch.backoffice.repository.feeds" />
+        <property name="sqlSessionFactoryBeanName" value="feedsSqlSessionFactory"/>
+    </bean>
+</beans>
