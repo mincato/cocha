@@ -242,5 +242,10 @@
 	<tx:annotation-driven transaction-manager="transactionManager"/>
 
 	<jpa:repositories base-package="com.cocha.hotels.matesearch.repositories" />
+
+	<bean id="eanSupplierRequestSplitter"
+		class="com.cocha.hotels.matesearch.providers.splitter.SupplierRequestSplitterByHotels"
+		p:idHotelsParameterKey="#{T(com.cocha.hotels.matesearch.util.Constant.CodeSupplier).EAN_SUPPLIER_ID_HOTEL}"
+		p:maxHotelsPerRequest="${mate.provider.ean.maxHotelsPerRequest}" />
 	
 </beans>
