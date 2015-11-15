@@ -4,7 +4,10 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -52,5 +55,37 @@ public class HotelMappingRestService {
             return responseHandler.buildErrorResponse(e);
         }
 	}
+	
+	@POST
+    public Response createHotelMapping(@Context HttpServletRequest request, HotelMapping mapping) {
+        try {
+            mapping = hotelMappingService.create(mapping);
+            return responseHandler.buildSuccessResponse(mapping, Status.CREATED);
+        } catch (Exception e) {
+            return responseHandler.buildErrorResponse(e);
+        }
+    }
+    
+    @PUT
+    @Path("{id}")
+    public Response updateHotelMapping(@Context HttpServletRequest request, HotelMapping mapping) {
+        try {
+            mapping = hotelMappingService.update(mapping);
+            return responseHandler.buildSuccessResponse(mapping, Status.ACCEPTED);
+        } catch (Exception e) {
+            return responseHandler.buildErrorResponse(e);
+        }            
+    }
+ 
+    @DELETE
+    @Path("{id}")
+    public Response deleteHotelMapping(@Context HttpServletRequest request, @PathParam("id") Long id) {
+        try {            
+            hotelMappingService.delete(id);
+            return responseHandler.buildSuccessResponse(Status.ACCEPTED);
+        } catch (Exception e) {
+            return responseHandler.buildErrorResponse(e);
+        }            
+    }
 	
 }

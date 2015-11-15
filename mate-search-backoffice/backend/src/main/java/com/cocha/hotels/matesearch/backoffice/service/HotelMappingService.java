@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.cocha.hotels.matesearch.backoffice.repository.content.HotelMappingRepository;
 import com.cocha.hotels.matesearch.backoffice.service.exception.NotFoundException;
@@ -27,4 +28,20 @@ public class HotelMappingService {
         return mapping;
     }
 
+    @Transactional
+    public HotelMapping create(HotelMapping mapping) {
+        hotelMappingRepository.create(mapping);
+        return find(mapping.getId());
+    }
+
+    @Transactional
+    public HotelMapping update(HotelMapping mapping) {
+        hotelMappingRepository.update(mapping);
+        return find(mapping.getId());
+    }
+
+    public void delete(Long id) {
+        HotelMapping mapping = find(id);
+        hotelMappingRepository.delete(mapping);
+    }
 }
