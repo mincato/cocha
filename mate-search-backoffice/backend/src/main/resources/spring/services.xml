@@ -35,6 +35,7 @@
             <ref bean="helloRestService" />
 <!--             <ref bean="uploadDocRestService" /> -->
             <ref bean="tipoMaterialRestService" />
+            <ref bean="hotelRestService" />
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <ref bean="jsonProvider" />
