@@ -15,7 +15,7 @@ public class RateInfo {
 
     @XmlElement
     private Float lowRateBetweenSupplier;
-
+    
     @XmlElement
     private List<RateForSupplier> rateForSupplier;
 
@@ -60,5 +60,4 @@ public class RateInfo {
     public void setRateForSupplier(List<RateForSupplier> rateForSupplier) {
         this.rateForSupplier = rateForSupplier;
     }
-
 }

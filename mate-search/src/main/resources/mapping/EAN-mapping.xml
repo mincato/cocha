@@ -26,6 +26,10 @@
 			<a>rateCurrencyCode</a>
 			<b>rateCurrencyCode</b>
 		</field>
+		<field custom-converter="com.cocha.hotels.matesearch.converte.EanConverterCustom">
+			<a>roomratedetailslist.roomratedetails.rateinfos.rateinfo</a>
+			<b>averageBaseRate</b>
+		</field>		
 		<field>
 			<a>highRate</a>
 			<b>higtRate</b>

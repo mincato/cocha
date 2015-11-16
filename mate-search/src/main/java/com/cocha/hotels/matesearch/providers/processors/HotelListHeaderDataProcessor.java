@@ -66,7 +66,7 @@ public class HotelListHeaderDataProcessor implements Processor {
                 parameters.put(Constant.CURRENCY_CODE, Constant.CURRNCY_DEFAULT);
             }
 
-            parameters.put("Content-Type", (String) headers.get("Content-Type"));
+            parameters.put(Constant.CONTENT_TYPE, (String) headers.get(Constant.CONTENT_TYPE));
 
             this.putIdSuppliersAndIdMapping(parameters, providers);
 
@@ -77,9 +77,10 @@ public class HotelListHeaderDataProcessor implements Processor {
             throw e;
         }
 
-    }
+    }	
 
-    private void putIdSuppliersAndIdMapping(Map<String, Object> parameters, List<HotelMapping> providers) {
+
+	private void putIdSuppliersAndIdMapping(Map<String, Object> parameters, List<HotelMapping> providers) {
 
         String idsBooking = "";
         String idsEan = "";

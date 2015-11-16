@@ -23,8 +23,19 @@ public class RateInfoForSupplier extends Availability {
 
     @XmlElement
     private Float lowRate;
+    
+    @XmlElement
+    private Float averageBaseRate;
 
-    public String getIdSupplier() {
+    public Float getAverageBaseRate() {
+		return averageBaseRate;
+	}
+
+	public void setAverageBaseRate(Float averageBaseRate) {
+		this.averageBaseRate = averageBaseRate;
+	}
+
+	public String getIdSupplier() {
         return idSupplier;
     }
 
