@@ -9,6 +9,8 @@ public class Constant {
     public static final String ARRIVAL_DATE = "arrivalDate";
     public static final String DEPARTURE_DATE = "departureDate";
     public static final String CURRENCY_CODE = "currencyCode";
+    public static final String DIFF_DAYS = "diffDays";
+    public static final String CONTENT_TYPE = "Content-Type";
 
     public static final String HOTEL_IDS_SEPARATOR = ",";
 

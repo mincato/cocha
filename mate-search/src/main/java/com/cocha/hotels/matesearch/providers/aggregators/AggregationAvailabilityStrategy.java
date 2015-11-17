@@ -1,6 +1,10 @@
 package com.cocha.hotels.matesearch.providers.aggregators;
 
+import java.text.DecimalFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -77,10 +81,12 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 
     }
 
-    private void addRates(HotelList hotels, ResposeSuppliers resposeSuppliers, Map<String, Object> parameters) {
+    private void addRates(HotelList hotels, ResposeSuppliers resposeSuppliers, Map<String, Object> parameters) throws ParseException {
 
         List<String> ids = Arrays.asList(((String) parameters.get(Constant.ID_HOTEL)).split("\\s*,\\s*"));
 
+        Long diffDays = this.diffDays((String)parameters.get(Constant.ARRIVAL_DATE), (String) parameters.get(Constant.DEPARTURE_DATE)); 
+        
         for (String id : ids) {
 
             Optional<HotelSummary> hotelOptinal = hotels.getHotelSummary().stream()
@@ -114,8 +120,11 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
                                     .replaceFirst("^0+(?!$)", "").equals(idMapping.getSupplierSabre())).findFirst();
                     break;
             }
+            
 
             if (rateForSupplierOptional.isPresent() && this.isAvailability(rateForSupplierOptional.get())) {
+            	
+            	this.calculateAverage(rateForSupplierOptional.get(), diffDays);
 
                 this.addRate(hotelOptinal.get(), rateForSupplierOptional.get());
 
@@ -181,7 +190,21 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 
     }
 
-    private void addError(HotelSummary hotel, ErrorSupplier errorSupplier, Status statusError) {
+    private void calculateAverage(RateInfoForSupplier rateInfoForSupplier, Long diffDays) {
+    	
+    	if(!CodeSupplier.EAN_SUPPLIER_CODE.equals(rateInfoForSupplier.getCodeSupplier())) {
+
+    		Float averageRate = rateInfoForSupplier.getLowRate() / diffDays;
+    		DecimalFormat decimalFormat = new DecimalFormat("0.00");
+    		String value = decimalFormat.format(averageRate.doubleValue());
+    		averageRate = new Float(value.replace(",","."));
+    		rateInfoForSupplier.setAverageBaseRate(averageRate);
+    		
+    	}
+    	
+	}
+
+	private void addError(HotelSummary hotel, ErrorSupplier errorSupplier, Status statusError) {
 
         RateInfo rateInfo = hotel.getRateInfo();
         RateForSupplier rateForSupplier = new RateForSupplier();
@@ -190,5 +213,19 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
         rateInfo.getRateForSupplier().add(rateForSupplier);
 
     }
+	
+	private Long diffDays(String arrivalDate , String departureDate) throws ParseException {
+
+		SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy");
+		
+		Date arrival = format.parse(arrivalDate);
+		Date departure = format.parse(departureDate);
+		
+		Long diff = departure.getTime() - arrival.getTime();
+		
+		Long diffDays = diff / (24 * 60 * 60 * 1000);
+		
+		return diffDays;
+	}
 
 }

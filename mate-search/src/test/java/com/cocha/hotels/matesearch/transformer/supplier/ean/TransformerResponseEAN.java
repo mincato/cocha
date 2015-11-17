@@ -76,12 +76,6 @@ public class TransformerResponseEAN extends CamelSpringTestSupport {
             log.info("Total: "
                     + hotel.getRoomratedetailslist().getRoomratedetails().getRateinfos().getRateinfo()
                             .getChargeablerateinfo().getTotal());
-            log.info("Tipo Recargo: "
-                    + hotel.getRoomratedetailslist().getRoomratedetails().getRateinfos().getRateinfo()
-                            .getChargeablerateinfo().getSurcharges().getSurcharge().getType());
-            log.info("Recargo: "
-                    + hotel.getRoomratedetailslist().getRoomratedetails().getRateinfos().getRateinfo()
-                            .getChargeablerateinfo().getSurcharges().getSurcharge().getAmount());
             log.info("No rembolsable: "
                     + hotel.getRoomratedetailslist().getRoomratedetails().getRateinfos().getRateinfo()
                             .getNonrefundable());
