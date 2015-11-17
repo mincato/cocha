@@ -11,6 +11,7 @@ import java.util.Optional;
 
 import org.apache.camel.Exchange;
 import org.apache.camel.processor.aggregate.AggregationStrategy;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 
@@ -150,30 +151,18 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 
             IdMapping idMapping = (IdMapping) parameters.get(hotelOptinal.get().getHotelId());
 
-            switch (errorInternal.getCodeSupplier()) {
+			switch (errorInternal.getCodeSupplier()) {
 
-                case CodeSupplier.BOOKING_SUPPLIER_CODE:
-                    if (idMapping.getSupplierBooking() != null) {
-                    	errorSupplier.setIdSupplier(idMapping.getSupplierBooking());
-                    } else {
-                    	errorSupplier.setIdSupplier("");
-                    }
-                    break;
-                case CodeSupplier.EAN_SUPPLIER_CODE:
-                    if (idMapping.getSupplierEAN() != null) {
-                    	errorSupplier.setIdSupplier(idMapping.getSupplierEAN());
-                    } else {
-                    	errorSupplier.setIdSupplier("");
-                    }
-                    break;
-                case CodeSupplier.SABRE_SUPPLIER_CODE:
-                    if (idMapping.getSupplierSabre() != null) {
-                    	errorSupplier.setIdSupplier(idMapping.getSupplierSabre());
-                    } else {
-                    	errorSupplier.setIdSupplier("");
-                    }
-                    break;
-            }
+			case CodeSupplier.BOOKING_SUPPLIER_CODE:
+				errorSupplier.setIdSupplier(idMapping.getSupplierBooking());
+				break;
+			case CodeSupplier.EAN_SUPPLIER_CODE:
+				errorSupplier.setIdSupplier(idMapping.getSupplierEAN());
+				break;
+			case CodeSupplier.SABRE_SUPPLIER_CODE:
+				errorSupplier.setIdSupplier(idMapping.getSupplierSabre());
+				break;
+			}
             this.addError(hotelOptinal.get(), errorSupplier, new Status("500", errorInternal.getCause()));
         }
     }
@@ -206,11 +195,13 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 
 	private void addError(HotelSummary hotel, ErrorSupplier errorSupplier, Status statusError) {
 
-        RateInfo rateInfo = hotel.getRateInfo();
-        RateForSupplier rateForSupplier = new RateForSupplier();
-        rateForSupplier.setStatus(statusError);
-        rateForSupplier.setAvailability(errorSupplier);
-        rateInfo.getRateForSupplier().add(rateForSupplier);
+		if(!StringUtils.isBlank(errorSupplier.getIdSupplier())) {
+			RateInfo rateInfo = hotel.getRateInfo();
+			RateForSupplier rateForSupplier = new RateForSupplier();
+			rateForSupplier.setStatus(statusError);
+			rateForSupplier.setAvailability(errorSupplier);
+			rateInfo.getRateForSupplier().add(rateForSupplier);			
+		}
 
     }
 	
