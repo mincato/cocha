@@ -12,7 +12,7 @@ public interface HotelRepository {
     @Select("SELECT * FROM Hotel")
     List<Hotel> findAll();
 
-    @Select("SELECT * FROM Hotel WHERE id = #{id}")
-    Hotel findOne(@Param("id") Long id);
+    @Select("SELECT * FROM Hotel WHERE id = #{hotelId} AND supplierCode = #{supplierCode}")
+    Hotel findOne(@Param("hotelId") String hotelId, @Param("supplierCode") String supplierCode);
 
 }

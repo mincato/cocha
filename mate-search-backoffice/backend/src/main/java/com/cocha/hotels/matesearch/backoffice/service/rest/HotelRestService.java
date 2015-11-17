@@ -33,10 +33,10 @@ public class HotelRestService {
     private RestResponseHandler responseHandler;
 	
     @GET
-    @Path("{id}")
-    public Response getHotel(@Context HttpServletRequest request, @PathParam("id") Long id) {
+    @Path("{supplierCode}/{id}")
+    public Response getHotel(@Context HttpServletRequest request, @PathParam("id") String id, @PathParam("supplierCode") String supplierCode) {
         try {
-            Hotel hotel = hotelService.find(id);
+            Hotel hotel = hotelService.find(id, supplierCode);
             return responseHandler.buildSuccessResponse(hotel, Status.OK);
         } catch (Exception e) {
             return responseHandler.buildErrorResponse(e);

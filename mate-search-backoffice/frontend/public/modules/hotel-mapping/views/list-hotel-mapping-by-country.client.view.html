@@ -1,0 +1,36 @@
+<section data-ng-controller="HotelMappingController" data-ng-init="findMappings()">
+    <div class="page-header">
+        <h1>Los mapeos de hoteles de {{countryCode}}</h1>
+    </div>
+    <div class="list-group">
+        <table class="table table-condensed table-striped">
+            <thead>
+                <tr>
+                    <th>ID de Hotel</th>
+                    <th>Nivel de Confianza (%)</th>
+                    <th>Activo?</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="hotelMapping in hotelMappings">
+                    <td data-ng-bind="hotelMapping.hotelId"></td>
+                    <td data-ng-bind="hotelMapping.confidence"></td>
+                    <td data-ng-bind="hotelMapping.active"></td>
+                    <td>
+                        <button type="button" 
+                                class="btn btn-sm btn-success" 
+                                data-ng-click="goToReviewMapping(hotelMapping)">
+                            Revisar
+                        </button>
+                        <button type="button" 
+                                class="btn btn-sm btn-danger" 
+                                data-ng-click="deactivate(hotelMapping)">
+                            Desactivar
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>

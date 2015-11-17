@@ -4,6 +4,8 @@
 angular.module('hotel-mapping').controller('HotelMappingController', ['$scope', '$stateParams', '$location', 'HotelMappingService',
 	function($scope, $stateParams, $location, HotelMappingService) {
 
+        $scope.howMany = 10;
+        
 		// Create new Hotel Mapping
 		$scope.create = function() {
 			// Create new Hotel Mapping object
@@ -56,12 +58,41 @@ angular.module('hotel-mapping').controller('HotelMappingController', ['$scope', 
 		$scope.find = function() {
 			$scope.hotelMappings = HotelMappingService.query();
 		};
+        
+        $scope.findTopCountries = function() {
+            $scope.mappingCounts = HotelMappingService.queryTopCountries({
+                howMany : $scope.howMany
+            });
+        };
+        
+        $scope.findMappings = function() {
+            $scope.hotelMappings = HotelMappingService.queryByCountry({
+                id : $stateParams.countryCode
+            });
+        };
 
 		// Find existing Hotel Mapping
 		$scope.findOne = function() {
 			$scope.hotelMapping = HotelMappingService.get({
-				hotelMappingId: $stateParams.hotelMappingId
+				id: $stateParams.hotelMappingId
 			});
 		};
+        
+        $scope.deactivate = function(mapping) {
+            mapping.active = false;
+            mapping.$update(function() {
+				$scope.goToListByCountry($stateParams.countryCode);
+			}, function(errorResponse) {
+				$scope.error = errorResponse.data.message;
+			});
+        };
+        
+        $scope.goToListByCountry = function(countryCode) {
+            $location.path('hoteles/mapping/country/' + countryCode);
+        };
+        
+        $scope.goToReviewMapping = function(mapping) {
+            $location.path('hoteles/mapping/review/' + mapping.id);
+        };
 	}
 ]);

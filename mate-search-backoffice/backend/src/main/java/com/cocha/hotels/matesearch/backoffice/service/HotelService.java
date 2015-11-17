@@ -19,8 +19,8 @@ public class HotelService {
         return hotelRepository.findAll();
     }
 
-    public Hotel find(Long id) {
-        Hotel hotel = hotelRepository.findOne(id);
+    public Hotel find(String id, String supplierCode) {
+        Hotel hotel = hotelRepository.findOne(id, supplierCode);
         if (hotel == null) {
             throw new NotFoundException();
         }

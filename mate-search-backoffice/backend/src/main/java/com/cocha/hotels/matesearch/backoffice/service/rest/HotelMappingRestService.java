@@ -11,6 +11,7 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -19,6 +20,8 @@ import javax.ws.rs.core.Response.Status;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.cocha.hotels.matesearch.backoffice.model.HotelMappingCount;
+import com.cocha.hotels.matesearch.backoffice.model.HotelMappingReview;
 import com.cocha.hotels.matesearch.backoffice.service.HotelMappingService;
 import com.cocha.hotels.matesearch.backoffice.util.RestResponseHandler;
 import com.cocha.hotels.model.content.mapping.HotelMapping;
@@ -36,25 +39,38 @@ public class HotelMappingRestService {
     private RestResponseHandler responseHandler;
 	
     @GET
-    @Path("{id}")
+    @Path("review/{id}")
     public Response getHotelMapping(@Context HttpServletRequest request, @PathParam("id") Long id) {
         try {
-            HotelMapping mapping = hotelMappingService.find(id);
-            return responseHandler.buildSuccessResponse(mapping, Status.OK);
+            HotelMappingReview review = hotelMappingService.findReview(id);
+            return responseHandler.buildSuccessResponse(review, Status.OK);
         } catch (Exception e) {
             return responseHandler.buildErrorResponse(e);
-        }    	
+        }       
     }
 	
 	@GET
-	public Response getAll(@Context HttpServletRequest request) {
+	@Path("country/{id}")
+    public Response getAllByCountry(@Context HttpServletRequest request, @PathParam("id") String id) {
         try {
-        	List<HotelMapping> mappings = hotelMappingService.getAll();
+            List<HotelMapping> mappings = hotelMappingService.getAllByCountry(id);
             return responseHandler.buildSuccessResponse(mappings, Status.OK);
         } catch (Exception e) {
             return responseHandler.buildErrorResponse(e);
         }
-	}
+    }
+	
+	@GET
+	@Path("top")
+    public Response getTopMappings(@Context HttpServletRequest request, @QueryParam("howMany") Integer howMany) {
+        try {
+            
+            List<HotelMappingCount> mappingCount = hotelMappingService.getTopMappings(howMany);
+            return responseHandler.buildSuccessResponse(mappingCount, Status.OK);
+        } catch (Exception e) {
+            return responseHandler.buildErrorResponse(e);
+        }
+    }
 	
 	@POST
     public Response createHotelMapping(@Context HttpServletRequest request, HotelMapping mapping) {
