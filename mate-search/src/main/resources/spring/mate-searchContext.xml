@@ -263,14 +263,21 @@
 		
 	<hz:client id="client">
 		<hz:group name="${hazelcast.cluster.group.name}" password="${hazelcast.cluster.group.password}" />
-		<hz:network connection-attempt-limit="#{T(java.lang.Integer).MAX_VALUE}"
-					connection-attempt-period="3000"
-					connection-timeout="1000"
+		<hz:network connection-attempt-limit="${hazelcast.cluster.network.connectionAttemptLimit}"
+					connection-attempt-period="${hazelcast.cluster.network.connectionAttemptPeriod}"
+					connection-timeout="${hazelcast.cluster.network.connectionTimeout}"
 					redo-operation="true"
 					smart-routing="true">
-			<hz:member>localhost:5701</hz:member>
-			<hz:member>localhost:5702</hz:member>
+			<hz:member>${hazelcast.cluster.member.address}</hz:member>
 		</hz:network>
+		<hz:near-cache name="availability" 
+					   max-size="${hazelcast.nearcache.map.availability.maxSize}" 
+					   time-to-live-seconds="${hazelcast.nearcache.map.availability.timeToLiveSeconds}"
+		               max-idle-seconds="${hazelcast.nearcache.map.availability.maxIdleSeconds}" 
+		               eviction-policy="${hazelcast.nearcache.map.availability.evictionPolicy}" 
+		               invalidate-on-change="${hazelcast.nearcache.map.availability.invalidateOnChange}"
+		               in-memory-format="${hazelcast.nearcache.map.availability.inMemoryFormat}">
+		</hz:near-cache>
 	</hz:client>
 	
 	<hz:map id="availability" name="availability" instance-ref="client"/>
