@@ -7,10 +7,13 @@ import org.apache.camel.Predicate;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+import com.cocha.hotels.matesearch.providers.aggregators.SupplierRequestAggregationStrategy;
 import com.cocha.hotels.matesearch.providers.processors.EanClientProcessor;
 import com.cocha.hotels.matesearch.providers.processors.ErrorSupplierProcessor;
+import com.cocha.hotels.matesearch.providers.splitter.SupplierRequestSplitter;
 import com.cocha.hotels.matesearch.util.Constant;
 import com.cocha.hotels.matesearch.util.Constant.CodeSupplier;
 
@@ -26,6 +29,13 @@ public class EanClientRoute extends RouteBuilder {
     @Autowired
     private ErrorSupplierProcessor errorSupplierProcessor;
 
+    @Autowired
+    @Qualifier("eanSupplierRequestSplitter")
+    private SupplierRequestSplitter supplierRequestSplitter;
+
+    @Autowired
+    private SupplierRequestAggregationStrategy supplierRequestAggregationStrategy;
+
     @Override
     public void configure() throws Exception {
         onException(Exception.class).handled(true).setHeader(Constant.SUPPLIER, simple(CodeSupplier.EAN_SUPPLIER_CODE))
@@ -40,7 +50,9 @@ public class EanClientRoute extends RouteBuilder {
                 String idHotelEan = parameters.get("idHotelEan");
                 return StringUtils.isNotBlank(idHotelEan);
             }
-        }).process(eanClientProcessor).wireTap("direct:logInfo").to("cxfrs:bean:eanClient")
+        }).split().method(supplierRequestSplitter, "splitRequest")
+                .aggregationStrategy(supplierRequestAggregationStrategy).parallelProcessing()
+                .process(eanClientProcessor).wireTap("direct:logInfo").to("cxfrs:bean:eanClient")
                 .to("direct:transfomerResposeEAN");
     }
 }

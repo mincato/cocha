@@ -10,6 +10,8 @@ public class Constant {
     public static final String DEPARTURE_DATE = "departureDate";
     public static final String CURRENCY_CODE = "currencyCode";
 
+    public static final String HOTEL_IDS_SEPARATOR = ",";
+
     public interface CodeSupplier {
 
         public static final String BOOKING_SUPPLIER_CODE = "BKG";
