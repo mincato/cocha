@@ -1,5 +1,6 @@
 package com.cocha.hotels.matesearch.providers.aggregators;
 
+import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
@@ -192,8 +193,11 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
     private void calculateAverage(RateInfoForSupplier rateInfoForSupplier, Long diffDays) {
     	
     	if(!CodeSupplier.EAN_SUPPLIER_CODE.equals(rateInfoForSupplier.getCodeSupplier())) {
-    		
+
     		Float averageRate = rateInfoForSupplier.getLowRate() / diffDays;
+    		DecimalFormat decimalFormat = new DecimalFormat("0.00");
+    		String value = decimalFormat.format(averageRate.doubleValue());
+    		averageRate = new Float(value.replace(",","."));
     		rateInfoForSupplier.setAverageBaseRate(averageRate);
     		
     	}
