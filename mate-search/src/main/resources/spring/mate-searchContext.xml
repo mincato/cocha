@@ -15,6 +15,7 @@
     xmlns:elasticsearch="http://www.springframework.org/schema/data/elasticsearch"
     xmlns:cache="http://www.springframework.org/schema/cache"
     xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:hz="http://www.hazelcast.com/schema/spring"
 	  	  		
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 	http://www.springframework.org/schema/beans/spring-beans.xsd
@@ -41,7 +42,9 @@
     http://www.springframework.org/schema/data/elasticsearch
     http://www.springframework.org/schema/data/elasticsearch/spring-elasticsearch-1.0.xsd
     http://www.springframework.org/schema/cache
-    http://www.springframework.org/schema/cache/spring-cache.xsd">    
+    http://www.springframework.org/schema/cache/spring-cache.xsd
+	http://www.hazelcast.com/schema/spring
+	http://www.hazelcast.com/schema/spring/hazelcast-spring-3.5.xsd">    
     
 	<import resource="classpath:META-INF/cxf/cxf.xml" />
 	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
@@ -257,5 +260,30 @@
 		class="com.cocha.hotels.matesearch.providers.splitter.SupplierRequestSplitterByHotels"
 		p:idHotelsParameterKey="#{T(com.cocha.hotels.matesearch.util.Constant.CodeSupplier).SABRE_SUPPLIER_ID_HOTEL}"
 		p:maxHotelsPerRequest="${mate.provider.sabre.maxHotelsPerRequest}" />
+		
+	<hz:client id="client">
+		<hz:group name="${hazelcast.cluster.group.name}" password="${hazelcast.cluster.group.password}" />
+		<hz:network connection-attempt-limit="${hazelcast.cluster.network.connectionAttemptLimit}"
+					connection-attempt-period="${hazelcast.cluster.network.connectionAttemptPeriod}"
+					connection-timeout="${hazelcast.cluster.network.connectionTimeout}"
+					redo-operation="true"
+					smart-routing="true">
+			<hz:member>${hazelcast.cluster.member.address}</hz:member>
+		</hz:network>
+		<hz:near-cache name="availability" 
+					   max-size="${hazelcast.nearcache.map.availability.maxSize}" 
+					   time-to-live-seconds="${hazelcast.nearcache.map.availability.timeToLiveSeconds}"
+		               max-idle-seconds="${hazelcast.nearcache.map.availability.maxIdleSeconds}" 
+		               eviction-policy="${hazelcast.nearcache.map.availability.evictionPolicy}" 
+		               invalidate-on-change="${hazelcast.nearcache.map.availability.invalidateOnChange}"
+		               in-memory-format="${hazelcast.nearcache.map.availability.inMemoryFormat}">
+		</hz:near-cache>
+	</hz:client>
+	
+	<hz:map id="availability" name="availability" instance-ref="client"/>
+	
+	<bean id="hazelcast" class="org.apache.camel.component.hazelcast.HazelcastComponent">
+		<property name="hazelcastInstance" ref="client"/>
+	</bean>
 	
 </beans>

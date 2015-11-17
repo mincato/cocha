@@ -28,6 +28,7 @@
 		<springdata-version>1.9.0.RELEASE</springdata-version>
 		<hornetq-version>2.3.25.Final</hornetq-version>
 		<infinispan-version>5.2.11.Final</infinispan-version>
+		<hazelcast-version>3.5.3</hazelcast-version>
 	</properties>
 
 	<dependencies>
@@ -113,6 +114,11 @@
 		<dependency>
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-jaxb</artifactId>
+			<version>${camel-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-hazelcast</artifactId>
 			<version>${camel-version}</version>
 		</dependency>
 
@@ -214,7 +220,25 @@
          	<artifactId>infinispan-spring</artifactId>
          	<version>${infinispan-version}</version>
       	</dependency>
+
+		<!-- Hazelcast -->
+		<dependency>
+			<groupId>com.hazelcast</groupId>
+			<artifactId>hazelcast</artifactId>
+			<version>${hazelcast-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.hazelcast</groupId>
+			<artifactId>hazelcast-client</artifactId>
+			<version>${hazelcast-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.hazelcast</groupId>
+			<artifactId>hazelcast-spring</artifactId>
+			<version>${hazelcast-version}</version>
+		</dependency>
 	</dependencies>
+	
 
 	<build>
 		<!-- Maven will append the version to the finalName (which is the name 
