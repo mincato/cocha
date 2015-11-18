@@ -24,7 +24,36 @@ angular.module('hotel-mapping').factory('HotelMappingService', ['$resource', 'Co
                 params: {
                     operation: 'country'
                 }
+            },
+            getReview: {
+                method: 'GET',
+                isArray: false,
+                params: {
+                    operation: 'review'
+                }
+            },
+            confirm: {
+                method: 'PUT',
+                isArray: false,
+                params: {
+                    operation: 'confirm'
+                }
+            },
+            reject: {
+                method: 'PUT',
+                isArray: false,
+                params: {
+                    operation: 'reject'
+                }
+            },
+            deactivate: {
+                method: 'PUT',
+                isArray: false,
+                params: {
+                    operation: 'deactivate'
+                }
             }
+            
 		});
 	}
 ]);
