@@ -11,6 +11,7 @@ import java.util.Optional;
 
 import org.apache.camel.Exchange;
 import org.apache.camel.processor.aggregate.AggregationStrategy;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 
@@ -55,7 +56,7 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
                 resposeSuppliers = newExchange.getIn().getBody(ResposeSuppliers.class);
 
                 this.addRates(hotels, resposeSuppliers, parameters);
-
+                
                 oldExchange.getIn().setBody(hotels);
 
             } else if (newExchange.getIn().getBody(ErrorInternal.class) instanceof ErrorInternal) {
@@ -81,7 +82,7 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 
     }
 
-    private void addRates(HotelList hotels, ResposeSuppliers resposeSuppliers, Map<String, Object> parameters) throws ParseException {
+	private void addRates(HotelList hotels, ResposeSuppliers resposeSuppliers, Map<String, Object> parameters) throws ParseException {
 
         List<String> ids = Arrays.asList(((String) parameters.get(Constant.ID_HOTEL)).split("\\s*,\\s*"));
 
@@ -121,72 +122,96 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
                     break;
             }
             
-
-            if (rateForSupplierOptional.isPresent() && this.isAvailability(rateForSupplierOptional.get())) {
+            
+            if (rateForSupplierOptional.isPresent()) {
             	
-            	this.calculateAverage(rateForSupplierOptional.get(), diffDays);
+            	if(this.isAvailability(rateForSupplierOptional.get())) {
 
-                this.addRate(hotelOptinal.get(), rateForSupplierOptional.get());
-
+            		this.calculateAverage(rateForSupplierOptional.get(), diffDays);
+            		
+            		this.addRate(hotelOptinal.get(), rateForSupplierOptional.get());
+            		
+            	} else {
+            		this.addNotAvailability(hotelOptinal.get(), rateForSupplierOptional.get());
+            	}
+       
+            } else if(resposeSuppliers.getRateForSupplier().isEmpty()) {
+            	RateInfoForSupplier rateInfoForSupplier = new RateInfoForSupplier();
+            	rateInfoForSupplier.setIdSupplier(idMapping.getSupplierBooking());
+            	rateInfoForSupplier.setCodeSupplier(resposeSuppliers.getCodeSupplier());
+            	this.addNotAvailability(hotelOptinal.get(), rateInfoForSupplier);
             }
         }
 
-    }
-
-    private boolean isAvailability(RateInfoForSupplier rateInfoForSupplier) {
-        return rateInfoForSupplier.getLowRate() != null && rateInfoForSupplier.getHigtRate() != null;
-    }
-
-    private void addErrors(HotelList hotels, ErrorInternal errorInternal, Map<String, Object> parameters) {
-
-        List<String> ids = Arrays.asList(((String) parameters.get(Constant.ID_HOTEL)).split("\\s*,\\s*"));
-
-        for (String id : ids) {
-        	
-        	ErrorSupplier errorSupplier = new ErrorSupplier(errorInternal.getCodeSupplier());
-
-            Optional<HotelSummary> hotelOptinal = hotels.getHotelSummary().stream()
-                    .filter((HotelSummary hotel) -> hotel.getHotelId().equals(id)).findFirst();
-
-            IdMapping idMapping = (IdMapping) parameters.get(hotelOptinal.get().getHotelId());
-
-            switch (errorInternal.getCodeSupplier()) {
-
-                case CodeSupplier.BOOKING_SUPPLIER_CODE:
-                    if (idMapping.getSupplierBooking() != null) {
-                    	errorSupplier.setIdSupplier(idMapping.getSupplierBooking());
-                    } else {
-                    	errorSupplier.setIdSupplier("");
-                    }
-                    break;
-                case CodeSupplier.EAN_SUPPLIER_CODE:
-                    if (idMapping.getSupplierEAN() != null) {
-                    	errorSupplier.setIdSupplier(idMapping.getSupplierEAN());
-                    } else {
-                    	errorSupplier.setIdSupplier("");
-                    }
-                    break;
-                case CodeSupplier.SABRE_SUPPLIER_CODE:
-                    if (idMapping.getSupplierSabre() != null) {
-                    	errorSupplier.setIdSupplier(idMapping.getSupplierSabre());
-                    } else {
-                    	errorSupplier.setIdSupplier("");
-                    }
-                    break;
-            }
-            this.addError(hotelOptinal.get(), errorSupplier, new Status("500", errorInternal.getCause()));
-        }
     }
 
     private void addRate(HotelSummary hotel, RateInfoForSupplier rateInfoForSupplier) {
+	
+	    RateInfo rateInfo = hotel.getRateInfo();
+	    rateInfo.updateRatesHightandLow(rateInfoForSupplier.getHigtRate(), rateInfoForSupplier.getLowRate());
+	    Status status = new Status("200", "success");
+	    RateForSupplier rateForSupplier = new RateForSupplier();
+	    rateForSupplier.setStatus(status);
+	    rateForSupplier.setAvailability((RateInfoForSupplier) rateInfoForSupplier);
+	    rateInfo.getRateForSupplier().add(rateForSupplier);
+	
+	}
 
-        RateInfo rateInfo = hotel.getRateInfo();
-        rateInfo.updateRatesHightandLow(rateInfoForSupplier.getHigtRate(), rateInfoForSupplier.getLowRate());
-        Status status = new Status("200", "success");
-        RateForSupplier rateForSupplier = new RateForSupplier();
-        rateForSupplier.setStatus(status);
-        rateForSupplier.setAvailability((RateInfoForSupplier) rateInfoForSupplier);
-        rateInfo.getRateForSupplier().add(rateForSupplier);
+	private void addErrors(HotelList hotels, ErrorInternal errorInternal, Map<String, Object> parameters) {
+	
+	    List<String> ids = Arrays.asList(((String) parameters.get(Constant.ID_HOTEL)).split("\\s*,\\s*"));
+	
+	    for (String id : ids) {
+	    	
+	    	ErrorSupplier errorSupplier = new ErrorSupplier(errorInternal.getCodeSupplier());
+	
+	        Optional<HotelSummary> hotelOptinal = hotels.getHotelSummary().stream()
+	                .filter((HotelSummary hotel) -> hotel.getHotelId().equals(id)).findFirst();
+	
+	        IdMapping idMapping = (IdMapping) parameters.get(hotelOptinal.get().getHotelId());
+	
+			switch (errorInternal.getCodeSupplier()) {
+	
+			case CodeSupplier.BOOKING_SUPPLIER_CODE:
+				errorSupplier.setIdSupplier(idMapping.getSupplierBooking());
+				break;
+			case CodeSupplier.EAN_SUPPLIER_CODE:
+				errorSupplier.setIdSupplier(idMapping.getSupplierEAN());
+				break;
+			case CodeSupplier.SABRE_SUPPLIER_CODE:
+				errorSupplier.setIdSupplier(idMapping.getSupplierSabre());
+				break;
+			}
+	        this.addError(hotelOptinal.get(), errorSupplier, new Status("500", errorInternal.getCause()));
+	    }
+	}
+
+	private void addError(HotelSummary hotel, ErrorSupplier errorSupplier, Status statusError) {
+	
+		if(!StringUtils.isBlank(errorSupplier.getIdSupplier())) {
+			RateInfo rateInfo = hotel.getRateInfo();
+			RateForSupplier rateForSupplier = new RateForSupplier();
+			rateForSupplier.setStatus(statusError);
+			rateForSupplier.setAvailability(errorSupplier);
+			rateInfo.getRateForSupplier().add(rateForSupplier);			
+		}
+	
+	}
+
+	private void addNotAvailability(HotelSummary hotelSummary, RateInfoForSupplier rateInfoForSupplier) {
+		
+	    RateInfo rateInfo = hotelSummary.getRateInfo();
+	    Status status = new Status("201", "No Availability");
+	    RateForSupplier rateForSupplier = new RateForSupplier();
+	    rateForSupplier.setStatus(status);
+	    rateForSupplier.setAvailability((RateInfoForSupplier) rateInfoForSupplier);
+	    rateInfo.getRateForSupplier().add(rateForSupplier);
+		
+	}
+
+	private boolean isAvailability(RateInfoForSupplier rateInfoForSupplier) {
+ 
+    	return rateInfoForSupplier.getLowRate() != null && rateInfoForSupplier.getHigtRate() != null;
 
     }
 
@@ -204,16 +229,6 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
     	
 	}
 
-	private void addError(HotelSummary hotel, ErrorSupplier errorSupplier, Status statusError) {
-
-        RateInfo rateInfo = hotel.getRateInfo();
-        RateForSupplier rateForSupplier = new RateForSupplier();
-        rateForSupplier.setStatus(statusError);
-        rateForSupplier.setAvailability(errorSupplier);
-        rateInfo.getRateForSupplier().add(rateForSupplier);
-
-    }
-	
 	private Long diffDays(String arrivalDate , String departureDate) throws ParseException {
 
 		SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy");

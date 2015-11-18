@@ -209,6 +209,7 @@ public class SabreClientProcessor implements Processor {
             	SessionDTO sessionDTO = sabreSessionSvc.openAvailabilitySession(confJmsDTO);; 				
 
             	if(sessionDTO != null && StringUtils.isNoneBlank(sessionDTO.getSecurityToken())) {
+            		log.info(sessionDTO.getSecurityToken());
             		security.setBinarySecurityToken(sessionDTO.getSecurityToken());        		
             	} else {
             		throw new Exception("No se pudo obtener el token de suguridad de sabre");
