@@ -39,7 +39,7 @@ public class HotelMappingRestService {
     private RestResponseHandler responseHandler;
 	
     @GET
-    @Path("review/{id}")
+    @Path("{id}/review")
     public Response getHotelMapping(@Context HttpServletRequest request, @PathParam("id") Long id) {
         try {
             HotelMappingReview review = hotelMappingService.findReview(id);
@@ -50,10 +50,10 @@ public class HotelMappingRestService {
     }
 	
 	@GET
-	@Path("country/{id}")
-    public Response getAllByCountry(@Context HttpServletRequest request, @PathParam("id") String id) {
+	@Path("byCountry")
+    public Response getAllByCountry(@Context HttpServletRequest request, @QueryParam("countryCode") String countryCode) {
         try {
-            List<HotelMapping> mappings = hotelMappingService.getAllByCountry(id);
+            List<HotelMapping> mappings = hotelMappingService.getAllByCountry(countryCode);
             return responseHandler.buildSuccessResponse(mappings, Status.OK);
         } catch (Exception e) {
             return responseHandler.buildErrorResponse(e);
@@ -83,10 +83,43 @@ public class HotelMappingRestService {
     }
     
     @PUT
-    @Path("{id}")
-    public Response updateHotelMapping(@Context HttpServletRequest request, HotelMapping mapping) {
+    @Path("{id}/confirm")
+    public Response confirmHotelMapping(@Context HttpServletRequest request, @PathParam("id") Long id) {
         try {
-            mapping = hotelMappingService.update(mapping);
+            hotelMappingService.confirmMapping(id);
+            return responseHandler.buildSuccessResponse(Status.ACCEPTED);
+        } catch (Exception e) {
+            return responseHandler.buildErrorResponse(e);
+        }            
+    }
+    
+    @PUT
+    @Path("{id}/reject")
+    public Response rejectHotelMapping(@Context HttpServletRequest request, @PathParam("id") Long id) {
+        try {
+            hotelMappingService.rejectMapping(id);
+            return responseHandler.buildSuccessResponse(Status.ACCEPTED);
+        } catch (Exception e) {
+            return responseHandler.buildErrorResponse(e);
+        }            
+    }
+    
+    @PUT
+    @Path("{id}/deactivate")
+    public Response deactivateHotelMapping(@Context HttpServletRequest request, @PathParam("id") Long id) {
+        try {
+            HotelMapping mapping = hotelMappingService.deactivateMapping(id);
+            return responseHandler.buildSuccessResponse(mapping, Status.ACCEPTED);
+        } catch (Exception e) {
+            return responseHandler.buildErrorResponse(e);
+        }            
+    }
+    
+    @PUT
+    @Path("{id}/activate")
+    public Response activateHotelMapping(@Context HttpServletRequest request, @PathParam("id") Long id) {
+        try {
+            HotelMapping mapping = hotelMappingService.activateMapping(id);
             return responseHandler.buildSuccessResponse(mapping, Status.ACCEPTED);
         } catch (Exception e) {
             return responseHandler.buildErrorResponse(e);

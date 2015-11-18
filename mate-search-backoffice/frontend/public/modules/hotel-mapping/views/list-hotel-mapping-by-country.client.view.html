@@ -18,16 +18,27 @@
                     <td data-ng-bind="hotelMapping.confidence"></td>
                     <td data-ng-bind="hotelMapping.active"></td>
                     <td>
-                        <button type="button" 
-                                class="btn btn-sm btn-success" 
-                                data-ng-click="goToReviewMapping(hotelMapping)">
-                            Revisar
-                        </button>
-                        <button type="button" 
-                                class="btn btn-sm btn-danger" 
-                                data-ng-click="deactivate(hotelMapping)">
-                            Desactivar
-                        </button>
+                        <div class="btn-group" role="group" aria-label="revisión y activación">
+                            <button type="button" 
+                                    class="btn btn-sm btn-primary" 
+                                    data-ng-click="goToReviewMapping(hotelMapping)">
+                                Revisar
+                            </button>
+<!--
+                            <button type="button" 
+                                    class="btn btn-sm btn-info" 
+                                    data-ng-click="activate(hotelMapping)"
+                                    data-ng-disabled="hotelMapping.active">
+                                Activar
+                            </button>
+                            <button type="button" 
+                                    class="btn btn-sm btn-danger" 
+                                    data-ng-click="deactivate(hotelMapping)"
+                                    data-ng-disabled="!hotelMapping.active">
+                                Desactivar
+                            </button>
+-->
+                        </div>
                     </td>
                 </tr>
             </tbody>

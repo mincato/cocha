@@ -5,6 +5,7 @@ angular.module('hotel-mapping').controller('HotelMappingController', ['$scope', 
 	function($scope, $stateParams, $location, HotelMappingService) {
 
         $scope.howMany = 10;
+        $scope.countryCode = $stateParams.countryCode;
         
 		// Create new Hotel Mapping
 		$scope.create = function() {
@@ -67,7 +68,7 @@ angular.module('hotel-mapping').controller('HotelMappingController', ['$scope', 
         
         $scope.findMappings = function() {
             $scope.hotelMappings = HotelMappingService.queryByCountry({
-                id : $stateParams.countryCode
+                countryCode : $stateParams.countryCode
             });
         };
 
@@ -78,10 +79,25 @@ angular.module('hotel-mapping').controller('HotelMappingController', ['$scope', 
 			});
 		};
         
+        $scope.activate = function(mapping) {
+            HotelMappingService.activate({ id : mapping.id }, function(response) {
+				for (var i in $scope.hotelMappings) {
+					if ($scope.hotelMappings [i].id === response.id) {
+						$scope.hotelMappings [i] = response;
+					}
+				}
+			}, function(errorResponse) {
+				$scope.error = errorResponse.data.message;
+			});
+        };
+        
         $scope.deactivate = function(mapping) {
-            mapping.active = false;
-            mapping.$update(function() {
-				$scope.goToListByCountry($stateParams.countryCode);
+            HotelMappingService.deactivate({ id : mapping.id }, function(response) {
+				for (var i in $scope.hotelMappings) {
+					if ($scope.hotelMappings [i].id === response.id) {
+						$scope.hotelMappings [i] = response;
+					}
+				}
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
 			});

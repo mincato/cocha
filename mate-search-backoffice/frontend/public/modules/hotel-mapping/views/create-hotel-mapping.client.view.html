@@ -1,29 +1,101 @@
 <section data-ng-controller="HotelMappingController">
     <div class="page-header">
-        <h1>Nuevo Mapeo de Hoteles</h1>
-    </div>
-    <div class="col-md-12">
-        <form class="form-horizontal" data-ng-submit="create()" novalidate>
-            <fieldset>
-                <div class="form-group">
-                    <label class="control-label" for="codigo">Código</label>
-                    <div class="controls">
-                        <input type="text" data-ng-model="codigo" id="codigo" class="form-control" placeholder="Código" required>
-                    </div>
+		<h1>Nuevo mapeo de hoteles</h1>
+	</div>
+    
+	<div class="panel panel-default">
+        <div class="panel-heading">
+            Busque por ID de los hoteles a mapear
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Hotel ID de EAN...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary" type="button">Buscar</button>
+                        </span>
+                    </div><!-- /input-group -->
+                </div><!-- /.col-lg-6 -->
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Hotel ID de BKG...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary" type="button">Buscar</button>
+                        </span>
+                    </div><!-- /input-group -->
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+        </div>
+        <table class="table table-condensed table-striped">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Hotel de Referencia</th>
+                    <th>Hotel Mapeado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Supplier</td>
+                    <td data-ng-bind="mappingReview.reference.supplierCode"></td>
+                    <td data-ng-bind="mappingReview.mapped.supplierCode"></td>
+                </tr>
+
+                <tr>
+                    <td>Nombre</td>
+                    <td data-ng-bind="mappingReview.reference.name"></td>
+                    <td data-ng-bind="mappingReview.mapped.name"></td>
+                </tr>
+
+                <tr>
+                    <td>Dirección</td>
+                    <td data-ng-bind="mappingReview.reference.address"></td>
+                    <td data-ng-bind="mappingReview.mapped.address"></td>
+                </tr>
+
+                <tr>
+                    <td>Latitud</td>
+                    <td data-ng-bind="mappingReview.reference.latitude"></td>
+                    <td data-ng-bind="mappingReview.mapped.latitude"></td>
+                </tr>
+                <tr>
+                    <td>Longitud</td>
+                    <td data-ng-bind="mappingReview.reference.longitude"></td>
+                    <td data-ng-bind="mappingReview.mapped.longitude"></td>
+                </tr>
+
+                <tr>
+                    <td>Rating</td>
+                    <td data-ng-bind="mappingReview.reference.starRating"></td>
+                    <td data-ng-bind="mappingReview.mapped.starRating"></td>
+                </tr>
+
+                <tr>
+                    <td>Código Postal</td>
+                    <td data-ng-bind="mappingReview.reference.zipCode"></td>
+                    <td data-ng-bind="mappingReview.mapped.zipCode"></td>
+                </tr>
+            </tbody>
+        </table>
+	</div>
+    <div class="row">
+        <div class="col-sm-offset-4 col-sm-8 col-xs-12">
+<!--            <div class="btn-toolbar" role="toolbar" aria-label="opciones para confirmar o separar">-->
+                <div class="btn-group" role="group" aria-label="confirmar o separar">
+                    <button type="button" class="btn btn-success"
+                            data-ng-click="confirm(mappingReview.mapping)">Confirmar</button>
+<!--
+                    <button type="button" class="btn btn-danger"
+                            data-ng-click="reject(mappingReview.mapping)">Rechazar</button>
+-->
                 </div>
-                <div class="form-group">
-                    <label class="control-label" for="valor">Valor</label>
-                    <div class="controls">
-                        <input type="text" data-ng-model="valor" id="valor" class="form-control" placeholder="Valor" required>
-                    </div>
+                
+                <div class="btn-group pull-right" role="group" aria-label="volver">
+                    <button type="button" class="btn btn-default"
+                            data-ng-click="goToListByCountry(mappingReview.mapping.countryCode)">Volver</button>
                 </div>
-                <div class="form-group">
-                    <input type="submit" class="btn btn-default">
-                </div>
-				<div data-ng-show="error" class="text-danger">
-					<strong data-ng-bind="error"></strong>
-				</div>
-            </fieldset>
-        </form>
+<!--            </div>-->
+        </div>
     </div>
 </section>

@@ -77,4 +77,51 @@ public class HotelMappingService {
         hotelMappingRepository.delete(mapping);
     }
 
+    public void confirmMapping(Long id) {
+        HotelMapping mapping = find(id);
+        
+        //TODO parametrizar ésto
+        mapping.setConfidence(99);
+        mapping.mappedByUser();
+        
+        hotelMappingRepository.update(mapping);
+    }
+
+    public void rejectMapping(Long id) {
+        HotelMapping mapping = find(id);
+        String newId = buildNewId(mapping);
+        mapping.setHotelId(newId);
+        mapping.setConfidence(100);
+        mapping.setActive(true);
+        mapping.mappedByUser();
+        
+        hotelMappingRepository.update(mapping);
+    }
+
+    //TODO parametrizar ésto y hacerlo multi supplier
+    private String buildNewId(HotelMapping mapping) {
+        if ("BKG".equals(mapping.getSupplierCode())) {
+            return "200" + mapping.getSupplierHotelId();
+        }
+        return "999" + mapping.getSupplierHotelId();
+    }
+
+    public HotelMapping deactivateMapping(Long id) {
+        HotelMapping mapping = find(id);
+        //TODO revisar la funcionalidad con lo que hace el mate
+//        mapping.setActive(false);
+        
+        return update(mapping);
+        
+    }
+    
+    public HotelMapping activateMapping(Long id) {
+        HotelMapping mapping = find(id);
+      //TODO revisar la funcionalidad con lo que hace el mate
+//        mapping.setActive(true);
+        
+        return update(mapping);
+        
+    }
+
 }

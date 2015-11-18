@@ -29,7 +29,7 @@ angular.module('hotel-mapping').controller('MappingReviewController', ['$scope',
         
         $scope.confirm = function(mapping) {
             HotelMappingService.confirm({ id : mapping.id }, function() {
-				$scope.goToListByCountry($stateParams.countryCode);
+				$scope.goToListByCountry(mapping.countryCode);
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
 			});
@@ -37,15 +37,7 @@ angular.module('hotel-mapping').controller('MappingReviewController', ['$scope',
         
         $scope.reject = function(mapping) {
             HotelMappingService.reject({ id : mapping.id }, function() {
-				$scope.goToListByCountry($stateParams.countryCode);
-			}, function(errorResponse) {
-				$scope.error = errorResponse.data.message;
-			});
-        };
-        
-        $scope.deactivate = function(mapping) {
-            HotelMappingService.deactivate({ id : mapping.id }, function() {
-				$scope.goToListByCountry($stateParams.countryCode);
+				$scope.goToListByCountry(mapping.countryCode);
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
 			});

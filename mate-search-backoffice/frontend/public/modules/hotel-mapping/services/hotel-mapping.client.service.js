@@ -4,9 +4,9 @@
 angular.module('hotel-mapping').factory('HotelMappingService', ['$resource', 'Configuration',
 	function($resource, Configuration) {
 
-		var url = Configuration.serviceContext + 'hoteles/mapping/:operation/:id';
+		var url = Configuration.serviceContext + 'hoteles/mapping/:id/:operation';
 		
-		return $resource(url, { id: '@_id'
+		return $resource(url, { id: '@id'
 		}, {
 			update: {
 				method: 'PUT'
@@ -22,7 +22,7 @@ angular.module('hotel-mapping').factory('HotelMappingService', ['$resource', 'Co
                 method: 'GET',
                 isArray: true,
                 params: {
-                    operation: 'country'
+                    operation: 'byCountry'
                 }
             },
             getReview: {
@@ -44,6 +44,13 @@ angular.module('hotel-mapping').factory('HotelMappingService', ['$resource', 'Co
                 isArray: false,
                 params: {
                     operation: 'reject'
+                }
+            },
+            activate: {
+                method: 'PUT',
+                isArray: false,
+                params: {
+                    operation: 'activate'
                 }
             },
             deactivate: {
