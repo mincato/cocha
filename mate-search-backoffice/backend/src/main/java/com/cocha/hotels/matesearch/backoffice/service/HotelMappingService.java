@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.cocha.hotels.matesearch.backoffice.dto.HotelMappingDTO;
 import com.cocha.hotels.matesearch.backoffice.model.HotelMappingCount;
 import com.cocha.hotels.matesearch.backoffice.model.HotelMappingReview;
 import com.cocha.hotels.matesearch.backoffice.repository.content.HotelMappingRepository;
@@ -13,6 +14,7 @@ import com.cocha.hotels.matesearch.backoffice.repository.feeds.HotelRepository;
 import com.cocha.hotels.matesearch.backoffice.service.exception.NotFoundException;
 import com.cocha.hotels.model.content.hotel.Hotel;
 import com.cocha.hotels.model.content.mapping.HotelMapping;
+import com.cocha.hotels.model.content.mapping.HotelMatch;
 
 @Service
 public class HotelMappingService {
@@ -61,7 +63,13 @@ public class HotelMappingService {
     }
 
     @Transactional
-    public HotelMapping create(HotelMapping mapping) {
+    public HotelMapping create(HotelMappingDTO dto) {
+        Hotel reference = hotelRepository.findOne(dto.getReferenceId(), dto.getReferenceSupplierCode());
+        Hotel mapped = hotelRepository.findOne(dto.getMapId(), dto.getMapSupplierCode());
+        HotelMatch match = new HotelMatch(reference, mapped, 99);
+        HotelMapping mapping = new HotelMapping("100" + reference.getId(), match);
+        mapping.mappedByUser();
+
         hotelMappingRepository.create(mapping);
         return find(mapping.getId());
     }

@@ -20,6 +20,7 @@ import javax.ws.rs.core.Response.Status;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.cocha.hotels.matesearch.backoffice.dto.HotelMappingDTO;
 import com.cocha.hotels.matesearch.backoffice.model.HotelMappingCount;
 import com.cocha.hotels.matesearch.backoffice.model.HotelMappingReview;
 import com.cocha.hotels.matesearch.backoffice.service.HotelMappingService;
@@ -73,9 +74,9 @@ public class HotelMappingRestService {
     }
 	
 	@POST
-    public Response createHotelMapping(@Context HttpServletRequest request, HotelMapping mapping) {
+    public Response createHotelMapping(@Context HttpServletRequest request, HotelMappingDTO dto) {
         try {
-            mapping = hotelMappingService.create(mapping);
+            HotelMapping mapping = hotelMappingService.create(dto);
             return responseHandler.buildSuccessResponse(mapping, Status.CREATED);
         } catch (Exception e) {
             return responseHandler.buildErrorResponse(e);

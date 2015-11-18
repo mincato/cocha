@@ -11,17 +11,19 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Hotel ID de EAN...">
+                        <input type="text" class="form-control" 
+                               placeholder="Hotel ID de EAN..." 
+                               data-ng-model="referenceHotelId">
                         <span class="input-group-btn">
-                            <button class="btn btn-primary" type="button">Buscar</button>
+                            <button class="btn btn-primary" type="button" data-ng-click="findReference()">Buscar</button>
                         </span>
                     </div><!-- /input-group -->
                 </div><!-- /.col-lg-6 -->
                 <div class="col-lg-6">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Hotel ID de BKG...">
+                        <input type="text" class="form-control" placeholder="Hotel ID de BKG..." data-ng-model="mapHotelId">
                         <span class="input-group-btn">
-                            <button class="btn btn-primary" type="button">Buscar</button>
+                            <button class="btn btn-primary" type="button" data-ng-click="findToMap()">Buscar</button>
                         </span>
                     </div><!-- /input-group -->
                 </div><!-- /.col-lg-6 -->
@@ -38,43 +40,43 @@
             <tbody>
                 <tr>
                     <td>Supplier</td>
-                    <td data-ng-bind="mappingReview.reference.supplierCode"></td>
-                    <td data-ng-bind="mappingReview.mapped.supplierCode"></td>
+                    <td data-ng-bind="referenceHotel.supplierCode"></td>
+                    <td data-ng-bind="mapHotel.supplierCode"></td>
                 </tr>
 
                 <tr>
                     <td>Nombre</td>
-                    <td data-ng-bind="mappingReview.reference.name"></td>
-                    <td data-ng-bind="mappingReview.mapped.name"></td>
+                    <td data-ng-bind="referenceHotel.name"></td>
+                    <td data-ng-bind="mapHotel.name"></td>
                 </tr>
 
                 <tr>
                     <td>Dirección</td>
-                    <td data-ng-bind="mappingReview.reference.address"></td>
-                    <td data-ng-bind="mappingReview.mapped.address"></td>
+                    <td data-ng-bind="referenceHotel.address"></td>
+                    <td data-ng-bind="mapHotel.address"></td>
                 </tr>
 
                 <tr>
                     <td>Latitud</td>
-                    <td data-ng-bind="mappingReview.reference.latitude"></td>
-                    <td data-ng-bind="mappingReview.mapped.latitude"></td>
+                    <td data-ng-bind="referenceHotel.latitude"></td>
+                    <td data-ng-bind="mapHotel.latitude"></td>
                 </tr>
                 <tr>
                     <td>Longitud</td>
-                    <td data-ng-bind="mappingReview.reference.longitude"></td>
-                    <td data-ng-bind="mappingReview.mapped.longitude"></td>
+                    <td data-ng-bind="referenceHotel.longitude"></td>
+                    <td data-ng-bind="mapHotel.longitude"></td>
                 </tr>
 
                 <tr>
                     <td>Rating</td>
-                    <td data-ng-bind="mappingReview.reference.starRating"></td>
-                    <td data-ng-bind="mappingReview.mapped.starRating"></td>
+                    <td data-ng-bind="referenceHotel.starRating"></td>
+                    <td data-ng-bind="mapHotel.starRating"></td>
                 </tr>
 
                 <tr>
                     <td>Código Postal</td>
-                    <td data-ng-bind="mappingReview.reference.zipCode"></td>
-                    <td data-ng-bind="mappingReview.mapped.zipCode"></td>
+                    <td data-ng-bind="referenceHotel.zipCode"></td>
+                    <td data-ng-bind="mapHotel.zipCode"></td>
                 </tr>
             </tbody>
         </table>
@@ -84,7 +86,7 @@
 <!--            <div class="btn-toolbar" role="toolbar" aria-label="opciones para confirmar o separar">-->
                 <div class="btn-group" role="group" aria-label="confirmar o separar">
                     <button type="button" class="btn btn-success"
-                            data-ng-click="confirm(mappingReview.mapping)">Confirmar</button>
+                            data-ng-click="create()">Mapear</button>
 <!--
                     <button type="button" class="btn btn-danger"
                             data-ng-click="reject(mappingReview.mapping)">Rechazar</button>
@@ -93,7 +95,7 @@
                 
                 <div class="btn-group pull-right" role="group" aria-label="volver">
                     <button type="button" class="btn btn-default"
-                            data-ng-click="goToListByCountry(mappingReview.mapping.countryCode)">Volver</button>
+                            data-ng-click="goHome()">Volver</button>
                 </div>
 <!--            </div>-->
         </div>

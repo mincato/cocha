@@ -1,8 +1,8 @@
 'use strict';
 
 // Hotel Mappings controller
-angular.module('hotel-mapping').controller('HotelMappingController', ['$scope', '$stateParams', '$location', 'HotelMappingService',
-	function($scope, $stateParams, $location, HotelMappingService) {
+angular.module('hotel-mapping').controller('HotelMappingController', ['$scope', '$stateParams', '$location', 'HotelMappingService', 'HotelService',
+	function($scope, $stateParams, $location, HotelMappingService, HotelService) {
 
         $scope.howMany = 10;
         $scope.countryCode = $stateParams.countryCode;
@@ -10,21 +10,16 @@ angular.module('hotel-mapping').controller('HotelMappingController', ['$scope', 
 		// Create new Hotel Mapping
 		$scope.create = function() {
 			// Create new Hotel Mapping object
-			var hotelMapping = new HotelMappingService ({
-				codigo: this.codigo,
-				valor: this.valor
-			});
-
-			// Redirect after save
-			hotelMapping.$save(function(response) {
-				$location.path('hoteles/mapping/' + response._id);
-
-				// Clear form fields
-				$scope.codigo = '';
-				$scope.valor = '';
+			HotelMappingService.createMapping ({}, {	       
+                referenceId : $scope.referenceHotel.id,
+                referenceSupplierCode : $scope.referenceHotel.supplierCode,
+                mapId : $scope.mapHotel.id,
+                mapSupplierCode : $scope.mapHotel.supplierCode,
+            },function(response) {
+				$scope.goToListByCountry(response.countryCode);
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
-			});
+			})
 		};
 
 		// Remove existing Hotel Mapping
@@ -59,6 +54,14 @@ angular.module('hotel-mapping').controller('HotelMappingController', ['$scope', 
 		$scope.find = function() {
 			$scope.hotelMappings = HotelMappingService.query();
 		};
+        
+        $scope.findReference = function() {
+            $scope.referenceHotel = HotelService.findReference({ id : $scope.referenceHotelId });
+        };
+        
+        $scope.findToMap = function() {
+            $scope.mapHotel = HotelService.findToMap({ id : $scope.mapHotelId });
+        };
         
         $scope.findTopCountries = function() {
             $scope.mappingCounts = HotelMappingService.queryTopCountries({
@@ -109,6 +112,10 @@ angular.module('hotel-mapping').controller('HotelMappingController', ['$scope', 
         
         $scope.goToReviewMapping = function(mapping) {
             $location.path('hoteles/mapping/review/' + mapping.id);
+        };
+        
+        $scope.goHome = function() {
+            $location.path('#!/');
         };
 	}
 ]);

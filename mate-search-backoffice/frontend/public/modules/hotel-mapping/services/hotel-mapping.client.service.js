@@ -59,8 +59,11 @@ angular.module('hotel-mapping').factory('HotelMappingService', ['$resource', 'Co
                 params: {
                     operation: 'deactivate'
                 }
+            },
+            createMapping: {
+                method: 'POST',
+                isArray: false,
             }
-            
 		});
 	}
 ]);
