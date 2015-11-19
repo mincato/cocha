@@ -19,7 +19,7 @@ public class HotelListResponseBuilder implements Processor {
 
         status = new Status("200", "success");
         hotelListResponse.setHotelList(exchange.getIn().getBody(HotelList.class));
-            
+
         hotelListResponse.setStatus(status);
         exchange.getIn().setBody(hotelListResponse);
     }

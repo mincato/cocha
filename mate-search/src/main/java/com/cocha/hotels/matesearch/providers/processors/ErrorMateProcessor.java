@@ -11,7 +11,7 @@ import com.cocha.hotels.model.matesearch.canonical.response.HotelListResponse;
 
 @Component
 public class ErrorMateProcessor implements Processor {
-	
+
     private static final Logger log = Logger.getLogger(ErrorMateProcessor.class);
 
     @Override

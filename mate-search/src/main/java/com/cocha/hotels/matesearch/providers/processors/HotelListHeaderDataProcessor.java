@@ -77,10 +77,9 @@ public class HotelListHeaderDataProcessor implements Processor {
             throw e;
         }
 
-    }	
+    }
 
-
-	private void putIdSuppliersAndIdMapping(Map<String, Object> parameters, List<HotelMapping> providers) {
+    private void putIdSuppliersAndIdMapping(Map<String, Object> parameters, List<HotelMapping> providers) {
 
         String idsBooking = "";
         String idsEan = "";

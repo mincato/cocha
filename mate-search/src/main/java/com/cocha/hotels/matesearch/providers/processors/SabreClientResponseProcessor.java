@@ -12,25 +12,25 @@ import com.sabre.webservices.sabrexml._2011._10.OTAHotelAvailRS;
 @Component
 public class SabreClientResponseProcessor implements Processor {
 
-	private static final Logger log = Logger.getLogger(SabreClientResponseProcessor.class);
-	
+    private static final Logger log = Logger.getLogger(SabreClientResponseProcessor.class);
+
     @Override
     public void process(Exchange exchange) throws Exception {
-    	
-    	try {
-    		
-    		Message inMessage = exchange.getIn();
-    		
-    		MessageContentsList result = (MessageContentsList) inMessage.getBody();
-    		
-    		OTAHotelAvailRS hotelAvail = (OTAHotelAvailRS) result.get(0);
-    		
-    		inMessage.setBody(hotelAvail);
-			
-		} catch (Exception e) {
-			log.error("Error al obtener el resultado de sabre");
-			throw e;
-		}
+
+        try {
+
+            Message inMessage = exchange.getIn();
+
+            MessageContentsList result = (MessageContentsList) inMessage.getBody();
+
+            OTAHotelAvailRS hotelAvail = (OTAHotelAvailRS) result.get(0);
+
+            inMessage.setBody(hotelAvail);
+
+        } catch (Exception e) {
+            log.error("Error al obtener el resultado de sabre");
+            throw e;
+        }
 
     }
 }

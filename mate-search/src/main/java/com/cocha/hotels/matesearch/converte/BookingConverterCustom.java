@@ -34,21 +34,21 @@ public class BookingConverterCustom implements CustomConverter {
     private ResposeSuppliers trasformer(GetHotelAvailabilityBooking getHotelAvailabilityBooking) {
 
         ResposeSuppliers resposeSuppliers = new ResposeSuppliers();
-        if(getHotelAvailabilityBooking.getResult() != null) {
-        	for (Result result : getHotelAvailabilityBooking.getResult()) {
-        		RateInfoForSupplier rateInfoForSupplier = new RateInfoForSupplier();
-        		rateInfoForSupplier.setIdSupplier(result.getHotelId().toString());
-        		if (result.getOtherCurrency() != null) {
-        			rateInfoForSupplier.setRateCurrencyCode(result.getOtherCurrency().getCurrencyCode());
-        			rateInfoForSupplier.setHigtRate(result.getOtherCurrency().getMaxPrice());
-        			rateInfoForSupplier.setLowRate(result.getOtherCurrency().getMinPrice());
-        		} else {
-        			rateInfoForSupplier.setRateCurrencyCode(result.getCurrencyCode());
-        			rateInfoForSupplier.setHigtRate(result.getMaxPrice());
-        			rateInfoForSupplier.setLowRate(result.getMinPrice());
-        		}
-        		resposeSuppliers.getRateForSupplier().add(rateInfoForSupplier);
-        	}        	
+        if (getHotelAvailabilityBooking.getResult() != null) {
+            for (Result result : getHotelAvailabilityBooking.getResult()) {
+                RateInfoForSupplier rateInfoForSupplier = new RateInfoForSupplier();
+                rateInfoForSupplier.setIdSupplier(result.getHotelId().toString());
+                if (result.getOtherCurrency() != null) {
+                    rateInfoForSupplier.setRateCurrencyCode(result.getOtherCurrency().getCurrencyCode());
+                    rateInfoForSupplier.setHigtRate(result.getOtherCurrency().getMaxPrice());
+                    rateInfoForSupplier.setLowRate(result.getOtherCurrency().getMinPrice());
+                } else {
+                    rateInfoForSupplier.setRateCurrencyCode(result.getCurrencyCode());
+                    rateInfoForSupplier.setHigtRate(result.getMaxPrice());
+                    rateInfoForSupplier.setLowRate(result.getMinPrice());
+                }
+                resposeSuppliers.getRateForSupplier().add(rateInfoForSupplier);
+            }
         }
 
         return resposeSuppliers;

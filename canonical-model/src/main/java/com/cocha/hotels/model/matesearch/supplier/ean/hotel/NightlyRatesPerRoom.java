@@ -20,15 +20,15 @@ public class NightlyRatesPerRoom {
         return size;
     }
 
-//    @JsonProperty("NightlyRate")
-//    private List<NightlyRateElement> nightlyrate;
-//
-//    public void setNightlyrate(List<NightlyRateElement> nightlyrate) {
-//        this.nightlyrate = nightlyrate;
-//    }
-//
-//    public List<NightlyRateElement> getNightlyrate() {
-//        return nightlyrate;
-//    }
+    // @JsonProperty("NightlyRate")
+    // private List<NightlyRateElement> nightlyrate;
+    //
+    // public void setNightlyrate(List<NightlyRateElement> nightlyrate) {
+    // this.nightlyrate = nightlyrate;
+    // }
+    //
+    // public List<NightlyRateElement> getNightlyrate() {
+    // return nightlyrate;
+    // }
 
 }

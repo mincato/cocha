@@ -16,7 +16,7 @@ public class RateInfo implements Serializable {
 
     @XmlElement
     private Float lowRateBetweenSupplier;
-    
+
     @XmlElement
     private List<RateForSupplier> rateForSupplier;
 

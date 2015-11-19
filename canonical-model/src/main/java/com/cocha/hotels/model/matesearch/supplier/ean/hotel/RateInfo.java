@@ -30,19 +30,19 @@ public class RateInfo {
     public ChargeableRateInfo getChargeablerateinfo() {
         return chargeablerateinfo;
     }
-    
+
     @JsonProperty("ConvertedRateInfo")
     private ChargeableRateInfo convertedRateInfo;
 
     public ChargeableRateInfo getConvertedRateInfo() {
-		return convertedRateInfo;
-	}
+        return convertedRateInfo;
+    }
 
-	public void setConvertedRateInfo(ChargeableRateInfo convertedRateInfo) {
-		this.convertedRateInfo = convertedRateInfo;
-	}
+    public void setConvertedRateInfo(ChargeableRateInfo convertedRateInfo) {
+        this.convertedRateInfo = convertedRateInfo;
+    }
 
-	@JsonProperty("promoType")
+    @JsonProperty("promoType")
     private java.lang.String promotype;
 
     public void setPromotype(java.lang.String promotype) {

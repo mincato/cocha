@@ -29,8 +29,8 @@ public class RegionMapperProcessorImpl implements RegionMapperProcessor {
 
         for (Hotel hotel : hotels) {
             logger.info("Started mapping regions-hotels. hotel id: " + hotel.getId());
-            HotelMapping hotelMapping = hotelMappingContentRepository.findByhotelIdAndSupplierCodeAndUnmapped(hotel.getId(),
-                    Hotel.EAN_SUPPLIER_CODE,false);
+            HotelMapping hotelMapping = hotelMappingContentRepository.findByhotelIdAndSupplierCodeAndUnmapped(
+                    hotel.getId(), Hotel.EAN_SUPPLIER_CODE, false);
 
             if (hotelMapping != null) {
                 String supplierHotelId = hotelMapping.getSupplierHotelId();

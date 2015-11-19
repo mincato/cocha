@@ -42,15 +42,16 @@ public class Room {
         return numberofchildren;
     }
 
-//    @JsonProperty("ChargeableNightlyRates")
-//    private List<ChargeableNightlyRatElement> chargeablenightlyrates;
-//
-//    public void setChargeablenightlyrates(List<ChargeableNightlyRatElement> chargeablenightlyrates) {
-//        this.chargeablenightlyrates = chargeablenightlyrates;
-//    }
-//
-//    public List<ChargeableNightlyRatElement> getChargeablenightlyrates() {
-//        return chargeablenightlyrates;
-//    }
+    // @JsonProperty("ChargeableNightlyRates")
+    // private List<ChargeableNightlyRatElement> chargeablenightlyrates;
+    //
+    // public void setChargeablenightlyrates(List<ChargeableNightlyRatElement>
+    // chargeablenightlyrates) {
+    // this.chargeablenightlyrates = chargeablenightlyrates;
+    // }
+    //
+    // public List<ChargeableNightlyRatElement> getChargeablenightlyrates() {
+    // return chargeablenightlyrates;
+    // }
 
 }

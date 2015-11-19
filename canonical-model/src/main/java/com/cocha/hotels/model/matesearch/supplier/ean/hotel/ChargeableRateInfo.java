@@ -9,27 +9,28 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ChargeableRateInfo {
 
-//    @JsonProperty("NightlyRatesPerRoom")
-//    private NightlyRatesPerRoom nightlyratesperroom;
-//
-//    public void setNightlyratesperroom(NightlyRatesPerRoom nightlyratesperroom) {
-//        this.nightlyratesperroom = nightlyratesperroom;
-//    }
-//
-//    public NightlyRatesPerRoom getNightlyratesperroom() {
-//        return nightlyratesperroom;
-//    }
+    // @JsonProperty("NightlyRatesPerRoom")
+    // private NightlyRatesPerRoom nightlyratesperroom;
+    //
+    // public void setNightlyratesperroom(NightlyRatesPerRoom
+    // nightlyratesperroom) {
+    // this.nightlyratesperroom = nightlyratesperroom;
+    // }
+    //
+    // public NightlyRatesPerRoom getNightlyratesperroom() {
+    // return nightlyratesperroom;
+    // }
 
-//    @JsonProperty("Surcharges")
-//    private Surcharges surcharges;
-//
-//    public void setSurcharges(Surcharges surcharges) {
-//        this.surcharges = surcharges;
-//    }
-//
-//    public Surcharges getSurcharges() {
-//        return surcharges;
-//    }
+    // @JsonProperty("Surcharges")
+    // private Surcharges surcharges;
+    //
+    // public void setSurcharges(Surcharges surcharges) {
+    // this.surcharges = surcharges;
+    // }
+    //
+    // public Surcharges getSurcharges() {
+    // return surcharges;
+    // }
 
     @JsonProperty("@commissionableUsdTotal")
     private java.lang.String commissionableusdtotal;
