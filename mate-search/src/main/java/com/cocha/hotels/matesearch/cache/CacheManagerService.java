@@ -7,8 +7,6 @@ import java.util.function.BinaryOperator;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import javax.annotation.PostConstruct;
-
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.CacheManager;
@@ -38,7 +36,6 @@ public class CacheManagerService {
 
     private Logger logger = Logger.getLogger(CacheManagerService.class);
 
-    @PostConstruct
     public void init() {
         loadCache();
     }
@@ -47,7 +44,6 @@ public class CacheManagerService {
         cacheManager.getCache("regionHotelMappings").clear();
         cacheManager.getCache("hotelMappings").clear();
         cacheManager.getCache("hotels").clear();
-        loadCache();
     }
 
     private void loadCache() {
