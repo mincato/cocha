@@ -52,7 +52,6 @@ public class TramsformerObjectEAN extends CamelSpringTestSupport {
         listSumeryElement.add(hotel);
 
         surcharges.setSurcharge(surcharge);
-        chargeableRateInfo.setSurcharges(surcharges);
         rateInfo.setChargeablerateinfo(chargeableRateInfo);
         rateInfos.setRateinfo(rateInfo);
         roomRateDetailsList.setRoomratedetails(roomRateDetails);

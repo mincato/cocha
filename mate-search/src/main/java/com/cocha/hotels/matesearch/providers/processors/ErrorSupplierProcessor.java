@@ -13,11 +13,11 @@ import com.cocha.hotels.matesearch.util.ErrorInternal;
 @Component
 public class ErrorSupplierProcessor implements Processor {
 
-	private static final Logger log = Logger.getLogger(ErrorSupplierProcessor.class);
+    private static final Logger log = Logger.getLogger(ErrorSupplierProcessor.class);
 
     @Override
     public void process(Exchange exchange) throws Exception {
-    	
+
         Exception cause = exchange.getProperty(Exchange.EXCEPTION_CAUGHT, Exception.class);
         log.error(cause);
 
@@ -29,6 +29,6 @@ public class ErrorSupplierProcessor implements Processor {
         errorInternal.setCause(cause.toString());
         errorInternal.setCodeSupplier(supplier);
         exchange.getIn().setBody(errorInternal);
-        
+
     }
 }

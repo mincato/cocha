@@ -9,6 +9,10 @@ public class Constant {
     public static final String ARRIVAL_DATE = "arrivalDate";
     public static final String DEPARTURE_DATE = "departureDate";
     public static final String CURRENCY_CODE = "currencyCode";
+    public static final String DIFF_DAYS = "diffDays";
+    public static final String CONTENT_TYPE = "Content-Type";
+
+    public static final String HOTEL_IDS_SEPARATOR = ",";
 
     public interface CodeSupplier {
 
@@ -19,13 +23,13 @@ public class Constant {
         public static final String SABRE_SUPPLIER_CODE = "SAB";
         public static final String SABRE_SUPPLIER_ID_HOTEL = "idsHotelsSabre";
     }
-    
+
     public interface SabreSecurityToken {
-    	
-    	public static final String DESTINATION_IP = "InputOpenSabreSession";
-    	public static final String DESTINATION_OP = "OutputOpenSabreSession";
-    	public static final String HOST = "hub-qa";
-    	public static final String PORT = "5445";
-    	
+
+        public static final String DESTINATION_IP = "InputOpenSabreSession";
+        public static final String DESTINATION_OP = "OutputOpenSabreSession";
+        public static final String HOST = "hub-qa";
+        public static final String PORT = "5445";
+
     }
 }

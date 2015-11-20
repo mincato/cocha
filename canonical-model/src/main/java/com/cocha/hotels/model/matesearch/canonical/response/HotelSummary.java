@@ -1,5 +1,7 @@
 package com.cocha.hotels.model.matesearch.canonical.response;
 
+import java.io.Serializable;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -7,7 +9,7 @@ import javax.xml.bind.annotation.XmlElement;
 import com.cocha.hotels.model.matesearch.canonical.RateInfo;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-public class HotelSummary {
+public class HotelSummary implements Serializable {
 
     @XmlElement
     private String hotelId;

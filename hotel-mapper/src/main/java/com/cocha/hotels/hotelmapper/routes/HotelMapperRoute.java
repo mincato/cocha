@@ -3,6 +3,7 @@ package com.cocha.hotels.hotelmapper.routes;
 import org.apache.camel.Exchange;
 import org.apache.camel.LoggingLevel;
 import org.apache.camel.Predicate;
+import org.apache.camel.model.dataformat.JsonLibrary;
 import org.apache.camel.spring.SpringRouteBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -14,6 +15,7 @@ import com.cocha.hotels.hotelmapper.processors.GiataMapperProcessor;
 import com.cocha.hotels.hotelmapper.processors.MapperProcessor;
 import com.cocha.hotels.hotelmapper.repositories.feeds.HotelFeedRepository;
 import com.cocha.hotels.model.content.mapping.HotelMapping;
+import com.cocha.hotels.model.matesearch.canonical.factory.StatusFactory;
 
 @Component
 public class HotelMapperRoute extends SpringRouteBuilder {
@@ -44,9 +46,12 @@ public class HotelMapperRoute extends SpringRouteBuilder {
 
         from("{{mapper.consumer.uri}}").errorHandler(loggingErrorHandler(log)).choice()
                 .when(header("countryCode").isNotNull()).transform().simple("${header[countryCode]}")
-                .to("direct:processMapper").otherwise()
+                .to("direct:processMapper").to("direct:marshalResponse").otherwise()
                 .to("sql:select distinct(countryCode) from Hotel?dataSource=#feedDataSource").split(body()).transform()
-                .simple("${body[countryCode]}").to("direct:processMapper");
+                .simple("${body[countryCode]}").to("direct:processMapper").end().end().to("direct:marshalResponse");
+
+        from("direct:marshalResponse").bean(StatusFactory.class, "buildSuccessStatus").marshal()
+                .json(JsonLibrary.Jackson).log(LoggingLevel.INFO, "Run Hotel Mapper successfully");
 
         from("direct:processMapper")
                 .bean(hotelFeedRepository, "findByCountryCode")
@@ -54,8 +59,7 @@ public class HotelMapperRoute extends SpringRouteBuilder {
                 .multicast()
                 .to("jpaContent:" + HotelMapping.class.getName()
                         + "?entityType=java.util.ArrayList&transactionManager=#contentTransactionManager",
-                        "direct:content", "direct:sabreMappingThruGiata")
-                .log(LoggingLevel.INFO, "Run Hotel Mapper successfully");
+                        "direct:content", "direct:sabreMappingThruGiata").end();
 
         from("direct:sabreMappingThruGiata")
                 .split(body())
@@ -80,7 +84,7 @@ public class HotelMapperRoute extends SpringRouteBuilder {
                 })
                 .bean(giataMapperProcessor)
                 .to("jpaContent:" + HotelMapping.class.getName() + "?entityType=" + HotelMapping.class.getName()
-                        + "&transactionManager=#contentTransactionManager")
+                        + "&transactionManager=#contentTransactionManager").end()
                 .log(LoggingLevel.INFO, "Run sabreMappingThruGiata successfully");
     }
 

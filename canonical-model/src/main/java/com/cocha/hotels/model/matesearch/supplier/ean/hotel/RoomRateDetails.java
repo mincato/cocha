@@ -118,5 +118,4 @@ public class RoomRateDetails {
     public java.lang.Boolean getPropertyavailable() {
         return propertyavailable;
     }
-
 }

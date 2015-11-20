@@ -48,8 +48,8 @@ public class CoordinateMapperProcessorImpl implements CoordinateMapperProcessor 
             List<RegionCoordinates> cityAreas = (List<RegionCoordinates>) regionCoordinatesRepository
                     .findByRegionType(RegionType.CITY);
             for (Hotel hotel : hotels) {
-                HotelMapping hotelMapping = hotelMappingContentRepository.findByhotelIdAndSupplierCode(hotel.getId(),
-                        Hotel.BOOKING_SUPPLIER_CODE);
+                HotelMapping hotelMapping = hotelMappingContentRepository.findByhotelIdAndSupplierCodeAndUnmapped(
+                        hotel.getId(), Hotel.BOOKING_SUPPLIER_CODE, false);
 
                 String supplierHotelId = hotelMapping.getSupplierHotelId();
                 logger.info("Started mapping regions-hotels. hotel id: " + hotel.getId());
