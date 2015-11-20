@@ -133,5 +133,5 @@ public class HotelMapping {
     public void map() {
         this.setUnmapped(false);
     }
-
+    
 }

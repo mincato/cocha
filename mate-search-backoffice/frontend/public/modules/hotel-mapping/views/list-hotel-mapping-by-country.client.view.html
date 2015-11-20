@@ -1,0 +1,54 @@
+<section data-ng-controller="HotelMappingController" data-ng-init="findMappings()">
+    <div class="page-header">
+        <h1>Los mapeos de hoteles de {{countryCode}}</h1>
+    </div>
+    <div class="list-group">
+        <table class="table table-condensed table-striped">
+            <thead>
+                <tr>
+                    <th>ID de Hotel</th>
+                    <th>Nivel de Confianza (%)</th>
+                    <th>Activo?</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="hotelMapping in hotelMappings">
+                    <td data-ng-bind="hotelMapping.hotelId"></td>
+                    <td data-ng-bind="hotelMapping.confidence"></td>
+                    <td data-ng-bind="hotelMapping.active"></td>
+                    <td>
+                        <div class="btn-group" role="group" aria-label="revisión y activación">
+                            <button type="button" 
+                                    class="btn btn-sm btn-primary" 
+                                    data-ng-click="goToReviewMapping(hotelMapping)">
+                                Revisar
+                            </button>
+<!--
+                            <button type="button" 
+                                    class="btn btn-sm btn-info" 
+                                    data-ng-click="activate(hotelMapping)"
+                                    data-ng-disabled="hotelMapping.active">
+                                Activar
+                            </button>
+                            <button type="button" 
+                                    class="btn btn-sm btn-danger" 
+                                    data-ng-click="deactivate(hotelMapping)"
+                                    data-ng-disabled="!hotelMapping.active">
+                                Desactivar
+                            </button>
+-->
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="btn-group pull-right" role="group" aria-label="volver">
+                <button type="button" class="btn btn-default">Volver</button>
+            </div>
+        </div>
+    </div>
+</section>
