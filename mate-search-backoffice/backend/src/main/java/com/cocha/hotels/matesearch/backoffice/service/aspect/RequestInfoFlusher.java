@@ -14,37 +14,33 @@ import com.cocha.hotels.matesearch.backoffice.util.RequestHandler;
 
 @Service
 public class RequestInfoFlusher implements org.apache.cxf.jaxrs.ext.ResponseHandler {
-    
+
     private static final Logger CONSOLE_LOGGER = Logger.getLogger("requestInfoConsoleLogger");
     private static final Logger FILE_LOGGER = Logger.getLogger("requestInfoFileLogger");
-    
+
     @Context
     private HttpServletRequest request;
-    
+
     @Autowired
     private RequestHandler requestHandler;
 
     @Override
-    public Response handleResponse(Message message,
-            OperationResourceInfo invokedOperation, Response response) {
-        
+    public Response handleResponse(Message message, OperationResourceInfo invokedOperation, Response response) {
+
         String requestInfoJSON = null;
 
-        RequestInfo requestInfo = requestHandler
-                .getRequestInfoOrCreateNew(request);
+        RequestInfo requestInfo = requestHandler.getRequestInfoOrCreateNew(request);
 
         try {
             requestInfoJSON = requestInfo.toJSON();
 
         } catch (Exception e) {
             requestInfoJSON = "{\"error\" : \"unable to serialize request\"}";
-        }            
-            
+        }
+
         CONSOLE_LOGGER.debug("requestInfo = " + requestInfoJSON);
         FILE_LOGGER.info(requestInfoJSON);
-            
 
-        
         return null;
     }
 

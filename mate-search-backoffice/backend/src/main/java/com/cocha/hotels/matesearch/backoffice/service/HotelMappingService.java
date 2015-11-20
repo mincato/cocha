@@ -21,21 +21,21 @@ public class HotelMappingService {
 
     @Autowired
     private HotelMappingRepository hotelMappingRepository;
-    
+
     @Autowired
     private HotelRepository hotelRepository;
 
     public List<HotelMapping> getAll() {
         return hotelMappingRepository.findAll();
     }
-    
+
     public List<HotelMapping> getAllByCountry(String id) {
         return hotelMappingRepository.findAllByCountry(id);
     }
 
     public List<HotelMappingCount> getTopMappings(Integer howMany) {
-        if (howMany == null || howMany == 0){
-            //TODO parametrizar
+        if (howMany == null || howMany == 0) {
+            // TODO parametrizar
             howMany = 20;
         }
         return hotelMappingRepository.findTopMappings(howMany);
@@ -48,16 +48,16 @@ public class HotelMappingService {
         }
         return mapping;
     }
-    
 
     public HotelMappingReview findReview(Long id) {
         HotelMapping mapping = hotelMappingRepository.findOne(id);
         if (mapping == null)
             throw new NotFoundException();
-        
+
         HotelMapping referenceMapping = hotelMappingRepository.findReferenceMapping(mapping.getHotelId());
-        
-        Hotel reference = hotelRepository.findOne(referenceMapping.getSupplierHotelId(), referenceMapping.getSupplierCode());
+
+        Hotel reference = hotelRepository.findOne(referenceMapping.getSupplierHotelId(),
+                referenceMapping.getSupplierCode());
         Hotel mapped = hotelRepository.findOne(mapping.getSupplierHotelId(), mapping.getSupplierCode());
         return new HotelMappingReview(reference, mapped, mapping);
     }
@@ -87,11 +87,11 @@ public class HotelMappingService {
 
     public void confirmMapping(Long id) {
         HotelMapping mapping = find(id);
-        
-        //TODO parametrizar ésto
+
+        // TODO parametrizar ésto
         mapping.setConfidence(99);
         mapping.mappedByUser();
-        
+
         hotelMappingRepository.update(mapping);
     }
 
@@ -102,11 +102,11 @@ public class HotelMappingService {
         mapping.setConfidence(100);
         mapping.setActive(true);
         mapping.mappedByUser();
-        
+
         hotelMappingRepository.update(mapping);
     }
 
-    //TODO parametrizar ésto y hacerlo multi supplier
+    // TODO parametrizar ésto y hacerlo multi supplier
     private String buildNewId(HotelMapping mapping) {
         if ("BKG".equals(mapping.getSupplierCode())) {
             return "200" + mapping.getSupplierHotelId();
@@ -116,20 +116,20 @@ public class HotelMappingService {
 
     public HotelMapping deactivateMapping(Long id) {
         HotelMapping mapping = find(id);
-        //TODO revisar la funcionalidad con lo que hace el mate
-//        mapping.setActive(false);
-        
+        // TODO revisar la funcionalidad con lo que hace el mate
+        // mapping.setActive(false);
+
         return update(mapping);
-        
+
     }
-    
+
     public HotelMapping activateMapping(Long id) {
         HotelMapping mapping = find(id);
-      //TODO revisar la funcionalidad con lo que hace el mate
-//        mapping.setActive(true);
-        
+        // TODO revisar la funcionalidad con lo que hace el mate
+        // mapping.setActive(true);
+
         return update(mapping);
-        
+
     }
 
 }

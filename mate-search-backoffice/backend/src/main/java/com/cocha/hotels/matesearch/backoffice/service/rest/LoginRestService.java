@@ -29,20 +29,19 @@ public class LoginRestService {
 
     @Autowired
     private UserService userService;
-    
+
     @Autowired
     private RestResponseHandler responseHandler;
-    
+
     @Autowired
     private SessionHandler sessionHandler;
-    
+
     @Autowired
     private TokenHandler tokenHandler;
-    
+
     @POST
     @Path("/login")
-    public Response login(@Context HttpServletRequest request,
-            Credential credential) {
+    public Response login(@Context HttpServletRequest request, Credential credential) {
         try {
             User user = userService.login(credential.getUsername(), credential.getPassword());
             configureUser(user, request);
@@ -52,7 +51,7 @@ public class LoginRestService {
             return responseHandler.buildErrorResponse(e);
         }
     }
-    
+
     @POST
     @Path("/register")
     public Response addUser(User newUser, @Context HttpServletRequest request) {
@@ -64,7 +63,7 @@ public class LoginRestService {
             return responseHandler.buildErrorResponse(e);
         }
     }
-    
+
     private void configureUser(User user, HttpServletRequest request) {
         String token = tokenHandler.createToken(new UserData(user));
         sessionHandler.saveUserInSession(request, token, user);

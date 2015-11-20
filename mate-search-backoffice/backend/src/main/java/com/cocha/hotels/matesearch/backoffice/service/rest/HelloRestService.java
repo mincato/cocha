@@ -23,13 +23,13 @@ public class HelloRestService {
 
     @Autowired
     private RestResponseHandler responseHandler;
-    
+
     @GET
     public Response hello(@Context HttpServletRequest request) {
         try {
             return responseHandler.buildSuccessResponse("{ \"text\": \"Hello. I'm OK!\" }", Status.OK);
         } catch (Exception e) {
             return responseHandler.buildErrorResponse(e);
-        }            
-    }    
+        }
+    }
 }

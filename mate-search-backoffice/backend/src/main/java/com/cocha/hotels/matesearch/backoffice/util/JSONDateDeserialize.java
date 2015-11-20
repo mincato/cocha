@@ -19,21 +19,21 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class JSONDateDeserialize extends JsonDeserializer<Date> {
+
     private static final SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 
     @Override
     public Date deserialize(JsonParser jp, DeserializationContext dc) throws IOException, JsonProcessingException {
         try {
             String date = jp.getText();
-            
+
             return dateFormat.parse(date);
         } catch (ParseException ex) {
-            //FIXME
+            // FIXME
             Logger.getLogger(JSONDateDeserialize.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
 
     }
-
 
 }

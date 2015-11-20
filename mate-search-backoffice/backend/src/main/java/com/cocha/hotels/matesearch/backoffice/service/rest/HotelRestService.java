@@ -26,31 +26,32 @@ import com.cocha.hotels.model.content.hotel.Hotel;
 @Produces(MediaType.APPLICATION_JSON)
 public class HotelRestService {
 
-	@Autowired
-	private HotelService hotelService;
-	
+    @Autowired
+    private HotelService hotelService;
+
     @Autowired
     private RestResponseHandler responseHandler;
-	
+
     @GET
     @Path("{supplierCode}/{id}")
-    public Response getHotel(@Context HttpServletRequest request, @PathParam("id") String id, @PathParam("supplierCode") String supplierCode) {
+    public Response getHotel(@Context HttpServletRequest request, @PathParam("id") String id,
+            @PathParam("supplierCode") String supplierCode) {
         try {
             Hotel hotel = hotelService.find(id, supplierCode);
             return responseHandler.buildSuccessResponse(hotel, Status.OK);
         } catch (Exception e) {
             return responseHandler.buildErrorResponse(e);
-        }    	
+        }
     }
-	
-	@GET
-	public Response getAll(@Context HttpServletRequest request) {
+
+    @GET
+    public Response getAll(@Context HttpServletRequest request) {
         try {
-        	List<Hotel> hoteles = hotelService.getAll();
+            List<Hotel> hoteles = hotelService.getAll();
             return responseHandler.buildSuccessResponse(hoteles, Status.OK);
         } catch (Exception e) {
             return responseHandler.buildErrorResponse(e);
         }
-	}
-	
+    }
+
 }

@@ -29,44 +29,44 @@ import com.cocha.hotels.matesearch.backoffice.util.RestResponseHandler;
 @Produces(MediaType.APPLICATION_JSON)
 public class TipoMaterialRestService {
 
-	@Autowired
-	private TipoMaterialService tipoMaterialService;
-	
+    @Autowired
+    private TipoMaterialService tipoMaterialService;
+
     @Autowired
     private RestResponseHandler responseHandler;
-	
-	@POST
-	public Response createTipoMaterial(@Context HttpServletRequest request, TipoMaterial tipoMaterial) {
+
+    @POST
+    public Response createTipoMaterial(@Context HttpServletRequest request, TipoMaterial tipoMaterial) {
         try {
-        	tipoMaterial = tipoMaterialService.createTipoMaterial(tipoMaterial);
+            tipoMaterial = tipoMaterialService.createTipoMaterial(tipoMaterial);
             return responseHandler.buildSuccessResponse(tipoMaterial, Status.CREATED);
         } catch (Exception e) {
             return responseHandler.buildErrorResponse(e);
         }
-	}
-	
+    }
+
     @PUT
     @Path("{id}")
     public Response updateTipoMaterial(@Context HttpServletRequest request, TipoMaterial tipoMaterial) {
         try {
-        	tipoMaterial = tipoMaterialService.update(tipoMaterial);
+            tipoMaterial = tipoMaterialService.update(tipoMaterial);
             return responseHandler.buildSuccessResponse(tipoMaterial, Status.ACCEPTED);
         } catch (Exception e) {
             return responseHandler.buildErrorResponse(e);
-        }            
+        }
     }
- 
+
     @DELETE
     @Path("{id}")
     public Response deleteTipoMaterial(@Context HttpServletRequest request, @PathParam("id") Long id) {
-        try {            
+        try {
             tipoMaterialService.delete(id);
             return responseHandler.buildSuccessResponse(Status.ACCEPTED);
         } catch (Exception e) {
             return responseHandler.buildErrorResponse(e);
-        }            
+        }
     }
-    
+
     @GET
     @Path("{id}")
     public Response getMaterial(@Context HttpServletRequest request, @PathParam("id") Long id) {
@@ -75,17 +75,17 @@ public class TipoMaterialRestService {
             return responseHandler.buildSuccessResponse(tipoMaterial, Status.OK);
         } catch (Exception e) {
             return responseHandler.buildErrorResponse(e);
-        }    	
+        }
     }
-	
-	@GET
-	public Response getAll(@Context HttpServletRequest request) {
+
+    @GET
+    public Response getAll(@Context HttpServletRequest request) {
         try {
-        	List<TipoMaterial> tipoMateriales = tipoMaterialService.getAll();
+            List<TipoMaterial> tipoMateriales = tipoMaterialService.getAll();
             return responseHandler.buildSuccessResponse(tipoMateriales, Status.OK);
         } catch (Exception e) {
             return responseHandler.buildErrorResponse(e);
         }
-	}
-	
+    }
+
 }

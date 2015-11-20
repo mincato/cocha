@@ -21,10 +21,10 @@ public class RequestInfoPicker implements org.apache.cxf.jaxrs.ext.RequestHandle
 
     @Context
     private HttpServletRequest request;
-    
+
     @Autowired
     private RequestHandler requestHandler;
-    
+
     @Override
     public Response handleRequest(Message inputMessage, ClassResourceInfo resourceClass) {
 
@@ -34,16 +34,16 @@ public class RequestInfoPicker implements org.apache.cxf.jaxrs.ext.RequestHandle
         requestInfo.setIpAddress(request.getRemoteAddr());
         requestInfo.setEndpoint(request.getRequestURI());
         requestInfo.setHeader(buildHeader(request));
-        
+
         requestHandler.saveRequestInfo(request, requestInfo);
-        
+
         return null;
     }
-    
+
     private Map<String, String> buildHeader(HttpServletRequest request) {
-        
+
         Map<String, String> header = new HashMap<String, String>();
-        
+
         Enumeration<String> keys = request.getHeaderNames();
         if (keys != null) {
             while (keys.hasMoreElements()) {
@@ -53,7 +53,7 @@ public class RequestInfoPicker implements org.apache.cxf.jaxrs.ext.RequestHandle
                 }
             }
         }
-        
+
         return header;
     }
 }

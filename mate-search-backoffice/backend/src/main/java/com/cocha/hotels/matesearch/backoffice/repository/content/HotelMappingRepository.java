@@ -17,38 +17,21 @@ public interface HotelMappingRepository {
             + "(active, confidence, hotelId, mappedByUser, supplierCode, supplierHotelId, unmapped, countryCode) "
             + "VALUES "
             + "(#{active}, #{confidence}, #{hotelId}, #{mappedByUser}, #{supplierCode}, #{supplierHotelId}, #{unmapped}, #{countryCode})";
-    
-    String UPDATE = "UPDATE HotelMapping SET "
-            + "active = #{active}, "
-            + "confidence = #{confidence}, "
-            + "hotelId = #{hotelId}, "
-            + "mappedByUser = #{mappedByUser}, "
-            + "supplierCode = #{supplierCode}, "
-            + "supplierHotelId = #{supplierHotelId}, "
-            + "unmapped = #{unmapped}, "
-            + "countryCode = #{countryCode} "
+
+    String UPDATE = "UPDATE HotelMapping SET " + "active = #{active}, " + "confidence = #{confidence}, "
+            + "hotelId = #{hotelId}, " + "mappedByUser = #{mappedByUser}, " + "supplierCode = #{supplierCode}, "
+            + "supplierHotelId = #{supplierHotelId}, " + "unmapped = #{unmapped}, " + "countryCode = #{countryCode} "
             + "WHERE id = #{id}";
-    
-    String FIND_TOP = "SELECT count( * ) AS nroMapeos, countryCode "
-            + "FROM HotelMapping "
-            + "WHERE confidence < 64 "
-            + "AND supplierCode = 'BKG' "
-            + "GROUP BY countryCode "
-            + "ORDER BY nroMapeos DESC "
+
+    String FIND_TOP = "SELECT count( * ) AS nroMapeos, countryCode " + "FROM HotelMapping " + "WHERE confidence < 64 "
+            + "AND supplierCode = 'BKG' " + "GROUP BY countryCode " + "ORDER BY nroMapeos DESC "
             + "LIMIT 0 , #{howMany}";
 
-    String FIND_BY_COUNTRY = "SELECT * "
-            + "FROM HotelMapping "
-            + "WHERE confidence < 64 "
-            + "AND supplierCode = 'BKG' "
-            + "AND countryCode = #{countryCode} "
-            + "ORDER BY confidence";
+    String FIND_BY_COUNTRY = "SELECT * " + "FROM HotelMapping " + "WHERE confidence < 64 "
+            + "AND supplierCode = 'BKG' " + "AND countryCode = #{countryCode} " + "ORDER BY confidence";
 
-    String FIND_REFERENCE = "SELECT * "
-            + "FROM HotelMapping "
-            + "WHERE hotelId = #{hotelId} "
-            + "AND confidence = 100";
-    
+    String FIND_REFERENCE = "SELECT * " + "FROM HotelMapping " + "WHERE hotelId = #{hotelId} " + "AND confidence = 100";
+
     @Select("SELECT * FROM HotelMapping")
     List<HotelMapping> findAll();
 

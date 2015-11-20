@@ -20,19 +20,19 @@ import com.cocha.hotels.matesearch.backoffice.util.RequestHandler;
 
 @Service
 public class AuthorizationFilter implements org.apache.cxf.jaxrs.ext.RequestHandler {
-    
+
     @Context
     private HttpServletRequest request;
-    
+
     @Autowired
     private RequestHandler requestHandler;
-    
+
     private static final Logger LOGGER = Logger.getLogger(AuthorizationFilter.class);
-    
+
     private List<PublicRule> publicMethodsRules;
-    
+
     public Response handleRequest(Message message, ClassResourceInfo resourceClass) {
-        
+
         try {
             UserData userData = null;
             if (isPublicMethod(request.getMethod(), request.getRequestURI())) {
@@ -52,7 +52,7 @@ public class AuthorizationFilter implements org.apache.cxf.jaxrs.ext.RequestHand
             return Response.status(Status.UNAUTHORIZED).build();
         }
     }
-    
+
     private boolean isPublicMethod(String httpMethod, String uri) {
         for (PublicRule publicRule : publicMethodsRules) {
             if (httpMethod.equals(publicRule.getHttpMethod())) {
@@ -65,13 +65,13 @@ public class AuthorizationFilter implements org.apache.cxf.jaxrs.ext.RequestHand
         }
         return false;
     }
-    
+
     public List<PublicRule> getPublicMethodsRules() {
         return publicMethodsRules;
     }
-    
+
     public void setPublicMethodsRules(List<PublicRule> publicMethodsRules) {
         this.publicMethodsRules = publicMethodsRules;
     }
- 
+
 }

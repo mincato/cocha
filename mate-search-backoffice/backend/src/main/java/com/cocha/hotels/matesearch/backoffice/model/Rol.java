@@ -12,10 +12,10 @@ import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Rol extends BackEndEntity {
 
-	private static final long serialVersionUID = -655321606681663452L;
+    private static final long serialVersionUID = -655321606681663452L;
 
-	private String nombre;
-    
+    private String nombre;
+
     private List<Permiso> permisos;
 
     public String getNombre() {

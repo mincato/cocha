@@ -16,25 +16,25 @@ import com.cocha.hotels.matesearch.backoffice.service.security.TokenHandler;
 
 @Service
 public class RequestHandler {
-    
+
     private static final String REQUEST_INFO_KEY = "requestInfo";
-    
+
     @Autowired
     private TokenHandler tokenHandler;
-    
+
     public UserData verifyToken(HttpServletRequest request) {
         String token = getToken(request);
         return tokenHandler.verifyToken(token);
     }
 
-	public UserData tryToVerifyToken(HttpServletRequest request) {
+    public UserData tryToVerifyToken(HttpServletRequest request) {
         try {
             return verifyToken(request);
         } catch (Exception e) {
             return null;
         }
     }
-    
+
     public UserData getUserFromRequestInfo(HttpServletRequest request) {
         RequestInfo requestInfo = getRequestInfo(request);
         return (requestInfo == null) ? null : requestInfo.getUser();
@@ -47,18 +47,18 @@ public class RequestHandler {
         }
         return user;
     }
-    
+
     public UserData getExpiredUserFromRequestInfo(HttpServletRequest request) {
         String token = getToken(request);
         return tokenHandler.getExpiredUser(token);
     }
-    
+
     public void saveUserInRequestInfo(HttpServletRequest request, UserData user) {
         RequestInfo requestInfo = getRequestInfoOrCreateNew(request);
         requestInfo.setUser(user);
         request.setAttribute(REQUEST_INFO_KEY, requestInfo);
     }
-    
+
     public RequestInfo getRequestInfoOrCreateNew(HttpServletRequest request) {
         RequestInfo requestInfo = getRequestInfo(request);
         if (requestInfo == null) {
@@ -66,15 +66,15 @@ public class RequestHandler {
         }
         return requestInfo;
     }
-    
+
     public void saveRequestInfo(HttpServletRequest request, RequestInfo requestInfo) {
         request.setAttribute(REQUEST_INFO_KEY, requestInfo);
     }
-    
+
     private RequestInfo getRequestInfo(HttpServletRequest request) {
         return (RequestInfo) request.getAttribute(REQUEST_INFO_KEY);
     }
-    
+
     public HttpServletRequest getRequest(ProceedingJoinPoint joinPoint) {
         Object[] args = joinPoint.getArgs();
         if (args != null) {
@@ -86,7 +86,7 @@ public class RequestHandler {
         }
         return null;
     }
-    
+
     public String getToken(HttpServletRequest request) {
         String value = request.getHeader("Authorization");
         if (StringUtils.isBlank(value)) {
@@ -99,12 +99,10 @@ public class RequestHandler {
         }
         String tokenType = valueTrimmed.substring(0, index);
         if (!"Bearer".equals(tokenType)) {
-            throw new UnauthorizedException(
-                    MessageFormat.format("Token {0} not supported",
-                            tokenType));
+            throw new UnauthorizedException(MessageFormat.format("Token {0} not supported", tokenType));
         }
         String token = valueTrimmed.substring(index + 1);
         return token;
     }
-    
+
 }

@@ -16,25 +16,25 @@ import com.cocha.hotels.matesearch.backoffice.service.security.AuthenticatorServ
 @Service
 public class UserService {
 
-	private static final Logger LOGGER = Logger.getLogger(UserService.class );
-	
-	@Autowired
-	private UserRepository userRepository;
-    
+    private static final Logger LOGGER = Logger.getLogger(UserService.class);
+
+    @Autowired
+    private UserRepository userRepository;
+
     private AuthenticatorService authenticatorService;
-    
-	@Transactional
-	public User addUser(User newUser) {
-	    
-		newUser = userRepository.create(newUser);
-        
+
+    @Transactional
+    public User addUser(User newUser) {
+
+        newUser = userRepository.create(newUser);
+
         LOGGER.info("User added: " + newUser.getFirstName() + " " + newUser.getLastName());
         return newUser;
-	}
-	
-	@Transactional
+    }
+
+    @Transactional
     public User updateUser(User user) {
-		user = userRepository.create(user);
+        user = userRepository.create(user);
         return user;
     }
 
@@ -42,12 +42,12 @@ public class UserService {
         User user = userRepository.findByUsername(nick);
         return user;
     }
-    
+
     public User findByUsername(String ntUser) {
         User user = userRepository.findByUsername(ntUser);
         return user;
     }
-    
+
     public User login(String nick, String password) {
 
         LOGGER.info(MessageFormat.format("--- Login: {0} ---", nick));
@@ -55,27 +55,27 @@ public class UserService {
         if (!authenticatorService.authenticate(nick, password)) {
             throw new AuthenticationException();
         }
-        
+
         User user = findByUsername(nick);
         if (user == null) {
-            //throw new AuthenticationException("User does not exists!");
+            // throw new AuthenticationException("User does not exists!");
             throw new ForbiddenException();
         }
         return user;
     }
-    
+
     @Transactional
     public User register(User newUser) {
         User createdUser = addUser(newUser);
         return createdUser;
     }
-	
+
     public AuthenticatorService getAuthenticatorService() {
-		return authenticatorService;
-	}
-    
+        return authenticatorService;
+    }
+
     public void setAuthenticatorService(AuthenticatorService authenticatorService) {
-		this.authenticatorService = authenticatorService;
-	}
-    
+        this.authenticatorService = authenticatorService;
+    }
+
 }

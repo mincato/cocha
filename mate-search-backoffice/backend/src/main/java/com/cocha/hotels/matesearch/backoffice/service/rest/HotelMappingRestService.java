@@ -33,12 +33,12 @@ import com.cocha.hotels.model.content.mapping.HotelMapping;
 @Produces(MediaType.APPLICATION_JSON)
 public class HotelMappingRestService {
 
-	@Autowired
-	private HotelMappingService hotelMappingService;
-	
+    @Autowired
+    private HotelMappingService hotelMappingService;
+
     @Autowired
     private RestResponseHandler responseHandler;
-	
+
     @GET
     @Path("{id}/review")
     public Response getHotelMapping(@Context HttpServletRequest request, @PathParam("id") Long id) {
@@ -47,11 +47,11 @@ public class HotelMappingRestService {
             return responseHandler.buildSuccessResponse(review, Status.OK);
         } catch (Exception e) {
             return responseHandler.buildErrorResponse(e);
-        }       
+        }
     }
-	
-	@GET
-	@Path("byCountry")
+
+    @GET
+    @Path("byCountry")
     public Response getAllByCountry(@Context HttpServletRequest request, @QueryParam("countryCode") String countryCode) {
         try {
             List<HotelMapping> mappings = hotelMappingService.getAllByCountry(countryCode);
@@ -60,20 +60,20 @@ public class HotelMappingRestService {
             return responseHandler.buildErrorResponse(e);
         }
     }
-	
-	@GET
-	@Path("top")
+
+    @GET
+    @Path("top")
     public Response getTopMappings(@Context HttpServletRequest request, @QueryParam("howMany") Integer howMany) {
         try {
-            
+
             List<HotelMappingCount> mappingCount = hotelMappingService.getTopMappings(howMany);
             return responseHandler.buildSuccessResponse(mappingCount, Status.OK);
         } catch (Exception e) {
             return responseHandler.buildErrorResponse(e);
         }
     }
-	
-	@POST
+
+    @POST
     public Response createHotelMapping(@Context HttpServletRequest request, HotelMappingDTO dto) {
         try {
             HotelMapping mapping = hotelMappingService.create(dto);
@@ -82,7 +82,7 @@ public class HotelMappingRestService {
             return responseHandler.buildErrorResponse(e);
         }
     }
-    
+
     @PUT
     @Path("{id}/confirm")
     public Response confirmHotelMapping(@Context HttpServletRequest request, @PathParam("id") Long id) {
@@ -91,9 +91,9 @@ public class HotelMappingRestService {
             return responseHandler.buildSuccessResponse(Status.ACCEPTED);
         } catch (Exception e) {
             return responseHandler.buildErrorResponse(e);
-        }            
+        }
     }
-    
+
     @PUT
     @Path("{id}/reject")
     public Response rejectHotelMapping(@Context HttpServletRequest request, @PathParam("id") Long id) {
@@ -102,9 +102,9 @@ public class HotelMappingRestService {
             return responseHandler.buildSuccessResponse(Status.ACCEPTED);
         } catch (Exception e) {
             return responseHandler.buildErrorResponse(e);
-        }            
+        }
     }
-    
+
     @PUT
     @Path("{id}/deactivate")
     public Response deactivateHotelMapping(@Context HttpServletRequest request, @PathParam("id") Long id) {
@@ -113,9 +113,9 @@ public class HotelMappingRestService {
             return responseHandler.buildSuccessResponse(mapping, Status.ACCEPTED);
         } catch (Exception e) {
             return responseHandler.buildErrorResponse(e);
-        }            
+        }
     }
-    
+
     @PUT
     @Path("{id}/activate")
     public Response activateHotelMapping(@Context HttpServletRequest request, @PathParam("id") Long id) {
@@ -124,18 +124,18 @@ public class HotelMappingRestService {
             return responseHandler.buildSuccessResponse(mapping, Status.ACCEPTED);
         } catch (Exception e) {
             return responseHandler.buildErrorResponse(e);
-        }            
+        }
     }
- 
+
     @DELETE
     @Path("{id}")
     public Response deleteHotelMapping(@Context HttpServletRequest request, @PathParam("id") Long id) {
-        try {            
+        try {
             hotelMappingService.delete(id);
             return responseHandler.buildSuccessResponse(Status.ACCEPTED);
         } catch (Exception e) {
             return responseHandler.buildErrorResponse(e);
-        }            
+        }
     }
-	
+
 }

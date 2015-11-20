@@ -6,7 +6,7 @@ import java.text.SimpleDateFormat;
 import org.codehaus.jackson.map.ObjectMapper;
 
 public class JSONObjectConverter {
-    
+
     private static final String DATE_FORMAT = "yyyy-MM-dd";
 
     @SuppressWarnings("unchecked")
@@ -17,9 +17,7 @@ public class JSONObjectConverter {
         try {
             return (T) mapper.readValue(json, clazz);
         } catch (Exception e) {
-            throw new RuntimeException(
-                    "Ocurrio un ERROR en la des-serializacion de "
-                            + clazz.getSimpleName(), e);
+            throw new RuntimeException("Ocurrio un ERROR en la des-serializacion de " + clazz.getSimpleName(), e);
         }
     }
 
@@ -30,12 +28,10 @@ public class JSONObjectConverter {
         try {
             return mapper.writeValueAsString(obj);
         } catch (Exception e) {
-            throw new RuntimeException(
-                    "Ocurrio un ERROR en la serializacion de "
-                            + obj.getClass().getSimpleName(), e);
+            throw new RuntimeException("Ocurrio un ERROR en la serializacion de " + obj.getClass().getSimpleName(), e);
         }
     }
-    
+
     private static ObjectMapper createMapper() {
         DateFormat df = new SimpleDateFormat(DATE_FORMAT);
         ObjectMapper mapper = new ObjectMapper();
