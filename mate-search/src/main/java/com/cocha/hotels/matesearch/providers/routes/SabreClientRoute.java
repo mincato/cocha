@@ -7,11 +7,14 @@ import org.apache.camel.Predicate;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+import com.cocha.hotels.matesearch.providers.aggregators.SupplierRequestAggregationStrategy;
 import com.cocha.hotels.matesearch.providers.processors.ErrorSupplierProcessor;
 import com.cocha.hotels.matesearch.providers.processors.SabreClientProcessor;
 import com.cocha.hotels.matesearch.providers.processors.SabreClientResponseProcessor;
+import com.cocha.hotels.matesearch.providers.splitter.SupplierRequestSplitter;
 import com.cocha.hotels.matesearch.util.Constant;
 import com.cocha.hotels.matesearch.util.Constant.CodeSupplier;
 
@@ -30,6 +33,13 @@ public class SabreClientRoute extends RouteBuilder {
     @Autowired
     private ErrorSupplierProcessor errorSupplierProcessor;
 
+    @Autowired
+    @Qualifier("sabreSupplierRequestSplitter")
+    private SupplierRequestSplitter supplierRequestSplitter;
+
+    @Autowired
+    private SupplierRequestAggregationStrategy supplierRequestAggregationStrategy;
+
     @Override
     public void configure() throws Exception {
 
@@ -46,7 +56,9 @@ public class SabreClientRoute extends RouteBuilder {
                 String idsHotelsSabre = parameters.get("idsHotelsSabre");
                 return StringUtils.isNotBlank(idsHotelsSabre);
             }
-        }).process(sabreClientProcessor).wireTap("direct:logInfo").to("cxf:bean:sabreAvailability")
+        }).split().method(supplierRequestSplitter, "splitRequest")
+                .aggregationStrategy(supplierRequestAggregationStrategy).parallelProcessing()
+                .process(sabreClientProcessor).wireTap("direct:logInfo").to("cxf:bean:sabreAvailability")
                 .log("Testing message").bean(sabreClientResponseProcessor).to("direct:transformerResposeSabre");
     }
 }

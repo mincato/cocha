@@ -12,7 +12,7 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.cocha.hotels.matesearch.repositories.HotelMappingRepository;
+import com.cocha.hotels.matesearch.manager.HotelMappingManager;
 import com.cocha.hotels.matesearch.repositories.RegionHotelMappingRepository;
 import com.cocha.hotels.matesearch.util.Constant;
 import com.cocha.hotels.matesearch.util.Constant.CodeSupplier;
@@ -27,7 +27,7 @@ public class HotelListHeaderDataProcessor implements Processor {
     private static final Logger log = Logger.getLogger(HotelListHeaderDataProcessor.class);
 
     @Autowired
-    private HotelMappingRepository hotelMappingRepository;
+    private HotelMappingManager hotelMappingManager;
 
     @Autowired
     private RegionHotelMappingRepository regionHotelMappingRepository;
@@ -57,7 +57,7 @@ public class HotelListHeaderDataProcessor implements Processor {
 
             parameters.put(Constant.ID_HOTEL, String.join(",", hotelIds));
 
-            List<HotelMapping> providers = hotelMappingRepository.findByHotelIds(hotelIds);
+            List<HotelMapping> providers = hotelMappingManager.findByHotelIds(hotelIds);
 
             String currencyCode = (String) parameters.get(Constant.CURRENCY_CODE);
 
@@ -66,15 +66,15 @@ public class HotelListHeaderDataProcessor implements Processor {
                 parameters.put(Constant.CURRENCY_CODE, Constant.CURRNCY_DEFAULT);
             }
 
-            parameters.put("Content-Type", (String) headers.get("Content-Type"));
+            parameters.put(Constant.CONTENT_TYPE, (String) headers.get(Constant.CONTENT_TYPE));
 
             this.putIdSuppliersAndIdMapping(parameters, providers);
 
             exchange.getOut().setBody(parameters);
 
         } catch (Exception e) {
-            log.info("Error al armar Hearder del Mate Search");
-            exchange.setException(e);
+            log.error("Error al armar Hearder del Mate Search");
+            throw e;
         }
 
     }

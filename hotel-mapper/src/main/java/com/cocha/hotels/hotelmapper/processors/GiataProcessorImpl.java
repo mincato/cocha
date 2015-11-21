@@ -5,6 +5,7 @@ import org.apache.camel.Message;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 
+import com.cocha.hotels.model.content.hotel.Hotel;
 import com.cocha.hotels.model.content.mapping.HotelMapping;
 
 @Component
@@ -21,15 +22,16 @@ public class GiataProcessorImpl implements GiataMapperProcessor {
         String sabreId = inMessage.getHeader("sabreId", String.class);
         String eanId = inMessage.getHeader("eanId", String.class);
         String hotelId = inMessage.getHeader("hotelId", String.class);
+        String countryCode = inMessage.getHeader("countryCode", String.class);
         logger.info(String.format("GIATA MAPPING: [SABRE ID: %s, EAN ID: %s]", sabreId, eanId));
 
         HotelMapping mapping = new HotelMapping();
         mapping.setConfidence(99);
-        mapping.setSupplierCode("SAB");
+        mapping.setSupplierCode(Hotel.SABRE_SUPPLIER_CODE);
         mapping.setSupplierHotelId(sabreId);
         mapping.setHotelId(hotelId);
         mapping.setActive(DEFAULT_HOTEL_ACTIVE);
-        mapping.setMappedByUser(false);
+        mapping.setCountryCode(countryCode);
 
         exchange.getOut().setBody(mapping);
     }

@@ -17,13 +17,9 @@ public class HotelListResponseBuilder implements Processor {
         Status status;
         HotelListResponse hotelListResponse = new HotelListResponse();
 
-        if (exchange.getException() == null) {
-            status = new Status("200", "success");
-            hotelListResponse.setHotelList(exchange.getIn().getBody(HotelList.class));
-        } else {
-            status = new Status("500", "Error Interno del servidor");
-            hotelListResponse.setHotelList(new HotelList());
-        }
+        status = new Status("200", "success");
+        hotelListResponse.setHotelList(exchange.getIn().getBody(HotelList.class));
+
         hotelListResponse.setStatus(status);
         exchange.getIn().setBody(hotelListResponse);
     }

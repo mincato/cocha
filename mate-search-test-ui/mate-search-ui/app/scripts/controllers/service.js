@@ -30,7 +30,7 @@ serviceMateSearch.controller('serviceController', ['$scope','$http','$location',
 			$http({
 				method: 'GET',
 				data : '',
-				url: 'http://'+$location.host()+':'+$location.port()+'/mate-search/hotel/list?regionId='+hotel.ids+'&arrivalDate='+moment(hotel.arrivalDate).format('MM/DD/YYYY')+'&departureDate='+moment(hotel.departureDate).format('MM/DD/YYYY')+'&currencyCode='+hotel.currencyCode+'&token='+hotel.token,
+				url: 'http://'+$location.host()+':'+$location.port()+'/mate-search/hotel/list?regionId='+hotel.ids+'&arrivalDate='+moment(hotel.arrivalDate).format('MM/DD/YYYY')+'&departureDate='+moment(hotel.departureDate).format('MM/DD/YYYY')+'&currencyCode='+hotel.currencyCode,
  				headers: {'Content-Type': 'application/json'}
 			})
 			.success(function(data) {

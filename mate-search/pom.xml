@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>com.cocha.hotels</groupId>
 		<artifactId>meta-search</artifactId>
-		<version>0.5</version>
+		<version>0.6</version>
 	</parent>
 	<artifactId>mate-search</artifactId>
 	<packaging>war</packaging>
@@ -26,6 +26,9 @@
 		<h2-version>1.4.188</h2-version>
 		<es-version>1.7.1</es-version>
 		<springdata-version>1.9.0.RELEASE</springdata-version>
+		<hornetq-version>2.3.25.Final</hornetq-version>
+		<infinispan-version>5.2.11.Final</infinispan-version>
+		<hazelcast-version>3.5.3</hazelcast-version>
 	</properties>
 
 	<dependencies>
@@ -40,6 +43,19 @@
 			<groupId>com.cocha.hotels</groupId>
 			<artifactId>util</artifactId>
 			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<artifactId>com.cocha.session</artifactId>
+			<groupId>sabreSession-client</groupId>
+			<scope>system</scope>
+			<version>1.0</version>
+			<systemPath>${basedir}/cocha/lib/cocha-sabreSession-client.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hornetq</groupId>
+			<artifactId>hornetq-jms-client</artifactId>
+			<version>${hornetq-version}</version>
 		</dependency>
 
 		<dependency>
@@ -94,13 +110,18 @@
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-jpa</artifactId>
 			<version>${camel-version}</version>
-		</dependency>		
-		<dependency>
-		  <groupId>org.apache.camel</groupId>
-		  <artifactId>camel-jaxb</artifactId>
-		  <version>${camel-version}</version>
 		</dependency>
-		
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jaxb</artifactId>
+			<version>${camel-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-hazelcast</artifactId>
+			<version>${camel-version}</version>
+		</dependency>
+
 		<!-- Database -->
 		<dependency>
 			<groupId>mysql</groupId>
@@ -123,14 +144,14 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-		</dependency>	
-		
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-jpa</artifactId>
 			<version>${springdata-version}</version>
-		</dependency>		
-				
+		</dependency>
+
 		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -182,11 +203,42 @@
 			<version>${es-version}</version>
 		</dependency>
 		<dependency>
-  			<groupId>org.springframework.data</groupId>
-  			<artifactId>spring-data-elasticsearch</artifactId>
-  			<version>1.2.2.RELEASE</version>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-elasticsearch</artifactId>
+			<version>1.2.2.RELEASE</version>
+		</dependency>
+		
+		<!-- Infinispan -->
+		<dependency>
+    		<groupId>org.infinispan</groupId>
+    		<artifactId>infinispan-core</artifactId>
+    		<version>${infinispan-version}</version>
+    		<scope>provided</scope>
+  		</dependency>
+  		<dependency>
+         	<groupId>org.infinispan</groupId>
+         	<artifactId>infinispan-spring</artifactId>
+         	<version>${infinispan-version}</version>
+      	</dependency>
+
+		<!-- Hazelcast -->
+		<dependency>
+			<groupId>com.hazelcast</groupId>
+			<artifactId>hazelcast</artifactId>
+			<version>${hazelcast-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.hazelcast</groupId>
+			<artifactId>hazelcast-client</artifactId>
+			<version>${hazelcast-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.hazelcast</groupId>
+			<artifactId>hazelcast-spring</artifactId>
+			<version>${hazelcast-version}</version>
 		</dependency>
 	</dependencies>
+	
 
 	<build>
 		<!-- Maven will append the version to the finalName (which is the name 
@@ -197,6 +249,17 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>${version.war.plugin}</version>
 				<configuration>
+					<archive>
+           				<manifestEntries>
+             				<Dependencies>org.infinispan services</Dependencies>
+           				</manifestEntries>
+         			</archive>
+					<webResources>
+						<resource>
+							<directory>${basedir}/cocha/lib/</directory>
+							<targetPath>WEB-INF/lib</targetPath>
+						</resource>
+					</webResources>
 					<!-- Java EE 6 doesn't require web.xml, Maven needs to catch up! -->
 					<failOnMissingWebXml>false</failOnMissingWebXml>
 				</configuration>
@@ -208,42 +271,14 @@
 				<artifactId>jboss-as-maven-plugin</artifactId>
 				<version>${version.jboss.maven.plugin}</version>
 			</plugin>
-			<!--<plugin>
-			          <groupId>org.apache.cxf</groupId>
-			          <artifactId>cxf-codegen-plugin</artifactId>
-			          <version>3.1.3</version>
-			           <executions>
-			                  <execution>
-			                     <id>generate-sources</id>
-			                     <phase>generate-sources</phase>
-			                     <configuration>
-			                     <sourceRoot>
-			                         ${basedir}/src/main/java
-			                     </sourceRoot>
-			                     <wsdlOptions>
-			                     	<wsdlOption>			                             
-			                             <wsdl>
-			                             		${basedir}/src/main/resources/wsdl/ContextChangeLLS2.0.3RQ.wsdl
-			                             </wsdl>
-			                        </wsdlOption>
-			                        <wsdlOption>			                             
-			                             <wsdl>
-			                             		${basedir}/src/main/resources/wsdl/OTA_HotelAvailLLS2.2.0RQ.wsdl
-			                             </wsdl>
-			                        </wsdlOption>	
-			                        <wsdlOption>
-									     <wsdl>
-									           ${basedir}/src/main/resources/wsdl/SessionCreateRQ.wsdl
-									     </wsdl>			                             
-									</wsdlOption>		                        
-			                      	</wsdlOptions>
-			                     </configuration>
-			                     <goals>
-			                         <goal>wsdl2java</goal>
-			                     </goals>
-			                </execution>
-			            </executions>
-			</plugin> -->
+			<!--<plugin> <groupId>org.apache.cxf</groupId> <artifactId>cxf-codegen-plugin</artifactId> 
+				<version>3.1.3</version> <executions> <execution> <id>generate-sources</id> 
+				<phase>generate-sources</phase> <configuration> <sourceRoot> ${basedir}/src/main/java 
+				</sourceRoot> <wsdlOptions> <wsdlOption> <wsdl> ${basedir}/src/main/resources/wsdl/ContextChangeLLS2.0.3RQ.wsdl 
+				</wsdl> </wsdlOption> <wsdlOption> <wsdl> ${basedir}/src/main/resources/wsdl/OTA_HotelAvailLLS2.2.0RQ.wsdl 
+				</wsdl> </wsdlOption> <wsdlOption> <wsdl> ${basedir}/src/main/resources/wsdl/SessionCreateRQ.wsdl 
+				</wsdl> </wsdlOption> </wsdlOptions> </configuration> <goals> <goal>wsdl2java</goal> 
+				</goals> </execution> </executions> </plugin> -->
 		</plugins>
 	</build>
 
@@ -263,8 +298,8 @@
 						<artifactId>findbugs-maven-plugin</artifactId>
 						<version>${version.findbugs.plugin}</version>
 						<configuration>
-							<!-- Enables analysis which takes more memory but finds more bugs. If 
-								you run out of memory, changes the value of the effort element to 'Low'. -->
+							<!-- Enables analysis which takes more memory but finds more bugs. 
+								If you run out of memory, changes the value of the effort element to 'Low'. -->
 							<effort>Max</effort>
 							<!-- Reports all bugs (other values are medium and max) -->
 							<threshold>Low</threshold>

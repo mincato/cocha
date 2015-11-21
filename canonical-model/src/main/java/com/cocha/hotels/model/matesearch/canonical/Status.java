@@ -1,11 +1,13 @@
 package com.cocha.hotels.model.matesearch.canonical;
 
+import java.io.Serializable;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Status {
+public class Status implements Serializable {
 
     public Status() {
     }

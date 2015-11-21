@@ -12,7 +12,7 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.cocha.hotels.matesearch.repositories.HotelMappingRepository;
+import com.cocha.hotels.matesearch.manager.HotelMappingManager;
 import com.cocha.hotels.matesearch.util.Constant;
 import com.cocha.hotels.matesearch.util.Constant.CodeSupplier;
 import com.cocha.hotels.matesearch.util.MessageUtils;
@@ -25,7 +25,7 @@ public class MateHeaderDataProcessor implements Processor {
     private static final Logger log = Logger.getLogger(MateHeaderDataProcessor.class);
 
     @Autowired
-    private HotelMappingRepository hotelMappingRepository;
+    private HotelMappingManager hotelMappingManager;
 
     /*
      * (non-Javadoc)
@@ -45,7 +45,7 @@ public class MateHeaderDataProcessor implements Processor {
 
             List<String> ids = Arrays.asList(((String) parameters.get(Constant.ID_HOTEL)).split("\\s*,\\s*"));
 
-            List<HotelMapping> providers = hotelMappingRepository.findByHotelIds(ids);
+            List<HotelMapping> providers = hotelMappingManager.findByHotelIds(ids);
 
             String currencyCode = (String) parameters.get("currencyCode");
 
@@ -61,8 +61,8 @@ public class MateHeaderDataProcessor implements Processor {
             exchange.getOut().setBody(parameters);
 
         } catch (Exception e) {
-            log.info("Error al armar Hearder del Mate Search");
-            exchange.setException(e);
+            log.error("Error al armar Hearder del Mate Search");
+            throw e;
         }
 
     }

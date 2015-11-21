@@ -1,5 +1,6 @@
 package com.cocha.hotels.hotelmapper.processors;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -22,7 +23,10 @@ public class MapperProcessorImpl implements MapperProcessor {
 
         logger.info("Started mapping hotels. Hotels size: " + hotels.size());
 
-        List<HotelMapping> mapping = mappingService.map(hotels);
+        List<HotelMapping> mapping = new ArrayList<HotelMapping>();
+        if (!hotels.isEmpty()) {
+            mapping = mappingService.map(hotels);
+        }
 
         logger.info("Finished mapping hotels. Mapping size: " + mapping.size());
 

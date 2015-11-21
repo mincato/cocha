@@ -1,20 +1,23 @@
 package com.cocha.hotels.matesearch.providers.aggregators;
 
+import java.text.DecimalFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
 import org.apache.camel.Exchange;
 import org.apache.camel.processor.aggregate.AggregationStrategy;
-import org.apache.commons.lang3.ObjectUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.cocha.hotels.matesearch.repositories.HotelMappingRepository;
 import com.cocha.hotels.matesearch.util.Constant;
 import com.cocha.hotels.matesearch.util.Constant.CodeSupplier;
+import com.cocha.hotels.matesearch.util.ErrorInternal;
 import com.cocha.hotels.model.matesearch.canonical.ErrorSupplier;
 import com.cocha.hotels.model.matesearch.canonical.RateForSupplier;
 import com.cocha.hotels.model.matesearch.canonical.RateInfo;
@@ -30,9 +33,6 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 
     private static final Logger log = Logger.getLogger(AggregationAvailabilityStrategy.class);
 
-    @Autowired
-    private HotelMappingRepository hotelMappingRepository;
-
     @Override
     public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {
 
@@ -40,11 +40,7 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 
             HotelList hotels;
             ResposeSuppliers resposeSuppliers;
-            ErrorSupplier errorSupplier;
-
-            if (oldExchange != null && oldExchange.getException() != null) {
-                return oldExchange;
-            }
+            ErrorInternal errorInternal;
 
             if (newExchange.getIn().getBody(HotelList.class) instanceof HotelList) {
 
@@ -63,13 +59,13 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 
                 oldExchange.getIn().setBody(hotels);
 
-            } else if (newExchange.getIn().getBody(ErrorSupplier.class) instanceof ErrorSupplier) {
+            } else if (newExchange.getIn().getBody(ErrorInternal.class) instanceof ErrorInternal) {
 
                 hotels = oldExchange.getIn().getBody(HotelList.class);
-                errorSupplier = newExchange.getIn().getBody(ErrorSupplier.class);
+                errorInternal = newExchange.getIn().getBody(ErrorInternal.class);
                 Map<String, Object> parameters = oldExchange.getIn().getHeaders();
 
-                this.addErrors(hotels, errorSupplier, parameters);
+                this.addErrors(hotels, errorInternal, parameters);
 
             }
 
@@ -78,21 +74,21 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
         } catch (Exception e) {
             log.info("Error al reunir las respuestas de los supplier");
             if (oldExchange == null) {
-                newExchange.setException(e);
                 return newExchange;
             } else {
-                oldExchange.setException(e);
                 return oldExchange;
             }
         }
 
     }
 
-    private void addRates(HotelList hotels, ResposeSuppliers resposeSuppliers, Map<String, Object> parameters) {
-
-        String idSupplier = null;
+    private void addRates(HotelList hotels, ResposeSuppliers resposeSuppliers, Map<String, Object> parameters)
+            throws ParseException {
 
         List<String> ids = Arrays.asList(((String) parameters.get(Constant.ID_HOTEL)).split("\\s*,\\s*"));
+
+        Long diffDays = this.diffDays((String) parameters.get(Constant.ARRIVAL_DATE),
+                (String) parameters.get(Constant.DEPARTURE_DATE));
 
         for (String id : ids) {
 
@@ -111,7 +107,6 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
                             .stream()
                             .filter((RateInfoForSupplier rateForSupplier) -> rateForSupplier.getIdSupplier().equals(
                                     idMapping.getSupplierBooking())).findFirst();
-                    idSupplier = idMapping.getSupplierBooking();
                     break;
                 case CodeSupplier.EAN_SUPPLIER_CODE:
                     rateForSupplierOptional = resposeSuppliers
@@ -119,7 +114,6 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
                             .stream()
                             .filter((RateInfoForSupplier rateForSupplier) -> rateForSupplier.getIdSupplier().equals(
                                     idMapping.getSupplierEAN())).findFirst();
-                    idSupplier = idMapping.getSupplierEAN();
                     break;
                 case CodeSupplier.SABRE_SUPPLIER_CODE:
                     rateForSupplierOptional = resposeSuppliers
@@ -127,60 +121,29 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
                             .stream()
                             .filter((RateInfoForSupplier rateForSupplier) -> rateForSupplier.getIdSupplier()
                                     .replaceFirst("^0+(?!$)", "").equals(idMapping.getSupplierSabre())).findFirst();
-                    idSupplier = idMapping.getSupplierSabre();
                     break;
             }
 
-            if (rateForSupplierOptional.isPresent() && this.isAvailability(rateForSupplierOptional.get())) {
+            if (rateForSupplierOptional.isPresent()) {
 
-                this.addRate(hotelOptinal.get(), rateForSupplierOptional.get());
+                if (this.isAvailability(rateForSupplierOptional.get())) {
 
+                    this.calculateAverage(rateForSupplierOptional.get(), diffDays);
+
+                    this.addRate(hotelOptinal.get(), rateForSupplierOptional.get());
+
+                } else {
+                    this.addNotAvailability(hotelOptinal.get(), rateForSupplierOptional.get());
+                }
+
+            } else if (resposeSuppliers.getRateForSupplier().isEmpty()) {
+                RateInfoForSupplier rateInfoForSupplier = new RateInfoForSupplier();
+                rateInfoForSupplier.setIdSupplier(idMapping.getSupplierBooking());
+                rateInfoForSupplier.setCodeSupplier(resposeSuppliers.getCodeSupplier());
+                this.addNotAvailability(hotelOptinal.get(), rateInfoForSupplier);
             }
         }
 
-    }
-
-    private boolean isAvailability(RateInfoForSupplier rateInfoForSupplier) {
-        return rateInfoForSupplier.getLowRate() != null && rateInfoForSupplier.getHigtRate() != null;
-    }
-
-    private void addErrors(HotelList hotels, ErrorSupplier errorSupplier, Map<String, Object> parameters) {
-
-        List<String> ids = Arrays.asList(((String) parameters.get(Constant.ID_HOTEL)).split("\\s*,\\s*"));
-
-        for (String id : ids) {
-
-            Optional<HotelSummary> hotelOptinal = hotels.getHotelSummary().stream()
-                    .filter((HotelSummary hotel) -> hotel.getHotelId().equals(id)).findFirst();
-
-            IdMapping idMapping = (IdMapping) parameters.get(hotelOptinal.get().getHotelId());
-
-            switch (errorSupplier.getCodeSupplier()) {
-
-                case CodeSupplier.BOOKING_SUPPLIER_CODE:
-                    if (idMapping.getSupplierBooking() != null) {
-                        errorSupplier.setIdSupplier(idMapping.getSupplierBooking());
-                    } else {
-                        errorSupplier.setIdSupplier("");
-                    }
-                    break;
-                case CodeSupplier.EAN_SUPPLIER_CODE:
-                    if (idMapping.getSupplierEAN() != null) {
-                        errorSupplier.setIdSupplier(idMapping.getSupplierEAN());
-                    } else {
-                        errorSupplier.setIdSupplier("");
-                    }
-                    break;
-                case CodeSupplier.SABRE_SUPPLIER_CODE:
-                    if (idMapping.getSupplierSabre() != null) {
-                        errorSupplier.setIdSupplier(idMapping.getSupplierSabre());
-                    } else {
-                        errorSupplier.setIdSupplier("");
-                    }
-                    break;
-            }
-            this.addError(hotelOptinal.get(), errorSupplier, new Status("500", "Error en el servicio del supplier"));
-        }
     }
 
     private void addRate(HotelSummary hotel, RateInfoForSupplier rateInfoForSupplier) {
@@ -195,14 +158,90 @@ public class AggregationAvailabilityStrategy implements AggregationStrategy {
 
     }
 
+    private void addErrors(HotelList hotels, ErrorInternal errorInternal, Map<String, Object> parameters) {
+
+        List<String> ids = Arrays.asList(((String) parameters.get(Constant.ID_HOTEL)).split("\\s*,\\s*"));
+
+        for (String id : ids) {
+
+            ErrorSupplier errorSupplier = new ErrorSupplier(errorInternal.getCodeSupplier());
+
+            Optional<HotelSummary> hotelOptinal = hotels.getHotelSummary().stream()
+                    .filter((HotelSummary hotel) -> hotel.getHotelId().equals(id)).findFirst();
+
+            IdMapping idMapping = (IdMapping) parameters.get(hotelOptinal.get().getHotelId());
+
+            switch (errorInternal.getCodeSupplier()) {
+
+                case CodeSupplier.BOOKING_SUPPLIER_CODE:
+                    errorSupplier.setIdSupplier(idMapping.getSupplierBooking());
+                    break;
+                case CodeSupplier.EAN_SUPPLIER_CODE:
+                    errorSupplier.setIdSupplier(idMapping.getSupplierEAN());
+                    break;
+                case CodeSupplier.SABRE_SUPPLIER_CODE:
+                    errorSupplier.setIdSupplier(idMapping.getSupplierSabre());
+                    break;
+            }
+            this.addError(hotelOptinal.get(), errorSupplier, new Status("500", errorInternal.getCause()));
+        }
+    }
+
     private void addError(HotelSummary hotel, ErrorSupplier errorSupplier, Status statusError) {
 
-        RateInfo rateInfo = hotel.getRateInfo();
+        if (!StringUtils.isBlank(errorSupplier.getIdSupplier())) {
+            RateInfo rateInfo = hotel.getRateInfo();
+            RateForSupplier rateForSupplier = new RateForSupplier();
+            rateForSupplier.setStatus(statusError);
+            rateForSupplier.setAvailability(errorSupplier);
+            rateInfo.getRateForSupplier().add(rateForSupplier);
+        }
+
+    }
+
+    private void addNotAvailability(HotelSummary hotelSummary, RateInfoForSupplier rateInfoForSupplier) {
+
+        RateInfo rateInfo = hotelSummary.getRateInfo();
+        Status status = new Status("201", "No Availability");
         RateForSupplier rateForSupplier = new RateForSupplier();
-        rateForSupplier.setStatus(statusError);
-        rateForSupplier.setAvailability((ErrorSupplier) ObjectUtils.clone(errorSupplier));
+        rateForSupplier.setStatus(status);
+        rateForSupplier.setAvailability((RateInfoForSupplier) rateInfoForSupplier);
         rateInfo.getRateForSupplier().add(rateForSupplier);
 
+    }
+
+    private boolean isAvailability(RateInfoForSupplier rateInfoForSupplier) {
+
+        return rateInfoForSupplier.getLowRate() != null && rateInfoForSupplier.getHigtRate() != null;
+
+    }
+
+    private void calculateAverage(RateInfoForSupplier rateInfoForSupplier, Long diffDays) {
+
+        if (!CodeSupplier.EAN_SUPPLIER_CODE.equals(rateInfoForSupplier.getCodeSupplier())) {
+
+            Float averageRate = rateInfoForSupplier.getLowRate() / diffDays;
+            DecimalFormat decimalFormat = new DecimalFormat("0.00");
+            String value = decimalFormat.format(averageRate.doubleValue());
+            averageRate = new Float(value.replace(",", "."));
+            rateInfoForSupplier.setAverageBaseRate(averageRate);
+
+        }
+
+    }
+
+    private Long diffDays(String arrivalDate, String departureDate) throws ParseException {
+
+        SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy");
+
+        Date arrival = format.parse(arrivalDate);
+        Date departure = format.parse(departureDate);
+
+        Long diff = departure.getTime() - arrival.getTime();
+
+        Long diffDays = diff / (24 * 60 * 60 * 1000);
+
+        return diffDays;
     }
 
 }

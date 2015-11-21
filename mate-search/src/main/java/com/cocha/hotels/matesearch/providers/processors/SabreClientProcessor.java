@@ -13,6 +13,7 @@ import org.apache.camel.Exchange;
 import org.apache.camel.Message;
 import org.apache.camel.Processor;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.log4j.Logger;
 import org.ebxml.namespaces.messageheader.From;
 import org.ebxml.namespaces.messageheader.MessageData;
 import org.ebxml.namespaces.messageheader.MessageHeader;
@@ -22,6 +23,10 @@ import org.ebxml.namespaces.messageheader.To;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.xmlsoap.schemas.ws._2002._12.secext.Security;
+
+import cl.cocha.session.client.dto.ConfJmsDTO;
+import cl.cocha.session.client.ejb.SabreSessionSvc;
+import cl.cocha.session.dto.SessionDTO;
 
 import com.cocha.hotels.matesearch.util.Constant;
 import com.sabre.webservices.sabrexml._2011._10.OTAHotelAvailRQ;
@@ -36,6 +41,8 @@ import com.sabre.webservices.sabrexml._2011._10.OTAHotelAvailRQ.AvailRequestSegm
 
 @Component
 public class SabreClientProcessor implements Processor {
+
+    private static final Logger log = Logger.getLogger(SabreClientProcessor.class);
 
     private static final String MESSAGE_ID = "mid:20001209-133003-2333@clientofsabre.com1";
 
@@ -73,37 +80,64 @@ public class SabreClientProcessor implements Processor {
     @Value("${mate.provider.sabre.contract.negotiated.rate.code}")
     private String contractNegotiatedRateCode;
 
+    @Value("${mate.provider.sabre.session.token.cocha}")
+    private Boolean sabreTokenSecurity;
+
+    @Value("${mate.provider.sabre.session.token.destination.op}")
+    private String outputOpenSabreSession;
+
+    @Value("${mate.provider.sabre.session.token.destination.ip}")
+    private String inputOpenSabreSession;
+
+    @Value("${mate.provider.sabre.session.token.host}")
+    private String host;
+
+    @Value("${mate.provider.sabre.session.token.ip}")
+    private String port;
+
     @Override
     @SuppressWarnings("unchecked")
     public void process(Exchange exchange) throws Exception {
-        Message inMessage = exchange.getIn();
-        Map<String, String> parameters = (Map<String, String>) inMessage.getBody(Map.class);
-        MessageHeader messageHeader = createMessageHeader();
-        Security security = createSecurityHeader(parameters.get("token"));
-        String idsHotels = parameters.get("idsHotelsSabre");
 
-        if (StringUtils.isBlank(idsHotels)) {
-            throw new Exception("Missing SABRE hotel ID");
+        try {
+
+            Message inMessage = exchange.getIn();
+            Map<String, String> parameters = (Map<String, String>) inMessage.getBody(Map.class);
+            MessageHeader messageHeader = createMessageHeader();
+            Security security = null;
+
+            security = this.createSecurityHeader();
+
+            String idsHotels = parameters.get("idsHotelsSabre");
+
+            if (StringUtils.isBlank(idsHotels)) {
+                throw new Exception("Missing SABRE hotel ID");
+            }
+
+            String arrival = parameters.get(Constant.ARRIVAL_DATE);
+            arrival = dateConvert(arrival);
+
+            String departure = parameters.get(Constant.DEPARTURE_DATE);
+            departure = dateConvert(departure);
+
+            String currencyCode = parameters.get(Constant.CURRENCY_CODE);
+            if (currencyCode == null) {
+                currencyCode = Constant.CURRNCY_DEFAULT;
+            }
+
+            OTAHotelAvailRQ hotelAvail = createHotelAvailRQ(idsHotels, arrival, departure, currencyCode,
+                    contractNegotiatedRateCode);
+            List<Object> params = new ArrayList<>();
+            params.add(messageHeader);
+            params.add(security);
+            params.add(hotelAvail);
+            inMessage.setBody(params);
+
+        } catch (Exception e) {
+            log.error("Error al crear el cliente Sabre");
+            throw e;
         }
 
-        String arrival = parameters.get(Constant.ARRIVAL_DATE);
-        arrival = dateConvert(arrival);
-
-        String departure = parameters.get(Constant.DEPARTURE_DATE);
-        departure = dateConvert(departure);
-
-        String currencyCode = parameters.get(Constant.CURRENCY_CODE);
-        if (currencyCode == null) {
-            currencyCode = Constant.CURRNCY_DEFAULT;
-        }
-
-        OTAHotelAvailRQ hotelAvail = createHotelAvailRQ(idsHotels, arrival, departure, currencyCode,
-                contractNegotiatedRateCode);
-        List<Object> params = new ArrayList<>();
-        params.add(messageHeader);
-        params.add(security);
-        params.add(hotelAvail);
-        inMessage.setBody(params);
     }
 
     /**
@@ -153,12 +187,42 @@ public class SabreClientProcessor implements Processor {
     }
 
     /**
+     * @param exchange
      * @return
      */
-    private Security createSecurityHeader(final String token) {
-        Security security = new Security();
-        security.setBinarySecurityToken(token);
-        return security;
+    private Security createSecurityHeader() throws Exception {
+
+        log.info("Obtener token de seguridad de sabre");
+        try {
+
+            Security security = new Security();
+
+            if (sabreTokenSecurity) {
+
+                SabreSessionSvc sabreSessionSvc = new SabreSessionSvc();
+
+                ConfJmsDTO confJmsDTO = new ConfJmsDTO();
+                confJmsDTO.setProviderUrlInput(inputOpenSabreSession);
+                confJmsDTO.setProviderUrlOutput(outputOpenSabreSession);
+                confJmsDTO.setHost(host);
+                confJmsDTO.setPort(port);
+                SessionDTO sessionDTO = sabreSessionSvc.openAvailabilitySession(confJmsDTO);
+                ;
+
+                if (sessionDTO != null && StringUtils.isNoneBlank(sessionDTO.getSecurityToken())) {
+                    log.info(sessionDTO.getSecurityToken());
+                    security.setBinarySecurityToken(sessionDTO.getSecurityToken());
+                } else {
+                    throw new Exception("No se pudo obtener el token de suguridad de sabre");
+                }
+            }
+
+            return security;
+
+        } catch (Exception e) {
+            throw new Exception("Ocurrio un error al obtener el token de seguridad de sabre");
+        }
+
     }
 
     /**
@@ -199,7 +263,7 @@ public class SabreClientProcessor implements Processor {
         return messageHeader;
     }
 
-    private String dateConvert(String dateInString) {
+    private String dateConvert(String dateInString) throws ParseException {
         SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
         SimpleDateFormat newformatter = new SimpleDateFormat("yyyy-MM-dd");
         String newDate = null;
@@ -207,7 +271,7 @@ public class SabreClientProcessor implements Processor {
             Date date = formatter.parse(dateInString);
             newDate = newformatter.format(date);
         } catch (ParseException e) {
-            e.printStackTrace();
+            throw e;
         }
         return newDate;
     }

@@ -1,0 +1,33 @@
+<section data-ng-controller="HotelMappingController" data-ng-init="findTopCountries()">
+    <div class="page-header">
+        <h1>Los {{howMany}} países con más mapeos a revisar</h1>
+    </div>
+    <div class="list-group">
+        <table class="table table-condensed table-striped">
+            <thead>
+                <tr>
+                    <th>Código de país</th>
+                    <th>Mapeos a revisar</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="mappingCount in mappingCounts">
+                    <td data-ng-bind="mappingCount.countryCode"></td>
+                    <td data-ng-bind="mappingCount.nroMapeos"></td>
+                    <td>
+                        <button type="button" 
+                                class="btn btn-sm btn-primary" 
+                                data-ng-click="goToListByCountry(mappingCount.countryCode)">
+                            Ver mapeos
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!mappingCounts.$resolved || mappingCounts.length">
+    	No hay mapeo de Hoteles todavía, porqué no <a href="#!/hoteles/mapping/crear">crea uno</a>?
+    </div>
+</section>
