@@ -5,7 +5,7 @@
     <groupId>com.cocha.hotels</groupId>
     <artifactId>mate-search-backoffice</artifactId>
     <packaging>war</packaging>
-    <version>0.6.1</version>
+    <version>0.6.2</version>
     <name>UI Correctora del Meta Search</name>
 
     <properties>
