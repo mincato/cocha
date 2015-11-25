@@ -167,6 +167,16 @@ module.exports = function(grunt) {
 			main: ['public/dist'],
 			app: ['public/dist/application.js']
 		},
+        replace: {
+            environment: {
+                src: ['public/dist/application.min.js'],
+                overwrite: true,
+                replacements: [{
+                    from: 'localhost:8080',
+                    to: grunt.option('environment') || 'localhost:8080'
+                }]
+            }
+        },
         less: {
             production: {
                 options: {
@@ -205,6 +215,7 @@ module.exports = function(grunt) {
 	require('load-grunt-tasks')(grunt);
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-text-replace');
     grunt.loadNpmTasks('grunt-contrib-less');
 
 	// Making grunt default to force in order not to break the project.
@@ -259,8 +270,8 @@ module.exports = function(grunt) {
 	//grunt.registerTask('build', ['lint', 'loadConfig', 'ngAnnotate', 'uglify', 'cssmin']);
 
 	// Build task(s).
-	grunt.registerTask('build', ['less:production', 'clean', 'lint', 'loadConfig', 'ngAnnotate', 'uglify', 'cssmin', 'runSwig', 'copy', 'clean:app']);
-
+	grunt.registerTask('build', ['less:production', 'clean', 'lint', 'loadConfig', 'ngAnnotate', 'uglify', 'cssmin', 'runSwig', 'copy', 'replace:environment', 'clean:app']);
+    
 	// Test task.
 	grunt.registerTask('test', ['env:development', 'karma:unit']);
 };
