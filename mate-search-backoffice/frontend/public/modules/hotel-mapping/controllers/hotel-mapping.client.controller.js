@@ -19,7 +19,7 @@ angular.module('hotel-mapping').controller('HotelMappingController', ['$scope', 
 				$scope.goToListByCountry(response.countryCode);
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
-			})
+			});
 		};
 
 		// Remove existing Hotel Mapping

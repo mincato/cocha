@@ -5,11 +5,12 @@
     <groupId>com.cocha.hotels</groupId>
     <artifactId>mate-search-backoffice</artifactId>
     <packaging>war</packaging>
-    <version>0.6</version>
+    <version>0.6.1</version>
     <name>UI Correctora del Meta Search</name>
 
     <properties>
     	<frontend.basedir>../frontend</frontend.basedir>
+    	<environment>localhost:8080</environment>
     
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.plugin.version>3.1</maven.compiler.plugin.version>
@@ -345,7 +346,7 @@
 									<goal>build</goal>
 								</goals>
 								<configuration>
-									<gruntBuildArgs>build</gruntBuildArgs>
+									<gruntBuildArgs>build --environment=${environment}</gruntBuildArgs>
 								</configuration>
 							</execution>
 						</executions>
