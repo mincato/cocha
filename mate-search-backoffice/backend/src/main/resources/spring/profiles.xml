@@ -14,5 +14,11 @@
     <beans profile="localhost">
         <context:property-placeholder location="classpath:backend-localhost.properties" ignore-unresolvable="true"/>
     </beans>
+    <beans profile="dev">
+        <context:property-placeholder location="classpath:backend-dev.properties" ignore-unresolvable="true"/>
+    </beans>
+    <beans profile="qa">
+        <context:property-placeholder location="classpath:backend-qa.properties" ignore-unresolvable="true"/>
+    </beans>
     
 </beans>
